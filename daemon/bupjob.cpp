@@ -95,6 +95,7 @@ void BupJob::slotCheckingStarted() {
 
 void BupJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	mLogStream << QString::fromUtf8(mFsckProcess.readAllStandardError());
+	mLogStream << "Exit code: " << pExitCode;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
 		mLogStream << endl << QStringLiteral("Kup did not successfully complete the bup backup job: "
 		                                     "failed integrity check. Your backups could be "
@@ -133,6 +134,7 @@ void BupJob::slotIndexingStarted() {
 
 void BupJob::slotIndexingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	mLogStream << QString::fromUtf8(mIndexProcess.readAllStandardError());
+	mLogStream << "Exit code: " << pExitCode;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
 		mLogStream << endl << QStringLiteral("Kup did not successfully complete the bup backup job: failed to index everything.") << endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Failed to analyze files. "
@@ -161,6 +163,7 @@ void BupJob::slotSavingStarted() {
 
 void BupJob::slotSavingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	mLogStream << QString::fromUtf8(mSaveProcess.readAllStandardError());
+	mLogStream << "Exit code: " << pExitCode;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
 		mLogStream << endl << QStringLiteral("Kup did not successfully complete the bup backup job: "
 		                                     "failed to save everything.") << endl;
@@ -191,6 +194,7 @@ void BupJob::slotRecoveryInfoStarted() {
 
 void BupJob::slotRecoveryInfoDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	mLogStream << QString::fromUtf8(mPar2Process.readAllStandardError());
+	mLogStream << "Exit code: " << pExitCode;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
 		mLogStream << endl << QStringLiteral("Kup did not successfully complete the bup backup job: "
 		                                     "failed to generate recovery info.") << endl;

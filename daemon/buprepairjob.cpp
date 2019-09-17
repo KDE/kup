@@ -65,7 +65,7 @@ void BupRepairJob::slotRepairStarted() {
 
 void BupRepairJob::slotRepairDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	mLogStream << QString::fromUtf8(mFsckProcess.readAllStandardError());
-
+	mLogStream << "Exit code: " << pExitCode;
 	if(pExitStatus != QProcess::NormalExit) {
 		mLogStream << endl << QStringLiteral("Repair failed (the repair process crashed). Your backups could be "
 		                                     "corrupted! See above for details.") << endl;

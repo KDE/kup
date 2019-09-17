@@ -103,6 +103,7 @@ void RsyncJob::slotRsyncStarted() {
 
 void RsyncJob::slotRsyncFinished(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	mLogStream << QString::fromUtf8(mRsyncProcess.readAllStandardError());
+	mLogStream << "Exit code: " << pExitCode;
 	// exit code 24 means source files disappeared during copying. No reason to worry about that.
 	if(pExitStatus != QProcess::NormalExit || (pExitCode != 0 && pExitCode != 24)) {
 		mLogStream << endl << QStringLiteral("Kup did not successfully complete the rsync backup job.") << endl;
