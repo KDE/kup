@@ -56,8 +56,8 @@ void RsyncJob::performJob() {
 
 	emit description(this, i18n("Checking what to copy"));
 	mRsyncProcess << QStringLiteral("rsync") << QStringLiteral("-avX")
-	              << QStringLiteral("--delete-excluded");
-	mRsyncProcess << QStringLiteral("--info=progress2") << QStringLiteral("--no-i-r");
+	              << QStringLiteral("--delete-excluded") << QStringLiteral("--delete-before")
+	              << QStringLiteral("--info=progress2");
 
 	QStringList lIncludeNames;
 	foreach(const QString &lInclude, mBackupPlan.mPathsIncluded) {
