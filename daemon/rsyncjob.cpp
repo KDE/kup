@@ -78,11 +78,7 @@ void RsyncJob::performJob() {
 				QString lIncludeWithSlash = lInclude;
 				ensureTrailingSlash(lIncludeWithSlash);
 				if(lExclude.startsWith(lIncludeWithSlash)) {
-					if(mBackupPlan.mPathsIncluded.length() == 1) {
-						lExclude.remove(0, lInclude.length());
-					} else {
-						lExclude.remove(0, lInclude.length() - lIncludeNames.at(i).length() - 1);
-					}
+					lExclude.remove(0, lInclude.length() - lIncludeNames.at(i).length() - 1);
 					break;
 				}
 			}
