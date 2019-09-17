@@ -172,7 +172,10 @@ void RsyncJob::slotReadRsyncOutput() {
 
 bool RsyncJob::doKill() {
 	setError(KilledJobError);
-	return 0 == ::kill(mRsyncProcess.pid(), SIGINT);
+	if(0 == ::kill(mRsyncProcess.pid(), SIGINT)) {
+		return mRsyncProcess.waitForFinished();
+	}
+	return false;
 }
 
 bool RsyncJob::doSuspend() {
