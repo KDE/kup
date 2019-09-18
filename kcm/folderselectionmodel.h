@@ -7,7 +7,7 @@
    (C) 2004 Mark Kretschmann <markey@web.de>
    (C) 2008 Seb Ruiz <ruiz@kde.org>
    (C) 2008-2009 Sebastian Trueg <trueg@kde.org>
-   (C) 2012 Simon Persson <simonpersson1@gmail.com>
+   (C) 2012-2019 Simon Persson <simon.persson@mykolab.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
