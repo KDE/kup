@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="addon">
+    <id>org.kde.kup</id>
+    <extends>org.kde.plasmashell</extends>
+    <metadata_license>FSFAP</metadata_license>
+    <project_license>GPL-2.0+</project_license>
+    <name>Kup</name>
+    <summary>Backup scheduler for KDE's Plasma desktop</summary>
+    <description>
+        <p>Kup can help you remember to keep up-to-date backups of your personal files. It provides:</p>
+        <ul>
+            <li>Incremental backup archive with the use of "bup".</li>
+            <li>Synchronized folders with the use of "rsync".</li>
+            <li>Support for local filesystem or external usb storage.</li>
+            <li>Monitor availibilty of backup destinations, like for example a mounted network storage.</li>
+            <li>Integration into KDE's Plasma desktop.</li>
+        </ul>
+    </description>
+    <icon type="stock">kup</icon>
+    <screenshots>
+        <screenshot type="default">
+            <image>https://cdn.kde.org/screenshots/kup/kup.png</image>
+        </screenshot>
+    </screenshots>
+    <project_group>KDE</project_group>
+    <developer_name>Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+</component>

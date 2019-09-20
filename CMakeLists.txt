@@ -60,6 +60,7 @@ add_subdirectory(kioslave)
 add_subdirectory(po)
 
 plasma_install_package(plasmoid org.kde.kupapplet)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/org.kde.kup.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
