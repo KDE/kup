@@ -428,7 +428,7 @@ void Branch::reload() {
 		mSubNodes = new NodeMap();
 	}
 	// potentially changed content in a branch, generateSubNodes is written so
-	// that it can be called repetedly.
+	// that it can be called repeatedly.
 	generateSubNodes();
 }
 

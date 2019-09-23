@@ -338,7 +338,7 @@
            <item>
             <widget class="QLabel" name="mErrorLabel">
              <property name="text">
-              <string comment="@label above the detailed error message">An error occured while restoring:</string>
+              <string comment="@label above the detailed error message">An error occurred while restoring:</string>
              </property>
             </widget>
            </item>

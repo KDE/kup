@@ -72,7 +72,7 @@ void BupRepairJob::slotRepairDone(int pExitCode, QProcess::ExitStatus pExitStatu
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Backup repair failed. Your backups could be corrupted! "
 		                                                            "See log file for more details."));
 	} else if(pExitCode == 100) {
-		mLogStream << endl << QStringLiteral("Repair succeded. See above for details.") << endl;
+		mLogStream << endl << QStringLiteral("Repair succeeded. See above for details.") << endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Success! Backup repair worked. See log file for more details."));
 	} else if(pExitCode == 0) {
 		mLogStream << endl << QStringLiteral("Repair was not necessary. Your backups are fine. See "

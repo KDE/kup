@@ -613,7 +613,7 @@ KPageWidgetItem *BackupPlanWidget::createDestinationPage() {
 	                                                 "storage. The requirement is just that you always mount "
 	                                                 "it at the same path in the filesystem. The path "
 	                                                 "specified here does not need to exist at all times, its "
-	                                                 "existance will be monitored."));
+	                                                 "existence will be monitored."));
 	lFileSystemInfoLabel->setWordWrap(true);
 	QLabel *lFileSystemLabel = new QLabel(xi18nc("@label:textbox", "Destination Path for Backup:"));
 	auto *lFileSystemUrlEdit = new KUrlRequester;
