@@ -100,7 +100,7 @@ MergedRepository *FileDigger::createRepo() {
     MergedRepository *lRepository = new MergedRepository(nullptr, mRepoPath, mBranchName);
     if(!lRepository->open()) {
         KMessageBox::sorry(nullptr, xi18nc("@info messagebox, %1 is a folder path",
-                                       "The backup archive <filename>%1</filename> could not be opened."
+                                       "The backup archive <filename>%1</filename> could not be opened. "
                                        "Check if the backups really are located there.",
                                        mRepoPath));
         return nullptr;

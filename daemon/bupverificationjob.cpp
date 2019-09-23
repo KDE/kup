@@ -74,7 +74,7 @@ void BupVerificationJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pE
 	} else if(pExitCode == 0) {
 		mLogStream << endl << QStringLiteral("Backup integrity test was successful. "
 		                                     "Your backups are fine. See above for details.") << endl;
-		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Backup integrity test was successful, "
+		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Backup integrity test was successful. "
 		                                                            "Your backups are fine."));
 	} else {
 		mLogStream << endl << QStringLiteral("Integrity check failed. Your backups are "
