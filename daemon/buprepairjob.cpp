@@ -64,24 +64,24 @@ void BupRepairJob::slotRepairStarted() {
 }
 
 void BupRepairJob::slotRepairDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
-	mLogStream << QString::fromUtf8(mFsckProcess.readAllStandardError());
-	mLogStream << "Exit code: " << pExitCode;
+	mLogStream << QString::fromUtf8(mFsckProcess.readAllStandardError()) << endl;
+	mLogStream << "Exit code: " << pExitCode << endl;
 	if(pExitStatus != QProcess::NormalExit) {
-		mLogStream << endl << QStringLiteral("Repair failed (the repair process crashed). Your backups could be "
-		                                     "corrupted! See above for details.") << endl;
+		mLogStream << QStringLiteral("Repair failed (the repair process crashed). Your backups could be "
+		                             "corrupted! See above for details.") << endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Backup repair failed. Your backups could be corrupted! "
 		                                                            "See log file for more details."));
 	} else if(pExitCode == 100) {
-		mLogStream << endl << QStringLiteral("Repair succeeded. See above for details.") << endl;
+		mLogStream << QStringLiteral("Repair succeeded. See above for details.") << endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Success! Backup repair worked. See log file for more details."));
 	} else if(pExitCode == 0) {
-		mLogStream << endl << QStringLiteral("Repair was not necessary. Your backups are fine. See "
-		                                     "above for details.") << endl;
+		mLogStream << QStringLiteral("Repair was not necessary. Your backups are fine. See "
+		                             "above for details.") << endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Backup repair was not necessary. Your backups are not corrupted. "
 		                                                            "See log file for more details."));
 	} else {
-		mLogStream << endl << QStringLiteral("Repair failed. Your backups could still be "
-		                                     "corrupted! See above for details.") << endl;
+		mLogStream << QStringLiteral("Repair failed. Your backups could still be "
+		                             "corrupted! See above for details.") << endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Backup repair failed. Your backups could still be corrupted! "
 		                                                            "See log file for more details."));
 	}

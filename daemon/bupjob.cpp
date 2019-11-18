@@ -66,8 +66,8 @@ void BupJob::performJob() {
 	mLogStream << quoteArgs(lInitProcess.program()) << endl;
 	if(lInitProcess.execute() != 0) {
 		mLogStream << QString::fromUtf8(lInitProcess.readAllStandardError()) << endl;
-		mLogStream << endl << QStringLiteral("Kup did not successfully complete the bup backup job: "
-		                                     "failed to initialize backup destination.") << endl;
+		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: "
+		                             "failed to initialize backup destination.") << endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Backup destination could not be initialised. "
 		                                                            "See log file for more details."));
 		return;
@@ -94,12 +94,12 @@ void BupJob::slotCheckingStarted() {
 }
 
 void BupJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
-	mLogStream << QString::fromUtf8(mFsckProcess.readAllStandardError());
-	mLogStream << "Exit code: " << pExitCode;
+	mLogStream << QString::fromUtf8(mFsckProcess.readAllStandardError()) << endl;
+	mLogStream << "Exit code: " << pExitCode << endl;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
-		mLogStream << endl << QStringLiteral("Kup did not successfully complete the bup backup job: "
-		                                     "failed integrity check. Your backups could be "
-		                                     "corrupted! See above for details.") << endl;
+		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: "
+		                             "failed integrity check. Your backups could be "
+		                             "corrupted! See above for details.") << endl;
 		if(mBackupPlan.mGenerateRecoveryInfo) {
 			jobFinishedError(ErrorSuggestRepair, xi18nc("@info notification",
 			                                            "Failed backup integrity check. Your backups could be corrupted! "
@@ -133,10 +133,10 @@ void BupJob::slotIndexingStarted() {
 }
 
 void BupJob::slotIndexingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
-	mLogStream << QString::fromUtf8(mIndexProcess.readAllStandardError());
-	mLogStream << "Exit code: " << pExitCode;
+	mLogStream << QString::fromUtf8(mIndexProcess.readAllStandardError()) << endl;
+	mLogStream << "Exit code: " << pExitCode << endl;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
-		mLogStream << endl << QStringLiteral("Kup did not successfully complete the bup backup job: failed to index everything.") << endl;
+		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: failed to index everything.") << endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Failed to analyze files. "
 		                                                            "See log file for more details."));
 		return;
@@ -162,11 +162,11 @@ void BupJob::slotSavingStarted() {
 }
 
 void BupJob::slotSavingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
-	mLogStream << QString::fromUtf8(mSaveProcess.readAllStandardError());
-	mLogStream << "Exit code: " << pExitCode;
+	mLogStream << QString::fromUtf8(mSaveProcess.readAllStandardError()) << endl;
+	mLogStream << "Exit code: " << pExitCode << endl;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
-		mLogStream << endl << QStringLiteral("Kup did not successfully complete the bup backup job: "
-		                                     "failed to save everything.") << endl;
+		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: "
+		                             "failed to save everything.") << endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Failed to save backup. "
 		                                                            "See log file for more details."));
 		return;
@@ -181,7 +181,7 @@ void BupJob::slotSavingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 		mLogStream << quoteArgs(mPar2Process.program()) << endl;
 		mPar2Process.start();
 	} else {
-		mLogStream << endl << QStringLiteral("Kup successfully completed the bup backup job at ")
+		mLogStream << QStringLiteral("Kup successfully completed the bup backup job at ")
 		           << QLocale().toString(QDateTime::currentDateTime()) << endl;
 		jobFinishedSuccess();
 	}
@@ -193,15 +193,15 @@ void BupJob::slotRecoveryInfoStarted() {
 }
 
 void BupJob::slotRecoveryInfoDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
-	mLogStream << QString::fromUtf8(mPar2Process.readAllStandardError());
-	mLogStream << "Exit code: " << pExitCode;
+	mLogStream << QString::fromUtf8(mPar2Process.readAllStandardError()) << endl;
+	mLogStream << "Exit code: " << pExitCode << endl;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
-		mLogStream << endl << QStringLiteral("Kup did not successfully complete the bup backup job: "
-		                                     "failed to generate recovery info.") << endl;
+		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: "
+		                             "failed to generate recovery info.") << endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Failed to generate recovery info for the backup. "
 		                                                            "See log file for more details."));
 	} else {
-		mLogStream << endl << QStringLiteral("Kup successfully completed the bup backup job.") << endl;
+		mLogStream << QStringLiteral("Kup successfully completed the bup backup job.") << endl;
 		jobFinishedSuccess();
 	}
 }

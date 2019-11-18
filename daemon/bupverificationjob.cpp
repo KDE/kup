@@ -58,11 +58,11 @@ void BupVerificationJob::slotCheckingStarted() {
 }
 
 void BupVerificationJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
-	mLogStream << QString::fromUtf8(mFsckProcess.readAllStandardError());
-	mLogStream << "Exit code: " << pExitCode;
+	mLogStream << QString::fromUtf8(mFsckProcess.readAllStandardError()) << endl;
+	mLogStream << "Exit code: " << pExitCode << endl;
 	if(pExitStatus != QProcess::NormalExit) {
-		mLogStream << endl << QStringLiteral("Integrity check failed (the process crashed). Your backups could be "
-		                                    "corrupted! See above for details.") << endl;
+		mLogStream << QStringLiteral("Integrity check failed (the process crashed). Your backups could be "
+		                             "corrupted! See above for details.") << endl;
 		if(mBackupPlan.mGenerateRecoveryInfo) {
 			jobFinishedError(ErrorSuggestRepair, xi18nc("@info notification",
 			                                    "Failed backup integrity check. Your backups could be corrupted! "
@@ -72,13 +72,13 @@ void BupVerificationJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pE
 			                                                            "See log file for more details."));
 		}
 	} else if(pExitCode == 0) {
-		mLogStream << endl << QStringLiteral("Backup integrity test was successful. "
-		                                     "Your backups are fine. See above for details.") << endl;
+		mLogStream << QStringLiteral("Backup integrity test was successful. "
+		                             "Your backups are fine. See above for details.") << endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Backup integrity test was successful. "
 		                                                            "Your backups are fine."));
 	} else {
-		mLogStream << endl << QStringLiteral("Integrity check failed. Your backups are "
-		                                     "corrupted! See above for details.") << endl;
+		mLogStream << QStringLiteral("Integrity check failed. Your backups are "
+		                             "corrupted! See above for details.") << endl;
 		if(mBackupPlan.mGenerateRecoveryInfo) {
 			jobFinishedError(ErrorSuggestRepair, xi18nc("@info notification",
 			                                            "Failed backup integrity check. Your backups are corrupted! "
