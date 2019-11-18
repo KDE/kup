@@ -12,7 +12,7 @@
             <li>Incremental backup archive with the use of "bup".</li>
             <li>Synchronized folders with the use of "rsync".</li>
             <li>Support for local filesystem or external usb storage.</li>
-            <li>Monitor availibilty of backup destinations, like for example a mounted network storage.</li>
+            <li>Monitor availability of backup destinations, like for example a mounted network storage.</li>
             <li>Integration into KDE's Plasma desktop.</li>
         </ul>
     </description>
