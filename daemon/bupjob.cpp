@@ -24,6 +24,7 @@
 
 #include <QRegularExpression>
 #include <QTextStream>
+#include <QThread>
 
 #include <KLocalizedString>
 
@@ -77,6 +78,7 @@ void BupJob::performJob() {
 		mFsckProcess << QStringLiteral("bup");
 		mFsckProcess << QStringLiteral("-d") << mDestinationPath;
 		mFsckProcess << QStringLiteral("fsck") << QStringLiteral("--quick");
+		mFsckProcess << QStringLiteral("-j") << QString::number(qMin(4, QThread::idealThreadCount()));
 
 		connect(&mFsckProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(slotCheckingDone(int,QProcess::ExitStatus)));
 		connect(&mFsckProcess, SIGNAL(started()), SLOT(slotCheckingStarted()));
@@ -175,6 +177,7 @@ void BupJob::slotSavingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 		mPar2Process << QStringLiteral("bup");
 		mPar2Process << QStringLiteral("-d") << mDestinationPath;
 		mPar2Process << QStringLiteral("fsck") << QStringLiteral("-g");
+		mPar2Process << QStringLiteral("-j") << QString::number(qMin(4, QThread::idealThreadCount()));
 
 		connect(&mPar2Process, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(slotRecoveryInfoDone(int,QProcess::ExitStatus)));
 		connect(&mPar2Process, SIGNAL(started()), SLOT(slotRecoveryInfoStarted()));

@@ -20,6 +20,8 @@
 
 #include "bupverificationjob.h"
 
+#include <QThread>
+
 #include <KLocalizedString>
 
 BupVerificationJob::BupVerificationJob(const BackupPlan &pBackupPlan, const QString &pDestinationPath,
@@ -46,6 +48,7 @@ void BupVerificationJob::performJob() {
 	mFsckProcess << QStringLiteral("bup");
 	mFsckProcess << QStringLiteral("-d") << mDestinationPath;
 	mFsckProcess << QStringLiteral("fsck") << QStringLiteral("--quick");
+	mFsckProcess << QStringLiteral("-j") << QString::number(qMin(4, QThread::idealThreadCount()));
 
 	connect(&mFsckProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(slotCheckingDone(int,QProcess::ExitStatus)));
 	connect(&mFsckProcess, SIGNAL(started()), SLOT(slotCheckingStarted()));

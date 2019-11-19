@@ -20,6 +20,8 @@
 
 #include "buprepairjob.h"
 
+#include <QThread>
+
 #include <KLocalizedString>
 
 BupRepairJob::BupRepairJob(const BackupPlan &pBackupPlan, const QString &pDestinationPath,
@@ -52,6 +54,7 @@ void BupRepairJob::performJob() {
 	mFsckProcess << QStringLiteral("bup");
 	mFsckProcess << QStringLiteral("-d") << mDestinationPath;
 	mFsckProcess << QStringLiteral("fsck") << QStringLiteral("-r");
+	mFsckProcess << QStringLiteral("-j") << QString::number(qMin(4, QThread::idealThreadCount()));
 
 	connect(&mFsckProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(slotRepairDone(int,QProcess::ExitStatus)));
 	connect(&mFsckProcess, SIGNAL(started()), SLOT(slotRepairStarted()));
