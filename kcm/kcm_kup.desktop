@@ -8,5 +8,17 @@ X-KDE-ParentApp=kcontrol
 X-KDE-System-Settings-Parent-Category=personalization
 
 Name=Backups
+Name[ca]=Còpies de seguretat
+Name[pt]=Cópias de Segurança
+Name[uk]=Резервні копії
+Name[x-test]=xxBackupsxx
 Comment=Configure backup plans
+Comment[ca]=Configura els plans de còpia de seguretat
+Comment[pt]=Configurar os planos de cópias de segurança
+Comment[uk]=Налаштовування планів резервного копіювання
+Comment[x-test]=xxConfigure backup plansxx
 X-KDE-Keywords=backup,recovery,safety
+X-KDE-Keywords[ca]=còpia de seguretat,recuperació,seguretat
+X-KDE-Keywords[pt]=cópia,recuperação,segurança
+X-KDE-Keywords[uk]=backup,recovery,safety,резерв,копіювання,відновлення,безпека
+X-KDE-Keywords[x-test]=xxbackupxx,xxrecoveryxx,xxsafetyxx

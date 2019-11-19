@@ -1,35 +1,87 @@
 [Global]
 IconName=kup
 Name=Kup
+Name[ca]=Kup
+Name[nl]=Kup
+Name[pt]=Kup
+Name[uk]=Kup
+Name[x-test]=xxKupxx
 Comment=Kup Backup System
+Comment[ca]=Sistema de còpia de seguretat Kup
+Comment[nl]=Kup systeem voor reservekopieën
+Comment[pt]=Sistema de Cópias de Segurança Kup
+Comment[uk]=Система резервного копіювання Kup
+Comment[x-test]=xxKup Backup Systemxx
 
 
 [Event/StartBackup]
 Name=Start taking backup
+Name[ca]=Comença a fer la còpia de seguretat
+Name[nl]=Begin met maken van reservekopie
+Name[pt]=Iniciar a criação da cópia de segurança
+Name[uk]=Початок створення резервної копії
+Name[x-test]=xxStart taking backupxx
 Comment=A question if user wants to start taking a backup
+Comment[ca]=Una pregunta per a si l'usuari vol començar a fer una còpia de seguretat
+Comment[pt]=Uma pergunta se o utilizador deseja iniciar o processo da cópia de segurança
+Comment[uk]=Запитання щодо того, чи хоче користувач створити резервну копію
+Comment[x-test]=xxA question if user wants to start taking a backupxx
 Action=Popup
 Urgency=Normal
 
 [Event/BackupSucceeded]
 Name=Backup succeeded
+Name[ca]=La còpia de seguretat ha tingut èxit
+Name[nl]=Reservekopie maken is gelukt
+Name[pt]=Cópia de segurança com sucesso
+Name[uk]=Резервну копію успішно створено
+Name[x-test]=xxBackup succeededxx
 Comment=Saving of backup successfully completed
+Comment[ca]=S'ha finalitzat correctament el desament de la còpia de seguretat
+Comment[pt]=A gravação da cópia de segurança terminou com sucesso
+Comment[uk]=Збереження резервної копії успішно завершено
+Comment[x-test]=xxSaving of backup successfully completedxx
 Action=Popup
 Urgency=Normal
 
 [Event/BackupFailed]
 Name=Backup failed
+Name[ca]=Ha fallat la còpia de seguretat
+Name[pt]=Cópia de segurança sem sucesso
+Name[uk]=Не вдалося виконати резервне копіювання
+Name[x-test]=xxBackup failedxx
 Comment=Saving of backup failed, offer user to see log file
+Comment[ca]=Ha fallat el desament de la còpia de seguretat, s'ofereix a l'usuari el fitxer del registre
+Comment[pt]=A gravação da cópia de segurança falhou; permitir ao utilizador ver o ficheiro de registo
+Comment[uk]=Не вдалося зберегти резервну копію, користувачеві запропоновано переглянути файл журналу
+Comment[x-test]=xxSaving of backup failed, offer user to see log filexx
 Action=Popup
 Urgency=Normal
 
 [Event/IntegrityCheckCompleted]
 Name=Integrity check completed
+Name[ca]=S'ha completat el control de la integritat
+Name[pt]=Verificação de integridade completa
+Name[uk]=Перевірку цілісності завершено
+Name[x-test]=xxIntegrity check completedxx
 Comment=Finished checking integrity of backup archive
+Comment[ca]=S'ha acabat de verificar la integritat de l'arxiu de còpia de seguretat
+Comment[pt]=Terminou a verificação de integridade do pacote da cópia de segurança
+Comment[uk]=Перевірку цілісності архіву резервної копії завершено
+Comment[x-test]=xxFinished checking integrity of backup archivexx
 Action=Popup
 Urgency=Normal
 
 [Event/RepairCompleted]
 Name=Repair completed
+Name[ca]=Reparació finalitzada
+Name[pt]=Reparação completa
+Name[uk]=Виправлення завершено
+Name[x-test]=xxRepair completedxx
 Comment=Finished repairing backup archive
+Comment[ca]=S'ha acabat la reparació de l'arxiu de còpia de seguretat
+Comment[pt]=Terminou a reparação do pacote da cópia de segurança
+Comment[uk]=Завершено відновлення резервної копії з архіву
+Comment[x-test]=xxFinished repairing backup archivexx
 Action=Popup
 Urgency=Normal

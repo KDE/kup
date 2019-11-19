@@ -16,4 +16,12 @@ X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-EnabledByDefault=true
 
 Name=Backups
+Name[ca]=Còpies de seguretat
+Name[pt]=Cópias de Segurança
+Name[uk]=Резервні копії
+Name[x-test]=xxBackupsxx
 Comment=Status of backup plans
+Comment[ca]=Estat dels plans per a còpia de seguretat
+Comment[pt]=Estado dos planos de cópias de segurança
+Comment[uk]=Стан планів резервного копіювання
+Comment[x-test]=xxStatus of backup plansxx

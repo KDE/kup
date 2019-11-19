@@ -1,6 +1,16 @@
 [Desktop Entry]
 Name=Kup
+Name[ca]=Kup
+Name[nl]=Kup
+Name[pt]=Kup
+Name[uk]=Kup
+Name[x-test]=xxKupxx
 GenericName=Backup Monitor
+GenericName[ca]=Supervisor per a còpia de seguretat
+GenericName[nl]=Monitor van reservekopieën
+GenericName[pt]=Monitor de Cópias de Segurança
+GenericName[uk]=Монітор резервного копіювання
+GenericName[x-test]=xxBackup Monitorxx
 Exec=kup-daemon
 Icon=kup
 Type=Application
