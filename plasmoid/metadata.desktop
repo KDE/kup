@@ -22,11 +22,13 @@ X-Plasma-DBusActivationService=org.kde.kupdaemon
 
 Name=Backup Status
 Name[ca]=Estat de la còpia de seguretat
+Name[nl]=Status van back-up
 Name[pt]=Estado da Cópia de Segurança
 Name[uk]=Стан резервного копіювання
 Name[x-test]=xxBackup Statusxx
 Comment=Displays status of backup plans
 Comment[ca]=Mostra l'estat dels plans per a còpia de seguretat
+Comment[nl]=Status van back-up-plannen tonen
 Comment[pt]=Mostra o estado dos planos de cópias de segurança
 Comment[uk]=Показує стан планів резервного копіювання
 Comment[x-test]=xxDisplays status of backup plansxx
