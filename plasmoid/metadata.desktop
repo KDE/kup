@@ -24,6 +24,7 @@ Name=Backup Status
 Name[ca]=Estat de la còpia de seguretat
 Name[nl]=Status van back-up
 Name[pt]=Estado da Cópia de Segurança
+Name[sk]=Stav záloh
 Name[uk]=Стан резервного копіювання
 Name[x-test]=xxBackup Statusxx
 Comment=Displays status of backup plans

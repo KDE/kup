@@ -11,6 +11,7 @@ Name=Backups
 Name[ca]=Còpies de seguretat
 Name[nl]=Back-ups
 Name[pt]=Cópias de Segurança
+Name[sk]=Zálohy
 Name[uk]=Резервні копії
 Name[x-test]=xxBackupsxx
 Comment=Configure backup plans
