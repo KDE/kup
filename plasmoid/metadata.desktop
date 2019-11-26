@@ -22,6 +22,7 @@ X-Plasma-DBusActivationService=org.kde.kupdaemon
 
 Name=Backup Status
 Name[ca]=Estat de la còpia de seguretat
+Name[de]=Sicherungsstatus
 Name[nl]=Status van back-up
 Name[pt]=Estado da Cópia de Segurança
 Name[sk]=Stav záloh

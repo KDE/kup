@@ -2,6 +2,7 @@
 IconName=kup
 Name=Kup
 Name[ca]=Kup
+Name[de]=Kup
 Name[nl]=Kup
 Name[pt]=Kup
 Name[sk]=Kup
@@ -10,6 +11,7 @@ Name[uk]=Kup
 Name[x-test]=xxKupxx
 Comment=Kup Backup System
 Comment[ca]=Sistema de còpia de seguretat Kup
+Comment[de]=Kup-Sicherungssystem
 Comment[nl]=Kup systeem voor back-up
 Comment[pt]=Sistema de Cópias de Segurança Kup
 Comment[sv]=Kup säkerhetskopieringssystem
@@ -38,6 +40,7 @@ Urgency=Normal
 [Event/BackupSucceeded]
 Name=Backup succeeded
 Name[ca]=La còpia de seguretat ha tingut èxit
+Name[de]=Sicherung erfolgreich
 Name[nl]=Backup maken is gelukt
 Name[pt]=Cópia de segurança com sucesso
 Name[sv]=Säkerhetskopiering lyckades
@@ -45,6 +48,7 @@ Name[uk]=Резервну копію успішно створено
 Name[x-test]=xxBackup succeededxx
 Comment=Saving of backup successfully completed
 Comment[ca]=S'ha finalitzat correctament el desament de la còpia de seguretat
+Comment[de]=Speichern der Sicherung erfolgreich abgeschlossen
 Comment[nl]=Opslaan van back-up met succes voltooid
 Comment[pt]=A gravação da cópia de segurança terminou com sucesso
 Comment[sv]=Säkerhetskopieringen har avslutats med lyckat resultat
@@ -56,6 +60,7 @@ Urgency=Normal
 [Event/BackupFailed]
 Name=Backup failed
 Name[ca]=Ha fallat la còpia de seguretat
+Name[de]=Sicherung fehlgeschlagen
 Name[nl]=Back-up maken is mislukt
 Name[pt]=Cópia de segurança sem sucesso
 Name[sk]=Záloha zlyhala
@@ -75,6 +80,7 @@ Urgency=Normal
 [Event/IntegrityCheckCompleted]
 Name=Integrity check completed
 Name[ca]=S'ha completat el control de la integritat
+Name[de]=Integritätsprüfung abgeschlossen
 Name[nl]=Integriteitscontrole afgerond
 Name[pt]=Verificação de integridade completa
 Name[sv]=Integritetskontroll klar
@@ -93,6 +99,7 @@ Urgency=Normal
 [Event/RepairCompleted]
 Name=Repair completed
 Name[ca]=Reparació finalitzada
+Name[de]=Reparatur abgeschlossen
 Name[nl]=Reparatie afgerond
 Name[pt]=Reparação completa
 Name[sv]=Reparation klar
