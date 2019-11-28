@@ -96,7 +96,10 @@ void BupJob::slotCheckingStarted() {
 }
 
 void BupJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
-	mLogStream << QString::fromUtf8(mFsckProcess.readAllStandardError()) << endl;
+	QString lErrors = QString::fromUtf8(mFsckProcess.readAllStandardError());
+	if(!lErrors.isEmpty()) {
+		mLogStream << lErrors << endl;
+	}
 	mLogStream << "Exit code: " << pExitCode << endl;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
 		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: "
@@ -135,7 +138,10 @@ void BupJob::slotIndexingStarted() {
 }
 
 void BupJob::slotIndexingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
-	mLogStream << QString::fromUtf8(mIndexProcess.readAllStandardError()) << endl;
+	QString lErrors = QString::fromUtf8(mIndexProcess.readAllStandardError());
+	if(!lErrors.isEmpty()) {
+		mLogStream << lErrors << endl;
+	}
 	mLogStream << "Exit code: " << pExitCode << endl;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
 		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: failed to index everything.") << endl;
@@ -164,7 +170,10 @@ void BupJob::slotSavingStarted() {
 }
 
 void BupJob::slotSavingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
-	mLogStream << QString::fromUtf8(mSaveProcess.readAllStandardError()) << endl;
+	QString lErrors = QString::fromUtf8(mSaveProcess.readAllStandardError());
+	if(!lErrors.isEmpty()) {
+		mLogStream << lErrors << endl;
+	}
 	mLogStream << "Exit code: " << pExitCode << endl;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
 		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: "
@@ -196,7 +205,10 @@ void BupJob::slotRecoveryInfoStarted() {
 }
 
 void BupJob::slotRecoveryInfoDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
-	mLogStream << QString::fromUtf8(mPar2Process.readAllStandardError()) << endl;
+	QString lErrors = QString::fromUtf8(mPar2Process.readAllStandardError());
+	if(!lErrors.isEmpty()) {
+		mLogStream << lErrors << endl;
+	}
 	mLogStream << "Exit code: " << pExitCode << endl;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
 		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: "

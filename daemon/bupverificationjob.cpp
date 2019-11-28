@@ -61,7 +61,10 @@ void BupVerificationJob::slotCheckingStarted() {
 }
 
 void BupVerificationJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
-	mLogStream << QString::fromUtf8(mFsckProcess.readAllStandardError()) << endl;
+	QString lErrors = QString::fromUtf8(mFsckProcess.readAllStandardError());
+	if(!lErrors.isEmpty()) {
+		mLogStream << lErrors << endl;
+	}
 	mLogStream << "Exit code: " << pExitCode << endl;
 	if(pExitStatus != QProcess::NormalExit) {
 		mLogStream << QStringLiteral("Integrity check failed (the process crashed). Your backups could be "
