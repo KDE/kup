@@ -34,7 +34,7 @@ class BupJob : public BackupJob
 	Q_OBJECT
 
 public:
-	BupJob(const BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon);
+	BupJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon);
 
 protected slots:
 	void performJob() override;

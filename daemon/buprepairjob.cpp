@@ -24,7 +24,7 @@
 
 #include <KLocalizedString>
 
-BupRepairJob::BupRepairJob(const BackupPlan &pBackupPlan, const QString &pDestinationPath,
+BupRepairJob::BupRepairJob(BackupPlan &pBackupPlan, const QString &pDestinationPath,
                                        const QString &pLogFilePath, KupDaemon *pKupDaemon)
    : BackupJob(pBackupPlan, pDestinationPath, pLogFilePath, pKupDaemon){
 	mFsckProcess.setOutputChannelMode(KProcess::SeparateChannels);

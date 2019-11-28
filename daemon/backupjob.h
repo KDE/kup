@@ -48,12 +48,12 @@ protected slots:
 	virtual void performJob() = 0;
 
 protected:
-	BackupJob(const BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon);
+	BackupJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon);
 	static void makeNice(int pPid);
 	QString quoteArgs(const QStringList &pCommand);
 	void jobFinishedSuccess();
 	void jobFinishedError(ErrorCodes pErrorCode, QString pErrorText);
-	const BackupPlan &mBackupPlan;
+	BackupPlan &mBackupPlan;
 	QString mDestinationPath;
 	QString mLogFilePath;
 	QFile mLogFile;

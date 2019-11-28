@@ -54,6 +54,7 @@ BackupPlan::BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pPare
 
 	addItemStringList(QStringLiteral("Paths excluded"), mPathsExcluded, lDefaultExcludeList);
 	addItemInt(QStringLiteral("Backup type"), mBackupType);
+	addItemInt(QStringLiteral("Backup version"), mBackupVersion);
 
 	addItemInt(QStringLiteral("Schedule type"), mScheduleType, 2);
 	addItemInt(QStringLiteral("Schedule interval"), mScheduleInterval, 1);

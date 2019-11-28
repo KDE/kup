@@ -40,6 +40,7 @@ public:
 	QStringList mPathsExcluded;
 	enum BackupType {BupType = 0, RsyncType};
 	qint32 mBackupType;
+	qint32 mBackupVersion;
 
 	enum ScheduleType {MANUAL=0, INTERVAL, USAGE};
 	qint32 mScheduleType;

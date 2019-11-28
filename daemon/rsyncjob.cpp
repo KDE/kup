@@ -23,14 +23,14 @@
 
 #include <csignal>
 
+#include <QDir>
 #include <QRegularExpression>
 #include <QTextStream>
 
 #include <KLocalizedString>
 
 
-
-RsyncJob::RsyncJob(const BackupPlan &pBackupPlan, const QString &pDestinationPath,
+RsyncJob::RsyncJob(BackupPlan &pBackupPlan, const QString &pDestinationPath,
                    const QString &pLogFilePath, KupDaemon *pKupDaemon)
    :BackupJob(pBackupPlan, pDestinationPath, pLogFilePath, pKupDaemon)
 {
@@ -48,6 +48,14 @@ void RsyncJob::performJob() {
 		                        "The <application>rsync</application> program is needed but "
 		                        "could not be found, maybe it is not installed?"));
 		return;
+	}
+
+	// Remove this and the performMigration method when it is likely that all users of pre 0.8 kup have now started using post 0.8.
+	if(mBackupPlan.mBackupVersion < 1 && mBackupPlan.mLastCompleteBackup.isValid() && mBackupPlan.mPathsIncluded.length() == 1) {
+		mLogStream << QStringLiteral("Migrating saved files to new location, after update to version 0.8 of Kup.") << endl;
+		if(!performMigration()) {
+			mLogStream << QStringLiteral("Migration failed. Continuing backup save regardless, may result in files stored twice.") << endl;
+		}
 	}
 
 	mLogStream << QStringLiteral("Kup is starting rsync backup job at ")
@@ -115,6 +123,10 @@ void RsyncJob::slotRsyncFinished(int pExitCode, QProcess::ExitStatus pExitStatus
 	} else {
 		mLogStream << QStringLiteral("Kup successfully completed the rsync backup job at ")
 		           << QLocale().toString(QDateTime::currentDateTime()) << endl;
+		if(mBackupPlan.mBackupVersion < 1) {
+			mBackupPlan.mBackupVersion = 1;
+			mBackupPlan.save();
+		}
 		jobFinishedSuccess();
 	}
 }
@@ -187,5 +199,30 @@ bool RsyncJob::doSuspend() {
 
 bool RsyncJob::doResume() {
 	return 0 == ::kill(mRsyncProcess.pid(), SIGCONT);
+}
+
+// This migration moves files from being stored directly in destination folder, to
+// being stored in a subfolder of the destination. The subfolder is named same as the
+// source folder. This migration will only be done if there is exactly one source folder.
+bool RsyncJob::performMigration() {
+	QString lSourceDirName = lastPartOfPath(mBackupPlan.mPathsIncluded.first()); //only one included
+	QDir lDestDir = QDir(mDestinationPath);
+	mLogStream << QStringLiteral("Creating directory named ") << lSourceDirName << " inside of " << mDestinationPath << endl;
+	if(!lDestDir.mkdir(lSourceDirName)) {
+		mLogStream << QStringLiteral("Failed to create directory, aborting migration.") << endl;
+		return false;
+	}
+	foreach(const QString &lContent, lDestDir.entryList(QDir::AllEntries | QDir::NoDotAndDotDot)) {
+		if(lContent != lSourceDirName) {
+			QString lDest = lSourceDirName + QLatin1Char('/') + lContent;
+			mLogStream << QStringLiteral("Renaming ") << lContent << " to " << lDest << endl;
+			if(!lDestDir.rename(lContent, lDest)) {
+				mLogStream << QStringLiteral("Failed to rename, aborting migration.") << endl;
+				return false;
+			}
+		}
+	}
+	mLogStream << QStringLiteral("File migration completed.") << endl;
+	return true;
 }
 

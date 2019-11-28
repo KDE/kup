@@ -31,7 +31,7 @@
 
 #include <QTimer>
 
-BackupJob::BackupJob(const BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon)
+BackupJob::BackupJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon)
    :mBackupPlan(pBackupPlan), mDestinationPath(pDestinationPath), mLogFilePath(pLogFilePath), mKupDaemon(pKupDaemon)
 {
 	mLogFile.setFileName(mLogFilePath);

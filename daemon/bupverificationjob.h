@@ -32,7 +32,7 @@ class BupVerificationJob : public BackupJob
 	Q_OBJECT
 
 public:
-	BupVerificationJob(const BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon);
+	BupVerificationJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon);
 
 protected slots:
 	void performJob() override;

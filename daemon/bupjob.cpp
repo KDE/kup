@@ -28,7 +28,7 @@
 
 #include <KLocalizedString>
 
-BupJob::BupJob(const BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon)
+BupJob::BupJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon)
    :BackupJob(pBackupPlan, pDestinationPath, pLogFilePath, pKupDaemon)
 {
 	mFsckProcess.setOutputChannelMode(KProcess::SeparateChannels);

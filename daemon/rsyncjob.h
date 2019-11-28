@@ -33,7 +33,7 @@ class RsyncJob : public BackupJob
 	Q_OBJECT
 
 public:
-	RsyncJob(const BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon);
+	RsyncJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon);
 
 protected slots:
 	void performJob() override;
@@ -47,6 +47,8 @@ protected:
 	bool doKill() override;
 	bool doSuspend() override;
 	bool doResume() override;
+
+	bool performMigration();
 
 	KProcess mRsyncProcess;
 	QElapsedTimer mInfoRateLimiter;
