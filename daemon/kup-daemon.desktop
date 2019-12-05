@@ -2,14 +2,17 @@
 Name=Kup
 Name[ca]=Kup
 Name[de]=Kup
+Name[es]=Kup
 Name[nl]=Kup
 Name[pt]=Kup
 Name[sk]=Kup
 Name[sv]=Kup
 Name[uk]=Kup
 Name[x-test]=xxKupxx
+Name[zh_TW]=Kup
 GenericName=Backup Monitor
 GenericName[ca]=Supervisor per a còpia de seguretat
+GenericName[es]=Monitor de copias de seguridad
 GenericName[nl]=Monitor van back-ups
 GenericName[pt]=Monitor de Cópias de Segurança
 GenericName[sk]=Monitor záloh
