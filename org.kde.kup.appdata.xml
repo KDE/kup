@@ -6,14 +6,17 @@
   <project_license>GPL-2.0+</project_license>
   <name>Kup</name>
   <name xml:lang="ca">Kup</name>
+  <name xml:lang="es">Kup</name>
   <name xml:lang="nl">Kup</name>
   <name xml:lang="pt">Kup</name>
   <name xml:lang="sk">Kup</name>
   <name xml:lang="sv">Kup</name>
   <name xml:lang="uk">Kup</name>
   <name xml:lang="x-test">xxKupxx</name>
+  <name xml:lang="zh-TW">Kup</name>
   <summary>Backup scheduler for KDE's Plasma desktop</summary>
   <summary xml:lang="ca">Planificador de la còpia de seguretat per a l'escriptori Plasma del KDE</summary>
+  <summary xml:lang="es">Organizador de copias de seguridad para el escritorio KDE Plasma</summary>
   <summary xml:lang="nl">Planner van back-ups voor Plasma bureaublad van KDE</summary>
   <summary xml:lang="pt">Agendamento de cópias de segurança para a área de trabalho do Plasma</summary>
   <summary xml:lang="sv">Schemaläggning av säkerhetskopiering för KDE:s Plasma-skrivbord</summary>
@@ -22,6 +25,7 @@
   <description>
     <p>Kup can help you remember to keep up-to-date backups of your personal files. It provides:</p>
     <p xml:lang="ca">El Kup ajuda a recordar el mantenir actualitzades les còpies de seguretat dels fitxers personals. Proporciona:</p>
+    <p xml:lang="es">Kup puede ayudarle a mantener copias de seguridad actualizadas de sus archivos personales. Proporciona:</p>
     <p xml:lang="nl">Kup kan u helpen te herinneren om up-to-date back-ups van uw persoonlijke bestanden te maken. Het biedt:</p>
     <p xml:lang="pt">O Kup pode ajudá-lo a recordar-se das cópias de segurança actualizadas dos seus ficheiros pessoais. Oferece:</p>
     <p xml:lang="sv">Kup kan hjälpa till att komma ihåg att ha aktuella säkerhetskopior av personliga filer. Det tillhandahåller:</p>
@@ -30,6 +34,7 @@
     <ul>
       <li>Incremental backup archive with the use of "bup".</li>
       <li xml:lang="ca">Arxiu per a còpia de seguretat incremental emprant «bup».</li>
+      <li xml:lang="es">Copias de seguridad incrementales usando «bup».</li>
       <li xml:lang="nl">Incrementeel back-uparchief met gebruik van "bup".</li>
       <li xml:lang="pt">Cópias de segurança incrementais com o uso do "bup".</li>
       <li xml:lang="sv">Inkrementellt säkerhetskopieringsarkiv med användning av "bup".</li>
@@ -37,6 +42,7 @@
       <li xml:lang="x-test">xxIncremental backup archive with the use of "bup".xx</li>
       <li>Synchronized folders with the use of "rsync".</li>
       <li xml:lang="ca">Carpetes sincronitzades emprant «rsync».</li>
+      <li xml:lang="es">Carpetas sincronizadas usando «rsync»</li>
       <li xml:lang="nl">Gesynchroniseerde mappen met gebruik van "rsync".</li>
       <li xml:lang="pt">Pastas sincronizadas com o uso do "rsync".</li>
       <li xml:lang="sv">Synkroniserade kataloger med användning av "rsync".</li>
@@ -44,6 +50,7 @@
       <li xml:lang="x-test">xxSynchronized folders with the use of "rsync".xx</li>
       <li>Support for local filesystem or external usb storage.</li>
       <li xml:lang="ca">Suport per a sistema de fitxers local o emmagatzematge extern USB.</li>
+      <li xml:lang="es">Soporte para sistema de archivos local o almacenaje USB externo.</li>
       <li xml:lang="nl">Ondersteuning voor een lokale bestandssysteem of externe usb-opslag.</li>
       <li xml:lang="pt">Suporte para o sistema de ficheiros local ou para o armazenamento externo em USB.</li>
       <li xml:lang="sv">Stöd för lokala filsystem eller extern USB-lagring</li>
@@ -51,6 +58,7 @@
       <li xml:lang="x-test">xxSupport for local filesystem or external usb storage.xx</li>
       <li>Monitor availability of backup destinations, like for example a mounted network storage.</li>
       <li xml:lang="ca">Supervisa la disponibilitat de les destinacions per a còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
+      <li xml:lang="es">Monitorización de disponibilidad de destinos para las copias de seguridad, como por ejemplo almacenamiento de red.</li>
       <li xml:lang="nl">Beschikbaarheid van bestemmingen voor back-ups te monitoren, zoals bijvoorbeeld voor aangekoppelde netwerkopslag.</li>
       <li xml:lang="pt">Monitorização da disponibilidade dos destinos das cópias de segurança, como por exemplo um armazenamento na rede montado.</li>
       <li xml:lang="sv">Övervakning av säkerhetskopieringsmål, som exempelvis monterad nätverkslagring.</li>
@@ -58,6 +66,7 @@
       <li xml:lang="x-test">xxMonitor availability of backup destinations, like for example a mounted network storage.xx</li>
       <li>Integration into KDE's Plasma desktop.</li>
       <li xml:lang="ca">Integració amb l'escriptori Plasma del KDE.</li>
+      <li xml:lang="es">Integración con el escritorio KDE Plasma.</li>
       <li xml:lang="nl">Integratie in het bureaublad Plasma van KDE.</li>
       <li xml:lang="pt">Integração na área de trabalho Plasma do KDE.</li>
       <li xml:lang="sv">Integration med KDE:s Plasma-skrivbord.</li>
@@ -74,6 +83,7 @@
   <project_group>KDE</project_group>
   <developer_name>Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="ca">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+  <developer_name xml:lang="es">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="nl">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="pt">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="sv">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
