@@ -19,6 +19,7 @@ GenericName[sk]=Monitor záloh
 GenericName[sv]=Övervakning av säkerhetskopior
 GenericName[uk]=Монітор резервного копіювання
 GenericName[x-test]=xxBackup Monitorxx
+GenericName[zh_TW]=備份監控工具
 Exec=kup-daemon
 Icon=kup
 Type=Application
