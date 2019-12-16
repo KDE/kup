@@ -22,6 +22,7 @@
   <summary xml:lang="sv">Schemaläggning av säkerhetskopiering för KDE:s Plasma-skrivbord</summary>
   <summary xml:lang="uk">Засіб планування резервного копіювання для стільниці Плазми KDE</summary>
   <summary xml:lang="x-test">xxBackup scheduler for KDE's Plasma desktopxx</summary>
+  <summary xml:lang="zh-TW">KDE Plasma 桌面的備份排程工具</summary>
   <description>
     <p>Kup can help you remember to keep up-to-date backups of your personal files. It provides:</p>
     <p xml:lang="ca">El Kup ajuda a recordar el mantenir actualitzades les còpies de seguretat dels fitxers personals. Proporciona:</p>
@@ -40,6 +41,7 @@
       <li xml:lang="sv">Inkrementellt säkerhetskopieringsarkiv med användning av "bup".</li>
       <li xml:lang="uk">Створення нарощувальних резервних копій за допомогою програми bup.</li>
       <li xml:lang="x-test">xxIncremental backup archive with the use of "bup".xx</li>
+      <li xml:lang="zh-TW">使用「bup」增量備份封存檔。</li>
       <li>Synchronized folders with the use of "rsync".</li>
       <li xml:lang="ca">Carpetes sincronitzades emprant «rsync».</li>
       <li xml:lang="es">Carpetas sincronizadas usando «rsync»</li>
@@ -48,6 +50,7 @@
       <li xml:lang="sv">Synkroniserade kataloger med användning av "rsync".</li>
       <li xml:lang="uk">Синхронізація тек за допомогою програми rsync.</li>
       <li xml:lang="x-test">xxSynchronized folders with the use of "rsync".xx</li>
+      <li xml:lang="zh-TW">使用「rsync」同步資料夾。</li>
       <li>Support for local filesystem or external usb storage.</li>
       <li xml:lang="ca">Suport per a sistema de fitxers local o emmagatzematge extern USB.</li>
       <li xml:lang="es">Soporte para sistema de archivos local o almacenaje USB externo.</li>
@@ -72,6 +75,7 @@
       <li xml:lang="sv">Integration med KDE:s Plasma-skrivbord.</li>
       <li xml:lang="uk">Інтеграція із стільницею Плазми KDE.</li>
       <li xml:lang="x-test">xxIntegration into KDE's Plasma desktop.xx</li>
+      <li xml:lang="zh-TW">整合至 KDE Plasma 桌面</li>
     </ul>
   </description>
   <icon type="stock">kup</icon>
@@ -89,4 +93,5 @@
   <developer_name xml:lang="sv">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="uk">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="x-test">xxSimon Persson &lt;simon.persson@mykolab.com&gt;xx</developer_name>
+  <developer_name xml:lang="zh-TW">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
 </component>
