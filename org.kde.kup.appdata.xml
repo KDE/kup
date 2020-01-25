@@ -7,7 +7,9 @@
   <name>Kup</name>
   <name xml:lang="ca">Kup</name>
   <name xml:lang="es">Kup</name>
+  <name xml:lang="et">Kup</name>
   <name xml:lang="id">Kup</name>
+  <name xml:lang="it">Kup</name>
   <name xml:lang="nl">Kup</name>
   <name xml:lang="pt">Kup</name>
   <name xml:lang="sk">Kup</name>
@@ -18,7 +20,9 @@
   <summary>Backup scheduler for KDE's Plasma desktop</summary>
   <summary xml:lang="ca">Planificador de la còpia de seguretat per a l'escriptori Plasma del KDE</summary>
   <summary xml:lang="es">Organizador de copias de seguridad para el escritorio KDE Plasma</summary>
+  <summary xml:lang="et">KDE Plasma töölaua varukoopiate tegemise ajakava</summary>
   <summary xml:lang="id">Penjadwalan cadangan untuk desktop Plasma KDE</summary>
+  <summary xml:lang="it">Pianificatore di copie di sicurezza per il desktop Plasma di KDE</summary>
   <summary xml:lang="nl">Planner van back-ups voor Plasma bureaublad van KDE</summary>
   <summary xml:lang="pt">Agendamento de cópias de segurança para a área de trabalho do Plasma</summary>
   <summary xml:lang="sv">Schemaläggning av säkerhetskopiering för KDE:s Plasma-skrivbord</summary>
@@ -29,7 +33,9 @@
     <p>Kup can help you remember to keep up-to-date backups of your personal files. It provides:</p>
     <p xml:lang="ca">El Kup ajuda a recordar el mantenir actualitzades les còpies de seguretat dels fitxers personals. Proporciona:</p>
     <p xml:lang="es">Kup puede ayudarle a mantener copias de seguridad actualizadas de sus archivos personales. Proporciona:</p>
+    <p xml:lang="et">Kup aitab sul meeles pidada vajadust varundada aegsasti oma isiklikke faile. See võimaldab:</p>
     <p xml:lang="id">Kup bisa membantu kamu mengingatkan agar pencadangan tetap terbarukan pada file-file personalmu. Ini menyediakan:</p>
+    <p xml:lang="it">Kup può aiutarti a ricordare di mantenere aggiornate le copie di sicurezza dei tuoi file personali. Fornisce:</p>
     <p xml:lang="nl">Kup kan u helpen te herinneren om up-to-date back-ups van uw persoonlijke bestanden te maken. Het biedt:</p>
     <p xml:lang="pt">O Kup pode ajudá-lo a recordar-se das cópias de segurança actualizadas dos seus ficheiros pessoais. Oferece:</p>
     <p xml:lang="sv">Kup kan hjälpa till att komma ihåg att ha aktuella säkerhetskopior av personliga filer. Det tillhandahåller:</p>
@@ -39,7 +45,9 @@
       <li>Incremental backup archive with the use of "bup".</li>
       <li xml:lang="ca">Arxiu per a còpia de seguretat incremental emprant «bup».</li>
       <li xml:lang="es">Copias de seguridad incrementales usando «bup».</li>
+      <li xml:lang="et">Inkrementvarundamist "bup" abil.</li>
       <li xml:lang="id">Arsip cadangan tambahan dengan penggunaan "bup".</li>
+      <li xml:lang="it">Archivi di copie di sicurezza incrementali mediante l'uso di «bup».</li>
       <li xml:lang="nl">Incrementeel back-uparchief met gebruik van "bup".</li>
       <li xml:lang="pt">Cópias de segurança incrementais com o uso do "bup".</li>
       <li xml:lang="sv">Inkrementellt säkerhetskopieringsarkiv med användning av "bup".</li>
@@ -49,7 +57,9 @@
       <li>Synchronized folders with the use of "rsync".</li>
       <li xml:lang="ca">Carpetes sincronitzades emprant «rsync».</li>
       <li xml:lang="es">Carpetas sincronizadas usando «rsync»</li>
+      <li xml:lang="et">Kataloogide sünkroonimist "rsync" abil.</li>
       <li xml:lang="id">Folder-folder yang tersinkronisasikan dengan penggunaan "rsync".</li>
+      <li xml:lang="it">Cartelle sincronizzate mediante l'uso di «rsync».</li>
       <li xml:lang="nl">Gesynchroniseerde mappen met gebruik van "rsync".</li>
       <li xml:lang="pt">Pastas sincronizadas com o uso do "rsync".</li>
       <li xml:lang="sv">Synkroniserade kataloger med användning av "rsync".</li>
@@ -59,7 +69,9 @@
       <li>Support for local filesystem or external usb storage.</li>
       <li xml:lang="ca">Suport per a sistema de fitxers local o emmagatzematge extern USB.</li>
       <li xml:lang="es">Soporte para sistema de archivos local o almacenaje USB externo.</li>
+      <li xml:lang="et">Salvestamist kohalikku failisüsteemi või välisele USB-pulgale.</li>
       <li xml:lang="id">Dukungan untuk filesystem lokal atau penyimpanan usb eksternal.</li>
+      <li xml:lang="it">Supporto per file i filesystem locali oppure per le memorie usb esterne.</li>
       <li xml:lang="nl">Ondersteuning voor een lokale bestandssysteem of externe usb-opslag.</li>
       <li xml:lang="pt">Suporte para o sistema de ficheiros local ou para o armazenamento externo em USB.</li>
       <li xml:lang="sv">Stöd för lokala filsystem eller extern USB-lagring</li>
@@ -68,7 +80,9 @@
       <li>Monitor availability of backup destinations, like for example a mounted network storage.</li>
       <li xml:lang="ca">Supervisa la disponibilitat de les destinacions per a còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
       <li xml:lang="es">Monitorización de disponibilidad de destinos para las copias de seguridad, como por ejemplo almacenamiento de red.</li>
+      <li xml:lang="et">Varundamise sihtkohtade saadavuse jälgimist, mis on oluline näiteks ühendamist vajava võrgusalvesti puhul.</li>
       <li xml:lang="id">Memantau ketersediaan tujuan cadangan, seperti misalnya tempat penyimpanan jaringan yang tercantol.</li>
+      <li xml:lang="it">Controllo della disponibilità delle destinazioni della copia di sicurezza, ad esempio delle unità di memorizzazione di rete montate.</li>
       <li xml:lang="nl">Beschikbaarheid van bestemmingen voor back-ups te monitoren, zoals bijvoorbeeld voor aangekoppelde netwerkopslag.</li>
       <li xml:lang="pt">Monitorização da disponibilidade dos destinos das cópias de segurança, como por exemplo um armazenamento na rede montado.</li>
       <li xml:lang="sv">Övervakning av säkerhetskopieringsmål, som exempelvis monterad nätverkslagring.</li>
@@ -77,7 +91,9 @@
       <li>Integration into KDE's Plasma desktop.</li>
       <li xml:lang="ca">Integració amb l'escriptori Plasma del KDE.</li>
       <li xml:lang="es">Integración con el escritorio KDE Plasma.</li>
+      <li xml:lang="et">Lõimimist KDE Plasma töölauga.</li>
       <li xml:lang="id">Integrasi ke dalam desktop Plasma KDE.</li>
+      <li xml:lang="it">Integrazione col desktop Plasma di KDE.</li>
       <li xml:lang="nl">Integratie in het bureaublad Plasma van KDE.</li>
       <li xml:lang="pt">Integração na área de trabalho Plasma do KDE.</li>
       <li xml:lang="sv">Integration med KDE:s Plasma-skrivbord.</li>
@@ -96,7 +112,9 @@
   <developer_name>Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="ca">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="es">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+  <developer_name xml:lang="et">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="id">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+  <developer_name xml:lang="it">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="nl">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="pt">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="sv">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
