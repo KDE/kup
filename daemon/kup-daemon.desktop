@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Kup
 Name[ca]=Kup
+Name[ca@valencia]=Kup
 Name[de]=Kup
 Name[es]=Kup
 Name[et]=Kup
@@ -13,6 +14,7 @@ Name[x-test]=xxKupxx
 Name[zh_TW]=Kup
 GenericName=Backup Monitor
 GenericName[ca]=Supervisor per a còpia de seguretat
+GenericName[ca@valencia]=Supervisor per a còpia de seguretat
 GenericName[es]=Monitor de copias de seguridad
 GenericName[et]=Varundamise jälgimine
 GenericName[nl]=Monitor van back-ups
