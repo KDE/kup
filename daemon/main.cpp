@@ -50,9 +50,8 @@ extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[]) {
 	                  i18n("Kup is a flexible backup solution using the backup storage system 'bup'. "
 	                       "This allows it to quickly perform incremental backups, only saving the "
 	                       "parts of files that has actually changed since last backup was taken."),
-	                  KAboutLicense::GPL, i18n("Copyright (C) 2011-2015 Simon Persson"),
-	                  QString(), QString(), "simonpersson1@gmail.com");
-	lAbout.addAuthor(i18n("Simon Persson"), QString(), "simonpersson1@gmail.com");
+	                  KAboutLicense::GPL, i18n("Copyright (C) 2011-2020 Simon Persson"));
+	lAbout.addAuthor(i18n("Simon Persson"), QString(), "simon.persson@mykolab.com");
 	lAbout.setTranslator(xi18nc("NAME OF TRANSLATORS", "Your names"), xi18nc("EMAIL OF TRANSLATORS", "Your emails"));
 	KAboutData::setApplicationData(lAbout);
 
