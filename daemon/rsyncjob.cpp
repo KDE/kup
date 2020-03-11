@@ -56,6 +56,8 @@ void RsyncJob::performJob() {
 		if(!performMigration()) {
 			mLogStream << QStringLiteral("Migration failed. Continuing backup save regardless, may result in files stored twice.") << endl;
 		}
+		mBackupPlan.mBackupVersion = 1;
+		mBackupPlan.save();
 	}
 
 	mLogStream << QStringLiteral("Kup is starting rsync backup job at ")
@@ -123,10 +125,6 @@ void RsyncJob::slotRsyncFinished(int pExitCode, QProcess::ExitStatus pExitStatus
 	} else {
 		mLogStream << QStringLiteral("Kup successfully completed the rsync backup job at ")
 		           << QLocale().toString(QDateTime::currentDateTime()) << endl;
-		if(mBackupPlan.mBackupVersion < 1) {
-			mBackupPlan.mBackupVersion = 1;
-			mBackupPlan.save();
-		}
 		jobFinishedSuccess();
 	}
 }
