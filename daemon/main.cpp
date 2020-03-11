@@ -56,8 +56,6 @@ extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[]) {
 	KAboutData::setApplicationData(lAbout);
 
 	QCommandLineParser lParser;
-	lParser.addVersionOption();
-	lParser.addHelpOption();
 	lAbout.setupCommandLine(&lParser);
 	lParser.process(lApp);
 	lAbout.processCommandLine(&lParser);

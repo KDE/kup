@@ -51,8 +51,6 @@ int main(int pArgCount, char **pArgArray) {
 	KAboutData::setApplicationData(lAbout); //this calls qApp.setApplicationName, setVersion, etc.
 
 	QCommandLineParser lParser;
-	lParser.addVersionOption();
-	lParser.addHelpOption();
 	lParser.addOption(QCommandLineOption(QStringList() << QStringLiteral("b") << QStringLiteral("branch"),
 	                                     i18n("Name of the branch to be opened."),
 	                                     QStringLiteral("branch name"), QStringLiteral("kup")));
