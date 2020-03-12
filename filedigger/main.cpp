@@ -46,7 +46,7 @@ int main(int pArgCount, char **pArgArray) {
 	KAboutData lAbout(QStringLiteral("kupfiledigger"), xi18nc("@title", "File Digger"), QStringLiteral("0.7.3"),
 	                  i18n("Browser for bup archives."),
 	                  KAboutLicense::GPL, i18n("Copyright (C) 2013-2020 Simon Persson"));
-	lAbout.addAuthor(i18n("Simon Persson"), QString(), "simon.persson@mykolab.com");
+	lAbout.addAuthor(i18n("Simon Persson"), i18n("Maintainer"), "simon.persson@mykolab.com");
 	lAbout.setTranslator(xi18nc("NAME OF TRANSLATORS", "Your names"), xi18nc("EMAIL OF TRANSLATORS", "Your emails"));
 	KAboutData::setApplicationData(lAbout); //this calls qApp.setApplicationName, setVersion, etc.
 
