@@ -59,7 +59,7 @@ QVariant VersionListModel::data(const QModelIndex &pIndex, int pRole) const {
 	VersionData *lData = mVersionList->at(pIndex.row());
 	switch (pRole) {
 	case Qt::DisplayRole:
-		return lFormat.formatRelativeDateTime(QDateTime::fromTime_t(lData->mModifiedDate), QLocale::ShortFormat);
+		return lFormat.formatRelativeDateTime(QDateTime::fromTime_t(static_cast<uint>(lData->mModifiedDate)), QLocale::ShortFormat);
 	case VersionBupUrlRole: {
 		QUrl lUrl;
 		mNode->getBupUrl(pIndex.row(), &lUrl);

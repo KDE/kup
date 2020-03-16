@@ -44,9 +44,9 @@ RestoreJob::RestoreJob(const QString &pRepositoryPath, const QString &pSourcePat
 void RestoreJob::start() {
 	setTotalAmount(Bytes, mTotalFileSize);
 	setProcessedAmount(Bytes, 0);
-	setTotalAmount(Files, mFileSizes.count());
+	setTotalAmount(Files, static_cast<quint64>(mFileSizes.count()));
 	setProcessedAmount(Files, 0);
-	setTotalAmount(Directories, mTotalDirCount);
+	setTotalAmount(Directories, static_cast<quint64>(mTotalDirCount));
 	setProcessedAmount(Directories, 0);
 	setPercent(0);
 	mRestoreProcess << QStringLiteral("bup");
@@ -117,6 +117,6 @@ void RestoreJob::makeNice(int pPid) {
 	// See linux documentation Documentation/block/ioprio.txt for details of the syscall
 	syscall(SYS_ioprio_set, 1, pPid, 3 << 13 | 7);
 #endif
-	setpriority(PRIO_PROCESS, pPid, 19);
+	setpriority(PRIO_PROCESS, static_cast<uint>(pPid), 19);
 }
 

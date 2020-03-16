@@ -68,7 +68,7 @@ void MergedNode::getBupUrl(int pVersionIndex, QUrl *pComplete, QString *pRepoPat
 	const MergedRepository *lRepo = qobject_cast<const MergedRepository *>(lStack.takeLast());
 	if(pComplete) {
 		pComplete->setUrl("bup://" + lRepo->objectName() + '/' + lRepo->mBranchName + '/' +
-		                  vfsTimeToString(mVersionList.at(pVersionIndex)->mCommitTime));
+		                  vfsTimeToString(static_cast<git_time_t>(mVersionList.at(pVersionIndex)->mCommitTime)));
 	}
 	if(pRepoPath) {
 		*pRepoPath = lRepo->objectName();
@@ -130,7 +130,7 @@ void MergedNode::generateSubNodes() {
 		VintStream *lMetadataStream = nullptr;
 		const git_tree_entry *lTreeEntry = git_tree_entry_byname(lTree, ".bupm");
 		if(lTreeEntry != nullptr && 0 == git_blob_lookup(&lMetadataBlob, mRepository, git_tree_entry_id(lTreeEntry))) {
-			lMetadataStream = new VintStream(git_blob_rawcontent(lMetadataBlob), git_blob_rawsize(lMetadataBlob), this);
+			lMetadataStream = new VintStream(git_blob_rawcontent(lMetadataBlob), static_cast<int>(git_blob_rawsize(lMetadataBlob)), this);
 			Metadata lMetadata;
 			readMetadata(*lMetadataStream, lMetadata); // the first entry is metadata for the directory itself, discard it.
 		}
@@ -287,13 +287,13 @@ bool MergedRepository::permissionsOk() {
 }
 
 uint qHash(git_oid pOid) {
-	return qHash(QByteArray::fromRawData((char *)pOid.id, GIT_OID_RAWSZ));
+	return qHash(QByteArray::fromRawData(reinterpret_cast<const char *>(pOid.id), GIT_OID_RAWSZ));
 }
 
 
 bool operator ==(const git_oid &pOidA, const git_oid &pOidB) {
-	QByteArray a = QByteArray::fromRawData((char *)pOidA.id, GIT_OID_RAWSZ);
-	QByteArray b = QByteArray::fromRawData((char *)pOidB.id, GIT_OID_RAWSZ);
+	QByteArray a = QByteArray::fromRawData(reinterpret_cast<const char *>(pOidA.id), GIT_OID_RAWSZ);
+	QByteArray b = QByteArray::fromRawData(reinterpret_cast<const char *>(pOidB.id), GIT_OID_RAWSZ);
 	return a == b;
 }
 
@@ -307,7 +307,7 @@ quint64 VersionData::size() {
 	} else {
 		git_blob *lBlob;
 		if(0 == git_blob_lookup(&lBlob, MergedNode::mRepository, &mOid)) {
-			mSize = git_blob_rawsize(lBlob);
+			mSize = static_cast<quint64>(git_blob_rawsize(lBlob));
 			git_blob_free(lBlob);
 		} else {
 			mSize = 0;

@@ -42,7 +42,7 @@
 VintStream::VintStream(const void *pData, int pSize, QObject *pParent)
    : QObject(pParent)
 {
-	mByteArray = QByteArray::fromRawData((char *)pData, pSize);
+	mByteArray = QByteArray::fromRawData(static_cast<const char *>(pData), pSize);
 	mBuffer = new QBuffer(&mByteArray, this);
 	mBuffer->open(QIODevice::ReadOnly);
 }
@@ -92,7 +92,7 @@ VintStream &VintStream::operator >>(QString &pString) {
 VintStream &VintStream::operator >>(QByteArray &pByteArray) {
 	quint64 lByteCount;
 	*this >> lByteCount;
-	pByteArray.resize(lByteCount);
+	pByteArray.resize(static_cast<int>(lByteCount));
 	if(mBuffer->read(pByteArray.data(), pByteArray.length()) < pByteArray.length()) {
 		throw 1;
 	}
@@ -196,7 +196,7 @@ quint64 calculateChunkFileSize(const git_oid *pOid, git_repository *pRepository)
 	if(0 != git_blob_lookup(&lBlob, pRepository, pOid)) {
 		return 0;
 	}
-	lLastChunkSize = git_blob_rawsize(lBlob);
+	lLastChunkSize = static_cast<quint64>(git_blob_rawsize(lBlob));
 	git_blob_free(lBlob);
 	return lLastChunkOffset + lLastChunkSize;
 }

@@ -57,7 +57,7 @@ void Button::setPosition(const QPoint &pTopRight) {
 }
 
 void Button::paint(QPainter *pPainter, float pOpacity) {
-	pPainter->setOpacity(pOpacity);
+	pPainter->setOpacity(static_cast<qreal>(pOpacity));
 	QApplication::style()->drawControl(QStyle::CE_PushButton, &mStyleOption, pPainter);
 }
 
@@ -204,7 +204,7 @@ void VersionListDelegate::paint(QPainter *pPainter, const QStyleOptionViewItem &
 
 	QRect lSizeDisplayBounds;
 	if(!pIndex.data(VersionIsDirectoryRole).toBool()) {
-		QString lSizeText = KFormat().formatByteSize((double)pIndex.data(VersionSizeRole).toULongLong());
+		QString lSizeText = KFormat().formatByteSize(static_cast<double>(pIndex.data(VersionSizeRole).toULongLong()));
 		pPainter->drawText(lMarginRect, Qt::AlignRight | Qt::AlignTop, lSizeText, &lSizeDisplayBounds);
 	}
 	QString lDateText = pOption.fontMetrics.elidedText(pIndex.data().toString(), Qt::ElideRight,
@@ -235,7 +235,7 @@ QSize VersionListDelegate::sizeHint(const QStyleOptionViewItem &pOption, const Q
 	VersionItemAnimation *lAnimation = mActiveAnimations.value(pIndex);
 	if(lAnimation != nullptr) {
 		int lButtonHeight = lAnimation->mOpenButton->mStyleOption.rect.height();
-		lExtraHeight = lAnimation->extraHeight() * (lButtonHeight + cMargin);
+		lExtraHeight = static_cast<int>(lAnimation->extraHeight() * (lButtonHeight + cMargin));
 		lExtraWidth = lAnimation->mOpenButton->mStyleOption.rect.width() +
 		              lAnimation->mRestoreButton->mStyleOption.rect.width();
 	}

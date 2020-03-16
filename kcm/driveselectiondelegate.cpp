@@ -55,7 +55,7 @@ void DriveSelectionDelegate::paint(QPainter* pPainter, const QStyleOptionViewIte
 	if(lTotalSize == 0 || lIsDisconnected) {
 		mCapacityBar->setValue(0);
 	} else {
-		mCapacityBar->setValue((lUsedSize * 100) / lTotalSize);
+		mCapacityBar->setValue(static_cast<int>((lUsedSize * 100) / lTotalSize));
 	}
 	mCapacityBar->drawCapacityBar(pPainter, pOption.rect.adjusted(cMargin,
 	                                                              cMargin+QApplication::fontMetrics().height()+cMargin,

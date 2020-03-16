@@ -47,7 +47,7 @@ public:
 	~PlanExecutor() override;
 
 	BackupPlan::ScheduleType scheduleType() {
-		return (BackupPlan::ScheduleType)mPlan->mScheduleType;
+		return static_cast<BackupPlan::ScheduleType>(mPlan->mScheduleType);
 	}
 
 	bool busy() {

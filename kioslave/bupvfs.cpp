@@ -168,7 +168,7 @@ int BlobFile::read(QByteArray &pChunk, int pReadSize) {
 	if(pReadSize > 0 && pReadSize < lAvailableSize) {
 		lReadSize = pReadSize;
 	}
-	pChunk = QByteArray::fromRawData(((char *)git_blob_rawcontent(lBlob)) + mOffset, lReadSize);
+	pChunk = QByteArray::fromRawData(static_cast<const char *>(git_blob_rawcontent(lBlob)) + mOffset, static_cast<int>(lReadSize));
 	mOffset += lReadSize;
 	return 0;
 }
@@ -185,7 +185,7 @@ quint64 BlobFile::calculateSize() {
 	if(lBlob == nullptr) {
 		return 0;
 	}
-	return git_blob_rawsize(lBlob);
+	return static_cast<quint64>(git_blob_rawsize(lBlob));
 }
 
 ChunkFile::ChunkFile(Node *pParent, const git_oid *pOid, const QString &pName, quint64 pMode)
@@ -303,7 +303,7 @@ int ChunkFile::read(QByteArray &pChunk, int pReadSize) {
 	if(pReadSize > 0 && pReadSize < lAvailableSize) {
 		lReadSize = pReadSize;
 	}
-	pChunk = QByteArray::fromRawData(((char *)git_blob_rawcontent(mCurrentBlob)) + lCurrentPos->mSkipSize, lReadSize);
+	pChunk = QByteArray::fromRawData(static_cast<const char *>(git_blob_rawcontent(mCurrentBlob)) + lCurrentPos->mSkipSize, static_cast<int>(lReadSize));
 	mOffset += lReadSize;
 	lCurrentPos->mSkipSize += lReadSize;
 
@@ -364,7 +364,7 @@ ArchivedDirectory::ArchivedDirectory(Node *pParent, const git_oid *pOid, const Q
 	}
 	const git_tree_entry *lTreeEntry = git_tree_entry_byname(mTree, ".bupm");
 	if(lTreeEntry != nullptr && 0 == git_blob_lookup(&mMetadataBlob, mRepository, git_tree_entry_id(lTreeEntry))) {
-		mMetadataStream = new VintStream(git_blob_rawcontent(mMetadataBlob), git_blob_rawsize(mMetadataBlob), this);
+		mMetadataStream = new VintStream(git_blob_rawcontent(mMetadataBlob), static_cast<int>(git_blob_rawsize(mMetadataBlob)), this);
 		readMetadata(*mMetadataStream); // the first entry is metadata for the directory itself
 	}
 }

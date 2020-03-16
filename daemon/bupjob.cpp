@@ -247,7 +247,7 @@ void BupJob::slotReadBupErrors() {
 				lTotalFiles = lMatch.captured(4).toULongLong();
 				lSpeedKBps = lMatch.captured(5).toULong();
 				if(lTotalKBytes != 0) {
-					lPercent = qMax(100*lCopiedKBytes/lTotalKBytes, (qulonglong)1);
+					lPercent = qMax(100*lCopiedKBytes/lTotalKBytes, static_cast<qulonglong>(1));
 				}
 				lValidInfo = true;
 			}
