@@ -58,7 +58,7 @@ MergedNode::MergedNode(QObject *pParent, const QString &pName, uint pMode)
 }
 
 void MergedNode::getBupUrl(int pVersionIndex, QUrl *pComplete, QString *pRepoPath,
-                           QString *pBranchName, quint64 *pCommitTime, QString *pPathInRepo) const {
+                           QString *pBranchName, qint64 *pCommitTime, QString *pPathInRepo) const {
 	QList<const MergedNode *> lStack;
 	const MergedNode *lNode = this;
 	while(lNode != nullptr) {
@@ -135,7 +135,7 @@ void MergedNode::generateSubNodes() {
 			readMetadata(*lMetadataStream, lMetadata); // the first entry is metadata for the directory itself, discard it.
 		}
 
-		uint lEntryCount = git_tree_entrycount(lTree);
+		ulong lEntryCount = git_tree_entrycount(lTree);
 		for(uint i = 0; i < lEntryCount; ++i) {
 			uint lMode;
 			const git_oid *lOid;
@@ -180,7 +180,7 @@ void MergedNode::generateSubNodes() {
 					                                              lCurrentVersion->mModifiedDate, 0));
 				}
 			} else {
-				quint64 lModifiedDate;
+				qint64 lModifiedDate;
 				Metadata lMetadata;
 				if(lMetadataStream != nullptr && 0 == readMetadata(*lMetadataStream, lMetadata)) {
 					lModifiedDate = lMetadata.mMtime;

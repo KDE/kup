@@ -32,13 +32,13 @@ bool operator ==(const git_oid &pOidA, const git_oid &pOidB);
 #include <sys/stat.h>
 
 struct VersionData {
-	VersionData(bool pChunkedFile, const git_oid *pOid, quint64 pCommitTime, quint64 pModifiedDate)
+	VersionData(bool pChunkedFile, const git_oid *pOid, qint64 pCommitTime, qint64 pModifiedDate)
 	   :mChunkedFile(pChunkedFile), mOid(*pOid), mCommitTime(pCommitTime), mModifiedDate(pModifiedDate)
 	{
 		mSizeIsValid = false;
 	}
 
-	VersionData(const git_oid *pOid, quint64 pCommitTime, quint64 pModifiedDate, quint64 pSize)
+	VersionData(const git_oid *pOid, qint64 pCommitTime, qint64 pModifiedDate, quint64 pSize)
 	   :mOid(*pOid), mCommitTime(pCommitTime), mModifiedDate(pModifiedDate), mSize(pSize)
 	{
 		mSizeIsValid = true;
@@ -48,8 +48,8 @@ struct VersionData {
 	bool mSizeIsValid;
 	bool mChunkedFile;
 	git_oid mOid;
-	quint64 mCommitTime;
-	quint64 mModifiedDate;
+	qint64 mCommitTime;
+	qint64 mModifiedDate;
 
 protected:
 	quint64 mSize;
@@ -73,7 +73,7 @@ public:
 	}
 	bool isDirectory() const { return S_ISDIR(mMode); }
 	void getBupUrl(int pVersionIndex, QUrl *pComplete, QString *pRepoPath = nullptr, QString *pBranchName = nullptr,
-	               quint64 *pCommitTime = nullptr, QString *pPathInRepo = nullptr) const;
+	               qint64 *pCommitTime = nullptr, QString *pPathInRepo = nullptr) const;
 	virtual MergedNodeList &subNodes();
 	const VersionList *versionList() const { return &mVersionList; }
 	uint mode() const { return mMode; }

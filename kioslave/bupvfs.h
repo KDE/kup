@@ -31,7 +31,7 @@
 class Node: public QObject, public Metadata {
 	Q_OBJECT
 public:
-	Node(QObject *pParent, const QString &pName, quint64 pMode);
+	Node(QObject *pParent, const QString &pName, qint64 pMode);
 	~Node() override {}
 	virtual int readMetadata(VintStream &pMetadataStream);
 	Node *resolve(const QString &pPath, bool pFollowLinks = false);
@@ -52,7 +52,7 @@ typedef QHashIterator<QString, Node*> NodeMapIterator;
 class Directory: public Node {
 	Q_OBJECT
 public:
-	Directory(QObject *pParent, const QString &pName, quint64 pMode);
+	Directory(QObject *pParent, const QString &pName, qint64 pMode);
 	~Directory() override {
 		if(mSubNodes != nullptr) {
 			delete mSubNodes;
@@ -69,7 +69,7 @@ protected:
 class File: public Node {
 	Q_OBJECT
 public:
-	File(QObject *pParent, const QString &pName, quint64 pMode)
+	File(QObject *pParent, const QString &pName, qint64 pMode)
 	   :Node(pParent, pName, pMode)
 	{
 		mOffset = 0;
@@ -88,7 +88,7 @@ public:
 		mOffset = pOffset;
 		return 0; // success
 	}
-	virtual int read(QByteArray &pChunk, int pReadSize = -1) = 0;
+	virtual int read(QByteArray &pChunk, qint64 pReadSize = -1) = 0;
 	int readMetadata(VintStream &pMetadataStream) override;
 
 protected:
@@ -100,9 +100,9 @@ protected:
 class BlobFile: public File {
 	Q_OBJECT
 public:
-	BlobFile(Node *pParent, const git_oid *pOid, const QString &pName, quint64 pMode);
+	BlobFile(Node *pParent, const git_oid *pOid, const QString &pName, qint64 pMode);
 	~BlobFile() override;
-	int read(QByteArray &pChunk, int pReadSize = -1) override;
+	int read(QByteArray &pChunk, qint64 pReadSize = -1) override;
 
 protected:
 	git_blob *cachedBlob();
@@ -114,7 +114,7 @@ protected:
 class Symlink: public BlobFile {
 	Q_OBJECT
 public:
-	Symlink(Node *pParent, const git_oid *pOid, const QString &pName, quint64 pMode)
+	Symlink(Node *pParent, const git_oid *pOid, const QString &pName, qint64 pMode)
 	   : BlobFile(pParent, pOid, pName, pMode)
 	{
 		QByteArray lArray;
@@ -128,10 +128,10 @@ public:
 class ChunkFile: public File {
 	Q_OBJECT
 public:
-	ChunkFile(Node *pParent, const git_oid *pOid, const QString &pName, quint64 pMode);
+	ChunkFile(Node *pParent, const git_oid *pOid, const QString &pName, qint64 pMode);
 	~ChunkFile() override;
 	int seek(quint64 pOffset) override;
-	int read(QByteArray &pChunk, int pReadSize = -1) override;
+	int read(QByteArray &pChunk, qint64 pReadSize = -1) override;
 
 protected:
 	quint64 calculateSize() override;
@@ -142,8 +142,8 @@ protected:
 		TreePosition(git_tree *pTree);
 		~TreePosition();
 		git_tree *mTree;
-		uint mIndex;
-		int mSkipSize;
+		ulong mIndex;
+		quint64 mSkipSize;
 	};
 
 	QList<TreePosition *> mPositionStack;
@@ -153,7 +153,7 @@ protected:
 class ArchivedDirectory: public Directory {
 	Q_OBJECT
 public:
-	ArchivedDirectory(Node *pParent, const git_oid *pOid, const QString &pName, quint64 pMode);
+	ArchivedDirectory(Node *pParent, const git_oid *pOid, const QString &pName, qint64 pMode);
 
 protected:
 	void generateSubNodes() override;

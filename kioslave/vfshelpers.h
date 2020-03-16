@@ -48,7 +48,7 @@ protected:
 
 struct Metadata {
 	Metadata() {}
-	Metadata(quint64 pMode);
+	Metadata(qint64 pMode);
 	qint64 mMode;
 	qint64 mUid;
 	qint64 mGid;
@@ -56,8 +56,8 @@ struct Metadata {
 	qint64 mMtime;
 	QString mSymlinkTarget;
 
-	static quint64 mDefaultUid;
-	static quint64 mDefaultGid;
+	static qint64 mDefaultUid;
+	static qint64 mDefaultGid;
 	static bool mDefaultsResolved;
 };
 

@@ -29,7 +29,7 @@ struct BupSourceInfo {
 	QString mRepoPath;
 	QString mBranchName;
 	QString mPathInRepo;
-	quint64 mCommitTime;
+	qint64 mCommitTime;
 	quint64 mSize;
 	bool mIsDirectory;
 };

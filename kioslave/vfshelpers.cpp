@@ -76,7 +76,7 @@ VintStream &VintStream::operator >>(quint64 &pInt) {
 		if(!mBuffer->getChar(&c)) {
 			throw 1;
 		}
-		pInt |= (c & 0x7F) << lOffset;
+		pInt |= static_cast<quint64>((c & 0x7F) << lOffset);
 		lOffset += 7;
 	} while(c & 0x80);
 	return *this;
@@ -99,11 +99,11 @@ VintStream &VintStream::operator >>(QByteArray &pByteArray) {
 	return *this;
 }
 
-quint64 Metadata::mDefaultUid;
-quint64 Metadata::mDefaultGid;
+qint64 Metadata::mDefaultUid;
+qint64 Metadata::mDefaultGid;
 bool Metadata::mDefaultsResolved = false;
 
-Metadata::Metadata(quint64 pMode) {
+Metadata::Metadata(qint64 pMode) {
 	mMode = pMode;
 	mAtime = 0;
 	mMtime = 0;
@@ -127,11 +127,11 @@ int readMetadata(VintStream &pMetadataStream, Metadata &pMetadata) {
 				quint64 lNotUsedUint, lTempUint;
 				QString lNotUsedString;
 				pMetadataStream >> lNotUsedUint >> lTempUint;
-				pMetadata.mMode = lTempUint;
+				pMetadata.mMode = static_cast<qint64>(lTempUint);
 				pMetadataStream >> lTempUint >> lNotUsedString; // user name
-				pMetadata.mUid = lTempUint;
+				pMetadata.mUid = static_cast<qint64>(lTempUint);
 				pMetadataStream >> lTempUint >> lNotUsedString; // group name
-				pMetadata.mGid = lTempUint;
+				pMetadata.mGid = static_cast<qint64>(lTempUint);
 				pMetadataStream >> lNotUsedUint; // device number
 				pMetadataStream >> pMetadata.mAtime >> lNotUsedUint; //nanoseconds
 				pMetadataStream >> pMetadata.mMtime >> lNotUsedUint; // nanoseconds
@@ -179,7 +179,7 @@ quint64 calculateChunkFileSize(const git_oid *pOid, git_repository *pRepository)
 		if(0 != git_tree_lookup(&lTree, pRepository, pOid)) {
 			return 0;
 		}
-		uint lEntryCount = git_tree_entrycount(lTree);
+		ulong lEntryCount = git_tree_entrycount(lTree);
 		const git_tree_entry *lEntry = git_tree_entry_byindex(lTree, lEntryCount - 1);
 		quint64 lEntryOffset;
 		if(!offsetFromName(lEntry, lEntryOffset)) {
@@ -225,6 +225,6 @@ void getEntryAttributes(const git_tree_entry *pTreeEntry, uint &pMode, bool &pCh
 
 QString vfsTimeToString(git_time_t pTime) {
 	QDateTime lDateTime;
-	lDateTime.setTime_t(pTime);
+	lDateTime.setSecsSinceEpoch(pTime);
 	return lDateTime.toLocalTime().toString(QStringLiteral("yyyy-MM-dd hh:mm"));
 }

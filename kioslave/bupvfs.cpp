@@ -32,7 +32,7 @@
 git_revwalk *Node::mRevisionWalker = nullptr;
 git_repository *Node::mRepository = nullptr;
 
-Node::Node(QObject *pParent, const QString &pName, quint64 pMode)
+Node::Node(QObject *pParent, const QString &pName, qint64 pMode)
    :QObject(pParent), Metadata(pMode)
 {
 	setObjectName(pName);
@@ -110,7 +110,7 @@ Node *Node::parentCommit() {
 //	return lNode;
 //}
 
-Directory::Directory(QObject *pParent, const QString &pName, quint64 pMode)
+Directory::Directory(QObject *pParent, const QString &pName, qint64 pMode)
    :Node(pParent, pName, pMode)
 {
 	mSubNodes = nullptr;
@@ -142,7 +142,7 @@ int File::readMetadata(VintStream &pMetadataStream) {
 	return lRetVal;
 }
 
-BlobFile::BlobFile(Node *pParent, const git_oid *pOid, const QString &pName, quint64 pMode)
+BlobFile::BlobFile(Node *pParent, const git_oid *pOid, const QString &pName, qint64 pMode)
    : File(pParent, pName, pMode)
 {
 	mOid = *pOid;
@@ -155,7 +155,7 @@ BlobFile::~BlobFile() {
 	}
 }
 
-int BlobFile::read(QByteArray &pChunk, int pReadSize) {
+int BlobFile::read(QByteArray &pChunk, qint64 pReadSize) {
 	if(mOffset >= size()) {
 		return KIO::ERR_NO_CONTENT;
 	}
@@ -163,10 +163,10 @@ int BlobFile::read(QByteArray &pChunk, int pReadSize) {
 	if(lBlob == nullptr) {
 		return KIO::ERR_COULD_NOT_READ;
 	}
-	int lAvailableSize = size() - mOffset;
-	int lReadSize = lAvailableSize;
-	if(pReadSize > 0 && pReadSize < lAvailableSize) {
-		lReadSize = pReadSize;
+	quint64 lAvailableSize = size() - mOffset;
+	quint64 lReadSize = lAvailableSize;
+	if(pReadSize > 0 && static_cast<quint64>(pReadSize) < lAvailableSize) {
+		lReadSize = static_cast<quint64>(pReadSize);
 	}
 	pChunk = QByteArray::fromRawData(static_cast<const char *>(git_blob_rawcontent(lBlob)) + mOffset, static_cast<int>(lReadSize));
 	mOffset += lReadSize;
@@ -188,7 +188,7 @@ quint64 BlobFile::calculateSize() {
 	return static_cast<quint64>(git_blob_rawsize(lBlob));
 }
 
-ChunkFile::ChunkFile(Node *pParent, const git_oid *pOid, const QString &pName, quint64 pMode)
+ChunkFile::ChunkFile(Node *pParent, const git_oid *pOid, const QString &pName, qint64 pMode)
    : File(pParent, pName, pMode)
 {
 	mOid = *pOid;
@@ -231,13 +231,13 @@ int ChunkFile::seek(quint64 pOffset) {
 	mPositionStack.append(lCurrentPos);
 	quint64 lLocalOffset = mOffset;
 	while(true) {
-		uint lLower = 0;
+		ulong lLower = 0;
 		const git_tree_entry *lLowerEntry = git_tree_entry_byindex(lCurrentPos->mTree, lLower);
-		uint lLowerOffset = 0;
-		uint lUpper = git_tree_entrycount(lCurrentPos->mTree);
+		ulong lLowerOffset = 0;
+		ulong lUpper = git_tree_entrycount(lCurrentPos->mTree);
 
 		while(lUpper - lLower > 1) {
-			uint lToCheck = lLower + (lUpper - lLower)/2;
+			ulong lToCheck = lLower + (lUpper - lLower)/2;
 			const git_tree_entry *lCheckEntry = git_tree_entry_byindex(lCurrentPos->mTree, lToCheck);
 			quint64 lCheckOffset;
 			if(!offsetFromName(lCheckEntry, lCheckOffset)) {
@@ -271,7 +271,7 @@ int ChunkFile::seek(quint64 pOffset) {
 	return 0; // success.
 }
 
-int ChunkFile::read(QByteArray &pChunk, int pReadSize) {
+int ChunkFile::read(QByteArray &pChunk, qint64 pReadSize) {
 	if(mOffset >= size()) {
 		return KIO::ERR_NO_CONTENT;
 	}
@@ -294,14 +294,14 @@ int ChunkFile::read(QByteArray &pChunk, int pReadSize) {
 		}
 	}
 
-	int lTotalSize = git_blob_rawsize(mCurrentBlob);
-	int lAvailableSize = lTotalSize - lCurrentPos->mSkipSize;
-	if(lAvailableSize < 0) { // this must mean a corrupt bup tree somehow
+	quint64 lTotalSize = static_cast<quint64>(git_blob_rawsize(mCurrentBlob));
+	if(lTotalSize < lCurrentPos->mSkipSize) { // this must mean a corrupt bup tree somehow
 		return KIO::ERR_COULD_NOT_READ;
 	}
-	int lReadSize = lAvailableSize;
-	if(pReadSize > 0 && pReadSize < lAvailableSize) {
-		lReadSize = pReadSize;
+	quint64 lAvailableSize = lTotalSize - lCurrentPos->mSkipSize;
+	quint64 lReadSize = lAvailableSize;
+	if(pReadSize > 0 && static_cast<quint64>(pReadSize) < lAvailableSize) {
+		lReadSize = static_cast<quint64>(pReadSize);
 	}
 	pChunk = QByteArray::fromRawData(static_cast<const char *>(git_blob_rawcontent(mCurrentBlob)) + lCurrentPos->mSkipSize, static_cast<int>(lReadSize));
 	mOffset += lReadSize;
@@ -353,7 +353,7 @@ ChunkFile::TreePosition::~TreePosition() {
 	git_tree_free(mTree);
 }
 
-ArchivedDirectory::ArchivedDirectory(Node *pParent, const git_oid *pOid, const QString &pName, quint64 pMode)
+ArchivedDirectory::ArchivedDirectory(Node *pParent, const git_oid *pOid, const QString &pName, qint64 pMode)
    : Directory(pParent, pName, pMode)
 {
 	mOid = *pOid;
@@ -373,7 +373,7 @@ void ArchivedDirectory::generateSubNodes() {
 	if(mTree == nullptr) {
 		return;
 	}
-	uint lEntryCount = git_tree_entrycount(mTree);
+	ulong lEntryCount = git_tree_entrycount(mTree);
 	for(uint i = 0; i < lEntryCount; ++i) {
 		uint lMode;
 		const git_oid *lOid;
