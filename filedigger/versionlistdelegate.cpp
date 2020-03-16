@@ -65,30 +65,30 @@ bool Button::event(QEvent *pEvent) {
 	QMouseEvent *lMouseEvent = static_cast<QMouseEvent *>(pEvent);
 	bool lActivated = false;
 	switch(pEvent->type()) {
-		case QEvent::MouseMove:
-			if(mStyleOption.rect.contains(lMouseEvent->pos())) {
-				if(!(mStyleOption.state & QStyle::State_MouseOver)) {
-					mStyleOption.state |= QStyle::State_MouseOver;
-					if(mPushed) {
-						mStyleOption.state |= QStyle::State_Sunken;
-						mStyleOption.state &= ~QStyle::State_Raised;
-					}
-					mParent->update(mStyleOption.rect);
+	case QEvent::MouseMove:
+		if(mStyleOption.rect.contains(lMouseEvent->pos())) {
+			if(!(mStyleOption.state & QStyle::State_MouseOver)) {
+				mStyleOption.state |= QStyle::State_MouseOver;
+				if(mPushed) {
+					mStyleOption.state |= QStyle::State_Sunken;
+					mStyleOption.state &= ~QStyle::State_Raised;
 				}
-			} else {
-				if(mStyleOption.state & QStyle::State_MouseOver) {
-					mStyleOption.state &= ~QStyle::State_MouseOver;
-					if(mPushed) {
-						mStyleOption.state &= ~QStyle::State_Sunken;
-						mStyleOption.state |= QStyle::State_Raised;
-					}
-					mParent->update(mStyleOption.rect);
-				}
+				mParent->update(mStyleOption.rect);
 			}
+		} else {
+			if(mStyleOption.state & QStyle::State_MouseOver) {
+				mStyleOption.state &= ~QStyle::State_MouseOver;
+				if(mPushed) {
+					mStyleOption.state &= ~QStyle::State_Sunken;
+					mStyleOption.state |= QStyle::State_Raised;
+				}
+				mParent->update(mStyleOption.rect);
+			}
+		}
 		break;
 	case QEvent::MouseButtonPress:
 		if(lMouseEvent->button() == Qt::LeftButton && !mPushed &&
-		      (mStyleOption.state & QStyle::State_MouseOver)) {
+		        (mStyleOption.state & QStyle::State_MouseOver)) {
 			mPushed = true;
 			mStyleOption.state |= QStyle::State_Sunken;
 			mStyleOption.state &= ~QStyle::State_Raised;
@@ -118,6 +118,7 @@ bool Button::event(QEvent *pEvent) {
 				lActivated = true;
 			}
 		}
+		break;
 	}
 	default:
 		break;

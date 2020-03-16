@@ -73,7 +73,7 @@ private:
 	DirSelector *mDirSelector;
 	QFileInfo mDestination;
 	QFileInfo mFolderToCreate;
-	QString mRestorationPath; // not neccesarily same as destination
+	QString mRestorationPath; // not necessarily same as destination
 	BupSourceInfo mSourceInfo;
 	quint64 mDestinationSize; //size of files about to be overwritten
 	quint64 mSourceSize; //size of files about to be read

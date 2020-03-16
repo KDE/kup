@@ -28,7 +28,6 @@
 #include <QCheckBox>
 #include <QDBusInterface>
 #include <QLabel>
-#include <QMessageBox>
 #include <QPushButton>
 #include <QScrollArea>
 #include <QStackedLayout>
@@ -38,6 +37,7 @@
 #include <Kdelibs4ConfigMigrator>
 #include <KLineEdit>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <KPluginFactory>
 #include <KProcess>
 
@@ -163,11 +163,12 @@ void KupKcm::save() {
 			lManager->updateSettings();
 			mStatusWidgets.at(i)->updateIcon();
 			if(lPlan->mDestinationType == 1 && lPlan->mExternalUUID.isEmpty()) {
-				QMessageBox::warning(this, xi18nc("@title:window", "Warning"),
-				                     xi18nc("@info %1 is the name of the backup plan",
-				                            "%1 does not have a destination!<nl/>"
-				                            "No backups will be saved by this plan.",
-				                            lPlan->mDescription));
+				KMessageBox::information(this, xi18nc("@title:window", "Warning"),
+				                         xi18nc("@info %1 is the name of the backup plan",
+				                                "%1 does not have a destination!<nl/>"
+				                                "No backups will be saved by this plan.",
+				                                lPlan->mDescription),
+				                         QString(), KMessageBox::Dangerous);
 			}
 		}
 		else {
