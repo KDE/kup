@@ -255,7 +255,7 @@ void BupJob::slotReadBupErrors() {
 			lLine.remove(0, 2);
 			lFileName = lLine;
 			lValidFileName = true;
-		} else if(!lLine.startsWith("D /")) {
+		} else if(!lLine.startsWith(QLatin1String("D /"))) {
 			mLogStream << lLine << endl;
 		}
 	}
