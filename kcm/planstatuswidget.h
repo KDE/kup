@@ -34,7 +34,7 @@ class PlanStatusWidget: public QGroupBox
 {
 	Q_OBJECT
 public:
-	explicit PlanStatusWidget(BackupPlan *pPlan, QWidget *pParent = 0);
+	explicit PlanStatusWidget(BackupPlan *pPlan, QWidget *pParent = nullptr);
 	BackupPlan *plan() const {return mPlan;}
 
 	BackupPlan *mPlan;

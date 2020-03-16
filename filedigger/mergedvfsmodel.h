@@ -29,7 +29,7 @@ class MergedVfsModel : public QAbstractItemModel
 {
 	Q_OBJECT
 public:
-	explicit MergedVfsModel(MergedRepository *pRoot, QObject *pParent = 0);
+	explicit MergedVfsModel(MergedRepository *pRoot, QObject *pParent = nullptr);
 	~MergedVfsModel() override;
 	int columnCount(const QModelIndex &pParent) const override;
 	QVariant data(const QModelIndex &pIndex, int pRole) const override;

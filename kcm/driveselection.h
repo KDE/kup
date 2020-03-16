@@ -51,7 +51,7 @@ public:
 	};
 
 public:
-	DriveSelection(BackupPlan *pBackupPlan, QWidget *parent=0);
+	explicit DriveSelection(BackupPlan *pBackupPlan, QWidget *parent=nullptr);
 	QString selectedDrive() const {return mSelectedUuid;}
 	bool driveIsSelected() const {return !mSelectedUuid.isEmpty();}
 	bool selectedDriveIsAccessible() const {return mSelectedAndAccessible;}

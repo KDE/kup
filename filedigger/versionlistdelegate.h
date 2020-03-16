@@ -24,7 +24,6 @@
 #include <QAbstractItemDelegate>
 #include <QParallelAnimationGroup>
 
-
 class Button : public QObject {
 	Q_OBJECT
 
@@ -49,7 +48,7 @@ class VersionItemAnimation : public QParallelAnimationGroup
 	Q_PROPERTY(float opacity READ opacity WRITE setOpacity)
 
 public:
-	VersionItemAnimation(QWidget *pParent);
+	explicit VersionItemAnimation(QWidget *pParent);
 	float extraHeight() {return mExtraHeight;}
 	float opacity() {return mOpacity;}
 
@@ -75,7 +74,7 @@ class VersionListDelegate : public QAbstractItemDelegate
 {
 	Q_OBJECT
 public:
-	explicit VersionListDelegate(QAbstractItemView *pItemView, QObject *pParent = 0);
+	explicit VersionListDelegate(QAbstractItemView *pItemView, QObject *pParent = nullptr);
 	~VersionListDelegate() override;
 	void paint(QPainter *pPainter, const QStyleOptionViewItem &pOption, const QModelIndex &pIndex) const override;
 	QSize sizeHint(const QStyleOptionViewItem &pOption, const QModelIndex &pIndex) const override;

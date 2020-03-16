@@ -42,7 +42,7 @@ class RestoreDialog : public QDialog
 	Q_OBJECT
 
 public:
-	explicit RestoreDialog(const BupSourceInfo &pPathInfo, QWidget *parent = 0);
+	explicit RestoreDialog(const BupSourceInfo &pPathInfo, QWidget *parent = nullptr);
 	~RestoreDialog() override;
 
 protected:

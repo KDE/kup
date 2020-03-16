@@ -81,7 +81,7 @@ protected:
 class FolderSelectionWidget : public QWidget {
 	Q_OBJECT
 public:
-	FolderSelectionWidget(FolderSelectionModel *pModel, QWidget *pParent = 0);
+	explicit FolderSelectionWidget(FolderSelectionModel *pModel, QWidget *pParent = nullptr);
 	virtual ~FolderSelectionWidget();
 
 public slots:

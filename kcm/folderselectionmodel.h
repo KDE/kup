@@ -24,8 +24,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef _FOLDER_SELECTION_MODEL_H_
-#define _FOLDER_SELECTION_MODEL_H_
+#ifndef FOLDER_SELECTION_MODEL_H
+#define FOLDER_SELECTION_MODEL_H
 
 #include <QFileSystemModel>
 #include <QSet>
@@ -36,7 +36,7 @@ class FolderSelectionModel : public QFileSystemModel
 	Q_OBJECT
 
 public:
-	FolderSelectionModel(bool pHiddenFoldersVisible = false, QObject *pParent = 0);
+	explicit FolderSelectionModel(bool pHiddenFoldersVisible = false, QObject *pParent = nullptr);
 
 	enum InclusionState {
 		StateNone,

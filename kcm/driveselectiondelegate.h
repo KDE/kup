@@ -29,7 +29,7 @@ class KCapacityBar;
 class DriveSelectionDelegate : public QStyledItemDelegate
 {
 public:
-	DriveSelectionDelegate(QListView *pParent);
+	explicit DriveSelectionDelegate(QListView *pParent);
 	void paint(QPainter* pPainter, const QStyleOptionViewItem& pOption, const QModelIndex& pIndex) const override;
 	QSize sizeHint(const QStyleOptionViewItem& pOption, const QModelIndex& pIndex) const override;
 private:

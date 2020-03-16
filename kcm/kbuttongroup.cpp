@@ -75,7 +75,7 @@ void KButtonGroup::setSelected(int id)
 
     QHash<QObject *, int>::Iterator it = d->btnMap.begin();
     QHash<QObject *, int>::Iterator itEnd = d->btnMap.end();
-    QAbstractButton *button = 0;
+    QAbstractButton *button = nullptr;
 
     for (; it != itEnd; ++it) {
         if ((it.value() == id) && (button = qobject_cast<QAbstractButton *>(it.key()))) {

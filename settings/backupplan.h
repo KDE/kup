@@ -28,7 +28,7 @@ class Schedule;
 class BackupPlan : public KCoreConfigSkeleton
 {
 public:
-	BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pParent = 0);
+	BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pParent = nullptr);
 	int planNumber() const {return mPlanNumber;}
 	virtual void setPlanNumber(int pPlanNumber);
 	QString statusText();
