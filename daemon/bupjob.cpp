@@ -223,8 +223,8 @@ void BupJob::slotRecoveryInfoDone(int pExitCode, QProcess::ExitStatus pExitStatu
 
 void BupJob::slotReadBupErrors() {
 	bool lValidInfo = false, lValidFileName = false;
-	qulonglong lCopiedKBytes, lTotalKBytes, lCopiedFiles, lTotalFiles;
-	ulong lSpeedKBps, lPercent = 0;
+	qulonglong lCopiedKBytes = 0, lTotalKBytes = 0, lCopiedFiles = 0, lTotalFiles = 0;
+	ulong lSpeedKBps = 0, lPercent = 0;
 	QString lFileName;
 
 	QTextStream lStream(mSaveProcess.readAllStandardError());
