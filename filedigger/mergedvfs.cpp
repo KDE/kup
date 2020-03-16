@@ -18,8 +18,8 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include "kupdaemon.h"
 #include "mergedvfs.h"
+#include "kupdaemon.h"
 #include "vfshelpers.h"
 #include "kupfiledigger_debug.h"
 

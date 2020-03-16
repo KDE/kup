@@ -18,10 +18,10 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+#include "kupkcm.h"
 #include "backupplan.h"
 #include "backupplanwidget.h"
 #include "kupdaemon.h"
-#include "kupkcm.h"
 #include "kupsettings.h"
 #include "planstatuswidget.h"
 
