@@ -222,7 +222,7 @@ ConfigIncludeDummy::ConfigIncludeDummy(FolderSelectionModel *pModel, FolderSelec
 }
 
 QStringList ConfigIncludeDummy::includeList() {
-	QStringList lList = mModel->includedPaths().toList();
+	QStringList lList = mModel->includedPaths().values();
 	lList.sort();
 	return lList;
 }
@@ -247,7 +247,7 @@ ConfigExcludeDummy::ConfigExcludeDummy(FolderSelectionModel *pModel, FolderSelec
 }
 
 QStringList ConfigExcludeDummy::excludeList() {
-	QStringList lList = mModel->excludedPaths().toList();
+	QStringList lList = mModel->excludedPaths().values();
 	lList.sort();
 	return lList;
 }
@@ -356,8 +356,8 @@ void FolderSelectionWidget::expandToShowSelections() {
 }
 
 void FolderSelectionWidget::setUnreadables(QPair<QSet<QString>, QSet<QString> > pUnreadables) {
-	mUnreadableFolders = pUnreadables.first.toList();
-	mUnreadableFiles = pUnreadables.second.toList();
+	mUnreadableFolders = pUnreadables.first.values();
+	mUnreadableFiles = pUnreadables.second.values();
 	updateMessage();
 }
 
