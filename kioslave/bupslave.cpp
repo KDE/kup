@@ -64,22 +64,14 @@ BupSlave::BupSlave(const QByteArray &pPoolSocket, const QByteArray &pAppSocket)
 {
 	mRepository = nullptr;
 	mOpenFile = nullptr;
-	#if LIBGIT2_VER_MAJOR == 0 && LIBGIT2_VER_MINOR >= 24
 	git_libgit2_init();
-	#else
-	git_threads_init();
-	#endif
 }
 
 BupSlave::~BupSlave() {
 	if(mRepository != nullptr) {
 		delete mRepository;
 	}
-	#if LIBGIT2_VER_MAJOR == 0 && LIBGIT2_VER_MINOR >= 24
 	git_libgit2_shutdown();
-	#else
-	git_threads_shutdown();
-	#endif
 }
 
 void BupSlave::close() {

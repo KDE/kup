@@ -21,11 +21,7 @@
 #include "filedigger.h"
 #include "mergedvfs.h"
 
-#if LIBGIT2_VER_MAJOR == 0 && LIBGIT2_VER_MINOR >= 24
 #include <git2/global.h>
-#else
-#include <git2/threads.h>
-#endif
 
 #include <KAboutData>
 #include <KLocalizedString>
@@ -66,19 +62,11 @@ int main(int pArgCount, char **pArgArray) {
 	}
 
 	// This needs to be called first thing, before any other calls to libgit2.
-	#if LIBGIT2_VER_MAJOR == 0 && LIBGIT2_VER_MINOR >= 24
 	git_libgit2_init();
-	#else
-	git_threads_init();
-	#endif
 
 	FileDigger *lFileDigger = new FileDigger(lRepoPath, lParser.value(QStringLiteral("branch")));
 	lFileDigger->show();
 	int lRetVal = lApp.exec();
-	#if LIBGIT2_VER_MAJOR == 0 && LIBGIT2_VER_MINOR >= 24
 	git_libgit2_shutdown();
-	#else
-	git_threads_shutdown();
-	#endif
 	return lRetVal;
 }
