@@ -36,6 +36,8 @@ BupJob::BupJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const Q
 	mSaveProcess.setOutputChannelMode(KProcess::SeparateChannels);
 	mPar2Process.setOutputChannelMode(KProcess::SeparateChannels);
 	setCapabilities(KJob::Suspendable);
+	mHarmlessErrorCount = 0;
+	mAllErrorsHarmless = false;
 }
 
 void BupJob::performJob() {
@@ -170,17 +172,18 @@ void BupJob::slotSavingStarted() {
 }
 
 void BupJob::slotSavingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
-	QString lErrors = QString::fromUtf8(mSaveProcess.readAllStandardError());
-	if(!lErrors.isEmpty()) {
-		mLogStream << lErrors << endl;
-	}
+	slotReadBupErrors();
 	mLogStream << "Exit code: " << pExitCode << endl;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
-		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: "
-		                             "failed to save everything.") << endl;
-		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Failed to save backup. "
-		                                                            "See log file for more details."));
-		return;
+		if(mAllErrorsHarmless) {
+			mLogStream << QStringLiteral("Only harmless errors detected by Kup.") << endl;
+		} else {
+			mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: "
+			                             "failed to save everything.") << endl;
+			jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Failed to save backup. "
+			                                                            "See log file for more details."));
+			return;
+		}
 	}
 	if(mBackupPlan.mGenerateRecoveryInfo) {
 		mPar2Process << QStringLiteral("bup");
@@ -226,37 +229,51 @@ void BupJob::slotReadBupErrors() {
 	qulonglong lCopiedKBytes = 0, lTotalKBytes = 0, lCopiedFiles = 0, lTotalFiles = 0;
 	ulong lSpeedKBps = 0, lPercent = 0;
 	QString lFileName;
+	QRegularExpression lProgressRegExp(QStringLiteral("(\\d+)/(\\d+)k, (\\d+)/(\\d+) files\\) \\S* (?:(\\d+)k/s|)"));
+	QRegularExpression lErrorCountRegExp(QStringLiteral("WARNING: (\\d+) errors encountered while saving."));
 
 	QTextStream lStream(mSaveProcess.readAllStandardError());
-	QString lLine;
-	while(lStream.readLineInto(&lLine, 500)) {
-//		mLogStream << "read a line: " << lLine << endl;
-		if(lLine.startsWith(QStringLiteral("Reading index:"))) {
-			continue;
-		} else if(lLine.startsWith(QStringLiteral("bloom:"))) {
-			continue;
-		} else if(lLine.startsWith(QStringLiteral("midx:"))) {
-			continue;
-		} else if(lLine.startsWith(QStringLiteral("Saving:"))) {
-			QRegularExpression lRegExp(QStringLiteral("(\\d+)/(\\d+)k, (\\d+)/(\\d+) files\\) \\S* (?:(\\d+)k/s|)"));
-			QRegularExpressionMatch lMatch = lRegExp.match(lLine);
-			if(lMatch.hasMatch()) {
-				lCopiedKBytes = lMatch.captured(1).toULongLong();
-				lTotalKBytes = lMatch.captured(2).toULongLong();
-				lCopiedFiles = lMatch.captured(3).toULongLong();
-				lTotalFiles = lMatch.captured(4).toULongLong();
-				lSpeedKBps = lMatch.captured(5).toULong();
-				if(lTotalKBytes != 0) {
-					lPercent = qMax(100*lCopiedKBytes/lTotalKBytes, static_cast<qulonglong>(1));
+	QString lRawLine;
+	while(lStream.readLineInto(&lRawLine)) {
+		const QStringList lList = lRawLine.split(QChar::CarriageReturn);
+		for(const QString &lLine: lList) {
+			//		mLogStream << "read a line: " << lLine << endl;
+			if(lLine.startsWith(QStringLiteral("Reading index:"))) {
+				continue;
+			} else if(lLine.startsWith(QStringLiteral("bloom:"))) {
+				continue;
+			} else if(lLine.startsWith(QStringLiteral("midx:"))) {
+				continue;
+			} else if(lLine.startsWith(QStringLiteral("Saving:"))) {
+				QRegularExpressionMatch lMatch = lProgressRegExp.match(lLine);
+				if(lMatch.hasMatch()) {
+					lCopiedKBytes = lMatch.captured(1).toULongLong();
+					lTotalKBytes = lMatch.captured(2).toULongLong();
+					lCopiedFiles = lMatch.captured(3).toULongLong();
+					lTotalFiles = lMatch.captured(4).toULongLong();
+					lSpeedKBps = lMatch.captured(5).toULong();
+					if(lTotalKBytes != 0) {
+						lPercent = qMax(100*lCopiedKBytes/lTotalKBytes, static_cast<qulonglong>(1));
+					}
+					lValidInfo = true;
 				}
-				lValidInfo = true;
+			} else if(lLine.startsWith(QStringLiteral("[Errno 2]"))) {
+				mHarmlessErrorCount++;
+				mLogStream << lLine << endl;
+			} else if(lLine.startsWith(QStringLiteral("WARNING:"))) {
+				QRegularExpressionMatch lMatch = lErrorCountRegExp.match(lLine);
+				if(lMatch.hasMatch()) {
+					int lTotalErrors = lMatch.captured(1).toInt();
+					mAllErrorsHarmless = lTotalErrors == mHarmlessErrorCount;
+				}
+				mLogStream << lLine << endl;
+			} else if((lLine.at(0) == ' ' || lLine.at(0) == 'A' || lLine.at(0) == 'M') && lLine.at(1) == ' ' && lLine.at(2) == '/') {
+				lFileName = lLine;
+				lFileName.remove(0, 2);
+				lValidFileName = true;
+			} else if(!lLine.startsWith(QStringLiteral("D /"))) {
+				mLogStream << lLine << endl;
 			}
-		} else if((lLine.at(0) == ' ' || lLine.at(0) == 'A' || lLine.at(0) == 'M') && lLine.at(1) == ' ' && lLine.at(2) == '/') {
-			lLine.remove(0, 2);
-			lFileName = lLine;
-			lValidFileName = true;
-		} else if(!lLine.startsWith(QLatin1String("D /"))) {
-			mLogStream << lLine << endl;
 		}
 	}
 	if(mInfoRateLimiter.hasExpired(200)) {

@@ -57,6 +57,8 @@ protected:
 	KProcess mSaveProcess;
 	KProcess mPar2Process;
 	QElapsedTimer mInfoRateLimiter;
+	int mHarmlessErrorCount;
+	bool mAllErrorsHarmless;
 };
 
 #endif /*BUPJOB_H*/
