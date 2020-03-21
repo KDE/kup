@@ -67,7 +67,7 @@ void MergedNode::getBupUrl(int pVersionIndex, QUrl *pComplete, QString *pRepoPat
 	}
 	const MergedRepository *lRepo = qobject_cast<const MergedRepository *>(lStack.takeLast());
 	if(pComplete) {
-		pComplete->setUrl("bup://" + lRepo->objectName() + '/' + lRepo->mBranchName + '/' +
+		pComplete->setUrl("bup://" + lRepo->objectName() + lRepo->mBranchName + '/' +
 		                  vfsTimeToString(static_cast<git_time_t>(mVersionList.at(pVersionIndex)->mCommitTime)));
 	}
 	if(pRepoPath) {
