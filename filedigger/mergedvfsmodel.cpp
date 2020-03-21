@@ -24,6 +24,9 @@
 
 #include <KIO/Global>
 #include <KIconLoader>
+
+#include <QMimeDatabase>
+#include <QMimeType>
 #include <QPixmap>
 
 MergedVfsModel::MergedVfsModel(MergedRepository *pRoot, QObject *pParent) :
@@ -48,10 +51,14 @@ QVariant MergedVfsModel::data(const QModelIndex &pIndex, int pRole) const {
 	switch (pRole) {
 	case Qt::DisplayRole:
 		return lNode->objectName();
-	case Qt::DecorationRole:
-		return KIconLoader::global()->loadMimeTypeIcon(
-		         KIO::iconNameForUrl(QUrl::fromLocalFile(lNode->objectName())),
-		         KIconLoader::Small);
+	case Qt::DecorationRole: {
+		QString lIconName = KIO::iconNameForUrl(QUrl::fromLocalFile(lNode->objectName()));
+		if(lNode->isDirectory()) {
+			QMimeDatabase db;
+			lIconName = db.mimeTypeForName(QStringLiteral("inode/directory")).iconName();
+		}
+		return KIconLoader::global()->loadMimeTypeIcon(lIconName, KIconLoader::Small);
+	}
 	default:
 		return QVariant();
 	}
