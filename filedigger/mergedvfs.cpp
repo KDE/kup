@@ -180,17 +180,21 @@ void MergedNode::generateSubNodes() {
 					                                              lCurrentVersion->mModifiedDate, 0));
 				}
 			} else {
-				qint64 lModifiedDate;
+				qint64 lModifiedDate = lCurrentVersion->mModifiedDate;
+				qint64 lSize = -1;
 				Metadata lMetadata;
 				if(lMetadataStream != nullptr && 0 == readMetadata(*lMetadataStream, lMetadata)) {
 					lModifiedDate = lMetadata.mMtime;
-				} else {
-					lModifiedDate = lCurrentVersion->mModifiedDate;
+					lSize = lMetadata.mSize;
 				}
 				if(!lAlreadySeen) {
-					lSubNode->mVersionList.append(new VersionData(lChunked, lOid,
-					                                              lCurrentVersion->mCommitTime,
-					                                              lModifiedDate));
+					VersionData *lVersionData;
+					if(lSize >= 0) {
+						lVersionData = new VersionData(lOid, lCurrentVersion->mCommitTime, lModifiedDate, static_cast<quint64>(lSize));
+					} else {
+						lVersionData = new VersionData(lChunked, lOid, lCurrentVersion->mCommitTime, lModifiedDate);
+					}
+					lSubNode->mVersionList.append(lVersionData);
 				}
 			}
 		}

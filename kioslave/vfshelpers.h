@@ -54,6 +54,7 @@ struct Metadata {
 	qint64 mGid;
 	qint64 mAtime;
 	qint64 mMtime;
+	qint64 mSize; //negative if invalid
 	QString mSymlinkTarget;
 
 	static qint64 mDefaultUid;

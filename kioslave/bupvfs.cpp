@@ -181,6 +181,9 @@ git_blob *BlobFile::cachedBlob() {
 }
 
 quint64 BlobFile::calculateSize() {
+	if(mSize >= 0) {
+		return static_cast<quint64>(mSize);
+	}
 	git_blob *lBlob = cachedBlob();
 	if(lBlob == nullptr) {
 		return 0;
@@ -340,6 +343,9 @@ int ChunkFile::read(QByteArray &pChunk, qint64 pReadSize) {
 }
 
 quint64 ChunkFile::calculateSize() {
+	if(mSize >= 0) {
+		return static_cast<quint64>(mSize);
+	}
 	return calculateChunkFileSize(&mOid, mRepository);
 }
 
