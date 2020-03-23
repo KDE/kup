@@ -18,8 +18,8 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-#ifndef VERSIONDELEGATE_H
-#define VERSIONDELEGATE_H
+#ifndef VERSIONLISTDELEGATE_H
+#define VERSIONLISTDELEGATE_H
 
 #include <QAbstractItemDelegate>
 #include <QParallelAnimationGroup>
@@ -49,6 +49,10 @@ class VersionItemAnimation : public QParallelAnimationGroup
 
 public:
 	explicit VersionItemAnimation(QWidget *pParent);
+	~VersionItemAnimation() {
+		delete mOpenButton;
+		delete mRestoreButton;
+	}
 	float extraHeight() {return mExtraHeight;}
 	float opacity() {return mOpacity;}
 
@@ -97,4 +101,4 @@ protected:
 	QList<VersionItemAnimation *> mInactiveAnimations;
 };
 
-#endif // VERSIONDELEGATE_H
+#endif // VERSIONLISTDELEGATE_H

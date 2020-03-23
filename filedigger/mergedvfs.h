@@ -67,9 +67,8 @@ class MergedNode: public QObject {
 public:
 	MergedNode(QObject *pParent, const QString &pName, uint pMode);
 	~MergedNode() override {
-		if(mSubNodes != nullptr) {
-			delete mSubNodes;
-		}
+		delete mSubNodes;
+		while (!mVersionList.isEmpty()) delete mVersionList.takeFirst();
 	}
 	bool isDirectory() const { return S_ISDIR(mMode); }
 	void getBupUrl(int pVersionIndex, QUrl *pComplete, QString *pRepoPath = nullptr, QString *pBranchName = nullptr,
