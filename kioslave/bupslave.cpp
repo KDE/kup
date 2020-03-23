@@ -68,9 +68,7 @@ BupSlave::BupSlave(const QByteArray &pPoolSocket, const QByteArray &pAppSocket)
 }
 
 BupSlave::~BupSlave() {
-	if(mRepository != nullptr) {
-		delete mRepository;
-	}
+	delete mRepository;
 	git_libgit2_shutdown();
 }
 

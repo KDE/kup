@@ -54,9 +54,7 @@ class Directory: public Node {
 public:
 	Directory(QObject *pParent, const QString &pName, qint64 pMode);
 	~Directory() override {
-		if(mSubNodes != nullptr) {
-			delete mSubNodes;
-		}
+		delete mSubNodes;
 	}
 	virtual NodeMap subNodes();
 	virtual void reload() {}
