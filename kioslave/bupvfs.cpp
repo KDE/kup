@@ -57,10 +57,11 @@ Node *Node::resolve(const QStringList &pPathList, bool pFollowLinks) {
 	foreach(QString lPathComponent, pPathList) {
 		if(lPathComponent == QStringLiteral(".")) {
 			continue;
-		} else if(lPathComponent == QStringLiteral("..")) {
+		}
+		if(lPathComponent == QStringLiteral("..")) {
 			lNode = qobject_cast<Node *>(lNode->parent());
 		} else {
-			Directory *lDir = qobject_cast<Directory *>(lNode);
+			auto lDir = qobject_cast<Directory *>(lNode);
 			if(lDir == nullptr) {
 				return nullptr;
 			}
@@ -143,16 +144,11 @@ int File::readMetadata(VintStream &pMetadataStream) {
 }
 
 BlobFile::BlobFile(Node *pParent, const git_oid *pOid, const QString &pName, qint64 pMode)
-   : File(pParent, pName, pMode)
-{
-	mOid = *pOid;
-	mBlob = nullptr;
-}
+   : File(pParent, pName, pMode), mOid(*pOid), mBlob(nullptr)
+{}
 
 BlobFile::~BlobFile() {
-	if(mBlob != nullptr) {
-		git_blob_free(mBlob);
-	}
+    git_blob_free(mBlob);
 }
 
 int BlobFile::read(QByteArray &pChunk, qint64 pReadSize) {
@@ -192,11 +188,8 @@ quint64 BlobFile::calculateSize() {
 }
 
 ChunkFile::ChunkFile(Node *pParent, const git_oid *pOid, const QString &pName, qint64 pMode)
-   : File(pParent, pName, pMode)
+   : File(pParent, pName, pMode), mOid(*pOid), mCurrentBlob(nullptr), mValidSeekPosition(false)
 {
-	mOid = *pOid;
-	mValidSeekPosition = false;
-	mCurrentBlob = nullptr;
 	seek(0);
 }
 
@@ -230,7 +223,7 @@ int ChunkFile::seek(quint64 pOffset) {
 		return KIO::ERR_COULD_NOT_SEEK;
 	}
 
-	TreePosition *lCurrentPos = new TreePosition(lTree);
+	auto lCurrentPos = new TreePosition(lTree);
 	mPositionStack.append(lCurrentPos);
 	quint64 lLocalOffset = mOffset;
 	while(true) {
@@ -297,7 +290,7 @@ int ChunkFile::read(QByteArray &pChunk, qint64 pReadSize) {
 		}
 	}
 
-	quint64 lTotalSize = static_cast<quint64>(git_blob_rawsize(mCurrentBlob));
+	auto lTotalSize = static_cast<quint64>(git_blob_rawsize(mCurrentBlob));
 	if(lTotalSize < lCurrentPos->mSkipSize) { // this must mean a corrupt bup tree somehow
 		return KIO::ERR_COULD_NOT_READ;
 	}
@@ -509,9 +502,9 @@ void Repository::generateSubNodes() {
 	git_strarray lBranchNames;
 	git_reference_list(&lBranchNames, mRepository);
 	for(uint i = 0; i < lBranchNames.count; ++i) {
-		QString lRefName = QString::fromLocal8Bit(lBranchNames.strings[i]);
+		auto lRefName = QString::fromLocal8Bit(lBranchNames.strings[i]);
 		if(lRefName.startsWith(QStringLiteral("refs/heads/"))) {
-			Branch *lBranch = new Branch(this, lBranchNames.strings[i]);
+			auto lBranch = new Branch(this, lBranchNames.strings[i]);
 			mSubNodes->insert(lBranch->objectName(), lBranch);
 		}
 	}

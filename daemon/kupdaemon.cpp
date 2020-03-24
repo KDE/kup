@@ -77,7 +77,7 @@ void KupDaemon::setupGuiStuff() {
 	// that will be changed again just a microsecond later anyway
 	mStatusUpdateTimer->setInterval(500);
 	mStatusUpdateTimer->setSingleShot(true);
-	connect(mStatusUpdateTimer, &QTimer::timeout, [this]{
+	connect(mStatusUpdateTimer, &QTimer::timeout, this, [this]{
 		foreach(QLocalSocket *lSocket, mSockets) {
 			sendStatus(lSocket);
 		}
@@ -97,15 +97,15 @@ void KupDaemon::setupGuiStuff() {
 	QString lSocketName = QStringLiteral("kup-daemon-");
 	lSocketName += QString::fromLocal8Bit(qgetenv("USER"));
 
-	connect(mLocalServer, &QLocalServer::newConnection, [this]{
+	connect(mLocalServer, &QLocalServer::newConnection, this, [this]{
 		QLocalSocket *lSocket = mLocalServer->nextPendingConnection();
 		if(lSocket == nullptr) {
 			return;
 		}
 		sendStatus(lSocket);
 		mSockets.append(lSocket);
-		connect(lSocket, &QLocalSocket::readyRead, [this,lSocket]{handleRequests(lSocket);});
-		connect(lSocket, &QLocalSocket::disconnected, [this,lSocket]{
+		connect(lSocket, &QLocalSocket::readyRead, this, [this,lSocket]{handleRequests(lSocket);});
+		connect(lSocket, &QLocalSocket::disconnected, this, [this,lSocket]{
 			mSockets.removeAll(lSocket);
 			lSocket->deleteLater();
 		});
@@ -189,7 +189,7 @@ void KupDaemon::slotShutdownRequest(QSessionManager &pManager) {
 void KupDaemon::setupExecutors() {
 	for(int i = 0; i < mSettings->mNumberOfPlans; ++i) {
 		PlanExecutor *lExecutor;
-		BackupPlan *lPlan = new BackupPlan(i+1, mConfig, this);
+		auto *lPlan = new BackupPlan(i+1, mConfig, this);
 		if(lPlan->mPathsIncluded.isEmpty()) {
 			delete lPlan;
 			continue;
@@ -202,8 +202,8 @@ void KupDaemon::setupExecutors() {
 			delete lPlan;
 			continue;
 		}
-		connect(lExecutor, &PlanExecutor::stateChanged, [&]{mStatusUpdateTimer->start();});
-		connect(lExecutor, &PlanExecutor::backupStatusChanged, [&]{mStatusUpdateTimer->start();});
+		connect(lExecutor, &PlanExecutor::stateChanged, this, [this]{mStatusUpdateTimer->start();});
+		connect(lExecutor, &PlanExecutor::backupStatusChanged, this, [this]{mStatusUpdateTimer->start();});
 		connect(mUsageAccTimer, &QTimer::timeout,
 		        lExecutor, &PlanExecutor::updateAccumulatedUsageTime);
 		lExecutor->checkStatus();

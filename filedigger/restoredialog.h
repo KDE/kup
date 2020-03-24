@@ -42,7 +42,7 @@ class RestoreDialog : public QDialog
 	Q_OBJECT
 
 public:
-	explicit RestoreDialog(const BupSourceInfo &pPathInfo, QWidget *parent = nullptr);
+	explicit RestoreDialog(BupSourceInfo pPathInfo, QWidget *parent = nullptr);
 	~RestoreDialog() override;
 
 protected:
@@ -75,13 +75,13 @@ private:
 	QFileInfo mFolderToCreate;
 	QString mRestorationPath; // not necessarily same as destination
 	BupSourceInfo mSourceInfo;
-	quint64 mDestinationSize; //size of files about to be overwritten
-	quint64 mSourceSize; //size of files about to be read
+	quint64 mDestinationSize{}; //size of files about to be overwritten
+	quint64 mSourceSize{}; //size of files about to be read
 	KMessageWidget *mMessageWidget;
 	QString mSavedWorkingDirectory;
 	QString mSourceFileName;
 	QHash<QString, quint64> mFileSizes;
-	int mDirectoriesCount;
+	int mDirectoriesCount{};
 	KWidgetJobTracker *mJobTracker;
 };
 

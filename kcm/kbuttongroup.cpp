@@ -31,9 +31,6 @@ class KButtonGroup::Private
 public:
     Private(KButtonGroup *q) :
         q(q),
-        clickedMapper(),
-        pressedMapper(),
-        releasedMapper(),
         currentId(-1),
         nextId(0),
         wantToBeId(-1)
@@ -98,7 +95,7 @@ int KButtonGroup::selected() const
 void KButtonGroup::childEvent(QChildEvent *event)
 {
     if (event->polished()) {
-        QAbstractButton *button = qobject_cast<QAbstractButton *>(event->child());
+        auto button = qobject_cast<QAbstractButton *>(event->child());
         if (!d->btnMap.contains(event->child()) && button) {
             connect(button, SIGNAL(clicked()), &d->clickedMapper, SLOT(map()));
             d->clickedMapper.setMapping(button, d->nextId);

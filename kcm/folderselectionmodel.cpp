@@ -38,7 +38,7 @@
 
 namespace {
 
-bool setContainsSubdir(QSet<QString> pSet, const QString &pParentDir) {
+bool setContainsSubdir(const QSet<QString> &pSet, const QString &pParentDir) {
 	// we need the trailing slash to be able to use the startsWith() function to check for parent dirs.
 	QString lPathWithSlash = pParentDir;
 	ensureTrailingSlash(lPathWithSlash);
@@ -181,7 +181,7 @@ void FolderSelectionModel::excludePath(const QString& pPath) {
 	emit dataChanged(index(pPath), findLastLeaf(index(pPath)));
 }
 
-void FolderSelectionModel::setIncludedPaths(QSet<QString> pIncludedPaths) {
+void FolderSelectionModel::setIncludedPaths(const QSet<QString> &pIncludedPaths) {
 	beginResetModel();
 	QSet<QString> lRemoved = mIncludedPaths - pIncludedPaths;
 	QSet<QString> lAdded = pIncludedPaths - mIncludedPaths;
@@ -196,7 +196,7 @@ void FolderSelectionModel::setIncludedPaths(QSet<QString> pIncludedPaths) {
 	endResetModel();
 }
 
-void FolderSelectionModel::setExcludedPaths(QSet<QString> pExcludedPaths) {
+void FolderSelectionModel::setExcludedPaths(const QSet<QString> &pExcludedPaths) {
 	beginResetModel();
 	QSet<QString> lRemoved = mExcludedPaths - pExcludedPaths;
 	QSet<QString> lAdded = pExcludedPaths - mExcludedPaths;

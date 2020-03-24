@@ -54,8 +54,8 @@ public:
 	QVariant data(const QModelIndex& pIndex, int pRole = Qt::DisplayRole) const override;
 	bool setData(const QModelIndex& pIndex, const QVariant& pValue, int pRole = Qt::EditRole) override;
 
-	void setIncludedPaths(QSet<QString> pIncludedPaths);
-	void setExcludedPaths(QSet<QString> pExcludedPaths);
+	void setIncludedPaths(const QSet<QString> &pIncludedPaths);
+	void setExcludedPaths(const QSet<QString> &pExcludedPaths);
 	QSet<QString> includedPaths() const;
 	QSet<QString> excludedPaths() const;
 

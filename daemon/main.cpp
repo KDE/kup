@@ -30,8 +30,8 @@
 
 extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[]) {
 	QApplication lApp(argc, argv);
-	lApp.setQuitOnLastWindowClosed(false);
-	lApp.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+	QApplication::setQuitOnLastWindowClosed(false);
+	QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
 	KLocalizedString::setApplicationDomain("kup");
 
@@ -64,9 +64,9 @@ extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[]) {
 	KDBusService lService(KDBusService::Unique);
 
 	lDaemon->setupGuiStuff();
-	lDaemon->connect(&lApp, &QApplication::commitDataRequest, [=](QSessionManager &pManager) {
+	KupDaemon::connect(&lApp, &QApplication::commitDataRequest, lDaemon, [lDaemon](QSessionManager &pManager) {
 		lDaemon->slotShutdownRequest(pManager);
 	});
 
-	return lApp.exec();
+	return QApplication::exec();
 }

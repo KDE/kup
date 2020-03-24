@@ -39,37 +39,37 @@ public:
 	QStringList mPathsIncluded;
 	QStringList mPathsExcluded;
 	enum BackupType {BupType = 0, RsyncType};
-	qint32 mBackupType;
-	qint32 mBackupVersion;
+	qint32 mBackupType{};
+	qint32 mBackupVersion{};
 
 	enum ScheduleType {MANUAL=0, INTERVAL, USAGE};
-	qint32 mScheduleType;
-	qint32 mScheduleInterval;
-	qint32 mScheduleIntervalUnit;
-	qint32 mUsageLimit; // in hours
-	bool mAskBeforeTakingBackup;
+	qint32 mScheduleType{};
+	qint32 mScheduleInterval{};
+	qint32 mScheduleIntervalUnit{};
+	qint32 mUsageLimit{}; // in hours
+	bool mAskBeforeTakingBackup{};
 
-	qint32 mDestinationType;
+	qint32 mDestinationType{};
 	QUrl mFilesystemDestinationPath;
 	QString mExternalUUID;
 	QString mExternalDestinationPath;
 	QString mExternalVolumeLabel;
 	QString mExternalDeviceDescription;
-	int mExternalPartitionNumber;
-	int mExternalPartitionsOnDrive;
-	qulonglong mExternalVolumeCapacity;
+	int mExternalPartitionNumber{};
+	int mExternalPartitionsOnDrive{};
+	qulonglong mExternalVolumeCapacity{};
 
-	bool mShowHiddenFolders;
-	bool mGenerateRecoveryInfo;
-	bool mCheckBackups;
+	bool mShowHiddenFolders{};
+	bool mGenerateRecoveryInfo{};
+	bool mCheckBackups{};
 
 	QDateTime mLastCompleteBackup;
 	// Size of the last backup in bytes.
-	double mLastBackupSize;
+	double mLastBackupSize{};
 	// Last known available space on destination
-	double mLastAvailableSpace;
+	double mLastAvailableSpace{};
 	// How long has Kup been running since last backup (s)
-	quint32 mAccumulatedUsageTime;
+	quint32 mAccumulatedUsageTime{};
 
 	virtual QDateTime nextScheduledTime();
 	virtual qint64 scheduleIntervalInSeconds();

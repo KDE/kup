@@ -44,12 +44,10 @@ void DriveSelectionDelegate::paint(QPainter* pPainter, const QStyleOptionViewIte
                                    const QModelIndex& pIndex) const {
 	pPainter->save();
 	pPainter->setRenderHint(QPainter::Antialiasing);
-
 	QApplication::style()->drawPrimitive(QStyle::PE_PanelItemViewItem, &pOption, pPainter);
 
-	auto lTotalSize = pIndex.data(DriveSelection::TotalSpace).value<KIO::filesize_t>();
-	auto lUsedSize = pIndex.data(DriveSelection::UsedSpace).value<KIO::filesize_t>();
-
+	auto lTotalSize = pIndex.data(DriveSelection::TotalSpace).toULongLong();
+	auto lUsedSize = pIndex.data(DriveSelection::UsedSpace).toULongLong();
 	bool lIsDisconnected = pIndex.data(DriveSelection::UDI).toString().isEmpty();
 
 	if(lTotalSize == 0 || lIsDisconnected) {
@@ -148,17 +146,18 @@ QRect DriveSelectionDelegate::warningRect(const QRect &pRect, const QModelIndex 
 	return lTextBoundary;
 }
 
-QString DriveSelectionDelegate::warningText(const QModelIndex &pIndex) const {
+QString DriveSelectionDelegate::warningText(const QModelIndex &pIndex) {
 	bool lPermissionWarning = pIndex.data(DriveSelection::PermissionLossWarning).toBool();
 	bool lSymlinkWarning = pIndex.data(DriveSelection::SymlinkLossWarning).toBool();
 	if(lPermissionWarning && lSymlinkWarning) {
 		return xi18nc("@item:inlistbox", "Warning: Symbolic links and file permissions can not be saved "
-		             "to this file system. File permissions only matters if there is more than one "
-		             "user of this computer or if you are backing up executable program files.");
-	} else if(lPermissionWarning) {
-		return xi18nc("@item:inlistbox", "Warning: File permissions can not be saved to this file "
-		             "system. File permissions only matters if there is more than one "
-		             "user of this computer or if you are backing up executable program files.");
+		                                 "to this file system. File permissions only matters if there is more than one "
+		                                 "user of this computer or if you are backing up executable program files.");
 	}
-	return QString();
+	if(lPermissionWarning) {
+		return xi18nc("@item:inlistbox", "Warning: File permissions can not be saved to this file "
+		                                 "system. File permissions only matters if there is more than one "
+		                                 "user of this computer or if you are backing up executable program files.");
+	}
+	return {};
 }

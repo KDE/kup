@@ -49,8 +49,8 @@ public:
 	bool event(QEvent *pEvent) override;
 
 public slots:
-	void includePath(QString pPath);
-	void excludePath(QString pPath);
+	void includePath(const QString &pPath);
+	void excludePath(const QString &pPath);
 
 signals:
 	void unreadablesChanged(QPair<QSet<QString>, QSet<QString>>);
@@ -87,7 +87,7 @@ public:
 public slots:
 	void setHiddenFoldersVisible(bool pVisible);
 	void expandToShowSelections();
-	void setUnreadables(QPair<QSet<QString>, QSet<QString>> pUnreadables);
+	void setUnreadables(const QPair<QSet<QString>, QSet<QString>> &pUnreadables);
 	void setSymlinks(QHash<QString,QString> pSymlinks);
 	void updateMessage();
 	void executeExcludeAction();
@@ -162,11 +162,11 @@ public:
 	QPushButton *mConfigureButton;
 	KPageWidget *mConfigPages;
 	BackupPlan *mBackupPlan;
-	DriveSelection *mDriveSelection;
-	KLineEdit *mDriveDestEdit;
-	QRadioButton *mVersionedRadio;
-	QRadioButton *mSyncedRadio;
-	FolderSelectionWidget *mSourceSelectionWidget;
+	DriveSelection *mDriveSelection{};
+	KLineEdit *mDriveDestEdit{};
+	QRadioButton *mVersionedRadio{};
+	QRadioButton *mSyncedRadio{};
+	FolderSelectionWidget *mSourceSelectionWidget{};
 
 protected slots:
 	void openDriveDestDialog();

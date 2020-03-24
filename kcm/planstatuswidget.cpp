@@ -31,10 +31,10 @@
 PlanStatusWidget::PlanStatusWidget(BackupPlan *pPlan, QWidget *pParent)
     : QGroupBox(pParent), mPlan(pPlan)
 {
-	auto *lVLayout1 = new QVBoxLayout;
-	auto *lVLayout2 = new QVBoxLayout;
-	auto *lHLayout1 = new QHBoxLayout;
-	auto *lHLayout2 = new QHBoxLayout;
+	auto lVLayout1 = new QVBoxLayout;
+	auto lVLayout2 = new QVBoxLayout;
+	auto lHLayout1 = new QHBoxLayout;
+	auto lHLayout2 = new QHBoxLayout;
 
 	mDescriptionLabel = new QLabel(mPlan->mDescription);
 	QFont lDescriptionFont = mDescriptionLabel->font();
@@ -44,13 +44,13 @@ PlanStatusWidget::PlanStatusWidget(BackupPlan *pPlan, QWidget *pParent)
 	mStatusIconLabel = new QLabel();
 	//TODO: add dbus interface to be notified from daemon when this is updated.
 	mStatusTextLabel = new QLabel(mPlan->statusText());
-	QPushButton *lConfigureButton = new QPushButton(QIcon::fromTheme(QStringLiteral("configure")),
+	auto lConfigureButton = new QPushButton(QIcon::fromTheme(QStringLiteral("configure")),
 	                                                xi18nc("@action:button", "Configure"));
 	connect(lConfigureButton, SIGNAL(clicked()), this, SIGNAL(configureMe()));
-	QPushButton *lRemoveButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-remove")),
+	auto lRemoveButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-remove")),
 	                                             xi18nc("@action:button", "Remove"));
 	connect(lRemoveButton, SIGNAL(clicked()), this, SIGNAL(removeMe()));
-	QPushButton *lCopyButton = new QPushButton(QIcon::fromTheme(QStringLiteral("edit-duplicate")),
+	auto lCopyButton = new QPushButton(QIcon::fromTheme(QStringLiteral("edit-duplicate")),
 	                                           xi18nc("@action:button", "Duplicate"));
 	connect(lCopyButton, &QPushButton::clicked, this, &PlanStatusWidget::duplicateMe);
 
@@ -71,6 +71,6 @@ PlanStatusWidget::PlanStatusWidget(BackupPlan *pPlan, QWidget *pParent)
 }
 
 void PlanStatusWidget::updateIcon() {
-	mStatusIconLabel->setPixmap(QIcon::fromTheme(mPlan->iconName(mPlan->backupStatus())).pixmap(64,64));
+	mStatusIconLabel->setPixmap(QIcon::fromTheme(BackupPlan::iconName(mPlan->backupStatus())).pixmap(64,64));
 }
 

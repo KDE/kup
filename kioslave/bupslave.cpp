@@ -145,7 +145,7 @@ void BupSlave::listDir(const QUrl &pUrl) {
 		emit error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
 		return;
 	}
-	Directory *lDir = qobject_cast<Directory *>(lNode);
+	auto lDir = qobject_cast<Directory *>(lNode);
 	if(lDir == nullptr) {
 		emit error(KIO::ERR_IS_FILE, lPathInRepo.join(QStringLiteral("/")));
 		return;
@@ -292,10 +292,8 @@ bool BupSlave::checkCorrectRepository(const QUrl &pUrl, QStringList &pPathInRepo
 			pPathInRepository = lPath.split(QLatin1Char('/'), QString::SkipEmptyParts);
 			return true;
 		}
-		else {
-			delete mRepository;
-			mRepository = nullptr;
-		}
+		delete mRepository;
+		mRepository = nullptr;
 	}
 
 	pPathInRepository = lPath.split(QLatin1Char('/'), QString::SkipEmptyParts);
@@ -372,8 +370,7 @@ void BupSlave::createUDSEntry(Node *pNode, UDSEntry &pUDSEntry, int pDetails) {
 
 extern "C" int Q_DECL_EXPORT kdemain(int pArgc, char **pArgv) {
 	QCoreApplication lApp(pArgc, pArgv);
-	lApp.setApplicationName(QStringLiteral("kio_bup"));
-
+	QCoreApplication::setApplicationName(QStringLiteral("kio_bup"));
 	KLocalizedString::setApplicationDomain("kup");
 
 	if(pArgc != 4) {

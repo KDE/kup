@@ -48,13 +48,11 @@
 #include <KMessageWidget>
 #include <KPageWidget>
 #include <KUrlRequester>
+#include <utility>
 
 class ScanFolderEvent : public QEvent {
 public:
-	ScanFolderEvent(QString pPath)
-	   : QEvent(eventType) {
-		mPath = pPath;
-	}
+	ScanFolderEvent(QString pPath): QEvent(eventType), mPath(std::move(pPath)) {}
 	QString mPath;
 	static const QEvent::Type eventType = static_cast<QEvent::Type>(QEvent::User + 1);
 };
@@ -76,7 +74,7 @@ FileScanner::FileScanner() {
 
 bool FileScanner::event(QEvent *pEvent) {
 	if(pEvent->type() == ScanFolderEvent::eventType) {
-		auto lEvent = static_cast<ScanFolderEvent *>(pEvent);
+		auto lEvent = dynamic_cast<ScanFolderEvent *>(pEvent);
 		if(isPathIncluded(lEvent->mPath)) {
 			scanFolder(lEvent->mPath);
 		}
@@ -85,7 +83,7 @@ bool FileScanner::event(QEvent *pEvent) {
 	return QObject::event(pEvent);
 }
 
-void FileScanner::includePath(QString pPath) {
+void FileScanner::includePath(const QString &pPath) {
 	if(!mExcludedFolders.remove(pPath)) {
 		mIncludedFolders += pPath;
 	}
@@ -103,7 +101,7 @@ void FileScanner::includePath(QString pPath) {
 
 }
 
-void FileScanner::excludePath(QString pPath) {
+void FileScanner::excludePath(const QString &pPath) {
 	if(!mIncludedFolders.remove(pPath)) {
 		mExcludedFolders += pPath;
 	}
@@ -270,7 +268,7 @@ FolderSelectionWidget::FolderSelectionWidget(FolderSelectionModel *pModel, QWidg
 	mMessageWidget->setWordWrap(true);
 	mMessageWidget->hide();
 	mTreeView = new QTreeView(this);
-	auto *lVLayout = new QVBoxLayout;
+	auto lVLayout = new QVBoxLayout;
 	lVLayout->addWidget(mMessageWidget);
 	lVLayout->addWidget(mTreeView, 1);
 	setLayout(lVLayout);
@@ -292,16 +290,16 @@ FolderSelectionWidget::FolderSelectionWidget(FolderSelectionModel *pModel, QWidg
 	// always expand the root, prevents problem with empty include&exclude lists.
 	mTreeView->expand(mModel->index(QStringLiteral("/")));
 
-	auto *lIncludeDummy = new ConfigIncludeDummy(mModel, this);
+	auto lIncludeDummy = new ConfigIncludeDummy(mModel, this);
 	lIncludeDummy->setObjectName(QStringLiteral("kcfg_Paths included"));
-	auto *lExcludeDummy = new ConfigExcludeDummy(mModel, this);
+	auto lExcludeDummy = new ConfigExcludeDummy(mModel, this);
 	lExcludeDummy->setObjectName(QStringLiteral("kcfg_Paths excluded"));
 
 	qRegisterMetaType<QPair<QSet<QString>,QSet<QString>>>("QPair<QSet<QString>,QSet<QString>>");
 	qRegisterMetaType<QHash<QString,QString>>("QHash<QString,QString>");
 
 	mWorkerThread = new QThread(this);
-	auto *lFileScanner = new FileScanner;
+	auto lFileScanner = new FileScanner;
 	lFileScanner->moveToThread(mWorkerThread);
 	connect(mWorkerThread, &QThread::finished, lFileScanner, &QObject::deleteLater);
 
@@ -355,7 +353,7 @@ void FolderSelectionWidget::expandToShowSelections() {
 	}
 }
 
-void FolderSelectionWidget::setUnreadables(QPair<QSet<QString>, QSet<QString> > pUnreadables) {
+void FolderSelectionWidget::setUnreadables(const QPair<QSet<QString>, QSet<QString> > &pUnreadables) {
 	mUnreadableFolders = pUnreadables.first.values();
 	mUnreadableFiles = pUnreadables.second.values();
 	updateMessage();
@@ -444,17 +442,17 @@ DirDialog::DirDialog(const QUrl &pRootDir, const QString &pStartSubDir, QWidget 
 	                                    pStartSubDir);
 	mDirSelector->expandToUrl(lSubUrl);
 
-	QDialogButtonBox *lButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+	auto lButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
 	connect(lButtonBox, SIGNAL(accepted()), this, SLOT(accept()));
 	connect(lButtonBox, SIGNAL(rejected()), this, SLOT(reject()));
-	QPushButton *lNewFolderButton = new QPushButton(xi18nc("@action:button", "New Folder..."));
+	auto lNewFolderButton = new QPushButton(xi18nc("@action:button", "New Folder..."));
 	connect(lNewFolderButton, SIGNAL(clicked()), mDirSelector, SLOT(createNewFolder()));
 	lButtonBox->addButton(lNewFolderButton, QDialogButtonBox::ActionRole);
 	QPushButton *lOkButton = lButtonBox->button(QDialogButtonBox::Ok);
 	lOkButton->setDefault(true);
 	lOkButton->setShortcut(Qt::Key_Return);
 
-	auto *lMainLayout = new QVBoxLayout;
+	auto lMainLayout = new QVBoxLayout;
 	lMainLayout->addWidget(mDirSelector);
 	lMainLayout->addWidget(lButtonBox);
 	setLayout(lMainLayout);
@@ -474,7 +472,7 @@ BackupPlanWidget::BackupPlanWidget(BackupPlan *pBackupPlan, const QString &pBupV
 	mDescriptionEdit = new KLineEdit;
 	mDescriptionEdit->setObjectName(QStringLiteral("kcfg_Description"));
 	mDescriptionEdit->setClearButtonEnabled(true);
-	QLabel *lDescriptionLabel = new QLabel(xi18nc("@label", "Description:"));
+	auto lDescriptionLabel = new QLabel(xi18nc("@label", "Description:"));
 	lDescriptionLabel->setBuddy(mDescriptionEdit);
 	mConfigureButton = new QPushButton(QIcon::fromTheme(QStringLiteral("go-previous-view")),
 	                                   xi18nc("@action:button", "Back to overview"));
@@ -487,13 +485,13 @@ BackupPlanWidget::BackupPlanWidget(BackupPlan *pBackupPlan, const QString &pBupV
 	mConfigPages->addPage(createSchedulePage());
 	mConfigPages->addPage(createAdvancedPage(pPar2Available));
 
-	auto *lHLayout1 = new QHBoxLayout;
+	auto lHLayout1 = new QHBoxLayout;
 	lHLayout1->addWidget(mConfigureButton);
 	lHLayout1->addStretch();
 	lHLayout1->addWidget(lDescriptionLabel);
 	lHLayout1->addWidget(mDescriptionEdit);
 
-	auto *lVLayout1 = new QVBoxLayout;
+	auto lVLayout1 = new QVBoxLayout;
 	lVLayout1->addLayout(lHLayout1);
 	lVLayout1->addWidget(mConfigPages);
 	lVLayout1->setSpacing(0);
@@ -515,9 +513,9 @@ KPageWidgetItem *BackupPlanWidget::createTypePage(const QString &pBupVersion, co
 	                               "Nevertheless, the backup archive will keep growing in size as time goes by.<nl/>"
 	                               "Also important to know is that the files in the archive can not be accessed "
 	                               "directly with a general file manager, a special program is needed.");
-	QLabel *lVersionedInfoLabel = new QLabel(lVersionedInfo);
+	auto lVersionedInfoLabel = new QLabel(lVersionedInfo);
 	lVersionedInfoLabel->setWordWrap(true);
-	QWidget *lVersionedWidget = new QWidget;
+	auto lVersionedWidget = new QWidget;
 	lVersionedWidget->setVisible(false);
 	QObject::connect(mVersionedRadio, SIGNAL(toggled(bool)), lVersionedWidget, SLOT(setVisible(bool)));
 	if(pBupVersion.isEmpty()) {
@@ -538,9 +536,9 @@ KPageWidgetItem *BackupPlanWidget::createTypePage(const QString &pBupVersion, co
 	                            "source folder it will get deleted from the backup folder.<nl/>"
 	                            "This type of backup can protect you against data loss due to a broken "
 	                            "hard drive but it does not help you to recover from your own mistakes.");
-	QLabel *lSyncedInfoLabel = new QLabel(lSyncedInfo);
+	auto lSyncedInfoLabel = new QLabel(lSyncedInfo);
 	lSyncedInfoLabel->setWordWrap(true);
-	QWidget *lSyncedWidget = new QWidget;
+	auto lSyncedWidget = new QWidget;
 	lSyncedWidget->setVisible(false);
 	QObject::connect(mSyncedRadio, SIGNAL(toggled(bool)), lSyncedWidget, SLOT(setVisible(bool)));
 	if(pRsyncVersion.isEmpty()) {
@@ -551,32 +549,32 @@ KPageWidgetItem *BackupPlanWidget::createTypePage(const QString &pBupVersion, co
 	} else {
 		mSyncedRadio->setText(xi18nc("@option:radio", "Synchronized Backup"));
 	}
-	auto *lButtonGroup = new KButtonGroup;
+	auto lButtonGroup = new KButtonGroup;
 	lButtonGroup->setObjectName(QStringLiteral("kcfg_Backup type"));
 	lButtonGroup->setFlat(true);
 	int lIndentation = lButtonGroup->style()->pixelMetric(QStyle::PM_ExclusiveIndicatorWidth) +
 	                   lButtonGroup->style()->pixelMetric(QStyle::PM_RadioButtonLabelSpacing);
 
-	auto *lVersionedVLayout = new QGridLayout;
+	auto lVersionedVLayout = new QGridLayout;
 	lVersionedVLayout->setColumnMinimumWidth(0, lIndentation);
 	lVersionedVLayout->setContentsMargins(0, 0, 0, 0);
 	lVersionedVLayout->addWidget(lVersionedInfoLabel, 0, 1);
 	lVersionedWidget->setLayout(lVersionedVLayout);
 
-	auto *lSyncedVLayout = new QGridLayout;
+	auto lSyncedVLayout = new QGridLayout;
 	lSyncedVLayout->setColumnMinimumWidth(0, lIndentation);
 	lSyncedVLayout->setContentsMargins(0, 0, 0, 0);
 	lSyncedVLayout->addWidget(lSyncedInfoLabel, 0, 1);
 	lSyncedWidget->setLayout(lSyncedVLayout);
 
-	auto *lVLayout = new QVBoxLayout;
+	auto lVLayout = new QVBoxLayout;
 	lVLayout->addWidget(mVersionedRadio);
 	lVLayout->addWidget(lVersionedWidget);
 	lVLayout->addWidget(mSyncedRadio);
 	lVLayout->addWidget(lSyncedWidget);
 	lVLayout->addStretch();
 	lButtonGroup->setLayout(lVLayout);
-	auto *lPage = new KPageWidgetItem(lButtonGroup);
+	auto lPage = new KPageWidgetItem(lButtonGroup);
 	lPage->setName(xi18nc("@title", "Backup Type"));
 	lPage->setHeader(xi18nc("@label", "Select what type of backup you want"));
 	lPage->setIcon(QIcon::fromTheme(QStringLiteral("folder-sync")));
@@ -585,7 +583,7 @@ KPageWidgetItem *BackupPlanWidget::createTypePage(const QString &pBupVersion, co
 
 KPageWidgetItem *BackupPlanWidget::createSourcePage() {
 	mSourceSelectionWidget = new FolderSelectionWidget(new FolderSelectionModel(mBackupPlan->mShowHiddenFolders), this);
-	auto *lPage = new KPageWidgetItem(mSourceSelectionWidget);
+	auto lPage = new KPageWidgetItem(mSourceSelectionWidget);
 	lPage->setName(xi18nc("@title", "Sources"));
 	lPage->setHeader(xi18nc("@label", "Select which folders to include in backup"));
 	lPage->setIcon(QIcon::fromTheme(QStringLiteral("cloud-upload")));
@@ -593,51 +591,51 @@ KPageWidgetItem *BackupPlanWidget::createSourcePage() {
 }
 
 KPageWidgetItem *BackupPlanWidget::createDestinationPage() {
-	auto *lButtonGroup = new KButtonGroup(this);
+	auto lButtonGroup = new KButtonGroup(this);
 	lButtonGroup->setObjectName(QStringLiteral("kcfg_Destination type"));
 	lButtonGroup->setFlat(true);
 
 	int lIndentation = lButtonGroup->style()->pixelMetric(QStyle::PM_ExclusiveIndicatorWidth) +
 	                   lButtonGroup->style()->pixelMetric(QStyle::PM_RadioButtonLabelSpacing);
 
-	auto *lVLayout = new QVBoxLayout;
-	QRadioButton *lFileSystemRadio = new QRadioButton(xi18nc("@option:radio", "Filesystem Path"));
-	QRadioButton *lDriveRadio = new QRadioButton(xi18nc("@option:radio", "External Storage"));
+	auto lVLayout = new QVBoxLayout;
+	auto lFileSystemRadio = new QRadioButton(xi18nc("@option:radio", "Filesystem Path"));
+	auto lDriveRadio = new QRadioButton(xi18nc("@option:radio", "External Storage"));
 
-	QWidget *lFileSystemWidget = new QWidget;
+	auto lFileSystemWidget = new QWidget;
 	lFileSystemWidget->setVisible(false);
 	QObject::connect(lFileSystemRadio, SIGNAL(toggled(bool)), lFileSystemWidget, SLOT(setVisible(bool)));
-	QLabel *lFileSystemInfoLabel = new QLabel(xi18nc("@info",
-	                                                 "You can use this option for backing up to a secondary "
-	                                                 "internal harddrive, an external eSATA drive or networked "
-	                                                 "storage. The requirement is just that you always mount "
-	                                                 "it at the same path in the filesystem. The path "
-	                                                 "specified here does not need to exist at all times, its "
-	                                                 "existence will be monitored."));
+	auto lFileSystemInfoLabel = new QLabel(xi18nc("@info",
+	                                              "You can use this option for backing up to a secondary "
+	                                              "internal harddrive, an external eSATA drive or networked "
+	                                              "storage. The requirement is just that you always mount "
+	                                              "it at the same path in the filesystem. The path "
+	                                              "specified here does not need to exist at all times, its "
+	                                              "existence will be monitored."));
 	lFileSystemInfoLabel->setWordWrap(true);
-	QLabel *lFileSystemLabel = new QLabel(xi18nc("@label:textbox", "Destination Path for Backup:"));
-	auto *lFileSystemUrlEdit = new KUrlRequester;
+	auto lFileSystemLabel = new QLabel(xi18nc("@label:textbox", "Destination Path for Backup:"));
+	auto lFileSystemUrlEdit = new KUrlRequester;
 	lFileSystemUrlEdit->setMode(KFile::Directory | KFile::LocalOnly);
 	lFileSystemUrlEdit->setObjectName(QStringLiteral("kcfg_Filesystem destination path"));
 
-	auto *lFileSystemVLayout = new QGridLayout;
+	auto lFileSystemVLayout = new QGridLayout;
 	lFileSystemVLayout->setColumnMinimumWidth(0, lIndentation);
 	lFileSystemVLayout->setContentsMargins(0, 0, 0, 0);
 	lFileSystemVLayout->addWidget(lFileSystemInfoLabel, 0, 1);
-	auto *lFileSystemHLayout = new QHBoxLayout;
+	auto lFileSystemHLayout = new QHBoxLayout;
 	lFileSystemHLayout->addWidget(lFileSystemLabel);
 	lFileSystemHLayout->addWidget(lFileSystemUrlEdit, 1);
 	lFileSystemVLayout->addLayout(lFileSystemHLayout, 1, 1);
 	lFileSystemWidget->setLayout(lFileSystemVLayout);
 
-	QWidget *lDriveWidget = new QWidget;
+	auto lDriveWidget = new QWidget;
 	lDriveWidget->setVisible(false);
 	QObject::connect(lDriveRadio, SIGNAL(toggled(bool)), lDriveWidget, SLOT(setVisible(bool)));
-	QLabel *lDriveInfoLabel = new QLabel(xi18nc("@info",
-	                                           "Use this option if you want to backup your "
-	                                           "files on an external storage that can be plugged in "
-	                                           "to this computer, such as a USB hard drive or memory "
-	                                           "stick."));
+	auto lDriveInfoLabel = new QLabel(xi18nc("@info",
+	                                         "Use this option if you want to backup your "
+	                                         "files on an external storage that can be plugged in "
+	                                         "to this computer, such as a USB hard drive or memory "
+	                                         "stick."));
 	lDriveInfoLabel->setWordWrap(true);
 	mDriveSelection = new DriveSelection(mBackupPlan);
 	mDriveSelection->setObjectName(QStringLiteral("kcfg_External drive UUID"));
@@ -646,11 +644,11 @@ KPageWidgetItem *BackupPlanWidget::createDestinationPage() {
 	mDriveDestEdit->setToolTip(xi18nc("@info:tooltip",
 	                                  "The specified folder will be created if it does not exist."));
 	mDriveDestEdit->setClearButtonEnabled(true);
-	QLabel *lDriveDestLabel = new QLabel(xi18nc("@label:textbox", "Folder on Destination Drive:"));
+	auto lDriveDestLabel = new QLabel(xi18nc("@label:textbox", "Folder on Destination Drive:"));
 	lDriveDestLabel->setToolTip(xi18nc("@info:tooltip",
 	                                   "The specified folder will be created if it does not exist."));
 	lDriveDestLabel->setBuddy(mDriveDestEdit);
-	auto *lDriveDestButton = new QPushButton;
+	auto lDriveDestButton = new QPushButton;
 	lDriveDestButton->setIcon(QIcon::fromTheme(QStringLiteral("document-open")));
 	int lButtonSize = lDriveDestButton->sizeHint().expandedTo(mDriveDestEdit->sizeHint()).height();
 	lDriveDestButton->setFixedSize(lButtonSize, lButtonSize);
@@ -658,17 +656,17 @@ KPageWidgetItem *BackupPlanWidget::createDestinationPage() {
 	lDriveDestButton->setEnabled(false);
 	connect(mDriveSelection, SIGNAL(selectedDriveIsAccessibleChanged(bool)), lDriveDestButton, SLOT(setEnabled(bool)));
 	connect(lDriveDestButton, SIGNAL(clicked()), SLOT(openDriveDestDialog()));
-	QWidget *lDriveDestWidget = new QWidget;
+	auto lDriveDestWidget = new QWidget;
 	lDriveDestWidget->setVisible(false);
 	connect(mDriveSelection, SIGNAL(driveIsSelectedChanged(bool)), lDriveDestWidget, SLOT(setVisible(bool)));
 	connect(mSyncedRadio, SIGNAL(toggled(bool)), mDriveSelection, SLOT(updateSyncWarning(bool)));
 
-	auto *lDriveVLayout = new QGridLayout;
+	auto lDriveVLayout = new QGridLayout;
 	lDriveVLayout->setColumnMinimumWidth(0, lIndentation);
 	lDriveVLayout->setContentsMargins(0, 0, 0, 0);
 	lDriveVLayout->addWidget(lDriveInfoLabel, 0, 1);
 	lDriveVLayout->addWidget(mDriveSelection, 1, 1);
-	auto *lDriveHLayout = new QHBoxLayout;
+	auto lDriveHLayout = new QHBoxLayout;
 	lDriveHLayout->addWidget(lDriveDestLabel);
 	lDriveHLayout->addWidget(mDriveDestEdit, 1);
 	lDriveHLayout->addWidget(lDriveDestButton);
@@ -683,7 +681,7 @@ KPageWidgetItem *BackupPlanWidget::createDestinationPage() {
 	lVLayout->addStretch();
 	lButtonGroup->setLayout(lVLayout);
 
-	auto *lPage = new KPageWidgetItem(lButtonGroup);
+	auto lPage = new KPageWidgetItem(lButtonGroup);
 	lPage->setName(xi18nc("@title", "Destination"));
 	lPage->setHeader(xi18nc("@label", "Select the backup destination"));
 	lPage->setIcon(QIcon::fromTheme(QStringLiteral("cloud-download")));
@@ -691,51 +689,51 @@ KPageWidgetItem *BackupPlanWidget::createDestinationPage() {
 }
 
 KPageWidgetItem *BackupPlanWidget::createSchedulePage() {
-	QWidget *lTopWidget = new QWidget(this);
-	auto *lTopLayout = new QVBoxLayout;
-	auto *lButtonGroup = new KButtonGroup;
+	auto lTopWidget = new QWidget(this);
+	auto lTopLayout = new QVBoxLayout;
+	auto lButtonGroup = new KButtonGroup;
 	lButtonGroup->setObjectName(QStringLiteral("kcfg_Schedule type"));
 	lButtonGroup->setFlat(true);
 
 	int lIndentation = lButtonGroup->style()->pixelMetric(QStyle::PM_ExclusiveIndicatorWidth) +
 	                   lButtonGroup->style()->pixelMetric(QStyle::PM_RadioButtonLabelSpacing);
 
-	auto *lVLayout = new QVBoxLayout;
+	auto lVLayout = new QVBoxLayout;
 	lVLayout->setContentsMargins(0, 0, 0, 0);
-	QRadioButton *lManualRadio = new QRadioButton(xi18nc("@option:radio", "Manual Activation"));
-	QRadioButton *lIntervalRadio = new QRadioButton(xi18nc("@option:radio", "Interval"));
-	QRadioButton *lUsageRadio = new QRadioButton(xi18nc("@option:radio", "Active Usage Time"));
+	auto lManualRadio = new QRadioButton(xi18nc("@option:radio", "Manual Activation"));
+	auto lIntervalRadio = new QRadioButton(xi18nc("@option:radio", "Interval"));
+	auto lUsageRadio = new QRadioButton(xi18nc("@option:radio", "Active Usage Time"));
 
-	QLabel *lManualLabel = new QLabel(xi18nc("@info", "Backups are only taken when manually requested. "
+	auto lManualLabel = new QLabel(xi18nc("@info", "Backups are only taken when manually requested. "
 	                                                  "This can be done by using the popup menu from "
 	                                                  "the backup system tray icon."));
 	lManualLabel->setVisible(false);
 	lManualLabel->setWordWrap(true);
 	connect(lManualRadio, SIGNAL(toggled(bool)), lManualLabel, SLOT(setVisible(bool)));
-	auto *lManualLayout = new QGridLayout;
+	auto lManualLayout = new QGridLayout;
 	lManualLayout->setColumnMinimumWidth(0, lIndentation);
 	lManualLayout->setContentsMargins(0, 0, 0, 0);
 	lManualLayout->addWidget(lManualLabel, 0, 1);
 
-	QWidget *lIntervalWidget = new QWidget;
+	auto lIntervalWidget = new QWidget;
 	lIntervalWidget->setVisible(false);
 	connect(lIntervalRadio, SIGNAL(toggled(bool)), lIntervalWidget, SLOT(setVisible(bool)));
-	QLabel *lIntervalLabel = new QLabel(xi18nc("@info", "New backup will be triggered when backup "
-	                                                    "destination becomes available and more than "
-	                                                    "the configured interval has passed since the "
-	                                                    "last backup was taken."));
+	auto lIntervalLabel = new QLabel(xi18nc("@info", "New backup will be triggered when backup "
+	                                                 "destination becomes available and more than "
+	                                                 "the configured interval has passed since the "
+	                                                 "last backup was taken."));
 	lIntervalLabel->setWordWrap(true);
-	auto *lIntervalVertLayout = new QGridLayout;
+	auto lIntervalVertLayout = new QGridLayout;
 	lIntervalVertLayout->setColumnMinimumWidth(0, lIndentation);
 	lIntervalVertLayout->setContentsMargins(0, 0, 0, 0);
 	lIntervalVertLayout->addWidget(lIntervalLabel, 0, 1);
-	auto *lIntervalLayout = new QHBoxLayout;
+	auto lIntervalLayout = new QHBoxLayout;
 	lIntervalLayout->setContentsMargins(0, 0, 0, 0);
-	auto *lIntervalSpinBox = new QSpinBox;
+	auto lIntervalSpinBox = new QSpinBox;
 	lIntervalSpinBox->setObjectName(QStringLiteral("kcfg_Schedule interval"));
 	lIntervalSpinBox->setMinimum(1);
 	lIntervalLayout->addWidget(lIntervalSpinBox);
-	auto *lIntervalUnit = new KComboBox;
+	auto lIntervalUnit = new KComboBox;
 	lIntervalUnit->setObjectName(QStringLiteral("kcfg_Schedule interval unit"));
 	lIntervalUnit->addItem(xi18nc("@item:inlistbox", "Minutes"));
 	lIntervalUnit->addItem(xi18nc("@item:inlistbox", "Hours"));
@@ -746,22 +744,22 @@ KPageWidgetItem *BackupPlanWidget::createSchedulePage() {
 	lIntervalVertLayout->addLayout(lIntervalLayout, 1, 1);
 	lIntervalWidget->setLayout(lIntervalVertLayout);
 
-	QWidget *lUsageWidget = new QWidget;
+	auto lUsageWidget = new QWidget;
 	lUsageWidget->setVisible(false);
 	connect(lUsageRadio, SIGNAL(toggled(bool)), lUsageWidget, SLOT(setVisible(bool)));
-	QLabel *lUsageLabel = new QLabel(xi18nc("@info",
-	                                        "New backup will be triggered when backup destination "
-	                                        "becomes available and you have been using your "
-	                                        "computer actively for more than the configured "
-	                                        "time limit since the last backup was taken."));
+	auto lUsageLabel = new QLabel(xi18nc("@info",
+	                                     "New backup will be triggered when backup destination "
+	                                     "becomes available and you have been using your "
+	                                     "computer actively for more than the configured "
+	                                     "time limit since the last backup was taken."));
 	lUsageLabel->setWordWrap(true);
-	auto *lUsageVertLayout = new QGridLayout;
+	auto lUsageVertLayout = new QGridLayout;
 	lUsageVertLayout->setColumnMinimumWidth(0, lIndentation);
 	lUsageVertLayout->setContentsMargins(0, 0, 0, 0);
 	lUsageVertLayout->addWidget(lUsageLabel, 0, 1);
-	auto *lUsageLayout = new QHBoxLayout;
+	auto lUsageLayout = new QHBoxLayout;
 	lUsageLayout->setContentsMargins(0, 0, 0, 0);
-	auto *lUsageSpinBox = new QSpinBox;
+	auto lUsageSpinBox = new QSpinBox;
 	lUsageSpinBox->setObjectName(QStringLiteral("kcfg_Usage limit"));
 	lUsageSpinBox->setMinimum(1);
 	lUsageLayout->addWidget(lUsageSpinBox);
@@ -770,7 +768,7 @@ KPageWidgetItem *BackupPlanWidget::createSchedulePage() {
 	lUsageVertLayout->addLayout(lUsageLayout, 1, 1);
 	lUsageWidget->setLayout(lUsageVertLayout);
 
-	QCheckBox *lAskFirstCheckBox = new QCheckBox(xi18nc("@option:check",
+	auto lAskFirstCheckBox = new QCheckBox(xi18nc("@option:check",
 	                                                    "Ask for confirmation before taking backup"));
 	lAskFirstCheckBox->setObjectName(QStringLiteral("kcfg_Ask first"));
 	connect(lManualRadio, SIGNAL(toggled(bool)), lAskFirstCheckBox, SLOT(setHidden(bool)));
@@ -789,7 +787,7 @@ KPageWidgetItem *BackupPlanWidget::createSchedulePage() {
 	lTopLayout->addStretch();
 	lTopWidget->setLayout(lTopLayout);
 
-	auto *lPage = new KPageWidgetItem(lTopWidget);
+	auto lPage = new KPageWidgetItem(lTopWidget);
 	lPage->setName(xi18nc("@title", "Schedule"));
 	lPage->setHeader(xi18nc("@label", "Specify the backup schedule"));
 	lPage->setIcon(QIcon::fromTheme(QStringLiteral("view-calendar")));
@@ -797,41 +795,41 @@ KPageWidgetItem *BackupPlanWidget::createSchedulePage() {
 }
 
 KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available) {
-	QWidget *lAdvancedWidget = new QWidget(this);
-	auto *lAdvancedLayout = new QVBoxLayout;
+	auto lAdvancedWidget = new QWidget(this);
+	auto lAdvancedLayout = new QVBoxLayout;
 
 	int lIndentation = lAdvancedWidget->style()->pixelMetric(QStyle::PM_IndicatorWidth) +
 	                   lAdvancedWidget->style()->pixelMetric(QStyle::PM_CheckBoxLabelSpacing);
 
-	QCheckBox *lShowHiddenCheckBox = new QCheckBox(xi18nc("@option:check",
+	auto lShowHiddenCheckBox = new QCheckBox(xi18nc("@option:check",
 	                                                      "Show hidden folders in source selection"));
 	lShowHiddenCheckBox->setObjectName(QStringLiteral("kcfg_Show hidden folders"));
 	connect(lShowHiddenCheckBox, SIGNAL(toggled(bool)),
 	        mSourceSelectionWidget, SLOT(setHiddenFoldersVisible(bool)));
 
-	QLabel *lShowHiddenLabel = new QLabel(xi18nc("@info",
-	                                             "This makes it possible to explicitly include or "
-	                                             "exclude hidden folders in the backup source "
-	                                             "selection. Hidden folders have a name that starts "
-	                                             "with a dot. They are typically located in your home "
-	                                             "folder and are used to store settings and temporary "
-	                                             "files for your applications."));
+	auto lShowHiddenLabel = new QLabel(xi18nc("@info",
+	                                          "This makes it possible to explicitly include or "
+	                                          "exclude hidden folders in the backup source "
+	                                          "selection. Hidden folders have a name that starts "
+	                                          "with a dot. They are typically located in your home "
+	                                          "folder and are used to store settings and temporary "
+	                                          "files for your applications."));
 	lShowHiddenLabel->setWordWrap(true);
-	auto *lShowHiddenLayout = new QGridLayout;
+	auto lShowHiddenLayout = new QGridLayout;
 	lShowHiddenLayout->setContentsMargins(0, 0, 0, 0);
 	lShowHiddenLayout->setColumnMinimumWidth(0, lIndentation);
 	lShowHiddenLayout->addWidget(lShowHiddenLabel, 0, 1);
 
-	QWidget *lRecoveryWidget = new QWidget;
+	auto lRecoveryWidget = new QWidget;
 	lRecoveryWidget->setVisible(false);
-	auto *lRecoveryCheckBox = new QCheckBox;
+	auto lRecoveryCheckBox = new QCheckBox;
 	lRecoveryCheckBox->setObjectName(QStringLiteral("kcfg_Generate recovery info"));
 
-	QLabel *lRecoveryLabel = new QLabel(xi18nc("@info",
-	                                           "This will make your backups use around 10% more storage "
-	                                           "space and saving backups will take slightly longer time. In "
-	                                           "return it will be possible to recover from a partially corrupted "
-	                                           "backup."));
+	auto lRecoveryLabel = new QLabel(xi18nc("@info",
+	                                        "This will make your backups use around 10% more storage "
+	                                        "space and saving backups will take slightly longer time. In "
+	                                        "return it will be possible to recover from a partially corrupted "
+	                                        "backup."));
 	lRecoveryLabel->setWordWrap(true);
 	if(pPar2Available) {
 		lRecoveryCheckBox->setText(xi18nc("@option:check", "Generate recovery information"));
@@ -841,7 +839,7 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available) {
 		lRecoveryCheckBox->setEnabled(false);
 		lRecoveryLabel->setEnabled(false);
 	}
-	auto *lRecoveryLayout = new QGridLayout;
+	auto lRecoveryLayout = new QGridLayout;
 	lRecoveryLayout->setContentsMargins(0, 0, 0, 0);
 	lRecoveryLayout->setSpacing(0);
 	lRecoveryLayout->setColumnMinimumWidth(0, lIndentation);
@@ -850,19 +848,19 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available) {
 	lRecoveryWidget->setLayout(lRecoveryLayout);
 	connect(mVersionedRadio, SIGNAL(toggled(bool)), lRecoveryWidget, SLOT(setVisible(bool)));
 
-	QWidget *lVerificationWidget = new QWidget;
+	auto lVerificationWidget = new QWidget;
 	lVerificationWidget->setVisible(false);
-	QCheckBox *lVerificationCheckBox = new QCheckBox(xi18nc("@option:check", "Verify integrity of backups"));
+	auto lVerificationCheckBox = new QCheckBox(xi18nc("@option:check", "Verify integrity of backups"));
 	lVerificationCheckBox->setObjectName(QStringLiteral("kcfg_Check backups"));
 
-	QLabel *lVerificationLabel = new QLabel(xi18nc("@info",
-	                                               "Checks the whole backup archive for corruption "
-	                                               "every time you save new data. Saving backups will take a "
-	                                               "little bit longer time but it allows you to catch corruption "
-	                                               "problems sooner than at the time you need to use a backup, "
-	                                               "at that time it could be too late."));
+	auto lVerificationLabel = new QLabel(xi18nc("@info",
+	                                            "Checks the whole backup archive for corruption "
+	                                            "every time you save new data. Saving backups will take a "
+	                                            "little bit longer time but it allows you to catch corruption "
+	                                            "problems sooner than at the time you need to use a backup, "
+	                                            "at that time it could be too late."));
 	lVerificationLabel->setWordWrap(true);
-	auto *lVerificationLayout = new QGridLayout;
+	auto lVerificationLayout = new QGridLayout;
 	lVerificationLayout->setContentsMargins(0, 0, 0, 0);
 	lVerificationLayout->setSpacing(0);
 	lVerificationLayout->setColumnMinimumWidth(0, lIndentation);
@@ -877,7 +875,7 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available) {
 	lAdvancedLayout->addWidget(lRecoveryWidget);
 	lAdvancedLayout->addStretch();
 	lAdvancedWidget->setLayout(lAdvancedLayout);
-	auto *lPage = new KPageWidgetItem(lAdvancedWidget);
+	auto lPage = new KPageWidgetItem(lAdvancedWidget);
 	lPage->setName(xi18nc("@title", "Advanced"));
 	lPage->setHeader(xi18nc("@label", "Extra options for advanced users"));
 	lPage->setIcon(QIcon::fromTheme(QStringLiteral("preferences-other")));

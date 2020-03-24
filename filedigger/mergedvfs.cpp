@@ -28,12 +28,13 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QDBusInterface>
+#include <utility>
 
 #include <git2/branch.h>
 #include <sys/stat.h>
 
-typedef QMap<QString, MergedNode *> NameMap;
-typedef QMapIterator<QString, MergedNode *> NameMapIterator;
+using NameMap = QMap<QString, MergedNode *>;
+using NameMapIterator = QMapIterator<QString, MergedNode *>;
 
 git_repository *MergedNode::mRepository = nullptr;
 
@@ -65,7 +66,7 @@ void MergedNode::getBupUrl(int pVersionIndex, QUrl *pComplete, QString *pRepoPat
 		lStack.append(lNode);
 		lNode = qobject_cast<const MergedNode *>(lNode->parent());
 	}
-	const MergedRepository *lRepo = qobject_cast<const MergedRepository *>(lStack.takeLast());
+	const auto lRepo = qobject_cast<const MergedRepository *>(lStack.takeLast());
 	if(pComplete) {
 		pComplete->setUrl("bup://" + lRepo->objectName() + lRepo->mBranchName + '/' +
 		                  vfsTimeToString(static_cast<git_time_t>(mVersionList.at(pVersionIndex)->mCommitTime)));
@@ -210,8 +211,8 @@ void MergedNode::generateSubNodes() {
 	}
 }
 
-MergedRepository::MergedRepository(QObject *pParent, const QString &pRepositoryPath, const QString &pBranchName)
-   : MergedNode(pParent, pRepositoryPath, DEFAULT_MODE_DIRECTORY), mBranchName(pBranchName)
+MergedRepository::MergedRepository(QObject *pParent, const QString &pRepositoryPath, QString pBranchName)
+   : MergedNode(pParent, pRepositoryPath, DEFAULT_MODE_DIRECTORY), mBranchName(std::move(pBranchName))
 {
 	if(!objectName().endsWith(QLatin1Char('/'))) {
 		setObjectName(objectName() + QLatin1Char('/'));

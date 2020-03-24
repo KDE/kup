@@ -27,17 +27,17 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
-#define RECORD_END 0
-#define RECORD_PATH 1
-#define RECORD_COMMON_V1 2 // times, user, group, type, perms, etc. (legacy version 1)
-#define RECORD_SYMLINK_TARGET 3
-#define RECORD_POSIX1E_ACL 4 // getfacl(1), setfacl(1), etc.
-#define RECORD_NFSV4_ACL 5 // intended to supplant posix1e acls?
-#define RECORD_LINUX_ATTR 6 // lsattr(1) chattr(1)
-#define RECORD_LINUX_XATTR 7 // getfattr(1) setfattr(1)
-#define RECORD_HARDLINK_TARGET 8 // hard link target
-#define RECORD_COMMON_V2 9 // times, user, group, type, perms, etc.
-#define RECORD_COMMON_V3 10 // times, user, group, type, perms, etc.
+static const int cRecordEnd = 0;
+//static const int cRecordPath = 1;
+static const int cRecordCommonV1 = 2; // times, user, group, type, perms, etc. (legacy version 1)
+static const int cRecordSymlinkTarget = 3;
+//static const int cRecordPosix1eAcl = 4; // getfacl(1), setfacl(1), etc.
+//static const int cRecordNfsV4Acl = 5; // intended to supplant posix1e acls?
+//static const int cRecordLinuxAttr = 6; // lsattr(1) chattr(1)
+//static const int cRecordLinuxXattr = 7; // getfattr(1) setfattr(1)
+//static const int cRecordHardlinkTarget = 8;
+static const int cRecordCommonV2 = 9; // times, user, group, type, perms, etc.
+static const int cRecordCommonV3 = 10; // times, user, group, type, perms, etc.
 
 VintStream::VintStream(const void *pData, int pSize, QObject *pParent)
    : QObject(pParent)
@@ -68,15 +68,15 @@ VintStream &VintStream::operator>>(qint64 &pInt) {
 	return *this;
 }
 
-VintStream &VintStream::operator >>(quint64 &pInt) {
+VintStream &VintStream::operator >>(quint64 &pUint) {
 	char c;
 	int lOffset = 0;
-	pInt = 0;
+	pUint = 0;
 	do {
 		if(!mBuffer->getChar(&c)) {
 			throw 1;
 		}
-		pInt |= static_cast<quint64>((c & 0x7F) << lOffset);
+		pUint |= static_cast<quint64>((c & 0x7F) << lOffset);
 		lOffset += 7;
 	} while(c & 0x80);
 	return *this;
@@ -123,7 +123,7 @@ int readMetadata(VintStream &pMetadataStream, Metadata &pMetadata) {
 		do {
 			pMetadataStream >> lTag;
 			switch(lTag) {
-			case RECORD_COMMON_V1: {
+			case cRecordCommonV1: {
 				qint64 lNotUsedInt;
 				quint64 lNotUsedUint, lTempUint;
 				QString lNotUsedString;
@@ -139,7 +139,7 @@ int readMetadata(VintStream &pMetadataStream, Metadata &pMetadata) {
 				pMetadataStream >> lNotUsedInt >> lNotUsedUint; // status change time
 				break;
 			}
-			case RECORD_COMMON_V2: {
+			case cRecordCommonV2: {
 				qint64 lNotUsedInt;
 				quint64 lNotUsedUint;
 				QString lNotUsedString;
@@ -152,7 +152,7 @@ int readMetadata(VintStream &pMetadataStream, Metadata &pMetadata) {
 				pMetadataStream >> lNotUsedInt >> lNotUsedUint; // status change time
 				break;
 			}
-			case RECORD_COMMON_V3: {
+			case cRecordCommonV3: {
 				qint64 lNotUsedInt;
 				quint64 lNotUsedUint;
 				QString lNotUsedString;
@@ -166,19 +166,19 @@ int readMetadata(VintStream &pMetadataStream, Metadata &pMetadata) {
 				pMetadataStream >> pMetadata.mSize;
 				break;
 			}
-			case RECORD_SYMLINK_TARGET: {
+			case cRecordSymlinkTarget: {
 				pMetadataStream >> pMetadata.mSymlinkTarget;
 				break;
 			}
 			default: {
-				if(lTag != RECORD_END) {
+				if(lTag != cRecordEnd) {
 					QByteArray lNotUsed;
 					pMetadataStream >> lNotUsed;
 				}
 				break;
 			}
 			}
-		} while(lTag != RECORD_END);
+		} while(lTag != cRecordEnd);
 	} catch(int) {
 		return 1;
 	}

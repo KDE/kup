@@ -31,10 +31,10 @@ public:
 	explicit KupSettings(KSharedConfigPtr pConfig, QObject *pParent = nullptr);
 
 	// Common enable of backup plans
-	bool mBackupsEnabled;
+	bool mBackupsEnabled{};
 
 	// Number of backup plans configured
-	int mNumberOfPlans;
+	int mNumberOfPlans{};
 };
 
 #endif // KUPSETTINGS_H

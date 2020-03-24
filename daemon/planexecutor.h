@@ -94,7 +94,7 @@ protected slots:
 	void notifyBackupFailed(KJob *pFailedJob);
 	void discardFailNotification();
 
-	void notifyBackupSucceeded();
+	static void notifyBackupSucceeded();
 
 	void integrityCheckFinished(KJob *pJob);
 	void discardIntegrityNotification();
@@ -106,7 +106,7 @@ protected slots:
 
 protected:
 	BackupJob *createBackupJob();
-	bool powerSaveActive();
+	static bool powerSaveActive();
 
 	KNotification *mQuestion;
 	QTimer *mSchedulingTimer;

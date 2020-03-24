@@ -36,10 +36,10 @@
 #include <KNotification>
 #include <KRun>
 
-static QString sPwrMgmtServiceName = QStringLiteral("org.freedesktop.PowerManagement");
-static QString sPwrMgmtPath = QStringLiteral("/org/freedesktop/PowerManagement");
-static QString sPwrMgmtInhibitInterface = QStringLiteral("org.freedesktop.PowerManagement.Inhibit");
-static QString sPwrMgmtInterface = QStringLiteral("org.freedesktop.PowerManagement");
+static const QString cPwrMgmtServiceName = QStringLiteral("org.freedesktop.PowerManagement");
+static const QString cPwrMgmtPath = QStringLiteral("/org/freedesktop/PowerManagement");
+static const QString cPwrMgmtInhibitInterface = QStringLiteral("org.freedesktop.PowerManagement.Inhibit");
+static const QString cPwrMgmtInterface = QStringLiteral("org.freedesktop.PowerManagement");
 
 PlanExecutor::PlanExecutor(BackupPlan *pPlan, KupDaemon *pKupDaemon)
    :QObject(pKupDaemon), mState(NOT_AVAILABLE), mPlan(pPlan), mQuestion(nullptr),
@@ -68,8 +68,7 @@ PlanExecutor::PlanExecutor(BackupPlan *pPlan, KupDaemon *pKupDaemon)
 	connect(mSchedulingTimer, SIGNAL(timeout()), SLOT(enterAvailableState()));
 }
 
-PlanExecutor::~PlanExecutor() {
-}
+PlanExecutor::~PlanExecutor() = default;
 
 QString PlanExecutor::currentActivityTitle() {
 	switch(mState) {
@@ -206,7 +205,7 @@ void PlanExecutor::discardFailNotification() {
 }
 
 void PlanExecutor::notifyBackupSucceeded() {
-	KNotification *lNotification = new KNotification(QStringLiteral("BackupSucceeded"));
+	auto *lNotification = new KNotification(QStringLiteral("BackupSucceeded"));
 	lNotification->setTitle(xi18nc("@title:window", "Backup Saved"));
 	lNotification->setText(xi18nc("@info notification", "Saving backup completed successfully."));
 	lNotification->sendEvent();
@@ -319,9 +318,9 @@ void PlanExecutor::startSleepInhibit() {
 	if(mSleepCookie != 0) {
 		return;
 	}
-	QDBusMessage lMsg = QDBusMessage::createMethodCall(sPwrMgmtServiceName,
-	                                                   sPwrMgmtPath,
-	                                                   sPwrMgmtInhibitInterface,
+	QDBusMessage lMsg = QDBusMessage::createMethodCall(cPwrMgmtServiceName,
+	                                                   cPwrMgmtPath,
+	                                                   cPwrMgmtInhibitInterface,
 	                                                   QStringLiteral("Inhibit"));
 	lMsg << i18n("Kup Backup System");
 	lMsg << currentActivityTitle();
@@ -333,9 +332,9 @@ void PlanExecutor::endSleepInhibit() {
 	if(mSleepCookie == 0) {
 		return;
 	}
-	QDBusMessage lMsg = QDBusMessage::createMethodCall(sPwrMgmtServiceName,
-	                                                  sPwrMgmtPath,
-	                                                  sPwrMgmtInhibitInterface,
+	QDBusMessage lMsg = QDBusMessage::createMethodCall(cPwrMgmtServiceName,
+	                                                  cPwrMgmtPath,
+	                                                  cPwrMgmtInhibitInterface,
 	                                                  QStringLiteral("UnInhibit"));
 	lMsg << mSleepCookie;
 	QDBusConnection::sessionBus().asyncCall(lMsg);
@@ -411,9 +410,9 @@ BackupJob *PlanExecutor::createBackupJob() {
 }
 
 bool PlanExecutor::powerSaveActive() {
-	QDBusMessage lMsg = QDBusMessage::createMethodCall(sPwrMgmtServiceName,
-	                                                   sPwrMgmtPath,
-	                                                   sPwrMgmtInterface,
+	QDBusMessage lMsg = QDBusMessage::createMethodCall(cPwrMgmtServiceName,
+	                                                   cPwrMgmtPath,
+	                                                   cPwrMgmtInterface,
 	                                                   QStringLiteral("GetPowerSaveStatus"));
 	QDBusReply<bool> lReply = QDBusConnection::sessionBus().call(lMsg);
 	return lReply.value();

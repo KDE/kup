@@ -30,9 +30,10 @@
 #endif
 
 #include <QTimer>
+#include <utility>
 
-BackupJob::BackupJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon)
-   :mBackupPlan(pBackupPlan), mDestinationPath(pDestinationPath), mLogFilePath(pLogFilePath), mKupDaemon(pKupDaemon)
+BackupJob::BackupJob(BackupPlan &pBackupPlan, QString pDestinationPath, QString pLogFilePath, KupDaemon *pKupDaemon)
+   :mBackupPlan(pBackupPlan), mDestinationPath(std::move(pDestinationPath)), mLogFilePath(std::move(pLogFilePath)), mKupDaemon(pKupDaemon)
 {
 	mLogFile.setFileName(mLogFilePath);
 	mLogFile.open(QIODevice::WriteOnly | QIODevice::Truncate);
@@ -82,7 +83,7 @@ void BackupJob::jobFinishedSuccess() {
 	emitResult();
 }
 
-void BackupJob::jobFinishedError(BackupJob::ErrorCodes pErrorCode, QString pErrorText) {
+void BackupJob::jobFinishedError(BackupJob::ErrorCodes pErrorCode, const QString &pErrorText) {
 	// if job has already set the error that it was killed by the user then ignore any fault
 	// we get here as that fault is surely about the process exit code was not zero.
 	// And we don't want to report about that (with our notification) in this case.

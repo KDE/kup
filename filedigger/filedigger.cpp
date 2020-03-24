@@ -40,9 +40,10 @@
 #include <QSplitter>
 #include <QTreeView>
 #include <QVBoxLayout>
+#include <utility>
 
-FileDigger::FileDigger(const QString &pRepoPath, const QString &pBranchName, QWidget *pParent)
-    : KMainWindow(pParent), mRepoPath(pRepoPath), mBranchName(pBranchName), mDirOperator(nullptr)
+FileDigger::FileDigger(QString pRepoPath, QString pBranchName, QWidget *pParent)
+    : KMainWindow(pParent), mRepoPath(std::move(pRepoPath)), mBranchName(std::move(pBranchName)), mDirOperator(nullptr)
 {
     setWindowIcon(QIcon::fromTheme(QStringLiteral("kup")));
     KToolBar *lAppToolBar = toolBar();
@@ -53,19 +54,19 @@ FileDigger::FileDigger(const QString &pRepoPath, const QString &pBranchName, QWi
 
 void FileDigger::updateVersionModel(const QModelIndex &pCurrent, const QModelIndex &pPrevious) {
 	Q_UNUSED(pPrevious)
-	mVersionModel->setNode(mMergedVfsModel->node(pCurrent));
+	mVersionModel->setNode(MergedVfsModel::node(pCurrent));
 	mVersionView->selectionModel()->setCurrentIndex(mVersionModel->index(0,0),
 	                                                QItemSelectionModel::Select);
 }
 
 void FileDigger::open(const QModelIndex &pIndex) {
-	KRun::runUrl(pIndex.data(VersionBupUrlRole).value<QUrl>(),
+	KRun::runUrl(pIndex.data(VersionBupUrlRole).toUrl(),
 	             pIndex.data(VersionMimeTypeRole).toString(), this, KRun::RunFlags());
 
 }
 
 void FileDigger::restore(const QModelIndex &pIndex) {
-	RestoreDialog *lDialog = new RestoreDialog(pIndex.data(VersionSourceInfoRole).value<BupSourceInfo>(), this);
+	auto lDialog = new RestoreDialog(pIndex.data(VersionSourceInfoRole).value<BupSourceInfo>(), this);
 	lDialog->setAttribute(Qt::WA_DeleteOnClose);
 	lDialog->show();
 }
@@ -92,12 +93,12 @@ void FileDigger::checkFileWidgetPath() {
 	repoPathAvailable();
 }
 
-void FileDigger::enterUrl(QUrl pUrl) {
+void FileDigger::enterUrl(const QUrl &pUrl) {
 	mDirOperator->setUrl(pUrl, true);
 }
 
 MergedRepository *FileDigger::createRepo() {
-    MergedRepository *lRepository = new MergedRepository(nullptr, mRepoPath, mBranchName);
+    auto lRepository = new MergedRepository(nullptr, mRepoPath, mBranchName);
     if(!lRepository->open()) {
         KMessageBox::sorry(nullptr, xi18nc("@info messagebox, %1 is a folder path",
                                        "The backup archive <filename>%1</filename> could not be opened. "
@@ -110,7 +111,7 @@ MergedRepository *FileDigger::createRepo() {
             KMessageBox::sorry(nullptr, xi18nc("@info messagebox",
                                            "You do not have permission needed to read this backup archive."));
         } else {
-            lRepository->askForIntegrityCheck();
+            MergedRepository::askForIntegrityCheck();
         }
         return nullptr;
     }
@@ -118,7 +119,7 @@ MergedRepository *FileDigger::createRepo() {
 }
 
 void FileDigger::createRepoView(MergedRepository *pRepository) {
-    QSplitter *lSplitter = new QSplitter();
+    auto lSplitter = new QSplitter();
     mMergedVfsModel = new MergedVfsModel(pRepository, this);
     mMergedVfsView = new QTreeView();
     mMergedVfsView->setHeaderHidden(true);
@@ -132,7 +133,7 @@ void FileDigger::createRepoView(MergedRepository *pRepository) {
 	mVersionView->setSelectionMode(QAbstractItemView::SingleSelection);
 	mVersionModel = new VersionListModel(this);
 	mVersionView->setModel(mVersionModel);
-	VersionListDelegate *lVersionDelegate = new VersionListDelegate(mVersionView,this);
+	auto lVersionDelegate = new VersionListDelegate(mVersionView,this);
 	mVersionView->setItemDelegate(lVersionDelegate);
 	lSplitter->addWidget(mVersionView);
 	connect(lVersionDelegate, SIGNAL(openRequested(QModelIndex)), SLOT(open(QModelIndex)));
@@ -157,9 +158,9 @@ void FileDigger::createSelectionView() {
 	if(mDirOperator != nullptr) {
 		return;
 	}
-	QLabel *lLabel = new QLabel(i18n("Select location of backup archive to open."));
+	auto lLabel = new QLabel(i18n("Select location of backup archive to open."));
 
-	KFilePlacesView *lPlaces = new KFilePlacesView;
+	auto lPlaces = new KFilePlacesView;
 	lPlaces->setModel(new KFilePlacesModel);
 
 	mDirOperator = new KDirOperator();
@@ -170,14 +171,14 @@ void FileDigger::createSelectionView() {
 
 	connect(lPlaces, &KFilePlacesView::urlChanged, this, &FileDigger::enterUrl);
 
-	QPushButton *lOkButton = new QPushButton(this);
+	auto lOkButton = new QPushButton(this);
 	KGuiItem::assign(lOkButton, KStandardGuiItem::ok());
 	connect(lOkButton, &QPushButton::pressed, this, &FileDigger::checkFileWidgetPath);
 
 
-	QWidget *lSelectionView = new QWidget;
-	QVBoxLayout *lVLayout1 = new QVBoxLayout;
-	QSplitter *lSplitter = new QSplitter;
+	auto lSelectionView = new QWidget;
+	auto lVLayout1 = new QVBoxLayout;
+	auto lSplitter = new QSplitter;
 
 	lVLayout1->addWidget(lLabel);
 	lSplitter->addWidget(lPlaces);

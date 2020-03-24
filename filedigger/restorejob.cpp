@@ -23,6 +23,7 @@
 #include <QDir>
 #include <QDebug>
 #include <KLocalizedString>
+#include <utility>
 
 #include <unistd.h>
 #include <sys/resource.h>
@@ -30,9 +31,9 @@
 #include <sys/syscall.h>
 #endif
 
-RestoreJob::RestoreJob(const QString &pRepositoryPath, const QString &pSourcePath, const QString &pRestorationPath,
+RestoreJob::RestoreJob(QString pRepositoryPath, QString pSourcePath, QString pRestorationPath,
                        int pTotalDirCount, quint64 pTotalFileSize, const QHash<QString, quint64> &pFileSizes)
- : KJob(), mRepositoryPath(pRepositoryPath), mSourcePath(pSourcePath), mRestorationPath(pRestorationPath),
+ : mRepositoryPath(std::move(pRepositoryPath)), mSourcePath(std::move(pSourcePath)), mRestorationPath(std::move(pRestorationPath)),
    mTotalDirCount(pTotalDirCount), mTotalFileSize(pTotalFileSize), mFileSizes(pFileSizes)
 {
 	setCapabilities(Killable);

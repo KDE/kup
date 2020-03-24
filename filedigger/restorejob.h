@@ -30,7 +30,7 @@ class RestoreJob : public KJob
 {
 	Q_OBJECT
 public:
-	explicit RestoreJob(const QString &pRepositoryPath, const QString &pSourcePath, const QString &pRestorationPath,
+	explicit RestoreJob(QString pRepositoryPath, QString pSourcePath, QString pRestorationPath,
 	                    int pTotalDirCount, quint64 pTotalFileSize, const QHash<QString, quint64> &pFileSizes);
 	void start() override;
 
@@ -40,7 +40,7 @@ protected slots:
 
 protected:
 	void timerEvent(QTimerEvent *pTimerEvent) override;
-	void makeNice(int pPid);
+	static void makeNice(int pPid);
 	void moveFolder();
 
 	KProcess mRestoreProcess;
@@ -51,7 +51,7 @@ protected:
 	int mTotalDirCount;
 	quint64 mTotalFileSize;
 	const QHash<QString, quint64> &mFileSizes;
-	int mTimerId;
+	int mTimerId{};
 };
 
 #endif // RESTOREJOB_H

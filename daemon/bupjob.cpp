@@ -20,7 +20,7 @@
 
 #include "bupjob.h"
 
-#include <signal.h>
+#include <csignal>
 
 #include <QRegularExpression>
 #include <QTextStream>
@@ -50,7 +50,8 @@ void BupJob::performJob() {
 		                                         "The <application>bup</application> program is "
 		                                         "needed but could not be found, maybe it is not installed?"));
 		return;
-	} else if(mBackupPlan.mGenerateRecoveryInfo && lExitCode != 0) {
+	}
+	if(mBackupPlan.mGenerateRecoveryInfo && lExitCode != 0) {
 		jobFinishedError(ErrorWithoutLog, xi18nc("@info notification",
 		                                         "The <application>par2</application> program is "
 		                                         "needed but could not be found, maybe it is not installed?"));
@@ -238,13 +239,11 @@ void BupJob::slotReadBupErrors() {
 		const QStringList lList = lRawLine.split(QChar::CarriageReturn);
 		for(const QString &lLine: lList) {
 			//		mLogStream << "read a line: " << lLine << endl;
-			if(lLine.startsWith(QStringLiteral("Reading index:"))) {
+			if(lLine.startsWith(QStringLiteral("Reading index:")) || lLine.startsWith(QStringLiteral("bloom:"))
+			        || lLine.startsWith(QStringLiteral("midx:"))) {
 				continue;
-			} else if(lLine.startsWith(QStringLiteral("bloom:"))) {
-				continue;
-			} else if(lLine.startsWith(QStringLiteral("midx:"))) {
-				continue;
-			} else if(lLine.startsWith(QStringLiteral("Saving:"))) {
+			}
+			if(lLine.startsWith(QStringLiteral("Saving:"))) {
 				QRegularExpressionMatch lMatch = lProgressRegExp.match(lLine);
 				if(lMatch.hasMatch()) {
 					lCopiedKBytes = lMatch.captured(1).toULongLong();

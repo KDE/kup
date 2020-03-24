@@ -34,7 +34,7 @@ public:
 	QSize sizeHint(const QStyleOptionViewItem& pOption, const QModelIndex& pIndex) const override;
 private:
 	QRect warningRect(const QRect &pRect, const QModelIndex &pIndex) const;
-	QString warningText(const QModelIndex &pIndex) const;
+	static QString warningText(const QModelIndex &pIndex);
 	KCapacityBar *mCapacityBar;
 	QListView *mListView;
 };

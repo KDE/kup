@@ -90,7 +90,7 @@ protected:
 class MergedRepository: public MergedNode {
 	Q_OBJECT
 public:
-	MergedRepository(QObject *pParent, const QString &pRepositoryPath, const QString &pBranchName);
+	MergedRepository(QObject *pParent, const QString &pRepositoryPath, QString pBranchName);
 	~MergedRepository() override;
 
 	bool open();

@@ -35,7 +35,7 @@
 
 int main(int pArgCount, char **pArgArray) {
 	QApplication lApp(pArgCount, pArgArray);
-	lApp.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+	QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
 	KLocalizedString::setApplicationDomain("kup");
 
@@ -57,16 +57,17 @@ int main(int pArgCount, char **pArgArray) {
 	lAbout.processCommandLine(&lParser);
 
 	QString lRepoPath;
-	if(!lParser.positionalArguments().isEmpty()) {
-		lRepoPath = lParser.positionalArguments().first();
+	QStringList lPosArgs = lParser.positionalArguments();
+	if(!lPosArgs.isEmpty()) {
+		lRepoPath = lPosArgs.takeFirst();
 	}
 
 	// This needs to be called first thing, before any other calls to libgit2.
 	git_libgit2_init();
 
-	FileDigger *lFileDigger = new FileDigger(lRepoPath, lParser.value(QStringLiteral("branch")));
+	auto lFileDigger = new FileDigger(lRepoPath, lParser.value(QStringLiteral("branch")));
 	lFileDigger->show();
-	int lRetVal = lApp.exec();
+	int lRetVal = QApplication::exec();
 	git_libgit2_shutdown();
 	return lRetVal;
 }

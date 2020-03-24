@@ -105,7 +105,7 @@ public:
 protected:
 	git_blob *cachedBlob();
 	quint64 calculateSize() override;
-	git_oid mOid;
+	git_oid mOid{};
 	git_blob *mBlob;
 };
 
@@ -155,8 +155,8 @@ public:
 
 protected:
 	void generateSubNodes() override;
-	git_oid mOid;
-	git_blob *mMetadataBlob;
+	git_oid mOid{};
+	git_blob *mMetadataBlob{};
 	git_tree *mTree;
 	VintStream *mMetadataStream;
 };

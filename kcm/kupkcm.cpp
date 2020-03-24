@@ -80,16 +80,16 @@ KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
 	}
 
 	if(mBupVersion.isEmpty() && mRsyncVersion.isEmpty()) {
-		QLabel *lSorryIcon = new QLabel;
+		auto lSorryIcon = new QLabel;
 		lSorryIcon->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-error")).pixmap(64, 64));
 		QString lInstallMessage = i18n("<h2>Backup programs are missing</h2>"
 		                               "<p>Before you can activate any backup plan you need to "
 		                               "install either of</p>"
 		                               "<ul><li>bup, for versioned backups</li>"
 		                               "<li>rsync, for synchronized backups</li></ul>");
-		QLabel *lSorryText = new QLabel(lInstallMessage);
+		auto lSorryText = new QLabel(lInstallMessage);
 		lSorryText->setWordWrap(true);
-		auto *lHLayout = new QHBoxLayout;
+		auto lHLayout = new QHBoxLayout;
 		lHLayout->addWidget(lSorryIcon);
 		lHLayout->addWidget(lSorryText, 1);
 		setLayout(lHLayout);
@@ -213,18 +213,18 @@ void KupKcm::showFrontPage() {
 
 void KupKcm::createSettingsFrontPage() {
 	mFrontPage = new QWidget;
-	auto *lHLayout = new QHBoxLayout;
-	auto *lVLayout = new QVBoxLayout;
-	auto *lScrollArea = new QScrollArea;
-	QWidget *lCentralWidget = new QWidget(lScrollArea);
+	auto lHLayout = new QHBoxLayout;
+	auto lVLayout = new QVBoxLayout;
+	auto lScrollArea = new QScrollArea;
+	auto lCentralWidget = new QWidget(lScrollArea);
 	mVerticalLayout = new QVBoxLayout;
 	lScrollArea->setWidget(lCentralWidget);
 	lScrollArea->setWidgetResizable(true);
 	lScrollArea->setFrameStyle(QFrame::NoFrame);
 
-	QPushButton *lAddPlanButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")),
+	auto lAddPlanButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")),
 	                                              xi18nc("@action:button", "Add New Plan"));
-	connect(lAddPlanButton, &QPushButton::clicked, [this]{
+	connect(lAddPlanButton, &QPushButton::clicked, this, [this]{
 		mPlans.append(new BackupPlan(mPlans.count() + 1, mConfig, this));
 		mConfigManagers.append(nullptr);
 		mPlanWidgets.append(nullptr);
@@ -245,7 +245,7 @@ void KupKcm::createSettingsFrontPage() {
 	lVLayout->addWidget(lScrollArea);
 	mFrontPage->setLayout(lVLayout);
 
-	QPushButton *lFilediggerButton = new QPushButton(xi18nc("@action:button", "Open and restore from existing backups"));
+	auto lFilediggerButton = new QPushButton(xi18nc("@action:button", "Open and restore from existing backups"));
 	connect(lFilediggerButton, &QPushButton::clicked, []{KProcess::startDetached(QStringLiteral("kup-filedigger"));});
 	mVerticalLayout->addWidget(lFilediggerButton);
 	mVerticalLayout->addStretch(1);
@@ -253,25 +253,25 @@ void KupKcm::createSettingsFrontPage() {
 }
 
 void KupKcm::createPlanWidgets(int pIndex) {
-	auto *lPlanWidget = new BackupPlanWidget(mPlans.at(pIndex), mBupVersion,
+	auto lPlanWidget = new BackupPlanWidget(mPlans.at(pIndex), mBupVersion,
 	                                         mRsyncVersion, mPar2Available);
 	connect(lPlanWidget, SIGNAL(requestOverviewReturn()), this, SLOT(showFrontPage()));
-	auto *lConfigManager = new KConfigDialogManager(lPlanWidget, mPlans.at(pIndex));
+	auto lConfigManager = new KConfigDialogManager(lPlanWidget, mPlans.at(pIndex));
 	lConfigManager->setObjectName(objectName());
 	connect(lConfigManager, SIGNAL(widgetModified()), this, SLOT(updateChangedStatus()));
-	auto *lStatusWidget = new PlanStatusWidget(mPlans.at(pIndex));
-	connect(lStatusWidget, &PlanStatusWidget::removeMe, [=]{
+	auto lStatusWidget = new PlanStatusWidget(mPlans.at(pIndex));
+	connect(lStatusWidget, &PlanStatusWidget::removeMe, this, [this,pIndex]{
 		if(pIndex < mSettings->mNumberOfPlans)
 			partiallyRemovePlan(pIndex);
 		else
 			completelyRemovePlan(pIndex);
 		updateChangedStatus();
 	});
-	connect(lStatusWidget, &PlanStatusWidget::configureMe, [=]{
+	connect(lStatusWidget, &PlanStatusWidget::configureMe, this, [this,pIndex]{
 		mStackedLayout->setCurrentIndex(pIndex + 1);
 	});
-	connect(lStatusWidget, &PlanStatusWidget::duplicateMe, [this,pIndex]{
-		BackupPlan *lNewPlan = new BackupPlan(mPlans.count() + 1, mConfig, this);
+	connect(lStatusWidget, &PlanStatusWidget::duplicateMe, this, [this,pIndex]{
+		auto lNewPlan = new BackupPlan(mPlans.count() + 1, mConfig, this);
 		lNewPlan->copyFrom(*mPlans.at(pIndex));
 		mPlans.append(lNewPlan);
 		mConfigManagers.append(nullptr);

@@ -47,7 +47,7 @@ QVariant MergedVfsModel::data(const QModelIndex &pIndex, int pRole) const {
 	if(!pIndex.isValid()) {
 		return QVariant();
 	}
-	MergedNode *lNode = static_cast<MergedNode *>(pIndex.internalPointer());
+	auto *lNode = static_cast<MergedNode *>(pIndex.internalPointer());
 	switch (pRole) {
 	case Qt::DisplayRole:
 		return lNode->objectName();
@@ -66,33 +66,33 @@ QVariant MergedVfsModel::data(const QModelIndex &pIndex, int pRole) const {
 
 QModelIndex MergedVfsModel::index(int pRow, int pColumn, const QModelIndex &pParent) const {
 	if(pColumn != 0 || pRow < 0) {
-		return QModelIndex(); // invalid
+		return {}; // invalid
 	}
 	if(!pParent.isValid()) {
 		if(pRow >= mRoot->subNodes().count()) {
-			return QModelIndex(); // invalid
+			return {}; // invalid
 		}
 		return createIndex(pRow, 0, mRoot->subNodes().at(pRow));
 	}
-	MergedNode *lParentNode = static_cast<MergedNode *>(pParent.internalPointer());
+	auto lParentNode = static_cast<MergedNode *>(pParent.internalPointer());
 	if(pRow >= lParentNode->subNodes().count()) {
-		return QModelIndex(); // invalid
+		return {}; // invalid
 	}
 	return createIndex(pRow, 0, lParentNode->subNodes().at(pRow));
 }
 
 QModelIndex MergedVfsModel::parent(const QModelIndex &pChild) const {
 	if(!pChild.isValid()) {
-		return QModelIndex();
+		return {};
 	}
-	MergedNode *lChild = static_cast<MergedNode *>(pChild.internalPointer());
-	MergedNode *lParent = qobject_cast<MergedNode *>(lChild->parent());
+	auto lChild = static_cast<MergedNode *>(pChild.internalPointer());
+	auto lParent = qobject_cast<MergedNode *>(lChild->parent());
 	if(lParent == nullptr || lParent == mRoot) {
-		return QModelIndex(); //invalid
+		return {}; //invalid
 	}
-	MergedNode *lGrandParent = qobject_cast<MergedNode *>(lParent->parent());
+	auto lGrandParent = qobject_cast<MergedNode *>(lParent->parent());
 	if(lGrandParent == nullptr) {
-		return QModelIndex(); //invalid
+		return {}; //invalid
 	}
 	return createIndex(lGrandParent->subNodes().indexOf(lParent), 0, lParent);
 }
@@ -101,7 +101,7 @@ int MergedVfsModel::rowCount(const QModelIndex &pParent) const {
 	if(!pParent.isValid()) {
 		return mRoot->subNodes().count();
 	}
-	MergedNode *lParent = static_cast<MergedNode *>(pParent.internalPointer());
+	auto lParent = static_cast<MergedNode *>(pParent.internalPointer());
 	if(lParent == nullptr) {
 		return 0;
 	}
@@ -109,7 +109,7 @@ int MergedVfsModel::rowCount(const QModelIndex &pParent) const {
 }
 
 const VersionList *MergedVfsModel::versionList(const QModelIndex &pIndex) {
-	MergedNode *lNode = static_cast<MergedNode *>(pIndex.internalPointer());
+	auto lNode = static_cast<MergedNode *>(pIndex.internalPointer());
 	return lNode->versionList();
 }
 

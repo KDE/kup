@@ -39,11 +39,12 @@
 #include <QInputDialog>
 #include <QPushButton>
 #include <QTimer>
+#include <utility>
 
-#define KUP_TMP_RESTORE_FOLDER QStringLiteral("_kup_temporary_restore_folder_")
+static const QString cKupTempRestoreFolder = QStringLiteral("_kup_temporary_restore_folder_");
 
-RestoreDialog::RestoreDialog(const BupSourceInfo &pPathInfo, QWidget *parent)
-   : QDialog(parent), mUI(new Ui::RestoreDialog), mSourceInfo(pPathInfo)
+RestoreDialog::RestoreDialog(BupSourceInfo pPathInfo, QWidget *parent)
+   : QDialog(parent), mUI(new Ui::RestoreDialog), mSourceInfo(std::move(pPathInfo))
 {
 	mSourceFileName = mSourceInfo.mPathInRepo.section(QDir::separator(), -1);
 
@@ -67,8 +68,8 @@ RestoreDialog::RestoreDialog(const BupSourceInfo &pPathInfo, QWidget *parent)
 	mUI->mTopLevelVLayout->insertWidget(0, mMessageWidget);
 	connect(mUI->mDestBackButton, SIGNAL(clicked()), mMessageWidget, SLOT(hide()));
 	connect(mUI->mDestNextButton, SIGNAL(clicked()), SLOT(checkDestinationSelection()));
-	connect(mUI->mDestBackButton, &QPushButton::clicked, [=]{mUI->mStackedWidget->setCurrentIndex(0);});
-	connect(mUI->mOverwriteBackButton, &QPushButton::clicked, [=]{mUI->mStackedWidget->setCurrentIndex(0);});
+	connect(mUI->mDestBackButton, &QPushButton::clicked, this, [this]{mUI->mStackedWidget->setCurrentIndex(0);});
+	connect(mUI->mOverwriteBackButton, &QPushButton::clicked, this, [this]{mUI->mStackedWidget->setCurrentIndex(0);});
 	connect(mUI->mConfirmButton, SIGNAL(clicked()), SLOT(fileOverwriteConfirmed()));
 	connect(mUI->mOpenDestinationButton, SIGNAL(clicked()), SLOT(openDestinationFolder()));
 }
@@ -108,7 +109,7 @@ void RestoreDialog::setCustomDestination() {
 		mDirSelector->expandToUrl(QUrl::fromLocalFile(lDirPath));
 		mUI->mDestinationVLayout->insertWidget(0, mDirSelector);
 
-		QPushButton *lNewFolderButton = new QPushButton(QIcon::fromTheme(QStringLiteral("folder-new")),
+		auto lNewFolderButton = new QPushButton(QIcon::fromTheme(QStringLiteral("folder-new")),
 		                                                xi18nc("@action:button","New Folder..."));
 		connect(lNewFolderButton, SIGNAL(clicked()), SLOT(createNewFolder()));
 		mUI->mDestinationHLayout->insertWidget(0, lNewFolderButton);
@@ -180,7 +181,7 @@ void RestoreDialog::startPrechecks() {
 				lDir.setFilter(QDir::AllEntries | QDir::Hidden | QDir::System | QDir::NoDotAndDotDot);
 				if(lDir.count() > 0) { // destination dir exists and is non-empty.
 					mRestorationPath.append(QDir::separator());
-					mRestorationPath.append(KUP_TMP_RESTORE_FOLDER);
+					mRestorationPath.append(cKupTempRestoreFolder);
 				}
 				// make bup not restore the source folder itself but instead it's contents
 				mSourceInfo.mPathInRepo.append(QDir::separator());
@@ -191,7 +192,7 @@ void RestoreDialog::startPrechecks() {
 			} else {
 				mUI->mFileConflictList->addItem(mFolderToCreate.absoluteFilePath());
 				mRestorationPath.append(QDir::separator());
-				mRestorationPath.append(KUP_TMP_RESTORE_FOLDER);
+				mRestorationPath.append(cKupTempRestoreFolder);
 			}
 		}
 		qCDebug(KUPFILEDIGGER) << "Starting source file listing job on: " << mSourceInfo.mBupKioPath;
@@ -207,7 +208,7 @@ void RestoreDialog::startPrechecks() {
 		mRestorationPath = mDestination.absolutePath();
 		if(mDestination.exists() || mDestination.fileName() != mSourceFileName) {
 			mRestorationPath.append(QDir::separator());
-			mRestorationPath.append(KUP_TMP_RESTORE_FOLDER);
+			mRestorationPath.append(cKupTempRestoreFolder);
 			if(mDestination.exists()) {
 				mUI->mFileConflictList->addItem(mDestination.absoluteFilePath());
 			}
@@ -228,7 +229,7 @@ void RestoreDialog::collectSourceListing(KIO::Job *pJob, const KIO::UDSEntryList
 			}
 		} else {
 			if(!it->isLink()) {
-				quint64 lEntrySize = static_cast<quint64>(it->numberValue(KIO::UDSEntry::UDS_SIZE));
+				auto lEntrySize = static_cast<quint64>(it->numberValue(KIO::UDSEntry::UDS_SIZE));
 				mSourceSize += lEntrySize;
 				mFileSizes.insert(mSourceFileName + QDir::separator() + lEntryName, lEntrySize);
 			}
@@ -298,12 +299,11 @@ void RestoreDialog::fileOverwriteConfirmed() {
 			mMessageWidget->setMessageType(KMessageWidget::Error);
 			mMessageWidget->animatedShow();
 			return;
-		} else {
-			mFolderToCreate = QFileInfo(mDestination.absoluteFilePath() + QDir::separator() + mUI->mNewFolderNameEdit->text());
-			mRestorationPath = mFolderToCreate.absoluteFilePath();
-			if(!mSourceInfo.mPathInRepo.endsWith(QDir::separator())) {
-				mSourceInfo.mPathInRepo.append(QDir::separator());
-			}
+		}
+		mFolderToCreate = QFileInfo(mDestination.absoluteFilePath() + QDir::separator() + mUI->mNewFolderNameEdit->text());
+		mRestorationPath = mFolderToCreate.absoluteFilePath();
+		if(!mSourceInfo.mPathInRepo.endsWith(QDir::separator())) {
+			mSourceInfo.mPathInRepo.append(QDir::separator());
 		}
 	}
 	startRestoring();
@@ -317,7 +317,7 @@ void RestoreDialog::startRestoring() {
 	lSourcePath.append(lCommitTime.toString(QStringLiteral("yyyy-MM-dd-hhmmss")));
 	lSourcePath.append(mSourceInfo.mPathInRepo);
 	qCDebug(KUPFILEDIGGER) << "Starting restore. Source path: " << lSourcePath << ", restore path: " << mRestorationPath;
-	RestoreJob *lRestoreJob = new RestoreJob(mSourceInfo.mRepoPath, lSourcePath, mRestorationPath,
+	auto lRestoreJob = new RestoreJob(mSourceInfo.mRepoPath, lSourcePath, mRestorationPath,
 	                                         mDirectoriesCount, mSourceSize, mFileSizes);
 	if(mJobTracker == nullptr) {
 		mJobTracker = new KWidgetJobTracker(this);
@@ -366,7 +366,7 @@ void RestoreDialog::createNewFolder() {
 	bool lUserAccepted;
 	QUrl lUrl = mDirSelector->url();
 	QString lNameSuggestion = xi18nc("default folder name when creating a new folder", "New Folder");
-	if(QFileInfo(lUrl.adjusted(QUrl::StripTrailingSlash).path() + '/' + lNameSuggestion).exists()) {
+	if(QFileInfo::exists(lUrl.adjusted(QUrl::StripTrailingSlash).path() + '/' + lNameSuggestion)) {
 		lNameSuggestion = KIO::suggestName(lUrl, lNameSuggestion);
 	}
 
@@ -407,7 +407,7 @@ void RestoreDialog::openDestinationFolder() {
 }
 
 void RestoreDialog::moveFolder() {
-	if(!mRestorationPath.endsWith(KUP_TMP_RESTORE_FOLDER)) {
+	if(!mRestorationPath.endsWith(cKupTempRestoreFolder)) {
 		mUI->mRestorationStackWidget->setCurrentIndex(2);
 		mUI->mCloseButton->show();
 		qCDebug(KUPFILEDIGGER) << "Overall restore operation completed.";

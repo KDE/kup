@@ -37,8 +37,8 @@ public:
 	QModelIndex parent(const QModelIndex &pChild) const override;
 	int rowCount(const QModelIndex &pParent) const override;
 
-	const VersionList *versionList(const QModelIndex &pIndex);
-	const MergedNode *node(const QModelIndex &pIndex);
+	static const VersionList *versionList(const QModelIndex &pIndex);
+	static const MergedNode *node(const QModelIndex &pIndex);
 
 protected:
 	MergedRepository *mRoot;

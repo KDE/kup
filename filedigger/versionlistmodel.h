@@ -47,7 +47,7 @@ public:
 
 protected:
 	const VersionList *mVersionList;
-	const MergedNode *mNode;
+	const MergedNode *mNode{};
 };
 
 enum VersionDataRole {

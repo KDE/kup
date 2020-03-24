@@ -33,16 +33,17 @@
 #include <QGraphicsOpacityEffect>
 #include <QPropertyAnimation>
 #include <QPushButton>
+#include <QtMath>
+#include <utility>
 
-#define cMargin 4
+static const int cMargin = 4;
 
-Button::Button(QString pText, QWidget *pParent)
-   : QObject() // don't make it owned by pParent
-{
+Button::Button(QString pText, QWidget *pParent) {
+	// intentionally don't make this QObject owned by pParent
 	mStyleOption.initFrom(pParent);
 	mStyleOption.features = QStyleOptionButton::None;
 	mStyleOption.state = QStyle::State_Enabled;
-	mStyleOption.text = pText;
+	mStyleOption.text = std::move(pText);
 
 	const QSize lContentsSize = mStyleOption.fontMetrics.size(Qt::TextSingleLine, mStyleOption.text);
 	mStyleOption.rect = QRect(QPoint(0, 0),
@@ -62,7 +63,7 @@ void Button::paint(QPainter *pPainter, float pOpacity) {
 }
 
 bool Button::event(QEvent *pEvent) {
-	QMouseEvent *lMouseEvent = static_cast<QMouseEvent *>(pEvent);
+	auto lMouseEvent = dynamic_cast<QMouseEvent *>(pEvent);
 	bool lActivated = false;
 	switch(pEvent->type()) {
 	case QEvent::MouseMove:
@@ -107,7 +108,7 @@ bool Button::event(QEvent *pEvent) {
 		}
 		break;
 	case QEvent::KeyPress: {
-		QKeyEvent *lKeyEvent = static_cast<QKeyEvent *>(pEvent);
+		auto lKeyEvent = dynamic_cast<QKeyEvent *>(pEvent);
 		if((mStyleOption.state & QStyle::State_HasFocus)) {
 			if(lKeyEvent->key() == Qt::Key_Left || lKeyEvent->key() == Qt::Key_Right) {
 				mStyleOption.state &= ~QStyle::State_HasFocus;
@@ -137,21 +138,21 @@ VersionItemAnimation::VersionItemAnimation(QWidget *pParent)
 	connect(mOpenButton, SIGNAL(focusChangeRequested(bool)), SLOT(changeFocus(bool)), Qt::QueuedConnection);
 	mRestoreButton = new Button(xi18nc("@action:button", "Restore"), pParent);
 	connect(mRestoreButton, SIGNAL(focusChangeRequested(bool)), SLOT(changeFocus(bool)), Qt::QueuedConnection);
-	QPropertyAnimation *lHeightAnimation = new QPropertyAnimation(this, "extraHeight", this);
+	auto lHeightAnimation = new QPropertyAnimation(this, "extraHeight", this);
 	lHeightAnimation->setStartValue(0.0);
 	lHeightAnimation->setEndValue(1.0);
 	lHeightAnimation->setDuration(300);
 	lHeightAnimation->setEasingCurve(QEasingCurve::InOutBack);
 	addAnimation(lHeightAnimation);
 
-	QPropertyAnimation *lWidgetOpacityAnimation = new QPropertyAnimation(this, "opacity", this);
+	auto lWidgetOpacityAnimation = new QPropertyAnimation(this, "opacity", this);
 	lWidgetOpacityAnimation->setStartValue(0.0);
 	lWidgetOpacityAnimation->setEndValue(1.0);
 	lWidgetOpacityAnimation->setDuration(300);
 	addAnimation(lWidgetOpacityAnimation);
 }
 
-void VersionItemAnimation::setExtraHeight(float pExtraHeight) {
+void VersionItemAnimation::setExtraHeight(qreal pExtraHeight) {
 	mExtraHeight = pExtraHeight;
 	emit sizeChanged(mIndex);
 }
@@ -192,8 +193,7 @@ VersionListDelegate::VersionListDelegate(QAbstractItemView *pItemView, QObject *
 	pItemView->viewport()->setMouseTracking(true);
 }
 
-VersionListDelegate::~VersionListDelegate() {
-}
+VersionListDelegate::~VersionListDelegate()=default;
 
 void VersionListDelegate::paint(QPainter *pPainter, const QStyleOptionViewItem &pOption, const QModelIndex &pIndex) const {
 	QStyle * lStyle = QApplication::style();
@@ -236,11 +236,11 @@ QSize VersionListDelegate::sizeHint(const QStyleOptionViewItem &pOption, const Q
 	VersionItemAnimation *lAnimation = mActiveAnimations.value(pIndex);
 	if(lAnimation != nullptr) {
 		int lButtonHeight = lAnimation->mOpenButton->mStyleOption.rect.height();
-		lExtraHeight = static_cast<int>(lAnimation->extraHeight() * (lButtonHeight + cMargin));
+		lExtraHeight = qCeil(lAnimation->extraHeight() * (lButtonHeight + cMargin));
 		lExtraWidth = lAnimation->mOpenButton->mStyleOption.rect.width() +
 		              lAnimation->mRestoreButton->mStyleOption.rect.width();
 	}
-	return QSize(lExtraWidth, cMargin*2 + pOption.fontMetrics.height() + lExtraHeight);
+	return {lExtraWidth, cMargin*2 + pOption.fontMetrics.height() + lExtraHeight};
 }
 
 bool VersionListDelegate::eventFilter(QObject *pObject, QEvent *pEvent) {
@@ -290,7 +290,7 @@ void VersionListDelegate::reset() {
 }
 
 void VersionListDelegate::reclaimAnimation() {
-	VersionItemAnimation *lAnimation = static_cast<VersionItemAnimation *>(sender());
+	auto lAnimation = qobject_cast<VersionItemAnimation *>(sender());
 	if(lAnimation->direction() == QAbstractAnimation::Backward) {
 		mInactiveAnimations.append(lAnimation);
 		foreach(VersionItemAnimation *lActiveAnimation, mActiveAnimations) {

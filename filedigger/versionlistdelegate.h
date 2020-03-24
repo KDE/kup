@@ -53,21 +53,21 @@ public:
 		delete mOpenButton;
 		delete mRestoreButton;
 	}
-	float extraHeight() {return mExtraHeight;}
+	qreal extraHeight() {return mExtraHeight;}
 	float opacity() {return mOpacity;}
 
 signals:
 	void sizeChanged(const QModelIndex &pIndex);
 
 public slots:
-	void setExtraHeight(float pExtraHeight);
+	void setExtraHeight(qreal pExtraHeight);
 	void setOpacity(float pOpacity) {mOpacity = pOpacity;}
 	void changeFocus(bool pForward);
 	void setFocus(bool pFocused);
 
 public:
 	QPersistentModelIndex mIndex;
-	float mExtraHeight;
+	qreal mExtraHeight;
 	float mOpacity;
 	Button *mOpenButton;
 	Button *mRestoreButton;

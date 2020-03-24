@@ -60,14 +60,14 @@ private:
 
 	KSharedConfigPtr mConfig;
 	KupSettings *mSettings;
-	QWidget *mFrontPage;
+	QWidget *mFrontPage{};
 	QList<BackupPlan *> mPlans;
 	QList<BackupPlanWidget *> mPlanWidgets;
 	QList<PlanStatusWidget *> mStatusWidgets;
 	QList<KConfigDialogManager *> mConfigManagers;
 	QStackedLayout *mStackedLayout;
-	QVBoxLayout *mVerticalLayout;
-	QCheckBox *mEnableCheckBox;
+	QVBoxLayout *mVerticalLayout{};
+	QCheckBox *mEnableCheckBox{};
 	QString mBupVersion;
 	QString mRsyncVersion;
 	bool mPar2Available;

@@ -36,7 +36,7 @@ class FileDigger : public KMainWindow
 {
 	Q_OBJECT
 public:
-	explicit FileDigger(const QString &pRepoPath, const QString &pBranchName, QWidget *pParent = nullptr);
+	explicit FileDigger(QString pRepoPath, QString pBranchName, QWidget *pParent = nullptr);
 
 protected slots:
 	void updateVersionModel(const QModelIndex &pCurrent, const QModelIndex &pPrevious);
@@ -44,17 +44,17 @@ protected slots:
 	void restore(const QModelIndex &pIndex);
 	void repoPathAvailable();
 	void checkFileWidgetPath();
-	void enterUrl(QUrl pUrl);
+	void enterUrl(const QUrl &pUrl);
 
 protected:
 	MergedRepository *createRepo();
 	void createRepoView(MergedRepository *pRepository);
 	void createSelectionView();
-	MergedVfsModel *mMergedVfsModel;
-	QTreeView *mMergedVfsView;
+	MergedVfsModel *mMergedVfsModel{};
+	QTreeView *mMergedVfsView{};
 
-	VersionListModel *mVersionModel;
-	QListView *mVersionView;
+	VersionListModel *mVersionModel{};
+	QListView *mVersionView{};
 	QString mRepoPath;
 	QString mBranchName;
 	KDirOperator *mDirOperator;

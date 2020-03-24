@@ -40,7 +40,8 @@ void BupRepairJob::performJob() {
 		                                         "The <application>bup</application> program is needed but could not be found, "
 		                                         "maybe it is not installed?"));
 		return;
-	} else if(mBackupPlan.mGenerateRecoveryInfo && lExitCode != 0) {
+	}
+	if(mBackupPlan.mGenerateRecoveryInfo && lExitCode != 0) {
 		jobFinishedError(ErrorWithoutLog, xi18nc("@info notification",
 		                                         "The <application>par2</application> program is needed but could not be found, "
 		                                         "maybe it is not installed?"));
