@@ -23,13 +23,15 @@
 #include "vfshelpers.h"
 #include "kupfiledigger_debug.h"
 
-#include <QDebug>
-#include <QDir>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <QDBusInterface>
-#include <utility>
 
+#include <QDBusInterface>
+#include <QDebug>
+#include <QDir>
+#include <QGuiApplication>
+
+#include <utility>
 #include <git2/branch.h>
 #include <sys/stat.h>
 
@@ -99,7 +101,9 @@ MergedNodeList &MergedNode::subNodes() {
 	if(mSubNodes == nullptr) {
 		mSubNodes = new MergedNodeList();
 		if(S_ISDIR(mMode)) {
+			QGuiApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 			generateSubNodes();
+			QGuiApplication::restoreOverrideCursor();
 		}
 	}
 	return *mSubNodes;

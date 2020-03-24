@@ -34,10 +34,12 @@
 #include <KStandardAction>
 #include <KToolBar>
 
+#include <QGuiApplication>
 #include <QLabel>
 #include <QListView>
 #include <QPushButton>
 #include <QSplitter>
+#include <QTimer>
 #include <QTreeView>
 #include <QVBoxLayout>
 #include <utility>
@@ -48,8 +50,7 @@ FileDigger::FileDigger(QString pRepoPath, QString pBranchName, QWidget *pParent)
     setWindowIcon(QIcon::fromTheme(QStringLiteral("kup")));
     KToolBar *lAppToolBar = toolBar();
     lAppToolBar->addAction(KStandardAction::quit(this, SLOT(close()), this));
-
-    repoPathAvailable();
+    QTimer::singleShot(0, this, [this]{repoPathAvailable();});
 }
 
 void FileDigger::updateVersionModel(const QModelIndex &pCurrent, const QModelIndex &pPrevious) {
@@ -75,10 +76,12 @@ void FileDigger::repoPathAvailable() {
 	if(mRepoPath.isEmpty()) {
 		createSelectionView();
 	} else {
+		QGuiApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 		MergedRepository *lRepository = createRepo();
 		if(lRepository != nullptr) {
 			createRepoView(lRepository);
 		}
+		QGuiApplication::restoreOverrideCursor();
 	}
 }
 
