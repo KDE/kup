@@ -801,12 +801,12 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available) {
 	int lIndentation = lAdvancedWidget->style()->pixelMetric(QStyle::PM_IndicatorWidth) +
 	                   lAdvancedWidget->style()->pixelMetric(QStyle::PM_CheckBoxLabelSpacing);
 
+	auto lShowHiddenWidget = new QWidget;
 	auto lShowHiddenCheckBox = new QCheckBox(xi18nc("@option:check",
-	                                                      "Show hidden folders in source selection"));
+	                                                "Show hidden folders in source selection"));
 	lShowHiddenCheckBox->setObjectName(QStringLiteral("kcfg_Show hidden folders"));
 	connect(lShowHiddenCheckBox, SIGNAL(toggled(bool)),
 	        mSourceSelectionWidget, SLOT(setHiddenFoldersVisible(bool)));
-
 	auto lShowHiddenLabel = new QLabel(xi18nc("@info",
 	                                          "This makes it possible to explicitly include or "
 	                                          "exclude hidden folders in the backup source "
@@ -817,8 +817,11 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available) {
 	lShowHiddenLabel->setWordWrap(true);
 	auto lShowHiddenLayout = new QGridLayout;
 	lShowHiddenLayout->setContentsMargins(0, 0, 0, 0);
+	lShowHiddenLayout->setSpacing(0);
 	lShowHiddenLayout->setColumnMinimumWidth(0, lIndentation);
-	lShowHiddenLayout->addWidget(lShowHiddenLabel, 0, 1);
+	lShowHiddenLayout->addWidget(lShowHiddenCheckBox, 0, 0, 1, 2);
+	lShowHiddenLayout->addWidget(lShowHiddenLabel, 1, 1);
+	lShowHiddenWidget->setLayout(lShowHiddenLayout);
 
 	auto lRecoveryWidget = new QWidget;
 	lRecoveryWidget->setVisible(false);
@@ -869,11 +872,11 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available) {
 	lVerificationWidget->setLayout(lVerificationLayout);
 	connect(mVersionedRadio, SIGNAL(toggled(bool)), lVerificationWidget, SLOT(setVisible(bool)));
 
-	lAdvancedLayout->addWidget(lShowHiddenCheckBox);
-	lAdvancedLayout->addLayout(lShowHiddenLayout);
+	lAdvancedLayout->addWidget(lShowHiddenWidget);
 	lAdvancedLayout->addWidget(lVerificationWidget);
 	lAdvancedLayout->addWidget(lRecoveryWidget);
 	lAdvancedLayout->addStretch();
+	lAdvancedLayout->setSpacing(lIndentation);
 	lAdvancedWidget->setLayout(lAdvancedLayout);
 	auto lPage = new KPageWidgetItem(lAdvancedWidget);
 	lPage->setName(xi18nc("@title", "Advanced"));
