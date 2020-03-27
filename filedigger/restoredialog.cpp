@@ -274,7 +274,7 @@ void RestoreDialog::completePrechecks() {
 			QString lDateString = QLocale().toString(QDateTime::fromSecsSinceEpoch(static_cast<qint64>(mSourceInfo.mCommitTime)).toLocalTime());
 			lDateString.replace(QLatin1Char('/'), QLatin1Char('-')); // make sure no slashes in suggested folder name
 			mUI->mNewFolderNameEdit->setText(mSourceFileName +
-			                                 xi18nc("added to the suggested filename when restoring, %1 is the time when backup was taken",
+			                                 xi18nc("added to the suggested filename when restoring, %1 is the time when backup was saved",
 			                                       " - saved at %1", lDateString));
 			mUI->mConflictTitleLabel->setText(xi18nc("@info", "Folder already exists, please choose a solution"));
 		} else {

@@ -532,7 +532,7 @@ KPageWidgetItem *BackupPlanWidget::createTypePage(const QString &pBupVersion, co
 	mSyncedRadio = new QRadioButton;
 	QString lSyncedInfo = xi18nc("@info",
 	                            "This type of backup is a folder which is synchronized with your "
-	                            "selected source folders. Taking a backup simply means making the "
+	                            "selected source folders. Saving a backup simply means making the "
 	                            "backup destination contain an exact copy of your source folders as "
 	                            "they are now and nothing else. If a file has been deleted in a "
 	                            "source folder it will get deleted from the backup folder.<nl/>"
@@ -706,9 +706,9 @@ KPageWidgetItem *BackupPlanWidget::createSchedulePage() {
 	auto lIntervalRadio = new QRadioButton(xi18nc("@option:radio", "Interval"));
 	auto lUsageRadio = new QRadioButton(xi18nc("@option:radio", "Active Usage Time"));
 
-	auto lManualLabel = new QLabel(xi18nc("@info", "Backups are only taken when manually requested. "
-	                                                  "This can be done by using the popup menu from "
-	                                                  "the backup system tray icon."));
+	auto lManualLabel = new QLabel(xi18nc("@info", "Backups are only saved when manually requested. "
+	                                               "This can be done by using the popup menu from "
+	                                               "the backup system tray icon."));
 	lManualLabel->setVisible(false);
 	lManualLabel->setWordWrap(true);
 	connect(lManualRadio, SIGNAL(toggled(bool)), lManualLabel, SLOT(setVisible(bool)));
@@ -723,7 +723,7 @@ KPageWidgetItem *BackupPlanWidget::createSchedulePage() {
 	auto lIntervalLabel = new QLabel(xi18nc("@info", "New backup will be triggered when backup "
 	                                                 "destination becomes available and more than "
 	                                                 "the configured interval has passed since the "
-	                                                 "last backup was taken."));
+	                                                 "last backup was saved."));
 	lIntervalLabel->setWordWrap(true);
 	auto lIntervalVertLayout = new QGridLayout;
 	lIntervalVertLayout->setColumnMinimumWidth(0, lIndentation);
@@ -753,7 +753,7 @@ KPageWidgetItem *BackupPlanWidget::createSchedulePage() {
 	                                     "New backup will be triggered when backup destination "
 	                                     "becomes available and you have been using your "
 	                                     "computer actively for more than the configured "
-	                                     "time limit since the last backup was taken."));
+	                                     "time limit since the last backup was saved."));
 	lUsageLabel->setWordWrap(true);
 	auto lUsageVertLayout = new QGridLayout;
 	lUsageVertLayout->setColumnMinimumWidth(0, lIndentation);
@@ -771,7 +771,7 @@ KPageWidgetItem *BackupPlanWidget::createSchedulePage() {
 	lUsageWidget->setLayout(lUsageVertLayout);
 
 	auto lAskFirstCheckBox = new QCheckBox(xi18nc("@option:check",
-	                                                    "Ask for confirmation before taking backup"));
+	                                                    "Ask for confirmation before saving backup"));
 	lAskFirstCheckBox->setObjectName(QStringLiteral("kcfg_Ask first"));
 	connect(lManualRadio, SIGNAL(toggled(bool)), lAskFirstCheckBox, SLOT(setHidden(bool)));
 
