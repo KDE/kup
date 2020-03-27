@@ -79,6 +79,8 @@ BackupPlan::BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pPare
 	addItemBool(QStringLiteral("Show hidden folders"), mShowHiddenFolders);
 	addItemBool(QStringLiteral("Generate recovery info"), mGenerateRecoveryInfo);
 	addItemBool(QStringLiteral("Check backups"), mCheckBackups);
+	addItemBool(QStringLiteral("Exclude patterns"), mExcludePatterns);
+	addItemString(QStringLiteral("Exclude patterns file path"), mExcludePatternsPath);
 
 	addItemDateTime(QStringLiteral("Last complete backup"), mLastCompleteBackup);
 	addItemDouble(QStringLiteral("Last backup size"), mLastBackupSize);
@@ -190,6 +192,13 @@ QString BackupPlan::iconName(Status pStatus) {
 		break;
 	}
 	return QString();
+}
+
+QString BackupPlan::absoluteExcludesFilePath() {
+	if(QDir::isRelativePath(mExcludePatternsPath)) {
+		return QDir::homePath() + QDir::separator() + mExcludePatternsPath;
+	}
+	return mExcludePatternsPath;
 }
 
 void BackupPlan::usrRead() {

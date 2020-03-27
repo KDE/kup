@@ -47,6 +47,8 @@
 #include <KLocalizedString>
 #include <KMessageWidget>
 #include <KPageWidget>
+#include <KRun>
+#include <KUrlCompletion>
 #include <KUrlRequester>
 #include <utility>
 
@@ -872,9 +874,64 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available) {
 	lVerificationWidget->setLayout(lVerificationLayout);
 	connect(mVersionedRadio, SIGNAL(toggled(bool)), lVerificationWidget, SLOT(setVisible(bool)));
 
+	auto lExcludesWidget = new QWidget;
+	auto lExcludesCheckBox = new QCheckBox(xi18nc("@option:check", "Exclude files and folders based on patterns"));
+	lExcludesCheckBox->setObjectName(QStringLiteral("kcfg_Exclude patterns"));
+
+	auto lExcludesLabel = new QLabel();
+	lExcludesLabel->setWordWrap(true);
+	lExcludesLabel->setTextFormat(Qt::RichText);
+	lExcludesLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
+	connect(lExcludesLabel, &QLabel::linkActivated, this, [this](QString pLink){
+		// call runUrl ourselves instead of QLabel and QDesktopService doing it, just
+		// so that we can give a .html file ending to the temp file. Required for QWebEngine
+		// to understand that the file has html content. Firefox works either way.
+		KRun::runUrl(QUrl(pLink), QStringLiteral("text/html"), this, KRun::RunFlags(), QStringLiteral("manpage.html"));
+	});
+	auto lLabelUpdater = [lExcludesLabel](bool pVersioned){
+		QString lHelpUrl = pVersioned ? QStringLiteral("man:///bup-index") : QStringLiteral("man:///rsync");
+		lExcludesLabel->setText(xi18nc("@label:textbox",
+		                               "Patterns need to be listed in a text file with one pattern per line. "
+		                               "Files and folders with names matching any of the patterns will be "
+		                               "excluded from the backup. The pattern format is documented <a href=\"%1\">here</a>.",
+		                               lHelpUrl));
+	};
+	lLabelUpdater(false);
+	connect(mVersionedRadio, &QCheckBox::toggled, this, lLabelUpdater);
+	auto lExcludesEdit = new KLineEdit;
+	lExcludesEdit->setObjectName(QStringLiteral("kcfg_Exclude patterns file path"));
+	lExcludesEdit->setEnabled(false);
+	lExcludesEdit->setClearButtonEnabled(true);
+	lExcludesEdit->setCompletionObject(new KUrlCompletion);
+	lExcludesEdit->setAutoDeleteCompletionObject(true);
+	auto lExcludesButton = new QPushButton;
+	lExcludesButton->setIcon(QIcon::fromTheme(QStringLiteral("document-open")));
+	int lButtonSize = lExcludesButton->sizeHint().expandedTo(lExcludesEdit->sizeHint()).height();
+	lExcludesButton->setFixedSize(lButtonSize, lButtonSize);
+	lExcludesButton->setEnabled(false);
+	lExcludesButton->setToolTip(xi18nc("@info:tooltip", "Open dialog to select a file"));
+	connect(lExcludesButton, &QPushButton::clicked, this, [this,lExcludesEdit]{
+		QString lNewFilePath = QFileDialog::getOpenFileName(this, i18n("Select pattern file"), lExcludesEdit->text());
+		if(!lNewFilePath.isEmpty()) {
+			lExcludesEdit->setText(lNewFilePath);
+		}
+	});
+	connect(lExcludesCheckBox, &QCheckBox::toggled, lExcludesEdit, &KLineEdit::setEnabled);
+	connect(lExcludesCheckBox, &QCheckBox::toggled, lExcludesButton, &QPushButton::setEnabled);
+	auto lExcludesLayout = new QGridLayout;
+	lExcludesLayout->setContentsMargins(0, 0, 0, 0);
+	lExcludesLayout->setSpacing(0);
+	lExcludesLayout->setColumnMinimumWidth(0, lIndentation);
+	lExcludesLayout->addWidget(lExcludesCheckBox, 0, 0, 1, 3);
+	lExcludesLayout->addWidget(lExcludesLabel, 1, 1, 1, 2);
+	lExcludesLayout->addWidget(lExcludesEdit, 2, 1);
+	lExcludesLayout->addWidget(lExcludesButton, 2, 2);
+	lExcludesWidget->setLayout(lExcludesLayout);
+
 	lAdvancedLayout->addWidget(lShowHiddenWidget);
 	lAdvancedLayout->addWidget(lVerificationWidget);
 	lAdvancedLayout->addWidget(lRecoveryWidget);
+	lAdvancedLayout->addWidget(lExcludesWidget);
 	lAdvancedLayout->addStretch();
 	lAdvancedLayout->setSpacing(lIndentation);
 	lAdvancedWidget->setLayout(lAdvancedLayout);

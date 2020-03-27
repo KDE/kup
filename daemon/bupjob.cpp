@@ -22,6 +22,7 @@
 
 #include <csignal>
 
+#include <QFileInfo>
 #include <QRegularExpression>
 #include <QTextStream>
 #include <QThread>
@@ -126,6 +127,10 @@ void BupJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	foreach(QString lExclude, mBackupPlan.mPathsExcluded) {
 		mIndexProcess << QStringLiteral("--exclude");
 		mIndexProcess << lExclude;
+	}
+	QString lExcludesPath = mBackupPlan.absoluteExcludesFilePath();
+	if(mBackupPlan.mExcludePatterns && QFileInfo::exists(lExcludesPath)) {
+		mIndexProcess << QStringLiteral("--exclude-rx-from") << lExcludesPath;
 	}
 	mIndexProcess << mBackupPlan.mPathsIncluded;
 

@@ -77,7 +77,7 @@ void RsyncJob::performJob() {
 		// There would be a naming conflict in the destination folder, instead use full paths.
 		mRsyncProcess << QStringLiteral("-R");
 		foreach(const QString &lExclude, mBackupPlan.mPathsExcluded) {
-			mRsyncProcess << QStringLiteral("--exclude=") + lExclude;
+			mRsyncProcess << QStringLiteral("--exclude") << lExclude;
 		}
 	} else {
 		// when NOT using -R, need to then strip parent paths from excludes, everything above the
@@ -92,8 +92,12 @@ void RsyncJob::performJob() {
 					break;
 				}
 			}
-			mRsyncProcess << QStringLiteral("--exclude=") + lExclude;
+			mRsyncProcess << QStringLiteral("--exclude") << lExclude;
 		}
+	}
+	QString lExcludesPath = mBackupPlan.absoluteExcludesFilePath();
+	if(mBackupPlan.mExcludePatterns && QFileInfo::exists(lExcludesPath)) {
+		mRsyncProcess << QStringLiteral("--exclude-from") << lExcludesPath;
 	}
 	mRsyncProcess << mBackupPlan.mPathsIncluded;
 	mRsyncProcess << mDestinationPath;

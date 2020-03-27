@@ -62,6 +62,8 @@ public:
 	bool mShowHiddenFolders{};
 	bool mGenerateRecoveryInfo{};
 	bool mCheckBackups{};
+	bool mExcludePatterns{};
+	QString mExcludePatternsPath;
 
 	QDateTime mLastCompleteBackup;
 	// Size of the last backup in bytes.
@@ -77,6 +79,7 @@ public:
 	enum Status {GOOD, MEDIUM, BAD, NO_STATUS};
 	Status backupStatus();
 	static QString iconName(Status pStatus);
+	QString absoluteExcludesFilePath();
 
 protected:
 	void usrRead() override;
