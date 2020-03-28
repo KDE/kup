@@ -49,7 +49,7 @@ RestoreDialog::RestoreDialog(BupSourceInfo pPathInfo, QWidget *parent)
 	mSourceFileName = mSourceInfo.mPathInRepo.section(QDir::separator(), -1);
 
 	qCDebug(KUPFILEDIGGER) << "Starting restore dialog for repo: " << mSourceInfo.mRepoPath
-	          << ", restoring: " << mSourceInfo.mPathInRepo;
+	                       << ", restoring: " << mSourceInfo.mPathInRepo;
 
 	mUI->setupUi(this);
 
@@ -66,6 +66,7 @@ RestoreDialog::RestoreDialog(BupSourceInfo pPathInfo, QWidget *parent)
 	mMessageWidget = new KMessageWidget(this);
 	mMessageWidget->setWordWrap(true);
 	mUI->mTopLevelVLayout->insertWidget(0, mMessageWidget);
+	mMessageWidget->hide();
 	connect(mUI->mDestBackButton, SIGNAL(clicked()), mMessageWidget, SLOT(hide()));
 	connect(mUI->mDestNextButton, SIGNAL(clicked()), SLOT(checkDestinationSelection()));
 	connect(mUI->mDestBackButton, &QPushButton::clicked, this, [this]{mUI->mStackedWidget->setCurrentIndex(0);});
