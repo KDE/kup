@@ -198,10 +198,16 @@ void RestoreDialog::startPrechecks() {
 		}
 		qCDebug(KUPFILEDIGGER) << "Starting source file listing job on: " << mSourceInfo.mBupKioPath;
 		KIO::ListJob *lListJob = KIO::listRecursive(mSourceInfo.mBupKioPath, KIO::HideProgressInfo);
+		auto lJobTracker = new KWidgetJobTracker(this);
+		lJobTracker->registerJob(lListJob);
+		QWidget *lProgressWidget = lJobTracker->widget(lListJob);
+		mUI->mSourceScanLayout->insertWidget(2, lProgressWidget);
+		lProgressWidget->show();
 		connect(lListJob, SIGNAL(entries(KIO::Job*,KIO::UDSEntryList)),
 		        SLOT(collectSourceListing(KIO::Job*,KIO::UDSEntryList)));
 		connect(lListJob, SIGNAL(result(KJob*)), SLOT(sourceListingCompleted(KJob*)));
 		lListJob->start();
+		mUI->mStackedWidget->setCurrentIndex(4);
 	} else {
 		mDirectoriesCount = 0;
 		mSourceSize = mSourceInfo.mSize;
@@ -235,8 +241,7 @@ void RestoreDialog::collectSourceListing(KIO::Job *pJob, const KIO::UDSEntryList
 				mFileSizes.insert(mSourceFileName + QDir::separator() + lEntryName, lEntrySize);
 			}
 			if(!mSavedWorkingDirectory.isEmpty()) {
-				QFileInfo lFileInfo(lEntryName);
-				if(lFileInfo.exists()) {
+				if(QFileInfo::exists(lEntryName)) {
 					mUI->mFileConflictList->addItem(lEntryName);
 				}
 			}
@@ -255,6 +260,7 @@ void RestoreDialog::sourceListingCompleted(KJob *pJob) {
 		                              pJob->errorString()));
 		mMessageWidget->setMessageType(KMessageWidget::Error);
 		mMessageWidget->animatedShow();
+		mUI->mStackedWidget->setCurrentIndex(0);
 	} else {
 		completePrechecks();
 	}
@@ -269,6 +275,7 @@ void RestoreDialog::completePrechecks() {
 		                              "Please choose a different destination or free some space."));
 		mMessageWidget->setMessageType(KMessageWidget::Error);
 		mMessageWidget->animatedShow();
+		mUI->mStackedWidget->setCurrentIndex(0);
 	} else if(mUI->mFileConflictList->count() > 0) {
 		qCDebug(KUPFILEDIGGER) << "Detected file conflicts.";
 		if(mSourceInfo.mIsDirectory) {
@@ -325,7 +332,7 @@ void RestoreDialog::startRestoring() {
 	}
 	mJobTracker->registerJob(lRestoreJob);
 	QWidget *lProgressWidget = mJobTracker->widget(lRestoreJob);
-	mUI->mRestoreProgressLayout->insertWidget(1, lProgressWidget);
+	mUI->mRestoreProgressLayout->insertWidget(2, lProgressWidget);
 	lProgressWidget->show();
 	connect(lRestoreJob, SIGNAL(result(KJob*)), SLOT(restoringCompleted(KJob*)));
 	lRestoreJob->start();
