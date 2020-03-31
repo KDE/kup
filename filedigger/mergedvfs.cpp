@@ -27,7 +27,6 @@
 #include <KMessageBox>
 
 #include <QDBusInterface>
-#include <QDebug>
 #include <QDir>
 #include <QGuiApplication>
 

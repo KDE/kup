@@ -26,7 +26,6 @@
 
 #include <sys/stat.h>
 
-#include <QDebug>
 #include <QMimeDatabase>
 
 git_revwalk *Node::mRevisionWalker = nullptr;

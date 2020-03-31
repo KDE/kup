@@ -27,7 +27,6 @@
 #include <KLocalizedString>
 
 #include <QApplication>
-#include <QDebug>
 #include <QCommandLineOption>
 #include <QCommandLineParser>
 #include <QFile>

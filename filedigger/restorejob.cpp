@@ -21,7 +21,6 @@
 #include "restorejob.h"
 
 #include <QDir>
-#include <QDebug>
 #include <KLocalizedString>
 #include <utility>
 

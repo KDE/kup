@@ -21,7 +21,6 @@
 #include "bupvfs.h"
 
 #include <QCoreApplication>
-#include <QDebug>
 #include <QFile>
 #include <QVarLengthArray>
 
