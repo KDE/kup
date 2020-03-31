@@ -8,13 +8,6 @@ project(kup)
 
 find_package(LibGit2 REQUIRED)
 
-if("${CMAKE_BUILD_TYPE}" STREQUAL "Debug" OR "${CMAKE_BUILD_TYPE}" STREQUAL "DebugFull")
-  message(WARNING "enabling debug output!")
-  add_definitions(-DDEBUG)
-else()
-  add_definitions(-DQT_NO_DEBUG_OUTPUT)
-endif()
-
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 include(KDEInstallDirs)
