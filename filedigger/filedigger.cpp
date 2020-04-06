@@ -53,6 +53,10 @@ FileDigger::FileDigger(QString pRepoPath, QString pBranchName, QWidget *pParent)
     QTimer::singleShot(0, this, [this]{repoPathAvailable();});
 }
 
+QSize FileDigger::sizeHint() const {
+    return QSize(800, 600);
+}
+
 void FileDigger::updateVersionModel(const QModelIndex &pCurrent, const QModelIndex &pPrevious) {
 	Q_UNUSED(pPrevious)
 	mVersionModel->setNode(MergedVfsModel::node(pCurrent));

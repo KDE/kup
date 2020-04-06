@@ -37,6 +37,7 @@ class FileDigger : public KMainWindow
 	Q_OBJECT
 public:
 	explicit FileDigger(QString pRepoPath, QString pBranchName, QWidget *pParent = nullptr);
+	QSize sizeHint() const override;
 
 protected slots:
 	void updateVersionModel(const QModelIndex &pCurrent, const QModelIndex &pPrevious);
