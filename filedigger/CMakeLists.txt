@@ -37,7 +37,7 @@ KF5::I18n
 KF5::IconThemes
 KF5::JobWidgets
 KF5::WidgetsAddons
-git2
+LibGit2::LibGit2
 )
 
 ########### install files ###############

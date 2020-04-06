@@ -17,7 +17,7 @@ target_link_libraries(kio_bup
 Qt5::Core
 KF5::KIOCore
 KF5::I18n
-git2
+LibGit2::LibGit2
 )
 
 install(TARGETS kio_bup DESTINATION ${PLUGIN_INSTALL_DIR})
