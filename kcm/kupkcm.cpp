@@ -226,6 +226,7 @@ void KupKcm::createSettingsFrontPage() {
 	                                              xi18nc("@action:button", "Add New Plan"));
 	connect(lAddPlanButton, &QPushButton::clicked, this, [this]{
 		mPlans.append(new BackupPlan(mPlans.count() + 1, mConfig, this));
+		if(mBupVersion.isEmpty()) mPlans.last()->mBackupType = 1;
 		mConfigManagers.append(nullptr);
 		mPlanWidgets.append(nullptr);
 		mStatusWidgets.append(nullptr);
