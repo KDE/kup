@@ -7,8 +7,8 @@
 #include "vfshelpers.h"
 
 #include <KIO/Global>
-#include <KIconLoader>
 
+#include <QIcon>
 #include <QMimeDatabase>
 #include <QMimeType>
 #include <QPixmap>
@@ -41,7 +41,7 @@ QVariant MergedVfsModel::data(const QModelIndex &pIndex, int pRole) const {
 			QMimeDatabase db;
 			lIconName = db.mimeTypeForName(QStringLiteral("inode/directory")).iconName();
 		}
-		return KIconLoader::global()->loadMimeTypeIcon(lIconName, KIconLoader::Small);
+		return QIcon::fromTheme(lIconName);
 	}
 	default:
 		return QVariant();

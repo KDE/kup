@@ -29,7 +29,6 @@ IdleTime
 I18n
 Notifications
 CoreAddons
-IconThemes
 DBusAddons
 Config
 Init # needed for the kdeinit cmake macro
