@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2020 Simon Persson <simon.persson@mykolab.com>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
 
 include_directories("../settings")
 include_directories("../daemon")

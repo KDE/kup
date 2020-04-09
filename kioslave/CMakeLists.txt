@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2020 Simon Persson <simon.persson@mykolab.com>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
 
 set(bupslave_SRCS
 bupslave.cpp

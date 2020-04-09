@@ -1,28 +1,11 @@
-/* This file is part of the KDE Project
-   Copyright (c) 2008 Sebastian Trueg <trueg@kde.org>
-
-   Based on CollectionSetup.h from the Amarok project
-   (C) 2003 Scott Wheeler <wheeler@kde.org>
-   (C) 2004 Max Howell <max.howell@methylblue.com>
-   (C) 2004 Mark Kretschmann <markey@web.de>
-   (C) 2008 Seb Ruiz <ruiz@kde.org>
-   (C) 2008-2009 Sebastian Trueg <trueg@kde.org>
-   (C) 2012-2019 Simon Persson <simon.persson@mykolab.com>
-
-   This library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Library General Public
-   License version 2 as published by the Free Software Foundation.
-
-   This library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Library General Public License for more details.
-
-   You should have received a copy of the GNU Library General Public License
-   along with this library; see the file COPYING.LIB.  If not, write to
-   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-   Boston, MA 02110-1301, USA.
-*/
+// SPDX-FileCopyrightText: 2003 Scott Wheeler <wheeler@kde.org>
+// SPDX-FileCopyrightText: 2004 Max Howell <max.howell@methylblue.com>
+// SPDX-FileCopyrightText: 2004 Mark Kretschmann <markey@web.de>
+// SPDX-FileCopyrightText: 2008 Seb Ruiz <ruiz@kde.org>
+// SPDX-FileCopyrightText: 2008 Sebastian Trueg <trueg@kde.org>
+// SPDX-FileCopyrightText: 2020 Simon Persson <simon.persson@mykolab.com>
+//
+// SPDX-License-Identifier: GPL-2.0-only
 
 #ifndef FOLDER_SELECTION_MODEL_H
 #define FOLDER_SELECTION_MODEL_H

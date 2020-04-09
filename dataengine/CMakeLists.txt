@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2020 Simon Persson <simon.persson@mykolab.com>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 #this is a library so it needs to enforce it's translation domain, not use the application's domain.
 add_definitions(-DTRANSLATION_DOMAIN="kup")
 include_directories("../daemon")
