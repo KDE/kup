@@ -16,6 +16,7 @@ Icon=folder-important
 Description=A kioslave for bup backup repositories
 Description[ca]=Un esclau «kio» per als repositoris de còpia de seguretat de «bup»
 Description[ca@valencia]=Un esclau «kio» per als repositoris de còpia de seguretat de «bup»
+Description[en_GB]=A kioslave for bup backup repositories
 Description[es]=Un «kioslave» para los repositorios de copia de seguridad de bup
 Description[et]=bup varukoopiahoidlate KIO-moodul
 Description[nl]=Een kioslave voor bup back-up-opslagruimten
