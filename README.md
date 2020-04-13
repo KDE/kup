@@ -43,7 +43,6 @@ To compile you need:
   - solid
   - kidletime
   - knotifications
-  - kiconthemes
   - kconfig
   - kinit
   - kjobwidgets
