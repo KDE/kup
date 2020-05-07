@@ -16,6 +16,7 @@
   <name xml:lang="it">Kup</name>
   <name xml:lang="nl">Kup</name>
   <name xml:lang="pt">Kup</name>
+  <name xml:lang="pt-BR">Kup</name>
   <name xml:lang="sk">Kup</name>
   <name xml:lang="sv">Kup</name>
   <name xml:lang="uk">Kup</name>
@@ -31,6 +32,7 @@
   <summary xml:lang="it">Pianificatore di copie di sicurezza per il desktop Plasma di KDE</summary>
   <summary xml:lang="nl">Planner van back-ups voor Plasma bureaublad van KDE</summary>
   <summary xml:lang="pt">Agendamento de cópias de segurança para a área de trabalho do Plasma</summary>
+  <summary xml:lang="pt-BR">Agendador de backups para a área de trabalho Plasma da KDE</summary>
   <summary xml:lang="sv">Schemaläggning av säkerhetskopiering för KDE:s Plasma-skrivbord</summary>
   <summary xml:lang="uk">Засіб планування резервного копіювання для стільниці Плазми KDE</summary>
   <summary xml:lang="x-test">xxBackup scheduler for KDE's Plasma desktopxx</summary>
@@ -46,6 +48,7 @@
     <p xml:lang="it">Kup può aiutarti a ricordare di mantenere aggiornate le copie di sicurezza dei tuoi file personali. Fornisce:</p>
     <p xml:lang="nl">Kup kan u helpen te herinneren om up-to-date back-ups van uw persoonlijke bestanden te maken. Het biedt:</p>
     <p xml:lang="pt">O Kup pode ajudá-lo a recordar-se das cópias de segurança actualizadas dos seus ficheiros pessoais. Oferece:</p>
+    <p xml:lang="pt-BR">O Kup pode ajudá-lo a lembrar de manter backups atualizados de seus arquivos pessoais. Ele fornece:</p>
     <p xml:lang="sv">Kup kan hjälpa till att komma ihåg att ha aktuella säkerhetskopior av personliga filer. Det tillhandahåller:</p>
     <p xml:lang="uk">Kup може допомогти вам у підтриманні актуальності резервних копій ваших особистих файлів. Програма має такі можливості:</p>
     <p xml:lang="x-test">xxKup can help you remember to keep up-to-date backups of your personal files. It provides:xx</p>
@@ -137,6 +140,7 @@
   <developer_name xml:lang="it">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="nl">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="pt">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+  <developer_name xml:lang="pt-BR">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="sv">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="uk">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="x-test">xxSimon Persson &lt;simon.persson@mykolab.com&gt;xx</developer_name>
