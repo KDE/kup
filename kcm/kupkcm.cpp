@@ -99,8 +99,7 @@ KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
 }
 
 QSize KupKcm::sizeHint() const {
-	int lBaseWidth = fontMetrics().horizontalAdvance('M');
-	return {lBaseWidth * 65, lBaseWidth * 35};
+	return {800, 600};
 }
 
 void KupKcm::load() {
