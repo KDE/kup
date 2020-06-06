@@ -22,7 +22,8 @@ public:
 	enum ErrorCodes {
 		ErrorWithLog = UserDefinedError,
 		ErrorWithoutLog,
-		ErrorSuggestRepair
+		ErrorSuggestRepair,
+		ErrorSourcesConfig
 	};
 
 	void start() override;

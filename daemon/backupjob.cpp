@@ -13,6 +13,7 @@
 #include <sys/syscall.h>
 #endif
 
+#include <KLocalizedString>
 #include <QTimer>
 #include <utility>
 
@@ -26,6 +27,22 @@ BackupJob::BackupJob(BackupPlan &pBackupPlan, QString pDestinationPath, QString 
 
 void BackupJob::start() {
 	mKupDaemon->registerJob(this);
+	QStringList lRemovedPaths;
+	for(const QString &lPath: mBackupPlan.mPathsIncluded) {
+		if(!QFile::exists(lPath)) {
+			lRemovedPaths << lPath;
+		}
+	}
+	if(!lRemovedPaths.isEmpty()) {
+		jobFinishedError(ErrorSourcesConfig,
+		                 xi18ncp("@info notification",
+		                         "One source folder no longer exists. Please open settings and confirm what to include in backup.<nl/>"
+		                         "<filename>%2</filename>",
+		                         "%1 source folders no longer exist. Please open settings and confirm what to include in backup.<nl/>"
+		                         "<filename>%2</filename>",
+		                         lRemovedPaths.length(), lRemovedPaths.join(QChar('\n'))));
+		return;
+	}
 	QTimer::singleShot(0, this, &BackupJob::performJob);
 }
 

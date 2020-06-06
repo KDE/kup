@@ -172,6 +172,13 @@ void PlanExecutor::notifyBackupFailed(KJob *pFailedJob) {
 		lAnswers << xi18nc("@action:button", "Yes");
 		lAnswers << xi18nc("@action:button", "No");
 		connect(mFailNotification, SIGNAL(action1Activated()), SLOT(startRepairJob()));
+	} else if(pFailedJob->error() == BackupJob::ErrorSourcesConfig) {
+		lAnswers << xi18nc("@action:button", "Open settings");
+		connect(mFailNotification, &KNotification::action1Activated, this, [this] {
+			QProcess::startDetached(QStringLiteral("kcmshell5"), {QStringLiteral("--args"),
+			                                                      QStringLiteral("show_sources %1").arg(mPlan->planNumber()),
+			                                                      QStringLiteral("kcm_kup")});
+		});
 	}
 	mFailNotification->setActions(lAnswers);
 
