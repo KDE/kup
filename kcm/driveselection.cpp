@@ -29,9 +29,6 @@ bool deviceLessThan(const Solid::Device &a, const Solid::Device &b) {
 DriveSelection::DriveSelection(BackupPlan *pBackupPlan, QWidget *parent)
    : QListView(parent), mBackupPlan(pBackupPlan), mSelectedAndAccessible(false), mSyncedBackupType(false)
 {
-	KConfigDialogManager::changedMap()->insert(QStringLiteral("DriveSelection"),
-	                                           SIGNAL(selectedDriveChanged(QString)));
-
 	mDrivesModel = new QStandardItemModel(this);
 	setModel(mDrivesModel);
 	setItemDelegate(new DriveSelectionDelegate(this));
