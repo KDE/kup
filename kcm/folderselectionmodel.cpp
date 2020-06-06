@@ -165,11 +165,12 @@ void FolderSelectionModel::excludePath(const QString& pPath) {
 }
 
 void FolderSelectionModel::setIncludedPaths(const QSet<QString> &pIncludedPaths) {
-	beginResetModel();
 	QSet<QString> lRemoved = mIncludedPaths - pIncludedPaths;
 	QSet<QString> lAdded = pIncludedPaths - mIncludedPaths;
-	mIncludedPaths = pIncludedPaths;
+	if(lRemoved.count() + lAdded.count() == 0) return;
 
+	beginResetModel();
+	mIncludedPaths = pIncludedPaths;
 	foreach(const QString &lRemovedPath, lRemoved) {
 		emit includedPathRemoved(lRemovedPath);
 	}
@@ -180,11 +181,12 @@ void FolderSelectionModel::setIncludedPaths(const QSet<QString> &pIncludedPaths)
 }
 
 void FolderSelectionModel::setExcludedPaths(const QSet<QString> &pExcludedPaths) {
-	beginResetModel();
 	QSet<QString> lRemoved = mExcludedPaths - pExcludedPaths;
 	QSet<QString> lAdded = pExcludedPaths - mExcludedPaths;
-	mExcludedPaths = pExcludedPaths;
+	if(lRemoved.count() + lAdded.count() == 0)return;
 
+	beginResetModel();
+	mExcludedPaths = pExcludedPaths;
 	foreach(const QString &lRemovedPath, lRemoved) {
 		emit excludedPathRemoved(lRemovedPath);
 	}
