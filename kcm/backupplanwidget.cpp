@@ -269,8 +269,12 @@ FolderSelectionWidget::FolderSelectionWidget(FolderSelectionModel *pModel, QWidg
 	mTreeView->setAnimated(true);
 	mTreeView->setModel(mModel);
 	mTreeView->setHeaderHidden(true);
-	// always expand the root, prevents problem with empty include&exclude lists.
-	mTreeView->expand(mModel->index(QStringLiteral("/")));
+	// always expand the home folder, prevents problem with empty include&exclude lists.
+	QModelIndex lIndex = mModel->index(QDir::homePath());
+	while(lIndex.isValid()) {
+		mTreeView->expand(lIndex);
+		lIndex = lIndex.parent();
+	}
 
 	auto lIncludeDummy = new ConfigIncludeDummy(mModel, this);
 	lIncludeDummy->setObjectName(QStringLiteral("kcfg_Paths included"));
