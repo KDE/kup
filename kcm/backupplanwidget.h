@@ -135,14 +135,17 @@ public:
 	                 const QString &pRsyncVersion, bool pPar2Available);
 
 	void saveExtraData();
+	void showSourcePage();
+	KLineEdit *mDescriptionEdit;
 
+protected:
 	KPageWidgetItem *createTypePage(const QString &pBupVersion, const QString &pRsyncVersion);
 	KPageWidgetItem *createSourcePage();
 	KPageWidgetItem *createDestinationPage();
 	KPageWidgetItem *createSchedulePage();
 	KPageWidgetItem *createAdvancedPage(bool pPar2Available);
 
-	KLineEdit *mDescriptionEdit;
+
 	QPushButton *mConfigureButton;
 	KPageWidget *mConfigPages;
 	BackupPlan *mBackupPlan;
@@ -151,6 +154,7 @@ public:
 	QRadioButton *mVersionedRadio{};
 	QRadioButton *mSyncedRadio{};
 	FolderSelectionWidget *mSourceSelectionWidget{};
+	KPageWidgetItem *mSourcePage;
 
 protected slots:
 	void openDriveDestDialog();

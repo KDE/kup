@@ -28,7 +28,7 @@
 K_PLUGIN_FACTORY(KupKcmFactory, registerPlugin<KupKcm>();)
 
 KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
-    : KCModule(pParent, pArgs)
+    : KCModule(pParent, pArgs), mSourcePageToShow(0)
 {
 	KAboutData lAbout(QStringLiteral("kcm_kup"), i18n("Kup Configuration Module"),
 	                  QStringLiteral("0.8.0"),
@@ -95,6 +95,16 @@ KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
 		mStackedLayout = new QStackedLayout;
 		mStackedLayout->addWidget(mFrontPage);
 		setLayout(mStackedLayout);
+		QListIterator<QVariant> lIter(pArgs);
+		while(lIter.hasNext()) {
+			QVariant lVariant = lIter.next();
+			if(lVariant.type() == QVariant::String) {
+				QString lArgument = lVariant.toString();
+				if(lArgument == QStringLiteral("show_sources") && lIter.hasNext()) {
+					mSourcePageToShow = lIter.next().toString().toInt();
+				}
+			}
+		}
 	}
 }
 
@@ -122,6 +132,11 @@ void KupKcm::load() {
 	// because user pressed reset button. need to manually reset the "changed" state to false
 	// in this case.
 	unmanagedWidgetChangeState(false);
+	if(mSourcePageToShow > 0) {
+		mStackedLayout->setCurrentIndex(mSourcePageToShow);
+		mPlanWidgets[mSourcePageToShow - 1]->showSourcePage();
+		mSourcePageToShow = 0; //only trigger on first load after startup.
+	}
 }
 
 void KupKcm::save() {

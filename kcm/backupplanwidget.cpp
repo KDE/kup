@@ -462,7 +462,8 @@ BackupPlanWidget::BackupPlanWidget(BackupPlan *pBackupPlan, const QString &pBupV
 
 	mConfigPages = new KPageWidget;
 	mConfigPages->addPage(createTypePage(pBupVersion, pRsyncVersion));
-	mConfigPages->addPage(createSourcePage());
+	mSourcePage = createSourcePage();
+	mConfigPages->addPage(mSourcePage);
 	mConfigPages->addPage(createDestinationPage());
 	mConfigPages->addPage(createSchedulePage());
 	mConfigPages->addPage(createAdvancedPage(pPar2Available));
@@ -482,6 +483,10 @@ BackupPlanWidget::BackupPlanWidget(BackupPlan *pBackupPlan, const QString &pBupV
 
 void BackupPlanWidget::saveExtraData() {
 	mDriveSelection->saveExtraData();
+}
+
+void BackupPlanWidget::showSourcePage() {
+	mConfigPages->setCurrentPage(mSourcePage);
 }
 
 KPageWidgetItem *BackupPlanWidget::createTypePage(const QString &pBupVersion, const QString &pRsyncVersion) {

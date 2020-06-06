@@ -55,6 +55,7 @@ private:
 	QString mBupVersion;
 	QString mRsyncVersion;
 	bool mPar2Available;
+	int mSourcePageToShow;
 };
 
 #endif // KUPKCM_H
