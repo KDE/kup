@@ -879,10 +879,10 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available) {
 	});
 	auto lLabelUpdater = [lExcludesLabel](bool pVersioned){
 		QString lHelpUrl = pVersioned ? QStringLiteral("man:///bup-index") : QStringLiteral("man:///rsync");
-		lExcludesLabel->setText(xi18nc("@label:textbox",
+		lExcludesLabel->setText(xi18nc("@info",
 		                               "Patterns need to be listed in a text file with one pattern per line. "
-		                               "Files and folders with names matching any of the patterns will be "
-		                               "excluded from the backup. The pattern format is documented <a href=\"%1\">here</a>.",
+		                               "Files and folders with names that match any of the patterns will be "
+		                               "excluded from the backup. The pattern format is documented <link url='%1'>here</link>.",
 		                               lHelpUrl));
 	};
 	lLabelUpdater(false);
