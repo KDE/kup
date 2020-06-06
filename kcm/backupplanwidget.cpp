@@ -201,8 +201,6 @@ ConfigIncludeDummy::ConfigIncludeDummy(FolderSelectionModel *pModel, FolderSelec
 {
 	connect(mModel, &FolderSelectionModel::includedPathAdded, this, &ConfigIncludeDummy::includeListChanged);
 	connect(mModel, &FolderSelectionModel::includedPathRemoved, this, &ConfigIncludeDummy::includeListChanged);
-	KConfigDialogManager::changedMap()->insert(QStringLiteral("ConfigIncludeDummy"),
-	                                           SIGNAL(includeListChanged()));
 }
 
 QStringList ConfigIncludeDummy::includeList() {
@@ -226,8 +224,6 @@ ConfigExcludeDummy::ConfigExcludeDummy(FolderSelectionModel *pModel, FolderSelec
 {
 	connect(mModel, &FolderSelectionModel::excludedPathAdded, this, &ConfigExcludeDummy::excludeListChanged);
 	connect(mModel, &FolderSelectionModel::excludedPathRemoved, this, &ConfigExcludeDummy::excludeListChanged);
-	KConfigDialogManager::changedMap()->insert(QStringLiteral("ConfigExcludeDummy"),
-	                                           SIGNAL(excludeListChanged()));
 }
 
 QStringList ConfigExcludeDummy::excludeList() {

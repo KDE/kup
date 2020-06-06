@@ -96,7 +96,7 @@ class ConfigIncludeDummy : public QWidget {
 signals:
 	void includeListChanged();
 public:
-	Q_PROPERTY(QStringList includeList READ includeList WRITE setIncludeList USER true)
+	Q_PROPERTY(QStringList includeList READ includeList WRITE setIncludeList NOTIFY includeListChanged USER true)
 	ConfigIncludeDummy(FolderSelectionModel *pModel, FolderSelectionWidget *pParent);
 	QStringList includeList();
 	void setIncludeList(QStringList pIncludeList);
@@ -109,7 +109,7 @@ class ConfigExcludeDummy : public QWidget {
 signals:
 	void excludeListChanged();
 public:
-	Q_PROPERTY(QStringList excludeList READ excludeList WRITE setExcludeList USER true)
+	Q_PROPERTY(QStringList excludeList READ excludeList WRITE setExcludeList NOTIFY excludeListChanged USER true)
 	ConfigExcludeDummy(FolderSelectionModel *pModel, FolderSelectionWidget *pParent);
 	QStringList excludeList();
 	void setExcludeList(QStringList pExcludeList);
