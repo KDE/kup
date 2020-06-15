@@ -172,4 +172,7 @@
   <developer_name xml:lang="uk">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="x-test">xxSimon Persson &lt;simon.persson@mykolab.com&gt;xx</developer_name>
   <developer_name xml:lang="zh-TW">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+  <releases>
+    <release version="0.8" date="2020-06-02"/>
+  </releases>
 </component>
