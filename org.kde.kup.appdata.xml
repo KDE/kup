@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component type="addon">
   <id>org.kde.kup</id>
+  <extends>org.kde.systemsettings</extends>
   <extends>org.kde.plasmashell</extends>
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-2.0+</project_license>
@@ -172,6 +173,10 @@
   <developer_name xml:lang="uk">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="x-test">xxSimon Persson &lt;simon.persson@mykolab.com&gt;xx</developer_name>
   <developer_name xml:lang="zh-TW">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+  <project_group>KDE</project_group>
+  <categories>
+    <category>System</category>
+  </categories>
   <releases>
     <release version="0.8" date="2020-06-02"/>
   </releases>
