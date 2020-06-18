@@ -27,4 +27,5 @@ Description[pt]=Um 'kioslave' para os repositórios de cópias de segurança do 
 Description[sl]=Kioslave za skladišča varnostnih kopij programa bup
 Description[sv]=En I/O-slav för bup säkerhetskopieringsarkiv
 Description[uk]=Допоміжний засіб введення-виведення для сховищ резервних копій bup
+Description[x-test]=xxA kioslave for bup backup repositoriesxx
 Class=:local
