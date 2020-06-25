@@ -24,6 +24,7 @@ Description[fr]=Un module d'entrées / sorties pour vos dépôts de sauvegarde 
 Description[it]=Un kioslave per i depositi delle copie di sicurezza di bup
 Description[nl]=Een kioslave voor bup back-up-opslagruimten
 Description[pt]=Um 'kioslave' para os repositórios de cópias de segurança do 'bup'
+Description[pt_BR]=Um kioslave para os repositórios de backups do bup
 Description[sl]=Kioslave za skladišča varnostnih kopij programa bup
 Description[sv]=En I/O-slav för bup säkerhetskopieringsarkiv
 Description[uk]=Допоміжний засіб введення-виведення для сховищ резервних копій bup
