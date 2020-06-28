@@ -13,6 +13,7 @@
   <name xml:lang="es">Kup</name>
   <name xml:lang="et">Kup</name>
   <name xml:lang="eu">Kup</name>
+  <name xml:lang="fi">Kup</name>
   <name xml:lang="fr">Kup</name>
   <name xml:lang="id">Kup</name>
   <name xml:lang="it">Kup</name>
@@ -33,6 +34,7 @@
   <summary xml:lang="es">Organizador de copias de seguridad para el escritorio KDE Plasma</summary>
   <summary xml:lang="et">KDE Plasma töölaua varukoopiate tegemise ajakava</summary>
   <summary xml:lang="eu">Babes-kopia antolatzailea KDEko Plasma mahaigainerako</summary>
+  <summary xml:lang="fi">Varmuuskopioajastin KDE:n Plasma-työpöydälle</summary>
   <summary xml:lang="fr">Planificateur de sauvegarde pour le bureau Plasma de KDE</summary>
   <summary xml:lang="id">Penjadwalan cadangan untuk desktop Plasma KDE</summary>
   <summary xml:lang="it">Pianificatore di copie di sicurezza per il desktop Plasma di KDE</summary>
@@ -52,6 +54,7 @@
     <p xml:lang="es">Kup puede ayudarle a mantener copias de seguridad actualizadas de sus archivos personales. Proporciona:</p>
     <p xml:lang="et">Kup aitab sul meeles pidada vajadust varundada aegsasti oma isiklikke faile. See võimaldab:</p>
     <p xml:lang="eu">Kup-ek zure fitxategi propioen babes-kopiak egunean mantentzea gogoratzen lagunduko dizu. Hau ematen du:</p>
+    <p xml:lang="fi">Kup auttaa varmuuskopioimaan henkilökohtaiset tiedostot säännöllisesti. Se tarjoaa:</p>
     <p xml:lang="fr">Kup peut vous aider à vous conserver vos sauvegardes à jour pour vos fichiers personnels. Il propose :</p>
     <p xml:lang="id">Kup bisa membantu kamu mengingatkan agar pencadangan tetap terbarukan pada file-file personalmu. Ini menyediakan:</p>
     <p xml:lang="it">Kup può aiutarti a ricordare di mantenere aggiornate le copie di sicurezza dei tuoi file personali. Fornisce:</p>
@@ -70,6 +73,7 @@
       <li xml:lang="es">Copias de seguridad incrementales usando «bup».</li>
       <li xml:lang="et">Inkrementvarundamist "bup" abil.</li>
       <li xml:lang="eu">Babes-kopia artxibo inkrementalak «bup» erabiliz.</li>
+      <li xml:lang="fi">Inkrementaalisen varmuuskopioarkiston bup-ohjelman avulla.</li>
       <li xml:lang="fr">Une archive incrémentale de sauvegarde avec l'utilisation de « bup ».</li>
       <li xml:lang="id">Arsip cadangan tambahan dengan penggunaan "bup".</li>
       <li xml:lang="it">Archivi di copie di sicurezza incrementali mediante l'uso di «bup».</li>
@@ -88,6 +92,7 @@
       <li xml:lang="es">Carpetas sincronizadas usando «rsync»</li>
       <li xml:lang="et">Kataloogide sünkroonimist "rsync" abil.</li>
       <li xml:lang="eu">Karpeta sinkronizatuak «rsync» erabiliz.</li>
+      <li xml:lang="fi">Synkronoidut kansiot rsync-ohjelman avulla.</li>
       <li xml:lang="fr">Dossiers synchronisés avec l'utilisation de « rsync ».</li>
       <li xml:lang="id">Folder-folder yang tersinkronisasikan dengan penggunaan "rsync".</li>
       <li xml:lang="it">Cartelle sincronizzate mediante l'uso di «rsync».</li>
@@ -106,6 +111,7 @@
       <li xml:lang="es">Soporte para sistema de archivos local o almacenaje USB externo.</li>
       <li xml:lang="et">Salvestamist kohalikku failisüsteemi või välisele USB-pulgale.</li>
       <li xml:lang="eu">Fitxategi-sistema lokaleko edo kanpoko USBko biltegiratze euskarria.</li>
+      <li xml:lang="fi">Paikallisten tiedostojärjestelmien ja ulkoisten USB-tallennusvälineiden tuen.</li>
       <li xml:lang="fr">La prise en charge du système local de fichiers ou sur un stockage USB externe.</li>
       <li xml:lang="id">Dukungan untuk filesystem lokal atau penyimpanan usb eksternal.</li>
       <li xml:lang="it">Supporto per file i filesystem locali oppure per le memorie usb esterne.</li>
@@ -123,6 +129,7 @@
       <li xml:lang="es">Monitorización de disponibilidad de destinos para las copias de seguridad, como por ejemplo almacenamiento de red.</li>
       <li xml:lang="et">Varundamise sihtkohtade saadavuse jälgimist, mis on oluline näiteks ühendamist vajava võrgusalvesti puhul.</li>
       <li xml:lang="eu">Gainbegiratu babes-kopia jomugen eskuragarritasuna, muntatutako sareko biltegiratze bat esaterako.</li>
+      <li xml:lang="fi">Varmuuskopioinnin kohteiden kuten verkkojakojen saavutettavuuden valvonnan.</li>
       <li xml:lang="fr">Surveillance de la disponibilité des destinations de sauvegarde, comme par exemple, un stockage monté en réseau.</li>
       <li xml:lang="id">Memantau ketersediaan tujuan cadangan, seperti misalnya tempat penyimpanan jaringan yang terkaitkan.</li>
       <li xml:lang="it">Controllo della disponibilità delle destinazioni della copia di sicurezza, ad esempio delle unità di memorizzazione di rete montate.</li>
@@ -140,6 +147,7 @@
       <li xml:lang="es">Integración con el escritorio KDE Plasma.</li>
       <li xml:lang="et">Lõimimist KDE Plasma töölauga.</li>
       <li xml:lang="eu">KDEren Plasma mahaigainean bateratzea.</li>
+      <li xml:lang="fi">Integroinnin KDE:n Plasma-työpöydälle.</li>
       <li xml:lang="fr">Intégration avec le bureau Plasma de KDE.</li>
       <li xml:lang="id">Integrasi ke dalam desktop Plasma KDE.</li>
       <li xml:lang="it">Integrazione col desktop Plasma di KDE.</li>
@@ -167,6 +175,7 @@
   <developer_name xml:lang="es">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="et">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="eu">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+  <developer_name xml:lang="fi">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="fr">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="id">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="it">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
