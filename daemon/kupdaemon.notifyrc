@@ -1,6 +1,6 @@
 [Global]
 IconName=kup
-Name=Kup
+Name=Kup Backup System
 Name[ca]=Kup
 Name[ca@valencia]=Kup
 Name[cs]=Proces služby Kup
@@ -44,7 +44,7 @@ Comment[zh_TW]=Kup 備份系統
 
 
 [Event/StartBackup]
-Name=Start taking backup
+Name=Start Taking Backup
 Name[ca]=Comença a fer la còpia de seguretat
 Name[ca@valencia]=Comença a fer la còpia de seguretat
 Name[en_GB]=Start taking backup
@@ -83,7 +83,7 @@ Action=Popup
 Urgency=Normal
 
 [Event/BackupSucceeded]
-Name=Backup succeeded
+Name=Backup Succeeded
 Name[ca]=La còpia de seguretat ha tingut èxit
 Name[ca@valencia]=La còpia de seguretat ha tingut èxit
 Name[de]=Sicherung erfolgreich
@@ -125,7 +125,7 @@ Action=Popup
 Urgency=Normal
 
 [Event/BackupFailed]
-Name=Backup failed
+Name=Backup Failed
 Name[ca]=Ha fallat la còpia de seguretat
 Name[ca@valencia]=Ha fallat la còpia de seguretat
 Name[de]=Sicherung fehlgeschlagen
@@ -166,7 +166,7 @@ Action=Popup
 Urgency=Normal
 
 [Event/IntegrityCheckCompleted]
-Name=Integrity check completed
+Name=Integrity Check Completed
 Name[ca]=S'ha completat el control de la integritat
 Name[ca@valencia]=S'ha completat el control de la integritat
 Name[de]=Integritätsprüfung abgeschlossen
@@ -207,7 +207,7 @@ Action=Popup
 Urgency=Normal
 
 [Event/RepairCompleted]
-Name=Repair completed
+Name=Repair Completed
 Name[ca]=Reparació finalitzada
 Name[ca@valencia]=Reparació finalitzada
 Name[cs]=Oprava dokončena
