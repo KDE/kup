@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 ecm_install_icons(ICONS
-    sc-apps-kup.svgz
+    sc-apps-kup.svg
     DESTINATION ${ICON_INSTALL_DIR}
     THEME hicolor
 )
