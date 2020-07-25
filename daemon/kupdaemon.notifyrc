@@ -23,8 +23,8 @@ Comment[zh_TW]=Kup 備份系統
 
 
 [Event/StartBackup]
-Name=Start Taking Backup
-Comment=A question if user wants to start taking a backup
+Name=Start Saving Backup
+Comment=A question if user wants to start saving a backup
 Comment[ca]=Una pregunta per a si l'usuari vol començar a fer una còpia de seguretat
 Comment[ca@valencia]=Una pregunta per a si l'usuari vol començar a fer una còpia de seguretat
 Comment[en_GB]=A question if user wants to start taking a backup
