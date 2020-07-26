@@ -1,6 +1,13 @@
 [Global]
 IconName=kup
 Name=Kup Backup System
+Name[ca]=Sistema de còpia de seguretat Kup
+Name[ca@valencia]=Sistema de còpia de seguretat Kup
+Name[nl]=Kup systeem voor back-up
+Name[pt]=Sistema de Cópias de Segurança Kup
+Name[sv]=Kup säkerhetskopieringssystem
+Name[uk]=Система резервного копіювання Kup
+Name[x-test]=xxKup Backup Systemxx
 Comment=Kup Backup System
 Comment[ca]=Sistema de còpia de seguretat Kup
 Comment[ca@valencia]=Sistema de còpia de seguretat Kup
@@ -25,27 +32,18 @@ Comment[zh_TW]=Kup 備份系統
 [Event/StartBackup]
 Name=Start Saving Backup
 Comment=A question if user wants to start saving a backup
-Comment[ca]=Una pregunta per a si l'usuari vol començar a fer una còpia de seguretat
-Comment[ca@valencia]=Una pregunta per a si l'usuari vol començar a fer una còpia de seguretat
-Comment[en_GB]=A question if user wants to start taking a backup
-Comment[es]=Preguntar si el usuario quiere empezar a crear una copia de seguridad
-Comment[et]=Küsimine, kas kasutaja tahab varundamist alustada
-Comment[eu]=Erabiltzaileak babes-kopia bat egiten hasi nahi duen galdera bat
-Comment[fi]=Kysyy, haluaako käyttäjä aloittaa varmuuskopioinnin
-Comment[fr]=Une question s'il un utilisateur souhaite démarrer une sauvegarde
-Comment[it]=Una domanda se l'utente vuole iniziare a creare una copia di sicurezza
-Comment[nl]=Een vraag of gebruiker wil beginnen met het maken van een backup
-Comment[pt]=Uma pergunta se o utilizador deseja iniciar o processo da cópia de segurança
-Comment[pt_BR]=Uma pergunta se o usuário deseja começar a fazer backups
-Comment[sl]=Vprašanje, ali želi uporabnik začeti z izdelavo varnostne kopijo
-Comment[sv]=En fråga om användaren vill starta en säkerhetskopiering
-Comment[uk]=Запитання щодо того, чи хоче користувач створити резервну копію
-Comment[x-test]=xxA question if user wants to start taking a backupxx
 Action=Popup
 Urgency=Normal
 
 [Event/BackupSucceeded]
 Name=Backup Succeeded
+Name[ca]=La còpia de seguretat ha tingut èxit
+Name[ca@valencia]=La còpia de seguretat ha tingut èxit
+Name[nl]=Backup maken is gelukt
+Name[pt]=Cópia de Segurança com Sucesso
+Name[sv]=Säkerhetskopiering lyckades
+Name[uk]=Резервну копію успішно створено
+Name[x-test]=xxBackup Succeededxx
 Comment=Saving of backup successfully completed
 Comment[ca]=S'ha finalitzat correctament el desament de la còpia de seguretat
 Comment[ca@valencia]=S'ha finalitzat correctament el desament de la còpia de seguretat
@@ -70,6 +68,13 @@ Urgency=Normal
 
 [Event/BackupFailed]
 Name=Backup Failed
+Name[ca]=Ha fallat la còpia de seguretat
+Name[ca@valencia]=Ha fallat la còpia de seguretat
+Name[nl]=Back-up maken is mislukt
+Name[pt]=Cópia de Segurança sem Sucesso
+Name[sv]=Säkerhetskopiering misslyckades
+Name[uk]=Не вдалося виконати резервне копіювання
+Name[x-test]=xxBackup Failedxx
 Comment=Saving of backup failed, offer user to see log file
 Comment[ca]=Ha fallat el desament de la còpia de seguretat, s'ofereix a l'usuari el fitxer del registre
 Comment[ca@valencia]=Ha fallat el desament de la còpia de seguretat, s'ofereix a l'usuari el fitxer del registre
@@ -92,6 +97,13 @@ Urgency=Normal
 
 [Event/IntegrityCheckCompleted]
 Name=Integrity Check Completed
+Name[ca]=S'ha completat el control de la integritat
+Name[ca@valencia]=S'ha completat el control de la integritat
+Name[nl]=Integriteitscontrole afgerond
+Name[pt]=Verificação de Integridade Completa
+Name[sv]=Integritetskontroll klar
+Name[uk]=Перевірку цілісності завершено
+Name[x-test]=xxIntegrity Check Completedxx
 Comment=Finished checking integrity of backup archive
 Comment[ca]=S'ha acabat de verificar la integritat de l'arxiu de còpia de seguretat
 Comment[ca@valencia]=S'ha acabat de verificar la integritat de l'arxiu de còpia de seguretat
@@ -115,6 +127,13 @@ Urgency=Normal
 
 [Event/RepairCompleted]
 Name=Repair Completed
+Name[ca]=Reparació finalitzada
+Name[ca@valencia]=Reparació finalitzada
+Name[nl]=Reparatie afgerond
+Name[pt]=Reparação Completa
+Name[sv]=Reparation klar
+Name[uk]=Виправлення завершено
+Name[x-test]=xxRepair Completedxx
 Comment=Finished repairing backup archive
 Comment[ca]=S'ha acabat la reparació de l'arxiu de còpia de seguretat
 Comment[ca@valencia]=S'ha acabat la reparació de l'arxiu de còpia de seguretat
