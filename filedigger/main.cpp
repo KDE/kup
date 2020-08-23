@@ -13,6 +13,7 @@
 #include <QApplication>
 #include <QCommandLineOption>
 #include <QCommandLineParser>
+#include <QDir>
 #include <QFile>
 #include <QTextStream>
 
@@ -42,7 +43,8 @@ int main(int pArgCount, char **pArgArray) {
 	QString lRepoPath;
 	QStringList lPosArgs = lParser.positionalArguments();
 	if(!lPosArgs.isEmpty()) {
-		lRepoPath = lPosArgs.takeFirst();
+		auto lDir = QDir(lPosArgs.takeFirst());
+		lRepoPath = lDir.absolutePath();
 	}
 
 	// This needs to be called first thing, before any other calls to libgit2.
