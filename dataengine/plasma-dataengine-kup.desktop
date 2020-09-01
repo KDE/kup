@@ -11,7 +11,6 @@ X-KDE-PluginInfo-Name=backups
 X-KDE-PluginInfo-Version=0.1
 X-KDE-PluginInfo-Website=https://github.com/spersson/kup
 X-KDE-PluginInfo-Category=
-X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-EnabledByDefault=true
 
