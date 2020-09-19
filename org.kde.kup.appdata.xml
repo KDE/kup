@@ -20,6 +20,7 @@
   <name xml:lang="nl">Kup</name>
   <name xml:lang="pt">Kup</name>
   <name xml:lang="pt-BR">Kup</name>
+  <name xml:lang="ro">Kup</name>
   <name xml:lang="ru">Kup</name>
   <name xml:lang="sk">Kup</name>
   <name xml:lang="sl">Kup</name>
@@ -41,6 +42,7 @@
   <summary xml:lang="nl">Planner van back-ups voor Plasma bureaublad van KDE</summary>
   <summary xml:lang="pt">Agendamento de cópias de segurança para a área de trabalho do Plasma</summary>
   <summary xml:lang="pt-BR">Agendador de backups para a área de trabalho Plasma da KDE</summary>
+  <summary xml:lang="ro">Planificator de copii de rezervă pentru biroul KDE Plasma</summary>
   <summary xml:lang="sl">Planer izdelave varnostnih kopij za namizje KDE Plasma</summary>
   <summary xml:lang="sv">Schemaläggning av säkerhetskopiering för KDE:s Plasma-skrivbord</summary>
   <summary xml:lang="uk">Засіб планування резервного копіювання для стільниці Плазми KDE</summary>
@@ -99,6 +101,7 @@
       <li xml:lang="nl">Gesynchroniseerde mappen met gebruik van "rsync".</li>
       <li xml:lang="pt">Pastas sincronizadas com o uso do "rsync".</li>
       <li xml:lang="pt-BR">Pastas sincronizadas com o uso do "rsync".</li>
+      <li xml:lang="ro">Dosare sincronizate prin folosirea „rsync”.</li>
       <li xml:lang="sl">Sinhronizirane mape z uporabo programa "rsync".</li>
       <li xml:lang="sv">Synkroniserade kataloger med användning av "rsync".</li>
       <li xml:lang="uk">Синхронізація тек за допомогою програми rsync.</li>
@@ -154,6 +157,7 @@
       <li xml:lang="nl">Integratie in het bureaublad Plasma van KDE.</li>
       <li xml:lang="pt">Integração na área de trabalho Plasma do KDE.</li>
       <li xml:lang="pt-BR">Integração com a área de trabalho Plasma.</li>
+      <li xml:lang="ro">Integrarea în biroul KDE Plasma.</li>
       <li xml:lang="sl">Integracija v namizje KDE Plasma.</li>
       <li xml:lang="sv">Integration med KDE:s Plasma-skrivbord.</li>
       <li xml:lang="uk">Інтеграція із стільницею Плазми KDE.</li>
@@ -182,6 +186,7 @@
   <developer_name xml:lang="nl">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="pt">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="pt-BR">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+  <developer_name xml:lang="ro">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="sl">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="sv">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="uk">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
