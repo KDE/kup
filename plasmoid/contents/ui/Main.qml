@@ -44,6 +44,12 @@ Item {
 		KQCAddons.KCMShell.openSystemSettings("kcm_kup");
 	}
 
+	function action_reloadKup() {
+		var service = backupPlans.serviceForSource("daemon");
+		var operation = service.operationDescription("reload");
+		service.startOperationCall(operation);
+	}
+
 	property int planCount: backupPlans.data["common"]["plan count"]
 
 	Plasmoid.fullRepresentation: FullRepresentation {}
@@ -61,5 +67,7 @@ Item {
 	Component.onCompleted: {
 		plasmoid.removeAction("configure");
 		plasmoid.setAction("configure", i18n("&Configure Kup..."), "configure");
+
+		plasmoid.setAction("reloadKup", i18n("&Reload backup plans"), "view-refresh");
 	}
 }

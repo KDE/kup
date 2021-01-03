@@ -25,4 +25,16 @@ protected:
 	 int mPlanNumber;
 };
 
+class KupDaemonService : public Plasma::Service
+{
+	Q_OBJECT
+
+public:
+	 KupDaemonService(QLocalSocket *pSocket, QObject *pParent = nullptr);
+	 ServiceJob *createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) override;
+
+protected:
+	 QLocalSocket *mSocket;
+};
+
 #endif // KUPSERVICE_H

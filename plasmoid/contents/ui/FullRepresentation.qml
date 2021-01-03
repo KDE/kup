@@ -24,6 +24,14 @@ PlasmaComponents.Page {
 				Layout.fillWidth: true
 			}
 
+			PlasmaComponents.ToolButton {
+					icon.name: "view-refresh"
+					onClicked: plasmoid.action("reloadKup").trigger()
+
+					PlasmaComponents.ToolTip {
+							text: plasmoid.action("reloadKup").text
+					}
+			}
 
 			PlasmaComponents.ToolButton {
 					icon.name: "configure"
@@ -36,7 +44,7 @@ PlasmaComponents.Page {
 		}
 	}
 
-	FocusScope {
+	Item {
 		anchors.fill: parent
 		anchors.topMargin: units.smallSpacing * 2
 		focus: true

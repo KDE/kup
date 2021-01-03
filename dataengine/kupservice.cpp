@@ -17,3 +17,12 @@ ServiceJob *KupService::createJob(const QString &pOperation, QMap<QString, QVari
 	return new KupJob(mPlanNumber, mSocket, pOperation, pParameters, this);
 }
 
+KupDaemonService::KupDaemonService(QLocalSocket *pSocket, QObject *pParent)
+   : Plasma::Service(pParent), mSocket(pSocket)
+{
+	setName(QStringLiteral("kupdaemonservice"));
+}
+
+ServiceJob *KupDaemonService::createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) {
+	return new KupJob(-1, mSocket, pOperation, pParameters, this);
+}

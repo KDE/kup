@@ -209,6 +209,10 @@ void KupDaemon::handleRequests(QLocalSocket *pSocket) {
 		sendStatus(pSocket);
 		return;
 	}
+	if(lOperation == QStringLiteral("reload")) {
+		reloadConfig();
+		return;
+	}
 
 	int lPlanNumber = lCommand["plan number"].toInt(-1);
 	if(lPlanNumber < 0 || lPlanNumber >= mExecutors.count()) {

@@ -24,6 +24,10 @@ KupEngine::KupEngine(QObject *pParent, const QVariantList &pArgs)
 }
 
 Plasma::Service *KupEngine::serviceForSource(const QString &pSource) {
+	if (pSource == "daemon") {
+		return new KupDaemonService(mSocket, this);
+	}
+
 	bool lIntOk;
 	int lPlanNumber = pSource.toInt(&lIntOk);
 	if(lIntOk) {
