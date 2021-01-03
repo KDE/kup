@@ -5,6 +5,7 @@
 import QtQuick 2.0
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 
 Item {
 	Plasmoid.switchWidth: units.gridUnit * 10
@@ -39,6 +40,10 @@ Item {
 		return result;
 	}
 
+	function action_configure() {
+		KQCAddons.KCMShell.openSystemSettings("kcm_kup");
+	}
+
 	property int planCount: backupPlans.data["common"]["plan count"]
 
 	Plasmoid.fullRepresentation: FullRepresentation {}
@@ -51,5 +56,10 @@ Item {
 			anchors.fill: parent
 			onClicked: plasmoid.expanded = !plasmoid.expanded
 		}
+	}
+
+	Component.onCompleted: {
+		plasmoid.removeAction("configure");
+		plasmoid.setAction("configure", i18n("&Configure Kup..."), "configure");
 	}
 }
