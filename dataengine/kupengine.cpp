@@ -63,6 +63,7 @@ void KupEngine::processData() {
 			setPlanData(i, lPlan, QStringLiteral("icon name"));
 			setPlanData(i, lPlan, QStringLiteral("log file exists"));
 			setPlanData(i, lPlan, QStringLiteral("busy"));
+			setPlanData(i, lPlan, QStringLiteral("bup type"));
 		}
 	}
 }

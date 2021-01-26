@@ -243,6 +243,16 @@ void PlanExecutor::startBackupSaveJob() {
 	startBackup();
 }
 
+void PlanExecutor::startPurger() {
+	if(mPlan->mBackupType != BackupPlan::BupType || busy() || !destinationAvailable()) {
+		return;
+	}
+	QStringList lArgs;
+	lArgs << QStringLiteral("--title") << mPlan->mDescription;
+	lArgs << mDestinationPath;
+	KProcess::startDetached(QStringLiteral("kup-purger"), lArgs);
+}
+
 void PlanExecutor::integrityCheckFinished(KJob *pJob) {
 	endSleepInhibit();
 	discardIntegrityNotification();

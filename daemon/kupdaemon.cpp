@@ -221,6 +221,9 @@ void KupDaemon::handleRequests(QLocalSocket *pSocket) {
 	if(lOperation == QStringLiteral("save backup")) {
 		mExecutors.at(lPlanNumber)->startBackupSaveJob();
 	}
+	if(lOperation == QStringLiteral("remove backups")) {
+		mExecutors.at(lPlanNumber)->startPurger();
+	}
 	if(lOperation == QStringLiteral("show log file")) {
 		mExecutors.at(lPlanNumber)->showLog();
 	}
@@ -307,6 +310,7 @@ void KupDaemon::sendStatus(QLocalSocket *pSocket) {
 		lPlan[QStringLiteral("icon name")] = BackupPlan::iconName(lExecutor->mPlan->backupStatus());
 		lPlan[QStringLiteral("log file exists")] = QFileInfo::exists(lExecutor->mLogFilePath);
 		lPlan[QStringLiteral("busy")] = lExecutor->busy();
+		lPlan[QStringLiteral("bup type")] = lExecutor->mPlan->mBackupType == BackupPlan::BupType;
 		lPlans.append(lPlan);
 	}
 	lStatus["plans"] = lPlans;

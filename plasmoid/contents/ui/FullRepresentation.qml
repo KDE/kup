@@ -100,6 +100,7 @@ PlasmaComponents.Page {
 						Layout.preferredWidth: units.iconSizes.huge
 						Layout.preferredHeight: units.iconSizes.huge
 					}
+
 				}
 				Flow {
 					width: parent.width
@@ -109,6 +110,11 @@ PlasmaComponents.Page {
 						visible: getPlanStatus(index, "destination available") &&
 									!getPlanStatus(index, "busy")
 						onClicked: startOperation(index, "save backup")
+					}
+					PlasmaComponents.Button {
+						text: i18nd("kup", "Remove backups")
+						visible: getPlanStatus(index, "bup type")
+						onClicked: startOperation(index, "remove backups")
 					}
 					PlasmaComponents.Button {
 						text: i18nd("kup", "Show files")

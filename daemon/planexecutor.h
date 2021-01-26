@@ -58,6 +58,7 @@ public slots:
 	void startIntegrityCheck();
 	void startRepairJob();
 	void startBackupSaveJob();
+	void startPurger();
 	void showLog();
 
 signals:
