@@ -26,6 +26,8 @@ ecm_qt_declare_logging_category(filedigger_SRCS
     IDENTIFIER KUPFILEDIGGER
     CATEGORY_NAME kup.filedigger
     DEFAULT_SEVERITY Warning
+    EXPORT kup
+    DESCRIPTION "Kup Filedigger"
 )
 
 add_definitions(-fexceptions)

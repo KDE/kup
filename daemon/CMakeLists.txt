@@ -25,6 +25,8 @@ ecm_qt_declare_logging_category(kupdaemon_SRCS
     IDENTIFIER KUPDAEMON
     CATEGORY_NAME kup.daemon
     DEFAULT_SEVERITY Warning
+    EXPORT kup
+    DESCRIPTION "Kup Daemon"
 )
 
 kf5_add_kdeinit_executable(kup-daemon ${kupdaemon_SRCS})

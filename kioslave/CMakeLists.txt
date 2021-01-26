@@ -13,6 +13,8 @@ ecm_qt_declare_logging_category(bupslave_SRCS
     IDENTIFIER KUPKIO
     CATEGORY_NAME kup.kio
     DEFAULT_SEVERITY Warning
+    EXPORT kup
+    DESCRIPTION "Kup KIO slave for bup"
 )
 
 add_library(kio_bup MODULE ${bupslave_SRCS})
