@@ -43,6 +43,7 @@ add_subdirectory(icons)
 add_subdirectory(filedigger)
 add_subdirectory(kcm)
 add_subdirectory(kioslave)
+add_subdirectory(purger)
 
 ecm_qt_install_logging_categories(EXPORT kup DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}")
 plasma_install_package(plasmoid org.kde.kupapplet)
