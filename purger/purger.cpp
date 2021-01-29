@@ -39,7 +39,9 @@ Purger::Purger(QString pRepoPath, QString pBranchName, QWidget *pParent)
 	*mCollectProcess << QStringLiteral("-d") << mRepoPath;
 	*mCollectProcess << QStringLiteral("gc") << QStringLiteral("--unsafe") << QStringLiteral("--verbose");
 	connect(mCollectProcess, &KProcess::readyReadStandardError, [this] {
-		mTextEdit->append(QString::fromUtf8(mCollectProcess->readAllStandardError()));
+		auto lLogText = QString::fromUtf8(mCollectProcess->readAllStandardError());
+		qCInfo(KUPPURGER) << lLogText;
+		mTextEdit->append(lLogText);
 	});
 	connect(mCollectProcess, SIGNAL(finished(int,QProcess::ExitStatus)), 
 	        SLOT(purgeDone(int,QProcess::ExitStatus)));
@@ -51,9 +53,6 @@ QSize Purger::sizeHint() const {
 }
 
 void Purger::fillListWidget() {
-	if(mRepoPath.isEmpty()) {
-		return; //FIXME
-	}
 	QGuiApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 	mListWidget->clear();
 	KProcess lListProcess;
@@ -94,11 +93,11 @@ void Purger::purge() {
 			qCInfo(KUPPURGER)  << lRemoveProcess.program();
 			if(lRemoveProcess.execute() == 0) {
 				lAnythingRemoved = true;
+				qCInfo(KUPPURGER) << "Successfully removed snapshot";
 			}
-			auto lOutput = QString::fromUtf8(lRemoveProcess.readAllStandardError());
-			if(!lOutput.isEmpty()) {
-				qCInfo(KUPPURGER) << lOutput;
-			}
+			auto lLogText = QString::fromUtf8(lRemoveProcess.readAllStandardError());
+			qCInfo(KUPPURGER) << lLogText;
+			mTextEdit->append(lLogText);
 		}
 	}
 	if(lAnythingRemoved) {
@@ -111,9 +110,12 @@ void Purger::purge() {
 }
 
 void Purger::purgeDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
+	qCInfo(KUPPURGER)  << pExitCode << pExitStatus;
 	QGuiApplication::restoreOverrideCursor();
 	mDeleteAction->setEnabled(true);
-	mTextEdit->append(QString::fromUtf8(mCollectProcess->readAllStandardError()));
+	auto lLogText = QString::fromUtf8(mCollectProcess->readAllStandardError());
+	qCInfo(KUPPURGER) << lLogText;
+	mTextEdit->append(lLogText);
 	fillListWidget();
 }
 

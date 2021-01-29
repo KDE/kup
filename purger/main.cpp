@@ -40,6 +40,9 @@ int main(int pArgCount, char **pArgArray) {
 		return 1;
 	}
 	QString lRepoPath = QDir(lPosArgs.takeFirst()).absolutePath();
+	if(lRepoPath.isEmpty()) {
+		return 1;
+	}
 	auto lPurger = new Purger(lRepoPath, lParser.value(QStringLiteral("branch")));
 	lPurger->show();
 	return QApplication::exec();
