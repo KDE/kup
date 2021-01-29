@@ -5,10 +5,12 @@
 #include "purger.h"
 #include "kuppurger_debug.h"
 
+#include <KFormat>
 #include <KLocalizedString>
 #include <KStandardAction>
 #include <KToolBar>
 
+#include <QDateTime>
 #include <QGuiApplication>
 #include <QSplitter>
 #include <QTimer>
@@ -60,10 +62,14 @@ void Purger::fillListWidget() {
 	lListProcess << QStringLiteral("-d") << mRepoPath;
 	lListProcess << QStringLiteral("ls") << mBranchName;
 	lListProcess.execute();
+	KFormat lFormat;
 	const auto lSnapshots = QString::fromUtf8(lListProcess.readAllStandardOutput()).split(QRegExp("\\s+"));
 	for(const QString &lSnapshot: lSnapshots) {
 		if(lSnapshot != QStringLiteral("latest") && !lSnapshot.isEmpty()) {
-			auto lItem = new QListWidgetItem(lSnapshot, mListWidget);
+			auto lDateTime = QDateTime::fromString(lSnapshot, QStringLiteral("yyyy-MM-dd-HHmmss"));
+			auto lDisplayText = lFormat.formatRelativeDateTime(lDateTime, QLocale::ShortFormat);
+			auto lItem = new QListWidgetItem(lDisplayText, mListWidget);
+			lItem->setWhatsThis(lSnapshot); //misuse of field, for later use when removing
 			lItem->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
 			lItem->setCheckState(Qt::Unchecked);
 		}
@@ -84,7 +90,7 @@ void Purger::purge() {
 			lRemoveProcess << QStringLiteral("bup");
 			lRemoveProcess << QStringLiteral("-d") << mRepoPath << QStringLiteral("rm");
 			lRemoveProcess << QStringLiteral("--unsafe") << QStringLiteral("--verbose");
-			lRemoveProcess << QString("%1/%2").arg(mBranchName).arg(lItem->text());
+			lRemoveProcess << QString("%1/%2").arg(mBranchName).arg(lItem->whatsThis());
 			qCInfo(KUPPURGER)  << lRemoveProcess.program();
 			if(lRemoveProcess.execute() == 0) {
 				lAnythingRemoved = true;
