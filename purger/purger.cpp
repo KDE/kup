@@ -12,6 +12,7 @@
 
 #include <QDateTime>
 #include <QGuiApplication>
+#include <QHash>
 #include <QSplitter>
 #include <QTimer>
 
@@ -59,18 +60,28 @@ void Purger::fillListWidget() {
 	lListProcess.setOutputChannelMode(KProcess::SeparateChannels);
 	lListProcess << QStringLiteral("bup");
 	lListProcess << QStringLiteral("-d") << mRepoPath;
-	lListProcess << QStringLiteral("ls") << mBranchName;
+	lListProcess << QStringLiteral("ls") << QStringLiteral("--hash") << mBranchName;
 	lListProcess.execute();
 	KFormat lFormat;
-	const auto lSnapshots = QString::fromUtf8(lListProcess.readAllStandardOutput()).split(QRegExp("\\s+"));
-	for(const QString &lSnapshot: lSnapshots) {
-		if(lSnapshot != QStringLiteral("latest") && !lSnapshot.isEmpty()) {
-			auto lDateTime = QDateTime::fromString(lSnapshot, QStringLiteral("yyyy-MM-dd-HHmmss"));
-			auto lDisplayText = lFormat.formatRelativeDateTime(lDateTime, QLocale::ShortFormat);
-			auto lItem = new QListWidgetItem(lDisplayText, mListWidget);
-			lItem->setWhatsThis(lSnapshot); //misuse of field, for later use when removing
-			lItem->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
-			lItem->setCheckState(Qt::Unchecked);
+	const auto lLines = QString::fromUtf8(lListProcess.readAllStandardOutput()).split(QChar::LineFeed);
+	QHash<QString, QListWidgetItem*> lHashes;
+	for(const QString &lLine: lLines) {
+		qCDebug(KUPPURGER) << lLine;
+		const auto lHash = lLine.left(40);
+		if(!lHash.isEmpty() && lHash != QStringLiteral("0000000000000000000000000000000000000000")) {
+			const auto lTimeStamp = lLine.mid(41);
+			if(lHashes.contains(lHash)) {
+				auto lItem = lHashes.value(lHash);
+				lItem->setWhatsThis(lItem->whatsThis() + QChar::LineFeed + lTimeStamp);
+			} else {
+				const auto lDateTime = QDateTime::fromString(lTimeStamp, QStringLiteral("yyyy-MM-dd-HHmmss"));
+				const auto lDisplayText = lFormat.formatRelativeDateTime(lDateTime, QLocale::ShortFormat);
+				auto lItem = new QListWidgetItem(lDisplayText, mListWidget);
+				lItem->setWhatsThis(lTimeStamp); //misuse of field, for later use when removing
+				lItem->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
+				lItem->setCheckState(Qt::Unchecked);
+				lHashes.insert(lHash, lItem);
+			}
 		}
 	}
 	QGuiApplication::restoreOverrideCursor();
@@ -82,22 +93,25 @@ void Purger::purge() {
 	bool lAnythingRemoved = false;
 	for(int i=0; i < mListWidget->count(); ++i) {
 		auto lItem = mListWidget->item(i);
-		qCInfo(KUPPURGER)  << lItem->text() << lItem->checkState();
+		qCInfo(KUPPURGER)  << lItem->text() << lItem->whatsThis() << lItem->checkState();
 		if(lItem->checkState() == Qt::Checked) {
-			KProcess lRemoveProcess;
-			lRemoveProcess.setOutputChannelMode(KProcess::SeparateChannels);
-			lRemoveProcess << QStringLiteral("bup");
-			lRemoveProcess << QStringLiteral("-d") << mRepoPath << QStringLiteral("rm");
-			lRemoveProcess << QStringLiteral("--unsafe") << QStringLiteral("--verbose");
-			lRemoveProcess << QString("%1/%2").arg(mBranchName).arg(lItem->whatsThis());
-			qCInfo(KUPPURGER)  << lRemoveProcess.program();
-			if(lRemoveProcess.execute() == 0) {
-				lAnythingRemoved = true;
-				qCInfo(KUPPURGER) << "Successfully removed snapshot";
+			const auto lTimeStamps = lItem->whatsThis().split(QChar::LineFeed);
+			for(const QString &lTimeStamp: lTimeStamps) {
+				KProcess lRemoveProcess;
+				lRemoveProcess.setOutputChannelMode(KProcess::SeparateChannels);
+				lRemoveProcess << QStringLiteral("bup");
+				lRemoveProcess << QStringLiteral("-d") << mRepoPath << QStringLiteral("rm");
+				lRemoveProcess << QStringLiteral("--unsafe") << QStringLiteral("--verbose");
+				lRemoveProcess << QString("%1/%2").arg(mBranchName).arg(lTimeStamp);
+				qCInfo(KUPPURGER)  << lRemoveProcess.program();
+				if(lRemoveProcess.execute() == 0) {
+					lAnythingRemoved = true;
+					qCInfo(KUPPURGER) << "Successfully removed snapshot";
+				}
+				const auto lLogText = QString::fromUtf8(lRemoveProcess.readAllStandardError());
+				qCInfo(KUPPURGER) << lLogText;
+				mTextEdit->append(lLogText);
 			}
-			auto lLogText = QString::fromUtf8(lRemoveProcess.readAllStandardError());
-			qCInfo(KUPPURGER) << lLogText;
-			mTextEdit->append(lLogText);
 		}
 	}
 	if(lAnythingRemoved) {
@@ -113,7 +127,7 @@ void Purger::purgeDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	qCInfo(KUPPURGER)  << pExitCode << pExitStatus;
 	QGuiApplication::restoreOverrideCursor();
 	mDeleteAction->setEnabled(true);
-	auto lLogText = QString::fromUtf8(mCollectProcess->readAllStandardError());
+	const auto lLogText = QString::fromUtf8(mCollectProcess->readAllStandardError());
 	qCInfo(KUPPURGER) << lLogText;
 	mTextEdit->append(lLogText);
 	fillListWidget();
