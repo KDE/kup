@@ -85,7 +85,7 @@ void BupJob::performJob() {
 		mFsckProcess.start();
 		mInfoRateLimiter.start();
 	} else {
-		slotCheckingDone(0, QProcess::NormalExit);
+		startIndexing();
 	}
 }
 
@@ -115,6 +115,10 @@ void BupJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 		}
 		return;
 	}
+	startIndexing();
+}
+
+void BupJob::startIndexing() {
 	mIndexProcess << QStringLiteral("bup");
 	mIndexProcess << QStringLiteral("-d") << mDestinationPath;
 	mIndexProcess << QStringLiteral("index") << QStringLiteral("-u");

@@ -24,6 +24,7 @@ protected slots:
 	void performJob() override;
 	void slotCheckingStarted();
 	void slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus);
+	void startIndexing();
 	void slotIndexingStarted();
 	void slotIndexingDone(int pExitCode, QProcess::ExitStatus pExitStatus);
 	void slotSavingStarted();
