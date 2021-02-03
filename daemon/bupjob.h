@@ -9,6 +9,7 @@
 
 #include <KProcess>
 #include <QElapsedTimer>
+#include <QRegularExpression>
 
 class KupDaemon;
 
@@ -42,6 +43,12 @@ protected:
 	QElapsedTimer mInfoRateLimiter;
 	int mHarmlessErrorCount;
 	bool mAllErrorsHarmless;
+	QRegularExpression mLineBreaksRegExp;
+	QRegularExpression mNonsenseRegExp;
+	QRegularExpression mFileGoneRegExp;
+	QRegularExpression mProgressRegExp;
+	QRegularExpression mErrorCountRegExp;
+	QRegularExpression mFileInfoRegExp;
 };
 
 #endif /*BUPJOB_H*/

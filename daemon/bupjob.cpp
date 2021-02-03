@@ -3,15 +3,14 @@
 // SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 #include "bupjob.h"
-
-#include <csignal>
-
-#include <QFileInfo>
-#include <QRegularExpression>
-#include <QTextStream>
-#include <QThread>
+#include "kupdaemon_debug.h"
 
 #include <KLocalizedString>
+
+#include <QFileInfo>
+#include <QThread>
+
+#include <csignal>
 
 BupJob::BupJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon)
    :BackupJob(pBackupPlan, pDestinationPath, pLogFilePath, pKupDaemon)
@@ -23,6 +22,18 @@ BupJob::BupJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const Q
 	setCapabilities(KJob::Suspendable);
 	mHarmlessErrorCount = 0;
 	mAllErrorsHarmless = false;
+	mLineBreaksRegExp = QRegularExpression(QStringLiteral("\n|\r"));
+	mLineBreaksRegExp.optimize();
+	mNonsenseRegExp = QRegularExpression(QStringLiteral("^(?:Reading index|bloom|midx)"));
+	mNonsenseRegExp.optimize();
+	mFileGoneRegExp = QRegularExpression(QStringLiteral("\\[Errno 2\\]"));
+	mFileGoneRegExp.optimize();
+	mProgressRegExp = QRegularExpression(QStringLiteral("(\\d+)/(\\d+)k, (\\d+)/(\\d+) files\\) \\S* (?:(\\d+)k/s|)"));
+	mProgressRegExp.optimize();
+	mErrorCountRegExp = QRegularExpression(QStringLiteral("^WARNING: (\\d+) errors encountered while saving."));
+	mErrorCountRegExp.optimize();
+	mFileInfoRegExp = QRegularExpression(QStringLiteral("^(?: |A|M) \\/"));
+	mFileInfoRegExp.optimize();
 }
 
 void BupJob::performJob() {
@@ -215,57 +226,49 @@ void BupJob::slotRecoveryInfoDone(int pExitCode, QProcess::ExitStatus pExitStatu
 }
 
 void BupJob::slotReadBupErrors() {
-	bool lValidInfo = false, lValidFileName = false;
 	qulonglong lCopiedKBytes = 0, lTotalKBytes = 0, lCopiedFiles = 0, lTotalFiles = 0;
 	ulong lSpeedKBps = 0, lPercent = 0;
 	QString lFileName;
-	QRegularExpression lProgressRegExp(QStringLiteral("(\\d+)/(\\d+)k, (\\d+)/(\\d+) files\\) \\S* (?:(\\d+)k/s|)"));
-	QRegularExpression lErrorCountRegExp(QStringLiteral("WARNING: (\\d+) errors encountered while saving."));
-
-	QTextStream lStream(mSaveProcess.readAllStandardError());
-	QString lRawLine;
-	while(lStream.readLineInto(&lRawLine)) {
-		const QStringList lList = lRawLine.split(QChar::CarriageReturn);
-		for(const QString &lLine: lList) {
-			//		mLogStream << "read a line: " << lLine << endl;
-			if(lLine.startsWith(QStringLiteral("Reading index:")) || lLine.startsWith(QStringLiteral("bloom:"))
-			        || lLine.startsWith(QStringLiteral("midx:"))) {
-				continue;
+	const auto lInput = QString::fromUtf8(mSaveProcess.readAllStandardError());
+	const auto lLines = lInput.split(mLineBreaksRegExp, Qt::SkipEmptyParts);
+	for(const QString &lLine: lLines) {
+		qCDebug(KUPDAEMON) << lLine;
+		if(mNonsenseRegExp.match(lLine).hasMatch()) {
+			continue;
+		}
+		if(mFileGoneRegExp.match(lLine).hasMatch()) {
+			mHarmlessErrorCount++;
+			mLogStream << lLine << endl;
+			continue;
+		}
+		const auto lCountMatch = mErrorCountRegExp.match(lLine);
+		if(lCountMatch.hasMatch()) {
+			mAllErrorsHarmless = lCountMatch.captured(1).toInt() == mHarmlessErrorCount;
+			mLogStream << lLine << endl;
+			continue;
+		}
+		const auto lProgressMatch = mProgressRegExp.match(lLine);
+		if(lProgressMatch.hasMatch()) {
+			lCopiedKBytes = lProgressMatch.captured(1).toULongLong();
+			lTotalKBytes = lProgressMatch.captured(2).toULongLong();
+			lCopiedFiles = lProgressMatch.captured(3).toULongLong();
+			lTotalFiles = lProgressMatch.captured(4).toULongLong();
+			lSpeedKBps = lProgressMatch.captured(5).toULong();
+			if(lTotalKBytes != 0) {
+				lPercent = qMax(100*lCopiedKBytes/lTotalKBytes, static_cast<qulonglong>(1));
 			}
-			if(lLine.startsWith(QStringLiteral("Saving:"))) {
-				QRegularExpressionMatch lMatch = lProgressRegExp.match(lLine);
-				if(lMatch.hasMatch()) {
-					lCopiedKBytes = lMatch.captured(1).toULongLong();
-					lTotalKBytes = lMatch.captured(2).toULongLong();
-					lCopiedFiles = lMatch.captured(3).toULongLong();
-					lTotalFiles = lMatch.captured(4).toULongLong();
-					lSpeedKBps = lMatch.captured(5).toULong();
-					if(lTotalKBytes != 0) {
-						lPercent = qMax(100*lCopiedKBytes/lTotalKBytes, static_cast<qulonglong>(1));
-					}
-					lValidInfo = true;
-				}
-			} else if(lLine.startsWith(QStringLiteral("[Errno 2]"))) {
-				mHarmlessErrorCount++;
-				mLogStream << lLine << endl;
-			} else if(lLine.startsWith(QStringLiteral("WARNING:"))) {
-				QRegularExpressionMatch lMatch = lErrorCountRegExp.match(lLine);
-				if(lMatch.hasMatch()) {
-					int lTotalErrors = lMatch.captured(1).toInt();
-					mAllErrorsHarmless = lTotalErrors == mHarmlessErrorCount;
-				}
-				mLogStream << lLine << endl;
-			} else if((lLine.at(0) == ' ' || lLine.at(0) == 'A' || lLine.at(0) == 'M') && lLine.at(1) == ' ' && lLine.at(2) == '/') {
-				lFileName = lLine;
-				lFileName.remove(0, 2);
-				lValidFileName = true;
-			} else if(!lLine.startsWith(QStringLiteral("D /"))) {
-				mLogStream << lLine << endl;
-			}
+			continue;
+		}
+		if(mFileInfoRegExp.match(lLine).hasMatch()) {
+			lFileName = lLine.mid(2);
+			continue;
+		}
+		if(!lLine.startsWith(QStringLiteral("D /"))) {
+			mLogStream << lLine << endl;
 		}
 	}
 	if(mInfoRateLimiter.hasExpired(200)) {
-		if(lValidInfo) {
+		if(lTotalFiles != 0) {
 			setPercent(lPercent);
 			setTotalAmount(KJob::Bytes, lTotalKBytes*1024);
 			setTotalAmount(KJob::Files, lTotalFiles);
@@ -273,7 +276,7 @@ void BupJob::slotReadBupErrors() {
 			setProcessedAmount(KJob::Files, lCopiedFiles);
 			emitSpeed(lSpeedKBps * 1024);
 		}
-		if(lValidFileName) {
+		if(!lFileName.isEmpty()) {
 			emit description(this, i18n("Saving backup"),
 			                 qMakePair(i18nc("Label for file currently being copied", "File"), lFileName));
 		}
