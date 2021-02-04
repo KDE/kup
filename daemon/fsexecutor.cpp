@@ -18,6 +18,17 @@
 #include <KNotification>
 
 #include <fcntl.h>
+#include <sys/stat.h>
+
+namespace {
+
+// very light check if a directory exists that works on automounts where QDir::exists fails
+bool checkDirExists(const QDir &dir)
+{
+	struct stat s;
+	return stat(dir.absolutePath().toLocal8Bit().data(), &s) == 0 && S_ISDIR(s.st_mode);
+}
+}
 
 FSExecutor::FSExecutor(BackupPlan *pPlan, KupDaemon *pKupDaemon)
    :PlanExecutor(pPlan, pKupDaemon)
@@ -57,7 +68,7 @@ void FSExecutor::checkStatus() {
 		do {
 			lExisting += QStringLiteral("/..");
 			lDir = QDir(QDir::cleanPath(lExisting));
-		} while(!lDir.exists());
+		} while(!checkDirExists(lDir));
 		lExisting = lDir.canonicalPath();
 
 		if(lExisting != mWatchedParentDir) { // new parent to watch
