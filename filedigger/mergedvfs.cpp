@@ -16,7 +16,6 @@
 
 #include <utility>
 #include <git2/branch.h>
-#include <sys/stat.h>
 
 using NameMap = QMap<QString, MergedNode *>;
 using NameMapIterator = QMapIterator<QString, MergedNode *>;
