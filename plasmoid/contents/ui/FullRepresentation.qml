@@ -112,7 +112,7 @@ PlasmaComponents.Page {
 						onClicked: startOperation(index, "save backup")
 					}
 					PlasmaComponents.Button {
-						text: i18nd("kup", "Prune old backups...")
+						text: i18nd("kup", "Prune old backups")
 						visible: getPlanStatus(index, "bup type") && getPlanStatus(index, "destination available")
 						onClicked: startOperation(index, "remove backups")
 					}
