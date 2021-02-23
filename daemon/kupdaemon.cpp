@@ -222,7 +222,7 @@ void KupDaemon::handleRequests(QLocalSocket *pSocket) {
 		mExecutors.at(lPlanNumber)->startBackupSaveJob();
 	}
 	if(lOperation == QStringLiteral("remove backups")) {
-		mExecutors.at(lPlanNumber)->startPurger();
+		mExecutors.at(lPlanNumber)->showBackupPurger();
 	}
 	if(lOperation == QStringLiteral("show log file")) {
 		mExecutors.at(lPlanNumber)->showLog();

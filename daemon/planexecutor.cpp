@@ -10,15 +10,17 @@
 #include "kupdaemon_debug.h"
 #include "rsyncjob.h"
 
+#include <KDiskFreeSpaceInfo>
+#include <KIO/DirectorySizeJob>
+#include <KFormat>
+#include <KLocalizedString>
+#include <KNotification>
+#include <KRun>
 #include <QDBusConnection>
 #include <QDBusReply>
 #include <QDir>
 #include <QTimer>
 
-#include <KFormat>
-#include <KLocalizedString>
-#include <KNotification>
-#include <KRun>
 
 static const QString cPwrMgmtServiceName = QStringLiteral("org.freedesktop.PowerManagement");
 static const QString cPwrMgmtPath = QStringLiteral("/org/freedesktop/PowerManagement");
@@ -243,14 +245,60 @@ void PlanExecutor::startBackupSaveJob() {
 	startBackup();
 }
 
-void PlanExecutor::startPurger() {
-	if(mPlan->mBackupType != BackupPlan::BupType || busy() || !destinationAvailable()) {
+void PlanExecutor::startBackup() {
+	QDir lDir(mDestinationPath);
+	if(!lDir.exists()) {
+		lDir.mkdir(mDestinationPath);
+	}
+	QFileInfo lInfo(mDestinationPath);
+	if(!lInfo.isWritable()) {
+		KNotification::event(KNotification::Error, xi18nc("@title:window", "Problem"),
+		                     xi18nc("notification", "You don't have write permission to backup destination."));
+		exitBackupRunningState(false);
 		return;
 	}
-	QStringList lArgs;
-	lArgs << QStringLiteral("--title") << mPlan->mDescription;
-	lArgs << mDestinationPath;
-	KProcess::startDetached(QStringLiteral("kup-purger"), lArgs);
+	BackupJob *lJob = createBackupJob();
+	if(lJob == nullptr) {
+		KNotification::event(KNotification::Error, xi18nc("@title:window", "Problem"),
+		                     xi18nc("notification", "Invalid type of backup in configuration."));
+		exitBackupRunningState(false);
+		return;
+	}
+	connect(lJob, &KJob::result, this, &PlanExecutor::finishBackup);
+	lJob->start();
+}
+
+void PlanExecutor::finishBackup(KJob *pJob) {
+	if(pJob->error()) {
+		if(pJob->error() != KJob::KilledJobError) {
+			notifyBackupFailed(pJob);
+		}
+		exitBackupRunningState(false);
+	} else {
+		notifyBackupSucceeded();
+		mPlan->mLastCompleteBackup = QDateTime::currentDateTimeUtc();
+		auto lSpaceInfo = KDiskFreeSpaceInfo::freeSpaceInfo(mDestinationPath);
+		if(lSpaceInfo.isValid())
+			mPlan->mLastAvailableSpace = static_cast<double>(lSpaceInfo.available());
+		else
+			mPlan->mLastAvailableSpace = -1.0; //unknown size
+
+		auto lSizeJob = KIO::directorySize(QUrl::fromLocalFile(mDestinationPath));
+		connect(lSizeJob, &KJob::result, this, &PlanExecutor::finishSizeCheck);
+		lSizeJob->start();
+	}
+}
+
+void PlanExecutor::finishSizeCheck(KJob* pJob) {
+	if(pJob->error()) {
+		KNotification::event(KNotification::Error, xi18nc("@title:window", "Problem"), pJob->errorText());
+		mPlan->mLastBackupSize = -1.0; //unknown size
+	} else {
+		auto lSizeJob = qobject_cast<KIO::DirectorySizeJob *>(pJob);
+		mPlan->mLastBackupSize = static_cast<double>(lSizeJob->totalSize());
+	}
+	mPlan->save();
+	exitBackupRunningState(pJob->error() == 0);
 }
 
 void PlanExecutor::integrityCheckFinished(KJob *pJob) {
@@ -397,6 +445,16 @@ void PlanExecutor::showBackupFiles() {
 	} else if(mPlan->mBackupType == BackupPlan::RsyncType) {
 		KRun::runUrl(QUrl::fromLocalFile(mDestinationPath), QStringLiteral("inode/directory"), nullptr, KRun::RunFlags());
 	}
+}
+
+void PlanExecutor::showBackupPurger() {
+	if(mPlan->mBackupType != BackupPlan::BupType || busy() || !destinationAvailable()) {
+		return;
+	}
+	QStringList lArgs;
+	lArgs << QStringLiteral("--title") << mPlan->mDescription;
+	lArgs << mDestinationPath;
+	KProcess::startDetached(QStringLiteral("kup-purger"), lArgs);
 }
 
 BackupJob *PlanExecutor::createBackupJob() {

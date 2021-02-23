@@ -54,11 +54,11 @@ public:
 public slots:
 	virtual void checkStatus() = 0;
 	virtual void showBackupFiles();
+	virtual void showBackupPurger();
 	void updateAccumulatedUsageTime();
 	void startIntegrityCheck();
 	void startRepairJob();
 	void startBackupSaveJob();
-	void startPurger();
 	void showLog();
 
 signals:
@@ -66,7 +66,9 @@ signals:
 	void backupStatusChanged();
 
 protected slots:
-	virtual void startBackup() = 0;
+	virtual void startBackup();
+	void finishBackup(KJob *pJob);
+	void finishSizeCheck(KJob *pJob);
 
 	void exitBackupRunningState(bool pWasSuccessful);
 	void enterAvailableState();

@@ -10,10 +10,7 @@
 #include <QThread>
 
 class BackupPlan;
-
 class KDirWatch;
-class KJob;
-
 class QTimer;
 
 // KDirWatch (well, inotify) does not detect when something gets mounted on a watched directory.
@@ -46,9 +43,6 @@ public slots:
 	void checkStatus() override;
 
 protected slots:
-	void startBackup() override;
-	void slotBackupDone(KJob *pJob);
-	void slotBackupSizeDone(KJob *pJob);
 	void checkMountPoints();
 
 protected:

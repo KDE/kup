@@ -10,12 +10,6 @@
 #include <QFileInfo>
 #include <QMenu>
 #include <QTimer>
-
-#include <KDiskFreeSpaceInfo>
-#include <KIO/DirectorySizeJob>
-#include <KLocalizedString>
-#include <KNotification>
-
 #include <Solid/DeviceNotifier>
 #include <Solid/DeviceInterface>
 #include <Solid/StorageDrive>
@@ -75,86 +69,38 @@ void EDExecutor::updateAccessibility() {
 		startBackup(); // run startBackup again now that it has been mounted
 	} else if(mWantsToShowFiles) {
 		showBackupFiles();
+	} else if(mWantsToPurge) {
+		showBackupPurger();
 	}
 }
 
 void EDExecutor::startBackup() {
-	if(!mStorageAccess) {
+	if(!ensureAccessible(mWantsToRunBackup)) {
 		exitBackupRunningState(false);
 		return;
 	}
-	if(mStorageAccess->isAccessible()) {
-		if(!mStorageAccess->filePath().isEmpty()) {
-			mDestinationPath = mStorageAccess->filePath();
-			mDestinationPath += QStringLiteral("/");
-			mDestinationPath += mPlan->mExternalDestinationPath;
-			QDir lDir(mDestinationPath);
-			if(!lDir.exists()) {
-				lDir.mkdir(mDestinationPath);
-			}
-			QFileInfo lInfo(mDestinationPath);
-			if(lInfo.isWritable()) {
-				BackupJob *lJob = createBackupJob();
-				if(lJob == nullptr) {
-					KNotification::event(KNotification::Error, xi18nc("@title:window", "Problem"),
-					                     xi18nc("notification", "Invalid type of backup in configuration."));
-					exitBackupRunningState(false);
-					return;
-				}
-				connect(lJob, SIGNAL(result(KJob*)), SLOT(slotBackupDone(KJob*)));
-				lJob->start();
-				mWantsToRunBackup = false; //reset, only used to retrigger this state-entering if drive wasn't already mounted
-			} else {
-				KNotification::event(KNotification::Error, xi18nc("@title:window", "Problem"),
-				                     xi18nc("notification", "You don't have write permission to backup destination."));
-				exitBackupRunningState(false);
-				return;
-			}
-		}
-	} else { //not mounted yet. trigger mount and come back to this startBackup again later
-		mWantsToRunBackup = true;
-		connect(mStorageAccess, SIGNAL(accessibilityChanged(bool,QString)), SLOT(updateAccessibility()));
-		mStorageAccess->setup(); //try to mount it, fail silently for now.
-	}
-}
-
-void EDExecutor::slotBackupDone(KJob *pJob) {
-	if(pJob->error()) {
-		if(pJob->error() != KJob::KilledJobError) {
-			notifyBackupFailed(pJob);
-		}
-		exitBackupRunningState(false);
-	} else {
-		notifyBackupSucceeded();
-		mPlan->mLastCompleteBackup = QDateTime::currentDateTimeUtc();
-		KDiskFreeSpaceInfo lSpaceInfo = KDiskFreeSpaceInfo::freeSpaceInfo(mDestinationPath);
-		if(lSpaceInfo.isValid())
-			mPlan->mLastAvailableSpace = static_cast<double>(lSpaceInfo.available());
-		else
-			mPlan->mLastAvailableSpace = -1.0; //unknown size
-
-		KIO::DirectorySizeJob *lSizeJob = KIO::directorySize(QUrl::fromLocalFile(mDestinationPath));
-		connect(lSizeJob, SIGNAL(result(KJob*)), SLOT(slotBackupSizeDone(KJob*)));
-		lSizeJob->start();
-	}
-}
-
-void EDExecutor::slotBackupSizeDone(KJob *pJob) {
-	if(pJob->error()) {
-		KNotification::event(KNotification::Error, xi18nc("@title:window", "Problem"), pJob->errorText());
-		mPlan->mLastBackupSize = -1.0; //unknown size
-	} else {
-		auto *lSizeJob = qobject_cast<KIO::DirectorySizeJob *>(pJob);
-		mPlan->mLastBackupSize = static_cast<double>(lSizeJob->totalSize());
-	}
-	mPlan->save();
-	exitBackupRunningState(pJob->error() == 0);
+	PlanExecutor::startBackup();
 }
 
 void EDExecutor::showBackupFiles() {
-	if(!mStorageAccess)
+	if(!ensureAccessible(mWantsToShowFiles)) {
 		return;
+	}
+	PlanExecutor::showBackupFiles();
+}
 
+void EDExecutor::showBackupPurger() {
+	if(!ensureAccessible(mWantsToPurge)) {
+		return;
+	}
+	PlanExecutor::showBackupPurger();
+}
+
+bool EDExecutor::ensureAccessible(bool &pReturnLater) {
+	pReturnLater = false; // reset in case we are here for the second time
+	if(!mStorageAccess) {
+		return false;
+	}
 	if(mStorageAccess->isAccessible()) {
 		if(!mStorageAccess->filePath().isEmpty()) {
 			mDestinationPath = mStorageAccess->filePath();
@@ -162,13 +108,13 @@ void EDExecutor::showBackupFiles() {
 			mDestinationPath += mPlan->mExternalDestinationPath;
 			QFileInfo lDestinationInfo(mDestinationPath);
 			if(lDestinationInfo.exists() && lDestinationInfo.isDir()) {
-				mWantsToShowFiles = false; //reset, only used to retrigger this state-entering if drive wasn't already mounted
-				PlanExecutor::showBackupFiles();
+				return true; 
 			}
 		}
-	} else { //not mounted yet. trigger mount and come back to this startBackup again later
-		mWantsToShowFiles = true;
-		connect(mStorageAccess, SIGNAL(accessibilityChanged(bool,QString)), SLOT(updateAccessibility()));
-		mStorageAccess->setup(); //try to mount it, fail silently for now.
+		return false;
 	}
+	connect(mStorageAccess, SIGNAL(accessibilityChanged(bool,QString)), SLOT(updateAccessibility()));
+	mStorageAccess->setup(); //try to mount it, fail silently for now.
+	pReturnLater = true;
+	return false;
 }

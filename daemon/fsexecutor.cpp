@@ -12,10 +12,6 @@
 #include <QTextStream>
 
 #include <KDirWatch>
-#include <KDiskFreeSpaceInfo>
-#include <KIO/DirectorySizeJob>
-#include <KLocalizedString>
-#include <KNotification>
 
 #include <fcntl.h>
 #include <sys/stat.h>
@@ -103,50 +99,6 @@ void FSExecutor::checkStatus() {
 	}
 }
 
-void FSExecutor::startBackup() {
-	BackupJob *lJob = createBackupJob();
-	if(lJob == nullptr) {
-		KNotification::event(KNotification::Error, xi18nc("@title:window", "Problem"),
-		                     xi18nc("notification", "Invalid type of backup in configuration."));
-		exitBackupRunningState(false);
-		return;
-	}
-	connect(lJob, SIGNAL(result(KJob*)), SLOT(slotBackupDone(KJob*)));
-	lJob->start();
-}
-
-void FSExecutor::slotBackupDone(KJob *pJob) {
-	if(pJob->error()) {
-		if(pJob->error() != KJob::KilledJobError) {
-			notifyBackupFailed(pJob);
-		}
-		exitBackupRunningState(false);
-	} else {
-		notifyBackupSucceeded();
-		mPlan->mLastCompleteBackup = QDateTime::currentDateTimeUtc();
-		KDiskFreeSpaceInfo lSpaceInfo = KDiskFreeSpaceInfo::freeSpaceInfo(mDestinationPath);
-		if(lSpaceInfo.isValid())
-			mPlan->mLastAvailableSpace = static_cast<double>(lSpaceInfo.available());
-		else
-			mPlan->mLastAvailableSpace = -1.0; //unknown size
-
-		KIO::DirectorySizeJob *lSizeJob = KIO::directorySize(QUrl::fromLocalFile(mDestinationPath));
-		connect(lSizeJob, SIGNAL(result(KJob*)), SLOT(slotBackupSizeDone(KJob*)));
-		lSizeJob->start();
-	}
-}
-
-void FSExecutor::slotBackupSizeDone(KJob *pJob) {
-	if(pJob->error()) {
-		KNotification::event(KNotification::Error, xi18nc("@title:window", "Problem"), pJob->errorText());
-		mPlan->mLastBackupSize = -1.0; //unknown size
-	} else {
-		auto *lSizeJob = qobject_cast<KIO::DirectorySizeJob *>(pJob);
-		mPlan->mLastBackupSize = static_cast<double>(lSizeJob->totalSize());
-	}
-	mPlan->save();
-	exitBackupRunningState(pJob->error() == 0);
-}
 
 void FSExecutor::checkMountPoints() {
 	QFile lMountsFile(QStringLiteral("/proc/mounts"));
