@@ -14,7 +14,6 @@
 #include <QGuiApplication>
 #include <QHash>
 #include <QSplitter>
-#include <QTimer>
 
 Purger::Purger(QString pRepoPath, QString pBranchName, QWidget *pParent)
     : KMainWindow(pParent), mRepoPath(std::move(pRepoPath)), 
@@ -46,7 +45,39 @@ Purger::Purger(QString pRepoPath, QString pBranchName, QWidget *pParent)
 	});
 	connect(mCollectProcess, SIGNAL(finished(int,QProcess::ExitStatus)), 
 	        SLOT(purgeDone(int,QProcess::ExitStatus)));
-	QTimer::singleShot(0, this, [this]{fillListWidget();});
+
+	mListProcess = new KProcess();
+	mListProcess->setOutputChannelMode(KProcess::SeparateChannels);
+	*mListProcess << QStringLiteral("bup");
+	*mListProcess << QStringLiteral("-d") << mRepoPath;
+	*mListProcess << QStringLiteral("ls") << QStringLiteral("--hash") << mBranchName;
+	connect(mListProcess, &KProcess::readyReadStandardOutput, [this] {
+		KFormat lFormat;
+		const auto lLines = QString::fromUtf8(mListProcess->readAllStandardOutput()).split(QChar::LineFeed);
+		for(const QString &lLine: lLines) {
+			qCDebug(KUPPURGER) << lLine;
+			const auto lHash = lLine.left(40);
+			if(!lHash.isEmpty() && lHash != QStringLiteral("0000000000000000000000000000000000000000")) {
+				const auto lTimeStamp = lLine.mid(41);
+				if(mHashes.contains(lHash)) {
+					auto lItem = mHashes.value(lHash);
+					lItem->setWhatsThis(lItem->whatsThis() + QChar::LineFeed + lTimeStamp);
+				} else {
+					const auto lDateTime = QDateTime::fromString(lTimeStamp, QStringLiteral("yyyy-MM-dd-HHmmss"));
+					const auto lDisplayText = lFormat.formatRelativeDateTime(lDateTime, QLocale::ShortFormat);
+					auto lItem = new QListWidgetItem(lDisplayText, mListWidget);
+					lItem->setWhatsThis(lTimeStamp); //misuse of field, for later use when removing
+					lItem->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
+					lItem->setCheckState(Qt::Unchecked);
+					mHashes.insert(lHash, lItem);
+				}
+			}
+		}
+	});
+	connect(mListProcess, SIGNAL(finished(int,QProcess::ExitStatus)), 
+	        SLOT(listDone(int,QProcess::ExitStatus)));
+
+	fillListWidget();
 }
 
 QSize Purger::sizeHint() const {
@@ -56,35 +87,14 @@ QSize Purger::sizeHint() const {
 void Purger::fillListWidget() {
 	QGuiApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 	mListWidget->clear();
-	KProcess lListProcess;
-	lListProcess.setOutputChannelMode(KProcess::SeparateChannels);
-	lListProcess << QStringLiteral("bup");
-	lListProcess << QStringLiteral("-d") << mRepoPath;
-	lListProcess << QStringLiteral("ls") << QStringLiteral("--hash") << mBranchName;
-	lListProcess.execute();
-	KFormat lFormat;
-	const auto lLines = QString::fromUtf8(lListProcess.readAllStandardOutput()).split(QChar::LineFeed);
-	QHash<QString, QListWidgetItem*> lHashes;
-	for(const QString &lLine: lLines) {
-		qCDebug(KUPPURGER) << lLine;
-		const auto lHash = lLine.left(40);
-		if(!lHash.isEmpty() && lHash != QStringLiteral("0000000000000000000000000000000000000000")) {
-			const auto lTimeStamp = lLine.mid(41);
-			if(lHashes.contains(lHash)) {
-				auto lItem = lHashes.value(lHash);
-				lItem->setWhatsThis(lItem->whatsThis() + QChar::LineFeed + lTimeStamp);
-			} else {
-				const auto lDateTime = QDateTime::fromString(lTimeStamp, QStringLiteral("yyyy-MM-dd-HHmmss"));
-				const auto lDisplayText = lFormat.formatRelativeDateTime(lDateTime, QLocale::ShortFormat);
-				auto lItem = new QListWidgetItem(lDisplayText, mListWidget);
-				lItem->setWhatsThis(lTimeStamp); //misuse of field, for later use when removing
-				lItem->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
-				lItem->setCheckState(Qt::Unchecked);
-				lHashes.insert(lHash, lItem);
-			}
-		}
-	}
+	mHashes.clear();
+	mDeleteAction->setEnabled(false);
+	mListProcess->start();
+}
+
+void Purger::listDone(int, QProcess::ExitStatus) {
 	QGuiApplication::restoreOverrideCursor();
+	mDeleteAction->setEnabled(true);
 }
 
 void Purger::purge() {

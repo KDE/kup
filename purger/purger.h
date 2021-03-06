@@ -20,6 +20,7 @@ public:
 
 protected slots:
 	void fillListWidget();
+	void listDone(int, QProcess::ExitStatus);
 	void purge();
 	void purgeDone(int, QProcess::ExitStatus);
 
@@ -27,6 +28,8 @@ protected:
 	QListWidget *mListWidget {};
 	QTextEdit *mTextEdit {};
 	KProcess *mCollectProcess {};
+	KProcess *mListProcess {};
+	QHash<QString, QListWidgetItem*> mHashes;
 	QAction *mDeleteAction {};
 	QString mRepoPath;
 	QString mBranchName;
