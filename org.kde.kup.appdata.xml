@@ -18,6 +18,7 @@
   <name xml:lang="id">Kup</name>
   <name xml:lang="it">Kup</name>
   <name xml:lang="nl">Kup</name>
+  <name xml:lang="pl">Kup</name>
   <name xml:lang="pt">Kup</name>
   <name xml:lang="pt-BR">Kup</name>
   <name xml:lang="ro">Kup</name>
@@ -41,6 +42,7 @@
   <summary xml:lang="id">Penjadwalan cadangan untuk desktop Plasma KDE</summary>
   <summary xml:lang="it">Pianificatore di copie di sicurezza per il desktop Plasma di KDE</summary>
   <summary xml:lang="nl">Planner van back-ups voor Plasma bureaublad van KDE</summary>
+  <summary xml:lang="pl">Planowanie kopi zapasowej dla pulpitu KDE Plazma</summary>
   <summary xml:lang="pt">Agendamento de cópias de segurança para a área de trabalho do Plasma</summary>
   <summary xml:lang="pt-BR">Agendador de backups para a área de trabalho Plasma da KDE</summary>
   <summary xml:lang="ro">Planificator de copii de rezervă pentru biroul KDE Plasma</summary>
@@ -63,6 +65,7 @@
     <p xml:lang="id">Kup bisa membantu kamu mengingatkan agar pencadangan tetap terbarukan pada file-file personalmu. Ini menyediakan:</p>
     <p xml:lang="it">Kup può aiutarti a ricordare di mantenere aggiornate le copie di sicurezza dei tuoi file personali. Fornisce:</p>
     <p xml:lang="nl">Kup kan u helpen te herinneren om up-to-date back-ups van uw persoonlijke bestanden te maken. Het biedt:</p>
+    <p xml:lang="pl">Kup przypomina o posiadaniu świeżych kopii zapasowych twoich plików osobistych: Zapewnia:</p>
     <p xml:lang="pt">O Kup pode ajudá-lo a recordar-se das cópias de segurança actualizadas dos seus ficheiros pessoais. Oferece:</p>
     <p xml:lang="pt-BR">O Kup pode ajudá-lo a lembrar de manter backups atualizados de seus arquivos pessoais. Ele fornece:</p>
     <p xml:lang="sl">Kup vam lahko pomaga pri spominjanju nenehnega zagotavljanja varnostnih kopij svojih osebnih datotek.Zagotavlja:</p>
@@ -83,6 +86,7 @@
       <li xml:lang="id">Arsip cadangan tambahan dengan penggunaan "bup".</li>
       <li xml:lang="it">Archivi di copie di sicurezza incrementali mediante l'uso di «bup».</li>
       <li xml:lang="nl">Incrementeel back-uparchief met gebruik van "bup".</li>
+      <li xml:lang="pl">Przyrostowe archiwa kopii zapasowych z użyciem "bup".</li>
       <li xml:lang="pt">Cópias de segurança incrementais com o uso do "bup".</li>
       <li xml:lang="pt-BR">Arquivo de backup incremental com o uso do "bup".</li>
       <li xml:lang="sl">Inkrementalno varnostno arhiviranje z uporabo programa "bup".</li>
@@ -103,6 +107,7 @@
       <li xml:lang="id">Folder-folder yang tersinkronisasikan dengan penggunaan "rsync".</li>
       <li xml:lang="it">Cartelle sincronizzate mediante l'uso di «rsync».</li>
       <li xml:lang="nl">Gesynchroniseerde mappen met gebruik van "rsync".</li>
+      <li xml:lang="pl">Synchronizowane katalogi z użyciem "rsync".</li>
       <li xml:lang="pt">Pastas sincronizadas com o uso do "rsync".</li>
       <li xml:lang="pt-BR">Pastas sincronizadas com o uso do "rsync".</li>
       <li xml:lang="ro">Dosare sincronizate prin folosirea „rsync”.</li>
@@ -124,6 +129,7 @@
       <li xml:lang="id">Dukungan untuk filesystem lokal atau penyimpanan usb eksternal.</li>
       <li xml:lang="it">Supporto per file i filesystem locali oppure per le memorie usb esterne.</li>
       <li xml:lang="nl">Ondersteuning voor een lokale bestandssysteem of externe usb-opslag.</li>
+      <li xml:lang="pl">Obsługę miejscowych systemów plików lub zewnętrznych pamięci USB</li>
       <li xml:lang="pt">Suporte para o sistema de ficheiros local ou para o armazenamento externo em USB.</li>
       <li xml:lang="pt-BR">Suporte a sistema de arquivos local e armazenamento USB externo.</li>
       <li xml:lang="sl">Podporo lokalnemu datotečnemu sistemu ali zunanji hrambi USB.</li>
@@ -143,6 +149,7 @@
       <li xml:lang="id">Memantau ketersediaan tujuan cadangan, seperti misalnya tempat penyimpanan jaringan yang terkaitkan.</li>
       <li xml:lang="it">Controllo della disponibilità delle destinazioni della copia di sicurezza, ad esempio delle unità di memorizzazione di rete montate.</li>
       <li xml:lang="nl">Beschikbaarheid van bestemmingen voor back-ups te monitoren, zoals bijvoorbeeld voor aangekoppelde netwerkopslag.</li>
+      <li xml:lang="pl">Monitorowanie dostępności miejsc tworzenia kopii zapasowych, takich jak np. podpięte sieciowe urządzenie przechowywania.</li>
       <li xml:lang="pt">Monitorização da disponibilidade dos destinos das cópias de segurança, como por exemplo um armazenamento na rede montado.</li>
       <li xml:lang="pt-BR">Monitore a disponibilidade dos destinos de backup, como, por exemplo, um armazenamento de rede montado.</li>
       <li xml:lang="sl">Nadzoruje razpoložljivost rezervnih ciljev varnostnih kopij, kot je na primer nameščen omrežni disk.</li>
@@ -162,6 +169,7 @@
       <li xml:lang="id">Integrasi ke dalam desktop Plasma KDE.</li>
       <li xml:lang="it">Integrazione col desktop Plasma di KDE.</li>
       <li xml:lang="nl">Integratie in het bureaublad Plasma van KDE.</li>
+      <li xml:lang="pl">Współpracę z pulpitem KDE Plazmy.</li>
       <li xml:lang="pt">Integração na área de trabalho Plasma do KDE.</li>
       <li xml:lang="pt-BR">Integração com a área de trabalho Plasma.</li>
       <li xml:lang="ro">Integrarea în biroul KDE Plasma.</li>
@@ -192,6 +200,7 @@
   <developer_name xml:lang="id">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="it">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="nl">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+  <developer_name xml:lang="pl">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="pt">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="pt-BR">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="ro">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
