@@ -18,7 +18,7 @@ int main(int pArgCount, char **pArgArray) {
 
 	KLocalizedString::setApplicationDomain("kup");
 
-	KAboutData lAbout(QStringLiteral("kuppurger"), xi18nc("@title", "Purger"), QStringLiteral("0.8.0"),
+	KAboutData lAbout(QStringLiteral("kuppurger"), xi18nc("@title", "Purger"), QStringLiteral("0.9.0"),
 	                  i18n("Purger for bup archives."),
 	                  KAboutLicense::GPL, i18n("Copyright (C) 2013-2021 Simon Persson"));
 	lAbout.addAuthor(i18n("Simon Persson"), i18n("Maintainer"), "simon.persson@mykolab.com");
