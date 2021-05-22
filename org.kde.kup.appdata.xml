@@ -217,6 +217,7 @@
     <category>System</category>
   </categories>
   <releases>
-    <release version="0.8" date="2020-06-02"/>
+    <release version="0.8.0" date="2020-06-02"/>
+    <release version="0.9.0" date="2021-05-22"/>
   </releases>
 </component>
