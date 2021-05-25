@@ -23,6 +23,7 @@ Description[eu]=Bup backup gordetegietarako «kioslave» bat
 Description[fi]=KIO-asiakas bup-varmuuskopiolähteille
 Description[fr]=Un module d'entrées / sorties pour vos dépôts de sauvegarde de Kup
 Description[it]=Un kioslave per i depositi delle copie di sicurezza di bup
+Description[ko]=bup 백업 저장소용 KIO 슬레이브
 Description[nl]=Een kioslave voor bup back-up-opslagruimten
 Description[pl]=kioslave dla repozytoriów kopii zapasowych bup
 Description[pt]=Um 'kioslave' para os repositórios de cópias de segurança do 'bup'
