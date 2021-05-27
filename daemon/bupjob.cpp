@@ -234,7 +234,11 @@ void BupJob::slotReadBupErrors() {
 	ulong lSpeedKBps = 0, lPercent = 0;
 	QString lFileName;
 	const auto lInput = QString::fromUtf8(mSaveProcess.readAllStandardError());
+#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
+	const auto lLines = lInput.split(mLineBreaksRegExp, QString::SkipEmptyParts);
+#else
 	const auto lLines = lInput.split(mLineBreaksRegExp, Qt::SkipEmptyParts);
+#endif
 	for(const QString &lLine: lLines) {
 		qCDebug(KUPDAEMON) << lLine;
 		if(mNonsenseRegExp.match(lLine).hasMatch()) {
