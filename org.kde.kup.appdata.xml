@@ -35,6 +35,7 @@
   <summary>Backup scheduler for KDE's Plasma desktop</summary>
   <summary xml:lang="ca">Planificador de la còpia de seguretat per a l'escriptori Plasma del KDE</summary>
   <summary xml:lang="ca-valencia">Planificador de la còpia de seguretat per a l'escriptori Plasma del KDE</summary>
+  <summary xml:lang="de">Sicherungsplaner für die KDE-Plasma-Arbeitsfläche</summary>
   <summary xml:lang="en-GB">Backup scheduler for KDE's Plasma desktop</summary>
   <summary xml:lang="es">Organizador de copias de seguridad para el escritorio KDE Plasma</summary>
   <summary xml:lang="et">KDE Plasma töölaua varukoopiate tegemise ajakava</summary>
@@ -59,6 +60,7 @@
     <p>Kup can help you remember to keep up-to-date backups of your personal files. It provides:</p>
     <p xml:lang="ca">El Kup ajuda a recordar el mantenir actualitzades les còpies de seguretat dels fitxers personals. Proporciona:</p>
     <p xml:lang="ca-valencia">El Kup ajuda a recordar el mantindre actualitzades les còpies de seguretat dels fitxers personals. Proporciona:</p>
+    <p xml:lang="de">Kup kann Ihnen dabei helfen, aktuelle Sicherungen Ihrer persönlichen Dateien aufzubewahren. Es bietet folgendes:</p>
     <p xml:lang="en-GB">Kup can help you remember to keep up-to-date backups of your personal files. It provides:</p>
     <p xml:lang="es">Kup puede ayudarle a mantener copias de seguridad actualizadas de sus archivos personales. Proporciona:</p>
     <p xml:lang="et">Kup aitab sul meeles pidada vajadust varundada aegsasti oma isiklikke faile. See võimaldab:</p>
@@ -81,6 +83,7 @@
       <li>Incremental backup archive with the use of "bup".</li>
       <li xml:lang="ca">Arxiu per a còpia de seguretat incremental emprant «bup».</li>
       <li xml:lang="ca-valencia">Arxiu per a còpia de seguretat incremental emprant «bup».</li>
+      <li xml:lang="de">Inkrementelles Sicherungsarchiv mit der Verwendung von „bup“.</li>
       <li xml:lang="en-GB">Incremental backup archive with the use of "bup".</li>
       <li xml:lang="es">Copias de seguridad incrementales usando «bup».</li>
       <li xml:lang="et">Inkrementvarundamist "bup" abil.</li>
@@ -103,6 +106,7 @@
       <li>Synchronized folders with the use of "rsync".</li>
       <li xml:lang="ca">Carpetes sincronitzades emprant «rsync».</li>
       <li xml:lang="ca-valencia">Carpetes sincronitzades emprant «rsync».</li>
+      <li xml:lang="de">Abgleich von Ordnern mit Hilfe von „rsync“.</li>
       <li xml:lang="en-GB">Synchronised folders with the use of "rsync".</li>
       <li xml:lang="es">Carpetas sincronizadas usando «rsync»</li>
       <li xml:lang="et">Kataloogide sünkroonimist "rsync" abil.</li>
@@ -126,6 +130,7 @@
       <li>Support for local filesystem or external usb storage.</li>
       <li xml:lang="ca">Suport per a sistema de fitxers local o emmagatzematge extern USB.</li>
       <li xml:lang="ca-valencia">Suport per a sistema de fitxers local o emmagatzematge extern USB.</li>
+      <li xml:lang="de">Unterstützung für lokale Dateisysteme oder externen USB-Speicher.</li>
       <li xml:lang="en-GB">Support for local filesystem or external USB storage.</li>
       <li xml:lang="es">Soporte para sistema de archivos local o almacenaje USB externo.</li>
       <li xml:lang="et">Salvestamist kohalikku failisüsteemi või välisele USB-pulgale.</li>
@@ -147,6 +152,7 @@
       <li>Monitor availability of backup destinations, like for example a mounted network storage.</li>
       <li xml:lang="ca">Supervisa la disponibilitat de les destinacions per a còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
       <li xml:lang="ca-valencia">Supervisa la disponibilitat de les destinacions per a còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
+      <li xml:lang="de">Überwachung der Verfügbarkeit von Sicherungszielen, wie z. B. einem eingehänten Netzwerkspeicher.</li>
       <li xml:lang="en-GB">Monitor availability of backup destinations, like for example a mounted network storage.</li>
       <li xml:lang="es">Monitorización de disponibilidad de destinos para las copias de seguridad, como por ejemplo almacenamiento de red.</li>
       <li xml:lang="et">Varundamise sihtkohtade saadavuse jälgimist, mis on oluline näiteks ühendamist vajava võrgusalvesti puhul.</li>
@@ -168,6 +174,7 @@
       <li>Integration into KDE's Plasma desktop.</li>
       <li xml:lang="ca">Integració amb l'escriptori Plasma del KDE.</li>
       <li xml:lang="ca-valencia">Integració amb l'escriptori Plasma del KDE.</li>
+      <li xml:lang="de">Integration in die KDE-Plasma-Arbeitsfläche.</li>
       <li xml:lang="en-GB">Integration into KDE's Plasma desktop.</li>
       <li xml:lang="es">Integración con el escritorio KDE Plasma.</li>
       <li xml:lang="et">Lõimimist KDE Plasma töölauga.</li>
