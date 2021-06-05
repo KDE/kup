@@ -16,7 +16,7 @@
 #include <Solid/StorageVolume>
 
 EDExecutor::EDExecutor(BackupPlan *pPlan, KupDaemon *pKupDaemon)
-   :PlanExecutor(pPlan, pKupDaemon), mStorageAccess(nullptr), mWantsToRunBackup(false), mWantsToShowFiles(false)
+   :PlanExecutor(pPlan, pKupDaemon), mStorageAccess(nullptr), mWantsToRunBackup(false), mWantsToShowFiles(false), mWantsToPurge(false)
 {
 	connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceAdded(QString)), SLOT(deviceAdded(QString)));
 	connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceRemoved(QString)), SLOT(deviceRemoved(QString)));
