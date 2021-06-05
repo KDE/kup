@@ -25,7 +25,6 @@ KF5::I18n
 LibGit2::LibGit2
 )
 
-install(TARGETS kio_bup DESTINATION ${PLUGIN_INSTALL_DIR})
-install(FILES bup.protocol DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS kio_bup DESTINATION ${PLUGIN_INSTALL_DIR}/kf5/kio)
 
 add_definitions(-fexceptions)

@@ -1,0 +1,30 @@
+{
+    "KDE-KIO-Protocols": {
+        "bup": {
+            "Class": ":local",
+            "Icon": "folder-important",
+            "deleting": false,
+            "input": "filesystem",
+            "linking": false,
+            "listing": [
+                "Name",
+                "Type",
+                "Size",
+                "Date",
+                "AccessDate",
+                "Access",
+                "Owner",
+                "Group",
+                "Link"
+            ],
+            "makedir": false,
+            "moving": false,
+            "opening": true,
+            "output": "filesystem",
+            "protocol": "bup",
+            "reading": true,
+            "source": true,
+            "writing": false
+        }
+    }
+}

@@ -16,6 +16,13 @@ using namespace KIO;
 #include <grp.h>
 #include <pwd.h>
 
+// Pseudo plugin class to embed meta data
+class KIOPluginForMetaData : public QObject
+{
+    Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.kde.kio.slave.bup" FILE "bup.json")
+};
+
 class BupSlave : public SlaveBase
 {
 public:
@@ -367,3 +374,4 @@ extern "C" int Q_DECL_EXPORT kdemain(int pArgc, char **pArgv) {
 	return 0;
 }
 
+#include "bupslave.moc"
