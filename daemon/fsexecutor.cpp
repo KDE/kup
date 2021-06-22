@@ -15,6 +15,7 @@
 
 #include <fcntl.h>
 #include <sys/stat.h>
+#include <sys/select.h>
 
 namespace {
 
