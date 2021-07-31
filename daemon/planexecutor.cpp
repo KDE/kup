@@ -435,7 +435,6 @@ void PlanExecutor::showBackupFiles() {
 		return;
 	if(mPlan->mBackupType == BackupPlan::BupType) {
 		QStringList lArgs;
-		lArgs << QStringLiteral("--title") << mPlan->mDescription;
 		lArgs << mDestinationPath;
 		KProcess::startDetached(QStringLiteral("kup-filedigger"), lArgs);
 	} else if(mPlan->mBackupType == BackupPlan::RsyncType) {
@@ -448,7 +447,6 @@ void PlanExecutor::showBackupPurger() {
 		return;
 	}
 	QStringList lArgs;
-	lArgs << QStringLiteral("--title") << mPlan->mDescription;
 	lArgs << mDestinationPath;
 	KProcess::startDetached(QStringLiteral("kup-purger"), lArgs);
 }
