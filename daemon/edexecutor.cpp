@@ -106,6 +106,10 @@ bool EDExecutor::ensureAccessible(bool &pReturnLater) {
 			mDestinationPath = mStorageAccess->filePath();
 			mDestinationPath += QStringLiteral("/");
 			mDestinationPath += mPlan->mExternalDestinationPath;
+			QDir lDir(mDestinationPath);
+			if(!lDir.exists()) {
+				lDir.mkdir(mDestinationPath);
+			}
 			QFileInfo lDestinationInfo(mDestinationPath);
 			if(lDestinationInfo.exists() && lDestinationInfo.isDir()) {
 				return true; 

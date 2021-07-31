@@ -246,10 +246,6 @@ void PlanExecutor::startBackupSaveJob() {
 }
 
 void PlanExecutor::startBackup() {
-	QDir lDir(mDestinationPath);
-	if(!lDir.exists()) {
-		lDir.mkdir(mDestinationPath);
-	}
 	QFileInfo lInfo(mDestinationPath);
 	if(!lInfo.isWritable()) {
 		KNotification::event(KNotification::Error, xi18nc("@title:window", "Problem"),
