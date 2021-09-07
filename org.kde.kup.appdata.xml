@@ -81,7 +81,7 @@
     <p xml:lang="zh-CN">K 备份可以提醒您及时备份个人数据。它提供了：</p>
     <ul>
       <li>Incremental backup archive with the use of "bup".</li>
-      <li xml:lang="ca">Arxiu per a còpia de seguretat incremental emprant «bup».</li>
+      <li xml:lang="ca">Arxiu de còpia de seguretat incremental emprant «bup».</li>
       <li xml:lang="ca-valencia">Arxiu per a còpia de seguretat incremental emprant «bup».</li>
       <li xml:lang="de">Inkrementelles Sicherungsarchiv mit der Verwendung von „bup“.</li>
       <li xml:lang="en-GB">Incremental backup archive with the use of "bup".</li>
@@ -150,7 +150,7 @@
       <li xml:lang="x-test">xxSupport for local filesystem or external usb storage.xx</li>
       <li xml:lang="zh-CN">支持本机文件系统或外部 USB 存储。</li>
       <li>Monitor availability of backup destinations, like for example a mounted network storage.</li>
-      <li xml:lang="ca">Supervisa la disponibilitat de les destinacions per a còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
+      <li xml:lang="ca">Supervisa la disponibilitat de les destinacions de còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
       <li xml:lang="ca-valencia">Supervisa la disponibilitat de les destinacions per a còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
       <li xml:lang="de">Überwachung der Verfügbarkeit von Sicherungszielen, wie z. B. einem eingehänten Netzwerkspeicher.</li>
       <li xml:lang="en-GB">Monitor availability of backup destinations, like for example a mounted network storage.</li>
