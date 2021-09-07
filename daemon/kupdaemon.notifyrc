@@ -1,7 +1,7 @@
 [Global]
 IconName=kup
 Name=Kup Backup System
-Name[ca]=Sistema per a còpia de seguretat Kup
+Name[ca]=Sistema de còpia de seguretat Kup
 Name[ca@valencia]=Sistema per a còpia de seguretat Kup
 Name[cs]=Zálohovací systém Kup
 Name[de]=Kup-Sicherungssystem
