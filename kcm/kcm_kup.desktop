@@ -8,6 +8,7 @@ X-KDE-ParentApp=kcontrol
 X-KDE-System-Settings-Parent-Category=personalization
 
 Name=Backups
+Name[ar]=النسخ الاحتياطية
 Name[ca]=Còpies de seguretat
 Name[ca@valencia]=Còpies de seguretat
 Name[cs]=Zálohy
