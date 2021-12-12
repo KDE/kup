@@ -6,6 +6,7 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>Kup</name>
+  <name xml:lang="ar">كيوب</name>
   <name xml:lang="ca">Kup</name>
   <name xml:lang="ca-valencia">Kup</name>
   <name xml:lang="cs">Kup</name>
@@ -34,6 +35,7 @@
   <name xml:lang="zh-CN">K 备份</name>
   <name xml:lang="zh-TW">Kup</name>
   <summary>Backup scheduler for KDE's Plasma desktop</summary>
+  <summary xml:lang="ar">مجدول النسخ الاحتياطية لسطح مكتب بلازما من كدي</summary>
   <summary xml:lang="ca">Planificador de la còpia de seguretat per a l'escriptori Plasma del KDE</summary>
   <summary xml:lang="ca-valencia">Planificador de la còpia de seguretat per a l'escriptori Plasma del KDE</summary>
   <summary xml:lang="de">Sicherungsplaner für die KDE-Plasma-Arbeitsfläche</summary>
