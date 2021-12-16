@@ -1,6 +1,7 @@
 [Global]
 IconName=kup
 Name=Kup Backup System
+Name[ar]=نظام نسخ الاحتياطي كيوب
 Name[ca]=Sistema de còpia de seguretat Kup
 Name[ca@valencia]=Sistema de còpia de seguretat Kup
 Name[cs]=Zálohovací systém Kup
@@ -22,6 +23,7 @@ Name[uk]=Система резервного копіювання Kup
 Name[x-test]=xxKup Backup Systemxx
 Name[zh_CN]=K 备份系统
 Comment=Kup Backup System
+Comment[ar]=نظام نسخ الاحتياطي كيوب
 Comment[ca]=Sistema per a còpia de seguretat Kup
 Comment[ca@valencia]=Sistema per a còpia de seguretat Kup
 Comment[de]=Kup-Sicherungssystem
@@ -48,6 +50,7 @@ Comment[zh_TW]=Kup 備份系統
 
 [Event/StartBackup]
 Name=Start Saving Backup
+Name[ar]=ابدأ بأخذ نسخة احتياطية
 Name[ca]=Comença a desar la còpia de seguretat
 Name[ca@valencia]=Comença a guardar la còpia de seguretat
 Name[cs]=Započít ukládání zálohy
@@ -69,6 +72,7 @@ Name[uk]=Початок збереження резервної копії
 Name[x-test]=xxStart Saving Backupxx
 Name[zh_CN]=开始保存备份
 Comment=A question if user wants to start saving a backup
+Comment[ar]=سؤال إذا ما كان المستخدم يريد أخذ نسخة احتياطية
 Comment[ca]=Una pregunta per a si l'usuari vol començar a desar una còpia de seguretat
 Comment[ca@valencia]=Una pregunta per a si l'usuari vol començar a guardar una còpia de seguretat
 Comment[de]=Frage, ob der Benutzer das Speichern einer Sicherung starten möchte
@@ -93,6 +97,7 @@ Urgency=Normal
 
 [Event/BackupSucceeded]
 Name=Backup Succeeded
+Name[ar]=نجح في أخذ نسخة احتياطية
 Name[ca]=La còpia de seguretat ha tingut èxit
 Name[ca@valencia]=La còpia de seguretat ha tingut èxit
 Name[cs]=Zálohování bylo úspěšné
@@ -114,6 +119,7 @@ Name[uk]=Резервну копію успішно створено
 Name[x-test]=xxBackup Succeededxx
 Name[zh_CN]=备份成功
 Comment=Saving of backup successfully completed
+Comment[ar]=انتهى بنجاح أخذ نسخة احتياطية
 Comment[ca]=S'ha finalitzat correctament el desament de la còpia de seguretat
 Comment[ca@valencia]=S'ha finalitzat correctament el desament de la còpia de seguretat
 Comment[de]=Speichern der Sicherung erfolgreich abgeschlossen
@@ -141,6 +147,7 @@ Urgency=Normal
 
 [Event/BackupFailed]
 Name=Backup Failed
+Name[ar]=فشل حفظ النسخة الاحتياطية
 Name[ca]=Ha fallat la còpia de seguretat
 Name[ca@valencia]=Ha fallat la còpia de seguretat
 Name[cs]=Zálohování selhalo
@@ -162,6 +169,7 @@ Name[uk]=Не вдалося виконати резервне копіюван�
 Name[x-test]=xxBackup Failedxx
 Name[zh_CN]=备份失败
 Comment=Saving of backup failed, offer user to see log file
+Comment[ar]=فشل حفظ النسخة الاحتياطية، يعرض للمستخدم تفحص السجل
 Comment[ca]=Ha fallat el desament de la còpia de seguretat, s'ofereix a l'usuari el fitxer de registre
 Comment[ca@valencia]=Ha fallat el desament de la còpia de seguretat, s'ofereix a l'usuari el fitxer de registre
 Comment[de]=Speicherung der Sicherung ist fehlgeschlagen, der Benutzer kann die Protokolldatei lesen
@@ -188,6 +196,7 @@ Urgency=Normal
 
 [Event/IntegrityCheckCompleted]
 Name=Integrity Check Completed
+Name[ar]=انتهى فحص السلامة
 Name[ca]=S'ha completat el control de la integritat
 Name[ca@valencia]=S'ha completat el control de la integritat
 Name[cs]=Kontrola neporušenosti dokončena
@@ -209,6 +218,7 @@ Name[uk]=Перевірку цілісності завершено
 Name[x-test]=xxIntegrity Check Completedxx
 Name[zh_CN]=完整性检查完成
 Comment=Finished checking integrity of backup archive
+Comment[ar]=انتهى فحص سلامة النسخة الاحتياطية
 Comment[ca]=S'ha acabat de verificar la integritat de l'arxiu de còpia de seguretat
 Comment[ca@valencia]=S'ha acabat de verificar la integritat de l'arxiu de còpia de seguretat
 Comment[de]=Integritätsprüfung des Sicherungsarchivs abgeschlossen
@@ -236,6 +246,7 @@ Urgency=Normal
 
 [Event/RepairCompleted]
 Name=Repair Completed
+Name[ar]=اكتمل الإصلاح
 Name[ca]=Reparació finalitzada
 Name[ca@valencia]=Reparació finalitzada
 Name[cs]=Oprava dokončena
@@ -257,6 +268,7 @@ Name[uk]=Виправлення завершено
 Name[x-test]=xxRepair Completedxx
 Name[zh_CN]=修复完成
 Comment=Finished repairing backup archive
+Comment[ar]=انتهى إصلاح أرشيف النسخة الاحتياطية
 Comment[ca]=S'ha acabat la reparació de l'arxiu de còpia de seguretat
 Comment[ca@valencia]=S'ha acabat la reparació de l'arxiu de còpia de seguretat
 Comment[de]=Reparatur des Sicherungsarchivs abgeschlossen

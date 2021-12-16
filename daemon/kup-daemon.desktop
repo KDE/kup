@@ -27,6 +27,7 @@ Name[x-test]=xxKupxx
 Name[zh_CN]=K 备份
 Name[zh_TW]=Kup
 GenericName=Backup Monitor
+GenericName[ar]=مراقب كيوب
 GenericName[ca]=Supervisor per a còpia de seguretat
 GenericName[ca@valencia]=Supervisor per a còpia de seguretat
 GenericName[de]=Sicherungs-Überwachung
