@@ -62,6 +62,7 @@
   <summary xml:lang="zh-TW">KDE Plasma 桌面的備份排程工具</summary>
   <description>
     <p>Kup can help you remember to keep up-to-date backups of your personal files. It provides:</p>
+    <p xml:lang="ar">يمكن أن يساعدك كيوب على تذكر الاحتفاظ بنسخ احتياطية محدثة من ملفاتك الشخصية.أنه يوفر:</p>
     <p xml:lang="ca">El Kup ajuda a recordar que cal actualitzar les còpies de seguretat dels fitxers personals. Proporciona:</p>
     <p xml:lang="ca-valencia">El Kup ajuda a recordar que cal actualitzar les còpies de seguretat dels fitxers personals. Proporciona:</p>
     <p xml:lang="de">Kup kann Ihnen dabei helfen, aktuelle Sicherungen Ihrer persönlichen Dateien aufzubewahren. Es bietet folgendes:</p>
@@ -86,6 +87,7 @@
     <p xml:lang="zh-CN">K 备份可以提醒您及时备份个人数据。它提供了：</p>
     <ul>
       <li>Incremental backup archive with the use of "bup".</li>
+      <li xml:lang="ar">أرشيف احتياطي تزايدي باستخدام "bup".</li>
       <li xml:lang="ca">Arxiu de còpia de seguretat incremental emprant «bup».</li>
       <li xml:lang="ca-valencia">Arxiu de còpia de seguretat incremental emprant «bup».</li>
       <li xml:lang="de">Inkrementelles Sicherungsarchiv mit der Verwendung von „bup“.</li>
@@ -110,6 +112,7 @@
       <li xml:lang="zh-CN">bup 增量备份归档功能。</li>
       <li xml:lang="zh-TW">使用「bup」增量備份封存檔。</li>
       <li>Synchronized folders with the use of "rsync".</li>
+      <li xml:lang="ar">مجلدات متزامنة باستخدام "rsync".</li>
       <li xml:lang="ca">Carpetes sincronitzades emprant «rsync».</li>
       <li xml:lang="ca-valencia">Carpetes sincronitzades emprant «rsync».</li>
       <li xml:lang="de">Abgleich von Ordnern mit Hilfe von „rsync“.</li>
@@ -135,6 +138,7 @@
       <li xml:lang="zh-CN">rsync 同步文件夹功能。</li>
       <li xml:lang="zh-TW">使用「rsync」同步資料夾。</li>
       <li>Support for local filesystem or external usb storage.</li>
+      <li xml:lang="ar">دعم لأخذ نسخ احتياطية على نظام الملفات المحلي أو تخزين USB خارجي.</li>
       <li xml:lang="ca">Suport per a sistema de fitxers local o emmagatzematge extern USB.</li>
       <li xml:lang="ca-valencia">Suport per a sistema de fitxers local o emmagatzematge extern USB.</li>
       <li xml:lang="de">Unterstützung für lokale Dateisysteme oder externen USB-Speicher.</li>
@@ -158,6 +162,7 @@
       <li xml:lang="x-test">xxSupport for local filesystem or external usb storage.xx</li>
       <li xml:lang="zh-CN">支持本机文件系统或外部 USB 存储。</li>
       <li>Monitor availability of backup destinations, like for example a mounted network storage.</li>
+      <li xml:lang="ar">يراقب مدى توفر وجهات النسخ الاحتياطي ، على سبيل المثال ، التخزين الشبكي في حالة ضمه.</li>
       <li xml:lang="ca">Supervisa la disponibilitat de les destinacions de còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
       <li xml:lang="ca-valencia">Supervisa la disponibilitat de les destinacions de còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
       <li xml:lang="de">Überwachung der Verfügbarkeit von Sicherungszielen, wie z. B. einem eingehänten Netzwerkspeicher.</li>
@@ -181,6 +186,7 @@
       <li xml:lang="x-test">xxMonitor availability of backup destinations, like for example a mounted network storage.xx</li>
       <li xml:lang="zh-CN">监控备份目标可用性，比如挂载的网络存储。</li>
       <li>Integration into KDE's Plasma desktop.</li>
+      <li xml:lang="ar">يتكامل مع سطح مكتب بلازما من كدي</li>
       <li xml:lang="ca">Integració amb l'escriptori Plasma del KDE.</li>
       <li xml:lang="ca-valencia">Integració amb l'escriptori Plasma del KDE.</li>
       <li xml:lang="de">Integration in die KDE-Plasma-Arbeitsfläche.</li>
