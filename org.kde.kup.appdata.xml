@@ -37,7 +37,7 @@
   <summary>Backup scheduler for KDE's Plasma desktop</summary>
   <summary xml:lang="ar">مجدول النسخ الاحتياطية لسطح مكتب بلازما من كدي</summary>
   <summary xml:lang="ca">Planificador de la còpia de seguretat per a l'escriptori Plasma del KDE</summary>
-  <summary xml:lang="ca-valencia">Planificador de la còpia de seguretat per a l'escriptori Plasma del KDE</summary>
+  <summary xml:lang="ca-valencia">Planificador de la còpia de seguretat per a l'escriptori Plasma de KDE</summary>
   <summary xml:lang="de">Sicherungsplaner für die KDE-Plasma-Arbeitsfläche</summary>
   <summary xml:lang="en-GB">Backup scheduler for KDE's Plasma desktop</summary>
   <summary xml:lang="es">Organizador de copias de seguridad para el escritorio KDE Plasma</summary>
@@ -188,7 +188,7 @@
       <li>Integration into KDE's Plasma desktop.</li>
       <li xml:lang="ar">يتكامل مع سطح مكتب بلازما من كدي</li>
       <li xml:lang="ca">Integració amb l'escriptori Plasma del KDE.</li>
-      <li xml:lang="ca-valencia">Integració amb l'escriptori Plasma del KDE.</li>
+      <li xml:lang="ca-valencia">Integració amb l'escriptori Plasma de KDE.</li>
       <li xml:lang="de">Integration in die KDE-Plasma-Arbeitsfläche.</li>
       <li xml:lang="en-GB">Integration into KDE's Plasma desktop.</li>
       <li xml:lang="es">Integración con el escritorio KDE Plasma.</li>
