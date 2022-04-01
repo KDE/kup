@@ -162,11 +162,11 @@ void KupKcm::save() {
 			lManager->updateSettings();
 			mStatusWidgets.at(i)->updateIcon();
 			if(lPlan->mDestinationType == 1 && lPlan->mExternalUUID.isEmpty()) {
-				KMessageBox::information(this, xi18nc("@title:window", "Warning"),
-				                         xi18nc("@info %1 is the name of the backup plan",
-				                                "%1 does not have a destination!<nl/>"
-				                                "No backups will be saved by this plan.",
-				                                lPlan->mDescription),
+				KMessageBox::information(this, xi18nc("@info %1 is the name of the backup plan",
+				                                      "%1 does not have a destination!<nl/>"
+				                                      "No backups will be saved by this plan.",
+				                                      lPlan->mDescription),
+				                         xi18nc("@title:window", "Warning"),
 				                         QString(), KMessageBox::Dangerous);
 			}
 		}
