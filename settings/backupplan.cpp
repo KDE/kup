@@ -83,6 +83,7 @@ void BackupPlan::setPlanNumber(int pPlanNumber) {
 
 void BackupPlan::removePlanFromConfig() {
 	config()->deleteGroup(QString(QStringLiteral("Plan/%1")).arg(mPlanNumber));
+	save();
 }
 
 void BackupPlan::copyFrom(const BackupPlan &pPlan) {
