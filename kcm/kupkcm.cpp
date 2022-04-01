@@ -156,6 +156,7 @@ void KupKcm::save() {
 				// new group name. If all settings for the plan already was default then
 				// nothing was saved anyway, either under old or new group name.
 				lPlan->setDefaults();
+				lPlan->save();
 			}
 			mPlanWidgets.at(i)->saveExtraData();
 			lManager->updateSettings();
