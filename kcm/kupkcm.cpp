@@ -294,7 +294,8 @@ void KupKcm::createPlanWidgets(int pIndex) {
 	mPlanWidgets[pIndex] = lPlanWidget;
 	mStackedLayout->insertWidget(pIndex + 1, lPlanWidget);
 	mStatusWidgets[pIndex] = lStatusWidget;
-	mVerticalLayout->insertWidget(pIndex, lStatusWidget);
+	// always insert at end, before the file digger button and strech space at the bottom.
+	mVerticalLayout->insertWidget(mVerticalLayout->count() - 2, lStatusWidget);
 }
 
 void KupKcm::completelyRemovePlan(int pIndex) {
