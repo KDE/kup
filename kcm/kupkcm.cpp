@@ -146,31 +146,7 @@ void KupKcm::save() {
 	for(int i=0; i < mPlans.count(); ++i) {
 		lPlan = mPlans.at(i);
 		lManager = mConfigManagers.at(i);
-		if(lManager != nullptr) {
-			if(lPlansRemoved != 0) {
-				lPlan->removePlanFromConfig();
-				lPlan->setPlanNumber(i + 1);
-				// config manager does not detect a changed group name of the config items.
-				// To work around, read default settings - config manager will then notice
-				// changed values and save current widget status into the config using the
-				// new group name. If all settings for the plan already was default then
-				// nothing was saved anyway, either under old or new group name.
-				lPlan->setDefaults();
-				lPlan->save();
-			}
-			mPlanWidgets.at(i)->saveExtraData();
-			lManager->updateSettings();
-			mStatusWidgets.at(i)->updateIcon();
-			if(lPlan->mDestinationType == 1 && lPlan->mExternalUUID.isEmpty()) {
-				KMessageBox::information(this, xi18nc("@info %1 is the name of the backup plan",
-				                                      "%1 does not have a destination!<nl/>"
-				                                      "No backups will be saved by this plan.",
-				                                      lPlan->mDescription),
-				                         xi18nc("@title:window", "Warning"),
-				                         QString(), KMessageBox::Dangerous);
-			}
-		}
-		else {
+		if(lManager == nullptr) {
 			lPlan->removePlanFromConfig();
 			delete mPlans.takeAt(i);
 			mConfigManagers.removeAt(i);
@@ -178,6 +154,29 @@ void KupKcm::save() {
 			delete mPlanWidgets.takeAt(i);
 			++lPlansRemoved;
 			--i;
+			continue;
+		}
+		if(lPlansRemoved != 0) {
+			lPlan->removePlanFromConfig();
+			lPlan->setPlanNumber(i + 1);
+			// config manager does not detect a changed group name of the config items.
+			// To work around, read default settings - config manager will then notice
+			// changed values and save current widget status into the config using the
+			// new group name. If all settings for the plan already was default then
+			// nothing was saved anyway, either under old or new group name.
+			lPlan->setDefaults();
+			lPlan->save();
+		}
+		mPlanWidgets.at(i)->saveExtraData();
+		lManager->updateSettings();
+		mStatusWidgets.at(i)->updateIcon();
+		if(lPlan->mDestinationType == 1 && lPlan->mExternalUUID.isEmpty()) {
+			KMessageBox::information(this, xi18nc("@info %1 is the name of the backup plan",
+			                                      "%1 does not have a destination!<nl/>"
+			                                      "No backups will be saved by this plan.",
+			                                      lPlan->mDescription),
+			                         xi18nc("@title:window", "Warning"),
+			                         QString(), KMessageBox::Dangerous);
 		}
 	}
 	mSettings->mNumberOfPlans = mPlans.count();
