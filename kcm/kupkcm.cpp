@@ -175,7 +175,7 @@ void KupKcm::save() {
 			delete mPlans.takeAt(i);
 			mConfigManagers.removeAt(i);
 			mStatusWidgets.removeAt(i);
-			mPlanWidgets.removeAt(i);
+			delete mPlanWidgets.takeAt(i);
 			++lPlansRemoved;
 			--i;
 		}
@@ -260,19 +260,22 @@ void KupKcm::createPlanWidgets(int pIndex) {
 	lConfigManager->setObjectName(objectName());
 	connect(lConfigManager, SIGNAL(widgetModified()), this, SLOT(updateChangedStatus()));
 	auto lStatusWidget = new PlanStatusWidget(mPlans.at(pIndex));
-	connect(lStatusWidget, &PlanStatusWidget::removeMe, this, [this,pIndex]{
-		if(pIndex < mSettings->mNumberOfPlans)
-			partiallyRemovePlan(pIndex);
+	connect(lStatusWidget, &PlanStatusWidget::removeMe, this, [this]{
+		int lIndex = mStatusWidgets.indexOf(qobject_cast<PlanStatusWidget*>(sender()));
+		if(lIndex < mSettings->mNumberOfPlans)
+			partiallyRemovePlan(lIndex);
 		else
-			completelyRemovePlan(pIndex);
+			completelyRemovePlan(lIndex);
 		updateChangedStatus();
 	});
-	connect(lStatusWidget, &PlanStatusWidget::configureMe, this, [this,pIndex]{
-		mStackedLayout->setCurrentIndex(pIndex + 1);
+	connect(lStatusWidget, &PlanStatusWidget::configureMe, this, [this]{
+		int lIndex = mStatusWidgets.indexOf(qobject_cast<PlanStatusWidget*>(sender()));
+		mStackedLayout->setCurrentIndex(lIndex + 1);
 	});
-	connect(lStatusWidget, &PlanStatusWidget::duplicateMe, this, [this,pIndex]{
+	connect(lStatusWidget, &PlanStatusWidget::duplicateMe, this, [this]{
+		int lIndex = mStatusWidgets.indexOf(qobject_cast<PlanStatusWidget*>(sender()));
 		auto lNewPlan = new BackupPlan(mPlans.count() + 1, mConfig, this);
-		lNewPlan->copyFrom(*mPlans.at(pIndex));
+		lNewPlan->copyFrom(*mPlans.at(lIndex));
 		mPlans.append(lNewPlan);
 		mConfigManagers.append(nullptr);
 		mPlanWidgets.append(nullptr);
@@ -296,8 +299,6 @@ void KupKcm::createPlanWidgets(int pIndex) {
 }
 
 void KupKcm::completelyRemovePlan(int pIndex) {
-	mVerticalLayout->removeWidget(mStatusWidgets.at(pIndex));
-	mStackedLayout->removeWidget(mPlanWidgets.at(pIndex));
 	delete mConfigManagers.takeAt(pIndex);
 	delete mStatusWidgets.takeAt(pIndex);
 	delete mPlanWidgets.takeAt(pIndex);
@@ -305,14 +306,10 @@ void KupKcm::completelyRemovePlan(int pIndex) {
 }
 
 void KupKcm::partiallyRemovePlan(int pIndex) {
-	mVerticalLayout->removeWidget(mStatusWidgets.at(pIndex));
-	mStackedLayout->removeWidget(mPlanWidgets.at(pIndex));
 	mConfigManagers.at(pIndex)->deleteLater();
 	mConfigManagers[pIndex] = nullptr;
 	mStatusWidgets.at(pIndex)->deleteLater();
 	mStatusWidgets[pIndex] = nullptr;
-	mPlanWidgets.at(pIndex)->deleteLater();
-	mPlanWidgets[pIndex] = nullptr;
 }
 
 #include "kupkcm.moc"
