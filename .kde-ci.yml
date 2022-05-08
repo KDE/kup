@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+
+Dependencies:
+- 'on': ['@all']
+  'require':
+    'frameworks/extra-cmake-modules': '@stable'
+    'frameworks/solid': '@stable'
+    'frameworks/kidletime': '@stable'
+    'frameworks/ki18n': '@stable'
+    'frameworks/knotifications': '@stable'
+    'frameworks/kcoreaddons': '@stable'
+    'frameworks/kdbusaddons': '@stable'
+    'frameworks/kconfig': '@stable'
+    'frameworks/kinit': '@stable'
+    'frameworks/kjobwidgets': '@stable'
+    'frameworks/plasma-framework': '@stable'
+    'frameworks/kwidgetsaddons': '@stable'
