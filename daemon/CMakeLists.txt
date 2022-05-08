@@ -29,8 +29,8 @@ ecm_qt_declare_logging_category(kupdaemon_SRCS
     DESCRIPTION "Kup Daemon"
 )
 
-kf5_add_kdeinit_executable(kup-daemon ${kupdaemon_SRCS})
-target_link_libraries(kdeinit_kup-daemon
+add_executable(kup-daemon ${kupdaemon_SRCS})
+target_link_libraries(kup-daemon
 Qt5::Core
 Qt5::DBus
 Qt5::Gui
@@ -48,7 +48,6 @@ KF5::DBusAddons
 
 ########### install files ###############
 install(TARGETS kup-daemon ${INSTALL_TARGETS_DEFAULT_ARGS})
-install(TARGETS kdeinit_kup-daemon ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES kup-daemon.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
 install(FILES kupdaemon.notifyrc DESTINATION ${KNOTIFYRC_INSTALL_DIR})
 

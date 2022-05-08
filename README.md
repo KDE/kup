@@ -44,7 +44,6 @@ To compile you need:
   - kidletime
   - knotifications
   - kconfig
-  - kinit
   - kjobwidgets
 
 Run from the source directory:

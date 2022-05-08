@@ -12,7 +12,7 @@
 #include <QApplication>
 #include <QCommandLineParser>
 
-extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
 	QApplication lApp(argc, argv);
 	QApplication::setQuitOnLastWindowClosed(false);
 	QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);

@@ -31,7 +31,6 @@ Notifications
 CoreAddons
 DBusAddons
 Config
-Init # needed for the kdeinit cmake macro
 JobWidgets
 Plasma
 WidgetsAddons
