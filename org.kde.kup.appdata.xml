@@ -64,7 +64,7 @@
     <p>Kup can help you remember to keep up-to-date backups of your personal files. It provides:</p>
     <p xml:lang="ar">يمكن أن يساعدك كيوب على تذكر الاحتفاظ بنسخ احتياطية محدثة من ملفاتك الشخصية.أنه يوفر:</p>
     <p xml:lang="ca">El Kup ajuda a recordar que cal actualitzar les còpies de seguretat dels fitxers personals. Proporciona:</p>
-    <p xml:lang="ca-valencia">Kup ajuda a recordar que cal actualitzar les còpies de seguretat dels fitxers personals. Proporciona:</p>
+    <p xml:lang="ca-valencia">Kup ajuda a recordar que cal actualisar les còpies de seguretat dels fitxers personals. Proporciona:</p>
     <p xml:lang="de">Kup kann Ihnen dabei helfen, aktuelle Sicherungen Ihrer persönlichen Dateien aufzubewahren. Es bietet folgendes:</p>
     <p xml:lang="en-GB">Kup can help you remember to keep up-to-date backups of your personal files. It provides:</p>
     <p xml:lang="es">Kup puede ayudarle a mantener copias de seguridad actualizadas de sus archivos personales. Proporciona:</p>
@@ -114,7 +114,7 @@
       <li>Synchronized folders with the use of "rsync".</li>
       <li xml:lang="ar">مجلدات متزامنة باستخدام "rsync".</li>
       <li xml:lang="ca">Carpetes sincronitzades emprant «rsync».</li>
-      <li xml:lang="ca-valencia">Carpetes sincronitzades emprant «rsync».</li>
+      <li xml:lang="ca-valencia">Carpetes sincronisades emprant «rsync».</li>
       <li xml:lang="de">Abgleich von Ordnern mit Hilfe von „rsync“.</li>
       <li xml:lang="en-GB">Synchronised folders with the use of "rsync".</li>
       <li xml:lang="es">Carpetas sincronizadas usando «rsync»</li>
