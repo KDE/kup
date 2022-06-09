@@ -64,7 +64,7 @@
     <p>Kup can help you remember to keep up-to-date backups of your personal files. It provides:</p>
     <p xml:lang="ar">يمكن أن يساعدك كيوب على تذكر الاحتفاظ بنسخ احتياطية محدثة من ملفاتك الشخصية.أنه يوفر:</p>
     <p xml:lang="ca">El Kup ajuda a recordar que cal actualitzar les còpies de seguretat dels fitxers personals. Proporciona:</p>
-    <p xml:lang="ca-valencia">Kup ajuda a recordar que cal actualisar les còpies de seguretat dels fichers personals. Proporciona:</p>
+    <p xml:lang="ca-valencia">Kup ajuda a recordar que cal actualisar les còpies de seguretat dels fitxers personals. Proporciona:</p>
     <p xml:lang="de">Kup kann Ihnen dabei helfen, aktuelle Sicherungen Ihrer persönlichen Dateien aufzubewahren. Es bietet folgendes:</p>
     <p xml:lang="en-GB">Kup can help you remember to keep up-to-date backups of your personal files. It provides:</p>
     <p xml:lang="es">Kup puede ayudarle a mantener copias de seguridad actualizadas de sus archivos personales. Proporciona:</p>
@@ -89,7 +89,7 @@
       <li>Incremental backup archive with the use of "bup".</li>
       <li xml:lang="ar">أرشيف احتياطي تزايدي باستخدام "bup".</li>
       <li xml:lang="ca">Arxiu de còpia de seguretat incremental emprant «bup».</li>
-      <li xml:lang="ca-valencia">Archiu de còpia de seguretat incremental emprant «bup».</li>
+      <li xml:lang="ca-valencia">Arxiu de còpia de seguretat incremental emprant «bup».</li>
       <li xml:lang="de">Inkrementelles Sicherungsarchiv mit der Verwendung von „bup“.</li>
       <li xml:lang="en-GB">Incremental backup archive with the use of "bup".</li>
       <li xml:lang="es">Copias de seguridad incrementales usando «bup».</li>
@@ -140,7 +140,7 @@
       <li>Support for local filesystem or external usb storage.</li>
       <li xml:lang="ar">دعم لأخذ نسخ احتياطية على نظام الملفات المحلي أو تخزين USB خارجي.</li>
       <li xml:lang="ca">Suport per a sistema de fitxers local o emmagatzematge extern USB.</li>
-      <li xml:lang="ca-valencia">Soport per a sistema de fichers local o almagasenada extern USB.</li>
+      <li xml:lang="ca-valencia">Soport per a sistema de fitxers local o almagasenada extern USB.</li>
       <li xml:lang="de">Unterstützung für lokale Dateisysteme oder externen USB-Speicher.</li>
       <li xml:lang="en-GB">Support for local filesystem or external USB storage.</li>
       <li xml:lang="es">Soporte para sistema de archivos local o almacenaje USB externo.</li>
