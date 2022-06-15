@@ -30,6 +30,7 @@
   <name xml:lang="sk">Kup</name>
   <name xml:lang="sl">Kup</name>
   <name xml:lang="sv">Kup</name>
+  <name xml:lang="tr">Kup</name>
   <name xml:lang="uk">Kup</name>
   <name xml:lang="x-test">xxKupxx</name>
   <name xml:lang="zh-CN">K 备份</name>
@@ -56,6 +57,7 @@
   <summary xml:lang="ro">Planificator de copii de rezervă pentru biroul KDE Plasma</summary>
   <summary xml:lang="sl">Planer izdelave varnostnih kopij za namizje KDE Plasma</summary>
   <summary xml:lang="sv">Schemaläggning av säkerhetskopiering för KDE:s Plasma-skrivbord</summary>
+  <summary xml:lang="tr">KDE'nin Plasma Masaüstü için yedek zamanlayıcı</summary>
   <summary xml:lang="uk">Засіб планування резервного копіювання для стільниці Плазми KDE</summary>
   <summary xml:lang="x-test">xxBackup scheduler for KDE's Plasma desktopxx</summary>
   <summary xml:lang="zh-CN">KDE Plasma 桌面的定期备份工具</summary>
@@ -82,6 +84,7 @@
     <p xml:lang="pt-BR">O Kup pode ajudá-lo a lembrar de manter backups atualizados de seus arquivos pessoais. Ele fornece:</p>
     <p xml:lang="sl">Kup vam lahko pomaga pri spominjanju nenehnega zagotavljanja varnostnih kopij svojih osebnih datotek.Zagotavlja:</p>
     <p xml:lang="sv">Kup kan hjälpa till att komma ihåg att ha aktuella säkerhetskopior av personliga filer. Det tillhandahåller:</p>
+    <p xml:lang="tr">Kup, kişisel dosyalarınızın güncel yedeklerini tutmanıza yardımcı olur. Sunduğu özellikler:</p>
     <p xml:lang="uk">Kup може допомогти вам у підтриманні актуальності резервних копій ваших особистих файлів. Програма має такі можливості:</p>
     <p xml:lang="x-test">xxKup can help you remember to keep up-to-date backups of your personal files. It provides:xx</p>
     <p xml:lang="zh-CN">K 备份可以提醒您及时备份个人数据。它提供了：</p>
@@ -107,6 +110,7 @@
       <li xml:lang="pt-BR">Arquivo de backup incremental com o uso do "bup".</li>
       <li xml:lang="sl">Inkrementalno varnostno arhiviranje z uporabo programa "bup".</li>
       <li xml:lang="sv">Inkrementellt säkerhetskopieringsarkiv med användning av "bup".</li>
+      <li xml:lang="tr">"bup" kullanarak artan yedek arşivi desteği.</li>
       <li xml:lang="uk">Створення нарощувальних резервних копій за допомогою програми bup.</li>
       <li xml:lang="x-test">xxIncremental backup archive with the use of "bup".xx</li>
       <li xml:lang="zh-CN">bup 增量备份归档功能。</li>
@@ -133,6 +137,7 @@
       <li xml:lang="ro">Dosare sincronizate prin folosirea „rsync”.</li>
       <li xml:lang="sl">Sinhronizirane mape z uporabo programa "rsync".</li>
       <li xml:lang="sv">Synkroniserade kataloger med användning av "rsync".</li>
+      <li xml:lang="tr">"rsync" kullararak eşzamanlanmış klasörler.</li>
       <li xml:lang="uk">Синхронізація тек за допомогою програми rsync.</li>
       <li xml:lang="x-test">xxSynchronized folders with the use of "rsync".xx</li>
       <li xml:lang="zh-CN">rsync 同步文件夹功能。</li>
@@ -158,6 +163,7 @@
       <li xml:lang="pt-BR">Suporte a sistema de arquivos local e armazenamento USB externo.</li>
       <li xml:lang="sl">Podporo lokalnemu datotečnemu sistemu ali zunanji hrambi USB.</li>
       <li xml:lang="sv">Stöd för lokala filsystem eller extern USB-lagring</li>
+      <li xml:lang="tr">Yerel dosya sistemi veya dış USB depolama desteği.</li>
       <li xml:lang="uk">Підтримка локальних файлових систем та зовнішніх сховищ даних USB.</li>
       <li xml:lang="x-test">xxSupport for local filesystem or external usb storage.xx</li>
       <li xml:lang="zh-CN">支持本机文件系统或外部 USB 存储。</li>
@@ -182,6 +188,7 @@
       <li xml:lang="pt-BR">Monitore a disponibilidade dos destinos de backup, como, por exemplo, um armazenamento de rede montado.</li>
       <li xml:lang="sl">Nadzoruje razpoložljivost rezervnih ciljev varnostnih kopij, kot je na primer nameščen omrežni disk.</li>
       <li xml:lang="sv">Övervakning av säkerhetskopieringsmål, som exempelvis monterad nätverkslagring.</li>
+      <li xml:lang="tr">Yedek konumlarının uygunluğunu izleme; örneğin takılı bir ağ depolama aygıtı gibi.</li>
       <li xml:lang="uk">Спостереження за доступністю місць зберігання резервних копій, зокрема змонтованих сховищ даних у локальній мережі.</li>
       <li xml:lang="x-test">xxMonitor availability of backup destinations, like for example a mounted network storage.xx</li>
       <li xml:lang="zh-CN">监控备份目标可用性，比如挂载的网络存储。</li>
@@ -207,6 +214,7 @@
       <li xml:lang="ro">Integrarea în biroul KDE Plasma.</li>
       <li xml:lang="sl">Integracija v namizje KDE Plasma.</li>
       <li xml:lang="sv">Integration med KDE:s Plasma-skrivbord.</li>
+      <li xml:lang="tr">KDE Plasma Masaüstü ile tümleştirme.</li>
       <li xml:lang="uk">Інтеграція із стільницею Плазми KDE.</li>
       <li xml:lang="x-test">xxIntegration into KDE's Plasma desktop.xx</li>
       <li xml:lang="zh-CN">KDE Plasma 桌面整合。</li>
@@ -242,6 +250,7 @@
   <developer_name xml:lang="ro">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="sl">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="sv">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+  <developer_name xml:lang="tr">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="uk">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="x-test">xxSimon Persson &lt;simon.persson@mykolab.com&gt;xx</developer_name>
   <developer_name xml:lang="zh-CN">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
