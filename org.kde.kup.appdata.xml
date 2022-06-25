@@ -170,7 +170,7 @@
       <li>Monitor availability of backup destinations, like for example a mounted network storage.</li>
       <li xml:lang="ar">يراقب مدى توفر وجهات النسخ الاحتياطي ، على سبيل المثال ، التخزين الشبكي في حالة ضمه.</li>
       <li xml:lang="ca">Supervisa la disponibilitat de les destinacions de còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
-      <li xml:lang="ca-valencia">Supervisa la disponibilitat de les destinacions de còpia de seguretat, com ara un emmagatzematge de ret muntat.</li>
+      <li xml:lang="ca-valencia">Supervisa la disponibilitat de les destinacions de còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
       <li xml:lang="de">Überwachung der Verfügbarkeit von Sicherungszielen, wie z. B. einem eingehänten Netzwerkspeicher.</li>
       <li xml:lang="en-GB">Monitor availability of backup destinations, like for example a mounted network storage.</li>
       <li xml:lang="es">Monitorización de disponibilidad de destinos para las copias de seguridad, como por ejemplo almacenamiento de red.</li>
