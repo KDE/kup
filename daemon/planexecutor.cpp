@@ -12,10 +12,10 @@
 
 #include <KDiskFreeSpaceInfo>
 #include <KIO/DirectorySizeJob>
+#include <KIO/OpenUrlJob>
 #include <KFormat>
 #include <KLocalizedString>
 #include <KNotification>
-#include <KRun>
 #include <QDBusConnection>
 #include <QDBusReply>
 #include <QDir>
@@ -205,7 +205,8 @@ void PlanExecutor::notifyBackupSucceeded() {
 }
 
 void PlanExecutor::showLog() {
-	KRun::runUrl(QUrl::fromLocalFile(mLogFilePath), QStringLiteral("text/x-log"), nullptr, KRun::RunFlags());
+	auto *job = new KIO::OpenUrlJob(QUrl(mLogFilePath), QStringLiteral("text/x-log"));
+	job->start();
 }
 
 void PlanExecutor::startIntegrityCheck() {
@@ -438,7 +439,8 @@ void PlanExecutor::showBackupFiles() {
 		lArgs << mDestinationPath;
 		KProcess::startDetached(QStringLiteral("kup-filedigger"), lArgs);
 	} else if(mPlan->mBackupType == BackupPlan::RsyncType) {
-		KRun::runUrl(QUrl::fromLocalFile(mDestinationPath), QStringLiteral("inode/directory"), nullptr, KRun::RunFlags());
+		auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(mDestinationPath));
+		job->start();
 	}
 }
 

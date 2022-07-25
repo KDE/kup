@@ -12,7 +12,6 @@
 
 class KupDaemon;
 
-class KRun;
 class KNotification;
 class KProcess;
 

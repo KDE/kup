@@ -5,7 +5,9 @@
 cmake_minimum_required(VERSION 3.0)
 cmake_policy(SET CMP0063 NEW)
 
-find_package(ECM REQUIRED NO_MODULE)
+set(KF_MIN_VERSION "5.71.0")
+
+find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 project(kup)
@@ -23,7 +25,7 @@ include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
 
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
-find_package(KF5 REQUIRED COMPONENTS
+find_package(KF5 ${KF_MIN_VERSION} REQUIRED COMPONENTS
 Solid
 KIO
 IdleTime

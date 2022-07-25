@@ -12,9 +12,10 @@
 #include <KFilePlacesView>
 #include <KFilePlacesModel>
 #include <KGuiItem>
+#include <KIO/OpenUrlJob>
+#include <KIO/JobUiDelegate>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KRun>
 #include <KStandardAction>
 #include <KToolBar>
 
@@ -49,9 +50,12 @@ void FileDigger::updateVersionModel(const QModelIndex &pCurrent, const QModelInd
 }
 
 void FileDigger::open(const QModelIndex &pIndex) {
-	KRun::runUrl(pIndex.data(VersionBupUrlRole).toUrl(),
-	             pIndex.data(VersionMimeTypeRole).toString(), this, KRun::RunFlags());
 
+	auto *job = new KIO::OpenUrlJob(pIndex.data(VersionBupUrlRole).toUrl(),
+	             pIndex.data(VersionMimeTypeRole).toString());
+	auto *delegate = new KIO::JobUiDelegate(KIO::JobUiDelegate::AutoHandlingEnabled, this);
+	job->setUiDelegate(delegate);
+	job->start();
 }
 
 void FileDigger::restore(const QModelIndex &pIndex) {

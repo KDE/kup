@@ -27,11 +27,11 @@
 #include <KComboBox>
 #include <KConfigDialogManager>
 #include <KConfigGroup>
+#include <KIO/OpenUrlJob>
 #include <KLineEdit>
 #include <KLocalizedString>
 #include <KMessageWidget>
 #include <KPageWidget>
-#include <KRun>
 #include <KUrlCompletion>
 #include <KUrlRequester>
 #include <utility>
@@ -872,10 +872,12 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available) {
 	lExcludesLabel->setTextFormat(Qt::RichText);
 	lExcludesLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
 	connect(lExcludesLabel, &QLabel::linkActivated, this, [this](QString pLink){
-		// call runUrl ourselves instead of QLabel and QDesktopService doing it, just
+		// open the URL ourselves instead of QLabel and QDesktopService doing it, just
 		// so that we can give a .html file ending to the temp file. Required for QWebEngine
 		// to understand that the file has html content. Firefox works either way.
-		KRun::runUrl(QUrl(pLink), QStringLiteral("text/html"), this, KRun::RunFlags(), QStringLiteral("manpage.html"));
+		auto *job = new KIO::OpenUrlJob(QUrl(pLink));
+		job->setSuggestedFileName("manpage.html");
+		job->start();
 	});
 	auto lLabelUpdater = [lExcludesLabel](bool pVersioned){
 		QString lHelpUrl = pVersioned ? QStringLiteral("man:///bup-index") : QStringLiteral("man:///rsync");

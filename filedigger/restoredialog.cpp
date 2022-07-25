@@ -10,13 +10,14 @@
 #include "kupfiledigger_debug.h"
 
 #include <KIO/CopyJob>
+#include <KIO/OpenUrlJob>
+#include <KIO/JobUiDelegate>
 #include <KDiskFreeSpaceInfo>
 #include <KFileWidget>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KMessageWidget>
 #include <KProcess>
-#include <KRun>
 #include <KWidgetJobTracker>
 
 #include <QDir>
@@ -392,10 +393,12 @@ void RestoreDialog::createNewFolder() {
 }
 
 void RestoreDialog::openDestinationFolder() {
-	KRun::runUrl(QUrl::fromLocalFile(mSourceInfo.mIsDirectory ?
+	auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(mSourceInfo.mIsDirectory ?
 	                                    mFolderToCreate.absoluteFilePath() :
-	                                    mDestination.absolutePath()),
-	             QStringLiteral("inode/directory"), nullptr, KRun::RunFlags());
+	                                    mDestination.absolutePath()));
+	auto *delegate = new KIO::JobUiDelegate(KIO::JobUiDelegate::AutoHandlingEnabled, this);
+	job->setUiDelegate(delegate);
+	job->start();
 }
 
 void RestoreDialog::moveFolder() {
