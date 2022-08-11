@@ -25,6 +25,6 @@ KF5::I18n
 LibGit2::LibGit2
 )
 
-install(TARGETS kio_bup DESTINATION ${PLUGIN_INSTALL_DIR}/kf5/kio)
+install(TARGETS kio_bup DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kio)
 
 add_definitions(-fexceptions)

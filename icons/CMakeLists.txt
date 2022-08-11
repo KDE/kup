@@ -4,6 +4,6 @@
 
 ecm_install_icons(ICONS
     sc-apps-kup.svg
-    DESTINATION ${ICON_INSTALL_DIR}
+    DESTINATION ${KDE_INSTALL_ICONDIR}
     THEME hicolor
 )

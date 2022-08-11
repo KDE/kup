@@ -46,4 +46,4 @@ LibGit2::LibGit2
 )
 
 ########### install files ###############
-install(TARGETS kup-filedigger ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kup-filedigger ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

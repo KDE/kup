@@ -39,6 +39,6 @@ KF5::WidgetsAddons
 
 ########### install files ###############
 
-install(TARGETS kcm_kup DESTINATION ${PLUGIN_INSTALL_DIR})
-install(FILES kcm_kup.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS kcm_kup DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(FILES kcm_kup.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 

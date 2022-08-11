@@ -25,4 +25,4 @@ KF5::XmlGui
 )
 
 ########### install files ###############
-install(TARGETS kup-purger ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kup-purger ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
