@@ -91,7 +91,7 @@ void FileDigger::enterUrl(const QUrl &pUrl) {
 MergedRepository *FileDigger::createRepo() {
     auto lRepository = new MergedRepository(nullptr, mRepoPath, mBranchName);
     if(!lRepository->open()) {
-        KMessageBox::sorry(nullptr, xi18nc("@info messagebox, %1 is a folder path",
+        KMessageBox::error(nullptr, xi18nc("@info messagebox, %1 is a folder path",
                                        "The backup archive <filename>%1</filename> could not be opened. "
                                        "Check if the backups really are located there.",
                                        mRepoPath));
@@ -99,7 +99,7 @@ MergedRepository *FileDigger::createRepo() {
     }
     if(!lRepository->readBranch()) {
         if(!lRepository->permissionsOk()) {
-            KMessageBox::sorry(nullptr, xi18nc("@info messagebox",
+            KMessageBox::error(nullptr, xi18nc("@info messagebox",
                                            "You do not have permission needed to read this backup archive."));
         } else {
             MergedRepository::askForIntegrityCheck();

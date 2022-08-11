@@ -376,13 +376,13 @@ void RestoreDialog::createNewFolder() {
 		if(lDir.exists(lSubDirectory)) {
 			lPartialUrl = lPartialUrl.adjusted(QUrl::StripTrailingSlash);
 			lPartialUrl.setPath(lPartialUrl.path() + '/' + (lSubDirectory));
-			KMessageBox::sorry(this, i18n("A folder named %1 already exists.", lPartialUrl.path()));
+			KMessageBox::error(this, i18n("A folder named %1 already exists.", lPartialUrl.path()));
 			return;
 		}
 		if(!lDir.mkdir(lSubDirectory)) {
 			lPartialUrl = lPartialUrl.adjusted(QUrl::StripTrailingSlash);
 			lPartialUrl.setPath(lPartialUrl.path() + '/' + (lSubDirectory));
-			KMessageBox::sorry(this, i18n("You do not have permission to create %1.", lPartialUrl.path()));
+			KMessageBox::error(this, i18n("You do not have permission to create %1.", lPartialUrl.path()));
 			return;
 		}
 		lPartialUrl = lPartialUrl.adjusted(QUrl::StripTrailingSlash);
