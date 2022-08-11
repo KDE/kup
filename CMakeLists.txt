@@ -16,7 +16,8 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-include(KDECompilerSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
+
 include(FeatureSummary)
 include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
