@@ -7,6 +7,7 @@
   <project_license>GPL-2.0+</project_license>
   <name>Kup</name>
   <name xml:lang="ar">كيوب</name>
+  <name xml:lang="bg">Kup</name>
   <name xml:lang="ca">Kup</name>
   <name xml:lang="ca-valencia">Kup</name>
   <name xml:lang="cs">Kup</name>
@@ -37,6 +38,7 @@
   <name xml:lang="zh-TW">Kup</name>
   <summary>Backup scheduler for KDE's Plasma desktop</summary>
   <summary xml:lang="ar">مجدول النسخ الاحتياطية لسطح مكتب بلازما من كدي</summary>
+  <summary xml:lang="bg">Планиране на създаване на резервни копия за работна среда Plasma на KDE</summary>
   <summary xml:lang="ca">Planificador de la còpia de seguretat per a l'escriptori Plasma del KDE</summary>
   <summary xml:lang="ca-valencia">Planificador de la còpia de seguretat per a l'escriptori Plasma de KDE</summary>
   <summary xml:lang="de">Sicherungsplaner für die KDE-Plasma-Arbeitsfläche</summary>
@@ -65,6 +67,7 @@
   <description>
     <p>Kup can help you remember to keep up-to-date backups of your personal files. It provides:</p>
     <p xml:lang="ar">يمكن أن يساعدك كيوب على تذكر الاحتفاظ بنسخ احتياطية محدثة من ملفاتك الشخصية.أنه يوفر:</p>
+    <p xml:lang="bg">Kup може да ви помогне да не забравяте да поддържате актуални резервни копия на личните си файлове. Той осигурява:</p>
     <p xml:lang="ca">El Kup ajuda a recordar que cal actualitzar les còpies de seguretat dels fitxers personals. Proporciona:</p>
     <p xml:lang="ca-valencia">Kup ajuda a recordar que cal actualitzar les còpies de seguretat dels fitxers personals. Proporciona:</p>
     <p xml:lang="de">Kup kann Ihnen dabei helfen, aktuelle Sicherungen Ihrer persönlichen Dateien aufzubewahren. Es bietet folgendes:</p>
@@ -91,6 +94,7 @@
     <ul>
       <li>Incremental backup archive with the use of "bup".</li>
       <li xml:lang="ar">أرشيف احتياطي تزايدي باستخدام "bup".</li>
+      <li xml:lang="bg">Архивиране на  резервни копия със задаване на версия с помощта на "bup".</li>
       <li xml:lang="ca">Arxiu de còpia de seguretat incremental emprant «bup».</li>
       <li xml:lang="ca-valencia">Arxiu de còpia de seguretat incremental emprant «bup».</li>
       <li xml:lang="de">Inkrementelles Sicherungsarchiv mit der Verwendung von „bup“.</li>
@@ -117,6 +121,7 @@
       <li xml:lang="zh-TW">使用「bup」增量備份封存檔。</li>
       <li>Synchronized folders with the use of "rsync".</li>
       <li xml:lang="ar">مجلدات متزامنة باستخدام "rsync".</li>
+      <li xml:lang="bg">Синхронизиране на папки с помощта на "rsync".</li>
       <li xml:lang="ca">Carpetes sincronitzades emprant «rsync».</li>
       <li xml:lang="ca-valencia">Carpetes sincronitzades emprant «rsync».</li>
       <li xml:lang="de">Abgleich von Ordnern mit Hilfe von „rsync“.</li>
@@ -144,6 +149,7 @@
       <li xml:lang="zh-TW">使用「rsync」同步資料夾。</li>
       <li>Support for local filesystem or external usb storage.</li>
       <li xml:lang="ar">دعم لأخذ نسخ احتياطية على نظام الملفات المحلي أو تخزين USB خارجي.</li>
+      <li xml:lang="bg">Поддръжка на локална файлова система или външно usb хранилище.</li>
       <li xml:lang="ca">Suport per a sistema de fitxers local o emmagatzematge extern USB.</li>
       <li xml:lang="ca-valencia">Suport per a sistema de fitxers local o emmagatzematge extern USB.</li>
       <li xml:lang="de">Unterstützung für lokale Dateisysteme oder externen USB-Speicher.</li>
@@ -169,6 +175,7 @@
       <li xml:lang="zh-CN">支持本机文件系统或外部 USB 存储。</li>
       <li>Monitor availability of backup destinations, like for example a mounted network storage.</li>
       <li xml:lang="ar">يراقب مدى توفر وجهات النسخ الاحتياطي ، على سبيل المثال ، التخزين الشبكي في حالة ضمه.</li>
+      <li xml:lang="bg">Следене за наличността на дестинациите за архивиране, като например монтирано мрежово хранилище.</li>
       <li xml:lang="ca">Supervisa la disponibilitat de les destinacions de còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
       <li xml:lang="ca-valencia">Supervisa la disponibilitat de les destinacions de còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
       <li xml:lang="de">Überwachung der Verfügbarkeit von Sicherungszielen, wie z. B. einem eingehänten Netzwerkspeicher.</li>
@@ -194,6 +201,7 @@
       <li xml:lang="zh-CN">监控备份目标可用性，比如挂载的网络存储。</li>
       <li>Integration into KDE's Plasma desktop.</li>
       <li xml:lang="ar">يتكامل مع سطح مكتب بلازما من كدي</li>
+      <li xml:lang="bg">Интеграция в работна среда Plasma на KDE.</li>
       <li xml:lang="ca">Integració amb l'escriptori Plasma del KDE.</li>
       <li xml:lang="ca-valencia">Integració amb l'escriptori Plasma de KDE.</li>
       <li xml:lang="de">Integration in die KDE-Plasma-Arbeitsfläche.</li>
@@ -230,6 +238,7 @@
   <project_group>KDE</project_group>
   <developer_name>Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="ar">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+  <developer_name xml:lang="bg">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="ca">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="ca-valencia">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="de">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
