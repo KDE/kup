@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Kup
 Name[ar]=كيوب
+Name[bg]=Kup
 Name[ca]=Kup
 Name[ca@valencia]=Kup
 Name[cs]=Proces služby Kup
@@ -30,6 +31,7 @@ Name[zh_CN]=K 备份
 Name[zh_TW]=Kup
 GenericName=Backup Monitor
 GenericName[ar]=مراقب كيوب
+GenericName[bg]=Наблюдение на архивиране
 GenericName[ca]=Supervisor per a còpia de seguretat
 GenericName[ca@valencia]=Supervisor per a còpia de seguretat
 GenericName[de]=Sicherungs-Überwachung

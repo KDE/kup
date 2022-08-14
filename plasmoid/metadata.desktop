@@ -21,6 +21,7 @@ X-Plasma-DBusActivationService=org.kde.kupdaemon
 
 Name=Backup Status
 Name[ar]=حالة النسخ الاحتياطي
+Name[bg]=Състояние на резервно копие
 Name[ca]=Estat de la còpia de seguretat
 Name[ca@valencia]=Estat de la còpia de seguretat
 Name[cs]=Stav zálohy
@@ -49,6 +50,7 @@ Name[zh_CN]=备份状态
 Name[zh_TW]=備份狀態
 Comment=Displays status of backup plans
 Comment[ar]=يعرض حالة خطط النسخ الاحتياطي
+Comment[bg]=Показва състоянието на плановете за архивиране
 Comment[ca]=Mostra l'estat dels plans per a còpia de seguretat
 Comment[ca@valencia]=Mostra l'estat dels plans per a còpia de seguretat
 Comment[de]=Status der Sicherungspläne anzeigen

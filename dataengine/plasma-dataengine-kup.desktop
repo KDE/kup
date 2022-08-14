@@ -16,6 +16,7 @@ X-KDE-PluginInfo-EnabledByDefault=true
 
 Name=Backups
 Name[ar]=النسخ الاحتياطية
+Name[bg]=Резервни копия
 Name[ca]=Còpies de seguretat
 Name[ca@valencia]=Còpies de seguretat
 Name[cs]=Zálohy
@@ -44,6 +45,7 @@ Name[zh_CN]=备份
 Name[zh_TW]=備份
 Comment=Status of backup plans
 Comment[ar]=حالة خطة النسخ الاحتياطي
+Comment[bg]=Състояние на плановете за архивиране
 Comment[ca]=Estat dels plans per a còpia de seguretat
 Comment[ca@valencia]=Estat dels plans per a còpia de seguretat
 Comment[de]=Status der Sicherungspläne
