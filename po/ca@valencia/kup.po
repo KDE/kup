@@ -1,0 +1,1525 @@
+# Translation of kup.po to Catalan (Valencian)
+# Copyright (C) 2019-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2019, 2020.
+# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kup\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:49+0000\n"
+"PO-Revision-Date: 2021-10-11 12:21+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: daemon/backupjob.cpp:39
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"One source folder no longer exists. Please open settings and confirm what to "
+"include in backup.<nl/><filename>%2</filename>"
+msgid_plural ""
+"%1 source folders no longer exist. Please open settings and confirm what to "
+"include in backup.<nl/><filename>%2</filename>"
+msgstr[0] ""
+"Ja no existix una carpeta d'origen. Obriu la configuració i confirmeu què "
+"incloure a la còpia de seguretat.<nl/><filename>%2</filename>"
+msgstr[1] ""
+"Ja no existixen %1 carpetes d'origen. Obriu la configuració i confirmeu què "
+"incloure a la còpia de seguretat.<nl/><filename>%2</filename>"
+
+#: daemon/bupjob.cpp:46 daemon/buprepairjob.cpp:24
+#: daemon/bupverificationjob.cpp:23
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"The <application>bup</application> program is needed but could not be found, "
+"maybe it is not installed?"
+msgstr ""
+"El programa «<application>bup</application>» és necessari, però no s'ha "
+"trobat. Potser no està instal·lat?"
+
+#: daemon/bupjob.cpp:52 daemon/buprepairjob.cpp:30
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"The <application>par2</application> program is needed but could not be "
+"found, maybe it is not installed?"
+msgstr ""
+"El programa «<application>par2</application>» és necessari, però no s'ha "
+"trobat. Potser no està instal·lat?"
+
+#: daemon/bupjob.cpp:71
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup destination could not be initialised. See log file for more details."
+msgstr ""
+"La destinació de la còpia de seguretat no s'ha pogut restablir. Per a més "
+"detalls, vegeu el fitxer de registre."
+
+#: daemon/bupjob.cpp:94
+#, kde-format
+msgid "Checking backup integrity"
+msgstr "S'està comprovant la integritat de la còpia de seguretat"
+
+#: daemon/bupjob.cpp:109 daemon/bupverificationjob.cpp:58
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups could be corrupted! See log file "
+"for more details. Do you want to try repairing the backup files?"
+msgstr ""
+"No s'ha pogut verificar la integritat de la còpia de seguretat. Les vostres "
+"còpies de seguretat podrien estar malmeses! Per a més detalls, vegeu el "
+"fitxer de registre. Voleu intentar reparar els fitxers de còpia de seguretat?"
+
+#: daemon/bupjob.cpp:113
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups could be corrupted! See log file "
+"for more details."
+msgstr ""
+"No s'ha pogut verificar la integritat de la còpia de seguretat. Les vostres "
+"còpies de seguretat podrien estar malmeses! Per a més detalls, vegeu el "
+"fitxer de registre."
+
+#: daemon/bupjob.cpp:144 daemon/rsyncjob.cpp:51
+#, kde-format
+msgid "Checking what to copy"
+msgstr "S'està comprovant què copiar"
+
+#: daemon/bupjob.cpp:155
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Failed to analyze files. See log file for more details."
+msgstr ""
+"No s'han pogut analitzar els fitxers. Per a més detalls, vegeu el fitxer de "
+"registre."
+
+#: daemon/bupjob.cpp:176 daemon/bupjob.cpp:288 daemon/rsyncjob.cpp:167
+#, kde-format
+msgid "Saving backup"
+msgstr "S'està guardant la còpia de seguretat"
+
+#: daemon/bupjob.cpp:188 daemon/rsyncjob.cpp:111
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Failed to save backup. See log file for more details."
+msgstr ""
+"No s'ha pogut guardar la còpia de seguretat. Per a més detalls, vegeu el "
+"fitxer de registre."
+
+#: daemon/bupjob.cpp:212
+#, kde-format
+msgid "Generating recovery information"
+msgstr "S'està generant la informació de recuperació"
+
+#: daemon/bupjob.cpp:224
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed to generate recovery info for the backup. See log file for more "
+"details."
+msgstr ""
+"No s'ha pogut generar la informació de recuperació per a la còpia de "
+"seguretat. Per a més detalls, vegeu el fitxer de registre."
+
+#: daemon/bupjob.cpp:289 daemon/rsyncjob.cpp:168
+#, kde-format
+msgctxt "Label for file currently being copied"
+msgid "File"
+msgstr "Fitxer"
+
+#: daemon/buprepairjob.cpp:63
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup repair failed. Your backups could be corrupted! See log file for more "
+"details."
+msgstr ""
+"No s'ha pogut reparar la còpia de seguretat. Les vostres còpies de seguretat "
+"podrien estar malmeses! Per a més detalls, vegeu el fitxer de registre."
+
+#: daemon/buprepairjob.cpp:67
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Success! Backup repair worked. See log file for more details."
+msgstr ""
+"Correcte! La reparació de la còpia de seguretat ha funcionat. Per a més "
+"detalls, vegeu el fitxer de registre."
+
+#: daemon/buprepairjob.cpp:71
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup repair was not necessary. Your backups are not corrupted. See log "
+"file for more details."
+msgstr ""
+"La reparació de la còpia de seguretat no ha sigut necessària. Les vostres "
+"còpies de seguretat no estan malmeses! Per a més detalls, vegeu el fitxer de "
+"registre."
+
+#: daemon/buprepairjob.cpp:76
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup repair failed. Your backups could still be corrupted! See log file "
+"for more details."
+msgstr ""
+"No s'ha pogut reparar la còpia de seguretat. Les vostres còpies de seguretat "
+"encara podrien estar malmeses! Per a més detalls, vegeu el fitxer de "
+"registre."
+
+#: daemon/bupverificationjob.cpp:61 daemon/bupverificationjob.cpp:78
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups are corrupted! See log file for "
+"more details."
+msgstr ""
+"No s'ha pogut verificar la integritat de la còpia de seguretat. Les vostres "
+"còpies de seguretat estan malmeses! Per a més detalls, vegeu el fitxer de "
+"registre."
+
+#: daemon/bupverificationjob.cpp:67
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Backup integrity test was successful. Your backups are fine."
+msgstr ""
+"La prova d'integritat de la còpia de seguretat ha eixit correcta. Les "
+"vostres còpies de seguretat estan bé."
+
+#: daemon/bupverificationjob.cpp:74
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups are corrupted! See log file for "
+"more details. Do you want to try repairing the backup files?"
+msgstr ""
+"No s'ha pogut verificar la integritat de la còpia de seguretat. Les vostres "
+"còpies de seguretat estan malmeses! Per a més detalls, vegeu el fitxer de "
+"registre. Voleu intentar reparar els fitxers de còpia de seguretat?"
+
+#: daemon/kupdaemon.cpp:155
+#, kde-format
+msgid "Continue"
+msgstr "Continua"
+
+#: daemon/kupdaemon.cpp:157
+#, kde-format
+msgid "Stop"
+msgstr "Para"
+
+#: daemon/kupdaemon.cpp:159
+#, kde-format
+msgctxt "%1 is a text explaining the current activity"
+msgid "Currently busy: %1"
+msgstr "Actualment ocupat: %1"
+
+#: daemon/kupdaemon.cpp:160
+#, kde-format
+msgid "Do you really want to stop?"
+msgstr "De veres voleu parar?"
+
+#: daemon/kupdaemon.cpp:163
+#, kde-format
+msgid "User Backups"
+msgstr "Còpies de seguretat de l'usuari"
+
+#: daemon/kupdaemon.cpp:240
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination not available"
+msgstr "La destinació de la còpia de seguretat no està disponible"
+
+#: daemon/kupdaemon.cpp:244 daemon/kupdaemon.cpp:301
+#, kde-format
+msgid "No backup plans configured"
+msgstr "No s'ha configurat cap pla de còpia de seguretat"
+
+#: daemon/kupdaemon.cpp:250
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination available"
+msgstr "Hi ha disponible una destinació de còpia de seguretat"
+
+#: daemon/kupdaemon.cpp:260 daemon/planexecutor.cpp:72
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup status OK"
+msgstr "Estat correcte de la còpia de seguretat"
+
+#: daemon/kupdaemon.cpp:267 daemon/planexecutor.cpp:74
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup suggested"
+msgstr "S'ha suggerit una còpia de seguretat nova"
+
+#: daemon/kupdaemon.cpp:274 daemon/planexecutor.cpp:76
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup needed"
+msgstr "Cal fer una còpia de seguretat nova"
+
+#: daemon/main.cpp:27
+#, kde-kuit-format
+msgctxt "@info:shell Error message at startup"
+msgid ""
+"Kup is not enabled, enable it from the system settings module. You can do "
+"that by running <command>kcmshell5 kup</command>"
+msgstr ""
+"Kup no està habilitat, habiliteu-lo des del mòdul de Configuració del "
+"sistema. Podreu fer-ho executant <command>kcmshell5 kup</command>"
+
+#: daemon/main.cpp:33
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Kup Daemon"
+msgstr "Dimoni de Kup"
+
+#: daemon/main.cpp:34
+#, kde-format
+msgid ""
+"Kup is a flexible backup solution using the backup storage system 'bup'. "
+"This allows it to quickly perform incremental backups, only saving the parts "
+"of files that has actually changed since last backup was saved."
+msgstr ""
+"Kup és una solució de suport flexible que utilitza el sistema "
+"d'emmagatzematge de còpies de seguretat «bup». Permet realitzar ràpidament "
+"còpies de seguretat incrementals, guardant només les parts dels fitxers que "
+"realment han canviat des que es va guardar l'última còpia de seguretat."
+
+#: daemon/main.cpp:37 kcm/kupkcm.cpp:36
+#, kde-format
+msgid "Copyright (C) 2011-2020 Simon Persson"
+msgstr "Copyright (C) 2011-2020 Simon Persson"
+
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: purger/main.cpp:24
+#, kde-format
+msgid "Simon Persson"
+msgstr "Simon Persson"
+
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: purger/main.cpp:24
+#, kde-format
+msgid "Maintainer"
+msgstr "Mantenidor"
+
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:38
+#: purger/main.cpp:25
+#, kde-format, kde-kuit-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Antoni Bella"
+
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:39
+#: purger/main.cpp:25
+#, kde-format, kde-kuit-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "antonibella5@yahoo.com"
+
+#: daemon/planexecutor.cpp:62
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Saving backup"
+msgstr "S'està guardant la còpia de seguretat"
+
+#: daemon/planexecutor.cpp:64
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Checking backup integrity"
+msgstr "S'està comprovant la integritat de la còpia de seguretat"
+
+#: daemon/planexecutor.cpp:66
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Repairing backups"
+msgstr "S'estan reparant les còpies de seguretat"
+
+#: daemon/planexecutor.cpp:96 daemon/planexecutor.cpp:110
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Do you want to save a first backup now?"
+msgstr "Voleu guardar una primera còpia de seguretat ara?"
+
+#: daemon/planexecutor.cpp:99
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"It has been %1 since last backup was saved.\n"
+"Save a new backup now?"
+msgstr ""
+"Ha passat %1 des que es va guardar l'última còpia de seguretat.\n"
+"Voleu guardar una nova còpia de seguretat ara?"
+
+#: daemon/planexecutor.cpp:113
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You have been active for %1 since last backup was saved.\n"
+"Save a new backup now?"
+msgstr ""
+"Heu estat actiu durant %1 des que es va guardar l'última còpia de "
+"seguretat.\n"
+"Voleu guardar una nova còpia de seguretat ara?"
+
+#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:174
+#: daemon/planexecutor.cpp:312
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Yes"
+msgstr "Sí"
+
+#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:175
+#: daemon/planexecutor.cpp:313
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "No"
+msgstr "No"
+
+#: daemon/planexecutor.cpp:166
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Saving of Backup Failed"
+msgstr "No s'ha pogut guardar la còpia de seguretat"
+
+#: daemon/planexecutor.cpp:171 daemon/planexecutor.cpp:309
+#: daemon/planexecutor.cpp:343
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Show log file"
+msgstr "Mostra el fitxer de registre"
+
+#: daemon/planexecutor.cpp:178
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Open settings"
+msgstr "Obri la configuració"
+
+#: daemon/planexecutor.cpp:202
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Backup Saved"
+msgstr "S'ha guardat la còpia de seguretat"
+
+#: daemon/planexecutor.cpp:203
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Saving backup completed successfully."
+msgstr "La guardada de la còpia de seguretat s'ha finalitzat amb èxit."
+
+#: daemon/planexecutor.cpp:252 daemon/planexecutor.cpp:259
+#: daemon/planexecutor.cpp:291
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Problem"
+msgstr "Problema"
+
+#: daemon/planexecutor.cpp:253
+#, kde-kuit-format
+msgctxt "notification"
+msgid "You don't have write permission to backup destination."
+msgstr ""
+"No teniu permís d'escriptura en la destinació de la còpia de seguretat."
+
+#: daemon/planexecutor.cpp:260
+#, kde-kuit-format
+msgctxt "notification"
+msgid "Invalid type of backup in configuration."
+msgstr "Tipus no vàlid de còpia de seguretat a la configuració."
+
+#: daemon/planexecutor.cpp:305
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Integrity Check Completed"
+msgstr "S'ha completat el control de la integritat"
+
+#: daemon/planexecutor.cpp:340
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Repair Completed"
+msgstr "Reparació finalitzada"
+
+#: daemon/planexecutor.cpp:371
+#, kde-format
+msgid "Kup Backup System"
+msgstr "Sistema de còpia de seguretat Kup"
+
+#: daemon/rsyncjob.cpp:32
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"The <application>rsync</application> program is needed but could not be "
+"found, maybe it is not installed?"
+msgstr ""
+"El programa «<application>rsync</application>» és necessari, però no s'ha "
+"trobat. Potser no està instal·lat?"
+
+#: filedigger/filedigger.cpp:99
+#, kde-kuit-format
+msgctxt "@info messagebox, %1 is a folder path"
+msgid ""
+"The backup archive <filename>%1</filename> could not be opened. Check if the "
+"backups really are located there."
+msgstr ""
+"No s'ha pogut obrir l'arxiu de còpia de seguretat <filename>%1</filename>. "
+"Comproveu si les còpies de seguretat realment es troben allà."
+
+#: filedigger/filedigger.cpp:107
+#, kde-kuit-format
+msgctxt "@info messagebox"
+msgid "You do not have permission needed to read this backup archive."
+msgstr "No teniu permís per a llegir este arxiu de còpia de seguretat."
+
+#: filedigger/filedigger.cpp:156
+#, kde-format
+msgid "Select location of backup archive to open."
+msgstr "Seleccioneu la ubicació de l'arxiu de còpia de seguretat a obrir."
+
+#: filedigger/main.cpp:26
+#, kde-kuit-format
+msgctxt "@title"
+msgid "File Digger"
+msgstr "Excavador de fitxers"
+
+#: filedigger/main.cpp:27
+#, kde-format
+msgid "Browser for bup archives."
+msgstr "Explorador per a arxius «bup»."
+
+#: filedigger/main.cpp:28
+#, kde-format
+msgid "Copyright (C) 2013-2020 Simon Persson"
+msgstr "Copyright (C) 2013-2020 Simon Persson"
+
+#: filedigger/main.cpp:35 purger/main.cpp:30
+#, kde-format
+msgid "Name of the branch to be opened."
+msgstr "Nom de la branca que s'obrirà."
+
+#: filedigger/main.cpp:37 purger/main.cpp:32
+#, kde-format
+msgid "Path to the bup repository to be opened."
+msgstr "Camí fins al repositori «bup» que s'obrirà."
+
+#: filedigger/mergedvfs.cpp:96
+#, kde-kuit-format
+msgctxt "@info messagebox"
+msgid ""
+"Could not read this backup archive. Perhaps some files have become "
+"corrupted. Do you want to run an integrity check to test this?"
+msgstr ""
+"No s'ha pogut llegir este arxiu de còpia de seguretat. Potser s'han malmés "
+"alguns fitxers. Voleu executar una comprovació de la integritat per a provar-"
+"ho?"
+
+#: filedigger/mergedvfs.cpp:144
+#, kde-kuit-format
+msgctxt "added after folder name in some cases"
+msgid " (folder)"
+msgstr " (carpeta)"
+
+#: filedigger/mergedvfs.cpp:146
+#, kde-kuit-format
+msgctxt "added after file name in some cases"
+msgid " (symlink)"
+msgstr " (enllaç simbòlic)"
+
+#: filedigger/mergedvfs.cpp:148
+#, kde-kuit-format
+msgctxt "added after file name in some cases"
+msgid " (file)"
+msgstr " (fitxer)"
+
+#: filedigger/restoredialog.cpp:99 kcm/backupplanwidget.cpp:434
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "New Folder..."
+msgstr "Carpeta nova..."
+
+#: filedigger/restoredialog.cpp:125 filedigger/restoredialog.cpp:144
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid "No destination was selected, please select one."
+msgstr "No s'ha seleccionat cap destinació, trieu-ne una."
+
+#: filedigger/restoredialog.cpp:244
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid "There was a problem while getting a list of all files to restore: %1"
+msgstr ""
+"S'ha produït un problema en obtindre una llista de tots els fitxers a "
+"restaurar: %1"
+
+#: filedigger/restoredialog.cpp:259
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"The destination does not have enough space available. Please choose a "
+"different destination or free some space."
+msgstr ""
+"La destinació no té prou espai disponible. Seleccioneu-ne una de diferent o "
+"allibereu espai."
+
+#: filedigger/restoredialog.cpp:271
+#, kde-kuit-format
+msgctxt ""
+"added to the suggested filename when restoring, %1 is the time when backup "
+"was saved"
+msgid " - saved at %1"
+msgstr " - guardada a %1"
+
+#: filedigger/restoredialog.cpp:272
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Folder already exists, please choose a solution"
+msgstr "La carpeta ja existix, trieu una solució"
+
+#: filedigger/restoredialog.cpp:278
+#, kde-kuit-format
+msgctxt "@info"
+msgid "File already exists"
+msgstr "El fitxer ja existix"
+
+#: filedigger/restoredialog.cpp:291
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid "The new name entered already exists, please enter a different one."
+msgstr "El nom nou que heu introduït ja existix, introduïu-ne un de diferent."
+
+#: filedigger/restoredialog.cpp:361 kcm/dirselector.cpp:34
+#, kde-kuit-format
+msgctxt "default folder name when creating a new folder"
+msgid "New Folder"
+msgstr "Carpeta nova"
+
+#: filedigger/restoredialog.cpp:366 kcm/dirselector.cpp:39
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "New Folder"
+msgstr "Carpeta nova"
+
+#: filedigger/restoredialog.cpp:367 kcm/dirselector.cpp:40
+#, kde-kuit-format
+msgctxt "@label:textbox"
+msgid ""
+"Create new folder in:\n"
+"%1"
+msgstr ""
+"Crea una carpeta nova a:\n"
+"%1"
+
+#: filedigger/restoredialog.cpp:380 kcm/dirselector.cpp:52
+#, kde-format
+msgid "A folder named %1 already exists."
+msgstr "Ja existix una carpeta anomenada %1."
+
+#: filedigger/restoredialog.cpp:386 kcm/dirselector.cpp:58
+#, kde-format
+msgid "You do not have permission to create %1."
+msgstr "No teniu permís per a crear %1."
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, RestoreDialog)
+#: filedigger/restoredialog.ui:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Restore Guide"
+msgstr "Guia de restauració"
+
+#. i18n: ectx: property (text), widget (QPushButton, mRestoreOriginalButton)
+#: filedigger/restoredialog.ui:55
+#, kde-format
+msgctxt "@action:button"
+msgid "Restore to original location"
+msgstr "Restaura a la ubicació original"
+
+#. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
+#: filedigger/restoredialog.ui:78
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose where to restore"
+msgstr "Seleccioneu a on cal restaurar"
+
+#. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
+#: filedigger/restoredialog.ui:132
+#, kde-format
+msgctxt "@action:button"
+msgid "Back"
+msgstr "Anterior"
+
+#. i18n: ectx: property (text), widget (QPushButton, mDestNextButton)
+#: filedigger/restoredialog.ui:143
+#, kde-format
+msgctxt "@action:button"
+msgid "Next"
+msgstr "Següent"
+
+#. i18n: ectx: property (text), widget (QRadioButton, mNewNameRadioButton)
+#: filedigger/restoredialog.ui:173
+#, kde-format
+msgctxt "@option:radio "
+msgid "Restore the folder under a new name"
+msgstr "Restaura la carpeta davall un nom nou"
+
+#. i18n: ectx: property (text), widget (QRadioButton, mOverwriteRadioButton)
+#: filedigger/restoredialog.ui:206
+#, kde-format
+msgctxt "@option:radio"
+msgid "Merge folders"
+msgstr "Fusiona les carpetes"
+
+#. i18n: ectx: property (text), widget (QLabel, mConfirmOverwriteLabel)
+#: filedigger/restoredialog.ui:236
+#, kde-format
+msgctxt "@info Question to user, in dialog"
+msgid ""
+"The following files would be overwritten, please confirm that you wish to "
+"continue."
+msgstr "Els fitxers següents se sobreescriuran, confirmeu que voleu continuar."
+
+#. i18n: ectx: property (text), widget (QPushButton, mOverwriteBackButton)
+#: filedigger/restoredialog.ui:272
+#, kde-format
+msgctxt "@action:button go to previous page in dialog"
+msgid "Back"
+msgstr "Anterior"
+
+#. i18n: ectx: property (text), widget (QPushButton, mConfirmButton)
+#: filedigger/restoredialog.ui:283
+#, kde-format
+msgctxt "@action:button User answers \"yes I confirm: overwrite files\""
+msgid "Confirm"
+msgstr "Confirma"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: filedigger/restoredialog.ui:320
+#, kde-format
+msgctxt "Title above progress bar"
+msgid "Restoring files"
+msgstr "S'estan restaurant els fitxers"
+
+#. i18n: ectx: property (text), widget (QLabel, mErrorLabel)
+#: filedigger/restoredialog.ui:347
+#, kde-format
+msgctxt "@label above the detailed error message"
+msgid "An error occurred while restoring:"
+msgstr "S'ha produït un error en restaurar:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: filedigger/restoredialog.ui:378
+#, kde-format
+msgctxt "@label"
+msgid "Restoration completed successfully!"
+msgstr "La restauració s'ha completat correctament!"
+
+#. i18n: ectx: property (text), widget (QPushButton, mOpenDestinationButton)
+#: filedigger/restoredialog.ui:419
+#, kde-format
+msgid "Open Destination"
+msgstr "Obri la destinació"
+
+#. i18n: ectx: property (text), widget (QPushButton, mCloseButton)
+#: filedigger/restoredialog.ui:477
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Tanca"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: filedigger/restoredialog.ui:510
+#, kde-format
+msgctxt "Title above progress bar"
+msgid "Checking file sizes"
+msgstr "S'està comprovant la mida dels fitxers"
+
+#: filedigger/restorejob.cpp:83
+#, kde-kuit-format
+msgctxt "progress report, current operation"
+msgid "Restoring"
+msgstr "S'està restaurant"
+
+#: filedigger/restorejob.cpp:84
+#, kde-kuit-format
+msgctxt "progress report, label"
+msgid "File"
+msgstr "Fitxer"
+
+#: filedigger/versionlistdelegate.cpp:121
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Open"
+msgstr "Obri"
+
+#: filedigger/versionlistdelegate.cpp:123
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Restore"
+msgstr "Restaura"
+
+#: kcm/backupplanwidget.cpp:261
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Exclude Folder"
+msgstr "Exclou la carpeta"
+
+#: kcm/backupplanwidget.cpp:264
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Include Folder"
+msgstr "Inclou la carpeta"
+
+#: kcm/backupplanwidget.cpp:365
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"You don't have permission to read this folder: <filename>%1</filename><nl/"
+">It cannot be included in the source selection. If it does not contain "
+"anything important to you, one possible solution is to exclude the folder "
+"from the backup plan."
+msgstr ""
+"No teniu permís per a llegir esta carpeta: <filename>%1</filename><nl/>No es "
+"pot incloure a la selecció de l'origen. Si no conté res important, una "
+"possible solució és excloure-la del pla de còpia de seguretat."
+
+#: kcm/backupplanwidget.cpp:376
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"You don't have permission to read this file: <filename>%1</filename><nl/>It "
+"cannot be included in the source selection. If the file is not important to "
+"you, one possible solution is to exclude the whole folder where the file is "
+"stored from the backup plan."
+msgstr ""
+"No teniu permís per a llegir este fitxer: <filename>%1</filename><nl/>No es "
+"pot incloure a la selecció de l'origen. Si no conté res important, una "
+"possible solució és excloure tota la carpeta on es troba emmagatzemat del "
+"pla de còpia de seguretat."
+
+#: kcm/backupplanwidget.cpp:392
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"The symbolic link <filename>%1</filename> is currently included but it "
+"points to a folder which is not: <filename>%2</filename>.<nl/>That is "
+"probably not what you want. One solution is to simply include the target "
+"folder in the backup plan."
+msgstr ""
+"L'enllaç simbòlic <filename>%1</filename> està actualment inclòs, però "
+"apunta a una carpeta que no ho està: <filename>%2</filename>.<nl/>Açò "
+"probablement no és el que voleu. Una solució és senzillament incloure la "
+"carpeta de destinació en el pla de la còpia de seguretat."
+
+#: kcm/backupplanwidget.cpp:400
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"The symbolic link <filename>%1</filename> is currently included but it "
+"points to a file which is not: <filename>%2</filename>.<nl/>That is probably "
+"not what you want. One solution is to simply include the folder where the "
+"file is stored in the backup plan."
+msgstr ""
+"L'enllaç simbòlic <filename>%1</filename> està actualment inclòs, però "
+"apunta a un fitxer que no ho està: <filename>%2</filename>.<nl/>Açò "
+"probablement no és el que voleu. Una solució és senzillament incloure la "
+"carpeta on residix en el pla de la còpia de seguretat."
+
+#: kcm/backupplanwidget.cpp:423
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Select Folder"
+msgstr "Seleccioneu una carpeta"
+
+#: kcm/backupplanwidget.cpp:461
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Description:"
+msgstr "Descripció:"
+
+#: kcm/backupplanwidget.cpp:464
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Back to overview"
+msgstr "Torna al resum"
+
+#: kcm/backupplanwidget.cpp:498
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This type of backup is an <emphasis>archive</emphasis>. It contains both the "
+"latest version of your files and earlier backed up versions. Using this type "
+"of backup allows you to recover older versions of your files, or files which "
+"were deleted on your computer at a later time. The storage space needed is "
+"minimized by looking for common parts of your files between versions and "
+"only storing those parts once. Nevertheless, the backup archive will keep "
+"growing in size as time goes by.<nl/>Also important to know is that the "
+"files in the archive can not be accessed directly with a general file "
+"manager, a special program is needed."
+msgstr ""
+"Este tipus de còpia de seguretat és un <emphasis>arxiu</emphasis>. Conté "
+"l'última versió dels vostres fitxers i versions anteriors de còpia de "
+"seguretat. L'ús d'este tipus de còpia de seguretat permet recuperar les "
+"versions anteriors dels vostres fitxers o els fitxers que s'han anat "
+"eliminant a l'ordinador. L'espai d'emmagatzematge necessari es minimitza en "
+"buscar les parts comunes dels fitxers entre versions i només emmagatzemar "
+"estes parts una vegada. No obstant açò, l'arxiu de la còpia de seguretat "
+"seguirà creixent en grandària a mesura que passe el temps.<nl/>També és "
+"important saber que no es pot accedir directament als fitxers en l'arxiu amb "
+"un gestor de fitxers general, es necessita un programa especial."
+
+#: kcm/backupplanwidget.cpp:513
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid ""
+"Versioned Backup (not available because <application>bup</application> is "
+"not installed)"
+msgstr ""
+"Còpia de seguretat amb versions (no disponible perquè no s'ha instal·lat "
+"<application>bup</application>)"
+
+#: kcm/backupplanwidget.cpp:518
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Versioned Backup (recommended)"
+msgstr "Còpia de seguretat amb versions (recomanat)"
+
+#: kcm/backupplanwidget.cpp:523
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This type of backup is a folder which is synchronized with your selected "
+"source folders. Saving a backup simply means making the backup destination "
+"contain an exact copy of your source folders as they are now and nothing "
+"else. If a file has been deleted in a source folder it will get deleted from "
+"the backup folder.<nl/>This type of backup can protect you against data loss "
+"due to a broken hard drive but it does not help you to recover from your own "
+"mistakes."
+msgstr ""
+"Este tipus de còpia de seguretat és una carpeta que se sincronitza amb les "
+"carpetes d'origen seleccionades. En guardar una còpia de seguretat "
+"senzillament vol dir fer que la destinació de la còpia de seguretat continga "
+"una còpia exacta de les vostres carpetes d'origen tal com estan ara i res "
+"més. Si s'ha suprimit un fitxer en una carpeta d'origen, se suprimirà de la "
+"carpeta a la còpia de seguretat.<nl/>Este tipus de còpia de seguretat "
+"protegix contra la pèrdua de dades a causa d'un disc dur trencat, però no "
+"ajudarà a recuperar-se dels vostres propis errors."
+
+#: kcm/backupplanwidget.cpp:536
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid ""
+"Synchronized Backup (not available because <application>rsync</application> "
+"is not installed)"
+msgstr ""
+"Còpia de seguretat sincronitzada (no disponible perquè no s'ha instal·lat "
+"<application>rsync</application>)"
+
+#: kcm/backupplanwidget.cpp:541
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Synchronized Backup"
+msgstr "Còpia de seguretat sincronitzada"
+
+#: kcm/backupplanwidget.cpp:569
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Backup Type"
+msgstr "Tipus de còpia de seguretat"
+
+#: kcm/backupplanwidget.cpp:570
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Select what type of backup you want"
+msgstr "Seleccioneu quin tipus de còpia de seguretat voleu"
+
+#: kcm/backupplanwidget.cpp:578
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Sources"
+msgstr "Orígens"
+
+#: kcm/backupplanwidget.cpp:579
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Select which folders to include in backup"
+msgstr "Seleccioneu quines carpetes incloure a la còpia de seguretat"
+
+#: kcm/backupplanwidget.cpp:593
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Filesystem Path"
+msgstr "Camí del sistema de fitxers"
+
+#: kcm/backupplanwidget.cpp:594
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "External Storage"
+msgstr "Emmagatzematge extern"
+
+#: kcm/backupplanwidget.cpp:600
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can use this option for backing up to a secondary internal harddrive, an "
+"external eSATA drive or networked storage. The requirement is just that you "
+"always mount it at the same path in the filesystem. The path specified here "
+"does not need to exist at all times, its existence will be monitored."
+msgstr ""
+"Podeu utilitzar esta opció per a crear còpies de seguretat en un disc dur "
+"intern secundari, una unitat eSATA externa o un emmagatzematge en xarxa. El "
+"requisit és senzillament que sempre es munte al mateix camí en el sistema de "
+"fitxers. El camí especificat ací no necessita existir en tot moment, la seua "
+"existència serà supervisada."
+
+#: kcm/backupplanwidget.cpp:607
+#, kde-kuit-format
+msgctxt "@label:textbox"
+msgid "Destination Path for Backup:"
+msgstr "Camí de destinació per a la còpia de seguretat:"
+
+#: kcm/backupplanwidget.cpp:626
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Use this option if you want to backup your files on an external storage that "
+"can be plugged in to this computer, such as a USB hard drive or memory stick."
+msgstr ""
+"Utilitzeu esta opció si voleu crear una còpia de seguretat dels fitxers en "
+"un emmagatzematge extern que es pot connectar a este ordinador, com un disc "
+"dur USB o un dispositiu de memòria."
+
+#: kcm/backupplanwidget.cpp:636 kcm/backupplanwidget.cpp:640
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "The specified folder will be created if it does not exist."
+msgstr "La carpeta especificada es crearà si no existix."
+
+#: kcm/backupplanwidget.cpp:638
+#, kde-kuit-format
+msgctxt "@label:textbox"
+msgid "Folder on Destination Drive:"
+msgstr "Carpeta a la unitat de destinació:"
+
+#: kcm/backupplanwidget.cpp:646
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "Open dialog to select a folder"
+msgstr "Obri el diàleg per a seleccionar una carpeta"
+
+#: kcm/backupplanwidget.cpp:676
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Destination"
+msgstr "Destinació"
+
+#: kcm/backupplanwidget.cpp:677
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Select the backup destination"
+msgstr "Selecciona la destinació de la còpia de seguretat"
+
+#: kcm/backupplanwidget.cpp:694
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Manual Activation"
+msgstr "Activació manual"
+
+#: kcm/backupplanwidget.cpp:695
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Interval"
+msgstr "Interval"
+
+#: kcm/backupplanwidget.cpp:696
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Active Usage Time"
+msgstr "Temps d'ús actiu"
+
+#: kcm/backupplanwidget.cpp:698
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Backups are only saved when manually requested. This can be done by using "
+"the popup menu from the backup system tray icon."
+msgstr ""
+"Les còpies de seguretat només es guarden quan se sol·liciten manualment. Açò "
+"es pot fer utilitzant el menú emergent des de la icona de la còpia de "
+"seguretat que hi ha a la safata del sistema."
+
+#: kcm/backupplanwidget.cpp:712
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"New backup will be triggered when backup destination becomes available and "
+"more than the configured interval has passed since the last backup was saved."
+msgstr ""
+"La nova còpia de seguretat s'activarà quan la destinació de la còpia de "
+"seguretat estiga disponible i haja transcorregut més de l'interval "
+"configurat des que es va guardar l'última còpia de seguretat."
+
+#: kcm/backupplanwidget.cpp:729
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Minutes"
+msgstr "Minuts"
+
+#: kcm/backupplanwidget.cpp:730 kcm/backupplanwidget.cpp:757
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Hours"
+msgstr "Hores"
+
+#: kcm/backupplanwidget.cpp:731
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Days"
+msgstr "Dies"
+
+#: kcm/backupplanwidget.cpp:732
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Weeks"
+msgstr "Setmanes"
+
+#: kcm/backupplanwidget.cpp:742
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"New backup will be triggered when backup destination becomes available and "
+"you have been using your computer actively for more than the configured time "
+"limit since the last backup was saved."
+msgstr ""
+"La còpia de seguretat nova s'activarà quan la destinació de la còpia de "
+"seguretat estiga disponible i hàgeu estat emprant activament l'ordinador "
+"transcorregut més del temps que el límit configurat des que es va guardar "
+"l'última còpia de seguretat."
+
+#: kcm/backupplanwidget.cpp:763
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Ask for confirmation before saving backup"
+msgstr "Demana confirmació abans de guardar la còpia de seguretat"
+
+#: kcm/backupplanwidget.cpp:782
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Schedule"
+msgstr "Planificació"
+
+#: kcm/backupplanwidget.cpp:783
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Specify the backup schedule"
+msgstr "Especifiqueu la planificació de la còpia de seguretat"
+
+#: kcm/backupplanwidget.cpp:797
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Show hidden folders in source selection"
+msgstr "Mostra les carpetes ocultes a la selecció de l'origen"
+
+#: kcm/backupplanwidget.cpp:802
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This makes it possible to explicitly include or exclude hidden folders in "
+"the backup source selection. Hidden folders have a name that starts with a "
+"dot. They are typically located in your home folder and are used to store "
+"settings and temporary files for your applications."
+msgstr ""
+"Açò fa possible incloure o excloure explícitament les carpetes ocultes a la "
+"selecció de l'origen de la còpia de seguretat. Les carpetes ocultes tenen un "
+"nom que comença amb un punt. En general, es troben en la carpeta d'inici i "
+"s'empren per a emmagatzemar la configuració i els fitxers temporals per a "
+"les aplicacions."
+
+#: kcm/backupplanwidget.cpp:823
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This will make your backups use around 10% more storage space and saving "
+"backups will take slightly longer time. In return it will be possible to "
+"recover from a partially corrupted backup."
+msgstr ""
+"Farà que les còpies de seguretat empren al voltant d'un 10% més d'espai "
+"d'emmagatzematge i la guardada de les còpies de seguretat portarà una mica "
+"més de temps. A canvi, serà possible recuperar-se d'una còpia de seguretat "
+"parcialment malmesa."
+
+#: kcm/backupplanwidget.cpp:829
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Generate recovery information"
+msgstr "Genera la informació de recuperació"
+
+#: kcm/backupplanwidget.cpp:831
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid ""
+"Generate recovery information (not available because <application>par2</"
+"application> is not installed)"
+msgstr ""
+"Genera la informació de recuperació (no disponible perquè no s'ha instal·lat "
+"<application>par2</application>)"
+
+#: kcm/backupplanwidget.cpp:847
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Verify integrity of backups"
+msgstr "Verifica la integritat de les còpies de seguretat"
+
+#: kcm/backupplanwidget.cpp:851
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Checks the whole backup archive for corruption every time you save new data. "
+"Saving backups will take a little bit longer time but it allows you to catch "
+"corruption problems sooner than at the time you need to use a backup, at "
+"that time it could be too late."
+msgstr ""
+"Comprova la corrupció de tot l'arxiu de còpia de seguretat cada vegada que "
+"guardeu dades noves. El fet de guardar les còpies de seguretat portarà una "
+"mica més de temps, però permet detectar els problemes de corrupció abans que "
+"necessiteu emprar una còpia de seguretat, en aquell moment podria ser massa "
+"tard."
+
+#: kcm/backupplanwidget.cpp:867
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude files and folders based on patterns"
+msgstr "Exclou fitxers i carpetes basant-se en patrons"
+
+#: kcm/backupplanwidget.cpp:885
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Patterns need to be listed in a text file with one pattern per line. Files "
+"and folders with names that match any of the patterns will be excluded from "
+"the backup. The pattern format is documented <link url='%1'>here</link>."
+msgstr ""
+"Cal que els patrons estiguen llistats en un fitxer de text amb un patró per "
+"línia. Els fitxers i carpetes amb noms que coincidisquen amb qualsevol dels "
+"patrons s'exclouran de la còpia de seguretat. El format dels patrons està "
+"documentat <link url='%1'>ací</link>."
+
+#: kcm/backupplanwidget.cpp:903
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "Open dialog to select a file"
+msgstr "Obri el diàleg per a seleccionar un fitxer"
+
+#: kcm/backupplanwidget.cpp:905
+#, kde-format
+msgid "Select pattern file"
+msgstr "Selecciona un fitxer de patrons"
+
+#: kcm/backupplanwidget.cpp:930
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Advanced"
+msgstr "Avançat"
+
+#: kcm/backupplanwidget.cpp:931
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Extra options for advanced users"
+msgstr "Opcions addicionals per a usuaris avançats"
+
+#: kcm/driveselection.cpp:257
+#, kde-kuit-format
+msgctxt "@label Only shown if no drives are detected"
+msgid ""
+"Plug in the external storage you wish to use, then select it in this list."
+msgstr ""
+"Connecteu l'emmagatzematge extern que voleu utilitzar i, a continuació, "
+"seleccioneu-lo en esta llista."
+
+#: kcm/driveselectiondelegate.cpp:57
+#, kde-kuit-format
+msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
+msgid " (disconnected)"
+msgstr " (desconnectat)"
+
+#: kcm/driveselectiondelegate.cpp:61
+#, kde-kuit-format
+msgctxt "@label %1 is amount of free storage space of hard drive"
+msgid "%1 free"
+msgstr "%1 lliure"
+
+#: kcm/driveselectiondelegate.cpp:76
+#, kde-kuit-format
+msgctxt ""
+"@item:inlistbox used for unnamed filesystems, more than one filesystem on "
+"device. %1 is partition number, %2 is device description, %3 is either empty "
+"or the \" (disconnected)\" text"
+msgid "Partition %1 on %2%3"
+msgstr "Partició %1 a %2%3"
+
+#: kcm/driveselectiondelegate.cpp:79
+#, kde-kuit-format
+msgctxt ""
+"@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
+"is device description, %2 is either empty or the \" (disconnected)\" text"
+msgid "%1%2"
+msgstr "%1%2"
+
+#: kcm/driveselectiondelegate.cpp:83
+#, kde-kuit-format
+msgctxt ""
+"@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
+"either empty or the \" (disconnected)\" text"
+msgid "%1 on %2%3"
+msgstr "%1 a %2%3"
+
+#: kcm/driveselectiondelegate.cpp:90
+#, kde-kuit-format
+msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
+msgid "%1: %2 total capacity"
+msgstr "%1: capacitat total %2"
+
+#: kcm/driveselectiondelegate.cpp:137
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid ""
+"Warning: Symbolic links and file permissions can not be saved to this file "
+"system. File permissions only matters if there is more than one user of this "
+"computer or if you are backing up executable program files."
+msgstr ""
+"Avís: els enllaços simbòlics i els permisos de fitxer no es poden guardar en "
+"este sistema de fitxers. Els permisos dels fitxers només són importants si "
+"hi ha més d'un usuari en este ordinador o si esteu fent una còpia de "
+"seguretat dels fitxers de programa executables."
+
+#: kcm/driveselectiondelegate.cpp:142
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid ""
+"Warning: File permissions can not be saved to this file system. File "
+"permissions only matters if there is more than one user of this computer or "
+"if you are backing up executable program files."
+msgstr ""
+"Avís: els permisos de fitxer no es poden guardar en este sistema de fitxers. "
+"Els permisos dels fitxers només són importants si hi ha més d'un usuari en "
+"este ordinador o si esteu fent una còpia de seguretat dels fitxers de "
+"programa executables."
+
+#: kcm/folderselectionmodel.cpp:90
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/>will be included in the backup, except for "
+"unchecked subfolders"
+msgstr ""
+"<filename>%1</filename><nl/> serà inclosa a la còpia de seguretat, excepte "
+"les subcarpetes sense marcar"
+
+#: kcm/folderselectionmodel.cpp:94
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid "<filename>%1</filename><nl/>will be included in the backup"
+msgstr "<filename>%1</filename><nl/> serà inclosa a la còpia de seguretat"
+
+#: kcm/folderselectionmodel.cpp:98
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
+"the backup but contains folders that will"
+msgstr ""
+"<filename>%1</filename><nl/> <emphasis>no</emphasis> serà inclosa a la còpia "
+"de seguretat, però conté carpetes que sí"
+
+#: kcm/folderselectionmodel.cpp:102
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
+"the backup"
+msgstr ""
+"<filename>%1</filename><nl/> <emphasis>no</emphasis> serà inclosa a la còpia "
+"de seguretat"
+
+#: kcm/kupkcm.cpp:33
+#, kde-format
+msgid "Kup Configuration Module"
+msgstr "Mòdul de configuració de Kup"
+
+#: kcm/kupkcm.cpp:35
+#, kde-format
+msgid "Configuration of backup plans for the Kup backup system"
+msgstr ""
+"Configuració dels plans de còpia de seguretat per al sistema de còpies de "
+"seguretat Kup"
+
+#: kcm/kupkcm.cpp:69
+#, kde-format
+msgid ""
+"<h2>Backup programs are missing</h2><p>Before you can activate any backup "
+"plan you need to install either of</p><ul><li>bup, for versioned backups</"
+"li><li>rsync, for synchronized backups</li></ul>"
+msgstr ""
+"<h2>Falten els programes de còpia de seguretat</h2><p>Abans de poder activar "
+"qualsevol pla de còpia de seguretat, haureu</p><ul><li>d'instal·lar «bup» "
+"per a les còpies de seguretat amb versions i «rsync»</li><li>per a les "
+"còpies de seguretat sincronitzades.</li></ul>"
+
+#: kcm/kupkcm.cpp:175
+#, kde-kuit-format
+msgctxt "@info %1 is the name of the backup plan"
+msgid ""
+"%1 does not have a destination!<nl/>No backups will be saved by this plan."
+msgstr ""
+"%1 no té una destinació!<nl/>Este pla no guardarà cap còpia de seguretat."
+
+#: kcm/kupkcm.cpp:178
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Warning"
+msgstr "Avís"
+
+#: kcm/kupkcm.cpp:224
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Add New Plan"
+msgstr "Afig un pla nou"
+
+#: kcm/kupkcm.cpp:236
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Backups Enabled"
+msgstr "Còpies de seguretat activades"
+
+#: kcm/kupkcm.cpp:247
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Open and restore from existing backups"
+msgstr "Obri i restaura de les còpies de seguretat existents"
+
+#: kcm/planstatuswidget.cpp:32
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Configure"
+msgstr "Configura"
+
+#: kcm/planstatuswidget.cpp:35
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "Elimina"
+
+#: kcm/planstatuswidget.cpp:38
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Duplicate"
+msgstr "Duplica"
+
+#: kioslave/bupslave.cpp:73 kioslave/bupslave.cpp:130 kioslave/bupslave.cpp:167
+#: kioslave/bupslave.cpp:230 kioslave/bupslave.cpp:252
+#, kde-format
+msgid ""
+"No bup repository found.\n"
+"%1"
+msgstr ""
+"No s'ha trobat el repositori «bup».\n"
+"%1"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:109
+#, kde-format
+msgid "Save new backup"
+msgstr "Guarda una còpia de seguretat nova"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:115
+#, kde-format
+msgid "Prune old backups"
+msgstr "Elimina les còpies de seguretat antigues"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:120
+#, kde-format
+msgid "Show files"
+msgstr "Mostra els fitxers"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:125
+#, kde-format
+msgid "Show log file"
+msgstr "Mostra el fitxer de registre"
+
+#: plasmoid/contents/ui/Main.qml:69
+#, kde-format
+msgid "&Configure Kup..."
+msgstr "&Configura Kup..."
+
+#: plasmoid/contents/ui/Main.qml:71
+#, kde-format
+msgid "&Reload backup plans"
+msgstr "Torna a ca&rregar els plans de còpia de seguretat"
+
+#: purger/main.cpp:21
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Purger"
+msgstr "Purgador"
+
+#: purger/main.cpp:22
+#, kde-format
+msgid "Purger for bup archives."
+msgstr "Purga els arxius «bup»."
+
+#: purger/main.cpp:23
+#, kde-format
+msgid "Copyright (C) 2013-2021 Simon Persson"
+msgstr "Copyright (C) 2013-2021 Simon Persson"
+
+#: settings/backupplan.cpp:23
+#, kde-kuit-format
+msgctxt ""
+"@label Default name for a new backup plan, %1 is the number of the plan in "
+"order"
+msgid "Backup plan %1"
+msgstr "Pla %1 de còpia de seguretat"
+
+#: settings/backupplan.cpp:56
+#, kde-format
+msgid "Backups"
+msgstr "Còpies de seguretat"
+
+#: settings/backupplan.cpp:91
+#, kde-format
+msgctxt "default description of newly duplicated backup plan"
+msgid "%1 (copy)"
+msgstr "%1 (còpia)"
+
+#: settings/backupplan.cpp:209
+#, kde-format
+msgctxt "%1 is fancy formatted date"
+msgid "Last saved: %1"
+msgstr "Guardada per última vegada: %1"
+
+#: settings/backupplan.cpp:214
+#, kde-format
+msgctxt "%1 is storage size of archive"
+msgid "Size: %1"
+msgstr "Mida: %1"
+
+#: settings/backupplan.cpp:219
+#, kde-format
+msgctxt "%1 is free storage space"
+msgid "Free space: %1"
+msgstr "Espai lliure: %1"
+
+#: settings/backupplan.cpp:223
+#, kde-kuit-format
+msgctxt "@label"
+msgid "This backup plan has never been run."
+msgstr "Este pla de còpia de seguretat no s'ha executat mai."

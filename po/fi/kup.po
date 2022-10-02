@@ -1,0 +1,1485 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kup package.
+# Tommi Nieminen <translator@legisign.org>, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kup\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:49+0000\n"
+"PO-Revision-Date: 2021-09-05 14:59+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: daemon/backupjob.cpp:39
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"One source folder no longer exists. Please open settings and confirm what to "
+"include in backup.<nl/><filename>%2</filename>"
+msgid_plural ""
+"%1 source folders no longer exist. Please open settings and confirm what to "
+"include in backup.<nl/><filename>%2</filename>"
+msgstr[0] ""
+"Yhtä lähdekansiota ei enää ole. Avaa asetukset ja vahvista, mitä "
+"varmuuskopioon sisällytetään.<nl/><filename>%2</filename>"
+msgstr[1] ""
+"%1 lähdekansiota ei enää ole. Avaa asetukset ja vahvista, mitä "
+"varmuuskopioon sisällytetään.<nl/><filename>%2</filename>"
+
+#: daemon/bupjob.cpp:46 daemon/buprepairjob.cpp:24
+#: daemon/bupverificationjob.cpp:23
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"The <application>bup</application> program is needed but could not be found, "
+"maybe it is not installed?"
+msgstr ""
+"<application>bup</application>-ohjelma on tarpeen mutta sitä ei löytynyt: "
+"ehkä sitä ei ole asennettu?"
+
+#: daemon/bupjob.cpp:52 daemon/buprepairjob.cpp:30
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"The <application>par2</application> program is needed but could not be "
+"found, maybe it is not installed?"
+msgstr ""
+"<application>par2</application>-ohjelma on tarpeen mutta sitä ei löytynyt: "
+"ehkä sitä ei ole asennettu?"
+
+#: daemon/bupjob.cpp:71
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup destination could not be initialised. See log file for more details."
+msgstr "Varmuuskopion kohdetta ei voitu valmistella. Katso lisätietoa lokista."
+
+#: daemon/bupjob.cpp:94
+#, kde-format
+msgid "Checking backup integrity"
+msgstr "Tarkistetaan varmuuskopion eheyttä"
+
+#: daemon/bupjob.cpp:109 daemon/bupverificationjob.cpp:58
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups could be corrupted! See log file "
+"for more details. Do you want to try repairing the backup files?"
+msgstr ""
+"Varmuuskopion eheyden tarkistaminen epäonnistui. Varmuuskopio voi olla "
+"vioittunut! Katso lisätietoa lokista. Haluatko yrittää varmuuskopion "
+"korjaamista?"
+
+#: daemon/bupjob.cpp:113
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups could be corrupted! See log file "
+"for more details."
+msgstr ""
+"Varmuuskopion eheyden tarkistaminen epäonnistui. Varmuuskopio voi olla "
+"vioittunut! Katso lisätietoa lokista."
+
+#: daemon/bupjob.cpp:144 daemon/rsyncjob.cpp:51
+#, kde-format
+msgid "Checking what to copy"
+msgstr "Tarkistetaan mitä kopioidaan"
+
+#: daemon/bupjob.cpp:155
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Failed to analyze files. See log file for more details."
+msgstr "Tiedostojen analysointi epäonnistui. Katso lisätietoa lokista."
+
+#: daemon/bupjob.cpp:176 daemon/bupjob.cpp:288 daemon/rsyncjob.cpp:167
+#, kde-format
+msgid "Saving backup"
+msgstr "Tallennetaan varmuuskopiota"
+
+#: daemon/bupjob.cpp:188 daemon/rsyncjob.cpp:111
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Failed to save backup. See log file for more details."
+msgstr "Varmuuskopion tallentaminen epäonnistui. Katso lisätietoa lokista."
+
+#: daemon/bupjob.cpp:212
+#, kde-format
+msgid "Generating recovery information"
+msgstr "Luodaan palautustietoa"
+
+#: daemon/bupjob.cpp:224
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed to generate recovery info for the backup. See log file for more "
+"details."
+msgstr ""
+"Palautustiedon luominen varmuuskopiolle epäonnistui. Katso lisätietoa "
+"lokista."
+
+#: daemon/bupjob.cpp:289 daemon/rsyncjob.cpp:168
+#, kde-format
+msgctxt "Label for file currently being copied"
+msgid "File"
+msgstr "Tiedosto"
+
+#: daemon/buprepairjob.cpp:63
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup repair failed. Your backups could be corrupted! See log file for more "
+"details."
+msgstr ""
+"Varmuuskopion korjaaminen epäonnistui. Varmuuskopio voi olla vioittunut! "
+"Katso lisätietoa lokista."
+
+#: daemon/buprepairjob.cpp:67
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Success! Backup repair worked. See log file for more details."
+msgstr "Onnistui! Varmuuskopion sai korjatuksi. Katso lisätietoa lokista."
+
+#: daemon/buprepairjob.cpp:71
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup repair was not necessary. Your backups are not corrupted. See log "
+"file for more details."
+msgstr ""
+"Varmuuskopion korjaaminen ei ole tarpeen: varmuuskopio on kunnossa. Katso "
+"lisätietoa lokista."
+
+#: daemon/buprepairjob.cpp:76
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup repair failed. Your backups could still be corrupted! See log file "
+"for more details."
+msgstr ""
+"Varmuuskopion korjaaminen epäonnistui. Varmuuskopio voi yhä olla vioittunut! "
+"Katso lisätietoa lokista."
+
+#: daemon/bupverificationjob.cpp:61 daemon/bupverificationjob.cpp:78
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups are corrupted! See log file for "
+"more details."
+msgstr ""
+"Varmuuskopion eheyden tarkistaminen epäonnistui. Varmuuskopio voi olla "
+"vioittunut! Katso lisätietoa lokista."
+
+#: daemon/bupverificationjob.cpp:67
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Backup integrity test was successful. Your backups are fine."
+msgstr "Varmuuskopion eheyden tarkistus onnistui. Varmuuskopio on kunnossa."
+
+#: daemon/bupverificationjob.cpp:74
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups are corrupted! See log file for "
+"more details. Do you want to try repairing the backup files?"
+msgstr ""
+"Varmuuskopion eheyden tarkistaminen epäonnistui. Varmuuskopio on vioittunut! "
+"Katso lisätietoa lokista. Haluatko yrittää varmuuskopion korjaamista?"
+
+#: daemon/kupdaemon.cpp:155
+#, kde-format
+msgid "Continue"
+msgstr "Jatka"
+
+#: daemon/kupdaemon.cpp:157
+#, kde-format
+msgid "Stop"
+msgstr "Pysäytä"
+
+#: daemon/kupdaemon.cpp:159
+#, kde-format
+msgctxt "%1 is a text explaining the current activity"
+msgid "Currently busy: %1"
+msgstr "Työ käynnissä: %1"
+
+#: daemon/kupdaemon.cpp:160
+#, kde-format
+msgid "Do you really want to stop?"
+msgstr "Haluatko varmasti pysäyttää?"
+
+#: daemon/kupdaemon.cpp:163
+#, kde-format
+msgid "User Backups"
+msgstr "Käyttäjän varmuuskopiot"
+
+#: daemon/kupdaemon.cpp:240
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination not available"
+msgstr "Varmuuskopion kohde ei ole käytettävissä"
+
+#: daemon/kupdaemon.cpp:244 daemon/kupdaemon.cpp:301
+#, kde-format
+msgid "No backup plans configured"
+msgstr "Varmuuskopiosuunnitelmaa ei ole asetettu"
+
+#: daemon/kupdaemon.cpp:250
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination available"
+msgstr "Varmuuskopion kohde käytettävissä"
+
+#: daemon/kupdaemon.cpp:260 daemon/planexecutor.cpp:72
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup status OK"
+msgstr "Varmuuskopion tila OK"
+
+#: daemon/kupdaemon.cpp:267 daemon/planexecutor.cpp:74
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup suggested"
+msgstr "Ehdotetaan uutta varmuuskopiota"
+
+#: daemon/kupdaemon.cpp:274 daemon/planexecutor.cpp:76
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup needed"
+msgstr "Uusi varmuuskopio tarpeen"
+
+#: daemon/main.cpp:27
+#, kde-kuit-format
+msgctxt "@info:shell Error message at startup"
+msgid ""
+"Kup is not enabled, enable it from the system settings module. You can do "
+"that by running <command>kcmshell5 kup</command>"
+msgstr ""
+"Kup ei ole käytössä: ota se käyttöön järjestelmäasetuksista. Tämän voi tehdä "
+"komennolla <command>kcmshell5 kup</command>"
+
+#: daemon/main.cpp:33
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Kup Daemon"
+msgstr "Kup-palvelu"
+
+#: daemon/main.cpp:34
+#, kde-format
+msgid ""
+"Kup is a flexible backup solution using the backup storage system 'bup'. "
+"This allows it to quickly perform incremental backups, only saving the parts "
+"of files that has actually changed since last backup was saved."
+msgstr ""
+"Kup on joustava bup-järjestelmää käyttävä varmuuskopiointiratkaisu. Se "
+"mahdollista inkrementaaliset varmuuskopiot, jossa tallennetaan vain "
+"viimeisimmän varmuuskopion jälkeen muuttuneet tiedoston osat."
+
+#: daemon/main.cpp:37 kcm/kupkcm.cpp:36
+#, kde-format
+msgid "Copyright (C) 2011-2020 Simon Persson"
+msgstr "Tekijänoikeudet © 2011–202 Simon Persson"
+
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: purger/main.cpp:24
+#, kde-format
+msgid "Simon Persson"
+msgstr "Simon Persson"
+
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: purger/main.cpp:24
+#, kde-format
+msgid "Maintainer"
+msgstr "Ylläpitäjä"
+
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:38
+#: purger/main.cpp:25
+#, kde-format, kde-kuit-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Tommi Nieminen"
+
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:39
+#: purger/main.cpp:25
+#, kde-format, kde-kuit-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "translator@legisign.org"
+
+#: daemon/planexecutor.cpp:62
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Saving backup"
+msgstr "Tallennetaan varmuuskopiota"
+
+#: daemon/planexecutor.cpp:64
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Checking backup integrity"
+msgstr "Tarkistetaan varmuuskopion eheyttä"
+
+#: daemon/planexecutor.cpp:66
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Repairing backups"
+msgstr "Korjataan varmuuskopioita"
+
+#: daemon/planexecutor.cpp:96 daemon/planexecutor.cpp:110
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Do you want to save a first backup now?"
+msgstr "Haluatko nyt tallentaa ensimmäisen varmuuskopiosi?"
+
+#: daemon/planexecutor.cpp:99
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"It has been %1 since last backup was saved.\n"
+"Save a new backup now?"
+msgstr ""
+"Viimeisimmän varmuuskopion tallennuksesta on %1.\n"
+"Tallennetaanko nyt uusi varmuuskopio?"
+
+#: daemon/planexecutor.cpp:113
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You have been active for %1 since last backup was saved.\n"
+"Save a new backup now?"
+msgstr ""
+"Olet viimeisimmän varmuuskopion jälkeen ollut aktiivinen %1.\n"
+"Tallennetaanko nyt uusi varmuuskopio?"
+
+#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:174
+#: daemon/planexecutor.cpp:312
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Yes"
+msgstr "Kyllä"
+
+#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:175
+#: daemon/planexecutor.cpp:313
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "No"
+msgstr "Ei"
+
+#: daemon/planexecutor.cpp:166
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Saving of Backup Failed"
+msgstr "Varmuuskopion tallentaminen epäonnistui"
+
+#: daemon/planexecutor.cpp:171 daemon/planexecutor.cpp:309
+#: daemon/planexecutor.cpp:343
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Show log file"
+msgstr "Avaa lokitiedosto"
+
+#: daemon/planexecutor.cpp:178
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Open settings"
+msgstr "Avaa asetukset"
+
+#: daemon/planexecutor.cpp:202
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Backup Saved"
+msgstr "Varmuuskopio on tallennettu"
+
+#: daemon/planexecutor.cpp:203
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Saving backup completed successfully."
+msgstr "Varmuuskopion tallennus onnistui."
+
+#: daemon/planexecutor.cpp:252 daemon/planexecutor.cpp:259
+#: daemon/planexecutor.cpp:291
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Problem"
+msgstr "Ongelma"
+
+#: daemon/planexecutor.cpp:253
+#, kde-kuit-format
+msgctxt "notification"
+msgid "You don't have write permission to backup destination."
+msgstr "Sinulla ei ole käyttöoikeuksia varmuuskopion kohteeseen."
+
+#: daemon/planexecutor.cpp:260
+#, kde-kuit-format
+msgctxt "notification"
+msgid "Invalid type of backup in configuration."
+msgstr "Virheellinen varmuuskopiotyyppi asetuksissa."
+
+#: daemon/planexecutor.cpp:305
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Integrity Check Completed"
+msgstr "Eheyden tarkistus on valmis"
+
+#: daemon/planexecutor.cpp:340
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Repair Completed"
+msgstr "Korjaus on valmis"
+
+#: daemon/planexecutor.cpp:371
+#, kde-format
+msgid "Kup Backup System"
+msgstr "Kup-varmuuskopiojärjestelmä"
+
+#: daemon/rsyncjob.cpp:32
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"The <application>rsync</application> program is needed but could not be "
+"found, maybe it is not installed?"
+msgstr ""
+"<application>rsync</application> on tarpeen mutta sitä ei löytynyt: ehkä "
+"sitä ei ole asennettu?"
+
+#: filedigger/filedigger.cpp:99
+#, kde-kuit-format
+msgctxt "@info messagebox, %1 is a folder path"
+msgid ""
+"The backup archive <filename>%1</filename> could not be opened. Check if the "
+"backups really are located there."
+msgstr ""
+"Varmuuskopioarkistoa <filename>%1</filename> ei voitu avata. Tarkista, "
+"ovatko varmuuskopiot todella siellä."
+
+#: filedigger/filedigger.cpp:107
+#, kde-kuit-format
+msgctxt "@info messagebox"
+msgid "You do not have permission needed to read this backup archive."
+msgstr ""
+"Sinulla ei ole tämän varmuuskopioarkiston lukemiseen tarvittavia "
+"käyttöoikeuksia."
+
+#: filedigger/filedigger.cpp:156
+#, kde-format
+msgid "Select location of backup archive to open."
+msgstr "Valitse avattavan varmuuskopioarkiston sijainti."
+
+#: filedigger/main.cpp:26
+#, kde-kuit-format
+msgctxt "@title"
+msgid "File Digger"
+msgstr "Tiedostoselain"
+
+#: filedigger/main.cpp:27
+#, kde-format
+msgid "Browser for bup archives."
+msgstr "bup-arkistojen selain."
+
+#: filedigger/main.cpp:28
+#, kde-format
+msgid "Copyright (C) 2013-2020 Simon Persson"
+msgstr "Tekijänoikeudet © 2013–2020 Simon Persson"
+
+#: filedigger/main.cpp:35 purger/main.cpp:30
+#, kde-format
+msgid "Name of the branch to be opened."
+msgstr "Avattavan haaran nimi."
+
+#: filedigger/main.cpp:37 purger/main.cpp:32
+#, kde-format
+msgid "Path to the bup repository to be opened."
+msgstr "Avattavan bup-lähteen sijainti."
+
+#: filedigger/mergedvfs.cpp:96
+#, kde-kuit-format
+msgctxt "@info messagebox"
+msgid ""
+"Could not read this backup archive. Perhaps some files have become "
+"corrupted. Do you want to run an integrity check to test this?"
+msgstr ""
+"Tätä varmuuskopioarkistoa ei voitu lukea. Jotkin tiedostot voivat olla "
+"vioittuneet. Haluatko testata tämän tekemällä eheystarkistuksen?"
+
+#: filedigger/mergedvfs.cpp:144
+#, kde-kuit-format
+msgctxt "added after folder name in some cases"
+msgid " (folder)"
+msgstr " (kansio)"
+
+#: filedigger/mergedvfs.cpp:146
+#, kde-kuit-format
+msgctxt "added after file name in some cases"
+msgid " (symlink)"
+msgstr " (symlinkki)"
+
+#: filedigger/mergedvfs.cpp:148
+#, kde-kuit-format
+msgctxt "added after file name in some cases"
+msgid " (file)"
+msgstr " (tiedosto)"
+
+#: filedigger/restoredialog.cpp:99 kcm/backupplanwidget.cpp:434
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "New Folder..."
+msgstr "Uusi kansio…"
+
+#: filedigger/restoredialog.cpp:125 filedigger/restoredialog.cpp:144
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid "No destination was selected, please select one."
+msgstr "Kohdetta ei ole vielä valittu."
+
+#: filedigger/restoredialog.cpp:244
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid "There was a problem while getting a list of all files to restore: %1"
+msgstr "Palautettavia tiedostoja selvitettäessä ilmeni ongelma: %1"
+
+#: filedigger/restoredialog.cpp:259
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"The destination does not have enough space available. Please choose a "
+"different destination or free some space."
+msgstr ""
+"Kohteessa ei ole tarpeeksi vapaata tilaa. Valitse toinen kohde tai vapauta "
+"tilaa."
+
+#: filedigger/restoredialog.cpp:271
+#, kde-kuit-format
+msgctxt ""
+"added to the suggested filename when restoring, %1 is the time when backup "
+"was saved"
+msgid " - saved at %1"
+msgstr " – tallennettu %1"
+
+#: filedigger/restoredialog.cpp:272
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Folder already exists, please choose a solution"
+msgstr "Kansio on jo olemassa: valitse mitä tehdään"
+
+#: filedigger/restoredialog.cpp:278
+#, kde-kuit-format
+msgctxt "@info"
+msgid "File already exists"
+msgstr "Tiedosto on jo olemassa"
+
+#: filedigger/restoredialog.cpp:291
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid "The new name entered already exists, please enter a different one."
+msgstr "Annettu uusi nimi on jo olemassa: valitse toinen."
+
+#: filedigger/restoredialog.cpp:361 kcm/dirselector.cpp:34
+#, kde-kuit-format
+msgctxt "default folder name when creating a new folder"
+msgid "New Folder"
+msgstr "Uusi kansio"
+
+#: filedigger/restoredialog.cpp:366 kcm/dirselector.cpp:39
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "New Folder"
+msgstr "Uusi kansio"
+
+#: filedigger/restoredialog.cpp:367 kcm/dirselector.cpp:40
+#, kde-kuit-format
+msgctxt "@label:textbox"
+msgid ""
+"Create new folder in:\n"
+"%1"
+msgstr ""
+"Luo uusi kansio kohteeseen:\n"
+"%1"
+
+#: filedigger/restoredialog.cpp:380 kcm/dirselector.cpp:52
+#, kde-format
+msgid "A folder named %1 already exists."
+msgstr "Kansio nimeltä %1 on jo olemassa."
+
+#: filedigger/restoredialog.cpp:386 kcm/dirselector.cpp:58
+#, kde-format
+msgid "You do not have permission to create %1."
+msgstr "Sinulla ei ole käyttöoikeuksia luoda kansiota %1."
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, RestoreDialog)
+#: filedigger/restoredialog.ui:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Restore Guide"
+msgstr "Palautusopas"
+
+#. i18n: ectx: property (text), widget (QPushButton, mRestoreOriginalButton)
+#: filedigger/restoredialog.ui:55
+#, kde-format
+msgctxt "@action:button"
+msgid "Restore to original location"
+msgstr "Palauta alkuperäiseen sijaintiin"
+
+#. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
+#: filedigger/restoredialog.ui:78
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose where to restore"
+msgstr "Valitse minne palautetaan"
+
+#. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
+#: filedigger/restoredialog.ui:132
+#, kde-format
+msgctxt "@action:button"
+msgid "Back"
+msgstr "Takaisin"
+
+#. i18n: ectx: property (text), widget (QPushButton, mDestNextButton)
+#: filedigger/restoredialog.ui:143
+#, kde-format
+msgctxt "@action:button"
+msgid "Next"
+msgstr "Seuraava"
+
+#. i18n: ectx: property (text), widget (QRadioButton, mNewNameRadioButton)
+#: filedigger/restoredialog.ui:173
+#, kde-format
+msgctxt "@option:radio "
+msgid "Restore the folder under a new name"
+msgstr "Palauta kansio eri nimisenä"
+
+#. i18n: ectx: property (text), widget (QRadioButton, mOverwriteRadioButton)
+#: filedigger/restoredialog.ui:206
+#, kde-format
+msgctxt "@option:radio"
+msgid "Merge folders"
+msgstr "Yhdistä kansiot"
+
+#. i18n: ectx: property (text), widget (QLabel, mConfirmOverwriteLabel)
+#: filedigger/restoredialog.ui:236
+#, kde-format
+msgctxt "@info Question to user, in dialog"
+msgid ""
+"The following files would be overwritten, please confirm that you wish to "
+"continue."
+msgstr "Seuraavat tiedostot korvataan: vahvista, että haluat jatkaa."
+
+#. i18n: ectx: property (text), widget (QPushButton, mOverwriteBackButton)
+#: filedigger/restoredialog.ui:272
+#, kde-format
+msgctxt "@action:button go to previous page in dialog"
+msgid "Back"
+msgstr "Takaisin"
+
+#. i18n: ectx: property (text), widget (QPushButton, mConfirmButton)
+#: filedigger/restoredialog.ui:283
+#, kde-format
+msgctxt "@action:button User answers \"yes I confirm: overwrite files\""
+msgid "Confirm"
+msgstr "Vahvista"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: filedigger/restoredialog.ui:320
+#, kde-format
+msgctxt "Title above progress bar"
+msgid "Restoring files"
+msgstr "Palautetaan tiedostoja"
+
+#. i18n: ectx: property (text), widget (QLabel, mErrorLabel)
+#: filedigger/restoredialog.ui:347
+#, kde-format
+msgctxt "@label above the detailed error message"
+msgid "An error occurred while restoring:"
+msgstr "Tapahtui virhe palautettaessa:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: filedigger/restoredialog.ui:378
+#, kde-format
+msgctxt "@label"
+msgid "Restoration completed successfully!"
+msgstr "Palauttaminen onnistui!"
+
+#. i18n: ectx: property (text), widget (QPushButton, mOpenDestinationButton)
+#: filedigger/restoredialog.ui:419
+#, kde-format
+msgid "Open Destination"
+msgstr "Avaa kohde"
+
+#. i18n: ectx: property (text), widget (QPushButton, mCloseButton)
+#: filedigger/restoredialog.ui:477
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Sulje"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: filedigger/restoredialog.ui:510
+#, kde-format
+msgctxt "Title above progress bar"
+msgid "Checking file sizes"
+msgstr "Tarkistetaan tiedostokokoja"
+
+#: filedigger/restorejob.cpp:83
+#, kde-kuit-format
+msgctxt "progress report, current operation"
+msgid "Restoring"
+msgstr "Palautetaan"
+
+#: filedigger/restorejob.cpp:84
+#, kde-kuit-format
+msgctxt "progress report, label"
+msgid "File"
+msgstr "Tiedosto"
+
+#: filedigger/versionlistdelegate.cpp:121
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Open"
+msgstr "Avaa"
+
+#: filedigger/versionlistdelegate.cpp:123
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Restore"
+msgstr "Palauta"
+
+#: kcm/backupplanwidget.cpp:261
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Exclude Folder"
+msgstr "Sulje kansio pois"
+
+#: kcm/backupplanwidget.cpp:264
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Include Folder"
+msgstr "Sisällytä kansio"
+
+#: kcm/backupplanwidget.cpp:365
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"You don't have permission to read this folder: <filename>%1</filename><nl/"
+">It cannot be included in the source selection. If it does not contain "
+"anything important to you, one possible solution is to exclude the folder "
+"from the backup plan."
+msgstr ""
+"Sinulla ei ole käyttöoikeuksia lukea tätä kansiota: <filename>%1</"
+"filename><nl/>Sitä ei voi sisällyttää lähteisiin. Ellei se sisällä mitään "
+"merkittävää, yksi ratkaisu on sulkea se pois varmuuskopiosuunnitelmasta."
+
+#: kcm/backupplanwidget.cpp:376
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"You don't have permission to read this file: <filename>%1</filename><nl/>It "
+"cannot be included in the source selection. If the file is not important to "
+"you, one possible solution is to exclude the whole folder where the file is "
+"stored from the backup plan."
+msgstr ""
+"Sinulla ei ole käyttöoikeuksia lukea tätä tiedostoa: <filename>%1</"
+"filename><nl/>Sitä ei voi sisällyttää lähteisiin. Ellei tiedostossa ole "
+"mitään tärkeää, yksi ratkaisu on sulkea koko tiedoston sisältävä kansio pois "
+"varmuuskopiosuunnitelmasta."
+
+#: kcm/backupplanwidget.cpp:392
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"The symbolic link <filename>%1</filename> is currently included but it "
+"points to a folder which is not: <filename>%2</filename>.<nl/>That is "
+"probably not what you want. One solution is to simply include the target "
+"folder in the backup plan."
+msgstr ""
+"Symbolinen linkki <filename>%1</filename> on sisällytetty suunnitelmaan "
+"mutta viittaa kansioon, jota ei ole: <filename>%2</filename>.<nl/>Tämä "
+"tuskin on, mitä haluat. Yksi ratkaisu on yksinkertaisesti sisällyttää "
+"suunnitelmaan kohdekansiokin."
+
+#: kcm/backupplanwidget.cpp:400
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"The symbolic link <filename>%1</filename> is currently included but it "
+"points to a file which is not: <filename>%2</filename>.<nl/>That is probably "
+"not what you want. One solution is to simply include the folder where the "
+"file is stored in the backup plan."
+msgstr ""
+"Symbolinen linkki <filename>%1</filename> on sisällytetty suunnitelmaan "
+"mutta viittaa tiedostoon, jota ei ole: <filename>%2</filename>.<nl/>Tämä "
+"tuskin on, mitä haluat. Yksi ratkaisu on yksinkertaisesti sisällyttää "
+"suunnitelmaan tiedoston sisältävä kansiokin."
+
+#: kcm/backupplanwidget.cpp:423
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Select Folder"
+msgstr "Valitse kansio"
+
+#: kcm/backupplanwidget.cpp:461
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Description:"
+msgstr "Kuvaus:"
+
+#: kcm/backupplanwidget.cpp:464
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Back to overview"
+msgstr "Takaisin yleiskuvaan"
+
+#: kcm/backupplanwidget.cpp:498
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This type of backup is an <emphasis>archive</emphasis>. It contains both the "
+"latest version of your files and earlier backed up versions. Using this type "
+"of backup allows you to recover older versions of your files, or files which "
+"were deleted on your computer at a later time. The storage space needed is "
+"minimized by looking for common parts of your files between versions and "
+"only storing those parts once. Nevertheless, the backup archive will keep "
+"growing in size as time goes by.<nl/>Also important to know is that the "
+"files in the archive can not be accessed directly with a general file "
+"manager, a special program is needed."
+msgstr ""
+"Tämän tyyppinen varmuuskopio on <emphasis>arkisto</emphasis>. Se sisältää "
+"tiedostoista sekä viimeisimmät että aiemmin varmuuskopioidut versiot. Tämän "
+"tyypin varmuuskopiolla voit palauttaa tiedostojen aiempia versioita tai "
+"tiedostoja, jotka on myöhemmin poistettu. Talletustila minimoidaan etsimällä "
+"eri versioiden yhteisiä osia ja tallentamalla ne vain kerran. "
+"Varmuuskopioarkisto kasvaa silti ajan saatossa.<nl/>On myös tärkeä ymmärtää, "
+"että arkiston tiedostoihin ei pääse suoraan käsiksi tiedostonhallinnasta "
+"vaan tarvitaan erillinen ohjelma."
+
+#: kcm/backupplanwidget.cpp:513
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid ""
+"Versioned Backup (not available because <application>bup</application> is "
+"not installed)"
+msgstr ""
+"Versioitu varmuuskopio (ei käytettävissä, koska <application>bup</"
+"application>ia ei ole asennettu)"
+
+#: kcm/backupplanwidget.cpp:518
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Versioned Backup (recommended)"
+msgstr "Versioitu varmuuskopio (suositeltu)"
+
+#: kcm/backupplanwidget.cpp:523
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This type of backup is a folder which is synchronized with your selected "
+"source folders. Saving a backup simply means making the backup destination "
+"contain an exact copy of your source folders as they are now and nothing "
+"else. If a file has been deleted in a source folder it will get deleted from "
+"the backup folder.<nl/>This type of backup can protect you against data loss "
+"due to a broken hard drive but it does not help you to recover from your own "
+"mistakes."
+msgstr ""
+"Tämän tyyppinen varmuuskopio on kansio, joka synkronoidaan valittujen "
+"lähdekansioiden kanssa. Varmuuskopion tallentaminen tarkoittaa "
+"yksinkertaisesti sitä, että kohdekansio sisältää lähdekansioiden täydellisen "
+"kopion eikä mitään muuta. Jos tiedosto poistetaan lähteestä, se poistetaan "
+"myös kohteesta.<nl/>Tämän tyypin varmuuskopio suojaa rikkonaisen kiintolevyn "
+"aiheuttamalta tietojen menetykseltä muttei auta palautumaan omista "
+"virheistäsi."
+
+#: kcm/backupplanwidget.cpp:536
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid ""
+"Synchronized Backup (not available because <application>rsync</application> "
+"is not installed)"
+msgstr ""
+"Synkronoitu varmuuskopio (ei käytettävissä, koska <application>rsync</"
+"application>iä ei ole asennettu)"
+
+#: kcm/backupplanwidget.cpp:541
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Synchronized Backup"
+msgstr "Synkronoitu varmuuskopio"
+
+#: kcm/backupplanwidget.cpp:569
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Backup Type"
+msgstr "Varmuuskopion tyyppi"
+
+#: kcm/backupplanwidget.cpp:570
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Select what type of backup you want"
+msgstr "Valitse haluamasi varmuuskopion tyyppi"
+
+#: kcm/backupplanwidget.cpp:578
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Sources"
+msgstr "Lähteet"
+
+#: kcm/backupplanwidget.cpp:579
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Select which folders to include in backup"
+msgstr "Valitse, mitkä kansiot varmuuskopioon sisällytetään"
+
+#: kcm/backupplanwidget.cpp:593
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Filesystem Path"
+msgstr "Sijainti tiedostojärjestelmässä"
+
+#: kcm/backupplanwidget.cpp:594
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "External Storage"
+msgstr "Ulkoinen talletustila"
+
+#: kcm/backupplanwidget.cpp:600
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can use this option for backing up to a secondary internal harddrive, an "
+"external eSATA drive or networked storage. The requirement is just that you "
+"always mount it at the same path in the filesystem. The path specified here "
+"does not need to exist at all times, its existence will be monitored."
+msgstr ""
+"Tällä valinnalla voi varmuuskopioida sisäiselle toisiokiintolevylle, "
+"ulkoiselle eSata-asemalle tai verkkotalletustilaan. Vaaditaan vain, että "
+"liität laitteen tiedostojärjestelmässä aina samaan kohtaan. Tässä annetun "
+"sijainnin ei tarvitse olla aina olemassa: saataville tuloa valvotaan."
+
+#: kcm/backupplanwidget.cpp:607
+#, kde-kuit-format
+msgctxt "@label:textbox"
+msgid "Destination Path for Backup:"
+msgstr "Varmuuskopion kohdesijainti:"
+
+#: kcm/backupplanwidget.cpp:626
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Use this option if you want to backup your files on an external storage that "
+"can be plugged in to this computer, such as a USB hard drive or memory stick."
+msgstr ""
+"Käytä tätä, jos haluat varmuuskopioida tiedostot koneeseen kytkettävään "
+"ulkoiseen talletustilaan, esimerkiksi USB-kiintolevylle tai -muistitikulle."
+
+#: kcm/backupplanwidget.cpp:636 kcm/backupplanwidget.cpp:640
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "The specified folder will be created if it does not exist."
+msgstr "Kohdekansio luodaan, ellei sitä ole olemassa."
+
+#: kcm/backupplanwidget.cpp:638
+#, kde-kuit-format
+msgctxt "@label:textbox"
+msgid "Folder on Destination Drive:"
+msgstr "Kansio kohdeasemalla:"
+
+#: kcm/backupplanwidget.cpp:646
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "Open dialog to select a folder"
+msgstr "Valitse kansio valintaikkunasta"
+
+#: kcm/backupplanwidget.cpp:676
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Destination"
+msgstr "Kohde"
+
+#: kcm/backupplanwidget.cpp:677
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Select the backup destination"
+msgstr "Valitse varmuuskopion kohde"
+
+#: kcm/backupplanwidget.cpp:694
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Manual Activation"
+msgstr "Käynnistys pyydettäessä"
+
+#: kcm/backupplanwidget.cpp:695
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Interval"
+msgstr "Käynnistys aikavälein"
+
+#: kcm/backupplanwidget.cpp:696
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Active Usage Time"
+msgstr "Aktiivinen käyttöaika"
+
+#: kcm/backupplanwidget.cpp:698
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Backups are only saved when manually requested. This can be done by using "
+"the popup menu from the backup system tray icon."
+msgstr ""
+"Varmuuskopiot tallennetaan vain pyydettäessä. Tämän voi tehdä "
+"varmuuskopiointijärjestelmän ilmoitusaluekuvakkeesta."
+
+#: kcm/backupplanwidget.cpp:712
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"New backup will be triggered when backup destination becomes available and "
+"more than the configured interval has passed since the last backup was saved."
+msgstr ""
+"Uusi varmuuskopio tehdään, kun kohde tulee saataville ja edellisestä "
+"varmuuskopiosta on yli annetun ajan."
+
+#: kcm/backupplanwidget.cpp:729
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Minutes"
+msgstr "minuuttia"
+
+#: kcm/backupplanwidget.cpp:730 kcm/backupplanwidget.cpp:757
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Hours"
+msgstr "tuntia"
+
+#: kcm/backupplanwidget.cpp:731
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Days"
+msgstr "päivää"
+
+#: kcm/backupplanwidget.cpp:732
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Weeks"
+msgstr "viikkoa"
+
+#: kcm/backupplanwidget.cpp:742
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"New backup will be triggered when backup destination becomes available and "
+"you have been using your computer actively for more than the configured time "
+"limit since the last backup was saved."
+msgstr ""
+"Uusi varmuuskopio tehdään, kun kohde tulee saataville ja tietokonetta on "
+"edellisen varmuuskopion jälkeen käytetty aktiivisesti yli annetun ajan."
+
+#: kcm/backupplanwidget.cpp:763
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Ask for confirmation before saving backup"
+msgstr "Pyydä vahvistus ennen varmuuskopioinnin aloittamista"
+
+#: kcm/backupplanwidget.cpp:782
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Schedule"
+msgstr "Aikataulu"
+
+#: kcm/backupplanwidget.cpp:783
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Specify the backup schedule"
+msgstr "Määritä varmuuskopiointiaikataulu"
+
+#: kcm/backupplanwidget.cpp:797
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Show hidden folders in source selection"
+msgstr "Näytä lähteen valinnassa piilokansiot"
+
+#: kcm/backupplanwidget.cpp:802
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This makes it possible to explicitly include or exclude hidden folders in "
+"the backup source selection. Hidden folders have a name that starts with a "
+"dot. They are typically located in your home folder and are used to store "
+"settings and temporary files for your applications."
+msgstr ""
+"Tämä mahdollista eksplisiittisesti sisällyttää tai sulkea pois piilokansiot "
+"varmuuskopiolähteiden valinnasta. Piilokansioiden nimet alkavat pisteellä, "
+"ne sijaitsevat tavallisesti kotikansiossasi ja niitä käytetään sovellusten "
+"asetusten ja väliaikaistiedostojen tallettamiseen."
+
+#: kcm/backupplanwidget.cpp:823
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This will make your backups use around 10% more storage space and saving "
+"backups will take slightly longer time. In return it will be possible to "
+"recover from a partially corrupted backup."
+msgstr ""
+"Tämä saa varmuuskopiot viemään noin 10 % enemmän tilaa ja varmuuskopioimisen "
+"tekemisen kestämään hieman kauemmin. Hyvänä puolena on, että osittain "
+"vioittunut varmuuskopio on mahdollista palauttaa."
+
+#: kcm/backupplanwidget.cpp:829
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Generate recovery information"
+msgstr "Luo palautustieto"
+
+#: kcm/backupplanwidget.cpp:831
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid ""
+"Generate recovery information (not available because <application>par2</"
+"application> is not installed)"
+msgstr ""
+"Luo palautustieto (ei käytettävissä, koska <application>par2</application>:"
+"ta ei ole asennettu)"
+
+#: kcm/backupplanwidget.cpp:847
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Verify integrity of backups"
+msgstr "Tarkista varmuuskopioiden eheys"
+
+#: kcm/backupplanwidget.cpp:851
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Checks the whole backup archive for corruption every time you save new data. "
+"Saving backups will take a little bit longer time but it allows you to catch "
+"corruption problems sooner than at the time you need to use a backup, at "
+"that time it could be too late."
+msgstr ""
+"Tarkistaa koko varmuuskopioarkiston vioittumisen varalta aina uutta tietoa "
+"tallennettaessa. Varmuuskopioiden tallennus kestää hiukan kauemmin, mutta "
+"vioittumisongelmat havaitaan jo ennen kuin tarvitset varmuuskopiota, jolloin "
+"se olisi myöhäistä."
+
+#: kcm/backupplanwidget.cpp:867
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude files and folders based on patterns"
+msgstr "Sulje tiedostoja ja kansioita pois kuvioilla"
+
+#: kcm/backupplanwidget.cpp:885
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Patterns need to be listed in a text file with one pattern per line. Files "
+"and folders with names that match any of the patterns will be excluded from "
+"the backup. The pattern format is documented <link url='%1'>here</link>."
+msgstr ""
+"Kuviot luetellaan tekstitiedostossa kuvio per rivi. Mitä tahansa kuviota "
+"vastaavat tiedostot ja kansiot suljetaan pois varmuuskopiosta. Kuvion "
+"muodosta löytyy lisätietoa <link url='%1'>täältä</link>."
+
+#: kcm/backupplanwidget.cpp:903
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "Open dialog to select a file"
+msgstr "Valitse tiedosto valintaikkunasta"
+
+#: kcm/backupplanwidget.cpp:905
+#, kde-format
+msgid "Select pattern file"
+msgstr "Valitse kuviotiedosto"
+
+#: kcm/backupplanwidget.cpp:930
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Advanced"
+msgstr "Lisäasetukset"
+
+#: kcm/backupplanwidget.cpp:931
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Extra options for advanced users"
+msgstr "Edistyneen käyttäjän lisäasetukset"
+
+#: kcm/driveselection.cpp:257
+#, kde-kuit-format
+msgctxt "@label Only shown if no drives are detected"
+msgid ""
+"Plug in the external storage you wish to use, then select it in this list."
+msgstr ""
+"Kytke haluamasi ulkoinen talletustila ja valitse se sitten luettelosta."
+
+#: kcm/driveselectiondelegate.cpp:57
+#, kde-kuit-format
+msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
+msgid " (disconnected)"
+msgstr "(ei kytketty)"
+
+#: kcm/driveselectiondelegate.cpp:61
+#, kde-kuit-format
+msgctxt "@label %1 is amount of free storage space of hard drive"
+msgid "%1 free"
+msgstr "%1 vapaana"
+
+#: kcm/driveselectiondelegate.cpp:76
+#, kde-kuit-format
+msgctxt ""
+"@item:inlistbox used for unnamed filesystems, more than one filesystem on "
+"device. %1 is partition number, %2 is device description, %3 is either empty "
+"or the \" (disconnected)\" text"
+msgid "Partition %1 on %2%3"
+msgstr "Osio %1 laitteella %2%3"
+
+#: kcm/driveselectiondelegate.cpp:79
+#, kde-kuit-format
+msgctxt ""
+"@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
+"is device description, %2 is either empty or the \" (disconnected)\" text"
+msgid "%1%2"
+msgstr "%1%2"
+
+#: kcm/driveselectiondelegate.cpp:83
+#, kde-kuit-format
+msgctxt ""
+"@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
+"either empty or the \" (disconnected)\" text"
+msgid "%1 on %2%3"
+msgstr "%1 laitteella %2%3"
+
+#: kcm/driveselectiondelegate.cpp:90
+#, kde-kuit-format
+msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
+msgid "%1: %2 total capacity"
+msgstr "%1: kokonaiskapasiteetti %2"
+
+#: kcm/driveselectiondelegate.cpp:137
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid ""
+"Warning: Symbolic links and file permissions can not be saved to this file "
+"system. File permissions only matters if there is more than one user of this "
+"computer or if you are backing up executable program files."
+msgstr ""
+"Varoitus: Tähän tiedostojärjestelmään ei voi tallentaa symbolisia linkkejä "
+"eikä käyttöoikeuksia. Käyttöoikeuksilla on merkitystä vain, jos koneella on "
+"useampi käyttäjä tai varmuuskopioit ohjelmatiedostoja."
+
+#: kcm/driveselectiondelegate.cpp:142
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid ""
+"Warning: File permissions can not be saved to this file system. File "
+"permissions only matters if there is more than one user of this computer or "
+"if you are backing up executable program files."
+msgstr ""
+"Varoitus: Tähän tiedostojärjestelmään ei voi tallentaa käyttöoikeuksia. "
+"Niillä on merkitystä vain, jos koneella on useampi käyttäjä tai "
+"varmuuskopioit ohjelmatiedostoja."
+
+#: kcm/folderselectionmodel.cpp:90
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/>will be included in the backup, except for "
+"unchecked subfolders"
+msgstr ""
+"<filename>%1</filename><nl/>sisältyy varmuuskopioon tarkistamattomia "
+"alikansioita lukuun ottamatta"
+
+#: kcm/folderselectionmodel.cpp:94
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid "<filename>%1</filename><nl/>will be included in the backup"
+msgstr "<filename>%1</filename><nl/>sisällytetään varmuuskopioon"
+
+#: kcm/folderselectionmodel.cpp:98
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
+"the backup but contains folders that will"
+msgstr ""
+"<filename>%1</filename><nl/><emphasis>ei sisälly</emphasis> varmuuskopioon "
+"mutta sisältää kansioita, jotka sisältyvät"
+
+#: kcm/folderselectionmodel.cpp:102
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
+"the backup"
+msgstr ""
+"<filename>%1</filename><nl/><emphasis>ei sisälly</emphasis> varmuuskopioon"
+
+#: kcm/kupkcm.cpp:33
+#, kde-format
+msgid "Kup Configuration Module"
+msgstr "Kup-asetusmoduuli"
+
+#: kcm/kupkcm.cpp:35
+#, kde-format
+msgid "Configuration of backup plans for the Kup backup system"
+msgstr "Kup-varmuuskopiointijärjestelmän suunnitelmien asettaminen"
+
+#: kcm/kupkcm.cpp:69
+#, kde-format
+msgid ""
+"<h2>Backup programs are missing</h2><p>Before you can activate any backup "
+"plan you need to install either of</p><ul><li>bup, for versioned backups</"
+"li><li>rsync, for synchronized backups</li></ul>"
+msgstr ""
+"<h2>Varmuuskopio-ohjelmat puuttuvat</h2><p>Ennen kuin voit aktivoida "
+"varmuuskopiosuunnitelmaa, on asennettava joko</p><ul><li>bup versioituja "
+"varmuuskopioita varten tai</li><li>rsync synkronoituja varmuuskopioita "
+"varten.</li></ul>"
+
+#: kcm/kupkcm.cpp:175
+#, kde-kuit-format
+msgctxt "@info %1 is the name of the backup plan"
+msgid ""
+"%1 does not have a destination!<nl/>No backups will be saved by this plan."
+msgstr ""
+"Suunnitelmalla %1 ei ole kohdetta!<nl/>Tämän suunnitelman varmuuskopioita ei "
+"tallenneta."
+
+#: kcm/kupkcm.cpp:178
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Warning"
+msgstr "Varoitus"
+
+#: kcm/kupkcm.cpp:224
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Add New Plan"
+msgstr "Lisää uusi suunnitelma"
+
+#: kcm/kupkcm.cpp:236
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Backups Enabled"
+msgstr "Varmuuskopiot ovat käytössä"
+
+#: kcm/kupkcm.cpp:247
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Open and restore from existing backups"
+msgstr "Avaa ja palauta aiempia varmuuskopioita"
+
+#: kcm/planstatuswidget.cpp:32
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Configure"
+msgstr "Asetukset"
+
+#: kcm/planstatuswidget.cpp:35
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "Poista"
+
+#: kcm/planstatuswidget.cpp:38
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Duplicate"
+msgstr "Monista"
+
+#: kioslave/bupslave.cpp:73 kioslave/bupslave.cpp:130 kioslave/bupslave.cpp:167
+#: kioslave/bupslave.cpp:230 kioslave/bupslave.cpp:252
+#, kde-format
+msgid ""
+"No bup repository found.\n"
+"%1"
+msgstr ""
+"Bup-lähdettä ei löytynyt.\n"
+"%1"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:109
+#, kde-format
+msgid "Save new backup"
+msgstr "Tallenna uusi varmuuskopio"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:115
+#, kde-format
+msgid "Prune old backups"
+msgstr "Hylkää vanhat varmuuskopiot"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:120
+#, kde-format
+msgid "Show files"
+msgstr "Näytä tiedostot"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:125
+#, kde-format
+msgid "Show log file"
+msgstr "Näytä lokitiedosto"
+
+#: plasmoid/contents/ui/Main.qml:69
+#, kde-format
+msgid "&Configure Kup..."
+msgstr "&Kupin asetukset…"
+
+#: plasmoid/contents/ui/Main.qml:71
+#, kde-format
+msgid "&Reload backup plans"
+msgstr "&Lataa varmuuskopiosuunnitelmat uudelleen"
+
+#: purger/main.cpp:21
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Purger"
+msgstr "Siivoaja"
+
+#: purger/main.cpp:22
+#, kde-format
+msgid "Purger for bup archives."
+msgstr "bup-arkistojen siivoaja."
+
+#: purger/main.cpp:23
+#, kde-format
+msgid "Copyright (C) 2013-2021 Simon Persson"
+msgstr "Tekijänoikeudet © 2013–2021 Simon Persson"
+
+#: settings/backupplan.cpp:23
+#, kde-kuit-format
+msgctxt ""
+"@label Default name for a new backup plan, %1 is the number of the plan in "
+"order"
+msgid "Backup plan %1"
+msgstr "Varmuuskopiosuunnitelma %1"
+
+#: settings/backupplan.cpp:56
+#, kde-format
+msgid "Backups"
+msgstr "Varmuuskopiot"
+
+#: settings/backupplan.cpp:91
+#, kde-format
+msgctxt "default description of newly duplicated backup plan"
+msgid "%1 (copy)"
+msgstr "%1 (kopio)"
+
+#: settings/backupplan.cpp:209
+#, kde-format
+msgctxt "%1 is fancy formatted date"
+msgid "Last saved: %1"
+msgstr "Viimeksi tallennettu: %1"
+
+#: settings/backupplan.cpp:214
+#, kde-format
+msgctxt "%1 is storage size of archive"
+msgid "Size: %1"
+msgstr "Koko: %1"
+
+#: settings/backupplan.cpp:219
+#, kde-format
+msgctxt "%1 is free storage space"
+msgid "Free space: %1"
+msgstr "Vapaa tila: %1"
+
+#: settings/backupplan.cpp:223
+#, kde-kuit-format
+msgctxt "@label"
+msgid "This backup plan has never been run."
+msgstr "Tätä varmuuskopiosuunnitelma ei ole suoritettu koskaan."

@@ -1,0 +1,1569 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Marcin Kralka <marcink96@gmail.com>, 2014.
+# Przemyslaw Ka. <przemyslaw.karpeta@gmail.com>, 2017,2019.
+# Simon Persson <simon.persson@mykolab.com>, 2014.
+# Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kup\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:49+0000\n"
+"PO-Revision-Date: 2022-01-08 09:19+0100\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 22.03.70\n"
+
+#: daemon/backupjob.cpp:39
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"One source folder no longer exists. Please open settings and confirm what to "
+"include in backup.<nl/><filename>%2</filename>"
+msgid_plural ""
+"%1 source folders no longer exist. Please open settings and confirm what to "
+"include in backup.<nl/><filename>%2</filename>"
+msgstr[0] ""
+"Jeden katalog źródłowy już nie istnieje. Otwórz ustawienia i potwierdź w "
+"nich, co ma zawierać kopia zapasowa.<nl/><filename>%2</filename>"
+msgstr[1] ""
+"%1 katalogi źródłowe już nie istnieją. Otwórz ustawienia i potwierdź w nich, "
+"co ma zawierać kopia zapasowa.<nl/><filename>%2</filename>"
+msgstr[2] ""
+"%1 katalogów źródłowych już nie istnieje. Otwórz ustawienia i potwierdź w "
+"nich, co ma zawierać kopia zapasowa.<nl/><filename>%2</filename>"
+
+#: daemon/bupjob.cpp:46 daemon/buprepairjob.cpp:24
+#: daemon/bupverificationjob.cpp:23
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"The <application>bup</application> program is needed but could not be found, "
+"maybe it is not installed?"
+msgstr ""
+"Program <application>bup</application> jest wymagany, ale nie może zostać "
+"odnaleziony, może nie jest zainstalowany?"
+
+#: daemon/bupjob.cpp:52 daemon/buprepairjob.cpp:30
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"The <application>par2</application> program is needed but could not be "
+"found, maybe it is not installed?"
+msgstr ""
+"Program <application>par2</application> jest wymagany, ale nie może zostać "
+"odnaleziony, może nie jest zainstalowany?"
+
+#: daemon/bupjob.cpp:71
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup destination could not be initialised. See log file for more details."
+msgstr ""
+"Inicjalizacja kopii w miejscu docelowym nie powiodła się. Aby uzyskać "
+"bardziej szczególowe informacje, przejrzyj plik dziennika."
+
+#: daemon/bupjob.cpp:94
+#, kde-format
+msgid "Checking backup integrity"
+msgstr "Sprawdzanie spójności kopii"
+
+#: daemon/bupjob.cpp:109 daemon/bupverificationjob.cpp:58
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups could be corrupted! See log file "
+"for more details. Do you want to try repairing the backup files?"
+msgstr ""
+"Sprawdzanie spójności kopii zapasowej nie powiodło się. Kopie zapasowe mogą "
+"być uszkodzone! Aby uzyskać bardziej szczególowe informacje, przejrzyj plik "
+"dziennika. Czy chcesz spróbować naprawić pliki kopii ?"
+
+#: daemon/bupjob.cpp:113
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups could be corrupted! See log file "
+"for more details."
+msgstr ""
+"Nie udało się dokonać sprawdzenia spójności kopii. Kopie zapasowe mogą być "
+"uszkodzone! Aby uzyskać bardziej szczególowe informacje, przejrzyj plik "
+"dziennika."
+
+#: daemon/bupjob.cpp:144 daemon/rsyncjob.cpp:51
+#, kde-format
+msgid "Checking what to copy"
+msgstr "Poszukiwanie danych do skopiowania"
+
+#: daemon/bupjob.cpp:155
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Failed to analyze files. See log file for more details."
+msgstr ""
+"Nie udało się przeanalizować plików. Aby uzyskać bardziej szczególowe "
+"informacje, przejrzyj plik dziennika."
+
+#: daemon/bupjob.cpp:176 daemon/bupjob.cpp:288 daemon/rsyncjob.cpp:167
+#, kde-format
+msgid "Saving backup"
+msgstr "Zapisywanie kopii"
+
+#: daemon/bupjob.cpp:188 daemon/rsyncjob.cpp:111
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Failed to save backup. See log file for more details."
+msgstr ""
+"Nie udało się zapisać kopii. Aby uzyskać bardziej szczególowe informacje, "
+"przejrzyj plik dziennika."
+
+#: daemon/bupjob.cpp:212
+#, kde-format
+msgid "Generating recovery information"
+msgstr "Generowanie informacji ratunkowych"
+
+#: daemon/bupjob.cpp:224
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed to generate recovery info for the backup. See log file for more "
+"details."
+msgstr ""
+"Nie udało się wygenerować informacji ratunkowych dla kopii zapasowej. Aby "
+"uzyskać szczegółowe informacje, przejrzyj plik dziennika."
+
+#: daemon/bupjob.cpp:289 daemon/rsyncjob.cpp:168
+#, kde-format
+msgctxt "Label for file currently being copied"
+msgid "File"
+msgstr "Plik"
+
+#: daemon/buprepairjob.cpp:63
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup repair failed. Your backups could be corrupted! See log file for more "
+"details."
+msgstr ""
+"Naprawa kopii nie powiodła się. Kopie zapasowe mogą być uszkodzone! Aby "
+"uzyskać bardziej szczególowe informacje, przejrzyj plik dziennika."
+
+#: daemon/buprepairjob.cpp:67
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Success! Backup repair worked. See log file for more details."
+msgstr ""
+"Sukces! Naprawa kopii udała się. Aby uzyskać bardziej szczególowe "
+"informacje, przejrzyj plik dziennika."
+
+#: daemon/buprepairjob.cpp:71
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup repair was not necessary. Your backups are not corrupted. See log "
+"file for more details."
+msgstr ""
+"Naprawa kopii nie była potrzebna. Kopie zapasowe nie są uszkodzone. Aby "
+"uzyskać bardziej szczególowe informacje, przejrzyj plik dziennika."
+
+#: daemon/buprepairjob.cpp:76
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup repair failed. Your backups could still be corrupted! See log file "
+"for more details."
+msgstr ""
+"Naprawa kopii nie powiodła się. Twoje kopie nadal mogą zawierać błędy! Aby "
+"uzyskać szczegółowe informacje, przejrzyj plik dziennika."
+
+#: daemon/bupverificationjob.cpp:61 daemon/bupverificationjob.cpp:78
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups are corrupted! See log file for "
+"more details."
+msgstr ""
+"Sprawdzanie spójności kopii nie powiodło się. Twoje kopie zawierają błędy! "
+"Aby uzyskać szczegółowe informacje, przejrzyj plik dziennika."
+
+#: daemon/bupverificationjob.cpp:67
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Backup integrity test was successful. Your backups are fine."
+msgstr ""
+"Pomyślnie ukończono próbę spójności kopii zapasowej. Twoje kopie zapasowe "
+"wyglądają poprawnie."
+
+#: daemon/bupverificationjob.cpp:74
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups are corrupted! See log file for "
+"more details. Do you want to try repairing the backup files?"
+msgstr ""
+"Sprawdzanie spójności kopii nie powiodło się. Twoje kopie zawierają błędy! "
+"Aby uzyskać szczegółowe informacje, przejrzyj plik dziennika. Czy chcesz "
+"wykonać próbę naprawy plików kopii?"
+
+#: daemon/kupdaemon.cpp:155
+#, kde-format
+msgid "Continue"
+msgstr "Dalej"
+
+#: daemon/kupdaemon.cpp:157
+#, kde-format
+msgid "Stop"
+msgstr "Zatrzymaj"
+
+#: daemon/kupdaemon.cpp:159
+#, kde-format
+msgctxt "%1 is a text explaining the current activity"
+msgid "Currently busy: %1"
+msgstr "W tej chwili pracuje: %1"
+
+#: daemon/kupdaemon.cpp:160
+#, kde-format
+msgid "Do you really want to stop?"
+msgstr "Czy na pewno chcesz zatrzymać?"
+
+#: daemon/kupdaemon.cpp:163
+#, kde-format
+msgid "User Backups"
+msgstr "Kopie zapasowe użytkownika"
+
+#: daemon/kupdaemon.cpp:240
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination not available"
+msgstr "Miejsce docelowe kopii zapasowej nie jest dostępne"
+
+#: daemon/kupdaemon.cpp:244 daemon/kupdaemon.cpp:301
+#, kde-format
+msgid "No backup plans configured"
+msgstr "Nie określono żadnego planu tworzenia kopii zapasowych"
+
+#: daemon/kupdaemon.cpp:250
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination available"
+msgstr "Miejsce docelowe kopii zapasowej jest dostępne"
+
+#: daemon/kupdaemon.cpp:260 daemon/planexecutor.cpp:72
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup status OK"
+msgstr "Stan kopii zapasowej: OK"
+
+#: daemon/kupdaemon.cpp:267 daemon/planexecutor.cpp:74
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup suggested"
+msgstr "Zasugerowano utworzenie nowej kopii zapasowej"
+
+#: daemon/kupdaemon.cpp:274 daemon/planexecutor.cpp:76
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup needed"
+msgstr "Potrzebna nowa kopia zapasowa"
+
+#: daemon/main.cpp:27
+#, kde-kuit-format
+msgctxt "@info:shell Error message at startup"
+msgid ""
+"Kup is not enabled, enable it from the system settings module. You can do "
+"that by running <command>kcmshell5 kup</command>"
+msgstr ""
+"Kup nie jest włączony, należy go włączyć z poziomu modułu ustawień "
+"systemowych. Można to zrobić uruchamiając polecenie <command>kcmshell5 kup</"
+"command>"
+
+#: daemon/main.cpp:33
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Kup Daemon"
+msgstr "Usługa Kup"
+
+#: daemon/main.cpp:34
+#, kde-format
+msgid ""
+"Kup is a flexible backup solution using the backup storage system 'bup'. "
+"This allows it to quickly perform incremental backups, only saving the parts "
+"of files that has actually changed since last backup was saved."
+msgstr ""
+"Kup jest elastycznym rozwiązaniem tworzenia kopii zapasowych używającym "
+"systemu przechowywania kopii 'bup'. Pozwala na szybkie wykonywanie "
+"przyrostowych kopii, zapisując tylko części plików które zostały zmienione "
+"od ostatniej zrobionej kopii zapasowej."
+
+#: daemon/main.cpp:37 kcm/kupkcm.cpp:36
+#, kde-format
+msgid "Copyright (C) 2011-2020 Simon Persson"
+msgstr "Copyright (C) 2011-2020 Simon Persson"
+
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: purger/main.cpp:24
+#, kde-format
+msgid "Simon Persson"
+msgstr "Simon Persson"
+
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: purger/main.cpp:24
+#, kde-format
+msgid "Maintainer"
+msgstr "Opiekun"
+
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:38
+#: purger/main.cpp:25
+#, kde-format, kde-kuit-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Marcin Kralka, Jacek Baszkiewicz, Łukasz Wojniłowicz"
+
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:39
+#: purger/main.cpp:25
+#, kde-format, kde-kuit-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "marcink96@gmail.com, jbaszkiewicz@o2.pl, lukasz.wojnilowicz@gmail.com"
+
+#: daemon/planexecutor.cpp:62
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Saving backup"
+msgstr "Zapisywanie kopii"
+
+#: daemon/planexecutor.cpp:64
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Checking backup integrity"
+msgstr "Sprawdzanie spójności kopii"
+
+#: daemon/planexecutor.cpp:66
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Repairing backups"
+msgstr "Naprawianie kopii"
+
+#: daemon/planexecutor.cpp:96 daemon/planexecutor.cpp:110
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Do you want to save a first backup now?"
+msgstr "Czy chcesz teraz zapisać pierwszą kopię zapasową?"
+
+#: daemon/planexecutor.cpp:99
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"It has been %1 since last backup was saved.\n"
+"Save a new backup now?"
+msgstr ""
+"Upłynęło już %1 od kiedy została zapisana ostatnia kopia zapasowa.\n"
+"Czy chcesz zapisać kopię teraz?"
+
+#: daemon/planexecutor.cpp:113
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You have been active for %1 since last backup was saved.\n"
+"Save a new backup now?"
+msgstr ""
+"Byłeś aktywny na tym komputerze przez %1 od czasu, kiedy została zapisana "
+"ostatnia kopia zapasowa.\n"
+"Czy chcesz zapisać kopię teraz?"
+
+#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:174
+#: daemon/planexecutor.cpp:312
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Yes"
+msgstr "Tak"
+
+#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:175
+#: daemon/planexecutor.cpp:313
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "No"
+msgstr "Nie"
+
+#: daemon/planexecutor.cpp:166
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Saving of Backup Failed"
+msgstr "Zapisywanie kopii nie powiodło się"
+
+#: daemon/planexecutor.cpp:171 daemon/planexecutor.cpp:309
+#: daemon/planexecutor.cpp:343
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Show log file"
+msgstr "Wyświetl plik dziennika"
+
+#: daemon/planexecutor.cpp:178
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Open settings"
+msgstr "Otwórz ustawienia"
+
+#: daemon/planexecutor.cpp:202
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Backup Saved"
+msgstr "Zapisano kopię"
+
+#: daemon/planexecutor.cpp:203
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Saving backup completed successfully."
+msgstr "Zapisywanie kopii zakończyło się sukcesem."
+
+#: daemon/planexecutor.cpp:252 daemon/planexecutor.cpp:259
+#: daemon/planexecutor.cpp:291
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Problem"
+msgstr "Problem"
+
+#: daemon/planexecutor.cpp:253
+#, kde-kuit-format
+msgctxt "notification"
+msgid "You don't have write permission to backup destination."
+msgstr "Nie masz uprawnień do zapisu kopii w miejscu docelowym."
+
+#: daemon/planexecutor.cpp:260
+#, kde-kuit-format
+msgctxt "notification"
+msgid "Invalid type of backup in configuration."
+msgstr "Nieprawidłowy rodzaj kopii zapasowej w ustawieniach."
+
+#: daemon/planexecutor.cpp:305
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Integrity Check Completed"
+msgstr "Zakończono Sprawdzanie Spójności."
+
+#: daemon/planexecutor.cpp:340
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Repair Completed"
+msgstr "Zakończono naprawę"
+
+#: daemon/planexecutor.cpp:371
+#, kde-format
+msgid "Kup Backup System"
+msgstr "Kup System Kopii Zapasowych"
+
+#: daemon/rsyncjob.cpp:32
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"The <application>rsync</application> program is needed but could not be "
+"found, maybe it is not installed?"
+msgstr ""
+"Program <application>rsync</application> jest wymagany, ale nie może zostać "
+"odnaleziony, może nie jest zainstalowany?"
+
+#: filedigger/filedigger.cpp:99
+#, kde-kuit-format
+msgctxt "@info messagebox, %1 is a folder path"
+msgid ""
+"The backup archive <filename>%1</filename> could not be opened. Check if the "
+"backups really are located there."
+msgstr ""
+"Nie można otworzyć archiwum kopii zapasowej <filename>%1</filename>. Upewnij "
+"się, że kopie zapasowe na pewno się tam znajdują."
+
+#: filedigger/filedigger.cpp:107
+#, kde-kuit-format
+msgctxt "@info messagebox"
+msgid "You do not have permission needed to read this backup archive."
+msgstr "Nie masz odpowiednich uprawnień, aby odczytać to archiwum."
+
+#: filedigger/filedigger.cpp:156
+#, kde-format
+msgid "Select location of backup archive to open."
+msgstr "Wybierz położenie kopii zapasowych do otwarcia."
+
+#: filedigger/main.cpp:26
+#, kde-kuit-format
+msgctxt "@title"
+msgid "File Digger"
+msgstr "Wyszukiwarka plików"
+
+#: filedigger/main.cpp:27
+#, kde-format
+msgid "Browser for bup archives."
+msgstr "Przeglądarka archiwów bup"
+
+#: filedigger/main.cpp:28
+#, kde-format
+msgid "Copyright (C) 2013-2020 Simon Persson"
+msgstr "Copyright (C) 2013-2020 Simon Persson"
+
+#: filedigger/main.cpp:35 purger/main.cpp:30
+#, kde-format
+msgid "Name of the branch to be opened."
+msgstr "Nazwa gałęzi jaka ma być otwarta."
+
+#: filedigger/main.cpp:37 purger/main.cpp:32
+#, kde-format
+msgid "Path to the bup repository to be opened."
+msgstr "Ścieżka do repozytorium bup jaka ma zostać otwarta."
+
+#: filedigger/mergedvfs.cpp:96
+#, kde-kuit-format
+msgctxt "@info messagebox"
+msgid ""
+"Could not read this backup archive. Perhaps some files have become "
+"corrupted. Do you want to run an integrity check to test this?"
+msgstr ""
+"Nie można było odczytać tej kopii. Być może niektóre pliki uległy "
+"uszkodzeniu. Czy chcesz wykonać kontrolę spójności, aby to sprawdzić?"
+
+#: filedigger/mergedvfs.cpp:144
+#, kde-kuit-format
+msgctxt "added after folder name in some cases"
+msgid " (folder)"
+msgstr "(katalog)"
+
+#: filedigger/mergedvfs.cpp:146
+#, kde-kuit-format
+msgctxt "added after file name in some cases"
+msgid " (symlink)"
+msgstr "(dowiązanie symboliczne)"
+
+#: filedigger/mergedvfs.cpp:148
+#, kde-kuit-format
+msgctxt "added after file name in some cases"
+msgid " (file)"
+msgstr "(plik)"
+
+#: filedigger/restoredialog.cpp:99 kcm/backupplanwidget.cpp:434
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "New Folder..."
+msgstr "Nowy katalog..."
+
+#: filedigger/restoredialog.cpp:125 filedigger/restoredialog.cpp:144
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid "No destination was selected, please select one."
+msgstr "Miejsce docelowe nie zostało wybrane, proszę wybrać jedno."
+
+#: filedigger/restoredialog.cpp:244
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid "There was a problem while getting a list of all files to restore: %1"
+msgstr "Wystąpił problem podczas pobierania listy plików do odtworzenia: %1"
+
+#: filedigger/restoredialog.cpp:259
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"The destination does not have enough space available. Please choose a "
+"different destination or free some space."
+msgstr ""
+"Miejsce docelowe nie posiada wystarczająco wolnego miejsca. Proszę wybrać "
+"inne miejsce docelowe lub zwolnić trochę miejsca."
+
+#: filedigger/restoredialog.cpp:271
+#, kde-kuit-format
+msgctxt ""
+"added to the suggested filename when restoring, %1 is the time when backup "
+"was saved"
+msgid " - saved at %1"
+msgstr " - zapisano w %1"
+
+#: filedigger/restoredialog.cpp:272
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Folder already exists, please choose a solution"
+msgstr "Katalog już istnieje, proszę wybrać inne rozwiązanie"
+
+#: filedigger/restoredialog.cpp:278
+#, kde-kuit-format
+msgctxt "@info"
+msgid "File already exists"
+msgstr "Plik już istnieje"
+
+#: filedigger/restoredialog.cpp:291
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid "The new name entered already exists, please enter a different one."
+msgstr "Wprowadzona nowa nazwa już istnieje, proszę podać inną."
+
+#: filedigger/restoredialog.cpp:361 kcm/dirselector.cpp:34
+#, kde-kuit-format
+msgctxt "default folder name when creating a new folder"
+msgid "New Folder"
+msgstr "Nowy Katalog"
+
+#: filedigger/restoredialog.cpp:366 kcm/dirselector.cpp:39
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "New Folder"
+msgstr "Nowy Katalog"
+
+#: filedigger/restoredialog.cpp:367 kcm/dirselector.cpp:40
+#, kde-kuit-format
+msgctxt "@label:textbox"
+msgid ""
+"Create new folder in:\n"
+"%1"
+msgstr ""
+"Utwórz nowy katalog w:\n"
+"%1"
+
+#: filedigger/restoredialog.cpp:380 kcm/dirselector.cpp:52
+#, kde-format
+msgid "A folder named %1 already exists."
+msgstr "Katalog o nazwie %1 już istnieje."
+
+#: filedigger/restoredialog.cpp:386 kcm/dirselector.cpp:58
+#, kde-format
+msgid "You do not have permission to create %1."
+msgstr "Nie masz uprawnień aby utworzyć %1."
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, RestoreDialog)
+#: filedigger/restoredialog.ui:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Restore Guide"
+msgstr "Przewodnik przywracania"
+
+#. i18n: ectx: property (text), widget (QPushButton, mRestoreOriginalButton)
+#: filedigger/restoredialog.ui:55
+#, kde-format
+msgctxt "@action:button"
+msgid "Restore to original location"
+msgstr "Przywróć do pierwotnego położenia"
+
+#. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
+#: filedigger/restoredialog.ui:78
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose where to restore"
+msgstr "Wybierz gdzie chcesz przywrócić"
+
+#. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
+#: filedigger/restoredialog.ui:132
+#, kde-format
+msgctxt "@action:button"
+msgid "Back"
+msgstr "Wstecz"
+
+#. i18n: ectx: property (text), widget (QPushButton, mDestNextButton)
+#: filedigger/restoredialog.ui:143
+#, kde-format
+msgctxt "@action:button"
+msgid "Next"
+msgstr "Dalej"
+
+#. i18n: ectx: property (text), widget (QRadioButton, mNewNameRadioButton)
+#: filedigger/restoredialog.ui:173
+#, kde-format
+msgctxt "@option:radio "
+msgid "Restore the folder under a new name"
+msgstr "Przywróć katalog pod nową nazwą"
+
+#. i18n: ectx: property (text), widget (QRadioButton, mOverwriteRadioButton)
+#: filedigger/restoredialog.ui:206
+#, kde-format
+msgctxt "@option:radio"
+msgid "Merge folders"
+msgstr "Połącz katalogi"
+
+#. i18n: ectx: property (text), widget (QLabel, mConfirmOverwriteLabel)
+#: filedigger/restoredialog.ui:236
+#, kde-format
+msgctxt "@info Question to user, in dialog"
+msgid ""
+"The following files would be overwritten, please confirm that you wish to "
+"continue."
+msgstr ""
+"Następujące pliki zostaną nadpisane, proszę potwierdzić czy chcesz "
+"kontynuować."
+
+#. i18n: ectx: property (text), widget (QPushButton, mOverwriteBackButton)
+#: filedigger/restoredialog.ui:272
+#, kde-format
+msgctxt "@action:button go to previous page in dialog"
+msgid "Back"
+msgstr "Wstecz"
+
+#. i18n: ectx: property (text), widget (QPushButton, mConfirmButton)
+#: filedigger/restoredialog.ui:283
+#, kde-format
+msgctxt "@action:button User answers \"yes I confirm: overwrite files\""
+msgid "Confirm"
+msgstr "Potwierdź"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: filedigger/restoredialog.ui:320
+#, kde-format
+msgctxt "Title above progress bar"
+msgid "Restoring files"
+msgstr "Przywracanie plików"
+
+#. i18n: ectx: property (text), widget (QLabel, mErrorLabel)
+#: filedigger/restoredialog.ui:347
+#, kde-format
+msgctxt "@label above the detailed error message"
+msgid "An error occurred while restoring:"
+msgstr "Wystąpił błąd podczas przywracania:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: filedigger/restoredialog.ui:378
+#, kde-format
+msgctxt "@label"
+msgid "Restoration completed successfully!"
+msgstr "Przywracanie zostało zakończone pomyślnie!"
+
+#. i18n: ectx: property (text), widget (QPushButton, mOpenDestinationButton)
+#: filedigger/restoredialog.ui:419
+#, kde-format
+msgid "Open Destination"
+msgstr "Otwórz miejsce docelowe"
+
+#. i18n: ectx: property (text), widget (QPushButton, mCloseButton)
+#: filedigger/restoredialog.ui:477
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Zamknij"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: filedigger/restoredialog.ui:510
+#, kde-format
+msgctxt "Title above progress bar"
+msgid "Checking file sizes"
+msgstr "Sprawdzanie rozmiarów plików"
+
+#: filedigger/restorejob.cpp:83
+#, kde-kuit-format
+msgctxt "progress report, current operation"
+msgid "Restoring"
+msgstr "Przywracanie"
+
+#: filedigger/restorejob.cpp:84
+#, kde-kuit-format
+msgctxt "progress report, label"
+msgid "File"
+msgstr "Plik"
+
+#: filedigger/versionlistdelegate.cpp:121
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Open"
+msgstr "Otwórz"
+
+#: filedigger/versionlistdelegate.cpp:123
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Restore"
+msgstr "Przywróć"
+
+#: kcm/backupplanwidget.cpp:261
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Exclude Folder"
+msgstr "Wyklucz Katalog"
+
+#: kcm/backupplanwidget.cpp:264
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Include Folder"
+msgstr "Dołącz Katalog"
+
+#: kcm/backupplanwidget.cpp:365
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"You don't have permission to read this folder: <filename>%1</filename><nl/"
+">It cannot be included in the source selection. If it does not contain "
+"anything important to you, one possible solution is to exclude the folder "
+"from the backup plan."
+msgstr ""
+"Nie posiadasz uprawnień do odczytu tego katalogu: <filename>%1</filename><nl/"
+">Nie można go wybrać jako źródła kopii. Jeśli nie zawiera niczego ważnego, "
+"jednym z możliwych rozwiązań jest wyłączenie katalogu z planu tworzenia "
+"kopii. "
+
+#: kcm/backupplanwidget.cpp:376
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"You don't have permission to read this file: <filename>%1</filename><nl/>It "
+"cannot be included in the source selection. If the file is not important to "
+"you, one possible solution is to exclude the whole folder where the file is "
+"stored from the backup plan."
+msgstr ""
+"Nie posiadasz uprawnień do odczytu dla tego pliku: <filename>%1</"
+"filename><nl/>Nie można go wybrać jako źródła kopii. Jeśli plik nie zawiera "
+"niczego ważnego, jednym z możliwych rozwiązań jest wyłączenie go z planu "
+"tworzenia kopii."
+
+#: kcm/backupplanwidget.cpp:392
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"The symbolic link <filename>%1</filename> is currently included but it "
+"points to a folder which is not: <filename>%2</filename>.<nl/>That is "
+"probably not what you want. One solution is to simply include the target "
+"folder in the backup plan."
+msgstr ""
+"Dowiązanie symboliczne <filename>%1</filename> jest dołączone do kopii "
+"zapasowej, ale wskazuje na katalog, który nie jest: <filename>%2</filename>."
+"<nl/>To prawdopodobnie nie jest pożądana sytuacja. Rozwiązaniem jest "
+"dołączenie wskazywanego katalogu do planu tworzenia kopii."
+
+#: kcm/backupplanwidget.cpp:400
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"The symbolic link <filename>%1</filename> is currently included but it "
+"points to a file which is not: <filename>%2</filename>.<nl/>That is probably "
+"not what you want. One solution is to simply include the folder where the "
+"file is stored in the backup plan."
+msgstr ""
+"Dowiązanie symboliczne <filename>%1</filename> jest dołączone do kopii "
+"zapasowej, ale wskazuje na plik, który nie jest: <filename>%2</filename>.<nl/"
+">To prawdopodobnie nie jest pożądana sytuacja. Rozwiązaniem jest dołączenie "
+"wskazywanego katalogu do planu tworzenia kopii."
+
+#: kcm/backupplanwidget.cpp:423
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Select Folder"
+msgstr "Wybierz katalog"
+
+#: kcm/backupplanwidget.cpp:461
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Description:"
+msgstr "Opis:"
+
+#: kcm/backupplanwidget.cpp:464
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Back to overview"
+msgstr "Wróć do przeglądu"
+
+#: kcm/backupplanwidget.cpp:498
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This type of backup is an <emphasis>archive</emphasis>. It contains both the "
+"latest version of your files and earlier backed up versions. Using this type "
+"of backup allows you to recover older versions of your files, or files which "
+"were deleted on your computer at a later time. The storage space needed is "
+"minimized by looking for common parts of your files between versions and "
+"only storing those parts once. Nevertheless, the backup archive will keep "
+"growing in size as time goes by.<nl/>Also important to know is that the "
+"files in the archive can not be accessed directly with a general file "
+"manager, a special program is needed."
+msgstr ""
+"Ten rodzaj kopii to <emphasis>archiwum</emphasis>. Zawiera zarówno ostatnią "
+"wersję twoich plików, jak i wersje zachowane poprzednio. Użycie tego rodzaju "
+"kopii pozwala na odtworzenie starszych wersji plików bądź też plików "
+"usuniętych wcześniej z dysku. Przestrzeń dyskowa potrzebna do zachowania "
+"kopii jest minimalizowana poprzez wyszukiwanie w kolejnych wersjach plików "
+"ich części wspólnych i zapisywanie tych części tylko raz. Niemniej jednak "
+"archiwum będzie z czasem coraz większe.<nl/>Należy również pamiętać, że "
+"pliki archiwum tego rodzaju nie będą dostępne bezpośrednio w systemowym "
+"menedżerze plików - niezbędny jest specjalny program."
+
+#: kcm/backupplanwidget.cpp:513
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid ""
+"Versioned Backup (not available because <application>bup</application> is "
+"not installed)"
+msgstr ""
+"Wersjonowana kopia zapasowa (nie jest dostępna ponieważ <application>bup</"
+"application> nie jest zainstalowany)"
+
+#: kcm/backupplanwidget.cpp:518
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Versioned Backup (recommended)"
+msgstr "Wersjonowana kopia zapasowa (rekomendowane)"
+
+#: kcm/backupplanwidget.cpp:523
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This type of backup is a folder which is synchronized with your selected "
+"source folders. Saving a backup simply means making the backup destination "
+"contain an exact copy of your source folders as they are now and nothing "
+"else. If a file has been deleted in a source folder it will get deleted from "
+"the backup folder.<nl/>This type of backup can protect you against data loss "
+"due to a broken hard drive but it does not help you to recover from your own "
+"mistakes."
+msgstr ""
+"Ten rodzaj kopii to katalog docelowy synchronizowany z wybranymi katalogami "
+"źródłowymi. Utworzenie kopii oznacza po prostu przekopiowanie do miejsca "
+"docelowego dokładnie wszystkich plików zawartych w katalogach źródłowych i "
+"nic poza tym. Jeśli jakiś plik został usunięty w katalogu źródłowym, to po "
+"utworzeniu kopii nie będzie go również w katalogu docelowym.<nl/>Ten rodzaj "
+"kopii zabezpiecza cię przed utratą danych na skutek uszkodzenia dysku "
+"twardego, ale nie pomoże ci odzyskać plików utraconych w wyniku twych "
+"własnych pomyłek."
+
+#: kcm/backupplanwidget.cpp:536
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid ""
+"Synchronized Backup (not available because <application>rsync</application> "
+"is not installed)"
+msgstr ""
+"Synchronizowana kopia zapasowa (nie dostępna ponieważ <application>rsync</"
+"application> nie jest zainstalowany)"
+
+#: kcm/backupplanwidget.cpp:541
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Synchronized Backup"
+msgstr "Synchronizowana kopia zapasowa"
+
+#: kcm/backupplanwidget.cpp:569
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Backup Type"
+msgstr "Rodzaj kopii zapasowej"
+
+#: kcm/backupplanwidget.cpp:570
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Select what type of backup you want"
+msgstr "Wybierz jaki rodzaj kopii zapasowej chcesz"
+
+#: kcm/backupplanwidget.cpp:578
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Sources"
+msgstr "Źródła"
+
+#: kcm/backupplanwidget.cpp:579
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Select which folders to include in backup"
+msgstr "Wybierz które katalogi mają być zawarte w kopii zapasowej"
+
+#: kcm/backupplanwidget.cpp:593
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Filesystem Path"
+msgstr "Ścieżka systemu plików"
+
+#: kcm/backupplanwidget.cpp:594
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "External Storage"
+msgstr "Pamięć zewnętrzna"
+
+#: kcm/backupplanwidget.cpp:600
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can use this option for backing up to a secondary internal harddrive, an "
+"external eSATA drive or networked storage. The requirement is just that you "
+"always mount it at the same path in the filesystem. The path specified here "
+"does not need to exist at all times, its existence will be monitored."
+msgstr ""
+"Możesz użyć tego ustawienia do tworzenia kopii zapasowej na drugim dysku "
+"wewnętrznym, zewnętrznym dysku eSATA lub na dysku sieciowym. Wymogiem jest "
+"podpinanie dysku zawsze w tej samej ścieżce. Określona ścieżka nie musi "
+"istnieć cały czas, jej dostępność będzie monitorowana."
+
+#: kcm/backupplanwidget.cpp:607
+#, kde-kuit-format
+msgctxt "@label:textbox"
+msgid "Destination Path for Backup:"
+msgstr "Ścieżka docelowa dla kopii zapasowej:"
+
+#: kcm/backupplanwidget.cpp:626
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Use this option if you want to backup your files on an external storage that "
+"can be plugged in to this computer, such as a USB hard drive or memory stick."
+msgstr ""
+"Zaznacz to pole, jeśli chcesz tworzyć kopie zapasową twoich plików na "
+"pamięci zewnętrznej, która może być podłączana do tego komputera, czyli na "
+"przykład dysk zewnętrzny lub karta pamięci."
+
+#: kcm/backupplanwidget.cpp:636 kcm/backupplanwidget.cpp:640
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "The specified folder will be created if it does not exist."
+msgstr "Określony katalog zostanie stworzony, jeżeli jeszcze nie istnieje."
+
+#: kcm/backupplanwidget.cpp:638
+#, kde-kuit-format
+msgctxt "@label:textbox"
+msgid "Folder on Destination Drive:"
+msgstr "Katalog na dysku docelowym:"
+
+#: kcm/backupplanwidget.cpp:646
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "Open dialog to select a folder"
+msgstr "Otwórz okno dialogowe aby wybrać katalog"
+
+#: kcm/backupplanwidget.cpp:676
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Destination"
+msgstr "Miejsce docelowe"
+
+#: kcm/backupplanwidget.cpp:677
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Select the backup destination"
+msgstr "Wybierz miejsce docelowe kopii zapasowej"
+
+#: kcm/backupplanwidget.cpp:694
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Manual Activation"
+msgstr "Ręczne wyzwalanie"
+
+#: kcm/backupplanwidget.cpp:695
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Interval"
+msgstr "Interwał"
+
+#: kcm/backupplanwidget.cpp:696
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Active Usage Time"
+msgstr "Czas aktywnego używania"
+
+#: kcm/backupplanwidget.cpp:698
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Backups are only saved when manually requested. This can be done by using "
+"the popup menu from the backup system tray icon."
+msgstr ""
+"Kopie zapasowe są zapisywane tylko, gdy ręcznie tego zażądano. Zażądać można "
+"z menu podręcznego ikony tacki systemowej."
+
+#: kcm/backupplanwidget.cpp:712
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"New backup will be triggered when backup destination becomes available and "
+"more than the configured interval has passed since the last backup was saved."
+msgstr ""
+"Nowa kopia zapasowa zostanie wywołana kiedy miejsce docelowe kopii będzie "
+"dostępne i kiedy więcej czasu minie niż w ustawionym okresie od kiedy "
+"ostatnia kopia została zrobiona."
+
+#: kcm/backupplanwidget.cpp:729
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Minutes"
+msgstr "Minuty"
+
+#: kcm/backupplanwidget.cpp:730 kcm/backupplanwidget.cpp:757
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Hours"
+msgstr "Godziny"
+
+#: kcm/backupplanwidget.cpp:731
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Days"
+msgstr "Dni"
+
+#: kcm/backupplanwidget.cpp:732
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Weeks"
+msgstr "Tygodnie"
+
+#: kcm/backupplanwidget.cpp:742
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"New backup will be triggered when backup destination becomes available and "
+"you have been using your computer actively for more than the configured time "
+"limit since the last backup was saved."
+msgstr ""
+"Nowa kopia zostanie utworzona, gdy miejsce docelowe stanie się dostępne, a "
+"czas aktywnego użycia komputera od chwili utworzenia ostatniej kopii "
+"przekroczy wartość podaną w ustawieniach."
+
+#: kcm/backupplanwidget.cpp:763
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Ask for confirmation before saving backup"
+msgstr "Zapytaj o potwierdzenie przed zapisaniem kopii zapasowej"
+
+#: kcm/backupplanwidget.cpp:782
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Schedule"
+msgstr "Harmonogram"
+
+#: kcm/backupplanwidget.cpp:783
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Specify the backup schedule"
+msgstr "Określ harmonogram wykonywania kopii zapasowych"
+
+#: kcm/backupplanwidget.cpp:797
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Show hidden folders in source selection"
+msgstr "Wyświetl ukryte katalogi w wyborze ścieżki"
+
+#: kcm/backupplanwidget.cpp:802
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This makes it possible to explicitly include or exclude hidden folders in "
+"the backup source selection. Hidden folders have a name that starts with a "
+"dot. They are typically located in your home folder and are used to store "
+"settings and temporary files for your applications."
+msgstr ""
+"To daje możliwość wybiórczego dołączenia lub wyłączenia ukrytych katalogów "
+"przy wyborze źródła dla kopii zapasowej. Ukryte katalogi mają nazwy "
+"zaczynające się od kropki. Zazwyczaj umieszczone są w Twoim katalogu domowym "
+"i używane do przechowywania ustawień oraz plików tymczasowych Twoich "
+"aplikacji."
+
+#: kcm/backupplanwidget.cpp:823
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This will make your backups use around 10% more storage space and saving "
+"backups will take slightly longer time. In return it will be possible to "
+"recover from a partially corrupted backup."
+msgstr ""
+"To ustawienie zwiększy rozmiar kopii zapasowych o około 10%, również ich "
+"tworzenie zajmie nieco więcej czasu. W zamian za to będzie możliwe "
+"odzyskanie danych z częściowo uszkodzonej kopii zapasowej."
+
+#: kcm/backupplanwidget.cpp:829
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Generate recovery information"
+msgstr "Generowanie informacji ratunkowych"
+
+#: kcm/backupplanwidget.cpp:831
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid ""
+"Generate recovery information (not available because <application>par2</"
+"application> is not installed)"
+msgstr ""
+"Generowanie informacji ratunkowych (niedostępne z uwagi na brak "
+"zainstalowanej aplikacji <application>par2</application>)"
+
+#: kcm/backupplanwidget.cpp:847
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Verify integrity of backups"
+msgstr "Sprawdź spójność kopii zapasowych"
+
+#: kcm/backupplanwidget.cpp:851
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Checks the whole backup archive for corruption every time you save new data. "
+"Saving backups will take a little bit longer time but it allows you to catch "
+"corruption problems sooner than at the time you need to use a backup, at "
+"that time it could be too late."
+msgstr ""
+"Sprawdź całe archiwum kopii zapasowej pod kątem występowania błędów za "
+"każdym razem, kiedy archiwizowane są nowe dane. Tworzenie kopii zajmie nieco "
+"więcej czasu, ale pozwoli znaleźć błędy zanim nadejdzie potrzeba użycia "
+"kopii, kiedy może być już za późno."
+
+#: kcm/backupplanwidget.cpp:867
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude files and folders based on patterns"
+msgstr "Wyklucz pliki i katalogi na podstawie wzorców"
+
+#: kcm/backupplanwidget.cpp:885
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Patterns need to be listed in a text file with one pattern per line. Files "
+"and folders with names that match any of the patterns will be excluded from "
+"the backup. The pattern format is documented <link url='%1'>here</link>."
+msgstr ""
+"Wzorce muszą być spisane w pliku tekstowym z każdym wzorcem w osobnym "
+"wierszu. Pliki i katalogi o nazwach, pasujące do dowolnego wzorca, zostaną "
+"wykluczone z kopii zapasowej. Zapis wzorców został objaśniony <link "
+"url='%1'>tutaj</link>."
+
+#: kcm/backupplanwidget.cpp:903
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "Open dialog to select a file"
+msgstr "Otwórz okno dialogowe do wyboru pliku"
+
+#: kcm/backupplanwidget.cpp:905
+#, kde-format
+msgid "Select pattern file"
+msgstr "Wybierz plik wzorców"
+
+#: kcm/backupplanwidget.cpp:930
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Advanced"
+msgstr "Rozszerzone"
+
+#: kcm/backupplanwidget.cpp:931
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Extra options for advanced users"
+msgstr "Dodatkowe ustawienia dla doświadczonych użytkowników"
+
+#: kcm/driveselection.cpp:257
+#, kde-kuit-format
+msgctxt "@label Only shown if no drives are detected"
+msgid ""
+"Plug in the external storage you wish to use, then select it in this list."
+msgstr ""
+"Podłącz pamięć zewnętrzną którą chcesz użyć i wybierz ją na tej liście."
+
+#: kcm/driveselectiondelegate.cpp:57
+#, kde-kuit-format
+msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
+msgid " (disconnected)"
+msgstr "(rozłączono)"
+
+#: kcm/driveselectiondelegate.cpp:61
+#, kde-kuit-format
+msgctxt "@label %1 is amount of free storage space of hard drive"
+msgid "%1 free"
+msgstr "%1 wolnych"
+
+#: kcm/driveselectiondelegate.cpp:76
+#, kde-kuit-format
+msgctxt ""
+"@item:inlistbox used for unnamed filesystems, more than one filesystem on "
+"device. %1 is partition number, %2 is device description, %3 is either empty "
+"or the \" (disconnected)\" text"
+msgid "Partition %1 on %2%3"
+msgstr "Partycja %1 na %2%3"
+
+#: kcm/driveselectiondelegate.cpp:79
+#, kde-kuit-format
+msgctxt ""
+"@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
+"is device description, %2 is either empty or the \" (disconnected)\" text"
+msgid "%1%2"
+msgstr "%1%2"
+
+#: kcm/driveselectiondelegate.cpp:83
+#, kde-kuit-format
+msgctxt ""
+"@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
+"either empty or the \" (disconnected)\" text"
+msgid "%1 on %2%3"
+msgstr "%1 na %2%3"
+
+#: kcm/driveselectiondelegate.cpp:90
+#, kde-kuit-format
+msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
+msgid "%1: %2 total capacity"
+msgstr "%1: %2 całkowitej pojemności"
+
+#: kcm/driveselectiondelegate.cpp:137
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid ""
+"Warning: Symbolic links and file permissions can not be saved to this file "
+"system. File permissions only matters if there is more than one user of this "
+"computer or if you are backing up executable program files."
+msgstr ""
+"Uwaga: Dowiązania symboliczne i uprawnienia plików nie mogą zostać zachowane "
+"na tym systemie plików. Uprawnienia plików mają znaczenie tylko w przypadku, "
+"jeśli tego komputera używa więcej niż jedna osoba, lub archiwizowane są "
+"pliki wykonywalne."
+
+#: kcm/driveselectiondelegate.cpp:142
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid ""
+"Warning: File permissions can not be saved to this file system. File "
+"permissions only matters if there is more than one user of this computer or "
+"if you are backing up executable program files."
+msgstr ""
+"Uwaga: Uprawnienia plików nie mogą zostać zachowane na tym systemie plików. "
+"Uprawnienia plików mają znaczenie tylko w przypadku, jeśli tego komputera "
+"używa więcej niż jedna osoba, lub archiwizowane są pliki wykonywalne."
+
+#: kcm/folderselectionmodel.cpp:90
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/>will be included in the backup, except for "
+"unchecked subfolders"
+msgstr ""
+"<filename>%1</filename><nl/>zostanie zarchiwizowana, za wyjątkiem "
+"podkatalogów, które nie są zaznaczone"
+
+#: kcm/folderselectionmodel.cpp:94
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid "<filename>%1</filename><nl/>will be included in the backup"
+msgstr "<filename>%1</filename><nl/>zostanie zawarte w kopii zapasowej"
+
+#: kcm/folderselectionmodel.cpp:98
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
+"the backup but contains folders that will"
+msgstr ""
+"<filename>%1</filename><nl/><emphasis>nie</emphasis> nie zostanie "
+"zarchiwizowany, ale zawiera katalogi, które zostaną"
+
+#: kcm/folderselectionmodel.cpp:102
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
+"the backup"
+msgstr ""
+"<filename>%1</filename><nl/><emphasis>nie</emphasis> zostanie zawarte w "
+"kopii zapasowej"
+
+#: kcm/kupkcm.cpp:33
+#, kde-format
+msgid "Kup Configuration Module"
+msgstr "Moduł ustawień Kup"
+
+#: kcm/kupkcm.cpp:35
+#, kde-format
+msgid "Configuration of backup plans for the Kup backup system"
+msgstr "Ustawienia planów kopii dla systemu kopii zapasowych Kup"
+
+#: kcm/kupkcm.cpp:69
+#, kde-format
+msgid ""
+"<h2>Backup programs are missing</h2><p>Before you can activate any backup "
+"plan you need to install either of</p><ul><li>bup, for versioned backups</"
+"li><li>rsync, for synchronized backups</li></ul>"
+msgstr ""
+"<h2>Nie odnaleziono programów do kopii zapasowych</h2><p>Przed aktywowaniem "
+"jakiegokolwiek planu kopii zapasowych musisz wgrać albo</p><ul><li>bup, do "
+"wersjonowanych kopii zapasowych</li><li>rsync, do synchronizowanych kopii "
+"zapasowych</li></ul>"
+
+#: kcm/kupkcm.cpp:175
+#, kde-kuit-format
+msgctxt "@info %1 is the name of the backup plan"
+msgid ""
+"%1 does not have a destination!<nl/>No backups will be saved by this plan."
+msgstr ""
+"%1 nie ma miejsca docelowego!<nl/>Żadna kopia zapasowa nie zostanie zapisana "
+"przez ten plan."
+
+#: kcm/kupkcm.cpp:178
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Warning"
+msgstr "Ostrzeżenie"
+
+#: kcm/kupkcm.cpp:224
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Add New Plan"
+msgstr "Dodaj nowy plan"
+
+#: kcm/kupkcm.cpp:236
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Backups Enabled"
+msgstr "Kopie zapasowe włączone"
+
+#: kcm/kupkcm.cpp:247
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Open and restore from existing backups"
+msgstr "Otwórz i odzyskaj z istniejących kopii"
+
+#: kcm/planstatuswidget.cpp:32
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Configure"
+msgstr "Ustawienia"
+
+#: kcm/planstatuswidget.cpp:35
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "Usuń"
+
+#: kcm/planstatuswidget.cpp:38
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Duplicate"
+msgstr "Powiel"
+
+#: kioslave/bupslave.cpp:73 kioslave/bupslave.cpp:130 kioslave/bupslave.cpp:167
+#: kioslave/bupslave.cpp:230 kioslave/bupslave.cpp:252
+#, kde-format
+msgid ""
+"No bup repository found.\n"
+"%1"
+msgstr ""
+"Nie odnaleziono żadnego repozytorium bup.\n"
+"%1"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:109
+#, kde-format
+msgid "Save new backup"
+msgstr "Zapisz nową kopię"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:115
+#, kde-format
+msgid "Prune old backups"
+msgstr "Uprzątnij stare kopie zapasowe"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:120
+#, kde-format
+msgid "Show files"
+msgstr "Wyświetl pliki"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:125
+#, kde-format
+msgid "Show log file"
+msgstr "Wyświetl plik dziennika"
+
+#: plasmoid/contents/ui/Main.qml:69
+#, kde-format
+msgid "&Configure Kup..."
+msgstr "&Ustawienia Kup..."
+
+#: plasmoid/contents/ui/Main.qml:71
+#, kde-format
+msgid "&Reload backup plans"
+msgstr "&Wczytaj ponownie plany kopii zapasowych"
+
+#: purger/main.cpp:21
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Purger"
+msgstr "Uprzątacz"
+
+#: purger/main.cpp:22
+#, kde-format
+msgid "Purger for bup archives."
+msgstr "Uprzątacz archiwów bup."
+
+#: purger/main.cpp:23
+#, kde-format
+msgid "Copyright (C) 2013-2021 Simon Persson"
+msgstr "Copyright (C) 2013-2021 Simon Persson"
+
+#: settings/backupplan.cpp:23
+#, kde-kuit-format
+msgctxt ""
+"@label Default name for a new backup plan, %1 is the number of the plan in "
+"order"
+msgid "Backup plan %1"
+msgstr "Plan kopii zapasowej %1"
+
+#: settings/backupplan.cpp:56
+#, kde-format
+msgid "Backups"
+msgstr "Kopie zapasowe"
+
+#: settings/backupplan.cpp:91
+#, kde-format
+msgctxt "default description of newly duplicated backup plan"
+msgid "%1 (copy)"
+msgstr "%1 (kopia)"
+
+#: settings/backupplan.cpp:209
+#, kde-format
+msgctxt "%1 is fancy formatted date"
+msgid "Last saved: %1"
+msgstr "Ostatnio zapisano: %1"
+
+#: settings/backupplan.cpp:214
+#, kde-format
+msgctxt "%1 is storage size of archive"
+msgid "Size: %1"
+msgstr "Rozmiar: %1"
+
+#: settings/backupplan.cpp:219
+#, kde-format
+msgctxt "%1 is free storage space"
+msgid "Free space: %1"
+msgstr "Wolne miejsce: %1"
+
+#: settings/backupplan.cpp:223
+#, kde-kuit-format
+msgctxt "@label"
+msgid "This backup plan has never been run."
+msgstr "Ten plan kopii zapasowej nigdy nie był uruchomiony."
+
+#~ msgid "Copyright (C) 2011-2015 Simon Persson"
+#~ msgstr "Wszystkie prawa zastrzeżone (C) 2011-2015 Simon Persson"
+
+#~ msgid "Kup"
+#~ msgstr "Kup"
+
+#~ msgid "Start taking backup"
+#~ msgstr "Rozpocznij tworzenie kopii zapasowej"
+
+#~ msgid "A question if user wants to start taking a backup"
+#~ msgstr "Pytanie, czy użytkownik chce rozpocząć tworzenie kopii zapasowej"
+
+#~ msgid "Backup succeeded"
+#~ msgstr "Kopia zapasowa została utworzona prawidłowo"
+
+#~ msgid "Saving of backup successfully completed"
+#~ msgstr "Zapisywanie kopii zakończyło się sukcesem."
+
+#~ msgid "Backup failed"
+#~ msgstr "Utworzenie kopii nie powiodło się"
+
+#~ msgid "Saving of backup failed, offer user to see log file"
+#~ msgstr ""
+#~ "Zapis kopii zakończył się niepowodzeniem, zaproponuj użytkownikowi "
+#~ "przejrzenie pliku dziennika  "
+
+#~ msgid "Integrity check completed"
+#~ msgstr "Zakończono sprawdzanie spójności"
+
+#~ msgid "Finished checking integrity of backup archive"
+#~ msgstr "Zakończono sprawdzenie spójności archiwum kopii"
+
+#~ msgid "Repair completed"
+#~ msgstr "Naprawa zakończona"
+
+#~ msgid "Finished repairing backup archive"
+#~ msgstr "Zakończono naprawę archiwum kopii"
+
+#~ msgid "backup,recovery,safety"
+#~ msgstr "kopia,odzyskiwanie,bezpieczeństwo"
+
+#~ msgid "Status of backup plans"
+#~ msgstr "Status planów tworzenia kopii zapasowych"
+
+#~ msgid "Backup Status"
+#~ msgstr "Status kopii zapasowej"
+
+#~ msgid "Displays status of backup plans"
+#~ msgstr "Wyświetl status planów tworzenia kopii zapasowych"

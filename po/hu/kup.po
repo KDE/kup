@@ -1,0 +1,1555 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# blackPanther OS <info@blackpanther.hu>, 2019.
+# Simon Persson <simon.persson@mykolab.com>, 2018.
+# Kristóf Kiszel <kiszel.kristof@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kup\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:49+0000\n"
+"PO-Revision-Date: 2021-09-22 09:14+0200\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.03.80\n"
+
+#: daemon/backupjob.cpp:39
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"One source folder no longer exists. Please open settings and confirm what to "
+"include in backup.<nl/><filename>%2</filename>"
+msgid_plural ""
+"%1 source folders no longer exist. Please open settings and confirm what to "
+"include in backup.<nl/><filename>%2</filename>"
+msgstr[0] ""
+"Az egyik forrásmappa már nem létezik. Nyissa meg a beállításokat, és "
+"erősítse meg mit tartalmazzon a biztonsági másolat.<nl/><filename>%2</"
+"filename>"
+msgstr[1] ""
+"%1 forrásmappa már nem létezik. Nyissa meg a beállításokat, és erősítse meg "
+"mit tartalmazzon a biztonsági másolat.<nl/><filename>%2</filename>"
+
+#: daemon/bupjob.cpp:46 daemon/buprepairjob.cpp:24
+#: daemon/bupverificationjob.cpp:23
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"The <application>bup</application> program is needed but could not be found, "
+"maybe it is not installed?"
+msgstr ""
+"A <application>bup</application> program szükséges, de nem található, talán "
+"nincs telepítve?"
+
+#: daemon/bupjob.cpp:52 daemon/buprepairjob.cpp:30
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"The <application>par2</application> program is needed but could not be "
+"found, maybe it is not installed?"
+msgstr ""
+"A <application>par2</application> program szükséges, de nem található, talán "
+"nincs telepítve?"
+
+#: daemon/bupjob.cpp:71
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup destination could not be initialised. See log file for more details."
+msgstr ""
+"Nem sikerült inicializálni a biztonsági másolat célhelyét. További "
+"részletekért lásd a naplófájlt."
+
+#: daemon/bupjob.cpp:94
+#, kde-format
+msgid "Checking backup integrity"
+msgstr "Biztonsági másolat integritásának ellenőrzése"
+
+#: daemon/bupjob.cpp:109 daemon/bupverificationjob.cpp:58
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups could be corrupted! See log file "
+"for more details. Do you want to try repairing the backup files?"
+msgstr ""
+"A biztonsági másolat integritás-ellenőrzése meghiúsult. A biztonsági "
+"másolatai megsérülhettek. További részletekért lásd a naplófájlt. Szeretné "
+"megkísérelni a biztonságimásolat-fájlok javítását?"
+
+#: daemon/bupjob.cpp:113
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups could be corrupted! See log file "
+"for more details."
+msgstr ""
+"A biztonsági másolat integritás-ellenőrzése meghiúsult. A biztonsági "
+"másolatai megsérülhettek. További részletekért lásd a naplófájlt."
+
+#: daemon/bupjob.cpp:144 daemon/rsyncjob.cpp:51
+#, kde-format
+msgid "Checking what to copy"
+msgstr "Másolandók ellenőrzése"
+
+#: daemon/bupjob.cpp:155
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Failed to analyze files. See log file for more details."
+msgstr "A fájlok elemzése sikertelen. További részletekért lásd a naplófájlt."
+
+#: daemon/bupjob.cpp:176 daemon/bupjob.cpp:288 daemon/rsyncjob.cpp:167
+#, kde-format
+msgid "Saving backup"
+msgstr "Biztonsági másolat mentése"
+
+#: daemon/bupjob.cpp:188 daemon/rsyncjob.cpp:111
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Failed to save backup. See log file for more details."
+msgstr ""
+"A biztonsági másolat mentése sikertelen. További részletekért lásd a "
+"naplófájlt."
+
+#: daemon/bupjob.cpp:212
+#, kde-format
+msgid "Generating recovery information"
+msgstr "Visszaállítási információ létrehozása"
+
+#: daemon/bupjob.cpp:224
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed to generate recovery info for the backup. See log file for more "
+"details."
+msgstr ""
+"A biztonsági másolat helyreállítási információinak létrehozása meghiúsult. "
+"További részletekért lásd a naplófájlt."
+
+#: daemon/bupjob.cpp:289 daemon/rsyncjob.cpp:168
+#, kde-format
+msgctxt "Label for file currently being copied"
+msgid "File"
+msgstr "Fájl"
+
+#: daemon/buprepairjob.cpp:63
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup repair failed. Your backups could be corrupted! See log file for more "
+"details."
+msgstr ""
+"A biztonsági másolat javítása meghiúsult. A másolatai megsérülhettek. "
+"További részletekért lásd a naplófájlt."
+
+#: daemon/buprepairjob.cpp:67
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Success! Backup repair worked. See log file for more details."
+msgstr ""
+"A biztonsági másolat javítása sikeresen befejeződött. További részletekért "
+"lásd a naplófájlt."
+
+#: daemon/buprepairjob.cpp:71
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup repair was not necessary. Your backups are not corrupted. See log "
+"file for more details."
+msgstr ""
+"A biztonsági másolat javítása nem szükséges, a másolatai nem sérültek. "
+"További részletekért lásd a naplófájlt."
+
+#: daemon/buprepairjob.cpp:76
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Backup repair failed. Your backups could still be corrupted! See log file "
+"for more details."
+msgstr ""
+"Sikertelen a mentés helyreállítása! Mentéseid továbbra is sérültek! Nézd meg "
+"a naplófájlt a részletekért."
+
+#: daemon/bupverificationjob.cpp:61 daemon/bupverificationjob.cpp:78
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups are corrupted! See log file for "
+"more details."
+msgstr ""
+"Sikertelen a mentés integritás ellenőrzése! Mentés megsérült! Nézd meg a "
+"naplófájlt a részletekért."
+
+#: daemon/bupverificationjob.cpp:67
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Backup integrity test was successful. Your backups are fine."
+msgstr ""
+"A biztonsági másolat integritás-ellenőrzése sikeres volt. A biztonsági "
+"másolatai rendben vannak."
+
+#: daemon/bupverificationjob.cpp:74
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"Failed backup integrity check. Your backups are corrupted! See log file for "
+"more details. Do you want to try repairing the backup files?"
+msgstr ""
+"A biztonsági-másolat integritás-ellenőrzése sikertelen, a biztonsági "
+"másolatai sérültek. További részletekért lásd a naplófájlt. Szeretné "
+"megkísérelni a biztonsági-másolat fájlok javítását?"
+
+#: daemon/kupdaemon.cpp:155
+#, kde-format
+msgid "Continue"
+msgstr "Folytatás"
+
+#: daemon/kupdaemon.cpp:157
+#, kde-format
+msgid "Stop"
+msgstr "Leállítás"
+
+#: daemon/kupdaemon.cpp:159
+#, kde-format
+msgctxt "%1 is a text explaining the current activity"
+msgid "Currently busy: %1"
+msgstr "Jelenleg foglalt: %1"
+
+#: daemon/kupdaemon.cpp:160
+#, kde-format
+msgid "Do you really want to stop?"
+msgstr "Biztosan le szeretné állítani?"
+
+#: daemon/kupdaemon.cpp:163
+#, kde-format
+msgid "User Backups"
+msgstr "Felhasználói biztonsági másolatok"
+
+#: daemon/kupdaemon.cpp:240
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination not available"
+msgstr "A biztonsági másolat célhelye nem érhető el"
+
+#: daemon/kupdaemon.cpp:244 daemon/kupdaemon.cpp:301
+#, kde-format
+msgid "No backup plans configured"
+msgstr "Nincs beállítva mentési terv"
+
+#: daemon/kupdaemon.cpp:250
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination available"
+msgstr "A biztonsági másolat célhelye elérhető"
+
+#: daemon/kupdaemon.cpp:260 daemon/planexecutor.cpp:72
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup status OK"
+msgstr "Biztonsági másolat állapota OK"
+
+#: daemon/kupdaemon.cpp:267 daemon/planexecutor.cpp:74
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup suggested"
+msgstr "Új biztonsági másolat javasolt"
+
+#: daemon/kupdaemon.cpp:274 daemon/planexecutor.cpp:76
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup needed"
+msgstr "Új biztonsági másolat szükséges"
+
+#: daemon/main.cpp:27
+#, kde-kuit-format
+msgctxt "@info:shell Error message at startup"
+msgid ""
+"Kup is not enabled, enable it from the system settings module. You can do "
+"that by running <command>kcmshell5 kup</command>"
+msgstr ""
+"A Kup nincs bekapcsolva, a Rendszerbeállítások moduljában engedélyezheti. "
+"Ezt a <command>kcmshell5 kup</command> parancs futtatásával teheti meg."
+
+#: daemon/main.cpp:33
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Kup Daemon"
+msgstr "Kup démon"
+
+#: daemon/main.cpp:34
+#, kde-format
+msgid ""
+"Kup is a flexible backup solution using the backup storage system 'bup'. "
+"This allows it to quickly perform incremental backups, only saving the parts "
+"of files that has actually changed since last backup was saved."
+msgstr ""
+"A Kup egy rugalmas biztonságimásolat-megoldás, amely a „bup” "
+"biztonságimásolat-tároló rendszert használja. Ez lehetővé teszi "
+"inkrementális biztonsági másolatok gyors készítését, csakis a fájloknak a "
+"legutóbbi biztonsági másolat létrehozása óta módosult részeinek mentésével."
+
+#: daemon/main.cpp:37 kcm/kupkcm.cpp:36
+#, kde-format
+msgid "Copyright (C) 2011-2020 Simon Persson"
+msgstr "Copyright (C) Simon Persson, 2011-2020."
+
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: purger/main.cpp:24
+#, kde-format
+msgid "Simon Persson"
+msgstr "Simon Persson"
+
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: purger/main.cpp:24
+#, kde-format
+msgid "Maintainer"
+msgstr "Karbantartó"
+
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:38
+#: purger/main.cpp:25
+#, kde-format, kde-kuit-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf,Barcza Károly"
+
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:39
+#: purger/main.cpp:25
+#, kde-format, kde-kuit-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kiszel.kristof@gmail.com,kbarcza@blackpanther.hu"
+
+#: daemon/planexecutor.cpp:62
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Saving backup"
+msgstr "Biztonsági másolat mentése"
+
+#: daemon/planexecutor.cpp:64
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Checking backup integrity"
+msgstr "Biztonsági másolat integritásának ellenőrzése"
+
+#: daemon/planexecutor.cpp:66
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Repairing backups"
+msgstr "Biztonsági másolatok javítása"
+
+#: daemon/planexecutor.cpp:96 daemon/planexecutor.cpp:110
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Do you want to save a first backup now?"
+msgstr "Szeretné menteni az első biztonsági másolatot most?"
+
+#: daemon/planexecutor.cpp:99
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"It has been %1 since last backup was saved.\n"
+"Save a new backup now?"
+msgstr ""
+"Az utolsó biztonsági másolat készítése óta %1 telt el.\n"
+"Készít egy új biztonsági másolatot most?"
+
+#: daemon/planexecutor.cpp:113
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You have been active for %1 since last backup was saved.\n"
+"Save a new backup now?"
+msgstr ""
+"Az utolsó biztonsági másolat mentése óta %1 volt az aktivitása.\n"
+"Készít egy új biztonsági másolatot most?"
+
+#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:174
+#: daemon/planexecutor.cpp:312
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Yes"
+msgstr "Igen"
+
+#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:175
+#: daemon/planexecutor.cpp:313
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "No"
+msgstr "Nem"
+
+#: daemon/planexecutor.cpp:166
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Saving of Backup Failed"
+msgstr "A biztonsági másolat mentése sikertelen"
+
+#: daemon/planexecutor.cpp:171 daemon/planexecutor.cpp:309
+#: daemon/planexecutor.cpp:343
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Show log file"
+msgstr "Naplófájl"
+
+#: daemon/planexecutor.cpp:178
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Open settings"
+msgstr "Beállítások megnyitása"
+
+#: daemon/planexecutor.cpp:202
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Backup Saved"
+msgstr "Biztonsági másolat mentve"
+
+#: daemon/planexecutor.cpp:203
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid "Saving backup completed successfully."
+msgstr "A biztonsági másolat mentése sikeresen befejeződött."
+
+#: daemon/planexecutor.cpp:252 daemon/planexecutor.cpp:259
+#: daemon/planexecutor.cpp:291
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Problem"
+msgstr "Probléma"
+
+#: daemon/planexecutor.cpp:253
+#, kde-kuit-format
+msgctxt "notification"
+msgid "You don't have write permission to backup destination."
+msgstr "Nincs írási jogosultsága a biztonsági másolat célhelyéhez."
+
+#: daemon/planexecutor.cpp:260
+#, kde-kuit-format
+msgctxt "notification"
+msgid "Invalid type of backup in configuration."
+msgstr "Érvénytelen biztonságimásolat-típus a beállításokban."
+
+#: daemon/planexecutor.cpp:305
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Integrity Check Completed"
+msgstr "Integritás-ellenőrzés befejezve"
+
+#: daemon/planexecutor.cpp:340
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Repair Completed"
+msgstr "Javítás befejezve"
+
+#: daemon/planexecutor.cpp:371
+#, kde-format
+msgid "Kup Backup System"
+msgstr "Kup biztonságimásolat-rendszer"
+
+#: daemon/rsyncjob.cpp:32
+#, kde-kuit-format
+msgctxt "@info notification"
+msgid ""
+"The <application>rsync</application> program is needed but could not be "
+"found, maybe it is not installed?"
+msgstr ""
+"Az <application>rsync</application> program szükséges, de nem található, "
+"talán nincs telepítve?"
+
+#: filedigger/filedigger.cpp:99
+#, kde-kuit-format
+msgctxt "@info messagebox, %1 is a folder path"
+msgid ""
+"The backup archive <filename>%1</filename> could not be opened. Check if the "
+"backups really are located there."
+msgstr ""
+"A(z) <filename>%1</filename> biztonságimásolat-archívum nem nyitható meg. "
+"Ellenőrizze, hogy a biztonsági másolatok tényleg ott találhatók-e."
+
+#: filedigger/filedigger.cpp:107
+#, kde-kuit-format
+msgctxt "@info messagebox"
+msgid "You do not have permission needed to read this backup archive."
+msgstr ""
+"Nincs jogosultsága ennek a biztonságimásolat-archívumnak az olvasásához."
+
+#: filedigger/filedigger.cpp:156
+#, kde-format
+msgid "Select location of backup archive to open."
+msgstr "Válassza ki a megnyitandó biztonságimásolat-archívum helyét."
+
+#: filedigger/main.cpp:26
+#, kde-kuit-format
+msgctxt "@title"
+msgid "File Digger"
+msgstr "Archívumböngésző"
+
+#: filedigger/main.cpp:27
+#, kde-format
+msgid "Browser for bup archives."
+msgstr "Fájlböngésző bup archívumokhoz."
+
+#: filedigger/main.cpp:28
+#, kde-format
+msgid "Copyright (C) 2013-2020 Simon Persson"
+msgstr "Copyright (C) Simon Persson, 2013-2020."
+
+#: filedigger/main.cpp:35 purger/main.cpp:30
+#, kde-format
+msgid "Name of the branch to be opened."
+msgstr "A megnyitandó ág (branch) neve."
+
+#: filedigger/main.cpp:37 purger/main.cpp:32
+#, kde-format
+msgid "Path to the bup repository to be opened."
+msgstr "A megnyitandó bup tároló elérési útja."
+
+#: filedigger/mergedvfs.cpp:96
+#, kde-kuit-format
+msgctxt "@info messagebox"
+msgid ""
+"Could not read this backup archive. Perhaps some files have become "
+"corrupted. Do you want to run an integrity check to test this?"
+msgstr ""
+"Nem sikerült olvasni a biztonságimásolat-archívumot, néhány fájl talán "
+"megsérült. Szeretne futtatni egy integritás-ellenőrzést?"
+
+#: filedigger/mergedvfs.cpp:144
+#, kde-kuit-format
+msgctxt "added after folder name in some cases"
+msgid " (folder)"
+msgstr " (mappa)"
+
+#: filedigger/mergedvfs.cpp:146
+#, kde-kuit-format
+msgctxt "added after file name in some cases"
+msgid " (symlink)"
+msgstr " (szimbolikus link)"
+
+#: filedigger/mergedvfs.cpp:148
+#, kde-kuit-format
+msgctxt "added after file name in some cases"
+msgid " (file)"
+msgstr " (fájl)"
+
+#: filedigger/restoredialog.cpp:99 kcm/backupplanwidget.cpp:434
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "New Folder..."
+msgstr "Új mappa…"
+
+#: filedigger/restoredialog.cpp:125 filedigger/restoredialog.cpp:144
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid "No destination was selected, please select one."
+msgstr "Nincs kiválasztva célhely, adjon meg egyet."
+
+#: filedigger/restoredialog.cpp:244
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid "There was a problem while getting a list of all files to restore: %1"
+msgstr "Hiba történt az összes visszaállítandó fájl listájának lekérésekor: %1"
+
+#: filedigger/restoredialog.cpp:259
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"The destination does not have enough space available. Please choose a "
+"different destination or free some space."
+msgstr ""
+"A célhelyen nincs elég szabad hely. Válasszon egy másik célt, vagy "
+"szabadítson fel némi helyet."
+
+#: filedigger/restoredialog.cpp:271
+#, kde-kuit-format
+msgctxt ""
+"added to the suggested filename when restoring, %1 is the time when backup "
+"was saved"
+msgid " - saved at %1"
+msgstr " - mentve ekkor: %1"
+
+#: filedigger/restoredialog.cpp:272
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Folder already exists, please choose a solution"
+msgstr "A mappa már létezik, válasszon egy megoldást"
+
+#: filedigger/restoredialog.cpp:278
+#, kde-kuit-format
+msgctxt "@info"
+msgid "File already exists"
+msgstr "A fájl már létezik"
+
+#: filedigger/restoredialog.cpp:291
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid "The new name entered already exists, please enter a different one."
+msgstr "A megadott új név már létezik, adjon meg egy különbözőt."
+
+#: filedigger/restoredialog.cpp:361 kcm/dirselector.cpp:34
+#, kde-kuit-format
+msgctxt "default folder name when creating a new folder"
+msgid "New Folder"
+msgstr "Új mappa"
+
+#: filedigger/restoredialog.cpp:366 kcm/dirselector.cpp:39
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "New Folder"
+msgstr "Új mappa"
+
+#: filedigger/restoredialog.cpp:367 kcm/dirselector.cpp:40
+#, kde-kuit-format
+msgctxt "@label:textbox"
+msgid ""
+"Create new folder in:\n"
+"%1"
+msgstr ""
+"Új mappa létrehozása itt:\n"
+"%1"
+
+#: filedigger/restoredialog.cpp:380 kcm/dirselector.cpp:52
+#, kde-format
+msgid "A folder named %1 already exists."
+msgstr "Már létezik %1 nevű mappa."
+
+#: filedigger/restoredialog.cpp:386 kcm/dirselector.cpp:58
+#, kde-format
+msgid "You do not have permission to create %1."
+msgstr "Nincs jogosultsága a(z) %1 létrehozásához."
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, RestoreDialog)
+#: filedigger/restoredialog.ui:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Restore Guide"
+msgstr "Visszaállítási kézikönyv"
+
+#. i18n: ectx: property (text), widget (QPushButton, mRestoreOriginalButton)
+#: filedigger/restoredialog.ui:55
+#, kde-format
+msgctxt "@action:button"
+msgid "Restore to original location"
+msgstr "Visszaállítás az eredeti helyre"
+
+#. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
+#: filedigger/restoredialog.ui:78
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose where to restore"
+msgstr "Válassza ki a visszaállítás helyét"
+
+#. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
+#: filedigger/restoredialog.ui:132
+#, kde-format
+msgctxt "@action:button"
+msgid "Back"
+msgstr "Vissza"
+
+#. i18n: ectx: property (text), widget (QPushButton, mDestNextButton)
+#: filedigger/restoredialog.ui:143
+#, kde-format
+msgctxt "@action:button"
+msgid "Next"
+msgstr "Tovább"
+
+#. i18n: ectx: property (text), widget (QRadioButton, mNewNameRadioButton)
+#: filedigger/restoredialog.ui:173
+#, kde-format
+msgctxt "@option:radio "
+msgid "Restore the folder under a new name"
+msgstr "Mappa helyreállítása egy új névvel"
+
+#. i18n: ectx: property (text), widget (QRadioButton, mOverwriteRadioButton)
+#: filedigger/restoredialog.ui:206
+#, kde-format
+msgctxt "@option:radio"
+msgid "Merge folders"
+msgstr "Mappák egyesítése"
+
+#. i18n: ectx: property (text), widget (QLabel, mConfirmOverwriteLabel)
+#: filedigger/restoredialog.ui:236
+#, kde-format
+msgctxt "@info Question to user, in dialog"
+msgid ""
+"The following files would be overwritten, please confirm that you wish to "
+"continue."
+msgstr ""
+"Az alábbi fájlok felülíródnak, erősítse meg, hogy biztosan folytatni akarja."
+
+#. i18n: ectx: property (text), widget (QPushButton, mOverwriteBackButton)
+#: filedigger/restoredialog.ui:272
+#, kde-format
+msgctxt "@action:button go to previous page in dialog"
+msgid "Back"
+msgstr "Vissza"
+
+#. i18n: ectx: property (text), widget (QPushButton, mConfirmButton)
+#: filedigger/restoredialog.ui:283
+#, kde-format
+msgctxt "@action:button User answers \"yes I confirm: overwrite files\""
+msgid "Confirm"
+msgstr "Megerősítés"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: filedigger/restoredialog.ui:320
+#, kde-format
+msgctxt "Title above progress bar"
+msgid "Restoring files"
+msgstr "Fájlok visszaállítása"
+
+#. i18n: ectx: property (text), widget (QLabel, mErrorLabel)
+#: filedigger/restoredialog.ui:347
+#, kde-format
+msgctxt "@label above the detailed error message"
+msgid "An error occurred while restoring:"
+msgstr "Hiba történt a visszaállítás során:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: filedigger/restoredialog.ui:378
+#, kde-format
+msgctxt "@label"
+msgid "Restoration completed successfully!"
+msgstr "A visszaállítás sikeresen befejeződött!"
+
+#. i18n: ectx: property (text), widget (QPushButton, mOpenDestinationButton)
+#: filedigger/restoredialog.ui:419
+#, kde-format
+msgid "Open Destination"
+msgstr "Cél megnyitása"
+
+#. i18n: ectx: property (text), widget (QPushButton, mCloseButton)
+#: filedigger/restoredialog.ui:477
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Bezárás"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: filedigger/restoredialog.ui:510
+#, kde-format
+msgctxt "Title above progress bar"
+msgid "Checking file sizes"
+msgstr "Fájlméretek ellenőrzése"
+
+#: filedigger/restorejob.cpp:83
+#, kde-kuit-format
+msgctxt "progress report, current operation"
+msgid "Restoring"
+msgstr "Visszaállítás"
+
+#: filedigger/restorejob.cpp:84
+#, kde-kuit-format
+msgctxt "progress report, label"
+msgid "File"
+msgstr "Fájl"
+
+#: filedigger/versionlistdelegate.cpp:121
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Open"
+msgstr "Megnyitás"
+
+#: filedigger/versionlistdelegate.cpp:123
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Restore"
+msgstr "Visszaállítás"
+
+#: kcm/backupplanwidget.cpp:261
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Exclude Folder"
+msgstr "Mappa kihagyása"
+
+#: kcm/backupplanwidget.cpp:264
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Include Folder"
+msgstr "Mappa felvétele"
+
+#: kcm/backupplanwidget.cpp:365
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"You don't have permission to read this folder: <filename>%1</filename><nl/"
+">It cannot be included in the source selection. If it does not contain "
+"anything important to you, one possible solution is to exclude the folder "
+"from the backup plan."
+msgstr ""
+"Nincs jogosultsága ennek a mappának az olvasásához: <filename>%1</"
+"filename><nl/>Ezt nem lehet felvenni a forráskijelölésbe. Ha nem tartalmaz "
+"semmilyen fontosat, az egyik lehetséges megoldás a mappa kihagyása a "
+"biztonságimásolat-tervből."
+
+#: kcm/backupplanwidget.cpp:376
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"You don't have permission to read this file: <filename>%1</filename><nl/>It "
+"cannot be included in the source selection. If the file is not important to "
+"you, one possible solution is to exclude the whole folder where the file is "
+"stored from the backup plan."
+msgstr ""
+"Nincs jogosultsága ennek a fájlnak az olvasásához: <filename>%1</"
+"filename><nl/>Ezt nem lehet felvenni a forráskijelölésbe. Ha a fájl nem "
+"fontos, az egyik lehetséges megoldás a fájlt tartalmazó mappa kihagyása a "
+"biztonságimásolat-tervből."
+
+#: kcm/backupplanwidget.cpp:392
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"The symbolic link <filename>%1</filename> is currently included but it "
+"points to a folder which is not: <filename>%2</filename>.<nl/>That is "
+"probably not what you want. One solution is to simply include the target "
+"folder in the backup plan."
+msgstr ""
+"A biztonságimásolat-terv tartalmazza a(z) <filename>%1</filename> "
+"szimbolikus linket, de a mappát, amelyre mutat, nem: <filename>%2</filename>."
+"<nl/>Ez valószínűleg nem az, amit szeretne. Az egyik lehetséges megoldás, ha "
+"egyszerűen felveszi a mappát a biztonságimásolat-tervbe."
+
+#: kcm/backupplanwidget.cpp:400
+#, kde-kuit-format
+msgctxt "@info message bar appearing on top"
+msgid ""
+"The symbolic link <filename>%1</filename> is currently included but it "
+"points to a file which is not: <filename>%2</filename>.<nl/>That is probably "
+"not what you want. One solution is to simply include the folder where the "
+"file is stored in the backup plan."
+msgstr ""
+"A biztonságimásolat-terv tartalmazza a(z) <filename>%1</filename> "
+"szimbolikus linket, de a fájlt, amelyre mutat, nem: <filename>%2</filename>."
+"<nl/>Ez valószínűleg nem az, amit szeretne. Az egyik lehetséges megoldás, ha "
+"egyszerűen felveszi a fájlt tartalmazó mappát a biztonságimásolat-tervbe."
+
+#: kcm/backupplanwidget.cpp:423
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Select Folder"
+msgstr "Mappa kiválasztása"
+
+#: kcm/backupplanwidget.cpp:461
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Description:"
+msgstr "Leírás:"
+
+#: kcm/backupplanwidget.cpp:464
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Back to overview"
+msgstr "Vissza az áttekintéshez"
+
+#: kcm/backupplanwidget.cpp:498
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This type of backup is an <emphasis>archive</emphasis>. It contains both the "
+"latest version of your files and earlier backed up versions. Using this type "
+"of backup allows you to recover older versions of your files, or files which "
+"were deleted on your computer at a later time. The storage space needed is "
+"minimized by looking for common parts of your files between versions and "
+"only storing those parts once. Nevertheless, the backup archive will keep "
+"growing in size as time goes by.<nl/>Also important to know is that the "
+"files in the archive can not be accessed directly with a general file "
+"manager, a special program is needed."
+msgstr ""
+"Ez a biztonságimásolat-típus egy <emphasis>archívum</emphasis>. Tartalmazza "
+"a fájljai legutóbbi verzióit és a korábbi mentett verziókat. Ezt a típust "
+"használva visszaszerezheti a fájlok régebbi verzióit és olyan fájlokat, "
+"amiket később törölt. A tárhelyfelhasználás minimalizálása érdekében "
+"megkeresi a fájlverziók közös részeit, és csak egyszer tárolja azokat. Ettől "
+"függetlenül a biztonsági másolat mérete idővel növekedni fog.<nl/>Fontos "
+"tudni továbbá, hogy az archívum fájljai nem érhetők el közvetlenül "
+"hagyományos fájlkezelővel, egy külön programra van szükség."
+
+#: kcm/backupplanwidget.cpp:513
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid ""
+"Versioned Backup (not available because <application>bup</application> is "
+"not installed)"
+msgstr ""
+"Verziószámozott biztonsági másolat (nem érhető el, mivel a <application>bup</"
+"application> nincs telepítve)"
+
+#: kcm/backupplanwidget.cpp:518
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Versioned Backup (recommended)"
+msgstr "Verziószámozott biztonsági másolat (ajánlott)"
+
+#: kcm/backupplanwidget.cpp:523
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This type of backup is a folder which is synchronized with your selected "
+"source folders. Saving a backup simply means making the backup destination "
+"contain an exact copy of your source folders as they are now and nothing "
+"else. If a file has been deleted in a source folder it will get deleted from "
+"the backup folder.<nl/>This type of backup can protect you against data loss "
+"due to a broken hard drive but it does not help you to recover from your own "
+"mistakes."
+msgstr ""
+"Ez a biztonságimásolat-típus egy mappa, amely a kijelölt forrásmappával "
+"szinkronizált. A biztonsági másolat készítése során a forrásmappa pontos "
+"másolata kerül a célhelyre, úgy ahogy van. Ha egy fájlt törölnek a "
+"forrásmappában, a célhelyen is törlődik.<nl/>Ez a típus megvédi egy "
+"meghibásodott merevlemez okozta adatvesztésektől, de nem segít a tévedései "
+"korrigálásában."
+
+#: kcm/backupplanwidget.cpp:536
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid ""
+"Synchronized Backup (not available because <application>rsync</application> "
+"is not installed)"
+msgstr ""
+"Szinkronizált biztonsági másolat (nem érhető el, mivel az "
+"<application>rsync</application> nincs telepítve)"
+
+#: kcm/backupplanwidget.cpp:541
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Synchronized Backup"
+msgstr "Szinkronizált biztonsági másolat"
+
+#: kcm/backupplanwidget.cpp:569
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Backup Type"
+msgstr "Biztonságimásolat-típus"
+
+#: kcm/backupplanwidget.cpp:570
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Select what type of backup you want"
+msgstr "Válassza ki a biztonsági másolat típusát"
+
+#: kcm/backupplanwidget.cpp:578
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Sources"
+msgstr "Források"
+
+#: kcm/backupplanwidget.cpp:579
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Select which folders to include in backup"
+msgstr "Válassza ki a biztonsági másolatba belefoglalandó mappákat"
+
+#: kcm/backupplanwidget.cpp:593
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Filesystem Path"
+msgstr "Fájlrendszer elérési út"
+
+#: kcm/backupplanwidget.cpp:594
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "External Storage"
+msgstr "Külső tároló"
+
+#: kcm/backupplanwidget.cpp:600
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can use this option for backing up to a secondary internal harddrive, an "
+"external eSATA drive or networked storage. The requirement is just that you "
+"always mount it at the same path in the filesystem. The path specified here "
+"does not need to exist at all times, its existence will be monitored."
+msgstr ""
+"Ezzel az opcióval egy másodlagos belső merevlemezre, egy külső eSATA "
+"meghajtóra vagy hálózati tárolóra készíthet biztonsági másolatot. Az "
+"egyetlen követelmény, hogy mindig ugyanarra az elérési útra csatolja fel "
+"azt. Az itt megadott elérési útnak nem kell folyamatosan léteznie, azt "
+"folyamatosan figyeli a program."
+
+#: kcm/backupplanwidget.cpp:607
+#, kde-kuit-format
+msgctxt "@label:textbox"
+msgid "Destination Path for Backup:"
+msgstr "Biztonsági másolat célhelyének elérési útja:"
+
+#: kcm/backupplanwidget.cpp:626
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Use this option if you want to backup your files on an external storage that "
+"can be plugged in to this computer, such as a USB hard drive or memory stick."
+msgstr ""
+"Használja ezt a beállítást, ha a fájljairól egy csatlakoztatható "
+"adathordozóra, például USB-merevlemezre vagy memóriakártyára szeretne "
+"biztonsági másolatot készíteni."
+
+#: kcm/backupplanwidget.cpp:636 kcm/backupplanwidget.cpp:640
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "The specified folder will be created if it does not exist."
+msgstr "A megadott mappa létrejön, ha még nem létezik."
+
+#: kcm/backupplanwidget.cpp:638
+#, kde-kuit-format
+msgctxt "@label:textbox"
+msgid "Folder on Destination Drive:"
+msgstr "Mappa a célmeghajtón:"
+
+#: kcm/backupplanwidget.cpp:646
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "Open dialog to select a folder"
+msgstr "Párbeszédablak megnyitása a mappa kiválasztásához"
+
+#: kcm/backupplanwidget.cpp:676
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Destination"
+msgstr "Cél"
+
+#: kcm/backupplanwidget.cpp:677
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Select the backup destination"
+msgstr "Válassza ki a mentés helyét"
+
+#: kcm/backupplanwidget.cpp:694
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Manual Activation"
+msgstr "Kézi aktiválás"
+
+#: kcm/backupplanwidget.cpp:695
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Interval"
+msgstr "Időközönként"
+
+#: kcm/backupplanwidget.cpp:696
+#, kde-kuit-format
+msgctxt "@option:radio"
+msgid "Active Usage Time"
+msgstr "Aktív használati idő"
+
+#: kcm/backupplanwidget.cpp:698
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Backups are only saved when manually requested. This can be done by using "
+"the popup menu from the backup system tray icon."
+msgstr ""
+"A biztonsági másolatok csak akkor készülnek, ha kézzel kéri. Ezt a "
+"rendszertálcaikon felugró menüjében teheti meg."
+
+#: kcm/backupplanwidget.cpp:712
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"New backup will be triggered when backup destination becomes available and "
+"more than the configured interval has passed since the last backup was saved."
+msgstr ""
+"A biztonsági másolat akkor készül, ha a célhely elérhetővé válik, és a "
+"beállított időköznél több idő telt el a legutóbbi mentés óta."
+
+#: kcm/backupplanwidget.cpp:729
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Minutes"
+msgstr "perc"
+
+#: kcm/backupplanwidget.cpp:730 kcm/backupplanwidget.cpp:757
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Hours"
+msgstr "óra"
+
+#: kcm/backupplanwidget.cpp:731
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Days"
+msgstr "nap"
+
+#: kcm/backupplanwidget.cpp:732
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid "Weeks"
+msgstr "hét"
+
+#: kcm/backupplanwidget.cpp:742
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"New backup will be triggered when backup destination becomes available and "
+"you have been using your computer actively for more than the configured time "
+"limit since the last backup was saved."
+msgstr ""
+"A biztonsági másolat akkor készül, ha a célhely elérhetővé válik, és a "
+"beállított időkorlátnál többet használta a számítógépét a legutóbbi mentés "
+"óta."
+
+#: kcm/backupplanwidget.cpp:763
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Ask for confirmation before saving backup"
+msgstr "Megerősítés kérése biztonsági másolat mentése előtt"
+
+#: kcm/backupplanwidget.cpp:782
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Schedule"
+msgstr "Ütemezés"
+
+#: kcm/backupplanwidget.cpp:783
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Specify the backup schedule"
+msgstr "Adja meg a biztonsági másolatok ütemezését"
+
+#: kcm/backupplanwidget.cpp:797
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Show hidden folders in source selection"
+msgstr "Rejtett mappák megjelenítése a forrás kiválasztásakor"
+
+#: kcm/backupplanwidget.cpp:802
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This makes it possible to explicitly include or exclude hidden folders in "
+"the backup source selection. Hidden folders have a name that starts with a "
+"dot. They are typically located in your home folder and are used to store "
+"settings and temporary files for your applications."
+msgstr ""
+"Ez az opció lehetővé teszi a rejtett mappák bevételét vagy kizárását a "
+"biztonsági másolat forrásainak kiválasztásakor. A rejtett mappák neve "
+"ponttal kezdődik. Általában a saját mappájában találhatók, és az "
+"alkalmazásai beállításait és ideiglenes fájljait tárolják."
+
+#: kcm/backupplanwidget.cpp:823
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This will make your backups use around 10% more storage space and saving "
+"backups will take slightly longer time. In return it will be possible to "
+"recover from a partially corrupted backup."
+msgstr ""
+"Ez az opció körülbelül 10%-kal megnöveli a biztonsági másolatok méretét és "
+"tovább tart azok mentése is, cserébe lehetséges lesz a részben sérült "
+"biztonsági másolatok helyreállítása."
+
+#: kcm/backupplanwidget.cpp:829
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Generate recovery information"
+msgstr "Helyreállítási információk generálása"
+
+#: kcm/backupplanwidget.cpp:831
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid ""
+"Generate recovery information (not available because <application>par2</"
+"application> is not installed)"
+msgstr ""
+"Helyreállítási információk generálása (nem érhető el, mert a "
+"<application>par2</application> nincs telepítve)"
+
+#: kcm/backupplanwidget.cpp:847
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Verify integrity of backups"
+msgstr "Biztonsági másolatok integritásának ellenőrzése"
+
+#: kcm/backupplanwidget.cpp:851
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Checks the whole backup archive for corruption every time you save new data. "
+"Saving backups will take a little bit longer time but it allows you to catch "
+"corruption problems sooner than at the time you need to use a backup, at "
+"that time it could be too late."
+msgstr ""
+"Ez az opció sérüléseket keres a teljes biztonságimásolat-archívumban minden "
+"alkalommal, amikor új adatokat ment. A biztonsági másolatok mentése több "
+"időbe fog telni, de hamarabb felfedezhetők a sérült adatok."
+
+#: kcm/backupplanwidget.cpp:867
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude files and folders based on patterns"
+msgstr "Fájlok és mappák kihagyása minta alapján"
+
+#: kcm/backupplanwidget.cpp:885
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Patterns need to be listed in a text file with one pattern per line. Files "
+"and folders with names that match any of the patterns will be excluded from "
+"the backup. The pattern format is documented <link url='%1'>here</link>."
+msgstr ""
+"A mintákat egy szövegfájlban kell felsorolni, soronként egy minta. Azok a "
+"fájlok és mappák, amiknek a nevére illeszkedik bármelyik minta, nem kerül "
+"bele a biztonsági másolatba. A mintaformátum dokumentációja <link "
+"url='%1'>itt</link> található."
+
+#: kcm/backupplanwidget.cpp:903
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "Open dialog to select a file"
+msgstr "Párbeszédablak megnyitása fájl kiválasztásához"
+
+#: kcm/backupplanwidget.cpp:905
+#, kde-format
+msgid "Select pattern file"
+msgstr "Mintafájl kiválasztása"
+
+#: kcm/backupplanwidget.cpp:930
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Advanced"
+msgstr "Speciális"
+
+#: kcm/backupplanwidget.cpp:931
+#, kde-kuit-format
+msgctxt "@label"
+msgid "Extra options for advanced users"
+msgstr "Speciális beállítások haladó felhasználóknak"
+
+#: kcm/driveselection.cpp:257
+#, kde-kuit-format
+msgctxt "@label Only shown if no drives are detected"
+msgid ""
+"Plug in the external storage you wish to use, then select it in this list."
+msgstr ""
+"Csatlakoztassa a használni kívánt külső tárolót, majd válassza ki a listában."
+
+#: kcm/driveselectiondelegate.cpp:57
+#, kde-kuit-format
+msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
+msgid " (disconnected)"
+msgstr " (leválasztva)"
+
+#: kcm/driveselectiondelegate.cpp:61
+#, kde-kuit-format
+msgctxt "@label %1 is amount of free storage space of hard drive"
+msgid "%1 free"
+msgstr "%1 szabad"
+
+#: kcm/driveselectiondelegate.cpp:76
+#, kde-kuit-format
+msgctxt ""
+"@item:inlistbox used for unnamed filesystems, more than one filesystem on "
+"device. %1 is partition number, %2 is device description, %3 is either empty "
+"or the \" (disconnected)\" text"
+msgid "Partition %1 on %2%3"
+msgstr "%1. partíció / %2%3"
+
+#: kcm/driveselectiondelegate.cpp:79
+#, kde-kuit-format
+msgctxt ""
+"@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
+"is device description, %2 is either empty or the \" (disconnected)\" text"
+msgid "%1%2"
+msgstr "%1%2"
+
+#: kcm/driveselectiondelegate.cpp:83
+#, kde-kuit-format
+msgctxt ""
+"@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
+"either empty or the \" (disconnected)\" text"
+msgid "%1 on %2%3"
+msgstr "%1 / %2 %3"
+
+#: kcm/driveselectiondelegate.cpp:90
+#, kde-kuit-format
+msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
+msgid "%1: %2 total capacity"
+msgstr "%1: %2 teljes kapacitás"
+
+#: kcm/driveselectiondelegate.cpp:137
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid ""
+"Warning: Symbolic links and file permissions can not be saved to this file "
+"system. File permissions only matters if there is more than one user of this "
+"computer or if you are backing up executable program files."
+msgstr ""
+"Figyelem: a szimbolikus linkek és fájl jogosultságok nem menthetők erre a "
+"fájlrendszerre. A fájlok jogosultságai csak akkor számítanak, ha több, mint "
+"egy felhasználó használja a számítógépet, vagy végrehajtható programfájlokat "
+"ment."
+
+#: kcm/driveselectiondelegate.cpp:142
+#, kde-kuit-format
+msgctxt "@item:inlistbox"
+msgid ""
+"Warning: File permissions can not be saved to this file system. File "
+"permissions only matters if there is more than one user of this computer or "
+"if you are backing up executable program files."
+msgstr ""
+"Figyelem: a fájl jogosultságok nem menthetők erre a fájlrendszerre. A fájlok "
+"jogosultságai csak akkor számítanak, ha több, mint egy felhasználó használja "
+"a számítógépet, vagy végrehajtható programfájlokat ment."
+
+#: kcm/folderselectionmodel.cpp:90
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/>will be included in the backup, except for "
+"unchecked subfolders"
+msgstr ""
+"A(z) <filename>%1</filename> része lesz a biztonsági másolatnak, kivéve a "
+"nem bejelölt almappákat"
+
+#: kcm/folderselectionmodel.cpp:94
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid "<filename>%1</filename><nl/>will be included in the backup"
+msgstr "A(z) <filename>%1</filename> része lesz a biztonsági mentésnek"
+
+#: kcm/folderselectionmodel.cpp:98
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
+"the backup but contains folders that will"
+msgstr ""
+"A(z) <filename>%1</filename><nl/> <emphasis>nem</emphasis> lesz része a "
+"biztonsági másolatnak, de tartalmaz olyan mappákat, amik igen"
+
+#: kcm/folderselectionmodel.cpp:102
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
+"the backup"
+msgstr ""
+"A(z) <filename>%1</filename><nl/> <emphasis>nem</emphasis> lesz része a "
+"biztonsági másolatnak"
+
+#: kcm/kupkcm.cpp:33
+#, kde-format
+msgid "Kup Configuration Module"
+msgstr "Kup beállítómodul"
+
+#: kcm/kupkcm.cpp:35
+#, kde-format
+msgid "Configuration of backup plans for the Kup backup system"
+msgstr ""
+"A Kup biztonságimásolat-rendszer biztonságimásolat-terveinek beállítása"
+
+#: kcm/kupkcm.cpp:69
+#, kde-format
+msgid ""
+"<h2>Backup programs are missing</h2><p>Before you can activate any backup "
+"plan you need to install either of</p><ul><li>bup, for versioned backups</"
+"li><li>rsync, for synchronized backups</li></ul>"
+msgstr ""
+"<h2>A biztonságimásolat-programok hiányoznak</h2><p>Mielőtt bármilyen "
+"biztonságimásolat-tervet aktiválna, telepítenie kell ezek egyikét:</"
+"p><ul><li>bup, verziószámozott biztonsági másolatokhoz</li><li>rsync, "
+"szinkronizált biztonsági másolatokhoz</li></ul>"
+
+#: kcm/kupkcm.cpp:175
+#, kde-kuit-format
+msgctxt "@info %1 is the name of the backup plan"
+msgid ""
+"%1 does not have a destination!<nl/>No backups will be saved by this plan."
+msgstr ""
+"A(z) %1 tervnek nincs célhelye.<nl/>Nem készülnek biztonsági másolatok ezzel "
+"a tervvel."
+
+#: kcm/kupkcm.cpp:178
+#, kde-kuit-format
+msgctxt "@title:window"
+msgid "Warning"
+msgstr "Figyelmeztetés"
+
+#: kcm/kupkcm.cpp:224
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Add New Plan"
+msgstr "Új terv hozzáadása"
+
+#: kcm/kupkcm.cpp:236
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Backups Enabled"
+msgstr "Biztonsági másolatok bekapcsolva"
+
+#: kcm/kupkcm.cpp:247
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Open and restore from existing backups"
+msgstr "Megnyitás és visszaállítás meglévő biztonsági másolatokból"
+
+#: kcm/planstatuswidget.cpp:32
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Configure"
+msgstr "Beállítások"
+
+#: kcm/planstatuswidget.cpp:35
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: kcm/planstatuswidget.cpp:38
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Duplicate"
+msgstr "Duplikálás"
+
+#: kioslave/bupslave.cpp:73 kioslave/bupslave.cpp:130 kioslave/bupslave.cpp:167
+#: kioslave/bupslave.cpp:230 kioslave/bupslave.cpp:252
+#, kde-format
+msgid ""
+"No bup repository found.\n"
+"%1"
+msgstr ""
+"Nem található bup tároló.\n"
+"%1"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:109
+#, kde-format
+msgid "Save new backup"
+msgstr "Új biztonsági másolat mentése"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:115
+#, kde-format
+msgid "Prune old backups"
+msgstr "Régi biztonsági másolatok törlése"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:120
+#, kde-format
+msgid "Show files"
+msgstr "Fájlok megjelenítése"
+
+#: plasmoid/contents/ui/FullRepresentation.qml:125
+#, kde-format
+msgid "Show log file"
+msgstr "Napló megjelenítése"
+
+#: plasmoid/contents/ui/Main.qml:69
+#, kde-format
+msgid "&Configure Kup..."
+msgstr "A Kup &beállítása…"
+
+#: plasmoid/contents/ui/Main.qml:71
+#, kde-format
+msgid "&Reload backup plans"
+msgstr "Mentési tervek új&ratöltése"
+
+#: purger/main.cpp:21
+#, kde-kuit-format
+msgctxt "@title"
+msgid "Purger"
+msgstr "Törlő"
+
+#: purger/main.cpp:22
+#, kde-format
+msgid "Purger for bup archives."
+msgstr "Végleges törlő bup archívumokhoz."
+
+#: purger/main.cpp:23
+#, kde-format
+msgid "Copyright (C) 2013-2021 Simon Persson"
+msgstr "Copyright (C) Simon Persson, 2013-2021."
+
+#: settings/backupplan.cpp:23
+#, kde-kuit-format
+msgctxt ""
+"@label Default name for a new backup plan, %1 is the number of the plan in "
+"order"
+msgid "Backup plan %1"
+msgstr "%1. biztonságimásolat-terv"
+
+#: settings/backupplan.cpp:56
+#, kde-format
+msgid "Backups"
+msgstr "Biztonsági másolatok"
+
+#: settings/backupplan.cpp:91
+#, kde-format
+msgctxt "default description of newly duplicated backup plan"
+msgid "%1 (copy)"
+msgstr "%1 (másolat)"
+
+#: settings/backupplan.cpp:209
+#, kde-format
+msgctxt "%1 is fancy formatted date"
+msgid "Last saved: %1"
+msgstr "Utolsó mentés: %1"
+
+#: settings/backupplan.cpp:214
+#, kde-format
+msgctxt "%1 is storage size of archive"
+msgid "Size: %1"
+msgstr "Méret: %1"
+
+#: settings/backupplan.cpp:219
+#, kde-format
+msgctxt "%1 is free storage space"
+msgid "Free space: %1"
+msgstr "Szabad terület: %1"
+
+#: settings/backupplan.cpp:223
+#, kde-kuit-format
+msgctxt "@label"
+msgid "This backup plan has never been run."
+msgstr "Ez a biztonságimásolat-terv még soha nem futott."
+
+#~ msgid "Copyright (C) 2011-2015 Simon Persson"
+#~ msgstr "Copyright (C) 2011-2015 Simon Persson"
+
+#~ msgid "Kup"
+#~ msgstr "Kup"
+
+#~ msgid "Start taking backup"
+#~ msgstr "Biztonsági mentés kezdése"
+
+#~ msgid "A question if user wants to start taking a backup"
+#~ msgstr "Kérdés, ha a felhasználó el akarja kezdeni a biztonsági mentést"
+
+#~ msgid "Backup succeeded"
+#~ msgstr "Biztonsági mentés sikeres"
+
+#~ msgid "Saving of backup successfully completed"
+#~ msgstr "A biztonsági másolat mentése sikeresen befejeződött"
+
+#~ msgid "Backup failed"
+#~ msgstr "Biztonsági mentés sikertelen"
+
+#~ msgid "Saving of backup failed, offer user to see log file"
+#~ msgstr ""
+#~ "A mentés mentése sikertelen, javasolt a felhasználónak a naplófájl "
+#~ "megtekintése"
+
+#~ msgid "Integrity check completed"
+#~ msgstr "A hibák ellenőrzése kész"
+
+#~ msgid "Finished checking integrity of backup archive"
+#~ msgstr "Elkészült az integritás ellenőrzés a biztonsági mentés archívumon"
+
+#~ msgid "Repair completed"
+#~ msgstr "Helyreállítás kész"
+
+#~ msgid "Finished repairing backup archive"
+#~ msgstr "Sikertelen a biztonsági mentés acrchívum helyreállítása"
+
+#~ msgid "backup,recovery,safety"
+#~ msgstr "mentés, visszaállítás, biztonság"
+
+#~ msgid "Status of backup plans"
+#~ msgstr "Mentési tervek állapota"
+
+#~ msgid "Backup Status"
+#~ msgstr "Biztonsági mentés állapota"
+
+#~ msgid "Displays status of backup plans"
+#~ msgstr "Megjeleníti az állapotát a mentési terveknek"
