@@ -21,6 +21,7 @@
   <name xml:lang="hu">Kup</name>
   <name xml:lang="id">Kup</name>
   <name xml:lang="it">Kup</name>
+  <name xml:lang="ka">Kup</name>
   <name xml:lang="ko">Kup</name>
   <name xml:lang="nl">Kup</name>
   <name xml:lang="pl">Kup</name>
@@ -51,6 +52,7 @@
   <summary xml:lang="hu">Biztonságimentés-ütemező a KDE Plasmához</summary>
   <summary xml:lang="id">Penjadwalan cadangan untuk desktop Plasma KDE</summary>
   <summary xml:lang="it">Pianificatore di copie di sicurezza per il desktop Plasma di KDE</summary>
+  <summary xml:lang="ka">მარქაფის მგეგავი KDE-ის Plasma Desktop-სთვის</summary>
   <summary xml:lang="ko">KDE Plasma 데스크톱 백업 스케줄러</summary>
   <summary xml:lang="nl">Planner van back-ups voor Plasma bureaublad van KDE</summary>
   <summary xml:lang="pl">Planowanie kopi zapasowej dla pulpitu KDE Plazma</summary>
@@ -134,6 +136,7 @@
       <li xml:lang="hu">Szinkronizált mappák az „rsync” használatával.</li>
       <li xml:lang="id">Folder-folder yang tersinkronisasikan dengan penggunaan "rsync".</li>
       <li xml:lang="it">Cartelle sincronizzate mediante l'uso di «rsync».</li>
+      <li xml:lang="ka">საქაღალდეების სინქრონიზაცია "rsync"-ის გამოყენებით.</li>
       <li xml:lang="ko">"rsync"를 사용한 폴더 동기화.</li>
       <li xml:lang="nl">Gesynchroniseerde mappen met gebruik van "rsync".</li>
       <li xml:lang="pl">Synchronizowane katalogi z użyciem "rsync".</li>
@@ -162,6 +165,7 @@
       <li xml:lang="hu">Helyi fájlrendszerek és külsű USB-meghajtók támogatása.</li>
       <li xml:lang="id">Dukungan untuk filesystem lokal atau penyimpanan usb eksternal.</li>
       <li xml:lang="it">Supporto per file i filesystem locali oppure per le memorie usb esterne.</li>
+      <li xml:lang="ka">ლოკალური ფაილური სისტემებისა და გარე USB საცავის მხარდაჭერა.</li>
       <li xml:lang="ko">로컬 파일 시스템 및 외장형 USB 저장소 지원.</li>
       <li xml:lang="nl">Ondersteuning voor een lokale bestandssysteem of externe usb-opslag.</li>
       <li xml:lang="pl">Obsługę miejscowych systemów plików lub zewnętrznych pamięci USB</li>
@@ -214,6 +218,7 @@
       <li xml:lang="hu">Integráció a KDE Plasmával.</li>
       <li xml:lang="id">Integrasi ke dalam desktop Plasma KDE.</li>
       <li xml:lang="it">Integrazione col desktop Plasma di KDE.</li>
+      <li xml:lang="ka">KDE -is Plasma Desktop-ში ინტეგრაცია.</li>
       <li xml:lang="ko">KDE Plasma 데스크톱 통합.</li>
       <li xml:lang="nl">Integratie in het bureaublad Plasma van KDE.</li>
       <li xml:lang="pl">Współpracę z pulpitem KDE Plazmy.</li>
@@ -251,6 +256,7 @@
   <developer_name xml:lang="hu">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="id">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="it">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+  <developer_name xml:lang="ka">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="ko">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="nl">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="pl">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
