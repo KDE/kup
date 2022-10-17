@@ -486,7 +486,7 @@ msgstr "No teniu permís per a llegir este arxiu de còpia de seguretat."
 #: filedigger/filedigger.cpp:156
 #, kde-format
 msgid "Select location of backup archive to open."
-msgstr "Seleccioneu la ubicació de l'arxiu de còpia de seguretat a obrir."
+msgstr "Seleccioneu la ubicació de l'arxiu de còpia de seguretat que s'obrirà."
 
 #: filedigger/main.cpp:26
 #, kde-kuit-format
@@ -560,8 +560,8 @@ msgstr "No s'ha seleccionat cap destinació, trieu-ne una."
 msgctxt "@info message bar appearing on top"
 msgid "There was a problem while getting a list of all files to restore: %1"
 msgstr ""
-"S'ha produït un problema en obtindre una llista de tots els fitxers a "
-"restaurar: %1"
+"S'ha produït un problema en obtindre una llista de tots els fitxers que "
+"s'han de restaurar: %1"
 
 #: filedigger/restoredialog.cpp:259
 #, kde-kuit-format
