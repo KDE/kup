@@ -477,7 +477,7 @@ msgstr "Açılacak yedek arşivinin konumunu seçin."
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
-msgstr "Dosya Kazıcısı"
+msgstr "Dosya Kazıcı"
 
 #: filedigger/main.cpp:27
 #, kde-format
