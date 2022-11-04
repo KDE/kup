@@ -35,8 +35,8 @@ add_definitions(-fexceptions)
 ki18n_wrap_ui(filedigger_SRCS restoredialog.ui)
 add_executable(kup-filedigger ${filedigger_SRCS})
 target_link_libraries(kup-filedigger
-Qt5::Core
-Qt5::Gui
+Qt::Core
+Qt::Gui
 KF5::KIOCore
 KF5::KIOFileWidgets
 KF5::I18n

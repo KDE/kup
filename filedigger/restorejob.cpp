@@ -45,7 +45,7 @@ void RestoreJob::start() {
 }
 
 void RestoreJob::slotRestoringStarted() {
-	makeNice(mRestoreProcess.pid());
+	makeNice(mRestoreProcess.processId());
 }
 
 void RestoreJob::timerEvent(QTimerEvent *pTimerEvent) {

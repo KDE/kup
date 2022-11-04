@@ -27,7 +27,7 @@ void BupVerificationJob::performJob() {
 
 	mLogStream << QStringLiteral("Kup is starting bup verification job at ")
 	           << QLocale().toString(QDateTime::currentDateTime())
-	           << endl << endl;
+	           << Qt::endl << Qt::endl;
 
 	mFsckProcess << QStringLiteral("bup");
 	mFsckProcess << QStringLiteral("-d") << mDestinationPath;
@@ -36,23 +36,23 @@ void BupVerificationJob::performJob() {
 
 	connect(&mFsckProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(slotCheckingDone(int,QProcess::ExitStatus)));
 	connect(&mFsckProcess, SIGNAL(started()), SLOT(slotCheckingStarted()));
-	mLogStream << mFsckProcess.program().join(QStringLiteral(" ")) << endl;
+	mLogStream << mFsckProcess.program().join(QStringLiteral(" ")) << Qt::endl;
 	mFsckProcess.start();
 }
 
 void BupVerificationJob::slotCheckingStarted() {
-	makeNice(mFsckProcess.pid());
+	makeNice(mFsckProcess.processId());
 }
 
 void BupVerificationJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	QString lErrors = QString::fromUtf8(mFsckProcess.readAllStandardError());
 	if(!lErrors.isEmpty()) {
-		mLogStream << lErrors << endl;
+		mLogStream << lErrors << Qt::endl;
 	}
-	mLogStream << "Exit code: " << pExitCode << endl;
+	mLogStream << "Exit code: " << pExitCode << Qt::endl;
 	if(pExitStatus != QProcess::NormalExit) {
 		mLogStream << QStringLiteral("Integrity check failed (the process crashed). Your backups could be "
-		                             "corrupted! See above for details.") << endl;
+		                             "corrupted! See above for details.") << Qt::endl;
 		if(mBackupPlan.mGenerateRecoveryInfo) {
 			jobFinishedError(ErrorSuggestRepair, xi18nc("@info notification",
 			                                    "Failed backup integrity check. Your backups could be corrupted! "
@@ -63,12 +63,12 @@ void BupVerificationJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pE
 		}
 	} else if(pExitCode == 0) {
 		mLogStream << QStringLiteral("Backup integrity test was successful. "
-		                             "Your backups are fine. See above for details.") << endl;
+		                             "Your backups are fine. See above for details.") << Qt::endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Backup integrity test was successful. "
 		                                                            "Your backups are fine."));
 	} else {
 		mLogStream << QStringLiteral("Integrity check failed. Your backups are "
-		                             "corrupted! See above for details.") << endl;
+		                             "corrupted! See above for details.") << Qt::endl;
 		if(mBackupPlan.mGenerateRecoveryInfo) {
 			jobFinishedError(ErrorSuggestRepair, xi18nc("@info notification",
 			                                            "Failed backup integrity check. Your backups are corrupted! "

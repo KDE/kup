@@ -65,7 +65,7 @@ public:
 	}
 	virtual int seek(quint64 pOffset) {
 		if(pOffset >= size()) {
-			return KIO::ERR_COULD_NOT_SEEK;
+			return KIO::ERR_CANNOT_SEEK;
 		}
 		mOffset = pOffset;
 		return 0; // success

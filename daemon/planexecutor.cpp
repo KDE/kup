@@ -10,7 +10,6 @@
 #include "kupdaemon_debug.h"
 #include "rsyncjob.h"
 
-#include <KDiskFreeSpaceInfo>
 #include <KIO/DirectorySizeJob>
 #include <KIO/OpenUrlJob>
 #include <KFormat>
@@ -20,6 +19,7 @@
 #include <QDBusReply>
 #include <QDir>
 #include <QTimer>
+#include <QStorageInfo>
 
 
 static const QString cPwrMgmtServiceName = QStringLiteral("org.freedesktop.PowerManagement");
@@ -274,9 +274,9 @@ void PlanExecutor::finishBackup(KJob *pJob) {
 	} else {
 		notifyBackupSucceeded();
 		mPlan->mLastCompleteBackup = QDateTime::currentDateTimeUtc();
-		auto lSpaceInfo = KDiskFreeSpaceInfo::freeSpaceInfo(mDestinationPath);
-		if(lSpaceInfo.isValid())
-			mPlan->mLastAvailableSpace = static_cast<double>(lSpaceInfo.available());
+		QStorageInfo storageInfo(mDestinationPath);
+		if(storageInfo.isValid())
+			mPlan->mLastAvailableSpace = static_cast<double>(storageInfo.bytesAvailable());
 		else
 			mPlan->mLastAvailableSpace = -1.0; //unknown size
 

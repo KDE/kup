@@ -36,9 +36,9 @@ void RsyncJob::performJob() {
 
 	// Remove this and the performMigration method when it is likely that all users of pre 0.8 kup have now started using post 0.8.
 	if(mBackupPlan.mBackupVersion < 1 && mBackupPlan.mLastCompleteBackup.isValid() && mBackupPlan.mPathsIncluded.length() == 1) {
-		mLogStream << QStringLiteral("Migrating saved files to new location, after update to version 0.8 of Kup.") << endl;
+		mLogStream << QStringLiteral("Migrating saved files to new location, after update to version 0.8 of Kup.") << Qt::endl;
 		if(!performMigration()) {
-			mLogStream << QStringLiteral("Migration failed. Continuing backup save regardless, may result in files stored twice.") << endl;
+			mLogStream << QStringLiteral("Migration failed. Continuing backup save regardless, may result in files stored twice.") << Qt::endl;
 		}
 	}
 	mBackupPlan.mBackupVersion = 1;
@@ -46,7 +46,7 @@ void RsyncJob::performJob() {
 
 	mLogStream << QStringLiteral("Kup is starting rsync backup job at ")
 	           << QLocale().toString(QDateTime::currentDateTime())
-	           << endl;
+	           << Qt::endl;
 
 	emit description(this, i18n("Checking what to copy"));
 	mRsyncProcess << QStringLiteral("rsync") << QStringLiteral("-avX")
@@ -90,29 +90,29 @@ void RsyncJob::performJob() {
 	connect(&mRsyncProcess, &KProcess::readyReadStandardOutput, this, &RsyncJob::slotReadRsyncOutput);
 	connect(&mRsyncProcess, SIGNAL(finished(int,QProcess::ExitStatus)),
 	        SLOT(slotRsyncFinished(int,QProcess::ExitStatus)));
-	mLogStream << quoteArgs(mRsyncProcess.program()) << endl;
+	mLogStream << quoteArgs(mRsyncProcess.program()) << Qt::endl;
 	mRsyncProcess.start();
 	mInfoRateLimiter.start();
 }
 
 void RsyncJob::slotRsyncStarted() {
-	makeNice(mRsyncProcess.pid());
+	makeNice(mRsyncProcess.processId());
 }
 
 void RsyncJob::slotRsyncFinished(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	QString lErrors = QString::fromUtf8(mRsyncProcess.readAllStandardError());
 	if(!lErrors.isEmpty()) {
-		mLogStream << lErrors << endl;
+		mLogStream << lErrors << Qt::endl;
 	}
-	mLogStream << "Exit code: " << pExitCode << endl;
+	mLogStream << "Exit code: " << pExitCode << Qt::endl;
 	// exit code 24 means source files disappeared during copying. No reason to worry about that.
 	if(pExitStatus != QProcess::NormalExit || (pExitCode != 0 && pExitCode != 24)) {
-		mLogStream << QStringLiteral("Kup did not successfully complete the rsync backup job.") << endl;
+		mLogStream << QStringLiteral("Kup did not successfully complete the rsync backup job.") << Qt::endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Failed to save backup. "
 		                                                            "See log file for more details."));
 	} else {
 		mLogStream << QStringLiteral("Kup successfully completed the rsync backup job at ")
-		           << QLocale().toString(QDateTime::currentDateTime()) << endl;
+		           << QLocale().toString(QDateTime::currentDateTime()) << Qt::endl;
 		jobFinishedSuccess();
 	}
 }
@@ -173,18 +173,18 @@ void RsyncJob::slotReadRsyncOutput() {
 
 bool RsyncJob::doKill() {
 	setError(KilledJobError);
-	if(0 == ::kill(mRsyncProcess.pid(), SIGINT)) {
+	if(0 == ::kill(mRsyncProcess.processId(), SIGINT)) {
 		return mRsyncProcess.waitForFinished();
 	}
 	return false;
 }
 
 bool RsyncJob::doSuspend() {
-	return 0 == ::kill(mRsyncProcess.pid(), SIGSTOP);
+	return 0 == ::kill(mRsyncProcess.processId(), SIGSTOP);
 }
 
 bool RsyncJob::doResume() {
-	return 0 == ::kill(mRsyncProcess.pid(), SIGCONT);
+	return 0 == ::kill(mRsyncProcess.processId(), SIGCONT);
 }
 
 // This migration moves files from being stored directly in destination folder, to
@@ -193,22 +193,22 @@ bool RsyncJob::doResume() {
 bool RsyncJob::performMigration() {
 	QString lSourceDirName = lastPartOfPath(mBackupPlan.mPathsIncluded.first()); //only one included
 	QDir lDestDir = QDir(mDestinationPath);
-	mLogStream << QStringLiteral("Creating directory named ") << lSourceDirName << " inside of " << mDestinationPath << endl;
+	mLogStream << QStringLiteral("Creating directory named ") << lSourceDirName << " inside of " << mDestinationPath << Qt::endl;
 	if(!lDestDir.mkdir(lSourceDirName)) {
-		mLogStream << QStringLiteral("Failed to create directory, aborting migration.") << endl;
+		mLogStream << QStringLiteral("Failed to create directory, aborting migration.") << Qt::endl;
 		return false;
 	}
 	foreach(const QString &lContent, lDestDir.entryList(QDir::AllEntries | QDir::NoDotAndDotDot)) {
 		if(lContent != lSourceDirName) {
 			QString lDest = lSourceDirName + QLatin1Char('/') + lContent;
-			mLogStream << QStringLiteral("Renaming ") << lContent << " to " << lDest << endl;
+			mLogStream << QStringLiteral("Renaming ") << lContent << " to " << lDest << Qt::endl;
 			if(!lDestDir.rename(lContent, lDest)) {
-				mLogStream << QStringLiteral("Failed to rename, aborting migration.") << endl;
+				mLogStream << QStringLiteral("Failed to rename, aborting migration.") << Qt::endl;
 				return false;
 			}
 		}
 	}
-	mLogStream << QStringLiteral("File migration completed.") << endl;
+	mLogStream << QStringLiteral("File migration completed.") << Qt::endl;
 	return true;
 }
 

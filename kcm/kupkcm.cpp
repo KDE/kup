@@ -60,7 +60,7 @@ KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
 	lExitCode = lRsyncProcess.execute();
 	if(lExitCode >= 0) {
 		QString lOutput = QString::fromLocal8Bit(lRsyncProcess.readLine());
-		mRsyncVersion = lOutput.split(QLatin1Char(' '), QString::SkipEmptyParts).at(2);
+		mRsyncVersion = lOutput.split(QLatin1Char(' '), Qt::SkipEmptyParts).at(2);
 	}
 
 	if(mBupVersion.isEmpty() && mRsyncVersion.isEmpty()) {
@@ -78,9 +78,11 @@ KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
 		lHLayout->addWidget(lSorryText, 1);
 		setLayout(lHLayout);
 	} else {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 		Kdelibs4ConfigMigrator lMigrator(QStringLiteral("kup"));
 		lMigrator.setConfigFiles(QStringList() << QStringLiteral("kuprc"));
 		lMigrator.migrate();
+#endif
 
 		mConfig = KSharedConfig::openConfig(QStringLiteral("kuprc"));
 		mSettings = new KupSettings(mConfig, this);

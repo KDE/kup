@@ -32,7 +32,7 @@ Node *Node::resolve(const QString &pPath, bool pFollowLinks) {
 		lTarget.remove(0, 1);
 		lParentNode = parentCommit();
 	}
-	return lParentNode->resolve(lTarget.split(QLatin1Char('/'), QString::SkipEmptyParts), pFollowLinks);
+	return lParentNode->resolve(lTarget.split(QLatin1Char('/'), Qt::SkipEmptyParts), pFollowLinks);
 }
 
 Node *Node::resolve(const QStringList &pPathList, bool pFollowLinks) {
@@ -140,7 +140,7 @@ int BlobFile::read(QByteArray &pChunk, qint64 pReadSize) {
 	}
 	git_blob *lBlob = cachedBlob();
 	if(lBlob == nullptr) {
-		return KIO::ERR_COULD_NOT_READ;
+		return KIO::ERR_CANNOT_READ;
 	}
 	quint64 lAvailableSize = size() - mOffset;
 	quint64 lReadSize = lAvailableSize;
@@ -184,7 +184,7 @@ ChunkFile::~ChunkFile() {
 
 int ChunkFile::seek(quint64 pOffset) {
 	if(pOffset >= size()) {
-		return KIO::ERR_COULD_NOT_SEEK;
+		return KIO::ERR_CANNOT_SEEK;
 	}
 	if(mOffset == pOffset && mValidSeekPosition) {
 		return 0; // nothing to do, success
@@ -203,7 +203,7 @@ int ChunkFile::seek(quint64 pOffset) {
 
 	git_tree *lTree;
 	if(0 != git_tree_lookup(&lTree, mRepository, &mOid)) {
-		return KIO::ERR_COULD_NOT_SEEK;
+		return KIO::ERR_CANNOT_SEEK;
 	}
 
 	auto lCurrentPos = new TreePosition(lTree);
@@ -220,7 +220,7 @@ int ChunkFile::seek(quint64 pOffset) {
 			const git_tree_entry *lCheckEntry = git_tree_entry_byindex(lCurrentPos->mTree, lToCheck);
 			quint64 lCheckOffset;
 			if(!offsetFromName(lCheckEntry, lCheckOffset)) {
-				return KIO::ERR_COULD_NOT_SEEK;
+				return KIO::ERR_CANNOT_SEEK;
 			}
 			if(lCheckOffset > lLocalOffset) {
 				lUpper = lToCheck;
@@ -237,7 +237,7 @@ int ChunkFile::seek(quint64 pOffset) {
 		if(S_ISDIR(git_tree_entry_filemode(lLowerEntry))) {
 			git_tree *lTree;
 			if(0 != git_tree_lookup(&lTree, mRepository, git_tree_entry_id(lLowerEntry))) {
-				return KIO::ERR_COULD_NOT_SEEK;
+				return KIO::ERR_CANNOT_SEEK;
 			}
 			lCurrentPos = new TreePosition(lTree);
 			mPositionStack.append(lCurrentPos);
@@ -255,7 +255,7 @@ int ChunkFile::read(QByteArray &pChunk, qint64 pReadSize) {
 		return KIO::ERR_NO_CONTENT;
 	}
 	if(!mValidSeekPosition) {
-		return KIO::ERR_COULD_NOT_READ;
+		return KIO::ERR_CANNOT_READ;
 	}
 
 	TreePosition *lCurrentPos = mPositionStack.last();
@@ -269,13 +269,13 @@ int ChunkFile::read(QByteArray &pChunk, qint64 pReadSize) {
 	if(mCurrentBlob == nullptr) {
 		const git_tree_entry *lTreeEntry = git_tree_entry_byindex(lCurrentPos->mTree, lCurrentPos->mIndex);
 		if(0 != git_blob_lookup(&mCurrentBlob, mRepository, git_tree_entry_id(lTreeEntry))) {
-			return KIO::ERR_COULD_NOT_READ;
+			return KIO::ERR_CANNOT_READ;
 		}
 	}
 
 	auto lTotalSize = static_cast<quint64>(git_blob_rawsize(mCurrentBlob));
 	if(lTotalSize < lCurrentPos->mSkipSize) { // this must mean a corrupt bup tree somehow
-		return KIO::ERR_COULD_NOT_READ;
+		return KIO::ERR_CANNOT_READ;
 	}
 	quint64 lAvailableSize = lTotalSize - lCurrentPos->mSkipSize;
 	quint64 lReadSize = lAvailableSize;
@@ -296,7 +296,7 @@ int ChunkFile::read(QByteArray &pChunk, qint64 pReadSize) {
 				if(S_ISDIR(git_tree_entry_filemode(lTreeEntry))) {
 					git_tree *lTree;
 					if(0 != git_tree_lookup(&lTree, mRepository, git_tree_entry_id(lTreeEntry))) {
-						return KIO::ERR_COULD_NOT_READ;
+						return KIO::ERR_CANNOT_READ;
 					}
 					lCurrentPos = new TreePosition(lTree); // will have index and skipsize initialized to zero.
 					mPositionStack.append(lCurrentPos);

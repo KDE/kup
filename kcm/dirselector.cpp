@@ -8,6 +8,7 @@
 #include <KDirModel>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <KFileUtils>
 
 #include <QDir>
 #include <QInputDialog>
@@ -33,7 +34,7 @@ void DirSelector::createNewFolder() {
 	bool lUserAccepted;
 	QString lNameSuggestion = xi18nc("default folder name when creating a new folder", "New Folder");
 	if(QFileInfo::exists(url().adjusted(QUrl::StripTrailingSlash).path() + '/' + lNameSuggestion)) {
-		lNameSuggestion = KIO::suggestName(url(), lNameSuggestion);
+		lNameSuggestion = KFileUtils::suggestName(url(), lNameSuggestion);
 	}
 
 	QString lSelectedName = QInputDialog::getText(this, xi18nc("@title:window", "New Folder" ),
@@ -43,7 +44,7 @@ void DirSelector::createNewFolder() {
 		return;
 
 	QUrl lPartialUrl(url());
-	const QStringList lDirectories = lSelectedName.split(QLatin1Char('/'), QString::SkipEmptyParts);
+	const QStringList lDirectories = lSelectedName.split(QLatin1Char('/'), Qt::SkipEmptyParts);
 	foreach(QString lSubDirectory, lDirectories) {
 		QDir lDir(lPartialUrl.path());
 		if(lDir.exists(lSubDirectory)) {

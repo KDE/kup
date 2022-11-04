@@ -199,7 +199,7 @@ void KupDaemon::handleRequests(QLocalSocket *pSocket) {
 	if(pSocket->bytesAvailable() <= 0) {
 		return;
 	}
-	QJsonDocument lDoc = QJsonDocument::fromBinaryData(pSocket->readAll());
+	QJsonDocument lDoc = QJsonDocument::fromJson(pSocket->readAll());
 	if(!lDoc.isObject()) {
 		return;
 	}
@@ -315,5 +315,5 @@ void KupDaemon::sendStatus(QLocalSocket *pSocket) {
 	}
 	lStatus["plans"] = lPlans;
 	QJsonDocument lDoc(lStatus);
-	pSocket->write(lDoc.toBinaryData());
+	pSocket->write(lDoc.toJson());
 }

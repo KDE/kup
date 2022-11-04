@@ -40,7 +40,7 @@ void KupEngine::processData() {
 	if(mSocket->bytesAvailable() <= 0) {
 		return;
 	}
-	QJsonDocument lDoc = QJsonDocument::fromBinaryData(mSocket->readAll());
+	QJsonDocument lDoc = QJsonDocument::fromJson(mSocket->readAll());
 	if(!lDoc.isObject()) {
 		return;
 	}
@@ -89,7 +89,7 @@ void KupEngine::setCommonData(const QJsonObject &pCommonStatus, const QString &p
 	setData(QStringLiteral("common"), pKey, pCommonStatus[pKey].toVariant());
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(backups, KupEngine, "plasma-dataengine-kup.json")
+K_PLUGIN_CLASS_WITH_JSON(KupEngine, "plasma-dataengine-kup.json")
 
 #include "kupengine.moc"
 

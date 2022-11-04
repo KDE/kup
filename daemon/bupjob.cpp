@@ -56,18 +56,18 @@ void BupJob::performJob() {
 
 	mLogStream << QStringLiteral("Kup is starting bup backup job at ")
 	           << QLocale().toString(QDateTime::currentDateTime())
-	           << endl << endl;
+	           << Qt::endl << Qt::endl;
 
 	KProcess lInitProcess;
 	lInitProcess.setOutputChannelMode(KProcess::SeparateChannels);
 	lInitProcess << QStringLiteral("bup");
 	lInitProcess << QStringLiteral("-d") << mDestinationPath;
 	lInitProcess << QStringLiteral("init");
-	mLogStream << quoteArgs(lInitProcess.program()) << endl;
+	mLogStream << quoteArgs(lInitProcess.program()) << Qt::endl;
 	if(lInitProcess.execute() != 0) {
-		mLogStream << QString::fromUtf8(lInitProcess.readAllStandardError()) << endl;
+		mLogStream << QString::fromUtf8(lInitProcess.readAllStandardError()) << Qt::endl;
 		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: "
-		                             "failed to initialize backup destination.") << endl;
+		                             "failed to initialize backup destination.") << Qt::endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Backup destination could not be initialised. "
 		                                                            "See log file for more details."));
 		return;
@@ -81,7 +81,7 @@ void BupJob::performJob() {
 
 		connect(&mFsckProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(slotCheckingDone(int,QProcess::ExitStatus)));
 		connect(&mFsckProcess, SIGNAL(started()), SLOT(slotCheckingStarted()));
-		mLogStream << quoteArgs(mFsckProcess.program()) << endl;
+		mLogStream << quoteArgs(mFsckProcess.program()) << Qt::endl;
 		mFsckProcess.start();
 		mInfoRateLimiter.start();
 	} else {
@@ -90,20 +90,20 @@ void BupJob::performJob() {
 }
 
 void BupJob::slotCheckingStarted() {
-	makeNice(mFsckProcess.pid());
+	makeNice(mFsckProcess.processId());
 	emit description(this, i18n("Checking backup integrity"));
 }
 
 void BupJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	QString lErrors = QString::fromUtf8(mFsckProcess.readAllStandardError());
 	if(!lErrors.isEmpty()) {
-		mLogStream << lErrors << endl;
+		mLogStream << lErrors << Qt::endl;
 	}
-	mLogStream << "Exit code: " << pExitCode << endl;
+	mLogStream << "Exit code: " << pExitCode << Qt::endl;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
 		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: "
 		                             "failed integrity check. Your backups could be "
-		                             "corrupted! See above for details.") << endl;
+		                             "corrupted! See above for details.") << Qt::endl;
 		if(mBackupPlan.mGenerateRecoveryInfo) {
 			jobFinishedError(ErrorSuggestRepair, xi18nc("@info notification",
 			                                            "Failed backup integrity check. Your backups could be corrupted! "
@@ -135,23 +135,23 @@ void BupJob::startIndexing() {
 
 	connect(&mIndexProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(slotIndexingDone(int,QProcess::ExitStatus)));
 	connect(&mIndexProcess, SIGNAL(started()), SLOT(slotIndexingStarted()));
-	mLogStream << quoteArgs(mIndexProcess.program()) << endl;
+	mLogStream << quoteArgs(mIndexProcess.program()) << Qt::endl;
 	mIndexProcess.start();
 }
 
 void BupJob::slotIndexingStarted() {
-	makeNice(mIndexProcess.pid());
+	makeNice(mIndexProcess.processId());
 	emit description(this, i18n("Checking what to copy"));
 }
 
 void BupJob::slotIndexingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	QString lErrors = QString::fromUtf8(mIndexProcess.readAllStandardError());
 	if(!lErrors.isEmpty()) {
-		mLogStream << lErrors << endl;
+		mLogStream << lErrors << Qt::endl;
 	}
-	mLogStream << "Exit code: " << pExitCode << endl;
+	mLogStream << "Exit code: " << pExitCode << Qt::endl;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
-		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: failed to index everything.") << endl;
+		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: failed to index everything.") << Qt::endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Failed to analyze files. "
 		                                                            "See log file for more details."));
 		return;
@@ -161,7 +161,7 @@ void BupJob::slotIndexingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	mSaveProcess << QStringLiteral("save");
 	mSaveProcess << QStringLiteral("-n") << QStringLiteral("kup") << QStringLiteral("-vv");
 	mSaveProcess << mBackupPlan.mPathsIncluded;
-	mLogStream << quoteArgs(mSaveProcess.program()) << endl;
+	mLogStream << quoteArgs(mSaveProcess.program()) << Qt::endl;
 
 	connect(&mSaveProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(slotSavingDone(int,QProcess::ExitStatus)));
 	connect(&mSaveProcess, SIGNAL(started()), SLOT(slotSavingStarted()));
@@ -172,19 +172,19 @@ void BupJob::slotIndexingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 }
 
 void BupJob::slotSavingStarted() {
-	makeNice(mSaveProcess.pid());
+	makeNice(mSaveProcess.processId());
 	emit description(this, i18n("Saving backup"));
 }
 
 void BupJob::slotSavingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	slotReadBupErrors();
-	mLogStream << "Exit code: " << pExitCode << endl;
+	mLogStream << "Exit code: " << pExitCode << Qt::endl;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
 		if(mAllErrorsHarmless) {
-			mLogStream << QStringLiteral("Only harmless errors detected by Kup.") << endl;
+			mLogStream << QStringLiteral("Only harmless errors detected by Kup.") << Qt::endl;
 		} else {
 			mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: "
-			                             "failed to save everything.") << endl;
+			                             "failed to save everything.") << Qt::endl;
 			jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Failed to save backup. "
 			                                                            "See log file for more details."));
 			return;
@@ -198,33 +198,33 @@ void BupJob::slotSavingDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 
 		connect(&mPar2Process, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(slotRecoveryInfoDone(int,QProcess::ExitStatus)));
 		connect(&mPar2Process, SIGNAL(started()), SLOT(slotRecoveryInfoStarted()));
-		mLogStream << quoteArgs(mPar2Process.program()) << endl;
+		mLogStream << quoteArgs(mPar2Process.program()) << Qt::endl;
 		mPar2Process.start();
 	} else {
 		mLogStream << QStringLiteral("Kup successfully completed the bup backup job at ")
-		           << QLocale().toString(QDateTime::currentDateTime()) << endl;
+		           << QLocale().toString(QDateTime::currentDateTime()) << Qt::endl;
 		jobFinishedSuccess();
 	}
 }
 
 void BupJob::slotRecoveryInfoStarted() {
-	makeNice(mPar2Process.pid());
+	makeNice(mPar2Process.processId());
 	emit description(this, i18n("Generating recovery information"));
 }
 
 void BupJob::slotRecoveryInfoDone(int pExitCode, QProcess::ExitStatus pExitStatus) {
 	QString lErrors = QString::fromUtf8(mPar2Process.readAllStandardError());
 	if(!lErrors.isEmpty()) {
-		mLogStream << lErrors << endl;
+		mLogStream << lErrors << Qt::endl;
 	}
-	mLogStream << "Exit code: " << pExitCode << endl;
+	mLogStream << "Exit code: " << pExitCode << Qt::endl;
 	if(pExitStatus != QProcess::NormalExit || pExitCode != 0) {
 		mLogStream << QStringLiteral("Kup did not successfully complete the bup backup job: "
-		                             "failed to generate recovery info.") << endl;
+		                             "failed to generate recovery info.") << Qt::endl;
 		jobFinishedError(ErrorWithLog, xi18nc("@info notification", "Failed to generate recovery info for the backup. "
 		                                                            "See log file for more details."));
 	} else {
-		mLogStream << QStringLiteral("Kup successfully completed the bup backup job.") << endl;
+		mLogStream << QStringLiteral("Kup successfully completed the bup backup job.") << Qt::endl;
 		jobFinishedSuccess();
 	}
 }
@@ -246,13 +246,13 @@ void BupJob::slotReadBupErrors() {
 		}
 		if(mFileGoneRegExp.match(lLine).hasMatch()) {
 			mHarmlessErrorCount++;
-			mLogStream << lLine << endl;
+			mLogStream << lLine << Qt::endl;
 			continue;
 		}
 		const auto lCountMatch = mErrorCountRegExp.match(lLine);
 		if(lCountMatch.hasMatch()) {
 			mAllErrorsHarmless = lCountMatch.captured(1).toInt() == mHarmlessErrorCount;
-			mLogStream << lLine << endl;
+			mLogStream << lLine << Qt::endl;
 			continue;
 		}
 		const auto lProgressMatch = mProgressRegExp.match(lLine);
@@ -272,7 +272,7 @@ void BupJob::slotReadBupErrors() {
 			continue;
 		}
 		if(!lLine.startsWith(QStringLiteral("D /"))) {
-			mLogStream << lLine << endl;
+			mLogStream << lLine << Qt::endl;
 		}
 	}
 	if(mInfoRateLimiter.hasExpired(200)) {
@@ -294,32 +294,32 @@ void BupJob::slotReadBupErrors() {
 
 bool BupJob::doSuspend() {
 	if(mFsckProcess.state() == KProcess::Running) {
-		return 0 == ::kill(mFsckProcess.pid(), SIGSTOP);
+		return 0 == ::kill(mFsckProcess.processId(), SIGSTOP);
 	}
 	if(mIndexProcess.state() == KProcess::Running) {
-		return 0 == ::kill(mIndexProcess.pid(), SIGSTOP);
+		return 0 == ::kill(mIndexProcess.processId(), SIGSTOP);
 	}
 	if(mSaveProcess.state() == KProcess::Running) {
-		return 0 == ::kill(mSaveProcess.pid(), SIGSTOP);
+		return 0 == ::kill(mSaveProcess.processId(), SIGSTOP);
 	}
 	if(mPar2Process.state() == KProcess::Running) {
-		return 0 == ::kill(mPar2Process.pid(), SIGSTOP);
+		return 0 == ::kill(mPar2Process.processId(), SIGSTOP);
 	}
 	return false;
 }
 
 bool BupJob::doResume() {
 	if(mFsckProcess.state() == KProcess::Running) {
-		return 0 == ::kill(mFsckProcess.pid(), SIGCONT);
+		return 0 == ::kill(mFsckProcess.processId(), SIGCONT);
 	}
 	if(mIndexProcess.state() == KProcess::Running) {
-		return 0 == ::kill(mIndexProcess.pid(), SIGCONT);
+		return 0 == ::kill(mIndexProcess.processId(), SIGCONT);
 	}
 	if(mSaveProcess.state() == KProcess::Running) {
-		return 0 == ::kill(mSaveProcess.pid(), SIGCONT);
+		return 0 == ::kill(mSaveProcess.processId(), SIGCONT);
 	}
 	if(mPar2Process.state() == KProcess::Running) {
-		return 0 == ::kill(mPar2Process.pid(), SIGCONT);
+		return 0 == ::kill(mPar2Process.processId(), SIGCONT);
 	}
 	return false;
 }

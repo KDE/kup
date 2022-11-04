@@ -24,7 +24,7 @@ include(FeatureSummary)
 include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
 
-find_package(Qt5 REQUIRED COMPONENTS Widgets)
+find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS Widgets)
 find_package(KF5 ${KF_MIN_VERSION} REQUIRED COMPONENTS
 Solid
 KIO

@@ -19,7 +19,7 @@ ecm_qt_declare_logging_category(bupslave_SRCS
 
 add_library(kio_bup MODULE ${bupslave_SRCS})
 target_link_libraries(kio_bup
-Qt5::Core
+Qt::Core
 KF5::KIOCore
 KF5::I18n
 LibGit2::LibGit2

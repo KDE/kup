@@ -70,7 +70,7 @@ void BupSlave::close() {
 void BupSlave::get(const QUrl &pUrl) {
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		emit error(KIO::ERR_SLAVE_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
+		emit error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 		return;
 	}
 
@@ -127,7 +127,7 @@ void BupSlave::get(const QUrl &pUrl) {
 void BupSlave::listDir(const QUrl &pUrl) {
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		emit error(KIO::ERR_SLAVE_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
+		emit error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 		return;
 	}
 	Node *lNode = mRepository->resolve(lPathInRepo, true);
@@ -164,7 +164,7 @@ void BupSlave::open(const QUrl &pUrl, QIODevice::OpenMode pMode) {
 
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		emit error(KIO::ERR_SLAVE_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
+		emit error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 		return;
 	}
 
@@ -194,7 +194,7 @@ void BupSlave::open(const QUrl &pUrl, QIODevice::OpenMode pMode) {
 
 void BupSlave::read(filesize_t pSize) {
 	if(mOpenFile == nullptr) {
-		emit error(KIO::ERR_COULD_NOT_READ, QString());
+		emit error(KIO::ERR_CANNOT_READ, QString());
 		return;
 	}
 	QByteArray lResultArray;
@@ -213,12 +213,12 @@ void BupSlave::read(filesize_t pSize) {
 
 void BupSlave::seek(filesize_t pOffset) {
 	if(mOpenFile == nullptr) {
-		emit error(KIO::ERR_COULD_NOT_SEEK, QString());
+		emit error(KIO::ERR_CANNOT_SEEK, QString());
 		return;
 	}
 
 	if(0 != mOpenFile->seek(pOffset)) {
-		emit error(KIO::ERR_COULD_NOT_SEEK, mOpenFile->completePath());
+		emit error(KIO::ERR_CANNOT_SEEK, mOpenFile->completePath());
 		return;
 	}
 	emit position(pOffset);
@@ -227,7 +227,7 @@ void BupSlave::seek(filesize_t pOffset) {
 void BupSlave::stat(const QUrl &pUrl) {
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		emit error(KIO::ERR_SLAVE_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
+		emit error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 		return;
 	}
 
@@ -249,7 +249,7 @@ void BupSlave::stat(const QUrl &pUrl) {
 void BupSlave::mimetype(const QUrl &pUrl) {
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		emit error(KIO::ERR_SLAVE_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
+		emit error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 		return;
 	}
 
@@ -279,14 +279,14 @@ bool BupSlave::checkCorrectRepository(const QUrl &pUrl, QStringList &pPathInRepo
 	if(mRepository && mRepository->isValid()) {
 		if(lPath.startsWith(mRepository->objectName())) {
 			lPath.remove(0, mRepository->objectName().length());
-			pPathInRepository = lPath.split(QLatin1Char('/'), QString::SkipEmptyParts);
+			pPathInRepository = lPath.split(QLatin1Char('/'), Qt::SkipEmptyParts);
 			return true;
 		}
 		delete mRepository;
 		mRepository = nullptr;
 	}
 
-	pPathInRepository = lPath.split(QLatin1Char('/'), QString::SkipEmptyParts);
+	pPathInRepository = lPath.split(QLatin1Char('/'), Qt::SkipEmptyParts);
 	QString lRepoPath = QStringLiteral("/");
 	while(!pPathInRepository.isEmpty()) {
 		// make sure the repo path will end with a slash

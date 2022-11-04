@@ -23,7 +23,7 @@ void KupJob::start() {
 	lCommand["plan number"] = mPlanNumber;
 	lCommand["operation name"] = operationName();
 	QJsonDocument lDoc(lCommand);
-	mSocket->write(lDoc.toBinaryData());
+	mSocket->write(lDoc.toJson());
 	setResult(false);
 }
 

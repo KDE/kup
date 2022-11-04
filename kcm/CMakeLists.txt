@@ -25,9 +25,9 @@ add_library(kcm_kup MODULE ${kcm_kup_SRCS})
 add_definitions(-DTRANSLATION_DOMAIN="kup")
 
 target_link_libraries(kcm_kup
-Qt5::Core
-Qt5::DBus
-Qt5::Gui
+Qt::Core
+Qt::DBus
+Qt::Gui
 KF5::CoreAddons
 KF5::ConfigCore
 KF5::KIOCore
@@ -40,5 +40,5 @@ KF5::WidgetsAddons
 ########### install files ###############
 
 install(TARGETS kcm_kup DESTINATION ${KDE_INSTALL_PLUGINDIR})
-install(FILES kcm_kup.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_kup.desktop DESTINATION ${KDE_INSTALL_KSERVICESDIR})
 

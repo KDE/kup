@@ -18,7 +18,7 @@ ecm_qt_declare_logging_category(purger_SRCS
 
 add_executable(kup-purger ${purger_SRCS})
 target_link_libraries(kup-purger
-Qt5::Widgets
+Qt::Widgets
 KF5::I18n
 KF5::CoreAddons
 KF5::XmlGui

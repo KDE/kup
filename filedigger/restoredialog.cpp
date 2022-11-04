@@ -9,10 +9,11 @@
 #include "kuputils.h"
 #include "kupfiledigger_debug.h"
 
+#include <KFileUtils>
 #include <KIO/CopyJob>
 #include <KIO/OpenUrlJob>
 #include <KIO/JobUiDelegate>
-#include <KDiskFreeSpaceInfo>
+#include <QStorageInfo>
 #include <KFileWidget>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -253,8 +254,8 @@ void RestoreDialog::sourceListingCompleted(KJob *pJob) {
 
 void RestoreDialog::completePrechecks() {
 	qCDebug(KUPFILEDIGGER) << "Starting free disk space check on: " << mDestination.absolutePath();
-	KDiskFreeSpaceInfo lSpaceInfo = KDiskFreeSpaceInfo::freeSpaceInfo(mDestination.absolutePath());
-	if(lSpaceInfo.isValid() && lSpaceInfo.available() < mSourceSize) {
+	QStorageInfo storageInfo(mDestination.absolutePath());
+	if(storageInfo.isValid() && storageInfo.bytesAvailable() < mSourceSize) {
 		mMessageWidget->setText(xi18nc("@info message bar appearing on top",
 		                              "The destination does not have enough space available. "
 		                              "Please choose a different destination or free some space."));
@@ -360,7 +361,7 @@ void RestoreDialog::createNewFolder() {
 	QUrl lUrl = mDirSelector->url();
 	QString lNameSuggestion = xi18nc("default folder name when creating a new folder", "New Folder");
 	if(QFileInfo::exists(lUrl.adjusted(QUrl::StripTrailingSlash).path() + '/' + lNameSuggestion)) {
-		lNameSuggestion = KIO::suggestName(lUrl, lNameSuggestion);
+		lNameSuggestion = KFileUtils::suggestName(lUrl, lNameSuggestion);
 	}
 
 	QString lSelectedName = QInputDialog::getText(this, xi18nc("@title:window", "New Folder" ),
@@ -371,7 +372,7 @@ void RestoreDialog::createNewFolder() {
 		return;
 
 	QUrl lPartialUrl(lUrl);
-	const QStringList lDirectories = lSelectedName.split(QDir::separator(), QString::SkipEmptyParts);
+	const QStringList lDirectories = lSelectedName.split(QDir::separator(), Qt::SkipEmptyParts);
 	foreach(QString lSubDirectory, lDirectories) {
 		QDir lDir(lPartialUrl.path());
 		if(lDir.exists(lSubDirectory)) {

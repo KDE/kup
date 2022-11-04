@@ -13,7 +13,7 @@
 #include <QTimer>
 
 #include <KConfigDialogManager>
-#include <KDiskFreeSpaceInfo>
+#include <QStorageInfo>
 #include <KLocalizedString>
 
 #include <Solid/Device>
@@ -151,10 +151,10 @@ void DriveSelection::delayedDeviceAdded() {
 		auto *lAccess = lVolumeDevice.as<Solid::StorageAccess>();
 		connect(lAccess, SIGNAL(accessibilityChanged(bool,QString)), SLOT(accessabilityChanged(bool,QString)));
 		if(lAccess->isAccessible()) {
-			KDiskFreeSpaceInfo lInfo = KDiskFreeSpaceInfo::freeSpaceInfo(lAccess->filePath());
-			if(lInfo.isValid()) {
-				lItem->setData(lInfo.size(), DriveSelection::TotalSpace);
-				lItem->setData(lInfo.used(), DriveSelection::UsedSpace);
+			QStorageInfo storageInfo(lAccess->filePath());
+			if(storageInfo.isValid()) {
+				lItem->setData(storageInfo.bytesTotal(), DriveSelection::TotalSpace);
+				lItem->setData(storageInfo.bytesTotal() - storageInfo.bytesFree(), DriveSelection::UsedSpace);
 			}
 			if(lUuid == mSelectedUuid) {
 				// Selected volume was just added, could not have been accessible before.
@@ -202,10 +202,10 @@ void DriveSelection::accessabilityChanged(bool pAccessible, const QString &pUdi)
 			Solid::Device lDevice(pUdi);
 			auto *lAccess = lDevice.as<Solid::StorageAccess>();
 			if(lAccess) {
-				KDiskFreeSpaceInfo lInfo = KDiskFreeSpaceInfo::freeSpaceInfo(lAccess->filePath());
-				if(lInfo.isValid()) {
-					lItem->setData(lInfo.size(), DriveSelection::TotalSpace);
-					lItem->setData(lInfo.used(), DriveSelection::UsedSpace);
+				QStorageInfo storageInfo(lAccess->filePath());
+				if(storageInfo.isValid()) {
+					lItem->setData(storageInfo.bytesTotal(), DriveSelection::TotalSpace);
+					lItem->setData(storageInfo.bytesTotal() - storageInfo.bytesFree(), DriveSelection::UsedSpace);
 				}
 			}
 		}

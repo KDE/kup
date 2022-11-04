@@ -215,7 +215,7 @@ void ConfigIncludeDummy::setIncludeList(QStringList pIncludeList) {
 			pIncludeList.removeAt(i--);
 		}
 	}
-	mModel->setIncludedPaths(QSet<QString>::fromList(pIncludeList));
+	mModel->setIncludedPaths(QSet<QString>(pIncludeList.begin(), pIncludeList.end()));
 	mTreeView->expandToShowSelections();
 }
 
@@ -238,7 +238,7 @@ void ConfigExcludeDummy::setExcludeList(QStringList pExcludeList) {
 			pExcludeList.removeAt(i--);
 		}
 	}
-	mModel->setExcludedPaths(QSet<QString>::fromList(pExcludeList));
+	mModel->setExcludedPaths(QSet<QString>(pExcludeList.begin(), pExcludeList.end()));
 	mTreeView->expandToShowSelections();
 }
 
@@ -327,7 +327,7 @@ void FolderSelectionWidget::expandToShowSelections() {
 				lShouldBeShown = false; // skip if this folder should not be shown.
 				break;
 			}
-			lFolderInfo = lFolderInfo.absolutePath(); // move up one level
+			lFolderInfo = QFileInfo(lFolderInfo.absolutePath()); // move up one level
 		}
 		if(lShouldBeShown) {
 			QModelIndex lIndex = mModel->index(lFolder).parent();
@@ -378,7 +378,7 @@ void FolderSelectionWidget::updateMessage() {
 		                              "If the file is not important to you, one possible solution is "
 		                              "to exclude the whole folder where the file is stored from the backup plan.",
 		                              mUnreadableFiles.first()));
-		QFileInfo lFileInfo = mUnreadableFiles.first();
+		QFileInfo lFileInfo(mUnreadableFiles.first());
 		mExcludeActionPath = lFileInfo.absolutePath();
 		mMessageWidget->addAction(mExcludeAction);
 		mMessageWidget->animatedShow();
@@ -386,7 +386,7 @@ void FolderSelectionWidget::updateMessage() {
 		mMessageWidget->setMessageType(KMessageWidget::Warning);
 		QHashIterator<QString,QString> i(mSymlinkProblems);
 		i.next();
-		QFileInfo lFileInfo =i.value();
+		QFileInfo lFileInfo(i.value());
 		if(lFileInfo.isDir()) {
 			mMessageWidget->setText(xi18nc("@info message bar appearing on top",
 			                              "The symbolic link <filename>%1</filename> is currently included but it points "

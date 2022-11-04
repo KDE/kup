@@ -31,9 +31,9 @@ ecm_qt_declare_logging_category(kupdaemon_SRCS
 
 add_executable(kup-daemon ${kupdaemon_SRCS})
 target_link_libraries(kup-daemon
-Qt5::Core
-Qt5::DBus
-Qt5::Gui
+Qt::Core
+Qt::DBus
+Qt::Gui
 KF5::ConfigCore
 KF5::KIOCore
 KF5::KIOFileWidgets
@@ -49,5 +49,5 @@ KF5::DBusAddons
 ########### install files ###############
 install(TARGETS kup-daemon ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES kup-daemon.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
-install(FILES kupdaemon.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFY5RCDIR})
+install(FILES kupdaemon.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
 
