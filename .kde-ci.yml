@@ -12,7 +12,6 @@ Dependencies:
     'frameworks/kcoreaddons': '@stable'
     'frameworks/kdbusaddons': '@stable'
     'frameworks/kconfig': '@stable'
-    'frameworks/kinit': '@stable'
     'frameworks/kjobwidgets': '@stable'
     'frameworks/plasma-framework': '@stable'
     'frameworks/kwidgetsaddons': '@stable'
