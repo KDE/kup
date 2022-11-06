@@ -13,6 +13,7 @@
 #include <KIO/CopyJob>
 #include <KIO/OpenUrlJob>
 #include <KIO/JobUiDelegate>
+#include <KIO/JobUiDelegateFactory>
 #include <QStorageInfo>
 #include <KFileWidget>
 #include <KLocalizedString>
@@ -26,6 +27,7 @@
 #include <QPushButton>
 #include <QTimer>
 #include <utility>
+#include <kio_version.h>
 
 static const QString cKupTempRestoreFolder = QStringLiteral("_kup_temporary_restore_folder_");
 
@@ -397,7 +399,11 @@ void RestoreDialog::openDestinationFolder() {
 	auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(mSourceInfo.mIsDirectory ?
 	                                    mFolderToCreate.absoluteFilePath() :
 	                                    mDestination.absolutePath()));
+#if KIO_VERSION > QT_VERSION_CHECK(5, 98, 0)
+	auto *delegate = KIO::createDefaultJobUiDelegate(KIO::JobUiDelegate::AutoHandlingEnabled, this);
+#else
 	auto *delegate = new KIO::JobUiDelegate(KIO::JobUiDelegate::AutoHandlingEnabled, this);
+#endif
 	job->setUiDelegate(delegate);
 	job->start();
 }

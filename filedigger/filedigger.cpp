@@ -14,6 +14,7 @@
 #include <KGuiItem>
 #include <KIO/OpenUrlJob>
 #include <KIO/JobUiDelegate>
+#include <KIO/JobUiDelegateFactory>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KStandardAction>
@@ -28,6 +29,7 @@
 #include <QTreeView>
 #include <QVBoxLayout>
 #include <utility>
+#include <kio_version.h>
 
 FileDigger::FileDigger(QString pRepoPath, QString pBranchName, QWidget *pParent)
     : KMainWindow(pParent), mRepoPath(std::move(pRepoPath)), mBranchName(std::move(pBranchName)), mDirOperator(nullptr)
@@ -53,7 +55,11 @@ void FileDigger::open(const QModelIndex &pIndex) {
 
 	auto *job = new KIO::OpenUrlJob(pIndex.data(VersionBupUrlRole).toUrl(),
 	             pIndex.data(VersionMimeTypeRole).toString());
+#if KIO_VERSION > QT_VERSION_CHECK(5, 98, 0)
+	auto *delegate = KIO::createDefaultJobUiDelegate(KIO::JobUiDelegate::AutoHandlingEnabled, this);
+#else
 	auto *delegate = new KIO::JobUiDelegate(KIO::JobUiDelegate::AutoHandlingEnabled, this);
+#endif
 	job->setUiDelegate(delegate);
 	job->start();
 }
