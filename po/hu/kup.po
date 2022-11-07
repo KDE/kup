@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-28 00:49+0000\n"
+"POT-Creation-Date: 2022-11-07 00:48+0000\n"
 "PO-Revision-Date: 2021-09-22 09:14+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -536,25 +536,25 @@ msgctxt "added after file name in some cases"
 msgid " (file)"
 msgstr " (fájl)"
 
-#: filedigger/restoredialog.cpp:99 kcm/backupplanwidget.cpp:434
+#: filedigger/restoredialog.cpp:100 kcm/backupplanwidget.cpp:434
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder..."
 msgstr "Új mappa…"
 
-#: filedigger/restoredialog.cpp:125 filedigger/restoredialog.cpp:144
+#: filedigger/restoredialog.cpp:126 filedigger/restoredialog.cpp:145
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "No destination was selected, please select one."
 msgstr "Nincs kiválasztva célhely, adjon meg egyet."
 
-#: filedigger/restoredialog.cpp:244
+#: filedigger/restoredialog.cpp:245
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "There was a problem while getting a list of all files to restore: %1"
 msgstr "Hiba történt az összes visszaállítandó fájl listájának lekérésekor: %1"
 
-#: filedigger/restoredialog.cpp:259
+#: filedigger/restoredialog.cpp:260
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
@@ -564,7 +564,7 @@ msgstr ""
 "A célhelyen nincs elég szabad hely. Válasszon egy másik célt, vagy "
 "szabadítson fel némi helyet."
 
-#: filedigger/restoredialog.cpp:271
+#: filedigger/restoredialog.cpp:272
 #, kde-kuit-format
 msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
@@ -572,37 +572,37 @@ msgctxt ""
 msgid " - saved at %1"
 msgstr " - mentve ekkor: %1"
 
-#: filedigger/restoredialog.cpp:272
+#: filedigger/restoredialog.cpp:273
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Folder already exists, please choose a solution"
 msgstr "A mappa már létezik, válasszon egy megoldást"
 
-#: filedigger/restoredialog.cpp:278
+#: filedigger/restoredialog.cpp:279
 #, kde-kuit-format
 msgctxt "@info"
 msgid "File already exists"
 msgstr "A fájl már létezik"
 
-#: filedigger/restoredialog.cpp:291
+#: filedigger/restoredialog.cpp:292
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "The new name entered already exists, please enter a different one."
 msgstr "A megadott új név már létezik, adjon meg egy különbözőt."
 
-#: filedigger/restoredialog.cpp:361 kcm/dirselector.cpp:34
+#: filedigger/restoredialog.cpp:362 kcm/dirselector.cpp:35
 #, kde-kuit-format
 msgctxt "default folder name when creating a new folder"
 msgid "New Folder"
 msgstr "Új mappa"
 
-#: filedigger/restoredialog.cpp:366 kcm/dirselector.cpp:39
+#: filedigger/restoredialog.cpp:367 kcm/dirselector.cpp:40
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "Új mappa"
 
-#: filedigger/restoredialog.cpp:367 kcm/dirselector.cpp:40
+#: filedigger/restoredialog.cpp:368 kcm/dirselector.cpp:41
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid ""
@@ -612,12 +612,12 @@ msgstr ""
 "Új mappa létrehozása itt:\n"
 "%1"
 
-#: filedigger/restoredialog.cpp:380 kcm/dirselector.cpp:52
+#: filedigger/restoredialog.cpp:381 kcm/dirselector.cpp:53
 #, kde-format
 msgid "A folder named %1 already exists."
 msgstr "Már létezik %1 nevű mappa."
 
-#: filedigger/restoredialog.cpp:386 kcm/dirselector.cpp:58
+#: filedigger/restoredialog.cpp:387 kcm/dirselector.cpp:59
 #, kde-format
 msgid "You do not have permission to create %1."
 msgstr "Nincs jogosultsága a(z) %1 létrehozásához."
@@ -1354,7 +1354,7 @@ msgstr ""
 "p><ul><li>bup, verziószámozott biztonsági másolatokhoz</li><li>rsync, "
 "szinkronizált biztonsági másolatokhoz</li></ul>"
 
-#: kcm/kupkcm.cpp:175
+#: kcm/kupkcm.cpp:177
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1363,25 +1363,25 @@ msgstr ""
 "A(z) %1 tervnek nincs célhelye.<nl/>Nem készülnek biztonsági másolatok ezzel "
 "a tervvel."
 
-#: kcm/kupkcm.cpp:178
+#: kcm/kupkcm.cpp:180
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Figyelmeztetés"
 
-#: kcm/kupkcm.cpp:224
+#: kcm/kupkcm.cpp:226
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan"
 msgstr "Új terv hozzáadása"
 
-#: kcm/kupkcm.cpp:236
+#: kcm/kupkcm.cpp:238
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
 msgstr "Biztonsági másolatok bekapcsolva"
 
-#: kcm/kupkcm.cpp:247
+#: kcm/kupkcm.cpp:249
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
