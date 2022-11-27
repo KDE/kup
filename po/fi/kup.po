@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-07 00:48+0000\n"
+"POT-Creation-Date: 2022-11-27 00:49+0000\n"
 "PO-Revision-Date: 2021-09-05 14:59+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -446,7 +446,7 @@ msgstr ""
 "<application>rsync</application> on tarpeen mutta sitä ei löytynyt: ehkä "
 "sitä ei ole asennettu?"
 
-#: filedigger/filedigger.cpp:99
+#: filedigger/filedigger.cpp:105
 #, kde-kuit-format
 msgctxt "@info messagebox, %1 is a folder path"
 msgid ""
@@ -456,7 +456,7 @@ msgstr ""
 "Varmuuskopioarkistoa <filename>%1</filename> ei voitu avata. Tarkista, "
 "ovatko varmuuskopiot todella siellä."
 
-#: filedigger/filedigger.cpp:107
+#: filedigger/filedigger.cpp:113
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid "You do not have permission needed to read this backup archive."
@@ -464,7 +464,7 @@ msgstr ""
 "Sinulla ei ole tämän varmuuskopioarkiston lukemiseen tarvittavia "
 "käyttöoikeuksia."
 
-#: filedigger/filedigger.cpp:156
+#: filedigger/filedigger.cpp:162
 #, kde-format
 msgid "Select location of backup archive to open."
 msgstr "Valitse avattavan varmuuskopioarkiston sijainti."
@@ -523,25 +523,25 @@ msgctxt "added after file name in some cases"
 msgid " (file)"
 msgstr " (tiedosto)"
 
-#: filedigger/restoredialog.cpp:100 kcm/backupplanwidget.cpp:434
+#: filedigger/restoredialog.cpp:102 kcm/backupplanwidget.cpp:434
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder..."
 msgstr "Uusi kansio…"
 
-#: filedigger/restoredialog.cpp:126 filedigger/restoredialog.cpp:145
+#: filedigger/restoredialog.cpp:128 filedigger/restoredialog.cpp:147
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "No destination was selected, please select one."
 msgstr "Kohdetta ei ole vielä valittu."
 
-#: filedigger/restoredialog.cpp:245
+#: filedigger/restoredialog.cpp:247
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "There was a problem while getting a list of all files to restore: %1"
 msgstr "Palautettavia tiedostoja selvitettäessä ilmeni ongelma: %1"
 
-#: filedigger/restoredialog.cpp:260
+#: filedigger/restoredialog.cpp:262
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
@@ -551,7 +551,7 @@ msgstr ""
 "Kohteessa ei ole tarpeeksi vapaata tilaa. Valitse toinen kohde tai vapauta "
 "tilaa."
 
-#: filedigger/restoredialog.cpp:272
+#: filedigger/restoredialog.cpp:274
 #, kde-kuit-format
 msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
@@ -559,37 +559,37 @@ msgctxt ""
 msgid " - saved at %1"
 msgstr " – tallennettu %1"
 
-#: filedigger/restoredialog.cpp:273
+#: filedigger/restoredialog.cpp:275
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Folder already exists, please choose a solution"
 msgstr "Kansio on jo olemassa: valitse mitä tehdään"
 
-#: filedigger/restoredialog.cpp:279
+#: filedigger/restoredialog.cpp:281
 #, kde-kuit-format
 msgctxt "@info"
 msgid "File already exists"
 msgstr "Tiedosto on jo olemassa"
 
-#: filedigger/restoredialog.cpp:292
+#: filedigger/restoredialog.cpp:294
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "The new name entered already exists, please enter a different one."
 msgstr "Annettu uusi nimi on jo olemassa: valitse toinen."
 
-#: filedigger/restoredialog.cpp:362 kcm/dirselector.cpp:35
+#: filedigger/restoredialog.cpp:364 kcm/dirselector.cpp:35
 #, kde-kuit-format
 msgctxt "default folder name when creating a new folder"
 msgid "New Folder"
 msgstr "Uusi kansio"
 
-#: filedigger/restoredialog.cpp:367 kcm/dirselector.cpp:40
+#: filedigger/restoredialog.cpp:369 kcm/dirselector.cpp:40
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "Uusi kansio"
 
-#: filedigger/restoredialog.cpp:368 kcm/dirselector.cpp:41
+#: filedigger/restoredialog.cpp:370 kcm/dirselector.cpp:41
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid ""
@@ -599,12 +599,12 @@ msgstr ""
 "Luo uusi kansio kohteeseen:\n"
 "%1"
 
-#: filedigger/restoredialog.cpp:381 kcm/dirselector.cpp:53
+#: filedigger/restoredialog.cpp:383 kcm/dirselector.cpp:53
 #, kde-format
 msgid "A folder named %1 already exists."
 msgstr "Kansio nimeltä %1 on jo olemassa."
 
-#: filedigger/restoredialog.cpp:387 kcm/dirselector.cpp:59
+#: filedigger/restoredialog.cpp:389 kcm/dirselector.cpp:59
 #, kde-format
 msgid "You do not have permission to create %1."
 msgstr "Sinulla ei ole käyttöoikeuksia luoda kansiota %1."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-07 00:48+0000\n"
+"POT-Creation-Date: 2022-11-27 00:49+0000\n"
 "PO-Revision-Date: 2021-09-22 09:14+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -460,7 +460,7 @@ msgstr ""
 "Az <application>rsync</application> program szükséges, de nem található, "
 "talán nincs telepítve?"
 
-#: filedigger/filedigger.cpp:99
+#: filedigger/filedigger.cpp:105
 #, kde-kuit-format
 msgctxt "@info messagebox, %1 is a folder path"
 msgid ""
@@ -470,14 +470,14 @@ msgstr ""
 "A(z) <filename>%1</filename> biztonságimásolat-archívum nem nyitható meg. "
 "Ellenőrizze, hogy a biztonsági másolatok tényleg ott találhatók-e."
 
-#: filedigger/filedigger.cpp:107
+#: filedigger/filedigger.cpp:113
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid "You do not have permission needed to read this backup archive."
 msgstr ""
 "Nincs jogosultsága ennek a biztonságimásolat-archívumnak az olvasásához."
 
-#: filedigger/filedigger.cpp:156
+#: filedigger/filedigger.cpp:162
 #, kde-format
 msgid "Select location of backup archive to open."
 msgstr "Válassza ki a megnyitandó biztonságimásolat-archívum helyét."
@@ -536,25 +536,25 @@ msgctxt "added after file name in some cases"
 msgid " (file)"
 msgstr " (fájl)"
 
-#: filedigger/restoredialog.cpp:100 kcm/backupplanwidget.cpp:434
+#: filedigger/restoredialog.cpp:102 kcm/backupplanwidget.cpp:434
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder..."
 msgstr "Új mappa…"
 
-#: filedigger/restoredialog.cpp:126 filedigger/restoredialog.cpp:145
+#: filedigger/restoredialog.cpp:128 filedigger/restoredialog.cpp:147
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "No destination was selected, please select one."
 msgstr "Nincs kiválasztva célhely, adjon meg egyet."
 
-#: filedigger/restoredialog.cpp:245
+#: filedigger/restoredialog.cpp:247
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "There was a problem while getting a list of all files to restore: %1"
 msgstr "Hiba történt az összes visszaállítandó fájl listájának lekérésekor: %1"
 
-#: filedigger/restoredialog.cpp:260
+#: filedigger/restoredialog.cpp:262
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
@@ -564,7 +564,7 @@ msgstr ""
 "A célhelyen nincs elég szabad hely. Válasszon egy másik célt, vagy "
 "szabadítson fel némi helyet."
 
-#: filedigger/restoredialog.cpp:272
+#: filedigger/restoredialog.cpp:274
 #, kde-kuit-format
 msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
@@ -572,37 +572,37 @@ msgctxt ""
 msgid " - saved at %1"
 msgstr " - mentve ekkor: %1"
 
-#: filedigger/restoredialog.cpp:273
+#: filedigger/restoredialog.cpp:275
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Folder already exists, please choose a solution"
 msgstr "A mappa már létezik, válasszon egy megoldást"
 
-#: filedigger/restoredialog.cpp:279
+#: filedigger/restoredialog.cpp:281
 #, kde-kuit-format
 msgctxt "@info"
 msgid "File already exists"
 msgstr "A fájl már létezik"
 
-#: filedigger/restoredialog.cpp:292
+#: filedigger/restoredialog.cpp:294
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "The new name entered already exists, please enter a different one."
 msgstr "A megadott új név már létezik, adjon meg egy különbözőt."
 
-#: filedigger/restoredialog.cpp:362 kcm/dirselector.cpp:35
+#: filedigger/restoredialog.cpp:364 kcm/dirselector.cpp:35
 #, kde-kuit-format
 msgctxt "default folder name when creating a new folder"
 msgid "New Folder"
 msgstr "Új mappa"
 
-#: filedigger/restoredialog.cpp:367 kcm/dirselector.cpp:40
+#: filedigger/restoredialog.cpp:369 kcm/dirselector.cpp:40
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "Új mappa"
 
-#: filedigger/restoredialog.cpp:368 kcm/dirselector.cpp:41
+#: filedigger/restoredialog.cpp:370 kcm/dirselector.cpp:41
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid ""
@@ -612,12 +612,12 @@ msgstr ""
 "Új mappa létrehozása itt:\n"
 "%1"
 
-#: filedigger/restoredialog.cpp:381 kcm/dirselector.cpp:53
+#: filedigger/restoredialog.cpp:383 kcm/dirselector.cpp:53
 #, kde-format
 msgid "A folder named %1 already exists."
 msgstr "Már létezik %1 nevű mappa."
 
-#: filedigger/restoredialog.cpp:387 kcm/dirselector.cpp:59
+#: filedigger/restoredialog.cpp:389 kcm/dirselector.cpp:59
 #, kde-format
 msgid "You do not have permission to create %1."
 msgstr "Nincs jogosultsága a(z) %1 létrehozásához."

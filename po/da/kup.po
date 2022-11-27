@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-07 00:48+0000\n"
+"POT-Creation-Date: 2022-11-27 00:49+0000\n"
 "PO-Revision-Date: 2020-08-01 13:25+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -449,7 +449,7 @@ msgstr ""
 "Programmet <application>rsync</application> er påkrævet, men kan ikke findes "
 "på systemet. Er du sikker på at det er installeret?"
 
-#: filedigger/filedigger.cpp:99
+#: filedigger/filedigger.cpp:105
 #, kde-kuit-format
 msgctxt "@info messagebox, %1 is a folder path"
 msgid ""
@@ -457,13 +457,13 @@ msgid ""
 "backups really are located there."
 msgstr ""
 
-#: filedigger/filedigger.cpp:107
+#: filedigger/filedigger.cpp:113
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid "You do not have permission needed to read this backup archive."
 msgstr ""
 
-#: filedigger/filedigger.cpp:156
+#: filedigger/filedigger.cpp:162
 #, kde-format
 msgid "Select location of backup archive to open."
 msgstr ""
@@ -521,25 +521,25 @@ msgctxt "added after file name in some cases"
 msgid " (file)"
 msgstr " (fil)"
 
-#: filedigger/restoredialog.cpp:100 kcm/backupplanwidget.cpp:434
+#: filedigger/restoredialog.cpp:102 kcm/backupplanwidget.cpp:434
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder..."
 msgstr "Ny Mappe..."
 
-#: filedigger/restoredialog.cpp:126 filedigger/restoredialog.cpp:145
+#: filedigger/restoredialog.cpp:128 filedigger/restoredialog.cpp:147
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "No destination was selected, please select one."
 msgstr ""
 
-#: filedigger/restoredialog.cpp:245
+#: filedigger/restoredialog.cpp:247
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "There was a problem while getting a list of all files to restore: %1"
 msgstr "Et problem opstod ved indlæsningen af en filliste til gendannelse: %1"
 
-#: filedigger/restoredialog.cpp:260
+#: filedigger/restoredialog.cpp:262
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
@@ -547,7 +547,7 @@ msgid ""
 "different destination or free some space."
 msgstr ""
 
-#: filedigger/restoredialog.cpp:272
+#: filedigger/restoredialog.cpp:274
 #, fuzzy, kde-kuit-format
 #| msgctxt ""
 #| "added to the suggested filename when restoring, %1 is the time when "
@@ -559,37 +559,37 @@ msgctxt ""
 msgid " - saved at %1"
 msgstr " - gemt ved %1"
 
-#: filedigger/restoredialog.cpp:273
+#: filedigger/restoredialog.cpp:275
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Folder already exists, please choose a solution"
 msgstr "Mappen eksisterer allerede, vælg venligst en løsning på problemet"
 
-#: filedigger/restoredialog.cpp:279
+#: filedigger/restoredialog.cpp:281
 #, kde-kuit-format
 msgctxt "@info"
 msgid "File already exists"
 msgstr "Filen eksisterer allerede"
 
-#: filedigger/restoredialog.cpp:292
+#: filedigger/restoredialog.cpp:294
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "The new name entered already exists, please enter a different one."
 msgstr "Det indtastede navn findes allerede, indtast venligst et andet."
 
-#: filedigger/restoredialog.cpp:362 kcm/dirselector.cpp:35
+#: filedigger/restoredialog.cpp:364 kcm/dirselector.cpp:35
 #, kde-kuit-format
 msgctxt "default folder name when creating a new folder"
 msgid "New Folder"
 msgstr "Ny Mappe"
 
-#: filedigger/restoredialog.cpp:367 kcm/dirselector.cpp:40
+#: filedigger/restoredialog.cpp:369 kcm/dirselector.cpp:40
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "Ny Mappe"
 
-#: filedigger/restoredialog.cpp:368 kcm/dirselector.cpp:41
+#: filedigger/restoredialog.cpp:370 kcm/dirselector.cpp:41
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid ""
@@ -599,12 +599,12 @@ msgstr ""
 "Opret ny mappe i:\n"
 "%1"
 
-#: filedigger/restoredialog.cpp:381 kcm/dirselector.cpp:53
+#: filedigger/restoredialog.cpp:383 kcm/dirselector.cpp:53
 #, kde-format
 msgid "A folder named %1 already exists."
 msgstr "Mappen %1 eksisterer allerede."
 
-#: filedigger/restoredialog.cpp:387 kcm/dirselector.cpp:59
+#: filedigger/restoredialog.cpp:389 kcm/dirselector.cpp:59
 #, kde-format
 msgid "You do not have permission to create %1."
 msgstr "Du har ikke rettigheder til at oprette %1."
