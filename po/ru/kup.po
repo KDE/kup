@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-27 00:49+0000\n"
-"PO-Revision-Date: 2022-09-23 23:03+0300\n"
+"PO-Revision-Date: 2022-11-13 16:36+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -187,7 +187,7 @@ msgstr ""
 "лог-файле."
 
 #: daemon/bupverificationjob.cpp:67
-#, fuzzy, kde-kuit-format
+#, kde-kuit-format
 msgctxt "@info notification"
 msgid "Backup integrity test was successful. Your backups are fine."
 msgstr "Система резервного копирования успешно прошла проверку целостности."
@@ -280,11 +280,7 @@ msgid "Kup Daemon"
 msgstr "Демон Kup"
 
 #: daemon/main.cpp:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "Kup is a flexible backup solution using the backup storage system 'bup'. "
-#| "This allows it to quickly perform incremental backups, only saving the "
-#| "parts of files that has actually changed since last backup was taken."
+#, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
 "This allows it to quickly perform incremental backups, only saving the parts "
@@ -296,10 +292,9 @@ msgstr ""
 "момента прошлого резервного копирования."
 
 #: daemon/main.cpp:37 kcm/kupkcm.cpp:36
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2011-2015 Simon Persson"
+#, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
-msgstr "Copyright (C) 2011-2015 Simon Persson"
+msgstr "© Simon Persson, 2011–2020"
 
 #: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
 #: purger/main.cpp:24
@@ -399,11 +394,10 @@ msgid "Show log file"
 msgstr "Показать лог-файл"
 
 #: daemon/planexecutor.cpp:178
-#, fuzzy, kde-kuit-format
-#| msgid "Open Destination"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
-msgstr "Открыть место хранения"
+msgstr "Настроить"
 
 #: daemon/planexecutor.cpp:202
 #, kde-kuit-format
@@ -464,7 +458,7 @@ msgstr ""
 "она не установлена."
 
 #: filedigger/filedigger.cpp:105
-#, fuzzy, kde-kuit-format
+#, kde-kuit-format
 msgctxt "@info messagebox, %1 is a folder path"
 msgid ""
 "The backup archive <filename>%1</filename> could not be opened. Check if the "
@@ -496,10 +490,9 @@ msgid "Browser for bup archives."
 msgstr "Браузер bup-архивов."
 
 #: filedigger/main.cpp:28
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2015 Simon Persson"
+#, kde-format
 msgid "Copyright (C) 2013-2020 Simon Persson"
-msgstr "Copyright (C) 2013-2015 Simon Persson"
+msgstr "© Simon Persson, 2013–2020"
 
 #: filedigger/main.cpp:35 purger/main.cpp:30
 #, kde-format
@@ -568,16 +561,12 @@ msgstr ""
 "освободите больше места здесь."
 
 #: filedigger/restoredialog.cpp:274
-#, fuzzy, kde-kuit-format
-#| msgctxt ""
-#| "added to the suggested filename when restoring, %1 is the time when "
-#| "backup was taken"
-#| msgid " - saved at %1"
+#, kde-kuit-format
 msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
 "was saved"
 msgid " - saved at %1"
-msgstr "- сохранено в %1"
+msgstr " - сохранено в %1"
 
 #: filedigger/restoredialog.cpp:275
 #, kde-kuit-format
@@ -701,16 +690,14 @@ msgstr "Готово"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: filedigger/restoredialog.ui:320
-#, fuzzy, kde-format
-#| msgctxt "progress report, current operation"
-#| msgid "Restoring"
+#, kde-format
 msgctxt "Title above progress bar"
 msgid "Restoring files"
-msgstr "Восстановление"
+msgstr "Восстановление файлов"
 
 #. i18n: ectx: property (text), widget (QLabel, mErrorLabel)
 #: filedigger/restoredialog.ui:347
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label above the detailed error message"
 msgid "An error occurred while restoring:"
 msgstr "Во время восстановления произошла ошибка:"
@@ -740,7 +727,7 @@ msgstr "Закрыть"
 #, kde-format
 msgctxt "Title above progress bar"
 msgid "Checking file sizes"
-msgstr ""
+msgstr "Проверка размера файлов"
 
 #: filedigger/restorejob.cpp:83
 #, kde-kuit-format
@@ -895,16 +882,7 @@ msgid "Versioned Backup (recommended)"
 msgstr "Версионное резервное копирование (рекомендовано)"
 
 #: kcm/backupplanwidget.cpp:523
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "This type of backup is a folder which is synchronized with your selected "
-#| "source folders. Taking a backup simply means making the backup "
-#| "destination contain an exact copy of your source folders as they are now "
-#| "and nothing else. If a file has been deleted in a source folder it will "
-#| "get deleted from the backup folder.<nl/>This type of backup can protect "
-#| "you against data loss due to a broken hard drive but it does not help you "
-#| "to recover from your own mistakes."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "This type of backup is a folder which is synchronized with your selected "
@@ -977,7 +955,7 @@ msgid "External Storage"
 msgstr "Внешнее хранилище"
 
 #: kcm/backupplanwidget.cpp:600
-#, fuzzy, kde-kuit-format
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can use this option for backing up to a secondary internal harddrive, an "
@@ -988,7 +966,8 @@ msgstr ""
 "Можно использовать данную опцию для резервного копирования на второй "
 "внутренний жесткий диск, внешний привод eSATA или сетевое хранилище. "
 "Требуется, чтобы при монтировании в файловой системе им присваивался один и "
-"тот же путь. Путь определенный здесь будет проверятся на изменения."
+"тот же путь. Указанный путь не должен присутствовать в системе постоянно, "
+"его наличие будет проверяться."
 
 #: kcm/backupplanwidget.cpp:607
 #, kde-kuit-format
@@ -1056,33 +1035,24 @@ msgid "Active Usage Time"
 msgstr "Длительность работы"
 
 #: kcm/backupplanwidget.cpp:698
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only taken when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the popup menu from the backup system tray icon."
 msgstr ""
-"Резервное копирование начнется только после активации вручную. Это можно "
+"Резервная копия будет сохранена только после активации вручную. Это можно "
 "сделано в контекстном меню значка системы резервного копирования в трее."
 
 #: kcm/backupplanwidget.cpp:712
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "New backup will be triggered when backup destination becomes available "
-#| "and more than the configured interval has passed since the last backup "
-#| "was taken."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "New backup will be triggered when backup destination becomes available and "
 "more than the configured interval has passed since the last backup was saved."
 msgstr ""
 "Новое резервное копирование начнется с момента доступности места хранения, "
-"но не раньше, чем истечет заданный интервал времени с момента создания "
+"но не раньше, чем истечет заданный интервал времени с момента сохранения "
 "последней резервной копии."
 
 #: kcm/backupplanwidget.cpp:729
@@ -1110,12 +1080,7 @@ msgid "Weeks"
 msgstr "Недели"
 
 #: kcm/backupplanwidget.cpp:742
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "New backup will be triggered when backup destination becomes available "
-#| "and you have been using your computer actively for more than the "
-#| "configured time limit since the last backup was taken."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "New backup will be triggered when backup destination becomes available and "
@@ -1124,12 +1089,10 @@ msgid ""
 msgstr ""
 "Новое резервное копирование начнется с того момента, как станет доступным "
 "назначенное место хранения, при этом время работы компьютера с момента "
-"последнего резервного копирования будет превышать заданное значение."
+"сохранения последней резервной копии будет превышать заданное значение."
 
 #: kcm/backupplanwidget.cpp:763
-#, fuzzy, kde-kuit-format
-#| msgctxt "@option:check"
-#| msgid "Ask for confirmation before taking backup"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
 msgstr "Запрашивать подтверждение резервного копирования"
@@ -1495,10 +1458,9 @@ msgid "Purger for bup archives."
 msgstr "Браузер bup-архивов."
 
 #: purger/main.cpp:23
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2015 Simon Persson"
+#, kde-format
 msgid "Copyright (C) 2013-2021 Simon Persson"
-msgstr "Copyright (C) 2013-2015 Simon Persson"
+msgstr "© Simon Persson, 2013–2021"
 
 #: settings/backupplan.cpp:23
 #, kde-kuit-format
