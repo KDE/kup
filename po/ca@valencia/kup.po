@@ -31,10 +31,10 @@ msgid_plural ""
 "include in backup.<nl/><filename>%2</filename>"
 msgstr[0] ""
 "Ja no existix una carpeta d'origen. Obriu la configuració i confirmeu què "
-"incloure a la còpia de seguretat.<nl/><filename>%2</filename>"
+"incloure en la còpia de seguretat.<nl/><filename>%2</filename>"
 msgstr[1] ""
 "Ja no existixen %1 carpetes d'origen. Obriu la configuració i confirmeu què "
-"incloure a la còpia de seguretat.<nl/><filename>%2</filename>"
+"incloure en la còpia de seguretat.<nl/><filename>%2</filename>"
 
 #: daemon/bupjob.cpp:46 daemon/buprepairjob.cpp:24
 #: daemon/bupverificationjob.cpp:23
@@ -438,7 +438,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
-msgstr "Tipus no vàlid de còpia de seguretat a la configuració."
+msgstr "Tipus no vàlid de còpia de seguretat en la configuració."
 
 #: daemon/planexecutor.cpp:305
 #, kde-kuit-format
@@ -911,7 +911,7 @@ msgstr ""
 "senzillament vol dir fer que la destinació de la còpia de seguretat continga "
 "una còpia exacta de les vostres carpetes d'origen tal com estan ara i res "
 "més. Si s'ha suprimit un fitxer en una carpeta d'origen, se suprimirà de la "
-"carpeta a la còpia de seguretat.<nl/>Este tipus de còpia de seguretat "
+"carpeta en la còpia de seguretat.<nl/>Este tipus de còpia de seguretat "
 "protegix contra la pèrdua de dades a causa d'un disc dur trencat, però no "
 "ajudarà a recuperar-se dels vostres propis errors."
 
@@ -953,7 +953,7 @@ msgstr "Orígens"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select which folders to include in backup"
-msgstr "Seleccioneu quines carpetes incloure a la còpia de seguretat"
+msgstr "Seleccioneu quines carpetes incloure en la còpia de seguretat"
 
 #: kcm/backupplanwidget.cpp:593
 #, kde-kuit-format
@@ -1322,14 +1322,14 @@ msgid ""
 "<filename>%1</filename><nl/>will be included in the backup, except for "
 "unchecked subfolders"
 msgstr ""
-"<filename>%1</filename><nl/> serà inclosa a la còpia de seguretat, excepte "
+"<filename>%1</filename><nl/> serà inclosa en la còpia de seguretat, excepte "
 "les subcarpetes sense marcar"
 
 #: kcm/folderselectionmodel.cpp:94
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid "<filename>%1</filename><nl/>will be included in the backup"
-msgstr "<filename>%1</filename><nl/> serà inclosa a la còpia de seguretat"
+msgstr "<filename>%1</filename><nl/> serà inclosa en la còpia de seguretat"
 
 #: kcm/folderselectionmodel.cpp:98
 #, kde-kuit-format
@@ -1338,8 +1338,8 @@ msgid ""
 "<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
 "the backup but contains folders that will"
 msgstr ""
-"<filename>%1</filename><nl/> <emphasis>no</emphasis> serà inclosa a la còpia "
-"de seguretat, però conté carpetes que sí"
+"<filename>%1</filename><nl/> <emphasis>no</emphasis> serà inclosa en la "
+"còpia de seguretat, però conté carpetes que sí"
 
 #: kcm/folderselectionmodel.cpp:102
 #, kde-kuit-format
@@ -1348,8 +1348,8 @@ msgid ""
 "<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
 "the backup"
 msgstr ""
-"<filename>%1</filename><nl/> <emphasis>no</emphasis> serà inclosa a la còpia "
-"de seguretat"
+"<filename>%1</filename><nl/> <emphasis>no</emphasis> serà inclosa en la "
+"còpia de seguretat"
 
 #: kcm/kupkcm.cpp:33
 #, kde-format
