@@ -49,6 +49,7 @@ add_subdirectory(purger)
 
 ecm_qt_install_logging_categories(EXPORT kup DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}")
 plasma_install_package(plasmoid org.kde.kupapplet)
+ki18n_install(po)
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/org.kde.kup.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
