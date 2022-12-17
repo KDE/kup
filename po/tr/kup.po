@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-27 00:49+0000\n"
-"PO-Revision-Date: 2022-06-16 11:11+0300\n"
+"PO-Revision-Date: 2022-12-16 21:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -1365,13 +1365,13 @@ msgstr "Yeni Tasarı Ekle"
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
-msgstr "Yedeklemeler Etkin"
+msgstr "Yedek alımını etkinleştir"
 
 #: kcm/kupkcm.cpp:249
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
-msgstr "Var olan yedeklerden aç ve geri yükle"
+msgstr "Var Olan Yedeği Aç ve Geri Yükle"
 
 #: kcm/planstatuswidget.cpp:32
 #, kde-kuit-format
