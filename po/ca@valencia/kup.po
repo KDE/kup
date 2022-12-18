@@ -431,8 +431,7 @@ msgstr "Problema"
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
-msgstr ""
-"No teniu permís d'escriptura en la destinació de la còpia de seguretat."
+msgstr "No teniu permís d'escriptura a la destinació de la còpia de seguretat."
 
 #: daemon/planexecutor.cpp:260
 #, kde-kuit-format
