@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-27 00:49+0000\n"
-"PO-Revision-Date: 2022-10-10 04:26+0200\n"
+"PO-Revision-Date: 2022-12-28 06:02+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -53,6 +53,7 @@ msgctxt "@info notification"
 msgid ""
 "Backup destination could not be initialised. See log file for more details."
 msgstr ""
+"მარქაფის სამიზნის ინიციალიზაციის შეცდომა. მეტი დეტალებისთვის იხილეთ ჟურნალი."
 
 #: daemon/bupjob.cpp:94
 #, kde-format
@@ -84,7 +85,7 @@ msgstr "შემოწმება, რა არის დასაკოპ�
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
-msgstr ""
+msgstr "ფაილის ანალიზის შეცდომა. მეტი დეტალებისთვის იხილეთ ჟურნალი."
 
 #: daemon/bupjob.cpp:176 daemon/bupjob.cpp:288 daemon/rsyncjob.cpp:167
 #, kde-format
@@ -95,7 +96,7 @@ msgstr "მარქაფის შენახვა"
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
-msgstr ""
+msgstr "მარქაფის ფაილის შენახვის შეცდომა. მეტი დეტალებისთვის იხილეთ ჟურნალი."
 
 #: daemon/bupjob.cpp:212
 #, kde-format
@@ -109,6 +110,8 @@ msgid ""
 "Failed to generate recovery info for the backup. See log file for more "
 "details."
 msgstr ""
+"მარქაფისთვის აღდგენის ინფორმაციის გენერაციის შეცდომა. მეტი დეტალებისთვის "
+"იხილეთ ჟურნალი."
 
 #: daemon/bupjob.cpp:289 daemon/rsyncjob.cpp:168
 #, kde-format
@@ -129,6 +132,7 @@ msgstr ""
 msgctxt "@info notification"
 msgid "Success! Backup repair worked. See log file for more details."
 msgstr ""
+"წარმატება! მარქაფის აღდგენა მუშაობს! მეტი დეტალებისთვის იხილეთ ჟურნალი."
 
 #: daemon/buprepairjob.cpp:71
 #, kde-kuit-format
@@ -384,7 +388,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
-msgstr ""
+msgstr "კონფიგურაციაში მარქაფის ტიპი არასწორია."
 
 #: daemon/planexecutor.cpp:305
 #, kde-kuit-format
@@ -428,7 +432,7 @@ msgstr ""
 #: filedigger/filedigger.cpp:162
 #, kde-format
 msgid "Select location of backup archive to open."
-msgstr ""
+msgstr "აირჩიეთ მარქაფის არქივების მდებარეობა."
 
 #: filedigger/main.cpp:26
 #, kde-kuit-format
@@ -439,7 +443,7 @@ msgstr "ფაილმძებნი"
 #: filedigger/main.cpp:27
 #, kde-format
 msgid "Browser for bup archives."
-msgstr ""
+msgstr "Bup არქივების მოძებნა."
 
 #: filedigger/main.cpp:28
 #, kde-format
@@ -449,12 +453,12 @@ msgstr "Copyright (C) 2013-2020 Simon Persson"
 #: filedigger/main.cpp:35 purger/main.cpp:30
 #, kde-format
 msgid "Name of the branch to be opened."
-msgstr ""
+msgstr "გასახსნელი ბრენჩის სახელი."
 
 #: filedigger/main.cpp:37 purger/main.cpp:32
 #, kde-format
 msgid "Path to the bup repository to be opened."
-msgstr ""
+msgstr "გასახსნელი bup რეპოზიტორიის ბილიკი."
 
 #: filedigger/mergedvfs.cpp:96
 #, kde-kuit-format
@@ -492,7 +496,7 @@ msgstr "ახალი საქაღალდე..."
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "No destination was selected, please select one."
-msgstr ""
+msgstr "სამიზნე არჩეული არაა. გთხოვთ, აირჩიოთ."
 
 #: filedigger/restoredialog.cpp:247
 #, kde-kuit-format
@@ -520,7 +524,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Folder already exists, please choose a solution"
-msgstr ""
+msgstr "საქაღალდე უკვე არსებობს. აირჩიეთ გამოსავალი"
 
 #: filedigger/restoredialog.cpp:281
 #, kde-kuit-format
@@ -564,7 +568,7 @@ msgstr "საქაღალდე სახელით %1 უკვე არ
 #: filedigger/restoredialog.cpp:389 kcm/dirselector.cpp:59
 #, kde-format
 msgid "You do not have permission to create %1."
-msgstr ""
+msgstr "%1-ის შექმნის წვდომა არ გაგაჩნიათ."
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, RestoreDialog)
 #: filedigger/restoredialog.ui:14
@@ -800,7 +804,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Versioned Backup (recommended)"
-msgstr ""
+msgstr "ვერსიების მქონე მარქაფი (რეკომენდებულია)"
 
 #: kcm/backupplanwidget.cpp:523
 #, kde-kuit-format
@@ -839,7 +843,7 @@ msgstr "მარქაფის ტიპი"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select what type of backup you want"
-msgstr ""
+msgstr "არჩიეთ სასურველი მარქაფის ტიპი"
 
 #: kcm/backupplanwidget.cpp:578
 #, kde-kuit-format
@@ -851,7 +855,7 @@ msgstr "წყაროები"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select which folders to include in backup"
-msgstr ""
+msgstr "მარქაფში ჩასასმელი საქაღალდეები"
 
 #: kcm/backupplanwidget.cpp:593
 #, kde-kuit-format
@@ -1002,13 +1006,13 @@ msgstr "განრიგი"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Specify the backup schedule"
-msgstr ""
+msgstr "მარქაფის გეგმა"
 
 #: kcm/backupplanwidget.cpp:797
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
-msgstr ""
+msgstr "წყაროს არჩევანში დამალული საქაღალდეების ჩვენება"
 
 #: kcm/backupplanwidget.cpp:802
 #, kde-kuit-format
@@ -1033,7 +1037,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Generate recovery information"
-msgstr ""
+msgstr "აღდგენის ინფორმაციის გენერაცია"
 
 #: kcm/backupplanwidget.cpp:831
 #, kde-kuit-format
@@ -1047,7 +1051,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Verify integrity of backups"
-msgstr ""
+msgstr "მარქაფების მთლიანობის შემოწმება"
 
 #: kcm/backupplanwidget.cpp:851
 #, kde-kuit-format
@@ -1064,6 +1068,7 @@ msgstr ""
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr ""
+"შაბლონებზე დაფუძნებული სახელების მქონე ფაილებისა და საქაღალდეების გამორიცხვა"
 
 #: kcm/backupplanwidget.cpp:885
 #, kde-kuit-format
