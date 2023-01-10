@@ -19,7 +19,7 @@ kbuttongroup.cpp
 ../settings/kuputils.cpp
 )
 
-add_library(kcm_kup MODULE ${kcm_kup_SRCS})
+kcoreaddons_add_plugin(kcm_kup SOURCES ${kcm_kup_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings_qwidgets")
 
 #this is a library so it needs to enforce it's translation domain, not use the application's domain.
 add_definitions(-DTRANSLATION_DOMAIN="kup")
@@ -36,9 +36,3 @@ KF5::Solid
 KF5::I18n
 KF5::WidgetsAddons
 )
-
-########### install files ###############
-
-install(TARGETS kcm_kup DESTINATION ${KDE_INSTALL_PLUGINDIR})
-install(FILES kcm_kup.desktop DESTINATION ${KDE_INSTALL_KSERVICESDIR})
-

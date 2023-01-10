@@ -25,7 +25,7 @@
 #include <KPluginFactory>
 #include <KProcess>
 
-K_PLUGIN_FACTORY(KupKcmFactory, registerPlugin<KupKcm>();)
+K_PLUGIN_CLASS_WITH_JSON(KupKcm, "kcm_kup.json")
 
 KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
     : KCModule(pParent, pArgs), mSourcePageToShow(0)
