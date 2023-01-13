@@ -3,11 +3,25 @@
         "Authors": [
             {
                 "Email": "simon.persson@mykolab.com",
-                "Name": "Simon Persson"
+                "Name": "Simon Persson",
+                "Name[bg]": "Simon Persson",
+                "Name[ca@valencia]": "Simon Persson",
+                "Name[ca]": "Simon Persson",
+                "Name[nl]": "Simon Persson",
+                "Name[tr]": "Simon Persson",
+                "Name[uk]": "Simon Persson",
+                "Name[x-test]": "xxSimon Perssonxx"
             }
         ],
         "Category": "",
         "Description": "Status of backup plans",
+        "Description[bg]": "Състояние на плановете за архивиране",
+        "Description[ca@valencia]": "Estat dels plans de còpia de seguretat",
+        "Description[ca]": "Estat dels plans de còpia de seguretat",
+        "Description[nl]": "Status van back-up-plannen",
+        "Description[tr]": "Yedekleme tasarılarının durumu",
+        "Description[uk]": "Стан планів резервного копіювання",
+        "Description[x-test]": "xxStatus of backup plansxx",
         "EnabledByDefault": true,
         "Icon": "kup",
         "Id": "backups",

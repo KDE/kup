@@ -1,6 +1,13 @@
 {
     "KPlugin": {
         "Description": "Configure backup plans",
+        "Description[bg]": "Настройване на плановете за архивиране",
+        "Description[ca@valencia]": "Configura els plans de còpia de seguretat",
+        "Description[ca]": "Configura els plans de còpia de seguretat",
+        "Description[nl]": "Back-up-plannen configureren",
+        "Description[tr]": "Yedekleme tasarılarını yapılandır",
+        "Description[uk]": "Налаштовування планів резервного копіювання",
+        "Description[x-test]": "xxConfigure backup plansxx",
         "Icon": "kup",
         "Name": "Backups",
         "Name[ar]": "النسخ الاحتياطية",

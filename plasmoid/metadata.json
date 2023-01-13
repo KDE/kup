@@ -3,11 +3,25 @@
         "Authors": [
             {
                 "Email": "simon.persson@mykolab.com",
-                "Name": "Simon Persson"
+                "Name": "Simon Persson",
+                "Name[bg]": "Simon Persson",
+                "Name[ca@valencia]": "Simon Persson",
+                "Name[ca]": "Simon Persson",
+                "Name[nl]": "Simon Persson",
+                "Name[tr]": "Simon Persson",
+                "Name[uk]": "Simon Persson",
+                "Name[x-test]": "xxSimon Perssonxx"
             }
         ],
         "Category": "System Information",
         "Description": "Displays status of backup plans",
+        "Description[bg]": "Показва състоянието на плановете за архивиране",
+        "Description[ca@valencia]": "Mostra l'estat dels plans de còpia de seguretat",
+        "Description[ca]": "Mostra l'estat dels plans de còpia de seguretat",
+        "Description[nl]": "Status van back-up-plannen tonen",
+        "Description[tr]": "Yedekleme tasarılarının durumunu görüntüler",
+        "Description[uk]": "Показує стан планів резервного копіювання",
+        "Description[x-test]": "xxDisplays status of backup plansxx",
         "EnabledByDefault": true,
         "Icon": "kup",
         "Id": "org.kde.kupapplet",
