@@ -4,6 +4,7 @@
             {
                 "Email": "simon.persson@mykolab.com",
                 "Name": "Simon Persson",
+                "Name[ar]": "سيمون بيرسون",
                 "Name[bg]": "Simon Persson",
                 "Name[ca@valencia]": "Simon Persson",
                 "Name[ca]": "Simon Persson",
@@ -17,6 +18,7 @@
         ],
         "Category": "System Information",
         "Description": "Displays status of backup plans",
+        "Description[ar]": "يعرض حالة خُطَّط النسخ الاحتياطي",
         "Description[bg]": "Показва състоянието на плановете за архивиране",
         "Description[ca@valencia]": "Mostra l'estat dels plans de còpia de seguretat",
         "Description[ca]": "Mostra l'estat dels plans de còpia de seguretat",

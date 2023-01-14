@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Configure backup plans",
+        "Description[ar]": "اضبط خُطَّط النسخ الاحتياطي",
         "Description[bg]": "Настройване на плановете за архивиране",
         "Description[ca@valencia]": "Configura els plans de còpia de seguretat",
         "Description[ca]": "Configura els plans de còpia de seguretat",
