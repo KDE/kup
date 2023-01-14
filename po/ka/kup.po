@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-27 00:49+0000\n"
-"PO-Revision-Date: 2022-12-28 06:02+0100\n"
+"PO-Revision-Date: 2023-01-13 06:56+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1274,16 +1274,18 @@ msgid ""
 "No bup repository found.\n"
 "%1"
 msgstr ""
+"Bup-ის რეპოზიტორია ვერ ვიპოვე.\n"
+"%1"
 
 #: plasmoid/contents/ui/FullRepresentation.qml:109
 #, kde-format
 msgid "Save new backup"
-msgstr ""
+msgstr "ახალი მარქაფის შენახვა"
 
 #: plasmoid/contents/ui/FullRepresentation.qml:115
 #, kde-format
 msgid "Prune old backups"
-msgstr ""
+msgstr "ძველი მარქაფების შეკვეცა"
 
 #: plasmoid/contents/ui/FullRepresentation.qml:120
 #, kde-format
@@ -1303,23 +1305,23 @@ msgstr "&Kup-ის ჩვენება..."
 #: plasmoid/contents/ui/Main.qml:71
 #, kde-format
 msgid "&Reload backup plans"
-msgstr ""
+msgstr "&მარქაფის გეგმების გადატვირთვა"
 
 #: purger/main.cpp:21
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
-msgstr ""
+msgstr "შემკვეცი"
 
 #: purger/main.cpp:22
 #, kde-format
 msgid "Purger for bup archives."
-msgstr ""
+msgstr "Bup-ის არქივებმკვეცი."
 
 #: purger/main.cpp:23
 #, kde-format
 msgid "Copyright (C) 2013-2021 Simon Persson"
-msgstr ""
+msgstr "(C) 2013-2021 საიმონ პერსონი, ყველა უფლება დაცულია"
 
 #: settings/backupplan.cpp:23
 #, kde-kuit-format
