@@ -11,6 +11,7 @@
                 "Name[ka]": "Simon Persson",
                 "Name[nl]": "Simon Persson",
                 "Name[pt]": "Simon Persson",
+                "Name[sl]": "Simon Persson",
                 "Name[tr]": "Simon Persson",
                 "Name[uk]": "Simon Persson",
                 "Name[x-test]": "xxSimon Perssonxx"
@@ -25,6 +26,7 @@
         "Description[ka]": "მარქაფის გეგმების სტატუსი",
         "Description[nl]": "Status van back-up-plannen",
         "Description[pt]": "Estado dos planos de cópias de segurança",
+        "Description[sl]": "Stanje plana izdelav varnostnih kopij",
         "Description[tr]": "Yedekleme tasarılarının durumu",
         "Description[uk]": "Стан планів резервного копіювання",
         "Description[x-test]": "xxStatus of backup plansxx",
