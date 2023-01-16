@@ -7,6 +7,7 @@
 # Simon Persson <simon.persson@mykolab.com>, 2014,2018.
 # Tichy <eristico@cryptolab.net>, 2018-2019.
 # Vincenzo Reale <smart2128vr@gmail.com>, 2020, 2021.
+# Paolo Zamponi <zapaolo@email.it>, 2022.
 #
 # Translators:
 msgid ""
@@ -14,15 +15,15 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-27 00:49+0000\n"
-"PO-Revision-Date: 2021-03-17 08:26+0100\n"
-"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"PO-Revision-Date: 2022-12-29 09:00+0100\n"
+"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -1256,8 +1257,8 @@ msgctxt "@label Only shown if no drives are detected"
 msgid ""
 "Plug in the external storage you wish to use, then select it in this list."
 msgstr ""
-"Collega la periferica esterna che vuoi utilizzare , poi selezionala in "
-"questo elenco."
+"Collega la periferica esterna che vuoi utilizzare, poi selezionala in questo "
+"elenco."
 
 #: kcm/driveselectiondelegate.cpp:57
 #, kde-kuit-format
