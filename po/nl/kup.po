@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-27 00:49+0000\n"
-"PO-Revision-Date: 2023-01-15 15:17+0100\n"
+"PO-Revision-Date: 2023-01-19 12:42+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -712,7 +712,7 @@ msgstr "Er is een fout opgetreden tijdens het herstellen van:"
 #, kde-format
 msgctxt "@label"
 msgid "Restoration completed successfully!"
-msgstr "Herstel afgerond!"
+msgstr "Herstel volledig afgerond!"
 
 #. i18n: ectx: property (text), widget (QPushButton, mOpenDestinationButton)
 #: filedigger/restoredialog.ui:419
