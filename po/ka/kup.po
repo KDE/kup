@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-27 00:49+0000\n"
-"PO-Revision-Date: 2023-01-13 06:56+0100\n"
+"PO-Revision-Date: 2023-01-24 07:10+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -308,7 +308,7 @@ msgstr "მარქაფების დაზიანებების ჩ�
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Do you want to save a first backup now?"
-msgstr ""
+msgstr "გნებავთ პირველი მარქაფი ახლა შეინახოთ?"
 
 #: daemon/planexecutor.cpp:99
 #, kde-kuit-format
@@ -317,6 +317,8 @@ msgid ""
 "It has been %1 since last backup was saved.\n"
 "Save a new backup now?"
 msgstr ""
+"პირველი მარქაფის შენახვიდან %1 გავიდა.\n"
+"გნებავთ ახალი მარქაფის შენახვა?"
 
 #: daemon/planexecutor.cpp:113
 #, kde-kuit-format
@@ -382,7 +384,7 @@ msgstr "პრობლემა"
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
-msgstr ""
+msgstr "მარქაფის სამიზნეზე ჩაწერის წვდომა არ გაგაჩნიათ."
 
 #: daemon/planexecutor.cpp:260
 #, kde-kuit-format
@@ -1203,12 +1205,12 @@ msgstr ""
 #: kcm/kupkcm.cpp:33
 #, kde-format
 msgid "Kup Configuration Module"
-msgstr ""
+msgstr "Kup-ის მორგების მოდული"
 
 #: kcm/kupkcm.cpp:35
 #, kde-format
 msgid "Configuration of backup plans for the Kup backup system"
-msgstr ""
+msgstr "მარქაფის გეგმების მორგება მარქაფის სისტემისთვის Kup"
 
 #: kcm/kupkcm.cpp:69
 #, kde-format
@@ -1247,7 +1249,7 @@ msgstr "მარქაფები ჩაირთო"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
-msgstr ""
+msgstr "გახსნა და არსებული მარქაფებიდან აღდგენა"
 
 #: kcm/planstatuswidget.cpp:32
 #, kde-kuit-format
