@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-27 00:49+0000\n"
-"PO-Revision-Date: 2023-01-24 07:10+0100\n"
+"PO-Revision-Date: 2023-02-15 05:48+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -28,7 +28,11 @@ msgid_plural ""
 "%1 source folders no longer exist. Please open settings and confirm what to "
 "include in backup.<nl/><filename>%2</filename>"
 msgstr[0] ""
+"1 წყაროს საქაღალდე აღარ არსებობს. გახსენით პარამეტრების ფანჯარა და ზუსტად "
+"მიუთითეთ, რისი მარქაფი გნებავთ. <nl/><filename>%2</filename>"
 msgstr[1] ""
+"%1 წყაროს საქაღალდე აღარ არსებობს. გახსენით პარამეტრების ფანჯარა და ზუსტად "
+"მიუთითეთ, რისი მარქაფი გნებავთ. <nl/><filename>%2</filename>"
 
 #: daemon/bupjob.cpp:46 daemon/buprepairjob.cpp:24
 #: daemon/bupverificationjob.cpp:23
@@ -38,6 +42,8 @@ msgid ""
 "The <application>bup</application> program is needed but could not be found, "
 "maybe it is not installed?"
 msgstr ""
+"პროგრამა <application>bup</application> აუცილებელია, მაგრამ ვერ ვიპოვე. "
+"დაყენებული გაქვთ?"
 
 #: daemon/bupjob.cpp:52 daemon/buprepairjob.cpp:30
 #, kde-kuit-format
@@ -46,6 +52,8 @@ msgid ""
 "The <application>par2</application> program is needed but could not be "
 "found, maybe it is not installed?"
 msgstr ""
+"პროგრამა <application>par2</application> აუცილებელია, მაგრამ ვერ ვიპოვე. "
+"დაყენებული გაქვთ?"
 
 #: daemon/bupjob.cpp:71
 #, kde-kuit-format
@@ -67,6 +75,9 @@ msgid ""
 "Failed backup integrity check. Your backups could be corrupted! See log file "
 "for more details. Do you want to try repairing the backup files?"
 msgstr ""
+"მარქაფის მთლიანობის გადამოწმების შეცდომა. შეიძლება, თქვენი მარქაფები "
+"დაზიანებულია! მეტი დეტალებისთვის იხილეთ ჟურნალის ფაილი. გნებავთ, მარქაფის "
+"ფაილების შეკეთება ვცადო?"
 
 #: daemon/bupjob.cpp:113
 #, kde-kuit-format
@@ -75,6 +86,8 @@ msgid ""
 "Failed backup integrity check. Your backups could be corrupted! See log file "
 "for more details."
 msgstr ""
+"მარქაფის მთლიანობის გადამოწმების შეცდომა. შეიძლება, თქვენი მარქაფები "
+"დაზიანებულია! მეტი დეტალებისთვის იხილეთ ჟურნალის ფაილი."
 
 #: daemon/bupjob.cpp:144 daemon/rsyncjob.cpp:51
 #, kde-format
@@ -126,6 +139,8 @@ msgid ""
 "Backup repair failed. Your backups could be corrupted! See log file for more "
 "details."
 msgstr ""
+"მარქაფის შეკეთების შეცდომა. შეიძლება, თქვენ მარქაფები დაზიანებულია! მეტი "
+"დეტალებისთვის იხილეთ ჟურნალის ფაილი."
 
 #: daemon/buprepairjob.cpp:67
 #, kde-kuit-format
@@ -141,6 +156,8 @@ msgid ""
 "Backup repair was not necessary. Your backups are not corrupted. See log "
 "file for more details."
 msgstr ""
+"მარქაფის შეკეთება საჭირო არ იყო. თქვენი მარქაფები დაზიანებული არაა. მეტი "
+"დეტალებისთვის იხილეთ ჟურნალის ფაილი."
 
 #: daemon/buprepairjob.cpp:76
 #, kde-kuit-format
@@ -149,6 +166,8 @@ msgid ""
 "Backup repair failed. Your backups could still be corrupted! See log file "
 "for more details."
 msgstr ""
+"მარქაფების შეკეთების შეცდომა. თქვენი მარქაფები შეიძლება ჯერ კიდევ "
+"შესაკეთებელია! მეტი დეტალებისთვის იხილეთ ჟურნალის ფაილი."
 
 #: daemon/bupverificationjob.cpp:61 daemon/bupverificationjob.cpp:78
 #, kde-kuit-format
@@ -157,12 +176,16 @@ msgid ""
 "Failed backup integrity check. Your backups are corrupted! See log file for "
 "more details."
 msgstr ""
+"მარქაფის მთლიანობის შემოწმების შეცდომა. თქვენი მარქაფები დაზიანებულია? მეტი "
+"დეტალებისთვის იხილეთ ჟურნალის ფაილი."
 
 #: daemon/bupverificationjob.cpp:67
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Backup integrity test was successful. Your backups are fine."
 msgstr ""
+"მარქაფის შემოწმების ტესტი წარმატებულად დასრულდა. თქვენი მარქაფები ხუთიანზე "
+"მუშაობს."
 
 #: daemon/bupverificationjob.cpp:74
 #, kde-kuit-format
@@ -171,6 +194,9 @@ msgid ""
 "Failed backup integrity check. Your backups are corrupted! See log file for "
 "more details. Do you want to try repairing the backup files?"
 msgstr ""
+"მარქაფების მთლიანობის ტესტის შეცდომა. თქვენი მარქაფები დაზიანებულია! მეტი "
+"დეტალებისთვის იხილეთ ჟურნალის ფაილი. გნებავთ, ვცადო მარქაფის ფაილების "
+"შეკეთება?"
 
 #: daemon/kupdaemon.cpp:155
 #, kde-format
@@ -240,6 +266,8 @@ msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell5 kup</command>"
 msgstr ""
+"Kup ჩართული არაა. მისი ჩართვა სისტემური პარამეტრების მოდულიდან შეგიძლიათ. ეს "
+"ბრძანებით <command>kcmshell5 kup</command> ხდება"
 
 #: daemon/main.cpp:33
 #, kde-kuit-format
@@ -327,6 +355,8 @@ msgid ""
 "You have been active for %1 since last backup was saved.\n"
 "Save a new backup now?"
 msgstr ""
+"ბოლო მარქაფის შენახვის შემდეგ %1-სთვის აქტიური იყავით.\n"
+"გნებავთ ახალი მარქაფის შექმნა?"
 
 #: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:174
 #: daemon/planexecutor.cpp:312
@@ -416,6 +446,8 @@ msgid ""
 "The <application>rsync</application> program is needed but could not be "
 "found, maybe it is not installed?"
 msgstr ""
+"პროგრამა <application>rsync</application> აუცილებელია, მაგრამ ვერ ვიპოვე. "
+"დაყენებული გაქვთ?"
 
 #: filedigger/filedigger.cpp:105
 #, kde-kuit-format
@@ -424,12 +456,14 @@ msgid ""
 "The backup archive <filename>%1</filename> could not be opened. Check if the "
 "backups really are located there."
 msgstr ""
+"მარქაფის ფაილის <filename>%1</filename> გახსნა შეუძლებელია. გადაამოწმეთ, "
+"მარქაფები აქ არსებობს, თუ არა."
 
 #: filedigger/filedigger.cpp:113
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid "You do not have permission needed to read this backup archive."
-msgstr ""
+msgstr "მარქაფის არქივის წასაკითხად წვდომები არ გაგაჩნიათ."
 
 #: filedigger/filedigger.cpp:162
 #, kde-format
@@ -469,6 +503,8 @@ msgid ""
 "Could not read this backup archive. Perhaps some files have become "
 "corrupted. Do you want to run an integrity check to test this?"
 msgstr ""
+"მარქაფის არქივის წაკითხვის შეცდომა. ზოგიერთი ფაილი დაზიანებულია. გნებავთ "
+"მათი სიმთელის შემოწმება?"
 
 #: filedigger/mergedvfs.cpp:144
 #, kde-kuit-format
@@ -504,7 +540,7 @@ msgstr "სამიზნე არჩეული არაა. გთხო�
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "There was a problem while getting a list of all files to restore: %1"
-msgstr ""
+msgstr "პრობლემა აღსადგენად ფაილების სიის მიღებისას: %1"
 
 #: filedigger/restoredialog.cpp:262
 #, kde-kuit-format
@@ -512,7 +548,7 @@ msgctxt "@info message bar appearing on top"
 msgid ""
 "The destination does not have enough space available. Please choose a "
 "different destination or free some space."
-msgstr ""
+msgstr "სამიზნე წერტილზე არსებული ადგილი საკმარისი არაა. აირჩიეთ სხვა ადგილი."
 
 #: filedigger/restoredialog.cpp:274
 #, kde-kuit-format
@@ -520,7 +556,7 @@ msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
 "was saved"
 msgid " - saved at %1"
-msgstr ""
+msgstr " - შენახულია %1"
 
 #: filedigger/restoredialog.cpp:275
 #, kde-kuit-format
@@ -538,7 +574,7 @@ msgstr "ფაილი უკვე არსებობს"
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "The new name entered already exists, please enter a different one."
-msgstr ""
+msgstr "შეყვანილი ახალი სახელი უკვე არსებობს. სხვა შეიყვანეთ."
 
 #: filedigger/restoredialog.cpp:364 kcm/dirselector.cpp:35
 #, kde-kuit-format
@@ -628,7 +664,7 @@ msgctxt "@info Question to user, in dialog"
 msgid ""
 "The following files would be overwritten, please confirm that you wish to "
 "continue."
-msgstr ""
+msgstr "მოსალოდნელია შემდეგი ფაილების თავზე გადაწერა. გთხოვთ, დაადასტუროთ."
 
 #. i18n: ectx: property (text), widget (QPushButton, mOverwriteBackButton)
 #: filedigger/restoredialog.ui:272
@@ -801,6 +837,8 @@ msgid ""
 "Versioned Backup (not available because <application>bup</application> is "
 "not installed)"
 msgstr ""
+"ვერსირებული მარქაფი (ხელმიუწვდომელია, რადგან <application>bup</application> "
+"დაყენებული არაა)"
 
 #: kcm/backupplanwidget.cpp:518
 #, kde-kuit-format
@@ -828,6 +866,8 @@ msgid ""
 "Synchronized Backup (not available because <application>rsync</application> "
 "is not installed)"
 msgstr ""
+"სინქრონიზებული მარქაფი (ხელმიუწვდომელია, რადგან <application>rsync</"
+"application> დაყენებული არაა)"
 
 #: kcm/backupplanwidget.cpp:541
 #, kde-kuit-format
@@ -899,7 +939,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "The specified folder will be created if it does not exist."
-msgstr ""
+msgstr "მითითებული საქაღალდე შეიქმნება, თუ ის არ არსებობს."
 
 #: kcm/backupplanwidget.cpp:638
 #, kde-kuit-format
@@ -996,7 +1036,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
-msgstr ""
+msgstr "დადასტურების მოთოვნა მარქაფის შენახვამდე"
 
 #: kcm/backupplanwidget.cpp:782
 #, kde-kuit-format
@@ -1048,6 +1088,8 @@ msgid ""
 "Generate recovery information (not available because <application>par2</"
 "application> is not installed)"
 msgstr ""
+"აღდგენის ინფორმაციის შექმნა (ხელმიუწვდომელია, რადგან <application>par2</"
+"application> დაყენებული არაა)"
 
 #: kcm/backupplanwidget.cpp:847
 #, kde-kuit-format
@@ -1102,7 +1144,7 @@ msgstr "დამატებითი"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
-msgstr ""
+msgstr "დამატებითი პარამეტრები განვითარებული მომხმარებლებისთვის"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format
@@ -1110,12 +1152,14 @@ msgctxt "@label Only shown if no drives are detected"
 msgid ""
 "Plug in the external storage you wish to use, then select it in this list."
 msgstr ""
+"შეაერთეთ გარე საცავი, რომელიც გნებავთ, გამოიყენოთ და შემდეგ ის სიიდან "
+"აირჩიეთ."
 
 #: kcm/driveselectiondelegate.cpp:57
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
-msgstr ""
+msgstr " (გათიშული)"
 
 #: kcm/driveselectiondelegate.cpp:61
 #, kde-kuit-format
@@ -1130,7 +1174,7 @@ msgctxt ""
 "device. %1 is partition number, %2 is device description, %3 is either empty "
 "or the \" (disconnected)\" text"
 msgid "Partition %1 on %2%3"
-msgstr ""
+msgstr "დანაყოფი %1-ი %2%3-ზე"
 
 #: kcm/driveselectiondelegate.cpp:79
 #, kde-kuit-format
@@ -1138,7 +1182,7 @@ msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
 "is device description, %2 is either empty or the \" (disconnected)\" text"
 msgid "%1%2"
-msgstr ""
+msgstr "%1%2"
 
 #: kcm/driveselectiondelegate.cpp:83
 #, kde-kuit-format
@@ -1146,13 +1190,13 @@ msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
 "either empty or the \" (disconnected)\" text"
 msgid "%1 on %2%3"
-msgstr ""
+msgstr "%1-ი %2%3-ზე"
 
 #: kcm/driveselectiondelegate.cpp:90
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
-msgstr ""
+msgstr "%1: %2 სრული მოცულობა"
 
 #: kcm/driveselectiondelegate.cpp:137
 #, kde-kuit-format
@@ -1179,12 +1223,14 @@ msgid ""
 "<filename>%1</filename><nl/>will be included in the backup, except for "
 "unchecked subfolders"
 msgstr ""
+"<filename>%1</filename><nl/> ჩასმული იქნება მარქაფში, გამორთული "
+"ქვესაქაღალდეების გარდა"
 
 #: kcm/folderselectionmodel.cpp:94
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid "<filename>%1</filename><nl/>will be included in the backup"
-msgstr ""
+msgstr "<filename>%1</filename><nl/> ჩასმული იქნება მარქაფში"
 
 #: kcm/folderselectionmodel.cpp:98
 #, kde-kuit-format
@@ -1193,6 +1239,8 @@ msgid ""
 "<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
 "the backup but contains folders that will"
 msgstr ""
+"<filename>%1</filename><nl/> არ <emphasis>იქნება</emphasis> ჩასმული "
+"მარქაფში, მაგრამ შეიცავს საქაღალდეებს, რომლებიც იქნება"
 
 #: kcm/folderselectionmodel.cpp:102
 #, kde-kuit-format
@@ -1201,6 +1249,7 @@ msgid ""
 "<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
 "the backup"
 msgstr ""
+"<filename>%1</filename><nl/> არ <emphasis>იქნება</emphasis> ჩასმული მარქაფში"
 
 #: kcm/kupkcm.cpp:33
 #, kde-format
