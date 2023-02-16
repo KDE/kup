@@ -82,6 +82,7 @@
     <p xml:lang="hu">A Kup segít a személyes fájljai biztonsági mentéseinek naprakészen tartásában. A következőket tudja:</p>
     <p xml:lang="id">Kup bisa membantu kamu mengingatkan agar pencadangan tetap terbarukan pada file-file personalmu. Ini menyediakan:</p>
     <p xml:lang="it">Kup può aiutarti a ricordare di mantenere aggiornate le copie di sicurezza dei tuoi file personali. Fornisce:</p>
+    <p xml:lang="ka">Kup-ს შეუძლია დაგეხმაროთ, თქვენი პირადი ფაილების უახლესი მარქაფი გქონდეთ. ის უზრუნველყოფს:</p>
     <p xml:lang="ko">Kup을 사용하면 개인 파일 최신 백업을 유지할 수 있습니다. 기능:</p>
     <p xml:lang="nl">Kup kan u helpen te herinneren om up-to-date back-ups van uw persoonlijke bestanden te maken. Het biedt:</p>
     <p xml:lang="pl">Kup przypomina o posiadaniu świeżych kopii zapasowych twoich plików osobistych: Zapewnia:</p>
@@ -109,6 +110,7 @@
       <li xml:lang="hu">Inkrementális biztonsági mentés archívum a „bup” használatával.</li>
       <li xml:lang="id">Arsip cadangan tambahan dengan penggunaan "bup".</li>
       <li xml:lang="it">Archivi di copie di sicurezza incrementali mediante l'uso di «bup».</li>
+      <li xml:lang="ka">ინკრემენტული მარქაფის არქივი "bup"-ის გამოყენებით.</li>
       <li xml:lang="ko">"bup"을 사용한 증분 백업 압축 파일 생성.</li>
       <li xml:lang="nl">Incrementeel back-uparchief met gebruik van "bup".</li>
       <li xml:lang="pl">Przyrostowe archiwa kopii zapasowych z użyciem "bup".</li>
@@ -192,6 +194,7 @@
       <li xml:lang="hu">A biztonsági mentési célhelyek, például egy felcsatolt hálózati tároló elérhetőségének figyelése.</li>
       <li xml:lang="id">Memantau ketersediaan tujuan cadangan, seperti misalnya tempat penyimpanan jaringan yang terkaitkan.</li>
       <li xml:lang="it">Controllo della disponibilità delle destinazioni della copia di sicurezza, ad esempio delle unità di memorizzazione di rete montate.</li>
+      <li xml:lang="ka">მარქაფის დანიშნულების ადგილის, როგორიცაა ქსელური საცავის, წვდომადობის მონიტორინგი.</li>
       <li xml:lang="ko">마운트된 네트워크 저장소 등 백업 대상의 사용 가능 여부 모니터링.</li>
       <li xml:lang="nl">Beschikbaarheid van bestemmingen voor back-ups te monitoren, zoals bijvoorbeeld voor aangekoppelde netwerkopslag.</li>
       <li xml:lang="pl">Monitorowanie dostępności miejsc tworzenia kopii zapasowych, takich jak np. podpięte sieciowe urządzenie przechowywania.</li>
