@@ -1,5 +1,6 @@
 {
     "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_kup",
         "Description": "Configure backup plans",
         "Description[ar]": "اضبط خُطَّط النسخ الاحتياطي",
         "Description[bg]": "Настройване на плановете за архивиране",
