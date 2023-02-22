@@ -3,7 +3,6 @@
 // SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 #include "driveselectiondelegate.h"
-#include "backupplan.h"
 #include "driveselection.h"
 
 #include <QApplication>
@@ -45,7 +44,7 @@ void DriveSelectionDelegate::paint(QPainter* pPainter, const QStyleOptionViewIte
 	                                                              4*cMargin + QApplication::fontMetrics().height() -
 	                                                              pOption.rect.height()));
 
-	if (pOption.state & QStyle::State_Selected)
+	if (pOption.state & QStyle::State_HasFocus)
 		pPainter->setPen(pOption.palette.color(QPalette::HighlightedText));
 	else
 		pPainter->setPen(pOption.palette.color(QPalette::Text));
