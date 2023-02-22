@@ -108,7 +108,7 @@ bool EDExecutor::ensureAccessible(bool &pReturnLater) {
 			mDestinationPath += mPlan->mExternalDestinationPath;
 			QDir lDir(mDestinationPath);
 			if(!lDir.exists()) {
-				lDir.mkdir(mDestinationPath);
+				lDir.mkpath(mDestinationPath);
 			}
 			QFileInfo lDestinationInfo(mDestinationPath);
 			if(lDestinationInfo.exists() && lDestinationInfo.isDir()) {
