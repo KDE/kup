@@ -100,8 +100,10 @@ void PlanExecutor::enterAvailableState() {
 				                               "Save a new backup now?", t));
 			}
 		} else {
-			// schedule a wakeup for asking again when the time is right.
-			mSchedulingTimer->start(static_cast<int>(lNow.secsTo(lNextTime)*1000));
+			// Call this method again in five minutes to check if it's time.
+			// The alternative of sleeping all the way to when backup saving is due
+			// has the problem that time spent suspended is not counted.
+			mSchedulingTimer->start(5*60*1000);
 		}
 		break;
 	}
