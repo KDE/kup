@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-27 00:49+0000\n"
+"POT-Creation-Date: 2023-02-23 01:01+0000\n"
 "PO-Revision-Date: 2021-10-11 12:21+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -348,7 +348,7 @@ msgctxt "status in tooltip"
 msgid "Repairing backups"
 msgstr "S'estan reparant les còpies de seguretat"
 
-#: daemon/planexecutor.cpp:96 daemon/planexecutor.cpp:110
+#: daemon/planexecutor.cpp:96 daemon/planexecutor.cpp:112
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Do you want to save a first backup now?"
@@ -364,7 +364,7 @@ msgstr ""
 "Ha passat %1 des que es va guardar l'última còpia de seguretat.\n"
 "Voleu guardar una nova còpia de seguretat ara?"
 
-#: daemon/planexecutor.cpp:113
+#: daemon/planexecutor.cpp:115
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -375,83 +375,83 @@ msgstr ""
 "seguretat.\n"
 "Voleu guardar una nova còpia de seguretat ara?"
 
-#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:174
-#: daemon/planexecutor.cpp:312
+#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:176
+#: daemon/planexecutor.cpp:314
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "Sí"
 
-#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:175
-#: daemon/planexecutor.cpp:313
+#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:177
+#: daemon/planexecutor.cpp:315
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "No"
 msgstr "No"
 
-#: daemon/planexecutor.cpp:166
+#: daemon/planexecutor.cpp:168
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
 msgstr "No s'ha pogut guardar la còpia de seguretat"
 
-#: daemon/planexecutor.cpp:171 daemon/planexecutor.cpp:309
-#: daemon/planexecutor.cpp:343
+#: daemon/planexecutor.cpp:173 daemon/planexecutor.cpp:311
+#: daemon/planexecutor.cpp:345
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "Mostra el fitxer de registre"
 
-#: daemon/planexecutor.cpp:178
+#: daemon/planexecutor.cpp:180
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
 msgstr "Obri la configuració"
 
-#: daemon/planexecutor.cpp:202
+#: daemon/planexecutor.cpp:204
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Backup Saved"
 msgstr "S'ha guardat la còpia de seguretat"
 
-#: daemon/planexecutor.cpp:203
+#: daemon/planexecutor.cpp:205
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
 msgstr "La guardada de la còpia de seguretat s'ha finalitzat amb èxit."
 
-#: daemon/planexecutor.cpp:252 daemon/planexecutor.cpp:259
-#: daemon/planexecutor.cpp:291
+#: daemon/planexecutor.cpp:254 daemon/planexecutor.cpp:261
+#: daemon/planexecutor.cpp:293
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Problem"
 msgstr "Problema"
 
-#: daemon/planexecutor.cpp:253
+#: daemon/planexecutor.cpp:255
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
 msgstr "No teniu permís d'escriptura a la destinació de la còpia de seguretat."
 
-#: daemon/planexecutor.cpp:260
+#: daemon/planexecutor.cpp:262
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
 msgstr "Tipus no vàlid de còpia de seguretat en la configuració."
 
-#: daemon/planexecutor.cpp:305
+#: daemon/planexecutor.cpp:307
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Integrity Check Completed"
 msgstr "S'ha completat el control de la integritat"
 
-#: daemon/planexecutor.cpp:340
+#: daemon/planexecutor.cpp:342
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Repair Completed"
 msgstr "Reparació finalitzada"
 
-#: daemon/planexecutor.cpp:371
+#: daemon/planexecutor.cpp:373
 #, kde-format
 msgid "Kup Backup System"
 msgstr "Sistema de còpia de seguretat Kup"
@@ -1245,19 +1245,19 @@ msgstr ""
 "Connecteu l'emmagatzematge extern que voleu utilitzar i, a continuació, "
 "seleccioneu-lo en esta llista."
 
-#: kcm/driveselectiondelegate.cpp:57
+#: kcm/driveselectiondelegate.cpp:56
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
 msgstr " (desconnectat)"
 
-#: kcm/driveselectiondelegate.cpp:61
+#: kcm/driveselectiondelegate.cpp:60
 #, kde-kuit-format
 msgctxt "@label %1 is amount of free storage space of hard drive"
 msgid "%1 free"
 msgstr "%1 lliure"
 
-#: kcm/driveselectiondelegate.cpp:76
+#: kcm/driveselectiondelegate.cpp:75
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used for unnamed filesystems, more than one filesystem on "
@@ -1266,7 +1266,7 @@ msgctxt ""
 msgid "Partition %1 on %2%3"
 msgstr "Partició %1 a %2%3"
 
-#: kcm/driveselectiondelegate.cpp:79
+#: kcm/driveselectiondelegate.cpp:78
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
@@ -1274,7 +1274,7 @@ msgctxt ""
 msgid "%1%2"
 msgstr "%1%2"
 
-#: kcm/driveselectiondelegate.cpp:83
+#: kcm/driveselectiondelegate.cpp:82
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
@@ -1282,13 +1282,13 @@ msgctxt ""
 msgid "%1 on %2%3"
 msgstr "%1 a %2%3"
 
-#: kcm/driveselectiondelegate.cpp:90
+#: kcm/driveselectiondelegate.cpp:89
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
 msgstr "%1: capacitat total %2"
 
-#: kcm/driveselectiondelegate.cpp:137
+#: kcm/driveselectiondelegate.cpp:136
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1301,7 +1301,7 @@ msgstr ""
 "hi ha més d'un usuari en este ordinador o si esteu fent una còpia de "
 "seguretat dels fitxers de programa executables."
 
-#: kcm/driveselectiondelegate.cpp:142
+#: kcm/driveselectiondelegate.cpp:141
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""

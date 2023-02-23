@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-27 00:49+0000\n"
+"POT-Creation-Date: 2023-02-23 01:01+0000\n"
 "PO-Revision-Date: 2021-05-24 14:56+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -325,7 +325,7 @@ msgctxt "status in tooltip"
 msgid "Repairing backups"
 msgstr "백업 복구 중"
 
-#: daemon/planexecutor.cpp:96 daemon/planexecutor.cpp:110
+#: daemon/planexecutor.cpp:96 daemon/planexecutor.cpp:112
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Do you want to save a first backup now?"
@@ -341,7 +341,7 @@ msgstr ""
 "마지막으로 백업한 후 %1 지났습니다.\n"
 "새 백업을 저장하시겠습니까?"
 
-#: daemon/planexecutor.cpp:113
+#: daemon/planexecutor.cpp:115
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -351,83 +351,83 @@ msgstr ""
 "마지막으로 백업한 후 %1 동안 계속 컴퓨터를 사용했습니다.\n"
 "새 백업을 저장하시겠습니까?"
 
-#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:174
-#: daemon/planexecutor.cpp:312
+#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:176
+#: daemon/planexecutor.cpp:314
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "예"
 
-#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:175
-#: daemon/planexecutor.cpp:313
+#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:177
+#: daemon/planexecutor.cpp:315
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "No"
 msgstr "아니요"
 
-#: daemon/planexecutor.cpp:166
+#: daemon/planexecutor.cpp:168
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
 msgstr "백업 저장 실패"
 
-#: daemon/planexecutor.cpp:171 daemon/planexecutor.cpp:309
-#: daemon/planexecutor.cpp:343
+#: daemon/planexecutor.cpp:173 daemon/planexecutor.cpp:311
+#: daemon/planexecutor.cpp:345
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "로그 파일 표시"
 
-#: daemon/planexecutor.cpp:178
+#: daemon/planexecutor.cpp:180
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
 msgstr "설정 열기"
 
-#: daemon/planexecutor.cpp:202
+#: daemon/planexecutor.cpp:204
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Backup Saved"
 msgstr "백업 저장됨"
 
-#: daemon/planexecutor.cpp:203
+#: daemon/planexecutor.cpp:205
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
 msgstr "백업 저장에 성공했습니다."
 
-#: daemon/planexecutor.cpp:252 daemon/planexecutor.cpp:259
-#: daemon/planexecutor.cpp:291
+#: daemon/planexecutor.cpp:254 daemon/planexecutor.cpp:261
+#: daemon/planexecutor.cpp:293
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Problem"
 msgstr "문제점"
 
-#: daemon/planexecutor.cpp:253
+#: daemon/planexecutor.cpp:255
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
 msgstr "백업 대상에 쓸 수 있는 권한이 없습니다."
 
-#: daemon/planexecutor.cpp:260
+#: daemon/planexecutor.cpp:262
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
 msgstr "백업 설정의 형식이 잘못되었습니다."
 
-#: daemon/planexecutor.cpp:305
+#: daemon/planexecutor.cpp:307
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Integrity Check Completed"
 msgstr "무결성 검사 완료됨"
 
-#: daemon/planexecutor.cpp:340
+#: daemon/planexecutor.cpp:342
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Repair Completed"
 msgstr "복구 완료됨"
 
-#: daemon/planexecutor.cpp:371
+#: daemon/planexecutor.cpp:373
 #, kde-format
 msgid "Kup Backup System"
 msgstr "Kup 백업 시스템"
@@ -1193,19 +1193,19 @@ msgid ""
 "Plug in the external storage you wish to use, then select it in this list."
 msgstr "사용할 외장 저장 장치를 연결하고 이 목록에서 선택하십시오."
 
-#: kcm/driveselectiondelegate.cpp:57
+#: kcm/driveselectiondelegate.cpp:56
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
 msgstr "(연결 끊김)"
 
-#: kcm/driveselectiondelegate.cpp:61
+#: kcm/driveselectiondelegate.cpp:60
 #, kde-kuit-format
 msgctxt "@label %1 is amount of free storage space of hard drive"
 msgid "%1 free"
 msgstr "%1 남음"
 
-#: kcm/driveselectiondelegate.cpp:76
+#: kcm/driveselectiondelegate.cpp:75
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used for unnamed filesystems, more than one filesystem on "
@@ -1214,7 +1214,7 @@ msgctxt ""
 msgid "Partition %1 on %2%3"
 msgstr "%2의 파티션 %1%3"
 
-#: kcm/driveselectiondelegate.cpp:79
+#: kcm/driveselectiondelegate.cpp:78
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
@@ -1222,7 +1222,7 @@ msgctxt ""
 msgid "%1%2"
 msgstr "%1%2"
 
-#: kcm/driveselectiondelegate.cpp:83
+#: kcm/driveselectiondelegate.cpp:82
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
@@ -1230,13 +1230,13 @@ msgctxt ""
 msgid "%1 on %2%3"
 msgstr "%2의 %1%3"
 
-#: kcm/driveselectiondelegate.cpp:90
+#: kcm/driveselectiondelegate.cpp:89
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
 msgstr "%1: 총 용량 %2"
 
-#: kcm/driveselectiondelegate.cpp:137
+#: kcm/driveselectiondelegate.cpp:136
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1248,7 +1248,7 @@ msgstr ""
 "에 사용자가 한 명 이상 있거나 실행 가능한 프로그램 파일을 백업한다면 파일 권"
 "한이 중요합니다."
 
-#: kcm/driveselectiondelegate.cpp:142
+#: kcm/driveselectiondelegate.cpp:141
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""

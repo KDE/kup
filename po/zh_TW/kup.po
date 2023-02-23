@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-27 00:49+0000\n"
+"POT-Creation-Date: 2023-02-23 01:01+0000\n"
 "PO-Revision-Date: 2019-11-22 01:49+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -319,7 +319,7 @@ msgctxt "status in tooltip"
 msgid "Repairing backups"
 msgstr "正在修復備份"
 
-#: daemon/planexecutor.cpp:96 daemon/planexecutor.cpp:110
+#: daemon/planexecutor.cpp:96 daemon/planexecutor.cpp:112
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Do you want to save a first backup now?"
@@ -335,7 +335,7 @@ msgstr ""
 "自上一個備份儲存後已經過了 %1。\n"
 "現在儲存新備份？"
 
-#: daemon/planexecutor.cpp:113
+#: daemon/planexecutor.cpp:115
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -345,84 +345,84 @@ msgstr ""
 "自上次儲存備份後，你又對 %1 做了事情。\n"
 "是否儲存新備份？"
 
-#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:174
-#: daemon/planexecutor.cpp:312
+#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:176
+#: daemon/planexecutor.cpp:314
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "是"
 
-#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:175
-#: daemon/planexecutor.cpp:313
+#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:177
+#: daemon/planexecutor.cpp:315
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "No"
 msgstr "否"
 
-#: daemon/planexecutor.cpp:166
+#: daemon/planexecutor.cpp:168
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
 msgstr "備份儲存失敗"
 
-#: daemon/planexecutor.cpp:171 daemon/planexecutor.cpp:309
-#: daemon/planexecutor.cpp:343
+#: daemon/planexecutor.cpp:173 daemon/planexecutor.cpp:311
+#: daemon/planexecutor.cpp:345
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "顯示記錄檔"
 
-#: daemon/planexecutor.cpp:178
+#: daemon/planexecutor.cpp:180
 #, fuzzy, kde-kuit-format
 #| msgid "Open Destination"
 msgctxt "@action:button"
 msgid "Open settings"
 msgstr "開啟目的地"
 
-#: daemon/planexecutor.cpp:202
+#: daemon/planexecutor.cpp:204
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Backup Saved"
 msgstr "備份已儲存"
 
-#: daemon/planexecutor.cpp:203
+#: daemon/planexecutor.cpp:205
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
 msgstr "儲存備份成功完成。"
 
-#: daemon/planexecutor.cpp:252 daemon/planexecutor.cpp:259
-#: daemon/planexecutor.cpp:291
+#: daemon/planexecutor.cpp:254 daemon/planexecutor.cpp:261
+#: daemon/planexecutor.cpp:293
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Problem"
 msgstr "問題"
 
-#: daemon/planexecutor.cpp:253
+#: daemon/planexecutor.cpp:255
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
 msgstr "您並沒有備份目的地的寫入權限。"
 
-#: daemon/planexecutor.cpp:260
+#: daemon/planexecutor.cpp:262
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
 msgstr "在組態設定中無效的備份類型。"
 
-#: daemon/planexecutor.cpp:305
+#: daemon/planexecutor.cpp:307
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Integrity Check Completed"
 msgstr "完整性校驗完成"
 
-#: daemon/planexecutor.cpp:340
+#: daemon/planexecutor.cpp:342
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Repair Completed"
 msgstr "修復完成"
 
-#: daemon/planexecutor.cpp:371
+#: daemon/planexecutor.cpp:373
 #, kde-format
 msgid "Kup Backup System"
 msgstr "Kup 備份系統"
@@ -1205,19 +1205,19 @@ msgid ""
 "Plug in the external storage you wish to use, then select it in this list."
 msgstr "插入您想要使用的外部儲存空間，然後在這個列表中選取它。"
 
-#: kcm/driveselectiondelegate.cpp:57
+#: kcm/driveselectiondelegate.cpp:56
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
 msgstr " (未連線)"
 
-#: kcm/driveselectiondelegate.cpp:61
+#: kcm/driveselectiondelegate.cpp:60
 #, kde-kuit-format
 msgctxt "@label %1 is amount of free storage space of hard drive"
 msgid "%1 free"
 msgstr "%1 可用"
 
-#: kcm/driveselectiondelegate.cpp:76
+#: kcm/driveselectiondelegate.cpp:75
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used for unnamed filesystems, more than one filesystem on "
@@ -1226,7 +1226,7 @@ msgctxt ""
 msgid "Partition %1 on %2%3"
 msgstr "分割區 %1 在 %2%3 上"
 
-#: kcm/driveselectiondelegate.cpp:79
+#: kcm/driveselectiondelegate.cpp:78
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
@@ -1234,7 +1234,7 @@ msgctxt ""
 msgid "%1%2"
 msgstr "%1%2"
 
-#: kcm/driveselectiondelegate.cpp:83
+#: kcm/driveselectiondelegate.cpp:82
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
@@ -1242,13 +1242,13 @@ msgctxt ""
 msgid "%1 on %2%3"
 msgstr "%1 在 %2%3 上"
 
-#: kcm/driveselectiondelegate.cpp:90
+#: kcm/driveselectiondelegate.cpp:89
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
 msgstr "%1: %2 總容量"
 
-#: kcm/driveselectiondelegate.cpp:137
+#: kcm/driveselectiondelegate.cpp:136
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1259,7 +1259,7 @@ msgstr ""
 "警告：符號連結及檔案權限不會儲存到檔案系統中。檔案權限只在這臺電腦上有多於一"
 "個的使用者時需要煩惱，或是如果您備份的是可執行的程式檔。"
 
-#: kcm/driveselectiondelegate.cpp:142
+#: kcm/driveselectiondelegate.cpp:141
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""

@@ -2,23 +2,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Pavel Borecki <pavel.borecki@gmail.com>, 2017,2019.
 # Simon Persson <simon.persson@mykolab.com>, 2018.
-# Vit Pelcak <vit@pelcak.org>, 2019, 2020, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2019, 2020, 2021, 2023.
 #
 # Translators:
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-27 00:49+0000\n"
-"PO-Revision-Date: 2021-03-24 11:35+0100\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"POT-Creation-Date: 2023-02-23 01:01+0000\n"
+"PO-Revision-Date: 2023-02-22 16:47+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -346,7 +346,7 @@ msgctxt "status in tooltip"
 msgid "Repairing backups"
 msgstr "Oprava záloh"
 
-#: daemon/planexecutor.cpp:96 daemon/planexecutor.cpp:110
+#: daemon/planexecutor.cpp:96 daemon/planexecutor.cpp:112
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Do you want to save a first backup now?"
@@ -362,7 +362,7 @@ msgstr ""
 "Je tomu %1 od doby uložení poslední zálohy.\n"
 "Uložit nyní novou zálohu?"
 
-#: daemon/planexecutor.cpp:113
+#: daemon/planexecutor.cpp:115
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -372,83 +372,83 @@ msgstr ""
 "Fungujete už %1 od doby uložení poslední zálohy.\n"
 "Uložit nyní novou zálohu?"
 
-#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:174
-#: daemon/planexecutor.cpp:312
+#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:176
+#: daemon/planexecutor.cpp:314
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "Ano"
 
-#: daemon/planexecutor.cpp:144 daemon/planexecutor.cpp:175
-#: daemon/planexecutor.cpp:313
+#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:177
+#: daemon/planexecutor.cpp:315
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "No"
 msgstr "Ne"
 
-#: daemon/planexecutor.cpp:166
+#: daemon/planexecutor.cpp:168
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
 msgstr "Uložení zálohy se nezdařilo"
 
-#: daemon/planexecutor.cpp:171 daemon/planexecutor.cpp:309
-#: daemon/planexecutor.cpp:343
+#: daemon/planexecutor.cpp:173 daemon/planexecutor.cpp:311
+#: daemon/planexecutor.cpp:345
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "Zobrazit soubor se záznamem událostí (log)"
 
-#: daemon/planexecutor.cpp:178
+#: daemon/planexecutor.cpp:180
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
 msgstr "Otevřít nastavení"
 
-#: daemon/planexecutor.cpp:202
+#: daemon/planexecutor.cpp:204
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Backup Saved"
 msgstr "Záloha uložena"
 
-#: daemon/planexecutor.cpp:203
+#: daemon/planexecutor.cpp:205
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
 msgstr "Ukládání záloh úspěšně dokončeno."
 
-#: daemon/planexecutor.cpp:252 daemon/planexecutor.cpp:259
-#: daemon/planexecutor.cpp:291
+#: daemon/planexecutor.cpp:254 daemon/planexecutor.cpp:261
+#: daemon/planexecutor.cpp:293
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Problem"
 msgstr "Problém"
 
-#: daemon/planexecutor.cpp:253
+#: daemon/planexecutor.cpp:255
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
 msgstr "Chybí vám oprávnění k zápisu do cíle záloh."
 
-#: daemon/planexecutor.cpp:260
+#: daemon/planexecutor.cpp:262
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
 msgstr "V nastaveních se nachází neplatný typ zálohy."
 
-#: daemon/planexecutor.cpp:305
+#: daemon/planexecutor.cpp:307
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Integrity Check Completed"
 msgstr "Kontrola neporušenosti dokončena"
 
-#: daemon/planexecutor.cpp:340
+#: daemon/planexecutor.cpp:342
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Repair Completed"
 msgstr "Oprava dokončena"
 
-#: daemon/planexecutor.cpp:371
+#: daemon/planexecutor.cpp:373
 #, kde-format
 msgid "Kup Backup System"
 msgstr "Zálohovací systém Kup"
@@ -498,7 +498,7 @@ msgstr "Prohlížeč bup archivů"
 #: filedigger/main.cpp:28
 #, kde-format
 msgid "Copyright (C) 2013-2020 Simon Persson"
-msgstr "Copyright (C) 2013-2020 Simon Persson"
+msgstr "Autorská práva (C) 2013-2020 Simon Persson"
 
 #: filedigger/main.cpp:35 purger/main.cpp:30
 #, kde-format
@@ -1218,19 +1218,19 @@ msgid ""
 msgstr ""
 "Připojte vnější úložiště které chcete použít a pak ho vyberte ze seznamu."
 
-#: kcm/driveselectiondelegate.cpp:57
+#: kcm/driveselectiondelegate.cpp:56
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
 msgstr "(odpojeno)"
 
-#: kcm/driveselectiondelegate.cpp:61
+#: kcm/driveselectiondelegate.cpp:60
 #, kde-kuit-format
 msgctxt "@label %1 is amount of free storage space of hard drive"
 msgid "%1 free"
 msgstr "%1 volné"
 
-#: kcm/driveselectiondelegate.cpp:76
+#: kcm/driveselectiondelegate.cpp:75
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used for unnamed filesystems, more than one filesystem on "
@@ -1239,7 +1239,7 @@ msgctxt ""
 msgid "Partition %1 on %2%3"
 msgstr "Oddíl %1 na %2%3"
 
-#: kcm/driveselectiondelegate.cpp:79
+#: kcm/driveselectiondelegate.cpp:78
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
@@ -1247,7 +1247,7 @@ msgctxt ""
 msgid "%1%2"
 msgstr "%1%2"
 
-#: kcm/driveselectiondelegate.cpp:83
+#: kcm/driveselectiondelegate.cpp:82
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
@@ -1255,13 +1255,13 @@ msgctxt ""
 msgid "%1 on %2%3"
 msgstr "%1 na %2%3"
 
-#: kcm/driveselectiondelegate.cpp:90
+#: kcm/driveselectiondelegate.cpp:89
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
 msgstr "%1: %2 celkové kapacity"
 
-#: kcm/driveselectiondelegate.cpp:137
+#: kcm/driveselectiondelegate.cpp:136
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1274,7 +1274,7 @@ msgstr ""
 "počítač používá vícero uživatelů nebo pokud jsou zálohovány spustitelné "
 "soubory programů."
 
-#: kcm/driveselectiondelegate.cpp:142
+#: kcm/driveselectiondelegate.cpp:141
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
