@@ -207,7 +207,7 @@ void PlanExecutor::notifyBackupSucceeded() {
 }
 
 void PlanExecutor::showLog() {
-	auto *job = new KIO::OpenUrlJob(QUrl(mLogFilePath), QStringLiteral("text/x-log"));
+	auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(mLogFilePath), QStringLiteral("text/x-log"));
 	job->start();
 }
 
