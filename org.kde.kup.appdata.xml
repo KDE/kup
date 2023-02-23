@@ -273,7 +273,6 @@
   <developer_name xml:lang="x-test">xxSimon Persson &lt;simon.persson@mykolab.com&gt;xx</developer_name>
   <developer_name xml:lang="zh-CN">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="zh-TW">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
-  <project_group>KDE</project_group>
   <categories>
     <category>System</category>
   </categories>
