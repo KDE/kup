@@ -37,6 +37,7 @@ public:
 public slots:
 	void reloadConfig();
 	void runIntegrityCheck(const QString& pPath);
+	void saveNewBackup(int pPlanNumber);
 
 private:
 	void setupExecutors();

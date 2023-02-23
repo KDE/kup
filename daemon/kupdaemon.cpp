@@ -134,6 +134,13 @@ void KupDaemon::runIntegrityCheck(const QString& pPath) {
 	}
 }
 
+// This method is exposed over DBus so that user scripts can call it
+void KupDaemon::saveNewBackup(int pPlanNumber) {
+	if(pPlanNumber > 0 && pPlanNumber <= mExecutors.count()) {
+		mExecutors[pPlanNumber - 1]->startBackupSaveJob();
+	}
+}
+
 void KupDaemon::registerJob(KJob *pJob) {
 	mJobTracker->registerJob(pJob);
 }
