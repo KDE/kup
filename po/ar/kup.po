@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 01:01+0000\n"
+"POT-Creation-Date: 2023-02-24 01:02+0000\n"
 "PO-Revision-Date: 2021-12-15 19:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -204,62 +204,62 @@ msgstr ""
 "فشل فحص سلامة النسخ الاحتياطي. نُسخك الاحتياطية تالفة! انظر ملف السجل لمزيد "
 "من التفاصيل. هل تريد محاولة إصلاح ملفات النسخة الاحتياطية؟"
 
-#: daemon/kupdaemon.cpp:155
+#: daemon/kupdaemon.cpp:162
 #, kde-format
 msgid "Continue"
 msgstr "تابع"
 
-#: daemon/kupdaemon.cpp:157
+#: daemon/kupdaemon.cpp:164
 #, kde-format
 msgid "Stop"
 msgstr "أوقف"
 
-#: daemon/kupdaemon.cpp:159
+#: daemon/kupdaemon.cpp:166
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "حاليا مشغول:‏ %1"
 
-#: daemon/kupdaemon.cpp:160
+#: daemon/kupdaemon.cpp:167
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "هل تريد حقًا التوقف؟"
 
-#: daemon/kupdaemon.cpp:163
+#: daemon/kupdaemon.cpp:170
 #, kde-format
 msgid "User Backups"
 msgstr "النسخ الاحتياطية للمستخدم"
 
-#: daemon/kupdaemon.cpp:240
+#: daemon/kupdaemon.cpp:247
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination not available"
 msgstr "وجهة النسخة الاحتياطية غير موجودة"
 
-#: daemon/kupdaemon.cpp:244 daemon/kupdaemon.cpp:301
+#: daemon/kupdaemon.cpp:251 daemon/kupdaemon.cpp:308
 #, kde-format
 msgid "No backup plans configured"
 msgstr "لم تضبط أي خطة للنسخ الاحتياطي"
 
-#: daemon/kupdaemon.cpp:250
+#: daemon/kupdaemon.cpp:257
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination available"
 msgstr "وجهة النسخة الاحتياطية موجودة"
 
-#: daemon/kupdaemon.cpp:260 daemon/planexecutor.cpp:72
+#: daemon/kupdaemon.cpp:267 daemon/planexecutor.cpp:72
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup status OK"
 msgstr "حالة النسخة الاحتياطية جيدة"
 
-#: daemon/kupdaemon.cpp:267 daemon/planexecutor.cpp:74
+#: daemon/kupdaemon.cpp:274 daemon/planexecutor.cpp:74
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup suggested"
 msgstr "يقترح نسخة احتياطية جديدة"
 
-#: daemon/kupdaemon.cpp:274 daemon/planexecutor.cpp:76
+#: daemon/kupdaemon.cpp:281 daemon/planexecutor.cpp:76
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup needed"
@@ -968,7 +968,22 @@ msgctxt "@label:textbox"
 msgid "Destination Path for Backup:"
 msgstr "مسار وجهة النسخ الاحتياطية:"
 
-#: kcm/backupplanwidget.cpp:626
+#: kcm/backupplanwidget.cpp:619
+#, kde-kuit-format
+msgctxt "@info message bar near text edit"
+msgid "Only local filesystem paths will work!"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:627
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info %1 is the name of the backup plan"
+#| msgid ""
+#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+msgctxt "@info message bar near text edit"
+msgid "Folder does not exist! No backups will be saved until you create it."
+msgstr "‏%1 لا تملك وجهة!<nl/> لن تحفظ أي نسخة احتياطية بواسطة هذه الخطة."
+
+#: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -978,55 +993,55 @@ msgstr ""
 "استخدم هذا الخيار إذا كنت تريد نسخ ملفاتك احتياطيًا على وحدة تخزين خارجية "
 "يمكن توصيلها بهذا الحاسوب ، مثل محرك أقراص ثابتة USB أو أصبع ذاكرة."
 
-#: kcm/backupplanwidget.cpp:636 kcm/backupplanwidget.cpp:640
+#: kcm/backupplanwidget.cpp:656 kcm/backupplanwidget.cpp:660
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "The specified folder will be created if it does not exist."
 msgstr "المجلد المحدد سينشئ إذا لم يكن موجودا."
 
-#: kcm/backupplanwidget.cpp:638
+#: kcm/backupplanwidget.cpp:658
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Folder on Destination Drive:"
 msgstr "المجلد على قرص الواجهة:"
 
-#: kcm/backupplanwidget.cpp:646
+#: kcm/backupplanwidget.cpp:666
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a folder"
 msgstr "افتح حواري لاختيار مجلد"
 
-#: kcm/backupplanwidget.cpp:676
+#: kcm/backupplanwidget.cpp:696
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Destination"
 msgstr "الوجهة"
 
-#: kcm/backupplanwidget.cpp:677
+#: kcm/backupplanwidget.cpp:697
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select the backup destination"
 msgstr "اختر واجهة النسخ الاحتياطي"
 
-#: kcm/backupplanwidget.cpp:694
+#: kcm/backupplanwidget.cpp:714
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Manual Activation"
 msgstr "تفعيل يدوي"
 
-#: kcm/backupplanwidget.cpp:695
+#: kcm/backupplanwidget.cpp:715
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Interval"
 msgstr "الفترة"
 
-#: kcm/backupplanwidget.cpp:696
+#: kcm/backupplanwidget.cpp:716
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Active Usage Time"
 msgstr "وقت الاستعمال النشط"
 
-#: kcm/backupplanwidget.cpp:698
+#: kcm/backupplanwidget.cpp:718
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1036,7 +1051,7 @@ msgstr ""
 "تحفظ النسخ الاحتياطية فقط عند طلبها يدويًا. يمكن القيام بذلك باستخدام القائمة "
 "المنبثقة من أيقونة صينية النظام للنسخ الاحتياطي."
 
-#: kcm/backupplanwidget.cpp:712
+#: kcm/backupplanwidget.cpp:732
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1046,31 +1061,31 @@ msgstr ""
 "ستشغل نسخة احتياطية جديدة عندما تصبح وجهة النسخ الاحتياطي متاحة وكان قد مر "
 "زمن أكثر من الحد الزمني المضبوط منذ آخر نسخة احتياطية."
 
-#: kcm/backupplanwidget.cpp:729
+#: kcm/backupplanwidget.cpp:749
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Minutes"
 msgstr "الدقائق"
 
-#: kcm/backupplanwidget.cpp:730 kcm/backupplanwidget.cpp:757
+#: kcm/backupplanwidget.cpp:750 kcm/backupplanwidget.cpp:777
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Hours"
 msgstr "الساعات"
 
-#: kcm/backupplanwidget.cpp:731
+#: kcm/backupplanwidget.cpp:751
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Days"
 msgstr "الأيام"
 
-#: kcm/backupplanwidget.cpp:732
+#: kcm/backupplanwidget.cpp:752
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Weeks"
 msgstr "الأسابيع"
 
-#: kcm/backupplanwidget.cpp:742
+#: kcm/backupplanwidget.cpp:762
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1081,31 +1096,31 @@ msgstr ""
 "ستشغل نسخة احتياطية جديدة عندما تصبح وجهة النسخ الاحتياطي متاحة وكنت تستخدم "
 "حاسوبك بنشاط لأكثر من الحد الزمني المضبوط منذ آخر نسخة احتياطية."
 
-#: kcm/backupplanwidget.cpp:763
+#: kcm/backupplanwidget.cpp:783
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
 msgstr "أطلب التأكيد قبل أن تحفظ نسخة احتياطية"
 
-#: kcm/backupplanwidget.cpp:782
+#: kcm/backupplanwidget.cpp:802
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Schedule"
 msgstr "الجدولة"
 
-#: kcm/backupplanwidget.cpp:783
+#: kcm/backupplanwidget.cpp:803
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Specify the backup schedule"
 msgstr "حدد جدول النسخ الاحتياطي"
 
-#: kcm/backupplanwidget.cpp:797
+#: kcm/backupplanwidget.cpp:817
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
 msgstr "أظهر المجلدات المخفية في تحديد المصدر"
 
-#: kcm/backupplanwidget.cpp:802
+#: kcm/backupplanwidget.cpp:822
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1118,7 +1133,7 @@ msgstr ""
 "النسخ الاحتياطي. المجلدات المخفية لها اسم يبدأ بنقطة. توجد عادةً في المجلد "
 "الرئيسي الخاص بك ويتم استخدامها لتخزين الإعدادات والملفات المؤقتة لتطبيقاتك."
 
-#: kcm/backupplanwidget.cpp:823
+#: kcm/backupplanwidget.cpp:843
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1130,13 +1145,13 @@ msgstr ""
 "١٠٪ وسيستغرق توفير النسخ الاحتياطية وقتًا أطول قليلاً. في المقابل ، سيكون من "
 "الممكن الاسترداد من نسخة احتياطية تالفة جزئيًا."
 
-#: kcm/backupplanwidget.cpp:829
+#: kcm/backupplanwidget.cpp:849
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Generate recovery information"
 msgstr "ولّد معلومات الاسترداد"
 
-#: kcm/backupplanwidget.cpp:831
+#: kcm/backupplanwidget.cpp:851
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid ""
@@ -1146,13 +1161,13 @@ msgstr ""
 "ولّد معلومات الاسترداد (غير متاحة بسبب أن التطبيق <application>par2</"
 "application> غير مثبت)"
 
-#: kcm/backupplanwidget.cpp:847
+#: kcm/backupplanwidget.cpp:867
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Verify integrity of backups"
 msgstr "تحقق من سلامة النسخ الاحتياطية"
 
-#: kcm/backupplanwidget.cpp:851
+#: kcm/backupplanwidget.cpp:871
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1166,13 +1181,13 @@ msgstr ""
 "المشاكل قبل الحاجة الفعلية لاستخدام نسخة احتياطية، قد يكون الوقت قد فات في "
 "ذلك الوقت."
 
-#: kcm/backupplanwidget.cpp:867
+#: kcm/backupplanwidget.cpp:887
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "استبعد ملفات ومجلدات بالاعتماد على أنماط"
 
-#: kcm/backupplanwidget.cpp:885
+#: kcm/backupplanwidget.cpp:905
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1184,28 +1199,36 @@ msgstr ""
 "تتطابق مع أي من الأنماط سيتم استبعادها من النسخة الاحتياطية. توثيق تنسيق "
 "الأنماط تجده <link url='%1'>هنا</link>."
 
-#: kcm/backupplanwidget.cpp:903
+#: kcm/backupplanwidget.cpp:923
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "افتح حواري لتحدد ملف"
 
-#: kcm/backupplanwidget.cpp:905
+#: kcm/backupplanwidget.cpp:925
 #, kde-format
 msgid "Select pattern file"
 msgstr "حدد ملف النمط"
 
-#: kcm/backupplanwidget.cpp:930
+#: kcm/backupplanwidget.cpp:950
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "متقدّم"
 
-#: kcm/backupplanwidget.cpp:931
+#: kcm/backupplanwidget.cpp:951
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "خيارات إضافية للمستخدمين المتقدمين"
+
+#: kcm/backupplanwidget.cpp:981
+#, fuzzy, kde-kuit-format
+#| msgctxt "default folder name when creating a new folder"
+#| msgid "New Folder"
+msgctxt "@action:button"
+msgid "Create Folder"
+msgstr "مجلّد جديد"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format

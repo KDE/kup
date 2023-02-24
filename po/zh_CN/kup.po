@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 01:01+0000\n"
+"POT-Creation-Date: 2023-02-24 01:02+0000\n"
 "PO-Revision-Date: 2023-02-15 11:04\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -172,62 +172,62 @@ msgstr ""
 "备份完整性检查失败。您的备份已损坏！查看日志以获取更多细节。是否要尝试修复备"
 "份文件？"
 
-#: daemon/kupdaemon.cpp:155
+#: daemon/kupdaemon.cpp:162
 #, kde-format
 msgid "Continue"
 msgstr "继续"
 
-#: daemon/kupdaemon.cpp:157
+#: daemon/kupdaemon.cpp:164
 #, kde-format
 msgid "Stop"
 msgstr "停止"
 
-#: daemon/kupdaemon.cpp:159
+#: daemon/kupdaemon.cpp:166
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "正忙：%1"
 
-#: daemon/kupdaemon.cpp:160
+#: daemon/kupdaemon.cpp:167
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "你确定要停止吗？"
 
-#: daemon/kupdaemon.cpp:163
+#: daemon/kupdaemon.cpp:170
 #, kde-format
 msgid "User Backups"
 msgstr "用户备份"
 
-#: daemon/kupdaemon.cpp:240
+#: daemon/kupdaemon.cpp:247
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination not available"
 msgstr "备份目标不可用"
 
-#: daemon/kupdaemon.cpp:244 daemon/kupdaemon.cpp:301
+#: daemon/kupdaemon.cpp:251 daemon/kupdaemon.cpp:308
 #, kde-format
 msgid "No backup plans configured"
 msgstr "未配置备份计划"
 
-#: daemon/kupdaemon.cpp:250
+#: daemon/kupdaemon.cpp:257
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination available"
 msgstr "备份目标可用"
 
-#: daemon/kupdaemon.cpp:260 daemon/planexecutor.cpp:72
+#: daemon/kupdaemon.cpp:267 daemon/planexecutor.cpp:72
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup status OK"
 msgstr "备份状态完好"
 
-#: daemon/kupdaemon.cpp:267 daemon/planexecutor.cpp:74
+#: daemon/kupdaemon.cpp:274 daemon/planexecutor.cpp:74
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup suggested"
 msgstr "建议更新备份"
 
-#: daemon/kupdaemon.cpp:274 daemon/planexecutor.cpp:76
+#: daemon/kupdaemon.cpp:281 daemon/planexecutor.cpp:76
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup needed"
@@ -919,7 +919,22 @@ msgctxt "@label:textbox"
 msgid "Destination Path for Backup:"
 msgstr "备份的目的地："
 
-#: kcm/backupplanwidget.cpp:626
+#: kcm/backupplanwidget.cpp:619
+#, kde-kuit-format
+msgctxt "@info message bar near text edit"
+msgid "Only local filesystem paths will work!"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:627
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info %1 is the name of the backup plan"
+#| msgid ""
+#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+msgctxt "@info message bar near text edit"
+msgid "Folder does not exist! No backups will be saved until you create it."
+msgstr "%1 没有目的地！<nl/>这个计划中将不会有备份被储存。"
+
+#: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -929,55 +944,55 @@ msgstr ""
 "如果你想要将文件备份到插入这台电脑的外部储存装置，像是USB硬盘或是储存卡的话，"
 "使用这个选项。"
 
-#: kcm/backupplanwidget.cpp:636 kcm/backupplanwidget.cpp:640
+#: kcm/backupplanwidget.cpp:656 kcm/backupplanwidget.cpp:660
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "The specified folder will be created if it does not exist."
 msgstr "如果指定的文件夹不存在，将会被新增。"
 
-#: kcm/backupplanwidget.cpp:638
+#: kcm/backupplanwidget.cpp:658
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Folder on Destination Drive:"
 msgstr "目的地磁盘上的文件夹："
 
-#: kcm/backupplanwidget.cpp:646
+#: kcm/backupplanwidget.cpp:666
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a folder"
 msgstr "打开对话框以选择一个文件夹"
 
-#: kcm/backupplanwidget.cpp:676
+#: kcm/backupplanwidget.cpp:696
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Destination"
 msgstr "目的地"
 
-#: kcm/backupplanwidget.cpp:677
+#: kcm/backupplanwidget.cpp:697
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select the backup destination"
 msgstr "选择备份目的地"
 
-#: kcm/backupplanwidget.cpp:694
+#: kcm/backupplanwidget.cpp:714
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Manual Activation"
 msgstr "手动激活"
 
-#: kcm/backupplanwidget.cpp:695
+#: kcm/backupplanwidget.cpp:715
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Interval"
 msgstr "间隔"
 
-#: kcm/backupplanwidget.cpp:696
+#: kcm/backupplanwidget.cpp:716
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Active Usage Time"
 msgstr "活跃使用时间"
 
-#: kcm/backupplanwidget.cpp:698
+#: kcm/backupplanwidget.cpp:718
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -986,7 +1001,7 @@ msgid ""
 msgstr ""
 "备份将只会在你手动要求时进行。这可以通过备份系统托盘图标的弹出菜单完成。"
 
-#: kcm/backupplanwidget.cpp:712
+#: kcm/backupplanwidget.cpp:732
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -994,31 +1009,31 @@ msgid ""
 "more than the configured interval has passed since the last backup was saved."
 msgstr "新备份将会在自最后一次备份后超过设定间隔且备份目的地可用时自动启动。"
 
-#: kcm/backupplanwidget.cpp:729
+#: kcm/backupplanwidget.cpp:749
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Minutes"
 msgstr "分钟"
 
-#: kcm/backupplanwidget.cpp:730 kcm/backupplanwidget.cpp:757
+#: kcm/backupplanwidget.cpp:750 kcm/backupplanwidget.cpp:777
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Hours"
 msgstr "小时"
 
-#: kcm/backupplanwidget.cpp:731
+#: kcm/backupplanwidget.cpp:751
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Days"
 msgstr "天"
 
-#: kcm/backupplanwidget.cpp:732
+#: kcm/backupplanwidget.cpp:752
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Weeks"
 msgstr "星期"
 
-#: kcm/backupplanwidget.cpp:742
+#: kcm/backupplanwidget.cpp:762
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1029,31 +1044,31 @@ msgstr ""
 "新备份将会在你使用电脑超过自最后一次备份算起设定的时间限制且备份目的地可用时"
 "自动启动。"
 
-#: kcm/backupplanwidget.cpp:763
+#: kcm/backupplanwidget.cpp:783
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
 msgstr "在进行备份前再一次确认"
 
-#: kcm/backupplanwidget.cpp:782
+#: kcm/backupplanwidget.cpp:802
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Schedule"
 msgstr "计划"
 
-#: kcm/backupplanwidget.cpp:783
+#: kcm/backupplanwidget.cpp:803
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Specify the backup schedule"
 msgstr "指定备份计划"
 
-#: kcm/backupplanwidget.cpp:797
+#: kcm/backupplanwidget.cpp:817
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
 msgstr "在选择的来源中显示隐藏的文件夹"
 
-#: kcm/backupplanwidget.cpp:802
+#: kcm/backupplanwidget.cpp:822
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1066,7 +1081,7 @@ msgstr ""
 "以一个点作为开头。它们通常位于你的家目录，且通常用于储存你的应用程序的设置及"
 "临时文件。"
 
-#: kcm/backupplanwidget.cpp:823
+#: kcm/backupplanwidget.cpp:843
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1077,13 +1092,13 @@ msgstr ""
 "这会让你的备份使用大约10%的额外储存空间，且储存备份的时候会需要稍微长一点的时"
 "间。与之相对的是你将可能可以从部分损毁的备份中恢复。"
 
-#: kcm/backupplanwidget.cpp:829
+#: kcm/backupplanwidget.cpp:849
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Generate recovery information"
 msgstr "为备份生成恢复信息"
 
-#: kcm/backupplanwidget.cpp:831
+#: kcm/backupplanwidget.cpp:851
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid ""
@@ -1092,13 +1107,13 @@ msgid ""
 msgstr ""
 "为备份生成恢复信息（因为<application>par2</application>未安装，故不可用）"
 
-#: kcm/backupplanwidget.cpp:847
+#: kcm/backupplanwidget.cpp:867
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Verify integrity of backups"
 msgstr "检查备份的完整性"
 
-#: kcm/backupplanwidget.cpp:851
+#: kcm/backupplanwidget.cpp:871
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1111,13 +1126,13 @@ msgstr ""
 "的时间，但可以让你很快找到损毁问题，以免在你需要使用备份时才发现一切都太迟"
 "了。"
 
-#: kcm/backupplanwidget.cpp:867
+#: kcm/backupplanwidget.cpp:887
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "基于模式排除文件和文件夹"
 
-#: kcm/backupplanwidget.cpp:885
+#: kcm/backupplanwidget.cpp:905
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1128,28 +1143,36 @@ msgstr ""
 "每行一个模式。文件名匹配这些模式的文件和文件夹将被排除在备份之外。模式格式参"
 "见<link url='%1'>此处</link>。"
 
-#: kcm/backupplanwidget.cpp:903
+#: kcm/backupplanwidget.cpp:923
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "打开对话框选择文件"
 
-#: kcm/backupplanwidget.cpp:905
+#: kcm/backupplanwidget.cpp:925
 #, kde-format
 msgid "Select pattern file"
 msgstr "选择模式文件"
 
-#: kcm/backupplanwidget.cpp:930
+#: kcm/backupplanwidget.cpp:950
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "高级"
 
-#: kcm/backupplanwidget.cpp:931
+#: kcm/backupplanwidget.cpp:951
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "进阶用户的额外选项"
+
+#: kcm/backupplanwidget.cpp:981
+#, fuzzy, kde-kuit-format
+#| msgctxt "default folder name when creating a new folder"
+#| msgid "New Folder"
+msgctxt "@action:button"
+msgid "Create Folder"
+msgstr "新文件夹"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format

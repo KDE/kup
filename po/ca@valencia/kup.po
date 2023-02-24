@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 01:01+0000\n"
+"POT-Creation-Date: 2023-02-24 01:02+0000\n"
 "PO-Revision-Date: 2021-10-11 12:21+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -210,62 +210,62 @@ msgstr ""
 "còpies de seguretat estan malmeses! Per a més detalls, vegeu el fitxer de "
 "registre. Voleu intentar reparar els fitxers de còpia de seguretat?"
 
-#: daemon/kupdaemon.cpp:155
+#: daemon/kupdaemon.cpp:162
 #, kde-format
 msgid "Continue"
 msgstr "Continua"
 
-#: daemon/kupdaemon.cpp:157
+#: daemon/kupdaemon.cpp:164
 #, kde-format
 msgid "Stop"
 msgstr "Para"
 
-#: daemon/kupdaemon.cpp:159
+#: daemon/kupdaemon.cpp:166
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "Actualment ocupat: %1"
 
-#: daemon/kupdaemon.cpp:160
+#: daemon/kupdaemon.cpp:167
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "De veres voleu parar?"
 
-#: daemon/kupdaemon.cpp:163
+#: daemon/kupdaemon.cpp:170
 #, kde-format
 msgid "User Backups"
 msgstr "Còpies de seguretat de l'usuari"
 
-#: daemon/kupdaemon.cpp:240
+#: daemon/kupdaemon.cpp:247
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination not available"
 msgstr "La destinació de la còpia de seguretat no està disponible"
 
-#: daemon/kupdaemon.cpp:244 daemon/kupdaemon.cpp:301
+#: daemon/kupdaemon.cpp:251 daemon/kupdaemon.cpp:308
 #, kde-format
 msgid "No backup plans configured"
 msgstr "No s'ha configurat cap pla de còpia de seguretat"
 
-#: daemon/kupdaemon.cpp:250
+#: daemon/kupdaemon.cpp:257
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination available"
 msgstr "Hi ha disponible una destinació de còpia de seguretat"
 
-#: daemon/kupdaemon.cpp:260 daemon/planexecutor.cpp:72
+#: daemon/kupdaemon.cpp:267 daemon/planexecutor.cpp:72
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup status OK"
 msgstr "Estat correcte de la còpia de seguretat"
 
-#: daemon/kupdaemon.cpp:267 daemon/planexecutor.cpp:74
+#: daemon/kupdaemon.cpp:274 daemon/planexecutor.cpp:74
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup suggested"
 msgstr "S'ha suggerit una còpia de seguretat nova"
 
-#: daemon/kupdaemon.cpp:274 daemon/planexecutor.cpp:76
+#: daemon/kupdaemon.cpp:281 daemon/planexecutor.cpp:76
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup needed"
@@ -987,7 +987,23 @@ msgctxt "@label:textbox"
 msgid "Destination Path for Backup:"
 msgstr "Camí de destinació per a la còpia de seguretat:"
 
-#: kcm/backupplanwidget.cpp:626
+#: kcm/backupplanwidget.cpp:619
+#, kde-kuit-format
+msgctxt "@info message bar near text edit"
+msgid "Only local filesystem paths will work!"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:627
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info %1 is the name of the backup plan"
+#| msgid ""
+#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+msgctxt "@info message bar near text edit"
+msgid "Folder does not exist! No backups will be saved until you create it."
+msgstr ""
+"%1 no té una destinació!<nl/>Este pla no guardarà cap còpia de seguretat."
+
+#: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -998,55 +1014,55 @@ msgstr ""
 "un emmagatzematge extern que es pot connectar a este ordinador, com un disc "
 "dur USB o un dispositiu de memòria."
 
-#: kcm/backupplanwidget.cpp:636 kcm/backupplanwidget.cpp:640
+#: kcm/backupplanwidget.cpp:656 kcm/backupplanwidget.cpp:660
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "The specified folder will be created if it does not exist."
 msgstr "La carpeta especificada es crearà si no existix."
 
-#: kcm/backupplanwidget.cpp:638
+#: kcm/backupplanwidget.cpp:658
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Folder on Destination Drive:"
 msgstr "Carpeta a la unitat de destinació:"
 
-#: kcm/backupplanwidget.cpp:646
+#: kcm/backupplanwidget.cpp:666
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a folder"
 msgstr "Obri el diàleg per a seleccionar una carpeta"
 
-#: kcm/backupplanwidget.cpp:676
+#: kcm/backupplanwidget.cpp:696
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Destination"
 msgstr "Destinació"
 
-#: kcm/backupplanwidget.cpp:677
+#: kcm/backupplanwidget.cpp:697
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select the backup destination"
 msgstr "Selecciona la destinació de la còpia de seguretat"
 
-#: kcm/backupplanwidget.cpp:694
+#: kcm/backupplanwidget.cpp:714
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Manual Activation"
 msgstr "Activació manual"
 
-#: kcm/backupplanwidget.cpp:695
+#: kcm/backupplanwidget.cpp:715
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Interval"
 msgstr "Interval"
 
-#: kcm/backupplanwidget.cpp:696
+#: kcm/backupplanwidget.cpp:716
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Active Usage Time"
 msgstr "Temps d'ús actiu"
 
-#: kcm/backupplanwidget.cpp:698
+#: kcm/backupplanwidget.cpp:718
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1057,7 +1073,7 @@ msgstr ""
 "es pot fer utilitzant el menú emergent des de la icona de la còpia de "
 "seguretat que hi ha a la safata del sistema."
 
-#: kcm/backupplanwidget.cpp:712
+#: kcm/backupplanwidget.cpp:732
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1068,31 +1084,31 @@ msgstr ""
 "seguretat estiga disponible i haja transcorregut més de l'interval "
 "configurat des que es va guardar l'última còpia de seguretat."
 
-#: kcm/backupplanwidget.cpp:729
+#: kcm/backupplanwidget.cpp:749
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Minutes"
 msgstr "Minuts"
 
-#: kcm/backupplanwidget.cpp:730 kcm/backupplanwidget.cpp:757
+#: kcm/backupplanwidget.cpp:750 kcm/backupplanwidget.cpp:777
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Hours"
 msgstr "Hores"
 
-#: kcm/backupplanwidget.cpp:731
+#: kcm/backupplanwidget.cpp:751
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Days"
 msgstr "Dies"
 
-#: kcm/backupplanwidget.cpp:732
+#: kcm/backupplanwidget.cpp:752
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Weeks"
 msgstr "Setmanes"
 
-#: kcm/backupplanwidget.cpp:742
+#: kcm/backupplanwidget.cpp:762
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1105,31 +1121,31 @@ msgstr ""
 "transcorregut més del temps que el límit configurat des que es va guardar "
 "l'última còpia de seguretat."
 
-#: kcm/backupplanwidget.cpp:763
+#: kcm/backupplanwidget.cpp:783
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
 msgstr "Demana confirmació abans de guardar la còpia de seguretat"
 
-#: kcm/backupplanwidget.cpp:782
+#: kcm/backupplanwidget.cpp:802
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Schedule"
 msgstr "Planificació"
 
-#: kcm/backupplanwidget.cpp:783
+#: kcm/backupplanwidget.cpp:803
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Specify the backup schedule"
 msgstr "Especifiqueu la planificació de la còpia de seguretat"
 
-#: kcm/backupplanwidget.cpp:797
+#: kcm/backupplanwidget.cpp:817
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
 msgstr "Mostra les carpetes ocultes a la selecció de l'origen"
 
-#: kcm/backupplanwidget.cpp:802
+#: kcm/backupplanwidget.cpp:822
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1144,7 +1160,7 @@ msgstr ""
 "s'empren per a emmagatzemar la configuració i els fitxers temporals per a "
 "les aplicacions."
 
-#: kcm/backupplanwidget.cpp:823
+#: kcm/backupplanwidget.cpp:843
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1157,13 +1173,13 @@ msgstr ""
 "més de temps. A canvi, serà possible recuperar-se d'una còpia de seguretat "
 "parcialment malmesa."
 
-#: kcm/backupplanwidget.cpp:829
+#: kcm/backupplanwidget.cpp:849
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Generate recovery information"
 msgstr "Genera la informació de recuperació"
 
-#: kcm/backupplanwidget.cpp:831
+#: kcm/backupplanwidget.cpp:851
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid ""
@@ -1173,13 +1189,13 @@ msgstr ""
 "Genera la informació de recuperació (no disponible perquè no s'ha instal·lat "
 "<application>par2</application>)"
 
-#: kcm/backupplanwidget.cpp:847
+#: kcm/backupplanwidget.cpp:867
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Verify integrity of backups"
 msgstr "Verifica la integritat de les còpies de seguretat"
 
-#: kcm/backupplanwidget.cpp:851
+#: kcm/backupplanwidget.cpp:871
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1194,13 +1210,13 @@ msgstr ""
 "necessiteu emprar una còpia de seguretat, en aquell moment podria ser massa "
 "tard."
 
-#: kcm/backupplanwidget.cpp:867
+#: kcm/backupplanwidget.cpp:887
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "Exclou fitxers i carpetes basant-se en patrons"
 
-#: kcm/backupplanwidget.cpp:885
+#: kcm/backupplanwidget.cpp:905
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1213,28 +1229,36 @@ msgstr ""
 "patrons s'exclouran de la còpia de seguretat. El format dels patrons està "
 "documentat <link url='%1'>ací</link>."
 
-#: kcm/backupplanwidget.cpp:903
+#: kcm/backupplanwidget.cpp:923
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "Obri el diàleg per a seleccionar un fitxer"
 
-#: kcm/backupplanwidget.cpp:905
+#: kcm/backupplanwidget.cpp:925
 #, kde-format
 msgid "Select pattern file"
 msgstr "Selecciona un fitxer de patrons"
 
-#: kcm/backupplanwidget.cpp:930
+#: kcm/backupplanwidget.cpp:950
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Avançat"
 
-#: kcm/backupplanwidget.cpp:931
+#: kcm/backupplanwidget.cpp:951
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Opcions addicionals per a usuaris avançats"
+
+#: kcm/backupplanwidget.cpp:981
+#, fuzzy, kde-kuit-format
+#| msgctxt "default folder name when creating a new folder"
+#| msgid "New Folder"
+msgctxt "@action:button"
+msgid "Create Folder"
+msgstr "Carpeta nova"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format

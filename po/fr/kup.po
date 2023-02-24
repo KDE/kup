@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 01:01+0000\n"
+"POT-Creation-Date: 2023-02-24 01:02+0000\n"
 "PO-Revision-Date: 2023-01-06 18:55+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -210,62 +210,62 @@ msgstr ""
 "corrompue ! Voyez le fichier de log pour plus de détails. Voulez-vous "
 "essayer de réparer le fichier de sauvegarde ?"
 
-#: daemon/kupdaemon.cpp:155
+#: daemon/kupdaemon.cpp:162
 #, kde-format
 msgid "Continue"
 msgstr "Continuer"
 
-#: daemon/kupdaemon.cpp:157
+#: daemon/kupdaemon.cpp:164
 #, kde-format
 msgid "Stop"
 msgstr "Arrêter"
 
-#: daemon/kupdaemon.cpp:159
+#: daemon/kupdaemon.cpp:166
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "Occupé : %1"
 
-#: daemon/kupdaemon.cpp:160
+#: daemon/kupdaemon.cpp:167
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "Voulez-vous vraiment arrêter ?"
 
-#: daemon/kupdaemon.cpp:163
+#: daemon/kupdaemon.cpp:170
 #, kde-format
 msgid "User Backups"
 msgstr "Sauvegardes"
 
-#: daemon/kupdaemon.cpp:240
+#: daemon/kupdaemon.cpp:247
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination not available"
 msgstr "Destination de sauvegarde indisponible"
 
-#: daemon/kupdaemon.cpp:244 daemon/kupdaemon.cpp:301
+#: daemon/kupdaemon.cpp:251 daemon/kupdaemon.cpp:308
 #, kde-format
 msgid "No backup plans configured"
 msgstr "Aucun plan de sauvegarde configuré"
 
-#: daemon/kupdaemon.cpp:250
+#: daemon/kupdaemon.cpp:257
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination available"
 msgstr "Destination de sauvegarde disponible"
 
-#: daemon/kupdaemon.cpp:260 daemon/planexecutor.cpp:72
+#: daemon/kupdaemon.cpp:267 daemon/planexecutor.cpp:72
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup status OK"
 msgstr "Succès de la sauvegarde"
 
-#: daemon/kupdaemon.cpp:267 daemon/planexecutor.cpp:74
+#: daemon/kupdaemon.cpp:274 daemon/planexecutor.cpp:74
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup suggested"
 msgstr "Nouvelle sauvegarde recommandée"
 
-#: daemon/kupdaemon.cpp:274 daemon/planexecutor.cpp:76
+#: daemon/kupdaemon.cpp:281 daemon/planexecutor.cpp:76
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup needed"
@@ -990,7 +990,24 @@ msgctxt "@label:textbox"
 msgid "Destination Path for Backup:"
 msgstr "Emplacement de la destination pour la sauvegarde :"
 
-#: kcm/backupplanwidget.cpp:626
+#: kcm/backupplanwidget.cpp:619
+#, kde-kuit-format
+msgctxt "@info message bar near text edit"
+msgid "Only local filesystem paths will work!"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:627
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info %1 is the name of the backup plan"
+#| msgid ""
+#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+msgctxt "@info message bar near text edit"
+msgid "Folder does not exist! No backups will be saved until you create it."
+msgstr ""
+"%1 ne comporte aucune destination ! <nl/>Aucune sauvegarde ne sera exécutée "
+"par ce plan."
+
+#: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1001,55 +1018,55 @@ msgstr ""
 "périphérique de stockage externe pouvant être connecté à cet ordinateur, "
 "comme un disque dur ou une clé USB."
 
-#: kcm/backupplanwidget.cpp:636 kcm/backupplanwidget.cpp:640
+#: kcm/backupplanwidget.cpp:656 kcm/backupplanwidget.cpp:660
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "The specified folder will be created if it does not exist."
 msgstr "Le dossier spécifié sera crée s'il n'existe pas."
 
-#: kcm/backupplanwidget.cpp:638
+#: kcm/backupplanwidget.cpp:658
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Folder on Destination Drive:"
 msgstr "Dossier sur le lecteur de destination :"
 
-#: kcm/backupplanwidget.cpp:646
+#: kcm/backupplanwidget.cpp:666
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a folder"
 msgstr "Afficher la fenêtre de sélection de dossier"
 
-#: kcm/backupplanwidget.cpp:676
+#: kcm/backupplanwidget.cpp:696
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Destination"
 msgstr "Destination"
 
-#: kcm/backupplanwidget.cpp:677
+#: kcm/backupplanwidget.cpp:697
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select the backup destination"
 msgstr "Choisissez la destination de sauvegarde"
 
-#: kcm/backupplanwidget.cpp:694
+#: kcm/backupplanwidget.cpp:714
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Manual Activation"
 msgstr "Activation manuelle"
 
-#: kcm/backupplanwidget.cpp:695
+#: kcm/backupplanwidget.cpp:715
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Interval"
 msgstr "Intervalle"
 
-#: kcm/backupplanwidget.cpp:696
+#: kcm/backupplanwidget.cpp:716
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Active Usage Time"
 msgstr "Temps d'utilisation active"
 
-#: kcm/backupplanwidget.cpp:698
+#: kcm/backupplanwidget.cpp:718
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1059,7 +1076,7 @@ msgstr ""
 "Les sauvegardes ne seront effectuées que de façon manuelle à partir du menu "
 "contextuel à partir de l'icône de la barre des tâches."
 
-#: kcm/backupplanwidget.cpp:712
+#: kcm/backupplanwidget.cpp:732
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1069,31 +1086,31 @@ msgstr ""
 "Une nouvelle sauvegarde sera lancée dès que la destination sera disponible "
 "et si la dernière sauvegarde est plus ancienne que l'intervalle configuré."
 
-#: kcm/backupplanwidget.cpp:729
+#: kcm/backupplanwidget.cpp:749
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Minutes"
 msgstr "Minutes"
 
-#: kcm/backupplanwidget.cpp:730 kcm/backupplanwidget.cpp:757
+#: kcm/backupplanwidget.cpp:750 kcm/backupplanwidget.cpp:777
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Hours"
 msgstr "Heures"
 
-#: kcm/backupplanwidget.cpp:731
+#: kcm/backupplanwidget.cpp:751
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Days"
 msgstr "Jours"
 
-#: kcm/backupplanwidget.cpp:732
+#: kcm/backupplanwidget.cpp:752
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Weeks"
 msgstr "Semaines"
 
-#: kcm/backupplanwidget.cpp:742
+#: kcm/backupplanwidget.cpp:762
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1105,31 +1122,31 @@ msgstr ""
 "et que la durée minimale d'utilisation configurée a été dépassée depuis la "
 "dernière sauvegarde."
 
-#: kcm/backupplanwidget.cpp:763
+#: kcm/backupplanwidget.cpp:783
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
 msgstr "Demander une confirmation avant d'exécuter la sauvegarde"
 
-#: kcm/backupplanwidget.cpp:782
+#: kcm/backupplanwidget.cpp:802
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Schedule"
 msgstr "Planifier"
 
-#: kcm/backupplanwidget.cpp:783
+#: kcm/backupplanwidget.cpp:803
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Specify the backup schedule"
 msgstr "Spécifiez la planification de la sauvegarde"
 
-#: kcm/backupplanwidget.cpp:797
+#: kcm/backupplanwidget.cpp:817
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
 msgstr "Afficher les dossiers cachés dans la sélection de la source"
 
-#: kcm/backupplanwidget.cpp:802
+#: kcm/backupplanwidget.cpp:822
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1144,7 +1161,7 @@ msgstr ""
 "sont utilisés pour stocker les configurations et les fichiers temporaires de "
 "vos applications."
 
-#: kcm/backupplanwidget.cpp:823
+#: kcm/backupplanwidget.cpp:843
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1157,13 +1174,13 @@ msgstr ""
 "contrepartie il sera possible de récupérer d'une sauvegarde partiellement "
 "corrompue."
 
-#: kcm/backupplanwidget.cpp:829
+#: kcm/backupplanwidget.cpp:849
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Generate recovery information"
 msgstr "Générer les informations de restauration"
 
-#: kcm/backupplanwidget.cpp:831
+#: kcm/backupplanwidget.cpp:851
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid ""
@@ -1173,13 +1190,13 @@ msgstr ""
 "Générer information de recouvrement (non disponible parce que "
 "<application>par2</application> n'est pas installé)"
 
-#: kcm/backupplanwidget.cpp:847
+#: kcm/backupplanwidget.cpp:867
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Verify integrity of backups"
 msgstr "Vérifier l'intégrité des sauvegardes"
 
-#: kcm/backupplanwidget.cpp:851
+#: kcm/backupplanwidget.cpp:871
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1194,13 +1211,13 @@ msgstr ""
 "avant que vous ayez besoin d'utiliser la sauvegarde, alors qu'à ce moment il "
 "pourrait être trop tard."
 
-#: kcm/backupplanwidget.cpp:867
+#: kcm/backupplanwidget.cpp:887
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "Exclure les fichiers et les dossiers satisfaisants les motifs suivants"
 
-#: kcm/backupplanwidget.cpp:885
+#: kcm/backupplanwidget.cpp:905
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1213,28 +1230,36 @@ msgstr ""
 "seront exclus de la sauvegarde. Le format de motif est documenté <link "
 "url='%1'>ici</link>."
 
-#: kcm/backupplanwidget.cpp:903
+#: kcm/backupplanwidget.cpp:923
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "Ouvrir une boîte de dialogue pour sélectionner un fichier"
 
-#: kcm/backupplanwidget.cpp:905
+#: kcm/backupplanwidget.cpp:925
 #, kde-format
 msgid "Select pattern file"
 msgstr "Sélectionner un fichier de motifs"
 
-#: kcm/backupplanwidget.cpp:930
+#: kcm/backupplanwidget.cpp:950
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Avancé"
 
-#: kcm/backupplanwidget.cpp:931
+#: kcm/backupplanwidget.cpp:951
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Autres options pour les utilisateurs avancés"
+
+#: kcm/backupplanwidget.cpp:981
+#, fuzzy, kde-kuit-format
+#| msgctxt "default folder name when creating a new folder"
+#| msgid "New Folder"
+msgctxt "@action:button"
+msgid "Create Folder"
+msgstr "Nouveau dossier"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format
