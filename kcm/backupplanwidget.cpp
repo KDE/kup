@@ -608,6 +608,24 @@ KPageWidgetItem *BackupPlanWidget::createDestinationPage() {
 	auto lFileSystemUrlEdit = new KUrlRequester;
 	lFileSystemUrlEdit->setMode(KFile::Directory | KFile::LocalOnly);
 	lFileSystemUrlEdit->setObjectName(QStringLiteral("kcfg_Filesystem destination path"));
+	lFileSystemUrlEdit->setStartDir(QUrl::fromLocalFile(QDir::homePath()));
+	QObject::connect(lFileSystemUrlEdit, &KUrlRequester::textChanged, this, &BackupPlanWidget::checkFilesystemDestination);
+
+	mLocalMessage = new KMessageWidget(this);
+	mLocalMessage->setCloseButtonVisible(false);
+	mLocalMessage->setWordWrap(true);
+	mLocalMessage->setMessageType(KMessageWidget::Warning);
+	mLocalMessage->setText(xi18nc("@info message bar near text edit",
+	                              "Only local filesystem paths will work!"));
+	mLocalMessage->hide();
+
+	mExistMessage = new KMessageWidget(this);
+	mExistMessage->setCloseButtonVisible(false);
+	mExistMessage->setWordWrap(true);
+	mExistMessage->setMessageType(KMessageWidget::Warning);
+	mExistMessage->setText(xi18nc("@info message bar near text edit",
+	                              "Folder does not exist! No backups will be saved until you create it."));
+	mExistMessage->hide();
 
 	auto lFileSystemVLayout = new QGridLayout;
 	lFileSystemVLayout->setColumnMinimumWidth(0, lIndentation);
@@ -617,6 +635,8 @@ KPageWidgetItem *BackupPlanWidget::createDestinationPage() {
 	lFileSystemHLayout->addWidget(lFileSystemLabel);
 	lFileSystemHLayout->addWidget(lFileSystemUrlEdit, 1);
 	lFileSystemVLayout->addLayout(lFileSystemHLayout, 1, 1);
+	lFileSystemVLayout->addWidget(mLocalMessage, 2, 1);
+	lFileSystemVLayout->addWidget(mExistMessage, 3, 1);
 	lFileSystemWidget->setLayout(lFileSystemVLayout);
 
 	auto lDriveWidget = new QWidget;
@@ -871,7 +891,7 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available) {
 	lExcludesLabel->setWordWrap(true);
 	lExcludesLabel->setTextFormat(Qt::RichText);
 	lExcludesLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
-	connect(lExcludesLabel, &QLabel::linkActivated, this, [this](QString pLink){
+	connect(lExcludesLabel, &QLabel::linkActivated, this, [](QString pLink){
 		// open the URL ourselves instead of QLabel and QDesktopService doing it, just
 		// so that we can give a .html file ending to the temp file. Required for QWebEngine
 		// to understand that the file has html content. Firefox works either way.
@@ -946,4 +966,33 @@ void BackupPlanWidget::openDriveDestDialog() {
 		mDriveDestEdit->setText(lSelectedPath);
 	}
 	delete lDirDialog;
+}
+
+void BackupPlanWidget::checkFilesystemDestination(const QString &pDestination) {
+	if(!pDestination.startsWith("/") && !pDestination.startsWith("file:") &&
+	        pDestination.contains(":/")) {
+		mLocalMessage->animatedShow();
+	} else {
+		mLocalMessage->animatedHide();
+	}
+
+	QDir lDestinationDir(QDir::home().absoluteFilePath(pDestination));
+	if(!lDestinationDir.exists()) {
+		auto lAction = new QAction(xi18nc("@action:button", "Create Folder"), this);
+		connect(lAction, &QAction::triggered, this, [this, lDestinationDir](){
+			lDestinationDir.mkpath(lDestinationDir.absolutePath());
+			checkFilesystemDestination(lDestinationDir.absolutePath());
+		});
+		mExistMessage->clearActions();
+		mExistMessage->addAction(lAction);
+		if(mExistMessage->isHidden()) {
+			mExistMessage->animatedShow();
+		} else {
+			// Work around for buggy layout when removing and adding action.
+			mExistMessage->hide();
+			mExistMessage->show();
+		}
+	} else {
+		mExistMessage->animatedHide();
+	}
 }

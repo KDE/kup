@@ -155,9 +155,12 @@ protected:
 	QRadioButton *mSyncedRadio{};
 	FolderSelectionWidget *mSourceSelectionWidget{};
 	KPageWidgetItem *mSourcePage;
+	KMessageWidget *mLocalMessage;
+	KMessageWidget *mExistMessage;
 
 protected slots:
 	void openDriveDestDialog();
+	void checkFilesystemDestination(const QString &pDestination);
 
 signals:
 	void requestOverviewReturn();
