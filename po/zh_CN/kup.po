@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2023-02-15 11:04\n"
+"PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -1365,7 +1365,7 @@ msgstr "保存新备份"
 #: plasmoid/contents/ui/FullRepresentation.qml:115
 #, kde-format
 msgid "Prune old backups"
-msgstr ""
+msgstr "删除旧备份"
 
 #: plasmoid/contents/ui/FullRepresentation.qml:120
 #, kde-format
@@ -1380,23 +1380,23 @@ msgstr "显示日志文件"
 #: plasmoid/contents/ui/Main.qml:69
 #, kde-format
 msgid "&Configure Kup..."
-msgstr ""
+msgstr "配置 Kup(&C)..."
 
 #: plasmoid/contents/ui/Main.qml:71
 #, kde-format
 msgid "&Reload backup plans"
-msgstr ""
+msgstr "重新加载备份计划(&R)"
 
 #: purger/main.cpp:21
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
-msgstr ""
+msgstr "清除程序"
 
 #: purger/main.cpp:22
 #, kde-format
 msgid "Purger for bup archives."
-msgstr ""
+msgstr "Bup 归档的清除程序。"
 
 #: purger/main.cpp:23
 #, kde-format

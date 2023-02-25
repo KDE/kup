@@ -6,13 +6,13 @@
 # carlo giusepe tadei valente sasaki <carlo.gt.valente@gmail.com>, 2014.
 # Simon Persson <simon.persson@mykolab.com>, 2014.
 # Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2020, 2021.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2021-10-26 14:43-0300\n"
+"PO-Revision-Date: 2023-02-24 16:55-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -979,16 +979,13 @@ msgstr "Caminho de destino para o backup:"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "Apenas caminhos do sistema de arquivos local irão funcionar!"
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
-msgstr "%1 não possui um destino<nl/>Nenhum backup será salvo nesse plano."
+msgstr "A pasta não existe! Nenhum backup será salvo até você cria-la."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1235,12 +1232,10 @@ msgid "Extra options for advanced users"
 msgstr "Opções extras para usuários avançados"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "Nova pasta"
+msgstr "Criar pasta"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format

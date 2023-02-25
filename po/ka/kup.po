@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2023-02-15 05:48+0100\n"
+"PO-Revision-Date: 2023-02-24 05:06+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -931,13 +931,14 @@ msgstr "მარქაფის სამიზნე ბილიკი:"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "იმუშავებს მხოლოდ ლოკალური ფაილური სისტემის ბილიკები!"
 
 #: kcm/backupplanwidget.cpp:627
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
 msgstr ""
+"საქაღალდე არ არსებობს! მარქაფები შენახული არ იქნება, სანამ მას არ შექმნით."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1159,12 +1160,10 @@ msgid "Extra options for advanced users"
 msgstr "დამატებითი პარამეტრები განვითარებული მომხმარებლებისთვის"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "ახალი საქაღალდე"
+msgstr "საქაღალდის შექმნა"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format

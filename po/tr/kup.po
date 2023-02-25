@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kup package.
 #
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2022-12-16 21:59+0300\n"
+"PO-Revision-Date: 2023-02-24 11:18+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -972,18 +972,13 @@ msgstr "Yedekleme için Hedef Konum Yolu:"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "Yalnızca yerel dosya sistemi yolları işe yarar!"
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
-msgstr ""
-"%1 için bir hedef konum yok!<nl/>Bu tasarı tarafından herhangi bir yedek "
-"kaydedilmeyecek."
+msgstr "Klasör yok! Siz oluşturana değin bir yedek kaydedilmeyecek."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1229,12 +1224,10 @@ msgid "Extra options for advanced users"
 msgstr "Gelişmiş kullanıcılar için ek seçenekler"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "Yeni Klasör"
+msgstr "Klasör Oluştur"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format

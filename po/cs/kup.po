@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2023-02-22 16:47+0100\n"
+"PO-Revision-Date: 2023-02-24 15:13+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -300,7 +300,7 @@ msgstr ""
 #: daemon/main.cpp:37 kcm/kupkcm.cpp:36
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
-msgstr "Copyright (C) 2011-2020 Simon Persson"
+msgstr "Autorská práva (C) 2011-2020 Simon Persson"
 
 #: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
 #: purger/main.cpp:24
@@ -976,16 +976,13 @@ msgstr "Popis umístění cíle zálohy:"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "Pouze cesty na místním souborovém systému budou fungovat."
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
-msgstr "%1 nemá cíl!<nl/>Tímto plánem nebudou uloženy žádné zálohy."
+msgstr "Složka neexistuje. Zálohy nebudou ukládány dokud ji nevytvoříte."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1226,12 +1223,10 @@ msgid "Extra options for advanced users"
 msgstr "Další předvolby pro pokročilé uživatele"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "Nová složka"
+msgstr "Vytvořit složku"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format
@@ -1468,7 +1463,7 @@ msgstr "Čistič archivů bup."
 #: purger/main.cpp:23
 #, kde-format
 msgid "Copyright (C) 2013-2021 Simon Persson"
-msgstr "Copyright (C) 2013-2021 Simon Persson"
+msgstr "Autorská práva (C) 2013-2021 Simon Persson"
 
 #: settings/backupplan.cpp:23
 #, kde-kuit-format
