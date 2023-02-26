@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kup package.
 #
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2023-02-24 08:48+0100\n"
+"PO-Revision-Date: 2023-02-25 08:51+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
 "%100<=4 ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -984,16 +984,15 @@ msgstr "Ciljna pot za varnostno kopiranje:"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "Delovale bodo samo poti sistema lokalnih datotek!"
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
-msgstr "%1 nima cilja!<nl/>Ta plan ne bo shranjeval nobene varnostne kopije."
+msgstr ""
+"Mapa ne obstaja! Nobene varnostne kopije ne bo shranjene, dokler ne "
+"ustvarite mape."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format

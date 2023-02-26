@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2023-01-06 18:55+0100\n"
+"PO-Revision-Date: 2023-02-24 20:53+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -995,17 +995,16 @@ msgstr "Emplacement de la destination pour la sauvegarde :"
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
 msgstr ""
+"Seuls les emplacements locaux vers un système de fichiers permettront un bon "
+"fonctionnement !"
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
 msgstr ""
-"%1 ne comporte aucune destination ! <nl/>Aucune sauvegarde ne sera exécutée "
-"par ce plan."
+"Le dossier n'existe pas ! Aucune sauvegarde ne sera exécutée sauf si vous la "
+"créez."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1254,12 +1253,10 @@ msgid "Extra options for advanced users"
 msgstr "Autres options pour les utilisateurs avancés"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "Nouveau dossier"
+msgstr "Créer un dossier"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format
