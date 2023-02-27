@@ -6,7 +6,7 @@
 # Francesco Marinucci <framari@posteo.org>, 2013-2014,2016-2017.
 # Simon Persson <simon.persson@mykolab.com>, 2014,2018.
 # Tichy <eristico@cryptolab.net>, 2018-2019.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2020, 2021.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2020, 2021, 2023.
 # Paolo Zamponi <zapaolo@email.it>, 2022.
 #
 # Translators:
@@ -15,15 +15,15 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2022-12-29 09:00+0100\n"
-"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"PO-Revision-Date: 2023-02-25 00:13+0100\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -1005,18 +1005,13 @@ msgstr "Percorso di destinazione della copia di sicurezza:"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "Funzioneranno solo i percorsi del file system locale!"
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
-msgstr ""
-"%1 non ha una destinazione!<nl/>Nessuna copia di sicurezza sarà salvata da "
-"questo piano."
+msgstr "La cartella non esiste! Nessun backup sarà salvato finché non la crei."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1269,12 +1264,10 @@ msgid "Extra options for advanced users"
 msgstr "Opzioni aggiuntive per utenti esperti"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "Nuova cartella"
+msgstr "Crea cartella"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format
