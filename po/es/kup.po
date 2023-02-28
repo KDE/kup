@@ -9,14 +9,14 @@
 # Simon Persson <simon.persson@mykolab.com>, 2014.
 # Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
 # Victor García <victor.garcia@iberdomo.net>, 2018-2019.
-# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2019, 2020, 2021, 2022.
+# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2019, 2020, 2021, 2022, 2023.
 # Eloy Cuadra <ecuadra@eloihr.net>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2022-01-22 16:03+0100\n"
+"PO-Revision-Date: 2023-02-25 17:00+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -999,16 +999,15 @@ msgstr "Ruta de destino para la copia:"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "¡Solo funcionarán rutas del sistema de archivos local!"
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
-msgstr "¡%1 no hay destino!<nl/>No se harán copias con este plan."
+msgstr ""
+"¡La carpeta no existe! Ninguna copia de seguridad se guardará hasta que la "
+"cree."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1256,12 +1255,10 @@ msgid "Extra options for advanced users"
 msgstr "Opciones para usuarios avanzados"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "Nueva Carpeta"
+msgstr "Crear carpeta"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format
