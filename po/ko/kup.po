@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kup package.
-# Shinjo Park <kde@peremen.name>, 2021.
+# Shinjo Park <kde@peremen.name>, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2021-05-24 14:56+0200\n"
+"PO-Revision-Date: 2023-03-01 01:50+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -953,17 +953,14 @@ msgstr "백업 대상 경로:"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "로컬 파일 시스템 경로만 사용할 수 있습니다!"
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
 msgstr ""
-"%1의 대상을 설정하지 않았습니다!<nl/> 이 백업 계획은 실행되지 않습니다."
+"폴더가 존재하지 않습니다! 폴더를 만들기 전까지 백업을 수행하지 않을 것입니다."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1203,12 +1200,10 @@ msgid "Extra options for advanced users"
 msgstr "고급 사용자용 추가 옵션"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "새 폴더"
+msgstr "폴더 만들기"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format
