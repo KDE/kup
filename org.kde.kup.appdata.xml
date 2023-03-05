@@ -38,7 +38,7 @@
   <name xml:lang="zh-CN">K 备份</name>
   <name xml:lang="zh-TW">Kup</name>
   <summary>Backup scheduler for KDE's Plasma desktop</summary>
-  <summary xml:lang="ar">مجدول النسخ الاحتياطية لسطح مكتب بلازما من كدي</summary>
+  <summary xml:lang="ar">مجدول النسخ الاحتياطية لسطح مكتب بلازما من كِيدِي</summary>
   <summary xml:lang="bg">Планиране на създаване на резервни копия за работна среда Plasma на KDE</summary>
   <summary xml:lang="ca">Planificador de la còpia de seguretat per a l'escriptori Plasma del KDE</summary>
   <summary xml:lang="ca-valencia">Planificador de la còpia de seguretat per a l'escriptori Plasma de KDE</summary>
@@ -207,7 +207,7 @@
       <li xml:lang="x-test">xxMonitor availability of backup destinations, like for example a mounted network storage.xx</li>
       <li xml:lang="zh-CN">监控备份目标可用性，比如挂载的网络存储。</li>
       <li>Integration into KDE's Plasma desktop.</li>
-      <li xml:lang="ar">يتكامل مع سطح مكتب بلازما من كدي</li>
+      <li xml:lang="ar">يتكامل مع سطح مكتب بلازما من كِيدِي</li>
       <li xml:lang="bg">Интеграция в работна среда Plasma на KDE.</li>
       <li xml:lang="ca">Integració amb l'escriptori Plasma del KDE.</li>
       <li xml:lang="ca-valencia">Integració amb l'escriptori Plasma de KDE.</li>
