@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2021-03-16 12:08+0000\n"
+"PO-Revision-Date: 2023-03-06 16:36+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -992,18 +992,14 @@ msgstr "Localização de Destino da Cópia de Segurança:"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "Só funcionam localizações em sistemas de ficheiros locais!"
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
 msgstr ""
-"O %1 não tem nenhum destino!<nl/>Não serão gravadas cópias de segurança com "
-"este plano."
+"A pasta não existe! Não serão gravadas cópias de segurança até que a crie."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1255,12 +1251,10 @@ msgid "Extra options for advanced users"
 msgstr "Opções extra para os utilizadores avançados"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "Nova Pasta"
+msgstr "Criar a Pasta"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format
