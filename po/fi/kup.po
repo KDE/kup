@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kup package.
-# Tommi Nieminen <translator@legisign.org>, 2020, 2021.
+# Tommi Nieminen <translator@legisign.org>, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2021-09-05 14:59+0300\n"
+"PO-Revision-Date: 2023-03-06 20:58+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -966,18 +966,14 @@ msgstr "Varmuuskopion kohdesijainti:"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "Vain paikalliset tiedostojärjestelmäsijainnit toimivat!"
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
 msgstr ""
-"Suunnitelmalla %1 ei ole kohdetta!<nl/>Tämän suunnitelman varmuuskopioita ei "
-"tallenneta."
+"Kansiota ei ole olemassa! Varmuuskopioita ei tallenneta, ennen kuin luot sen."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1220,12 +1216,10 @@ msgid "Extra options for advanced users"
 msgstr "Edistyneen käyttäjän lisäasetukset"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "Uusi kansio"
+msgstr "Luo kansio"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format
