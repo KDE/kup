@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2023-02-24 12:43\n"
+"PO-Revision-Date: 2023-03-11 04:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -923,16 +923,13 @@ msgstr "备份的目的地："
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "只有本地文件系统的路径才能正常工作！"
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
-msgstr "%1 没有目的地！<nl/>这个计划中将不会有备份被储存。"
+msgstr "文件夹不存在！您必须先创建该文件夹后才能保存备份。"
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1167,12 +1164,10 @@ msgid "Extra options for advanced users"
 msgstr "进阶用户的额外选项"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "新文件夹"
+msgstr "创建文件夹"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format
