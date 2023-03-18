@@ -183,7 +183,7 @@ void VersionListDelegate::paint(QPainter *pPainter, const QStyleOptionViewItem &
 	QStyle * lStyle = QApplication::style();
 	lStyle->drawPrimitive(QStyle::PE_PanelItemViewItem, &pOption, pPainter);
 	pPainter->save();
-	pPainter->setPen(pOption.palette.color(pOption.state & QStyle::State_Selected
+	pPainter->setPen(pOption.palette.color(pOption.state & QStyle::State_HasFocus
 	                                       ? QPalette::HighlightedText: QPalette::Text));
 	QRect lMarginRect = pOption.rect.adjusted(cMargin, cMargin, -cMargin, -cMargin);
 
