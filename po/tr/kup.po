@@ -1355,7 +1355,7 @@ msgid ""
 "li><li>rsync, for synchronized backups</li></ul>"
 msgstr ""
 "<h2>Yedekleme programları eksik</h2><p>Herhangi bir yedek tasarısını "
-"etkinleştirmeden önce <p><ul><li>sürümlendirilmiş yedeklemeler için bup,</"
+"etkinleştirmeden önce</p><ul><li>sürümlendirilmiş yedeklemeler için bup,</"
 "li><li>eşzamanlı yedeklemeler için rsync</li></ul> kurmanız gerekiyor"
 
 #: kcm/kupkcm.cpp:177
