@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2023-02-24 11:18+0300\n"
+"PO-Revision-Date: 2023-03-21 13:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -1255,7 +1255,7 @@ msgctxt ""
 "device. %1 is partition number, %2 is device description, %3 is either empty "
 "or the \" (disconnected)\" text"
 msgid "Partition %1 on %2%3"
-msgstr "%2%3 üzerinde %1 bölümü"
+msgstr "%2%3 üzerinde %1 bölüntüsü"
 
 #: kcm/driveselectiondelegate.cpp:78
 #, kde-kuit-format
