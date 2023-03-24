@@ -546,7 +546,7 @@ msgstr "(fichier)"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder..."
-msgstr "Nouveau dossier..."
+msgstr "Nouveau dossier…"
 
 #: filedigger/restoredialog.cpp:128 filedigger/restoredialog.cpp:147
 #, kde-kuit-format
@@ -1479,7 +1479,7 @@ msgstr "Voir le journal"
 #: plasmoid/contents/ui/Main.qml:69
 #, kde-format
 msgid "&Configure Kup..."
-msgstr "&Configurer Kup..."
+msgstr "&Configurer Kup…"
 
 #: plasmoid/contents/ui/Main.qml:71
 #, kde-format
