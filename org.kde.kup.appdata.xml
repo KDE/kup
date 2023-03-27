@@ -178,7 +178,7 @@
       <li xml:lang="tr">Yerel dosya sistemi veya dış USB depolama desteği.</li>
       <li xml:lang="uk">Підтримка локальних файлових систем та зовнішніх сховищ даних USB.</li>
       <li xml:lang="x-test">xxSupport for local filesystem or external usb storage.xx</li>
-      <li xml:lang="zh-CN">支持本机文件系统或外部 USB 存储。</li>
+      <li xml:lang="zh-CN">支持本地文件系统或外部 USB 存储。</li>
       <li>Monitor availability of backup destinations, like for example a mounted network storage.</li>
       <li xml:lang="ar">يراقب مدى توفر وجهات النسخ الاحتياطي ، على سبيل المثال ، التخزين الشبكي في حالة ضمه.</li>
       <li xml:lang="bg">Следене за наличността на дестинациите за архивиране, като например монтирано мрежово хранилище.</li>
