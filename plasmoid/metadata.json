@@ -83,9 +83,6 @@
         "Name[x-test]": "xxBackup Statusxx",
         "Name[zh_CN]": "备份状态",
         "Name[zh_TW]": "備份狀態",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://invent.kde.org/system/kup"
     },
@@ -93,5 +90,6 @@
     "X-Plasma-DBusActivationService": "org.kde.kupdaemon",
     "X-Plasma-MainScript": "ui/Main.qml",
     "X-Plasma-NotificationArea": "true",
-    "X-Plasma-NotificationAreaCategory": "SystemServices"
+    "X-Plasma-NotificationAreaCategory": "SystemServices",
+    "KPackageStructure": "Plasma/Applet"
 }
