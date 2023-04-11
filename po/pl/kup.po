@@ -6,13 +6,13 @@
 # Przemyslaw Ka. <przemyslaw.karpeta@gmail.com>, 2017,2019.
 # Simon Persson <simon.persson@mykolab.com>, 2014.
 # Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2021, 2022.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2022-01-08 09:19+0100\n"
+"PO-Revision-Date: 2023-04-10 11:46+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.03.70\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -993,18 +993,15 @@ msgstr "Ścieżka docelowa dla kopii zapasowej:"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "Tylko miejscowe ścieżki zadziałają!"
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
 msgstr ""
-"%1 nie ma miejsca docelowego!<nl/>Żadna kopia zapasowa nie zostanie zapisana "
-"przez ten plan."
+"Katalog nie istnieje! Żadna kopia zapasowa nie zostanie zapisana, dopóki go "
+"nie stworzysz."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1252,12 +1249,10 @@ msgid "Extra options for advanced users"
 msgstr "Dodatkowe ustawienia dla doświadczonych użytkowników"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "Nowy Katalog"
+msgstr "Utwórz katalog"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format
