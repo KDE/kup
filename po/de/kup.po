@@ -1,28 +1,29 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
-# Translators:
 # Georg Lassnig <g.lassnig@e67-its.de>, 2013.
 # HinzundKunz <martin.tlustos@gmail.com>, 2015.
-# jrabe, 2016.
 # HinzundKunz <martin.tlustos@gmail.com>, 2015-2019.
 # Matthias Schuster Scharmer <shalokshalom@protonmail.ch>, 2015.
 # Simon Persson <simon.persson@mykolab.com>, 2014,2016,2018.
 # Burkhard Lück <lueck@hube-lueck.de>, 2019, 2020, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2020.
+# Frederik Schwarzer <schwarzer@kde.org>, 2020, 2023.
+#
+# Translators:
+# jrabe, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2021-06-03 05:17+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-04-16 14:05+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.07.70\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -999,17 +1000,15 @@ msgstr "Zielpfad für die Datensicherung:"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "Es werden nur lokale Dateisystempfade unterstützt."
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
 msgstr ""
-"%1 hat kein Ziel<nl/>Es werden keine Sicherungen von diesem Plan erstellt."
+"Der Ordner existiert nicht. Es werden keine Sicherungen durchgeführt bis Sie "
+"diesen erstellt haben."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1256,12 +1255,10 @@ msgid "Extra options for advanced users"
 msgstr "Einstellungen für erfahrene Benutzer"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "Neuer Ordner"
+msgstr "Ordner erstellen"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format
