@@ -7,7 +7,7 @@
 # Simon Persson <simon.persson@mykolab.com>, 2014,2018.
 # Tichy <eristico@cryptolab.net>, 2018-2019.
 # Vincenzo Reale <smart2128vr@gmail.com>, 2020, 2021, 2023.
-# Paolo Zamponi <zapaolo@email.it>, 2022.
+# Paolo Zamponi <feus73@gmail.com>, 2022.
 #
 # Translators:
 msgid ""
