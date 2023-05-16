@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2023-03-21 13:57+0300\n"
+"PO-Revision-Date: 2023-05-15 22:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -987,8 +987,9 @@ msgid ""
 "Use this option if you want to backup your files on an external storage that "
 "can be plugged in to this computer, such as a USB hard drive or memory stick."
 msgstr ""
-"Bu seçeneği, dosyalarınızı bilgisayara bağlanabilen bir dış sürücüye; "
-"örneğin bir USB sabit disk veya bellek çubuğuna yedeklemek isterseniz seçin."
+"Dosyalarınızı bu bilgisayara takılabilen bir USB sabit sürücü veya bellek "
+"çubuğu gibi bir dış depolama birimine yedeklemek istiyorsanız bu seçeneği "
+"kullanın."
 
 #: kcm/backupplanwidget.cpp:656 kcm/backupplanwidget.cpp:660
 #, kde-kuit-format
