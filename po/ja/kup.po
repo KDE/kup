@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
@@ -24,7 +24,6 @@ msgid_plural ""
 "%1 source folders no longer exist. Please open settings and confirm what to "
 "include in backup.<nl/><filename>%2</filename>"
 msgstr[0] ""
-msgstr[1] ""
 
 #: daemon/bupjob.cpp:46 daemon/buprepairjob.cpp:24
 #: daemon/bupverificationjob.cpp:23
