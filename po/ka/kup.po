@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:02+0000\n"
-"PO-Revision-Date: 2023-02-24 05:06+0100\n"
+"PO-Revision-Date: 2023-06-03 05:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -1225,6 +1225,10 @@ msgid ""
 "system. File permissions only matters if there is more than one user of this "
 "computer or if you are backing up executable program files."
 msgstr ""
+"გაფრთხილება: ამ ფაილურ სისტემას სიმბოლური ბმულებისა და ფაილის წვდომების "
+"შენახვის მხარდაჭერა არ გააჩნია. ფაილის წვდომებს მნიშვნელობა მხოლოდ იმ "
+"შემთხვევაში აქვს, თუ კომპიუტერს ერთზე მეტი მომხმარებელი მოიხმარს ან თუ "
+"გამშვები ფაილების მარქაფს აპირებთ."
 
 #: kcm/driveselectiondelegate.cpp:141
 #, kde-kuit-format
@@ -1234,6 +1238,10 @@ msgid ""
 "permissions only matters if there is more than one user of this computer or "
 "if you are backing up executable program files."
 msgstr ""
+"გაფრთხილება: ამ ფაილურ სისტემას ფაილის წვდომების შენახვის მხარდაჭერა არ "
+"გააჩნია. ფაილის წვდომებს მნიშვნელობა მხოლოდ იმ შემთხვევაში აქვს, თუ "
+"კომპიუტერს ერთზე მეტი მომხმარებელი მოიხმარს ან თუ გამშვები ფაილების მარქაფს "
+"აპირებთ."
 
 #: kcm/folderselectionmodel.cpp:90
 #, kde-kuit-format
@@ -1294,6 +1302,7 @@ msgctxt "@info %1 is the name of the backup plan"
 msgid ""
 "%1 does not have a destination!<nl/>No backups will be saved by this plan."
 msgstr ""
+"%1-ს სამიზნე არ გააჩნია!<nl/>ამ გეგმის მიხედვით მარქაფები შენახული არ იქნება."
 
 #: kcm/kupkcm.cpp:180
 #, kde-kuit-format
