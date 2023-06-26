@@ -5,7 +5,15 @@
 #ifndef KUPENGINE_H
 #define KUPENGINE_H
 
+#include <QtGlobal>
+
+#if QT_VERSION_MAJOR == 5
 #include <Plasma/DataEngine>
+#else
+#include <Plasma5Support/DataEngine>
+namespace Plasma = Plasma5Support;
+#endif
+
 #include <QLocalSocket>
 
 class KupEngine : public Plasma::DataEngine

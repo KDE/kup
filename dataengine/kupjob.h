@@ -5,7 +5,14 @@
 #ifndef KUPJOB_H
 #define KUPJOB_H
 
+#include <QtGlobal>
+
+#if QT_VERSION_MAJOR == 5
 #include <Plasma/ServiceJob>
+#else
+#include <Plasma5Support/ServiceJob>
+namespace Plasma = Plasma5Support;
+#endif
 
 class QLocalSocket;
 

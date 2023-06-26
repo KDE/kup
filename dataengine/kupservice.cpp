@@ -13,7 +13,7 @@ KupService::KupService(int pPlanNumber, QLocalSocket *pSocket, QObject *pParent)
 	setName(QStringLiteral("kupservice"));
 }
 
-ServiceJob *KupService::createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) {
+Plasma::ServiceJob *KupService::createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) {
 	return new KupJob(mPlanNumber, mSocket, pOperation, pParameters, this);
 }
 
@@ -23,6 +23,6 @@ KupDaemonService::KupDaemonService(QLocalSocket *pSocket, QObject *pParent)
 	setName(QStringLiteral("kupdaemonservice"));
 }
 
-ServiceJob *KupDaemonService::createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) {
+Plasma::ServiceJob *KupDaemonService::createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) {
 	return new KupJob(-1, mSocket, pOperation, pParameters, this);
 }

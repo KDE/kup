@@ -5,10 +5,16 @@
 #ifndef KUPSERVICE_H
 #define KUPSERVICE_H
 
+#include <QtGlobal>
+
+#if QT_VERSION_MAJOR == 5
 #include <Plasma/Service>
 #include <Plasma/ServiceJob>
-
-using namespace Plasma;
+#else
+#include <Plasma5Support/Service>
+#include <Plasma5Support/ServiceJob>
+namespace Plasma = Plasma5Support;
+#endif
 
 class QLocalSocket;
 
@@ -18,7 +24,7 @@ class KupService : public Plasma::Service
 
 public:
 	 KupService(int pPlanNumber, QLocalSocket *pSocket, QObject *pParent = nullptr);
-	 ServiceJob *createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) override;
+	 Plasma::ServiceJob *createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) override;
 
 protected:
 	 QLocalSocket *mSocket;
@@ -31,7 +37,7 @@ class KupDaemonService : public Plasma::Service
 
 public:
 	 KupDaemonService(QLocalSocket *pSocket, QObject *pParent = nullptr);
-	 ServiceJob *createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) override;
+	 Plasma::ServiceJob *createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) override;
 
 protected:
 	 QLocalSocket *mSocket;
