@@ -25,6 +25,6 @@ KF${QT_MAJOR_VERSION}::I18n
 LibGit2::LibGit2
 )
 
-install(TARGETS kio_bup DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kio)
+install(TARGETS kio_bup DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT_MAJOR_VERSION}/kio)
 
 add_definitions(-fexceptions)
