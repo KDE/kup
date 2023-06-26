@@ -27,9 +27,16 @@
 
 K_PLUGIN_CLASS_WITH_JSON(KupKcm, "kcm_kup.json")
 
+#if QT_VERSION_MAJOR == 5
 KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
-    : KCModule(pParent, pArgs), mSourcePageToShow(0)
+	: KCModule(pParent, pArgs)
+#else
+	KupKcm::KupKcm(QObject *pParent, const KPluginMetaData &md, const QVariantList &pArgs)
+	: KCModule(pParent, md, pArgs)
+#endif
+	, mSourcePageToShow(0)
 {
+#if QT_VERSION_MAJOR == 5
 	KAboutData lAbout(QStringLiteral("kcm_kup"), i18n("Kup Configuration Module"),
 	                  QStringLiteral("0.9.1"),
 	                  i18n("Configuration of backup plans for the Kup backup system"),
@@ -38,6 +45,7 @@ KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
 	lAbout.setTranslator(xi18nc("NAME OF TRANSLATORS", "Your names"),
 	                     xi18nc("EMAIL OF TRANSLATORS", "Your emails"));
 	setAboutData(new KAboutData(lAbout));
+#endif
 	setObjectName(QStringLiteral("kcm_kup")); //needed for the kconfigdialogmanager magic
 	setButtons((Apply | buttons()) & ~Default);
 
@@ -76,7 +84,11 @@ KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
 		auto lHLayout = new QHBoxLayout;
 		lHLayout->addWidget(lSorryIcon);
 		lHLayout->addWidget(lSorryText, 1);
+#if QT_VERSION_MAJOR == 5
 		setLayout(lHLayout);
+#else
+		widget()->setLayout(lHLayout);
+#endif
 	} else {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 		Kdelibs4ConfigMigrator lMigrator(QStringLiteral("kup"));
@@ -96,7 +108,11 @@ KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
 		addConfig(mSettings, mFrontPage);
 		mStackedLayout = new QStackedLayout;
 		mStackedLayout->addWidget(mFrontPage);
+#if QT_VERSION_MAJOR == 5
 		setLayout(mStackedLayout);
+#else
+		widget()->setLayout(mStackedLayout);
+#endif
 		QListIterator<QVariant> lIter(pArgs);
 		while(lIter.hasNext()) {
 			QVariant lVariant = lIter.next();
@@ -110,9 +126,11 @@ KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
 	}
 }
 
+#if QT_VERSION_MAJOR == 5
 QSize KupKcm::sizeHint() const {
 	return {800, 600};
 }
+#endif
 
 void KupKcm::load() {
 	if(mBupVersion.isEmpty() && mRsyncVersion.isEmpty()) {
@@ -173,7 +191,12 @@ void KupKcm::save() {
 		lManager->updateSettings();
 		mStatusWidgets.at(i)->updateIcon();
 		if(lPlan->mDestinationType == 1 && lPlan->mExternalUUID.isEmpty()) {
-			KMessageBox::information(this, xi18nc("@info %1 is the name of the backup plan",
+#if QT_VERSION_MAJOR == 5
+			QWidget *wid = this;
+#else
+			QWidget *wid = widget();
+#endif
+			KMessageBox::information(wid, xi18nc("@info %1 is the name of the backup plan",
 			                                      "%1 does not have a destination!<nl/>"
 			                                      "No backups will be saved by this plan.",
 			                                      lPlan->mDescription),
