@@ -18,12 +18,15 @@
 
 #include <KAboutData>
 #include <KConfigDialogManager>
-#include <Kdelibs4ConfigMigrator>
 #include <KLineEdit>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KPluginFactory>
 #include <KProcess>
+
+#if QT_VERSION_MAJOR == 5
+#include <Kdelibs4ConfigMigrator>
+#endif
 
 K_PLUGIN_CLASS_WITH_JSON(KupKcm, "kcm_kup.json")
 
