@@ -41,3 +41,5 @@ KF${QT_MAJOR_VERSION}::ConfigWidgets
 if(QT_MAJOR_VERSION STREQUAL "6")
     target_link_libraries(kcm_kup KF${QT_MAJOR_VERSION}::KCMUtils)
 endif()
+
+kcmutils_generate_desktop_file(kcm_kup)
