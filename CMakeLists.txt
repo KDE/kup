@@ -25,7 +25,7 @@ include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
 
 find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS Widgets)
-find_package(KF5 ${KF_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
 Solid
 KIO
 IdleTime
@@ -37,7 +37,13 @@ Config
 JobWidgets
 Plasma
 WidgetsAddons
+XmlGui
+KCMUtils
 )
+
+if(QT_MAJOR_VERSION STREQUAL "6")
+    find_package(KF6Plasma5Support REQUIRED)
+endif()
 
 add_subdirectory(daemon)
 add_subdirectory(dataengine)

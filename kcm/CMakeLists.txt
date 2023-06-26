@@ -28,11 +28,16 @@ target_link_libraries(kcm_kup
 Qt::Core
 Qt::DBus
 Qt::Gui
-KF5::CoreAddons
-KF5::ConfigCore
-KF5::KIOCore
-KF5::KIOFileWidgets
-KF5::Solid
-KF5::I18n
-KF5::WidgetsAddons
+KF${QT_MAJOR_VERSION}::CoreAddons
+KF${QT_MAJOR_VERSION}::ConfigCore
+KF${QT_MAJOR_VERSION}::KIOCore
+KF${QT_MAJOR_VERSION}::KIOFileWidgets
+KF${QT_MAJOR_VERSION}::Solid
+KF${QT_MAJOR_VERSION}::I18n
+KF${QT_MAJOR_VERSION}::WidgetsAddons
+KF${QT_MAJOR_VERSION}::ConfigWidgets
 )
+
+if(QT_MAJOR_VERSION STREQUAL "6")
+    target_link_libraries(kcm_kup KF${QT_MAJOR_VERSION}::KCMUtils)
+endif()

@@ -37,11 +37,12 @@ add_executable(kup-filedigger ${filedigger_SRCS})
 target_link_libraries(kup-filedigger
 Qt::Core
 Qt::Gui
-KF5::KIOCore
-KF5::KIOFileWidgets
-KF5::I18n
-KF5::JobWidgets
-KF5::WidgetsAddons
+KF${QT_MAJOR_VERSION}::KIOCore
+KF${QT_MAJOR_VERSION}::KIOFileWidgets
+KF${QT_MAJOR_VERSION}::I18n
+KF${QT_MAJOR_VERSION}::JobWidgets
+KF${QT_MAJOR_VERSION}::WidgetsAddons
+KF${QT_MAJOR_VERSION}::XmlGui
 LibGit2::LibGit2
 )
 

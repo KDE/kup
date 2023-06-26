@@ -15,8 +15,12 @@ set(plasma_engine_kup_SRCS
 add_library(plasma_engine_kup MODULE ${plasma_engine_kup_SRCS})
 target_link_libraries(plasma_engine_kup
 	Qt::Network
-	KF5::Plasma
+	KF${QT_MAJOR_VERSION}::Plasma
 )
+
+if(QT_MAJOR_VERSION STREQUAL "6")
+	target_link_libraries(plasma_engine_kup KF6::Plasma5Support)
+endif()
 
 install(TARGETS plasma_engine_kup DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES kupservice.operations kupdaemonservice.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

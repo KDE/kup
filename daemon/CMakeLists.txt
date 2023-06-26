@@ -34,16 +34,16 @@ target_link_libraries(kup-daemon
 Qt::Core
 Qt::DBus
 Qt::Gui
-KF5::ConfigCore
-KF5::KIOCore
-KF5::KIOFileWidgets
-KF5::IdleTime
-KF5::I18n
-KF5::JobWidgets
-KF5::Solid
-KF5::Notifications
-KF5::CoreAddons
-KF5::DBusAddons
+KF${QT_MAJOR_VERSION}::ConfigCore
+KF${QT_MAJOR_VERSION}::KIOCore
+KF${QT_MAJOR_VERSION}::KIOFileWidgets
+KF${QT_MAJOR_VERSION}::IdleTime
+KF${QT_MAJOR_VERSION}::I18n
+KF${QT_MAJOR_VERSION}::JobWidgets
+KF${QT_MAJOR_VERSION}::Solid
+KF${QT_MAJOR_VERSION}::Notifications
+KF${QT_MAJOR_VERSION}::CoreAddons
+KF${QT_MAJOR_VERSION}::DBusAddons
 )
 
 ########### install files ###############
