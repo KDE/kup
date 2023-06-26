@@ -165,7 +165,11 @@ void FileDigger::createSelectionView() {
 	lPlaces->setModel(new KFilePlacesModel);
 
 	mDirOperator = new KDirOperator();
+#if KIO_VERSION < QT_VERSION_CHECK(5, 100, 0)
 	mDirOperator->setView(KFile::Tree);
+#else
+	mDirOperator->setViewMode(KFile::Tree);
+#endif
 	mDirOperator->setMode(KFile::Directory);
 	mDirOperator->setEnableDirHighlighting(true);
 	mDirOperator->setShowHiddenFiles(true);

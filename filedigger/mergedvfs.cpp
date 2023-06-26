@@ -9,6 +9,7 @@
 
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <kwidgetsaddons_version.h>
 
 #include <QDBusInterface>
 #include <QDir>
@@ -92,11 +93,20 @@ MergedNodeList &MergedNode::subNodes() {
 }
 
 void MergedNode::askForIntegrityCheck() {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 101, 0)
+	int lAnswer = KMessageBox::questionTwoActions(nullptr, xi18nc("@info messagebox",
+	                                                         "Could not read this backup archive. Perhaps some files "
+	                                                         "have become corrupted. Do you want to run an integrity "
+	                                                         "check to test this?"), QString(), KStandardGuiItem::ok(), KStandardGuiItem::cancel());
+	if(lAnswer == KMessageBox::PrimaryAction) {
+#else
+
 	int lAnswer = KMessageBox::questionYesNo(nullptr, xi18nc("@info messagebox",
 	                                                         "Could not read this backup archive. Perhaps some files "
 	                                                         "have become corrupted. Do you want to run an integrity "
 	                                                         "check to test this?"));
 	if(lAnswer == KMessageBox::Yes) {
+#endif
 		QDBusInterface lInterface(KUP_DBUS_SERVICE_NAME, KUP_DBUS_OBJECT_PATH);
 		if(lInterface.isValid()) {
 			lInterface.call(QStringLiteral("runIntegrityCheck"),
