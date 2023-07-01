@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-24 01:02+0000\n"
+"POT-Creation-Date: 2023-07-01 00:50+0000\n"
 "PO-Revision-Date: 2023-03-01 01:50+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -276,31 +276,31 @@ msgstr ""
 "Kup은 'bup' 백업 저장소 시스템을 사용하는 유연한 백업 솔루션입니다. 마지막으"
 "로 백업한 이후 변경된 파일만 백업하는 증분 백업을 빠르게 수행할 수 있습니다."
 
-#: daemon/main.cpp:37 kcm/kupkcm.cpp:36
+#: daemon/main.cpp:37 kcm/kupkcm.cpp:46
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "Copyright (C) 2011-2020 Simon Persson"
 
-#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:47
 #: purger/main.cpp:24
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:47
 #: purger/main.cpp:24
 #, kde-format
 msgid "Maintainer"
 msgstr "관리자"
 
-#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:38
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:48
 #: purger/main.cpp:25
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "박신조"
 
-#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:39
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:49
 #: purger/main.cpp:25
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -489,7 +489,7 @@ msgstr "열 브랜치 이름입니다."
 msgid "Path to the bup repository to be opened."
 msgstr "열 bup 저장소 경로입니다."
 
-#: filedigger/mergedvfs.cpp:96
+#: filedigger/mergedvfs.cpp:98 filedigger/mergedvfs.cpp:105
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid ""
@@ -499,19 +499,19 @@ msgstr ""
 "백업 압축 파일을 읽을 수 없습니다. 일부 파일이 손상되었을 수도 있습니다. 무결"
 "성 검사를 하시겠습니까?"
 
-#: filedigger/mergedvfs.cpp:144
+#: filedigger/mergedvfs.cpp:154
 #, kde-kuit-format
 msgctxt "added after folder name in some cases"
 msgid " (folder)"
 msgstr "(폴더)"
 
-#: filedigger/mergedvfs.cpp:146
+#: filedigger/mergedvfs.cpp:156
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (symlink)"
 msgstr "(심볼릭 링크)"
 
-#: filedigger/mergedvfs.cpp:148
+#: filedigger/mergedvfs.cpp:158
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (file)"
@@ -1314,17 +1314,17 @@ msgstr ""
 "<filename>%1</filename><nl/>폴더는 이 백업에 포함되지 <emphasis>않습니다</"
 "emphasis>"
 
-#: kcm/kupkcm.cpp:33
+#: kcm/kupkcm.cpp:43
 #, kde-format
 msgid "Kup Configuration Module"
 msgstr "Kup 설정 모듈"
 
-#: kcm/kupkcm.cpp:35
+#: kcm/kupkcm.cpp:45
 #, kde-format
 msgid "Configuration of backup plans for the Kup backup system"
 msgstr "Kup 백업 시스템의 백업 계획 설정 모듈"
 
-#: kcm/kupkcm.cpp:69
+#: kcm/kupkcm.cpp:80
 #, kde-format
 msgid ""
 "<h2>Backup programs are missing</h2><p>Before you can activate any backup "
@@ -1334,7 +1334,7 @@ msgstr ""
 "<h2>백업 프로그램 없음</h2><p>백업 계획을 활성화하려면 다음 프로그램을 설치해"
 "야 합니다</p><ul><li>bup: 버전된 백업</li><li>rsync: 동기화된 백업</li></ul>"
 
-#: kcm/kupkcm.cpp:177
+#: kcm/kupkcm.cpp:203
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1342,25 +1342,25 @@ msgid ""
 msgstr ""
 "%1의 대상을 설정하지 않았습니다!<nl/> 이 백업 계획은 실행되지 않습니다."
 
-#: kcm/kupkcm.cpp:180
+#: kcm/kupkcm.cpp:206
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "경고"
 
-#: kcm/kupkcm.cpp:226
+#: kcm/kupkcm.cpp:252
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan"
 msgstr "새 계획 추가"
 
-#: kcm/kupkcm.cpp:238
+#: kcm/kupkcm.cpp:264
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
 msgstr "백업 활성화됨"
 
-#: kcm/kupkcm.cpp:249
+#: kcm/kupkcm.cpp:275
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"

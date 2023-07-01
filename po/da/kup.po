@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-24 01:02+0000\n"
+"POT-Creation-Date: 2023-07-01 00:50+0000\n"
 "PO-Revision-Date: 2020-08-01 13:25+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -284,32 +284,32 @@ msgstr ""
 "gemmes de dele af filer, der faktisk er blevet ændret siden den sidste "
 "backup blev taget."
 
-#: daemon/main.cpp:37 kcm/kupkcm.cpp:36
+#: daemon/main.cpp:37 kcm/kupkcm.cpp:46
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2011-2015 Simon Persson"
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "Copyright (C) 2011-2015 Simon Persson"
 
-#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:47
 #: purger/main.cpp:24
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:47
 #: purger/main.cpp:24
 #, kde-format
 msgid "Maintainer"
 msgstr "Vedligeholdelse"
 
-#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:38
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:48
 #: purger/main.cpp:25
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:39
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:49
 #: purger/main.cpp:25
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -495,7 +495,7 @@ msgstr ""
 msgid "Path to the bup repository to be opened."
 msgstr "Sti til det bup-arkiv der skal åbnes."
 
-#: filedigger/mergedvfs.cpp:96
+#: filedigger/mergedvfs.cpp:98 filedigger/mergedvfs.cpp:105
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid ""
@@ -503,19 +503,19 @@ msgid ""
 "corrupted. Do you want to run an integrity check to test this?"
 msgstr ""
 
-#: filedigger/mergedvfs.cpp:144
+#: filedigger/mergedvfs.cpp:154
 #, kde-kuit-format
 msgctxt "added after folder name in some cases"
 msgid " (folder)"
 msgstr "(mappe)"
 
-#: filedigger/mergedvfs.cpp:146
+#: filedigger/mergedvfs.cpp:156
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (symlink)"
 msgstr "(symbolsk link)"
 
-#: filedigger/mergedvfs.cpp:148
+#: filedigger/mergedvfs.cpp:158
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (file)"
@@ -1275,17 +1275,17 @@ msgstr ""
 "<filename>%1</filename><nl/> vil <emphasis>ikke</emphasis> blive inkluderet "
 "i Sikkerhedskopien"
 
-#: kcm/kupkcm.cpp:33
+#: kcm/kupkcm.cpp:43
 #, kde-format
 msgid "Kup Configuration Module"
 msgstr "Kup Indstillingsmodul"
 
-#: kcm/kupkcm.cpp:35
+#: kcm/kupkcm.cpp:45
 #, kde-format
 msgid "Configuration of backup plans for the Kup backup system"
 msgstr "Indstilling af backupplaner for KUP backupsystemet."
 
-#: kcm/kupkcm.cpp:69
+#: kcm/kupkcm.cpp:80
 #, kde-format
 msgid ""
 "<h2>Backup programs are missing</h2><p>Before you can activate any backup "
@@ -1296,32 +1296,32 @@ msgstr ""
 "skal du installere:</p><ul><li>BUP, for versionerede backupper</li><li>rsync "
 "for synkroniserede backupper</li></ul>"
 
-#: kcm/kupkcm.cpp:177
+#: kcm/kupkcm.cpp:203
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
 "%1 does not have a destination!<nl/>No backups will be saved by this plan."
 msgstr ""
 
-#: kcm/kupkcm.cpp:180
+#: kcm/kupkcm.cpp:206
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Advarsel"
 
-#: kcm/kupkcm.cpp:226
+#: kcm/kupkcm.cpp:252
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan"
 msgstr "Tilføj Ny Plan"
 
-#: kcm/kupkcm.cpp:238
+#: kcm/kupkcm.cpp:264
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
 msgstr "Backup Aktiveret"
 
-#: kcm/kupkcm.cpp:249
+#: kcm/kupkcm.cpp:275
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"

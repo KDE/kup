@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-24 01:02+0000\n"
+"POT-Creation-Date: 2023-07-01 00:50+0000\n"
 "PO-Revision-Date: 2023-02-25 00:13+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -307,31 +307,31 @@ msgstr ""
 "dei file che sono state realmente modificate da quando è stato eseguito "
 "l'ultima copia."
 
-#: daemon/main.cpp:37 kcm/kupkcm.cpp:36
+#: daemon/main.cpp:37 kcm/kupkcm.cpp:46
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "Copyright (C) 2011-2020 Simon Persson"
 
-#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:47
 #: purger/main.cpp:24
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:37
+#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:47
 #: purger/main.cpp:24
 #, kde-format
 msgid "Maintainer"
 msgstr "Responsabile"
 
-#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:38
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:48
 #: purger/main.cpp:25
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Vincenzo Reale,Francesco Marinucci"
 
-#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:39
+#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:49
 #: purger/main.cpp:25
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -524,7 +524,7 @@ msgstr "Nome del ramo da aprire."
 msgid "Path to the bup repository to be opened."
 msgstr "Percorso del deposito bup da aprire."
 
-#: filedigger/mergedvfs.cpp:96
+#: filedigger/mergedvfs.cpp:98 filedigger/mergedvfs.cpp:105
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid ""
@@ -535,19 +535,19 @@ msgstr ""
 "potrebbero essere danneggiati. Vuoi eseguire il controllo dell'integrità per "
 "verificare?"
 
-#: filedigger/mergedvfs.cpp:144
+#: filedigger/mergedvfs.cpp:154
 #, kde-kuit-format
 msgctxt "added after folder name in some cases"
 msgid " (folder)"
 msgstr "(cartella)"
 
-#: filedigger/mergedvfs.cpp:146
+#: filedigger/mergedvfs.cpp:156
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (symlink)"
 msgstr "(collegamento)"
 
-#: filedigger/mergedvfs.cpp:148
+#: filedigger/mergedvfs.cpp:158
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (file)"
@@ -1382,19 +1382,19 @@ msgstr ""
 "<filename>%1</filename><nl/><emphasis>non</emphasis> sarà incluso nella "
 "copia di sicurezza"
 
-#: kcm/kupkcm.cpp:33
+#: kcm/kupkcm.cpp:43
 #, kde-format
 msgid "Kup Configuration Module"
 msgstr "Modulo di configurazione di Kup"
 
-#: kcm/kupkcm.cpp:35
+#: kcm/kupkcm.cpp:45
 #, kde-format
 msgid "Configuration of backup plans for the Kup backup system"
 msgstr ""
 "Configurazione dei piani di creazione di copie sicurezza per il sistema di "
 "copie di Kup"
 
-#: kcm/kupkcm.cpp:69
+#: kcm/kupkcm.cpp:80
 #, kde-format
 msgid ""
 "<h2>Backup programs are missing</h2><p>Before you can activate any backup "
@@ -1406,7 +1406,7 @@ msgstr ""
 "p><ul><li>bup, per le copie di sicurezza incrementali, oppure</li><li>rsync, "
 "per le copie di sicurezza sincronizzate</li></ul>"
 
-#: kcm/kupkcm.cpp:177
+#: kcm/kupkcm.cpp:203
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1415,25 +1415,25 @@ msgstr ""
 "%1 non ha una destinazione!<nl/>Nessuna copia di sicurezza sarà salvata da "
 "questo piano."
 
-#: kcm/kupkcm.cpp:180
+#: kcm/kupkcm.cpp:206
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Attenzione"
 
-#: kcm/kupkcm.cpp:226
+#: kcm/kupkcm.cpp:252
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan"
 msgstr "Aggiungi nuovo piano"
 
-#: kcm/kupkcm.cpp:238
+#: kcm/kupkcm.cpp:264
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
 msgstr "Copie di sicurezza abilitate"
 
-#: kcm/kupkcm.cpp:249
+#: kcm/kupkcm.cpp:275
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
