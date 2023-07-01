@@ -35,7 +35,7 @@ KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
 	: KCModule(pParent, pArgs)
 #else
 	KupKcm::KupKcm(QObject *pParent, const KPluginMetaData &md, const QVariantList &pArgs)
-	: KCModule(pParent, md, pArgs)
+	: KCModule(pParent, md)
 #endif
 	, mSourcePageToShow(0)
 {
