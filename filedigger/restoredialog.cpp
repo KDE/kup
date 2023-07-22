@@ -267,7 +267,7 @@ void RestoreDialog::completePrechecks() {
 	} else if(mUI->mFileConflictList->count() > 0) {
 		qCDebug(KUPFILEDIGGER) << "Detected file conflicts.";
 		if(mSourceInfo.mIsDirectory) {
-			QString lDateString = QLocale().toString(QDateTime::fromSecsSinceEpoch(static_cast<qint64>(mSourceInfo.mCommitTime)).toLocalTime());
+			QString lDateString = QLocale().toString(QDateTime::fromSecsSinceEpoch(mSourceInfo.mCommitTime).toLocalTime());
 			lDateString.replace(QLatin1Char('/'), QLatin1Char('-')); // make sure no slashes in suggested folder name
 			mUI->mNewFolderNameEdit->setText(mSourceFileName +
 			                                 xi18nc("added to the suggested filename when restoring, %1 is the time when backup was saved",
@@ -309,12 +309,12 @@ void RestoreDialog::startRestoring() {
 	QString lSourcePath(QDir::separator());
 	lSourcePath.append(mSourceInfo.mBranchName);
 	lSourcePath.append(QDir::separator());
-	QDateTime lCommitTime = QDateTime::fromSecsSinceEpoch(static_cast<qint64>(mSourceInfo.mCommitTime));
+	QDateTime lCommitTime = QDateTime::fromSecsSinceEpoch(mSourceInfo.mCommitTime);
 	lSourcePath.append(lCommitTime.toString(QStringLiteral("yyyy-MM-dd-hhmmss")));
 	lSourcePath.append(mSourceInfo.mPathInRepo);
 	qCDebug(KUPFILEDIGGER) << "Starting restore. Source path: " << lSourcePath << ", restore path: " << mRestorationPath;
 	auto lRestoreJob = new RestoreJob(mSourceInfo.mRepoPath, lSourcePath, mRestorationPath,
-	                                         mDirectoriesCount, mSourceSize, mFileSizes);
+	                                  mDirectoriesCount, mSourceSize, mFileSizes);
 	if(mJobTracker == nullptr) {
 		mJobTracker = new KWidgetJobTracker(this);
 	}
