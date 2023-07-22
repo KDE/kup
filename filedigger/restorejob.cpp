@@ -15,7 +15,7 @@
 #endif
 
 RestoreJob::RestoreJob(QString pRepositoryPath, QString pSourcePath, QString pRestorationPath,
-                       int pTotalDirCount, quint64 pTotalFileSize, const QHash<QString, quint64> &pFileSizes)
+                       int pTotalDirCount, qint64 pTotalFileSize, const QHash<QString, qint64> &pFileSizes)
  : mRepositoryPath(std::move(pRepositoryPath)), mSourcePath(std::move(pSourcePath)), mRestorationPath(std::move(pRestorationPath)),
    mTotalDirCount(pTotalDirCount), mTotalFileSize(pTotalFileSize), mFileSizes(pFileSizes)
 {

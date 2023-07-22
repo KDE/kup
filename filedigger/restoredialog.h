@@ -59,12 +59,12 @@ private:
 	QFileInfo mFolderToCreate;
 	QString mRestorationPath; // not necessarily same as destination
 	BupSourceInfo mSourceInfo;
-	quint64 mDestinationSize{}; //size of files about to be overwritten
-	quint64 mSourceSize{}; //size of files about to be read
+	qint64 mDestinationSize{}; //size of files about to be overwritten
+	qint64 mSourceSize{}; //size of files about to be read
 	KMessageWidget *mMessageWidget;
 	QString mSavedWorkingDirectory;
 	QString mSourceFileName;
-	QHash<QString, quint64> mFileSizes;
+	QHash<QString, qint64> mFileSizes;
 	int mDirectoriesCount{};
 	KWidgetJobTracker *mJobTracker;
 };

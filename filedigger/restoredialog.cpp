@@ -224,7 +224,7 @@ void RestoreDialog::collectSourceListing(KIO::Job *pJob, const KIO::UDSEntryList
 			}
 		} else {
 			if(!it->isLink()) {
-				auto lEntrySize = static_cast<quint64>(it->numberValue(KIO::UDSEntry::UDS_SIZE));
+				auto lEntrySize = it->numberValue(KIO::UDSEntry::UDS_SIZE);
 				mSourceSize += lEntrySize;
 				mFileSizes.insert(mSourceFileName + QDir::separator() + lEntryName, lEntrySize);
 			}
