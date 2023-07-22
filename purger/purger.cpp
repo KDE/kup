@@ -38,7 +38,7 @@ Purger::Purger(QString pRepoPath, QString pBranchName, QWidget *pParent)
 	*mCollectProcess << QStringLiteral("bup");
 	*mCollectProcess << QStringLiteral("-d") << mRepoPath;
 	*mCollectProcess << QStringLiteral("gc") << QStringLiteral("--unsafe") << QStringLiteral("--verbose");
-	connect(mCollectProcess, &KProcess::readyReadStandardError, [this] {
+	connect(mCollectProcess, &KProcess::readyReadStandardError, this, [this] {
 		auto lLogText = QString::fromUtf8(mCollectProcess->readAllStandardError());
 		qCInfo(KUPPURGER) << lLogText;
 		mTextEdit->append(lLogText);
@@ -51,7 +51,7 @@ Purger::Purger(QString pRepoPath, QString pBranchName, QWidget *pParent)
 	*mListProcess << QStringLiteral("bup");
 	*mListProcess << QStringLiteral("-d") << mRepoPath;
 	*mListProcess << QStringLiteral("ls") << QStringLiteral("--hash") << mBranchName;
-	connect(mListProcess, &KProcess::readyReadStandardOutput, [this] {
+	connect(mListProcess, &KProcess::readyReadStandardOutput, this, [this] {
 		KFormat lFormat;
 		const auto lLines = QString::fromUtf8(mListProcess->readAllStandardOutput()).split(QChar::LineFeed);
 		for(const QString &lLine: lLines) {
@@ -112,7 +112,7 @@ void Purger::purge() {
 				lRemoveProcess << QStringLiteral("bup");
 				lRemoveProcess << QStringLiteral("-d") << mRepoPath << QStringLiteral("rm");
 				lRemoveProcess << QStringLiteral("--unsafe") << QStringLiteral("--verbose");
-				lRemoveProcess << QString("%1/%2").arg(mBranchName).arg(lTimeStamp);
+				lRemoveProcess << QString("%1/%2").arg(mBranchName, lTimeStamp);
 				qCInfo(KUPPURGER)  << lRemoveProcess.program();
 				if(lRemoveProcess.execute() == 0) {
 					lAnythingRemoved = true;

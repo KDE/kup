@@ -102,7 +102,7 @@ public:
 		QByteArray lArray;
 		if(0 == read(lArray)) {
 			mSymlinkTarget = QString::fromUtf8(lArray.data(), lArray.size());
-			seek(0);
+			Symlink::seek(0);
 		}
 	}
 };

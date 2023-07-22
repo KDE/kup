@@ -173,7 +173,7 @@ quint64 BlobFile::calculateSize() {
 ChunkFile::ChunkFile(Node *pParent, const git_oid *pOid, const QString &pName, qint64 pMode)
    : File(pParent, pName, pMode), mOid(*pOid), mCurrentBlob(nullptr), mValidSeekPosition(false)
 {
-	seek(0);
+	ChunkFile::seek(0);
 }
 
 ChunkFile::~ChunkFile() {
