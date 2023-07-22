@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.16)
 cmake_policy(SET CMP0063 NEW)
 
 set(KF_MIN_VERSION "5.71.0")
@@ -24,7 +24,7 @@ include(FeatureSummary)
 include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
 
-find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS Widgets)
+find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS Core Widgets)
 find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
 Solid
 KIO
