@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-01 00:50+0000\n"
-"PO-Revision-Date: 2023-03-01 01:50+0100\n"
+"PO-Revision-Date: 2023-07-24 00:04+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -1109,8 +1109,8 @@ msgid ""
 "settings and temporary files for your applications."
 msgstr ""
 "백업 원본을 선택할 때 명시적으로 숨김 폴더를 포함하거나 제외할 수 있습니다. "
-"숨김 폴더의 이름은 점(.)으로 시작합니다. 대부분 홈 폴더 아래에 있으며 프로그"
-"램의 설정이나 임시 파일을 저장합니다."
+"숨김 폴더의 이름은 점(.)으로 시작합니다. 대부분 홈 폴더 아래에 있으며 앱의 설"
+"정이나 임시 파일을 저장합니다."
 
 #: kcm/backupplanwidget.cpp:843
 #, kde-kuit-format
