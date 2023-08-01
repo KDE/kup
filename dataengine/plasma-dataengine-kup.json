@@ -24,6 +24,7 @@
                 "Name[pt]": "Simon Persson",
                 "Name[pt_BR]": "Simon Persson",
                 "Name[sl]": "Simon Persson",
+                "Name[sv]": "Simon Persson",
                 "Name[tr]": "Simon Persson",
                 "Name[uk]": "Simon Persson",
                 "Name[x-test]": "xxSimon Perssonxx"
@@ -50,6 +51,7 @@
         "Description[pt]": "Estado dos planos de cópias de segurança",
         "Description[pt_BR]": "Status dos planos de backup",
         "Description[sl]": "Stanje plana izdelav varnostnih kopij",
+        "Description[sv]": "Säkerhetskopieringsplanernas status",
         "Description[tr]": "Yedekleme tasarılarının durumu",
         "Description[uk]": "Стан планів резервного копіювання",
         "Description[x-test]": "xxStatus of backup plansxx",
