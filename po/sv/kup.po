@@ -6,13 +6,13 @@
 # Simon Persson <simon.persson@mykolab.com>, 2012-2014.
 # Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
 # Simon Persson <simon.persson@mykolab.com>, 2017.
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2020, 2021.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-01 00:50+0000\n"
-"PO-Revision-Date: 2021-03-16 07:57+0100\n"
+"PO-Revision-Date: 2023-07-31 10:23+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -969,18 +969,15 @@ msgstr "Plats att lagra säkerhetskopiorna:"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "Bara lokala filsystemsökvägar fungerar."
 
 #: kcm/backupplanwidget.cpp:627
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
 msgstr ""
-"%1 har ingen lagringsplats.<nl/>Inga säkerhetskopior kommer att sparas med "
-"planen."
+"Katalogen finns inte. Inga säkerhetskopior kommer att sparas innan den "
+"skapas."
 
 #: kcm/backupplanwidget.cpp:646
 #, kde-kuit-format
@@ -1226,12 +1223,10 @@ msgid "Extra options for advanced users"
 msgstr "Extra inställningar för avancerade användare"
 
 #: kcm/backupplanwidget.cpp:981
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "Ny katalog"
+msgstr "Skapa katalog"
 
 #: kcm/driveselection.cpp:257
 #, kde-kuit-format
