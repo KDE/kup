@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-01 00:50+0000\n"
-"PO-Revision-Date: 2023-07-15 06:31+0200\n"
+"PO-Revision-Date: 2023-08-01 08:06+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -282,6 +282,9 @@ msgid ""
 "This allows it to quickly perform incremental backups, only saving the parts "
 "of files that has actually changed since last backup was saved."
 msgstr ""
+"Kup მოქნილი მარქაფის გადაწყვეტილებაა, რომელიც მარქაფების საცავის სისტემა "
+"'bup'-ს იყენებს. ეს მას საშუალებას აძლევს, შექმნას ინკრემენტული მარქაფები, "
+"რაც მხოლოდ ბოლო მარქაფის შემდეგ მომხდარი ცვლილებების მარქაფს გულისხმობს."
 
 #: daemon/main.cpp:37 kcm/kupkcm.cpp:46
 #, kde-format
@@ -779,6 +782,10 @@ msgid ""
 "you, one possible solution is to exclude the whole folder where the file is "
 "stored from the backup plan."
 msgstr ""
+"წვდომა, რომ წაიკითხოთ ფაილი:<filename>%1</filename> არ გაგაჩნიათ<nl/>მას "
+"წყაროების არჩევანში ვერ ჩასვამთ. თუ ეს ფაილი მნიშვნელოვანი არაა, ერთ-ერთი "
+"შესაძლო გადაწყვეტილებაა, გამორიცხოთ მთლიანი საქაღალდე, რომელიც ამ ფაილს "
+"შიეცავს."
 
 #: kcm/backupplanwidget.cpp:392
 #, kde-kuit-format
@@ -950,6 +957,8 @@ msgid ""
 "Use this option if you want to backup your files on an external storage that "
 "can be plugged in to this computer, such as a USB hard drive or memory stick."
 msgstr ""
+"გამოიყენეთ ეს პარამეტრი, თუ გნებავთ, მარქაფები გარე საცავზე, რომელის მოხსნაც "
+"შეგიძლიათ (მაგ: USB დისკი), შეინახოთ."
 
 #: kcm/backupplanwidget.cpp:656 kcm/backupplanwidget.cpp:660
 #, kde-kuit-format
@@ -1006,6 +1015,8 @@ msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the popup menu from the backup system tray icon."
 msgstr ""
+"მარქაფები მხოლოდ მაშინ შეინახება, როცა ხელით მოითხოვს. ეს სისტემურ საათთან "
+"მდებარე მარქაფის ხატულის მხტუნარა მენიუთი შეგიძლიათ."
 
 #: kcm/backupplanwidget.cpp:732
 #, kde-kuit-format
