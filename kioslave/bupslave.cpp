@@ -64,13 +64,13 @@ BupSlave::~BupSlave() {
 
 void BupSlave::close() {
 	mOpenFile = nullptr;
-	emit finished();
+	finished();
 }
 
 void BupSlave::get(const QUrl &pUrl) {
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		emit error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
+		error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 		return;
 	}
 
@@ -80,18 +80,18 @@ void BupSlave::get(const QUrl &pUrl) {
 	// target it already got from calling stat() on this one.
 	Node *lNode = mRepository->resolve(lPathInRepo, true);
 	if(lNode == nullptr) {
-		emit error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
+		error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
 		return;
 	}
 	File *lFile = qobject_cast<File *>(lNode);
 	if(lFile == nullptr) {
-		emit error(KIO::ERR_IS_DIRECTORY, lPathInRepo.join(QStringLiteral("/")));
+		error(KIO::ERR_IS_DIRECTORY, lPathInRepo.join(QStringLiteral("/")));
 		return;
 	}
 
-	emit mimeType(lFile->mMimeType);
+	mimeType(lFile->mMimeType);
 	// Emit total size AFTER mimetype
-	emit totalSize(lFile->size());
+	totalSize(lFile->size());
 
 	//make sure file is at the beginning
 	lFile->seek(0);
@@ -102,7 +102,7 @@ void BupSlave::get(const QUrl &pUrl) {
         quint64 lOffset = lResumeOffset.toULongLong(&ok);
         if (ok && lOffset < lFile->size()) {
 			if(0 == lFile->seek(lOffset)) {
-				emit canResume();
+				canResume();
 				lProcessedSize = lOffset;
 			}
 		}
@@ -111,33 +111,33 @@ void BupSlave::get(const QUrl &pUrl) {
 	QByteArray lResultArray;
 	int lRetVal;
 	while(0 == (lRetVal = lFile->read(lResultArray))) {
-		emit data(lResultArray);
+		data(lResultArray);
         lProcessedSize += static_cast<quint64>(lResultArray.length());
-		emit processedSize(lProcessedSize);
+		processedSize(lProcessedSize);
 	}
 	if(lRetVal == KIO::ERR_NO_CONTENT) {
-		emit data(QByteArray());
-		emit processedSize(lProcessedSize);
-		emit finished();
+		data(QByteArray());
+		processedSize(lProcessedSize);
+		finished();
 	} else {
-		emit error(lRetVal, lPathInRepo.join(QStringLiteral("/")));
+		error(lRetVal, lPathInRepo.join(QStringLiteral("/")));
 	}
 }
 
 void BupSlave::listDir(const QUrl &pUrl) {
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		emit error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
+		error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 		return;
 	}
 	Node *lNode = mRepository->resolve(lPathInRepo, true);
 	if(lNode == nullptr) {
-		emit error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
+		error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
 		return;
 	}
 	auto lDir = qobject_cast<Directory *>(lNode);
 	if(lDir == nullptr) {
-		emit error(KIO::ERR_IS_FILE, lPathInRepo.join(QStringLiteral("/")));
+		error(KIO::ERR_IS_FILE, lPathInRepo.join(QStringLiteral("/")));
 		return;
 	}
 
@@ -151,89 +151,89 @@ void BupSlave::listDir(const QUrl &pUrl) {
 	UDSEntry lEntry;
 	while(i.hasNext()) {
 		createUDSEntry(i.next().value(), lEntry, lDetails);
-		emit listEntry(lEntry);
+		listEntry(lEntry);
 	}
-	emit finished();
+	finished();
 }
 
 void BupSlave::open(const QUrl &pUrl, QIODevice::OpenMode pMode) {
 	if(pMode & QIODevice::WriteOnly) {
-		emit error(KIO::ERR_CANNOT_OPEN_FOR_WRITING, pUrl.toDisplayString());
+		error(KIO::ERR_CANNOT_OPEN_FOR_WRITING, pUrl.toDisplayString());
 		return;
 	}
 
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		emit error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
+		error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 		return;
 	}
 
 	Node *lNode = mRepository->resolve(lPathInRepo, true);
 	if(lNode == nullptr) {
-		emit error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
+		error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
 		return;
 	}
 
 	File *lFile = qobject_cast<File *>(lNode);
 	if(lFile == nullptr) {
-		emit error(KIO::ERR_IS_DIRECTORY, lPathInRepo.join(QStringLiteral("/")));
+		error(KIO::ERR_IS_DIRECTORY, lPathInRepo.join(QStringLiteral("/")));
 		return;
 	}
 
 	if(0 != lFile->seek(0)) {
-		emit error(KIO::ERR_CANNOT_OPEN_FOR_READING, pUrl.toDisplayString());
+		error(KIO::ERR_CANNOT_OPEN_FOR_READING, pUrl.toDisplayString());
 		return;
 	}
 
 	mOpenFile = lFile;
-	emit mimeType(lFile->mMimeType);
-	emit totalSize(lFile->size());
-	emit position(0);
-	emit opened();
+	mimeType(lFile->mMimeType);
+	totalSize(lFile->size());
+	position(0);
+	opened();
 }
 
 void BupSlave::read(filesize_t pSize) {
 	if(mOpenFile == nullptr) {
-		emit error(KIO::ERR_CANNOT_READ, QString());
+		error(KIO::ERR_CANNOT_READ, QString());
 		return;
 	}
 	QByteArray lResultArray;
 	int lRetVal = 0;
     while(pSize > 0 && 0 == (lRetVal = mOpenFile->read(lResultArray, static_cast<int>(pSize)))) {
         pSize -= static_cast<quint64>(lResultArray.size());
-		emit data(lResultArray);
+		data(lResultArray);
 	}
 	if(lRetVal == 0) {
-		emit data(QByteArray());
-		emit finished();
+		data(QByteArray());
+		finished();
 	} else {
-		emit error(lRetVal, mOpenFile->completePath());
+		error(lRetVal, mOpenFile->completePath());
 	}
 }
 
 void BupSlave::seek(filesize_t pOffset) {
 	if(mOpenFile == nullptr) {
-		emit error(KIO::ERR_CANNOT_SEEK, QString());
+		error(KIO::ERR_CANNOT_SEEK, QString());
 		return;
 	}
 
 	if(0 != mOpenFile->seek(pOffset)) {
-		emit error(KIO::ERR_CANNOT_SEEK, mOpenFile->completePath());
+		error(KIO::ERR_CANNOT_SEEK, mOpenFile->completePath());
 		return;
 	}
-	emit position(pOffset);
+	position(pOffset);
 }
 
 void BupSlave::stat(const QUrl &pUrl) {
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		emit error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
+		error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 		return;
 	}
 
 	Node *lNode = mRepository->resolve(lPathInRepo);
 	if(lNode == nullptr) {
-		emit error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
+		error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
 		return;
 	}
 
@@ -242,25 +242,25 @@ void BupSlave::stat(const QUrl &pUrl) {
 
 	UDSEntry lUDSEntry;
 	createUDSEntry(lNode, lUDSEntry, lDetails);
-	emit statEntry(lUDSEntry);
-	emit finished();
+	statEntry(lUDSEntry);
+	finished();
 }
 
 void BupSlave::mimetype(const QUrl &pUrl) {
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		emit error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
+		error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 		return;
 	}
 
 	Node *lNode = mRepository->resolve(lPathInRepo);
 	if(lNode == nullptr) {
-		emit error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
+		error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
 		return;
 	}
 
-	emit mimeType(lNode->mMimeType);
-	emit finished();
+	mimeType(lNode->mMimeType);
+	finished();
 }
 
 bool BupSlave::checkCorrectRepository(const QUrl &pUrl, QStringList &pPathInRepository) {
