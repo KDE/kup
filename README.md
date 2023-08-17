@@ -10,8 +10,8 @@ There are two types of backup schemes supported, one which keeps the backup fold
 ## What the Kup backup system consists of ##
 - Configuration module, available in your system settings. Here you can configure backup plans, what to include, where to store the backup and how often. You can also see the status for the backup plans here.
 - A small program running in the background. It will monitor to see when your backup destination is available, schedule and run your backup plans.
-- Kioslave for accessing bup archives. This allows you to open files and folders directly from an archive, with any KDE application.
-- A file browsing application for bup archives, allowing you to locate the file you want to restore more easily than with the kioslave. It also helps you restore files or folders.
+- Kioworker for accessing bup archives. This allows you to open files and folders directly from an archive, with any KDE application.
+- A file browsing application for bup archives, allowing you to locate the file you want to restore more easily than with the kioworker. It also helps you restore files or folders.
 
 ## Detailed list of features ##
 - backup types:

@@ -7,8 +7,9 @@
 #include <QCoreApplication>
 #include <QFile>
 #include <QVarLengthArray>
+#include <QUrl>
 
-#include <KIO/SlaveBase>
+#include <KIO/WorkerBase>
 using namespace KIO;
 #include <KLocalizedString>
 #include <KProcess>
@@ -20,22 +21,22 @@ using namespace KIO;
 class KIOPluginForMetaData : public QObject
 {
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID "org.kde.kio.slave.bup" FILE "bup.json")
+    Q_PLUGIN_METADATA(IID "org.kde.kio.worker.bup" FILE "bup.json")
 };
 
-class BupSlave : public SlaveBase
+class BupWorker : public WorkerBase
 {
 public:
-	BupSlave(const QByteArray &pPoolSocket, const QByteArray &pAppSocket);
-	~BupSlave() override;
-	void close() override;
-	void get(const QUrl &pUrl) override;
-	void listDir(const QUrl &pUrl) override ;
-	void open(const QUrl &pUrl, QIODevice::OpenMode pMode) override;
-	void read(filesize_t pSize) override;
-	void seek(filesize_t pOffset) override;
-	void stat(const QUrl &pUrl) override;
-	void mimetype(const QUrl &pUrl) override;
+	BupWorker(const QByteArray &pPoolSocket, const QByteArray &pAppSocket);
+	~BupWorker() override;
+	KIO::WorkerResult close() override;
+	KIO::WorkerResult get(const QUrl &pUrl) override;
+	KIO::WorkerResult listDir(const QUrl &pUrl) override ;
+	KIO::WorkerResult open(const QUrl &pUrl, QIODevice::OpenMode pMode) override;
+	KIO::WorkerResult read(filesize_t pSize) override;
+	KIO::WorkerResult seek(filesize_t pOffset) override;
+	KIO::WorkerResult stat(const QUrl &pUrl) override;
+	KIO::WorkerResult mimetype(const QUrl &pUrl) override;
 
 private:
 	bool checkCorrectRepository(const QUrl &pUrl, QStringList &pPathInRepository);
@@ -49,44 +50,41 @@ private:
 	File *mOpenFile;
 };
 
-BupSlave::BupSlave(const QByteArray &pPoolSocket, const QByteArray &pAppSocket)
-   : SlaveBase("bup", pPoolSocket, pAppSocket)
+BupWorker::BupWorker(const QByteArray &pPoolSocket, const QByteArray &pAppSocket)
+   : WorkerBase("bup", pPoolSocket, pAppSocket)
 {
 	mRepository = nullptr;
 	mOpenFile = nullptr;
 	git_libgit2_init();
 }
 
-BupSlave::~BupSlave() {
+BupWorker::~BupWorker() {
 	delete mRepository;
 	git_libgit2_shutdown();
 }
 
-void BupSlave::close() {
+KIO::WorkerResult BupWorker::close() {
 	mOpenFile = nullptr;
-	finished();
+	return KIO::WorkerResult::pass();
 }
 
-void BupSlave::get(const QUrl &pUrl) {
+KIO::WorkerResult BupWorker::get(const QUrl &pUrl) {
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 	}
 
 	// Assume that a symlink should be followed.
 	// Kio will never call get() on a symlink if it actually wants to copy a
-	// symlink, it would just create a symlink on the destination kioslave using the
+	// symlink, it would just create a symlink on the destination kioworker using the
 	// target it already got from calling stat() on this one.
 	Node *lNode = mRepository->resolve(lPathInRepo, true);
 	if(lNode == nullptr) {
-		error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
 	}
 	File *lFile = qobject_cast<File *>(lNode);
 	if(lFile == nullptr) {
-		error(KIO::ERR_IS_DIRECTORY, lPathInRepo.join(QStringLiteral("/")));
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_IS_DIRECTORY, lPathInRepo.join(QStringLiteral("/")));
 	}
 
 	mimeType(lFile->mMimeType);
@@ -118,27 +116,24 @@ void BupSlave::get(const QUrl &pUrl) {
 	if(lRetVal == KIO::ERR_NO_CONTENT) {
 		data(QByteArray());
 		processedSize(lProcessedSize);
-		finished();
+		return KIO::WorkerResult::pass();
 	} else {
-		error(lRetVal, lPathInRepo.join(QStringLiteral("/")));
+		return KIO::WorkerResult::fail(lRetVal, lPathInRepo.join(QStringLiteral("/")));
 	}
 }
 
-void BupSlave::listDir(const QUrl &pUrl) {
+KIO::WorkerResult BupWorker::listDir(const QUrl &pUrl) {
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 	}
 	Node *lNode = mRepository->resolve(lPathInRepo, true);
 	if(lNode == nullptr) {
-		error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
 	}
 	auto lDir = qobject_cast<Directory *>(lNode);
 	if(lDir == nullptr) {
-		error(KIO::ERR_IS_FILE, lPathInRepo.join(QStringLiteral("/")));
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_IS_FILE, lPathInRepo.join(QStringLiteral("/")));
 	}
 
 	// give the directory a chance to reload if necessary.
@@ -153,49 +148,43 @@ void BupSlave::listDir(const QUrl &pUrl) {
 		createUDSEntry(i.next().value(), lEntry, lDetails);
 		listEntry(lEntry);
 	}
-	finished();
+	return KIO::WorkerResult::pass();
 }
 
-void BupSlave::open(const QUrl &pUrl, QIODevice::OpenMode pMode) {
+KIO::WorkerResult BupWorker::open(const QUrl &pUrl, QIODevice::OpenMode pMode) {
 	if(pMode & QIODevice::WriteOnly) {
-		error(KIO::ERR_CANNOT_OPEN_FOR_WRITING, pUrl.toDisplayString());
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_CANNOT_OPEN_FOR_WRITING, pUrl.toDisplayString());
 	}
 
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 	}
 
 	Node *lNode = mRepository->resolve(lPathInRepo, true);
 	if(lNode == nullptr) {
-		error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
 	}
 
 	File *lFile = qobject_cast<File *>(lNode);
 	if(lFile == nullptr) {
-		error(KIO::ERR_IS_DIRECTORY, lPathInRepo.join(QStringLiteral("/")));
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_IS_DIRECTORY, lPathInRepo.join(QStringLiteral("/")));
 	}
 
 	if(0 != lFile->seek(0)) {
-		error(KIO::ERR_CANNOT_OPEN_FOR_READING, pUrl.toDisplayString());
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_CANNOT_OPEN_FOR_READING, pUrl.toDisplayString());
 	}
 
 	mOpenFile = lFile;
 	mimeType(lFile->mMimeType);
 	totalSize(lFile->size());
 	position(0);
-	opened();
+	return KIO::WorkerResult::pass();
 }
 
-void BupSlave::read(filesize_t pSize) {
+KIO::WorkerResult BupWorker::read(filesize_t pSize) {
 	if(mOpenFile == nullptr) {
-		error(KIO::ERR_CANNOT_READ, QString());
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_CANNOT_READ, QString());
 	}
 	QByteArray lResultArray;
 	int lRetVal = 0;
@@ -205,36 +194,33 @@ void BupSlave::read(filesize_t pSize) {
 	}
 	if(lRetVal == 0) {
 		data(QByteArray());
-		finished();
+		return KIO::WorkerResult::pass();
 	} else {
-		error(lRetVal, mOpenFile->completePath());
+		return KIO::WorkerResult::fail(lRetVal, mOpenFile->completePath());
 	}
 }
 
-void BupSlave::seek(filesize_t pOffset) {
+KIO::WorkerResult BupWorker::seek(filesize_t pOffset) {
 	if(mOpenFile == nullptr) {
-		error(KIO::ERR_CANNOT_SEEK, QString());
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_CANNOT_SEEK, QString());
 	}
 
 	if(0 != mOpenFile->seek(pOffset)) {
-		error(KIO::ERR_CANNOT_SEEK, mOpenFile->completePath());
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_CANNOT_SEEK, mOpenFile->completePath());
 	}
 	position(pOffset);
+	return KIO::WorkerResult::pass();
 }
 
-void BupSlave::stat(const QUrl &pUrl) {
+KIO::WorkerResult BupWorker::stat(const QUrl &pUrl) {
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 	}
 
 	Node *lNode = mRepository->resolve(lPathInRepo);
 	if(lNode == nullptr) {
-		error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
 	}
 
 	const QString sDetails = metaData(QStringLiteral("details"));
@@ -243,28 +229,26 @@ void BupSlave::stat(const QUrl &pUrl) {
 	UDSEntry lUDSEntry;
 	createUDSEntry(lNode, lUDSEntry, lDetails);
 	statEntry(lUDSEntry);
-	finished();
+	return KIO::WorkerResult::pass();
 }
 
-void BupSlave::mimetype(const QUrl &pUrl) {
+KIO::WorkerResult BupWorker::mimetype(const QUrl &pUrl) {
 	QStringList lPathInRepo;
 	if(!checkCorrectRepository(pUrl, lPathInRepo)) {
-		error(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("No bup repository found.\n%1", pUrl.toDisplayString()));
 	}
 
 	Node *lNode = mRepository->resolve(lPathInRepo);
 	if(lNode == nullptr) {
-		error(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
-		return;
+		return KIO::WorkerResult::fail(KIO::ERR_DOES_NOT_EXIST, lPathInRepo.join(QStringLiteral("/")));
 	}
 
 	mimeType(lNode->mMimeType);
-	finished();
+	return KIO::WorkerResult::pass();
 }
 
-bool BupSlave::checkCorrectRepository(const QUrl &pUrl, QStringList &pPathInRepository) {
-	// make this slave accept most URLs.. even incorrect ones. (no slash (wrong),
+bool BupWorker::checkCorrectRepository(const QUrl &pUrl, QStringList &pPathInRepository) {
+	// make this worker accept most URLs.. even incorrect ones. (no slash (wrong),
 	// one slash (correct), two slashes (wrong), three slashes (correct))
 	QString lPath;
 	if(!pUrl.host().isEmpty()) {
@@ -303,7 +287,7 @@ bool BupSlave::checkCorrectRepository(const QUrl &pUrl, QStringList &pPathInRepo
 	return false;
 }
 
-QString BupSlave::getUserName(uid_t pUid) {
+QString BupWorker::getUserName(uid_t pUid) {
 	if(!mUsercache.contains(pUid)) {
 		struct passwd *lUserInfo = getpwuid(pUid);
 		if(lUserInfo) {
@@ -316,7 +300,7 @@ QString BupSlave::getUserName(uid_t pUid) {
 	return mUsercache.value(pUid);
 }
 
-QString BupSlave::getGroupName(gid_t pGid) {
+QString BupWorker::getGroupName(gid_t pGid) {
 	if(!mGroupcache.contains(pGid)) {
 		struct group *lGroupInfo = getgrgid(pGid);
 		if(lGroupInfo) {
@@ -329,7 +313,7 @@ QString BupSlave::getGroupName(gid_t pGid) {
 	return mGroupcache.value(pGid);
 }
 
-void BupSlave::createUDSEntry(Node *pNode, UDSEntry &pUDSEntry, int pDetails) {
+void BupWorker::createUDSEntry(Node *pNode, UDSEntry &pUDSEntry, int pDetails) {
 	pUDSEntry.clear();
 	pUDSEntry.fastInsert(KIO::UDSEntry::UDS_NAME, pNode->objectName());
 	if(!pNode->mSymlinkTarget.isEmpty()) {
@@ -368,10 +352,10 @@ extern "C" int Q_DECL_EXPORT kdemain(int pArgc, char **pArgv) {
 		exit(-1);
 	}
 
-	BupSlave lSlave(pArgv[2], pArgv[3]);
-	lSlave.dispatchLoop();
+	BupWorker lWorker(pArgv[2], pArgv[3]);
+	lWorker.dispatchLoop();
 
 	return 0;
 }
 
-#include "bupslave.moc"
+#include "bupworker.moc"

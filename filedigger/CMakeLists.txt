@@ -4,7 +4,7 @@
 
 include_directories("../daemon")
 include_directories("../kcm")
-include_directories("../kioslave")
+include_directories("../kioworker")
 include_directories("../settings")
 
 set(filedigger_SRCS
@@ -16,7 +16,7 @@ restoredialog.cpp
 restorejob.cpp
 versionlistdelegate.cpp
 versionlistmodel.cpp
-../kioslave/vfshelpers.cpp
+../kioworker/vfshelpers.cpp
 ../kcm/dirselector.cpp
 ../settings/kuputils.cpp
 )

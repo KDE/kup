@@ -2,22 +2,22 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-set(bupslave_SRCS
-bupslave.cpp
+set(bupworker_SRCS
+bupworker.cpp
 bupvfs.cpp
 vfshelpers.cpp
 )
 
-ecm_qt_declare_logging_category(bupslave_SRCS
+ecm_qt_declare_logging_category(bupworker_SRCS
     HEADER kupkio_debug.h
     IDENTIFIER KUPKIO
     CATEGORY_NAME kup.kio
     DEFAULT_SEVERITY Warning
     EXPORT kup
-    DESCRIPTION "Kup KIO slave for bup"
+    DESCRIPTION "Kup KIO worker for bup"
 )
 
-add_library(kio_bup MODULE ${bupslave_SRCS})
+add_library(kio_bup MODULE ${bupworker_SRCS})
 target_link_libraries(kio_bup
 Qt::Core
 KF${QT_MAJOR_VERSION}::KIOCore

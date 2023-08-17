@@ -4,7 +4,8 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-set(KF_MIN_VERSION "5.71.0")
+set(KF_MIN_VERSION "5.96.0")
+set(KDE_COMPILERSETTINGS_LEVEL "5.84.0")
 
 find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -49,7 +50,7 @@ add_subdirectory(dataengine)
 add_subdirectory(icons)
 add_subdirectory(filedigger)
 add_subdirectory(kcm)
-add_subdirectory(kioslave)
+add_subdirectory(kioworker)
 add_subdirectory(purger)
 
 ecm_qt_install_logging_categories(EXPORT kup DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}")
