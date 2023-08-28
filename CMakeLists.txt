@@ -3,7 +3,6 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 cmake_minimum_required(VERSION 3.16)
-cmake_policy(SET CMP0063 NEW)
 
 set(KF_MIN_VERSION "5.71.0")
 
