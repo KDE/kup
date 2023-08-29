@@ -11,8 +11,9 @@
 #include <QTimer>
 
 KupEngine::KupEngine(QObject *pParent, const QVariantList &pArgs)
-: Plasma::DataEngine(pParent, pArgs)
+: Plasma::DataEngine(pParent /* pArgs*/)
 {
+	Q_UNUSED(pArgs);
 	mSocketName = QStringLiteral("kup-daemon-");
 	mSocketName += QString::fromLocal8Bit(qgetenv("USER"));
 	mSocket = new QLocalSocket(this);
