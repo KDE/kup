@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-01 00:50+0000\n"
-"PO-Revision-Date: 2023-08-01 08:06+0200\n"
+"PO-Revision-Date: 2023-08-28 05:42+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -796,6 +796,10 @@ msgid ""
 "probably not what you want. One solution is to simply include the target "
 "folder in the backup plan."
 msgstr ""
+"სიმბმული <filename>%1</filename> ამჟამად ჩასმულია, მაგრამ ის მიუთითებს "
+"საქაღალდეზე, რომელიც არაა <filename>%2</filename>.<nl/>ეს ალბათ ის არაა, რაც "
+"თქვენ გნებავთ. ერთ-ერთი გადაწყვეტილებაა მარქაფის გეგმაში სამიზნე საქაღალდე "
+"ჩასვათ."
 
 #: kcm/backupplanwidget.cpp:400
 #, kde-kuit-format
@@ -806,6 +810,10 @@ msgid ""
 "not what you want. One solution is to simply include the folder where the "
 "file is stored in the backup plan."
 msgstr ""
+"სიმბოლური ბმული <filename>%1</filename> ამჟამად ჩასმულია, მაგრამ მიუთითებს "
+"ფაილზე, რომელიც არაა: <filename>%2</filename>.<nl/>ეს ალბათ ის არაა, რაც "
+"თქვენ გნებავთ. ერთ-ერთი გადაწყვეტილებაა, მარქაფის გეგმაში უბრალოდ ჩასვათ "
+"საქაღალდე, რომელშიც სასურველი ფაილია მოთავსებული."
 
 #: kcm/backupplanwidget.cpp:423
 #, kde-kuit-format
