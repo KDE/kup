@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-01 00:50+0000\n"
-"PO-Revision-Date: 2023-08-28 05:42+0200\n"
+"PO-Revision-Date: 2023-09-03 06:34+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -938,6 +938,10 @@ msgid ""
 "always mount it at the same path in the filesystem. The path specified here "
 "does not need to exist at all times, its existence will be monitored."
 msgstr ""
+"შეგიძლიათ ეს პარამეტრი მონიშნოთ, რათა მარქაფი დამხმარე შიდა მყარ, გარე eSATA "
+"ან ქსელურ დისკზე მოხდეს. მოთხოვნა მხოლოდ ამ ბილიკის ფაილურ სისტემაში სადმე "
+"მიმაგრებაა. აქ მითითებული ბილიკი აუცილებელი არაა, სულ იყოს წვდომადი, მაგრამ "
+"მისი არსებობის მონიტორინგი მოხდება."
 
 #: kcm/backupplanwidget.cpp:607
 #, kde-kuit-format
@@ -1033,6 +1037,8 @@ msgid ""
 "New backup will be triggered when backup destination becomes available and "
 "more than the configured interval has passed since the last backup was saved."
 msgstr ""
+"ახალი მარქაფის ტრიგერი მოხდება, როცა მარქაფის სამიზნე ბილიკი ხელმისაწვდომი "
+"გახდება და ბოლო მარქაფის შენახვის შემდეგ დაყენებული ინტერვალი გავა."
 
 #: kcm/backupplanwidget.cpp:749
 #, kde-kuit-format
@@ -1066,6 +1072,9 @@ msgid ""
 "you have been using your computer actively for more than the configured time "
 "limit since the last backup was saved."
 msgstr ""
+"ახალი მარქაფი დატრიგერდება, როცა მარქაფის სამიზნე ხელმისაწვდომი გახდება, "
+"კომპიუტერს აქტიურად ხმარობთ და ბოლო მარქაფის შენახვის შემდეგ დროის "
+"მითითებული ინტერვალი გავიდა."
 
 #: kcm/backupplanwidget.cpp:783
 #, kde-kuit-format
@@ -1109,6 +1118,9 @@ msgid ""
 "backups will take slightly longer time. In return it will be possible to "
 "recover from a partially corrupted backup."
 msgstr ""
+"ეს თქვენს მარქაფებს 10%-ით გაზრდის ზომაში და მარქაფების შენახვა ოდნავ მეტ "
+"დროს დახარჯავს. სამაგიეროდ, ნაწილობრივ დაზიანებული მარქაფიდან აღდგენა "
+"შეგეძლებათ."
 
 #: kcm/backupplanwidget.cpp:849
 #, kde-kuit-format
