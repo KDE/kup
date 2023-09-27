@@ -90,5 +90,6 @@
     "X-KDE-Keywords[x-test]": "xxbackupxx,xxrecoveryxx,xxsafetyxx",
     "X-KDE-Keywords[zh_CN]": "backup,recovery,safety,备份,恢复,安全",
     "X-KDE-Keywords[zh_TW]": "backup,recovery,safety,備份,復原,安全性",
-    "X-KDE-System-Settings-Parent-Category": "personalization"
+    "X-KDE-System-Settings-Parent-Category": "system-administration",
+    "X-KDE-Weight": 100
 }
