@@ -142,11 +142,12 @@ void PlanExecutor::askUser(const QString &pQuestion) {
 	mQuestion = new KNotification(QStringLiteral("StartBackup"), KNotification::Persistent);
 	mQuestion->setTitle(mPlan->mDescription);
 	mQuestion->setText(pQuestion);
-	QStringList lAnswers;
-	lAnswers << xi18nc("@action:button", "Yes") << xi18nc("@action:button", "No");
-	mQuestion->setActions(lAnswers);
-	connect(mQuestion, SIGNAL(action1Activated()), SLOT(startBackupSaveJob()));
-	connect(mQuestion, SIGNAL(action2Activated()), SLOT(discardUserQuestion()));
+	auto lyesAction = new KNotificationAction(i18nc("@action:button", "Yes"));
+	auto lnoAction = new KNotificationAction(i18nc("@action:button", "No"));
+	mQuestion->setActions({lyesAction, lnoAction});
+	
+	connect(lyesAction, SIGNAL(activated()), SLOT(startBackupSaveJob()));
+	connect(lnoAction, SIGNAL(activated()), SLOT(discardUserQuestion()));
 	connect(mQuestion, SIGNAL(closed()), SLOT(discardUserQuestion()));
 	connect(mQuestion, SIGNAL(ignored()), SLOT(discardUserQuestion()));
 	// enter this "do nothing" state, if user answers "no" or ignores, remain there
@@ -168,23 +169,26 @@ void PlanExecutor::notifyBackupFailed(KJob *pFailedJob) {
 	mFailNotification->setTitle(xi18nc("@title:window", "Saving of Backup Failed"));
 	mFailNotification->setText(pFailedJob->errorText());
 
-	QStringList lAnswers;
+	QList<KNotificationAction *> lactions;
 	if(pFailedJob->error() == BackupJob::ErrorWithLog) {
-		lAnswers << xi18nc("@action:button", "Show log file");
-		connect(mFailNotification, SIGNAL(action1Activated()), SLOT(showLog()));
+		auto lshowLogAction = new KNotificationAction(i18nc("@action:button", "Show log file"));
+		connect(lshowLogAction, SIGNAL(activated()), SLOT(showLog()));
+		lactions << lshowLogAction;
 	} else if(pFailedJob->error() == BackupJob::ErrorSuggestRepair) {
-		lAnswers << xi18nc("@action:button", "Yes");
-		lAnswers << xi18nc("@action:button", "No");
-		connect(mFailNotification, SIGNAL(action1Activated()), SLOT(startRepairJob()));
+		auto lyesAction = new KNotificationAction(i18nc("@action:button", "Yes"));
+		auto lnoAction = new KNotificationAction(i18nc("@action:button", "No"));
+		connect(lyesAction, SIGNAL(activated()), SLOT(startRepairJob()));
+		lactions << lyesAction << lnoAction;
 	} else if(pFailedJob->error() == BackupJob::ErrorSourcesConfig) {
-		lAnswers << xi18nc("@action:button", "Open settings");
-		connect(mFailNotification, &KNotification::action1Activated, this, [this] {
+		auto lopenSettingsAction = new KNotificationAction(i18nc("@action:button", "Open settings"));
+		lactions << lopenSettingsAction;
+		connect(lopenSettingsAction, &KNotificationAction::activated, this, [this] {
 			QProcess::startDetached(QStringLiteral("kcmshell5"), {QStringLiteral("--args"),
 			                                                      QStringLiteral("show_sources %1").arg(mPlan->planNumber()),
 			                                                      QStringLiteral("kcm_kup")});
 		});
 	}
-	mFailNotification->setActions(lAnswers);
+	mFailNotification->setActions(lactions);
 
 	connect(mFailNotification, SIGNAL(action2Activated()), SLOT(discardFailNotification()));
 	connect(mFailNotification, SIGNAL(closed()), SLOT(discardFailNotification()));
@@ -306,16 +310,18 @@ void PlanExecutor::integrityCheckFinished(KJob *pJob) {
 	mIntegrityNotification = new KNotification(QStringLiteral("IntegrityCheckCompleted"), KNotification::Persistent);
 	mIntegrityNotification->setTitle(xi18nc("@title:window", "Integrity Check Completed"));
 	mIntegrityNotification->setText(pJob->errorText());
-	QStringList lAnswers;
+	QList<KNotificationAction *> lactions;
 	if(pJob->error() == BackupJob::ErrorWithLog) {
-		lAnswers << xi18nc("@action:button", "Show log file");
-		connect(mIntegrityNotification, SIGNAL(action1Activated()), SLOT(showLog()));
+		auto lshowLogAction = new KNotificationAction(i18nc("@action:button", "Show log file"));
+		connect(lshowLogAction, SIGNAL(activated()), SLOT(showLog()));
+		lactions << lshowLogAction;
 	} else if(pJob->error() == BackupJob::ErrorSuggestRepair) {
-		lAnswers << xi18nc("@action:button", "Yes");
-		lAnswers << xi18nc("@action:button", "No");
-		connect(mIntegrityNotification, SIGNAL(action1Activated()), SLOT(startRepairJob()));
+		auto lyesAction = new KNotificationAction(i18nc("@action:button", "Yes"));
+		auto lnoAction = new KNotificationAction(i18nc("@action:button", "No"));
+		connect(lyesAction, SIGNAL(activated()), SLOT(startRepairJob()));
+		lactions << lyesAction << lnoAction;
 	}
-	mIntegrityNotification->setActions(lAnswers);
+	mIntegrityNotification->setActions(lactions);
 
 	connect(mIntegrityNotification, SIGNAL(action2Activated()), SLOT(discardIntegrityNotification()));
 	connect(mIntegrityNotification, SIGNAL(closed()), SLOT(discardIntegrityNotification()));
@@ -341,10 +347,11 @@ void PlanExecutor::repairFinished(KJob *pJob) {
 	mRepairNotification = new KNotification(QStringLiteral("RepairCompleted"), KNotification::Persistent);
 	mRepairNotification->setTitle(xi18nc("@title:window", "Repair Completed"));
 	mRepairNotification->setText(pJob->errorText());
-	QStringList lAnswers;
-	lAnswers << xi18nc("@action:button", "Show log file");
-	mRepairNotification->setActions(lAnswers);
-	connect(mRepairNotification, SIGNAL(action1Activated()), SLOT(showLog()));
+	auto lshowLogAction = new KNotificationAction(i18nc("@action:button", "Show log file"));
+	connect(lshowLogAction, SIGNAL(activated()), SLOT(showLog()));
+	mRepairNotification->setActions({lshowLogAction});
+	
+	connect(lshowLogAction, SIGNAL(activated()), SLOT(showLog()));
 	connect(mRepairNotification, SIGNAL(closed()), SLOT(discardRepairNotification()));
 	connect(mRepairNotification, SIGNAL(ignored()), SLOT(discardRepairNotification()));
 	mRepairNotification->sendEvent();
