@@ -125,8 +125,8 @@ void MergedNode::generateSubNodes() {
 		}
 		git_blob *lMetadataBlob = nullptr;
 		VintStream *lMetadataStream = nullptr;
-		const git_tree_entry *lTreeEntry = git_tree_entry_byname(lTree, ".bupm");
-		if(lTreeEntry != nullptr && 0 == git_blob_lookup(&lMetadataBlob, mRepository, git_tree_entry_id(lTreeEntry))) {
+		const git_tree_entry *lMetaDataTreeEntry = git_tree_entry_byname(lTree, ".bupm");
+		if(lMetaDataTreeEntry != nullptr && 0 == git_blob_lookup(&lMetadataBlob, mRepository, git_tree_entry_id(lMetaDataTreeEntry))) {
 			lMetadataStream = new VintStream(git_blob_rawcontent(lMetadataBlob), static_cast<int>(git_blob_rawsize(lMetadataBlob)), this);
 			Metadata lMetadata;
 			readMetadata(*lMetadataStream, lMetadata); // the first entry is metadata for the directory itself, discard it.

@@ -18,9 +18,14 @@
 static const int cMargin = 6;
 
 DriveSelectionDelegate::DriveSelectionDelegate(QListView *pParent)
-   : QStyledItemDelegate(pParent), mListView(pParent)
+	: QStyledItemDelegate(pParent),
+	  mCapacityBar(new KCapacityBar(KCapacityBar::DrawTextInline)),
+	  mListView(pParent)
+{}
+
+DriveSelectionDelegate::~DriveSelectionDelegate()
 {
-	mCapacityBar = new KCapacityBar(KCapacityBar::DrawTextInline);
+	delete mCapacityBar;
 }
 
 void DriveSelectionDelegate::paint(QPainter* pPainter, const QStyleOptionViewItem& pOption,

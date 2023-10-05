@@ -36,7 +36,7 @@ class KupDaemonService : public Plasma::Service
 	Q_OBJECT
 
 public:
-	 KupDaemonService(QLocalSocket *pSocket, QObject *pParent = nullptr);
+	 explicit KupDaemonService(QLocalSocket *pSocket, QObject *pParent = nullptr);
 	 Plasma::ServiceJob *createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) override;
 
 protected:

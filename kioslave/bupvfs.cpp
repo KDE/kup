@@ -235,11 +235,11 @@ int ChunkFile::seek(quint64 pOffset) {
 		lLocalOffset -= lLowerOffset;
 
 		if(S_ISDIR(git_tree_entry_filemode(lLowerEntry))) {
-			git_tree *lTree;
-			if(0 != git_tree_lookup(&lTree, mRepository, git_tree_entry_id(lLowerEntry))) {
+			git_tree *lLowerTree;
+			if(0 != git_tree_lookup(&lLowerTree, mRepository, git_tree_entry_id(lLowerEntry))) {
 				return KIO::ERR_CANNOT_SEEK;
 			}
-			lCurrentPos = new TreePosition(lTree);
+			lCurrentPos = new TreePosition(lLowerTree);
 			mPositionStack.append(lCurrentPos);
 		} else {
 			lCurrentPos->mSkipSize = lLocalOffset;
@@ -336,11 +336,11 @@ ChunkFile::TreePosition::~TreePosition() {
 }
 
 ArchivedDirectory::ArchivedDirectory(Node *pParent, const git_oid *pOid, const QString &pName, qint64 pMode)
-   : Directory(pParent, pName, pMode)
+	: Directory(pParent, pName, pMode),
+	  mOid(*pOid),
+	  mTree(nullptr),
+	  mMetadataStream(nullptr)
 {
-	mOid = *pOid;
-	mMetadataStream = nullptr;
-	mTree = nullptr;
 	if(0 != git_tree_lookup(&mTree, mRepository, &mOid)) {
 		return;
 	}
@@ -393,9 +393,9 @@ void ArchivedDirectory::generateSubNodes() {
 }
 
 Branch::Branch(Node *pParent, const char *pName)
-   : Directory(pParent, QString::fromLocal8Bit(pName).remove(0, 11), DEFAULT_MODE_DIRECTORY)
+   : Directory(pParent, QString::fromLocal8Bit(pName).remove(0, 11), DEFAULT_MODE_DIRECTORY),
+	  mRefName(pName)
 {
-	mRefName = QByteArray(pName);
 	QByteArray lPath = parent()->objectName().toLocal8Bit();
 	lPath.append(mRefName);
 	struct stat lStat;

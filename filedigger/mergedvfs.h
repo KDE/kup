@@ -23,7 +23,7 @@ struct VersionData {
 	}
 
 	VersionData(const git_oid *pOid, qint64 pCommitTime, qint64 pModifiedDate, quint64 pSize)
-	   :mOid(*pOid), mCommitTime(pCommitTime), mModifiedDate(pModifiedDate), mSize(pSize)
+		:mChunkedFile(false), mOid(*pOid), mCommitTime(pCommitTime), mModifiedDate(pModifiedDate), mSize(pSize)
 	{
 		mSizeIsValid = true;
 	}
@@ -36,7 +36,7 @@ struct VersionData {
 	qint64 mModifiedDate;
 
 protected:
-	quint64 mSize;
+	quint64 mSize{};
 };
 
 class MergedNode;

@@ -32,7 +32,7 @@ protected:
 
 struct Metadata {
 	Metadata() {}
-	Metadata(qint64 pMode);
+	explicit Metadata(qint64 pMode);
 	qint64 mMode;
 	qint64 mUid;
 	qint64 mGid;

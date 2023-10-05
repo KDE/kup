@@ -24,10 +24,10 @@ static const int cRecordCommonV2 = 9; // times, user, group, type, perms, etc.
 static const int cRecordCommonV3 = 10; // times, user, group, type, perms, etc.
 
 VintStream::VintStream(const void *pData, int pSize, QObject *pParent)
-   : QObject(pParent)
+	: QObject(pParent),
+	  mByteArray(QByteArray::fromRawData(static_cast<const char *>(pData), pSize)),
+	  mBuffer(new QBuffer(&mByteArray, this))
 {
-	mByteArray = QByteArray::fromRawData(static_cast<const char *>(pData), pSize);
-	mBuffer = new QBuffer(&mByteArray, this);
 	mBuffer->open(QIODevice::ReadOnly);
 }
 

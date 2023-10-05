@@ -183,7 +183,7 @@ void VersionListDelegate::paint(QPainter *pPainter, const QStyleOptionViewItem &
 	QStyle * lStyle = QApplication::style();
 	lStyle->drawPrimitive(QStyle::PE_PanelItemViewItem, &pOption, pPainter);
 	pPainter->save();
-	pPainter->setPen(pOption.palette.color(pOption.state & QStyle::State_HasFocus
+	pPainter->setPen(pOption.palette.color((pOption.state & QStyle::State_HasFocus)
 	                                       ? QPalette::HighlightedText: QPalette::Text));
 	QRect lMarginRect = pOption.rect.adjusted(cMargin, cMargin, -cMargin, -cMargin);
 
@@ -277,7 +277,7 @@ void VersionListDelegate::reclaimAnimation() {
 	auto lAnimation = qobject_cast<VersionItemAnimation *>(sender());
 	if(lAnimation->direction() == QAbstractAnimation::Backward) {
 		mInactiveAnimations.append(lAnimation);
-		foreach(VersionItemAnimation *lActiveAnimation, mActiveAnimations) {
+		foreach(const VersionItemAnimation *lActiveAnimation, mActiveAnimations) {
 			if(lActiveAnimation == lAnimation) {
 				mActiveAnimations.remove(lAnimation->mIndex);
 				break;

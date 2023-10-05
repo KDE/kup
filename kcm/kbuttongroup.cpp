@@ -13,16 +13,16 @@
 class KButtonGroup::Private
 {
 public:
-    Private(KButtonGroup *q) :
-        q(q),
-        currentId(-1),
-        nextId(0),
-        wantToBeId(-1)
-    {
-        connect(&clickedMapper, SIGNAL(mapped(int)), q, SLOT(slotClicked(int)));
-        connect(&pressedMapper, SIGNAL(mapped(int)), q, SIGNAL(pressed(int)));
-        connect(&releasedMapper, SIGNAL(mapped(int)), q, SIGNAL(released(int)));
-    }
+	explicit Private(KButtonGroup *q) :
+		q(q),
+		currentId(-1),
+		nextId(0),
+		wantToBeId(-1)
+	{
+		connect(&clickedMapper, SIGNAL(mapped(int)), q, SLOT(slotClicked(int)));
+		connect(&pressedMapper, SIGNAL(mapped(int)), q, SIGNAL(pressed(int)));
+		connect(&releasedMapper, SIGNAL(mapped(int)), q, SIGNAL(released(int)));
+	}
 
     void slotClicked(int id);
 

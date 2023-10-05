@@ -163,12 +163,10 @@ void KupKcm::load() {
 }
 
 void KupKcm::save() {
-	KConfigDialogManager *lManager;
-	BackupPlan *lPlan;
 	int lPlansRemoved = 0;
 	for(int i=0; i < mPlans.count(); ++i) {
-		lPlan = mPlans.at(i);
-		lManager = mConfigManagers.at(i);
+		auto *lPlan = mPlans.at(i);
+		auto *lManager = mConfigManagers.at(i);
 		if(lManager == nullptr) {
 			lPlan->removePlanFromConfig();
 			delete mPlans.takeAt(i);

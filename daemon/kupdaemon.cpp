@@ -25,13 +25,15 @@
 #include <KLocalizedString>
 #include <KUiServerJobTracker>
 
-KupDaemon::KupDaemon() {
-	mWaitingToReloadConfig = false;
-	mConfig = KSharedConfig::openConfig(QStringLiteral("kuprc"));
-	mSettings = new KupSettings(mConfig, this);
-	mJobTracker = new KUiServerJobTracker(this);
-	mLocalServer = new QLocalServer(this);
-}
+KupDaemon::KupDaemon()
+	: mConfig(KSharedConfig::openConfig(QStringLiteral("kuprc"))),
+	  mSettings(new KupSettings(mConfig, this)),
+	  mUsageAccTimer(new QTimer(this)),
+	  mStatusUpdateTimer(new QTimer(this)),
+	  mWaitingToReloadConfig(false),
+	  mJobTracker(new KUiServerJobTracker(this)),
+	  mLocalServer(new QLocalServer(this))
+{}
 
 KupDaemon::~KupDaemon() {
 	while(!mExecutors.isEmpty()) {
@@ -47,7 +49,6 @@ bool KupDaemon::shouldStart() {
 void KupDaemon::setupGuiStuff() {
 	// timer to update logged time and also trigger warning if too long
 	// time has now passed since last backup
-	mUsageAccTimer = new QTimer(this);
 	mUsageAccTimer->setInterval(KUP_USAGE_MONITOR_INTERVAL_S * 1000);
 	mUsageAccTimer->start();
 	KIdleTime *lIdleTime = KIdleTime::instance();
@@ -56,7 +57,6 @@ void KupDaemon::setupGuiStuff() {
 	connect(lIdleTime, SIGNAL(timeoutReached(int)), lIdleTime, SLOT(catchNextResumeEvent()));
 	connect(lIdleTime, SIGNAL(resumingFromIdle()), mUsageAccTimer, SLOT(start()));
 
-	mStatusUpdateTimer = new QTimer(this);
 	// delay status update to avoid sending a status to plasma applet
 	// that will be changed again just a microsecond later anyway
 	mStatusUpdateTimer->setInterval(500);

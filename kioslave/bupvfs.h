@@ -121,7 +121,7 @@ protected:
 	git_oid mOid;
 	git_blob *mCurrentBlob;
 	struct TreePosition {
-		TreePosition(git_tree *pTree);
+		explicit TreePosition(git_tree *pTree);
 		~TreePosition();
 		git_tree *mTree;
 		ulong mIndex;

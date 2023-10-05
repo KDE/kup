@@ -47,8 +47,8 @@ private:
 	KSharedConfigPtr mConfig;
 	KupSettings *mSettings;
 	QList<PlanExecutor *> mExecutors;
-	QTimer *mUsageAccTimer{};
-	QTimer *mStatusUpdateTimer{};
+	QTimer *mUsageAccTimer;
+	QTimer *mStatusUpdateTimer;
 	bool mWaitingToReloadConfig;
 	KUiServerJobTracker *mJobTracker;
 	QLocalServer *mLocalServer;

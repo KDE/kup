@@ -38,7 +38,7 @@
 
 class ScanFolderEvent : public QEvent {
 public:
-	ScanFolderEvent(QString pPath): QEvent(eventType), mPath(std::move(pPath)) {}
+	explicit ScanFolderEvent(QString pPath): QEvent(eventType), mPath(std::move(pPath)) {}
 	QString mPath;
 	static const QEvent::Type eventType = static_cast<QEvent::Type>(QEvent::User + 1);
 };
@@ -955,10 +955,9 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available) {
 
 void BackupPlanWidget::openDriveDestDialog() {
 	QString lMountPoint = mDriveSelection->mountPathOfSelectedDrive();
-	QString lSelectedPath;
 	QPointer<DirDialog> lDirDialog = new DirDialog(QUrl::fromLocalFile(lMountPoint), mDriveDestEdit->text(), this);
 	if(lDirDialog->exec() == QDialog::Accepted) {
-		lSelectedPath = lDirDialog->url().path();
+		QString lSelectedPath = lDirDialog->url().path();
 		lSelectedPath.remove(0, lMountPoint.length());
 		while(lSelectedPath.startsWith(QLatin1Char('/'))) {
 			lSelectedPath.remove(0, 1);

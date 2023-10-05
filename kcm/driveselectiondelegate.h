@@ -14,6 +14,7 @@ class DriveSelectionDelegate : public QStyledItemDelegate
 {
 public:
 	explicit DriveSelectionDelegate(QListView *pParent);
+	~DriveSelectionDelegate() override;
 	void paint(QPainter* pPainter, const QStyleOptionViewItem& pOption, const QModelIndex& pIndex) const override;
 	QSize sizeHint(const QStyleOptionViewItem& pOption, const QModelIndex& pIndex) const override;
 private:
