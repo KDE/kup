@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-01 00:50+0000\n"
+"POT-Creation-Date: 2023-10-06 00:44+0000\n"
 "PO-Revision-Date: 2023-07-24 00:04+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1199,7 +1199,7 @@ msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "고급 사용자용 추가 옵션"
 
-#: kcm/backupplanwidget.cpp:981
+#: kcm/backupplanwidget.cpp:980
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
@@ -1212,19 +1212,19 @@ msgid ""
 "Plug in the external storage you wish to use, then select it in this list."
 msgstr "사용할 외장 저장 장치를 연결하고 이 목록에서 선택하십시오."
 
-#: kcm/driveselectiondelegate.cpp:56
+#: kcm/driveselectiondelegate.cpp:61
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
 msgstr "(연결 끊김)"
 
-#: kcm/driveselectiondelegate.cpp:60
+#: kcm/driveselectiondelegate.cpp:65
 #, kde-kuit-format
 msgctxt "@label %1 is amount of free storage space of hard drive"
 msgid "%1 free"
 msgstr "%1 남음"
 
-#: kcm/driveselectiondelegate.cpp:75
+#: kcm/driveselectiondelegate.cpp:80
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used for unnamed filesystems, more than one filesystem on "
@@ -1233,7 +1233,7 @@ msgctxt ""
 msgid "Partition %1 on %2%3"
 msgstr "%2의 파티션 %1%3"
 
-#: kcm/driveselectiondelegate.cpp:78
+#: kcm/driveselectiondelegate.cpp:83
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
@@ -1241,7 +1241,7 @@ msgctxt ""
 msgid "%1%2"
 msgstr "%1%2"
 
-#: kcm/driveselectiondelegate.cpp:82
+#: kcm/driveselectiondelegate.cpp:87
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
@@ -1249,13 +1249,13 @@ msgctxt ""
 msgid "%1 on %2%3"
 msgstr "%2의 %1%3"
 
-#: kcm/driveselectiondelegate.cpp:89
+#: kcm/driveselectiondelegate.cpp:94
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
 msgstr "%1: 총 용량 %2"
 
-#: kcm/driveselectiondelegate.cpp:136
+#: kcm/driveselectiondelegate.cpp:141
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1267,7 +1267,7 @@ msgstr ""
 "에 사용자가 한 명 이상 있거나 실행 가능한 프로그램 파일을 백업한다면 파일 권"
 "한이 중요합니다."
 
-#: kcm/driveselectiondelegate.cpp:141
+#: kcm/driveselectiondelegate.cpp:146
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1334,7 +1334,7 @@ msgstr ""
 "<h2>백업 프로그램 없음</h2><p>백업 계획을 활성화하려면 다음 프로그램을 설치해"
 "야 합니다</p><ul><li>bup: 버전된 백업</li><li>rsync: 동기화된 백업</li></ul>"
 
-#: kcm/kupkcm.cpp:203
+#: kcm/kupkcm.cpp:201
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1342,25 +1342,25 @@ msgid ""
 msgstr ""
 "%1의 대상을 설정하지 않았습니다!<nl/> 이 백업 계획은 실행되지 않습니다."
 
-#: kcm/kupkcm.cpp:206
+#: kcm/kupkcm.cpp:204
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "경고"
 
-#: kcm/kupkcm.cpp:252
+#: kcm/kupkcm.cpp:250
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan"
 msgstr "새 계획 추가"
 
-#: kcm/kupkcm.cpp:264
+#: kcm/kupkcm.cpp:262
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
 msgstr "백업 활성화됨"
 
-#: kcm/kupkcm.cpp:275
+#: kcm/kupkcm.cpp:273
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"

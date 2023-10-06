@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-01 00:50+0000\n"
+"POT-Creation-Date: 2023-10-06 00:44+0000\n"
 "PO-Revision-Date: 2023-09-16 10:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1163,7 +1163,7 @@ msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "进阶用户的额外选项"
 
-#: kcm/backupplanwidget.cpp:981
+#: kcm/backupplanwidget.cpp:980
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
@@ -1176,19 +1176,19 @@ msgid ""
 "Plug in the external storage you wish to use, then select it in this list."
 msgstr "插入你想要使用的外部存储设备，然后在这个列表中选取它。"
 
-#: kcm/driveselectiondelegate.cpp:56
+#: kcm/driveselectiondelegate.cpp:61
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
 msgstr "(未连接)"
 
-#: kcm/driveselectiondelegate.cpp:60
+#: kcm/driveselectiondelegate.cpp:65
 #, kde-kuit-format
 msgctxt "@label %1 is amount of free storage space of hard drive"
 msgid "%1 free"
 msgstr "%1 可用"
 
-#: kcm/driveselectiondelegate.cpp:75
+#: kcm/driveselectiondelegate.cpp:80
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used for unnamed filesystems, more than one filesystem on "
@@ -1197,7 +1197,7 @@ msgctxt ""
 msgid "Partition %1 on %2%3"
 msgstr "分区 %1 在 %2%3 上"
 
-#: kcm/driveselectiondelegate.cpp:78
+#: kcm/driveselectiondelegate.cpp:83
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
@@ -1205,7 +1205,7 @@ msgctxt ""
 msgid "%1%2"
 msgstr "%1%2"
 
-#: kcm/driveselectiondelegate.cpp:82
+#: kcm/driveselectiondelegate.cpp:87
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
@@ -1213,13 +1213,13 @@ msgctxt ""
 msgid "%1 on %2%3"
 msgstr "%1 在 %2%3上"
 
-#: kcm/driveselectiondelegate.cpp:89
+#: kcm/driveselectiondelegate.cpp:94
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
 msgstr "%1: %2 总容量"
 
-#: kcm/driveselectiondelegate.cpp:136
+#: kcm/driveselectiondelegate.cpp:141
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1230,7 +1230,7 @@ msgstr ""
 "警告：符号链接和文件权限无法保存到这个文件系统里。文件权限仅在多个用户使用这"
 "台计算机或者保存可执行的程序文件时有影响。"
 
-#: kcm/driveselectiondelegate.cpp:141
+#: kcm/driveselectiondelegate.cpp:146
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1293,32 +1293,32 @@ msgstr ""
 "<h2>备份程序丢失</h2><p>在您启动任何备份计划之前，您需要先安装</"
 "p><ul><li>bup，给版本备份使用</li><li>rsync，给同步备份使用</li></ul>\""
 
-#: kcm/kupkcm.cpp:203
+#: kcm/kupkcm.cpp:201
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
 "%1 does not have a destination!<nl/>No backups will be saved by this plan."
 msgstr "%1 没有目的地！<nl/>这个计划中将不会有备份被储存。"
 
-#: kcm/kupkcm.cpp:206
+#: kcm/kupkcm.cpp:204
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "警告"
 
-#: kcm/kupkcm.cpp:252
+#: kcm/kupkcm.cpp:250
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan"
 msgstr "增加新计划"
 
-#: kcm/kupkcm.cpp:264
+#: kcm/kupkcm.cpp:262
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
 msgstr "备份已启用"
 
-#: kcm/kupkcm.cpp:275
+#: kcm/kupkcm.cpp:273
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"

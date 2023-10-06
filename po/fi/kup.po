@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-01 00:50+0000\n"
+"POT-Creation-Date: 2023-10-06 00:44+0000\n"
 "PO-Revision-Date: 2023-03-06 20:58+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -1215,7 +1215,7 @@ msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Edistyneen käyttäjän lisäasetukset"
 
-#: kcm/backupplanwidget.cpp:981
+#: kcm/backupplanwidget.cpp:980
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
@@ -1229,19 +1229,19 @@ msgid ""
 msgstr ""
 "Kytke haluamasi ulkoinen talletustila ja valitse se sitten luettelosta."
 
-#: kcm/driveselectiondelegate.cpp:56
+#: kcm/driveselectiondelegate.cpp:61
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
 msgstr "(ei kytketty)"
 
-#: kcm/driveselectiondelegate.cpp:60
+#: kcm/driveselectiondelegate.cpp:65
 #, kde-kuit-format
 msgctxt "@label %1 is amount of free storage space of hard drive"
 msgid "%1 free"
 msgstr "%1 vapaana"
 
-#: kcm/driveselectiondelegate.cpp:75
+#: kcm/driveselectiondelegate.cpp:80
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used for unnamed filesystems, more than one filesystem on "
@@ -1250,7 +1250,7 @@ msgctxt ""
 msgid "Partition %1 on %2%3"
 msgstr "Osio %1 laitteella %2%3"
 
-#: kcm/driveselectiondelegate.cpp:78
+#: kcm/driveselectiondelegate.cpp:83
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
@@ -1258,7 +1258,7 @@ msgctxt ""
 msgid "%1%2"
 msgstr "%1%2"
 
-#: kcm/driveselectiondelegate.cpp:82
+#: kcm/driveselectiondelegate.cpp:87
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
@@ -1266,13 +1266,13 @@ msgctxt ""
 msgid "%1 on %2%3"
 msgstr "%1 laitteella %2%3"
 
-#: kcm/driveselectiondelegate.cpp:89
+#: kcm/driveselectiondelegate.cpp:94
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
 msgstr "%1: kokonaiskapasiteetti %2"
 
-#: kcm/driveselectiondelegate.cpp:136
+#: kcm/driveselectiondelegate.cpp:141
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1284,7 +1284,7 @@ msgstr ""
 "eikä käyttöoikeuksia. Käyttöoikeuksilla on merkitystä vain, jos koneella on "
 "useampi käyttäjä tai varmuuskopioit ohjelmatiedostoja."
 
-#: kcm/driveselectiondelegate.cpp:141
+#: kcm/driveselectiondelegate.cpp:146
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1353,7 +1353,7 @@ msgstr ""
 "varmuuskopioita varten tai</li><li>rsync synkronoituja varmuuskopioita "
 "varten.</li></ul>"
 
-#: kcm/kupkcm.cpp:203
+#: kcm/kupkcm.cpp:201
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1362,25 +1362,25 @@ msgstr ""
 "Suunnitelmalla %1 ei ole kohdetta!<nl/>Tämän suunnitelman varmuuskopioita ei "
 "tallenneta."
 
-#: kcm/kupkcm.cpp:206
+#: kcm/kupkcm.cpp:204
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Varoitus"
 
-#: kcm/kupkcm.cpp:252
+#: kcm/kupkcm.cpp:250
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan"
 msgstr "Lisää uusi suunnitelma"
 
-#: kcm/kupkcm.cpp:264
+#: kcm/kupkcm.cpp:262
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
 msgstr "Varmuuskopiot ovat käytössä"
 
-#: kcm/kupkcm.cpp:275
+#: kcm/kupkcm.cpp:273
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-01 00:50+0000\n"
+"POT-Creation-Date: 2023-10-06 00:44+0000\n"
 "PO-Revision-Date: 2023-02-27 19:21+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -1219,7 +1219,7 @@ msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "خيارات إضافية للمستخدمين المتقدمين"
 
-#: kcm/backupplanwidget.cpp:981
+#: kcm/backupplanwidget.cpp:980
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
@@ -1232,19 +1232,19 @@ msgid ""
 "Plug in the external storage you wish to use, then select it in this list."
 msgstr "ضم جهاز التخزين الخارجي الذي ترغب به ، ثم اختره في هذه القائمة"
 
-#: kcm/driveselectiondelegate.cpp:56
+#: kcm/driveselectiondelegate.cpp:61
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
 msgstr " (غير متصل)"
 
-#: kcm/driveselectiondelegate.cpp:60
+#: kcm/driveselectiondelegate.cpp:65
 #, kde-kuit-format
 msgctxt "@label %1 is amount of free storage space of hard drive"
 msgid "%1 free"
 msgstr "المتبقي ‏%1"
 
-#: kcm/driveselectiondelegate.cpp:75
+#: kcm/driveselectiondelegate.cpp:80
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used for unnamed filesystems, more than one filesystem on "
@@ -1253,7 +1253,7 @@ msgctxt ""
 msgid "Partition %1 on %2%3"
 msgstr "القسم  %1 على %2%3"
 
-#: kcm/driveselectiondelegate.cpp:78
+#: kcm/driveselectiondelegate.cpp:83
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
@@ -1261,7 +1261,7 @@ msgctxt ""
 msgid "%1%2"
 msgstr "‏%1%2"
 
-#: kcm/driveselectiondelegate.cpp:82
+#: kcm/driveselectiondelegate.cpp:87
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
@@ -1269,13 +1269,13 @@ msgctxt ""
 msgid "%1 on %2%3"
 msgstr "‏%1 على %2%3"
 
-#: kcm/driveselectiondelegate.cpp:89
+#: kcm/driveselectiondelegate.cpp:94
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
 msgstr "‏%1: السعة %2"
 
-#: kcm/driveselectiondelegate.cpp:136
+#: kcm/driveselectiondelegate.cpp:141
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1287,7 +1287,7 @@ msgstr ""
 "أذون الملفات إلا إذا كان هناك أكثر من مستخدم لهذا الحاسوب أو إذا كنت تقوم "
 "بعمل نسخة احتياطية من ملفات البرامج القابلة للتنفيذ."
 
-#: kcm/driveselectiondelegate.cpp:141
+#: kcm/driveselectiondelegate.cpp:146
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1356,32 +1356,32 @@ msgstr ""
 "على تثبيت أحد هذين البرنامجين </p><ul><li>bup للنسخ الاحتياطية التزايدية</"
 "li> <li>rsync لتزامن النسخ الاحتياطية</li></ul>"
 
-#: kcm/kupkcm.cpp:203
+#: kcm/kupkcm.cpp:201
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
 "%1 does not have a destination!<nl/>No backups will be saved by this plan."
 msgstr "‏%1 لا تملك وجهة!<nl/> لن تحفظ أي نسخة احتياطية بواسطة هذه الخطة."
 
-#: kcm/kupkcm.cpp:206
+#: kcm/kupkcm.cpp:204
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "تحذير"
 
-#: kcm/kupkcm.cpp:252
+#: kcm/kupkcm.cpp:250
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan"
 msgstr "أضف خطة جديدة"
 
-#: kcm/kupkcm.cpp:264
+#: kcm/kupkcm.cpp:262
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
 msgstr "النسخ الاحتياطية ممكنة"
 
-#: kcm/kupkcm.cpp:275
+#: kcm/kupkcm.cpp:273
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
