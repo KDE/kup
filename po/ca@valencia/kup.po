@@ -1379,7 +1379,7 @@ msgstr "Mòdul de configuració de Kup"
 #, kde-format
 msgid "Configuration of backup plans for the Kup backup system"
 msgstr ""
-"Configuració dels plans de còpia de seguretat per al sistema de còpies de "
+"Configureu els plans de còpia de seguretat per al sistema de còpies de "
 "seguretat Kup"
 
 #: kcm/kupkcm.cpp:80
