@@ -99,7 +99,6 @@
     },
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-DBusActivationService": "org.kde.kupdaemon",
-    "X-Plasma-MainScript": "ui/Main.qml",
     "X-Plasma-NotificationArea": "true",
     "X-Plasma-NotificationAreaCategory": "SystemServices"
 }
