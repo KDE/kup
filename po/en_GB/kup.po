@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-06 00:44+0000\n"
+"POT-Creation-Date: 2023-10-17 00:44+0000\n"
 "PO-Revision-Date: 2023-02-27 19:41+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -1435,12 +1435,12 @@ msgstr "Show files"
 msgid "Show log file"
 msgstr "Show log file"
 
-#: plasmoid/contents/ui/Main.qml:69
+#: plasmoid/contents/ui/main.qml:69
 #, kde-format
 msgid "&Configure Kup..."
 msgstr "&Configure Kup..."
 
-#: plasmoid/contents/ui/Main.qml:71
+#: plasmoid/contents/ui/main.qml:71
 #, kde-format
 msgid "&Reload backup plans"
 msgstr "&Reload backup plans"

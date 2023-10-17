@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-06 00:44+0000\n"
+"POT-Creation-Date: 2023-10-17 00:44+0000\n"
 "PO-Revision-Date: 2020-08-01 13:25+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -1375,14 +1375,14 @@ msgstr "Vis filer"
 msgid "Show log file"
 msgstr "Vis logfiler"
 
-#: plasmoid/contents/ui/Main.qml:69
+#: plasmoid/contents/ui/main.qml:69
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Configure"
 msgid "&Configure Kup..."
 msgstr "Indstil"
 
-#: plasmoid/contents/ui/Main.qml:71
+#: plasmoid/contents/ui/main.qml:71
 #, fuzzy, kde-format
 #| msgid "No backup plans configured"
 msgid "&Reload backup plans"
