@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-17 00:44+0000\n"
+"POT-Creation-Date: 2023-10-20 00:43+0000\n"
 "PO-Revision-Date: 2023-04-16 14:05+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -1448,8 +1448,9 @@ msgctxt "@action:button"
 msgid "Duplicate"
 msgstr "Duplizieren"
 
-#: kioslave/bupslave.cpp:73 kioslave/bupslave.cpp:130 kioslave/bupslave.cpp:167
-#: kioslave/bupslave.cpp:230 kioslave/bupslave.cpp:252
+#: kioworker/bupworker.cpp:74 kioworker/bupworker.cpp:128
+#: kioworker/bupworker.cpp:161 kioworker/bupworker.cpp:218
+#: kioworker/bupworker.cpp:238
 #, kde-format
 msgid ""
 "No bup repository found.\n"
