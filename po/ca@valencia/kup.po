@@ -1009,8 +1009,8 @@ msgid ""
 "can be plugged in to this computer, such as a USB hard drive or memory stick."
 msgstr ""
 "Utilitzeu esta opció si voleu crear una còpia de seguretat dels fitxers en "
-"un emmagatzematge extern que es pot connectar a este ordinador, com un disc "
-"dur USB o un dispositiu de memòria."
+"un emmagatzematge extern que es pot connectar amb este ordinador, com un "
+"disc dur USB o un dispositiu de memòria."
 
 #: kcm/backupplanwidget.cpp:656 kcm/backupplanwidget.cpp:660
 #, kde-kuit-format
