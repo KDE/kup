@@ -25,7 +25,6 @@
         "Description[sv]": "Anpassa säkerhetskopieringsplaner",
         "Description[tr]": "Yedekleme tasarılarını yapılandır",
         "Description[uk]": "Налаштовування планів резервного копіювання",
-        "Description[x-test]": "xxConfigure backup plansxx",
         "Icon": "kup",
         "Name": "Backups",
         "Name[ar]": "النسخ الاحتياطية",
@@ -57,7 +56,6 @@
         "Name[sv]": "Säkerhetskopior",
         "Name[tr]": "Yedekler",
         "Name[uk]": "Резервні копії",
-        "Name[x-test]": "xxBackupsxx",
         "Name[zh_CN]": "备份",
         "Name[zh_TW]": "備份"
     },
