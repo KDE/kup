@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 00:43+0000\n"
+"POT-Creation-Date: 2023-11-05 12:39+0000\n"
 "PO-Revision-Date: 2021-09-22 09:14+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -369,83 +369,86 @@ msgstr ""
 "Az utolsó biztonsági másolat mentése óta %1 volt az aktivitása.\n"
 "Készít egy új biztonsági másolatot most?"
 
-#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:176
-#: daemon/planexecutor.cpp:314
+#: daemon/planexecutor.cpp:148 daemon/planexecutor.cpp:153
+#: daemon/planexecutor.cpp:186 daemon/planexecutor.cpp:205
+#: daemon/planexecutor.cpp:344 daemon/planexecutor.cpp:356
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "Igen"
 
-#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:177
-#: daemon/planexecutor.cpp:315
+#: daemon/planexecutor.cpp:148 daemon/planexecutor.cpp:156
+#: daemon/planexecutor.cpp:187 daemon/planexecutor.cpp:208
+#: daemon/planexecutor.cpp:345 daemon/planexecutor.cpp:359
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "No"
 msgstr "Nem"
 
-#: daemon/planexecutor.cpp:168
+#: daemon/planexecutor.cpp:177
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
 msgstr "A biztonsági másolat mentése sikertelen"
 
-#: daemon/planexecutor.cpp:173 daemon/planexecutor.cpp:311
-#: daemon/planexecutor.cpp:345
+#: daemon/planexecutor.cpp:183 daemon/planexecutor.cpp:202
+#: daemon/planexecutor.cpp:341 daemon/planexecutor.cpp:353
+#: daemon/planexecutor.cpp:389 daemon/planexecutor.cpp:393
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "Naplófájl"
 
-#: daemon/planexecutor.cpp:180
+#: daemon/planexecutor.cpp:190 daemon/planexecutor.cpp:211
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
 msgstr "Beállítások megnyitása"
 
-#: daemon/planexecutor.cpp:204
+#: daemon/planexecutor.cpp:233
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Backup Saved"
 msgstr "Biztonsági másolat mentve"
 
-#: daemon/planexecutor.cpp:205
+#: daemon/planexecutor.cpp:234
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
 msgstr "A biztonsági másolat mentése sikeresen befejeződött."
 
-#: daemon/planexecutor.cpp:254 daemon/planexecutor.cpp:261
-#: daemon/planexecutor.cpp:293
+#: daemon/planexecutor.cpp:283 daemon/planexecutor.cpp:290
+#: daemon/planexecutor.cpp:322
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Problem"
 msgstr "Probléma"
 
-#: daemon/planexecutor.cpp:255
+#: daemon/planexecutor.cpp:284
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
 msgstr "Nincs írási jogosultsága a biztonsági másolat célhelyéhez."
 
-#: daemon/planexecutor.cpp:262
+#: daemon/planexecutor.cpp:291
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
 msgstr "Érvénytelen biztonságimásolat-típus a beállításokban."
 
-#: daemon/planexecutor.cpp:307
+#: daemon/planexecutor.cpp:336
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Integrity Check Completed"
 msgstr "Integritás-ellenőrzés befejezve"
 
-#: daemon/planexecutor.cpp:342
+#: daemon/planexecutor.cpp:385
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Repair Completed"
 msgstr "Javítás befejezve"
 
-#: daemon/planexecutor.cpp:373
+#: daemon/planexecutor.cpp:421
 #, kde-format
 msgid "Kup Backup System"
 msgstr "Kup biztonságimásolat-rendszer"

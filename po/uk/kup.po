@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 00:43+0000\n"
+"POT-Creation-Date: 2023-11-05 12:39+0000\n"
 "PO-Revision-Date: 2023-02-24 08:52+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -382,59 +382,62 @@ msgstr ""
 "протягом %1.\n"
 "Зберегти нову резервну копію зараз?"
 
-#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:176
-#: daemon/planexecutor.cpp:314
+#: daemon/planexecutor.cpp:148 daemon/planexecutor.cpp:153
+#: daemon/planexecutor.cpp:186 daemon/planexecutor.cpp:205
+#: daemon/planexecutor.cpp:344 daemon/planexecutor.cpp:356
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "Так"
 
-#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:177
-#: daemon/planexecutor.cpp:315
+#: daemon/planexecutor.cpp:148 daemon/planexecutor.cpp:156
+#: daemon/planexecutor.cpp:187 daemon/planexecutor.cpp:208
+#: daemon/planexecutor.cpp:345 daemon/planexecutor.cpp:359
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "No"
 msgstr "Ні"
 
-#: daemon/planexecutor.cpp:168
+#: daemon/planexecutor.cpp:177
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
 msgstr "Не вдалося зберегти резервну копію"
 
-#: daemon/planexecutor.cpp:173 daemon/planexecutor.cpp:311
-#: daemon/planexecutor.cpp:345
+#: daemon/planexecutor.cpp:183 daemon/planexecutor.cpp:202
+#: daemon/planexecutor.cpp:341 daemon/planexecutor.cpp:353
+#: daemon/planexecutor.cpp:389 daemon/planexecutor.cpp:393
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "Показати файл журналу"
 
-#: daemon/planexecutor.cpp:180
+#: daemon/planexecutor.cpp:190 daemon/planexecutor.cpp:211
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
 msgstr "Відкрити вікно параметрів"
 
-#: daemon/planexecutor.cpp:204
+#: daemon/planexecutor.cpp:233
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Backup Saved"
 msgstr "Резервну копію збережено"
 
-#: daemon/planexecutor.cpp:205
+#: daemon/planexecutor.cpp:234
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
 msgstr "Збереження резервної копії успішно завершено."
 
-#: daemon/planexecutor.cpp:254 daemon/planexecutor.cpp:261
-#: daemon/planexecutor.cpp:293
+#: daemon/planexecutor.cpp:283 daemon/planexecutor.cpp:290
+#: daemon/planexecutor.cpp:322
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Problem"
 msgstr "Проблема"
 
-#: daemon/planexecutor.cpp:255
+#: daemon/planexecutor.cpp:284
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
@@ -442,25 +445,25 @@ msgstr ""
 "У вас недостатні права доступу для запису до теки призначення резервних "
 "копій."
 
-#: daemon/planexecutor.cpp:262
+#: daemon/planexecutor.cpp:291
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
 msgstr "Некоректний тип резервного копіювання у налаштуваннях."
 
-#: daemon/planexecutor.cpp:307
+#: daemon/planexecutor.cpp:336
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Integrity Check Completed"
 msgstr "Перевірку цілісності завершено"
 
-#: daemon/planexecutor.cpp:342
+#: daemon/planexecutor.cpp:385
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Repair Completed"
 msgstr "Виправлення завершено"
 
-#: daemon/planexecutor.cpp:373
+#: daemon/planexecutor.cpp:421
 #, kde-format
 msgid "Kup Backup System"
 msgstr "Система резервного копіювання Kup"

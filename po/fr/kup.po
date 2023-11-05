@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 00:43+0000\n"
+"POT-Creation-Date: 2023-11-05 12:39+0000\n"
 "PO-Revision-Date: 2023-02-24 20:53+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -375,83 +375,86 @@ msgstr ""
 "Vous avez utilisé cet ordinateur depuis %1 depuis la dernière sauvegarde.\n"
 "Voulez-vous sauvegarder maintenant ?"
 
-#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:176
-#: daemon/planexecutor.cpp:314
+#: daemon/planexecutor.cpp:148 daemon/planexecutor.cpp:153
+#: daemon/planexecutor.cpp:186 daemon/planexecutor.cpp:205
+#: daemon/planexecutor.cpp:344 daemon/planexecutor.cpp:356
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "Oui"
 
-#: daemon/planexecutor.cpp:146 daemon/planexecutor.cpp:177
-#: daemon/planexecutor.cpp:315
+#: daemon/planexecutor.cpp:148 daemon/planexecutor.cpp:156
+#: daemon/planexecutor.cpp:187 daemon/planexecutor.cpp:208
+#: daemon/planexecutor.cpp:345 daemon/planexecutor.cpp:359
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "No"
 msgstr "Non"
 
-#: daemon/planexecutor.cpp:168
+#: daemon/planexecutor.cpp:177
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
 msgstr "L'enregistrement de la sauvegarde a échoué"
 
-#: daemon/planexecutor.cpp:173 daemon/planexecutor.cpp:311
-#: daemon/planexecutor.cpp:345
+#: daemon/planexecutor.cpp:183 daemon/planexecutor.cpp:202
+#: daemon/planexecutor.cpp:341 daemon/planexecutor.cpp:353
+#: daemon/planexecutor.cpp:389 daemon/planexecutor.cpp:393
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "Voir le journal"
 
-#: daemon/planexecutor.cpp:180
+#: daemon/planexecutor.cpp:190 daemon/planexecutor.cpp:211
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
 msgstr "Ouvrir les paramètres"
 
-#: daemon/planexecutor.cpp:204
+#: daemon/planexecutor.cpp:233
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Backup Saved"
 msgstr "Sauvegarde réussie"
 
-#: daemon/planexecutor.cpp:205
+#: daemon/planexecutor.cpp:234
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
 msgstr "La sauvegarde a réussi ! "
 
-#: daemon/planexecutor.cpp:254 daemon/planexecutor.cpp:261
-#: daemon/planexecutor.cpp:293
+#: daemon/planexecutor.cpp:283 daemon/planexecutor.cpp:290
+#: daemon/planexecutor.cpp:322
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Problem"
 msgstr "Problème"
 
-#: daemon/planexecutor.cpp:255
+#: daemon/planexecutor.cpp:284
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
 msgstr "Vous n'avez pas la permission d'écrire dans le dossier de destination."
 
-#: daemon/planexecutor.cpp:262
+#: daemon/planexecutor.cpp:291
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
 msgstr "Type de sauvegarde non valable dans la configuration."
 
-#: daemon/planexecutor.cpp:307
+#: daemon/planexecutor.cpp:336
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Integrity Check Completed"
 msgstr "Contrôle d'intégrité effectué"
 
-#: daemon/planexecutor.cpp:342
+#: daemon/planexecutor.cpp:385
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Repair Completed"
 msgstr "Réparation effectuée"
 
-#: daemon/planexecutor.cpp:373
+#: daemon/planexecutor.cpp:421
 #, kde-format
 msgid "Kup Backup System"
 msgstr "Système de Sauvegarde Kup"
