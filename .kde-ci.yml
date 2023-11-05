@@ -13,9 +13,9 @@ Dependencies:
     'frameworks/kdbusaddons': '@stable'
     'frameworks/kconfig': '@stable'
     'frameworks/kjobwidgets': '@stable'
-    'frameworks/plasma-framework': '@stable'
     'frameworks/kwidgetsaddons': '@stable'
     'frameworks/kcmutils': '@stable'
+    'plasma/plasma-framework': 'kf5'
 
 - 'on': ['Linux/Qt6', 'FreeBSD/Qt6']
   'require':
@@ -28,7 +28,7 @@ Dependencies:
     'frameworks/kdbusaddons': '@latest-kf6'
     'frameworks/kconfig': '@latest-kf6'
     'frameworks/kjobwidgets': '@latest-kf6'
-    'frameworks/plasma-framework': '@latest-kf6'
     'frameworks/kwidgetsaddons': '@latest-kf6'
     'frameworks/kcmutils': '@latest-kf6'
+    'plasma/plasma-framework': '@latest-kf6'
     'plasma/plasma5support': '@latest-kf6'
