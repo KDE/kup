@@ -35,11 +35,12 @@ CoreAddons
 DBusAddons
 Config
 JobWidgets
-Plasma
 WidgetsAddons
 XmlGui
 KCMUtils
 )
+
+find_package(KF6Plasma REQUIRED)
 
 if(QT_MAJOR_VERSION STREQUAL "6")
     find_package(KF6Plasma5Support REQUIRED)
