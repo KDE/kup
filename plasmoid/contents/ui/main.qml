@@ -5,19 +5,38 @@
 import QtQuick 2.0
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.plasma5support as Plasma5Support
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
+import org.kde.kirigami 2.15 as Kirigami
 
-Item {
-	Plasmoid.switchWidth: units.gridUnit * 10
-	Plasmoid.switchHeight: units.gridUnit * 10
-	Plasmoid.toolTipMainText: getCommonStatus("tooltip title", "Error")
-	Plasmoid.toolTipSubText: getCommonStatus("tooltip subtitle", "No connection")
-	Plasmoid.icon: getCommonStatus("tooltip icon name", "kup")
+PlasmoidItem {
+	readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
+		|| Plasmoid.location === PlasmaCore.Types.RightEdge
+		|| Plasmoid.location === PlasmaCore.Types.BottomEdge
+		|| Plasmoid.location === PlasmaCore.Types.LeftEdge)
+
+	function symbolicizeIconName(iconName) {
+		const symbolicSuffix = "-symbolic";
+		if (iconName.endsWith(symbolicSuffix)) {
+			return iconName;
+		}
+		return iconName + symbolicSuffix;
+	}
+
+	switchWidth: Kirigami.Units.gridUnit * 10
+	switchHeight: Kirigami.Units.gridUnit * 10
+	toolTipMainText: getCommonStatus("tooltip title", "Error")
+	toolTipSubText: getCommonStatus("tooltip subtitle", "No connection")
+
+	Plasmoid.icon: inPanel
+		? symbolicizeIconName( getCommonStatus("tooltip icon name", "kup"))
+		: getCommonStatus("tooltip icon name", "kup")
+
 	Plasmoid.status: getCommonStatus("tray icon active", false)
 						  ? PlasmaCore.Types.ActiveStatus
 						  : PlasmaCore.Types.PassiveStatus
 
-	PlasmaCore.DataSource {
+	Plasma5Support.DataSource {
 		id: backupPlans
 		engine: "backups"
 		connectedSources: sources
@@ -52,17 +71,7 @@ Item {
 
 	property int planCount: backupPlans.data["common"]["plan count"]
 
-	Plasmoid.fullRepresentation: FullRepresentation {}
-	Plasmoid.compactRepresentation: PlasmaCore.IconItem {
-		source: "kup"
-		width: units.iconSizes.medium;
-		height: units.iconSizes.medium;
-
-		MouseArea {
-			anchors.fill: parent
-			onClicked: plasmoid.expanded = !plasmoid.expanded
-		}
-	}
+	fullRepresentation: FullRepresentation {}
 
 	Component.onCompleted: {
 		plasmoid.removeAction("configure");

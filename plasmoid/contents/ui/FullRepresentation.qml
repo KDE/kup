@@ -8,10 +8,11 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.15 as Kirigami
 
 PlasmaComponents.Page {
-	Layout.minimumWidth: units.gridUnit * 12
-	Layout.minimumHeight: units.gridUnit * 12
+	Layout.minimumWidth: Kirigami.Units.gridUnit * 12
+	Layout.minimumHeight: Kirigami.Units.gridUnit * 12
 
 	header: PlasmaExtras.PlasmoidHeading {
 		visible: !(plasmoid.containmentDisplayHints &
@@ -46,7 +47,7 @@ PlasmaComponents.Page {
 
 	Item {
 		anchors.fill: parent
-		anchors.topMargin: units.smallSpacing * 2
+		anchors.topMargin: Kirigami.Units.smallSpacing * 2
 		focus: true
 
 		PlasmaExtras.Heading {
@@ -60,7 +61,7 @@ PlasmaComponents.Page {
 		ColumnLayout {
 			anchors.fill: parent
 
-			PlasmaExtras.ScrollArea {
+			PlasmaComponents.ScrollView {
 				Layout.fillWidth: true
 				Layout.fillHeight: true
 
@@ -90,15 +91,15 @@ PlasmaComponents.Page {
 							level: 4
 							text: getPlanStatus(index, "status heading")
 						}
-						PlasmaExtras.Paragraph {
+						PlasmaComponents.Label {
 							text: getPlanStatus(index, "status details")
 						}
 					}
-					PlasmaCore.IconItem {
+					Kirigami.Icon {
 						source: getPlanStatus(index, "icon name")
 						Layout.alignment: Qt.AlignRight | Qt.AlignTop
-						Layout.preferredWidth: units.iconSizes.huge
-						Layout.preferredHeight: units.iconSizes.huge
+						Layout.preferredWidth: Kirigami.Units.iconSizes.huge
+						Layout.preferredHeight: Kirigami.Units.iconSizes.huge
 					}
 
 				}
