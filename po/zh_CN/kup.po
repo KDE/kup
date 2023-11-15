@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:39+0000\n"
+"POT-Creation-Date: 2023-11-15 00:44+0000\n"
 "PO-Revision-Date: 2023-10-21 13:54\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1356,32 +1356,32 @@ msgstr ""
 "找不到 bup 的储存库。\n"
 "%1"
 
-#: plasmoid/contents/ui/FullRepresentation.qml:109
+#: plasmoid/contents/ui/FullRepresentation.qml:110
 #, kde-format
 msgid "Save new backup"
 msgstr "保存新备份"
 
-#: plasmoid/contents/ui/FullRepresentation.qml:115
+#: plasmoid/contents/ui/FullRepresentation.qml:116
 #, kde-format
 msgid "Prune old backups"
 msgstr "删除旧备份"
 
-#: plasmoid/contents/ui/FullRepresentation.qml:120
+#: plasmoid/contents/ui/FullRepresentation.qml:121
 #, kde-format
 msgid "Show files"
 msgstr "显示文件"
 
-#: plasmoid/contents/ui/FullRepresentation.qml:125
+#: plasmoid/contents/ui/FullRepresentation.qml:126
 #, kde-format
 msgid "Show log file"
 msgstr "显示日志文件"
 
-#: plasmoid/contents/ui/main.qml:69
+#: plasmoid/contents/ui/main.qml:78
 #, kde-format
 msgid "&Configure Kup..."
 msgstr "配置 Kup(&C)..."
 
-#: plasmoid/contents/ui/main.qml:71
+#: plasmoid/contents/ui/main.qml:80
 #, kde-format
 msgid "&Reload backup plans"
 msgstr "重新加载备份计划(&R)"

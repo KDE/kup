@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:39+0000\n"
+"POT-Creation-Date: 2023-11-15 00:44+0000\n"
 "PO-Revision-Date: 2021-11-15 18:39+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -1294,34 +1294,34 @@ msgid ""
 "%1"
 msgstr ""
 
-#: plasmoid/contents/ui/FullRepresentation.qml:109
+#: plasmoid/contents/ui/FullRepresentation.qml:110
 #, kde-format
 msgid "Save new backup"
 msgstr ""
 
-#: plasmoid/contents/ui/FullRepresentation.qml:115
+#: plasmoid/contents/ui/FullRepresentation.qml:116
 #, kde-format
 msgid "Prune old backups"
 msgstr ""
 
-#: plasmoid/contents/ui/FullRepresentation.qml:120
+#: plasmoid/contents/ui/FullRepresentation.qml:121
 #, kde-format
 msgid "Show files"
 msgstr "Zobraziť súbory"
 
-#: plasmoid/contents/ui/FullRepresentation.qml:125
+#: plasmoid/contents/ui/FullRepresentation.qml:126
 #, kde-format
 msgid "Show log file"
 msgstr ""
 
-#: plasmoid/contents/ui/main.qml:69
+#: plasmoid/contents/ui/main.qml:78
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Configure"
 msgid "&Configure Kup..."
 msgstr "Nastaviť"
 
-#: plasmoid/contents/ui/main.qml:71
+#: plasmoid/contents/ui/main.qml:80
 #, kde-format
 msgid "&Reload backup plans"
 msgstr ""
