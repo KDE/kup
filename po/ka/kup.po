@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 00:44+0000\n"
-"PO-Revision-Date: 2023-09-03 06:34+0200\n"
+"PO-Revision-Date: 2023-11-18 21:55+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -850,6 +850,14 @@ msgid ""
 "files in the archive can not be accessed directly with a general file "
 "manager, a special program is needed."
 msgstr ""
+"ეს მარქაფის ტიპი <emphasis>არქივია</emphasis>. ის შეიცავს ორივე, თქვენი "
+"ფაილების უახლეს ვერსიას და ძველ ვერსიებსაც. ამ ტიპის მარქაფით საშუალება "
+"გეძლევათ, თქვენი ფაილის უფრო ძველი ვერსიებიც აღადგინოთ, ან ფაილები, რომლებიც "
+"თქვენს კომპიუტერიდან მოგვიანებით წაშალა. ადგილი დისკზე მინიმიზებულია თქვენი "
+"ფაილების ვერსიებს შორის სხვაობების მოძებნით და მხოლოდ ამ სხვაობების "
+"შენახვით. ამის მიუხედავად, დროის გასვლასთან ერთად, არქივი ზომაში გაიზრდება."
+"<nl/>ასევე მნიშვნელოვანია იცოდეთ, რომ ფაილებთან, რომლებიც არქივშია, უბრალოდ "
+"წვდომა ვერ გექნებათ. საჭიროა სპეციალური პროგრამა."
 
 #: kcm/backupplanwidget.cpp:513
 #, kde-kuit-format
@@ -879,6 +887,13 @@ msgid ""
 "due to a broken hard drive but it does not help you to recover from your own "
 "mistakes."
 msgstr ""
+"ეს მარქაფის ტიპი საქაღალდეა, რომელიც თქვენს მიერ არჩეულ საწყის "
+"საქაღალდეებთან სინქრონიზდება. მარქაფის შენახვა უბრალოდ ნიშნავს, რომ მარქაფის "
+"სამიზნე საქაღალდე თქვენი საწყისი საქაღალდეების ზუსტ ასლს შეიცავს ახლანდელ "
+"მდგომარეობაში და მეტს არაფერს. თუ ფაილი წაგეშალათ საწყის საქაღალდეში, ის "
+"მარქაფის საქაღალდეშიც წაიშლება.<nl/>ამ ტიპის მარქაფს შეუძლია, მყარი დისკის "
+"დაზიანების შემთხვევაში გადაგარჩინოთ, მაგრამ თქვენი საკუთარი შეცდომებისგან "
+"ვერ დაგიცავთ."
 
 #: kcm/backupplanwidget.cpp:536
 #, kde-kuit-format
@@ -1112,6 +1127,10 @@ msgid ""
 "dot. They are typically located in your home folder and are used to store "
 "settings and temporary files for your applications."
 msgstr ""
+"ეს შესაძლებელს ხდის დამალული საქაღალდეების მკაფიოდ ჩართვას ან გამორიცხვას "
+"მარქაფის წყაროს შერჩევაში. დამალულ საქაღალეებს აქვს სახელი, რომელიც წერტილით "
+"იწყება. ისინი, როგორც წესი, მდებარეობს თქვენი საწყის საქაღალდეში და "
+"გამოიყენება თქვენი პროგრამების პარამეტრებისა და დროებითი ფაილების შესანახად."
 
 #: kcm/backupplanwidget.cpp:843
 #, kde-kuit-format
@@ -1156,6 +1175,10 @@ msgid ""
 "corruption problems sooner than at the time you need to use a backup, at "
 "that time it could be too late."
 msgstr ""
+"შეამოწმებს სრულ მარქაფის არქივ დაზიანებებზე ყოველ ჯერზე, როცა ახალ "
+"მონაცემებს შეინახავთ. მარქაფების შენახვას ოდნავ მეტი დრო დასჭირდება, მაგრამ "
+"ის საშუალებას გაძლევთ, დაზიანებები უფრო მალე აღმოაჩინოთ, ვიდრე ეს მარქაფი "
+"დაგჭირდებათ, რადგან, იმ დროისთვის, უკვე გვიანი იქნება."
 
 #: kcm/backupplanwidget.cpp:887
 #, kde-kuit-format
@@ -1172,6 +1195,10 @@ msgid ""
 "and folders with names that match any of the patterns will be excluded from "
 "the backup. The pattern format is documented <link url='%1'>here</link>."
 msgstr ""
+"ნიმუშები, საჭიროა, ჩამოთვლილი იყოს ტექსტურ ფაილში, ერთი ნიმუშით ერთ ხაზზე. "
+"ფაილებისა და საქაღალდეების სახელები, რომლებიც ნებისმიერ ამ ნიმუშს "
+"დაემთხვევა, მარქაფიდან ამოღებული იქნება. ნიმუშის დოკუმენტაცია შეგიძლიათ "
+"იპოვოთ <link url='%1'>აქ</link>."
 
 #: kcm/backupplanwidget.cpp:923
 #, kde-kuit-format
@@ -1332,6 +1359,10 @@ msgid ""
 "plan you need to install either of</p><ul><li>bup, for versioned backups</"
 "li><li>rsync, for synchronized backups</li></ul>"
 msgstr ""
+"<h2>მარქაფის პროგრამები აღმოჩენილი არაა<h2><p>მანამდე, სანამ ნებისმიერ "
+"მარქაფის გეგმას გაააქტიურებთ, აუცილებელია, დააყენოთ ან </p><ul></li>bup, "
+"ვერსიებიანი მარქაფებისთვის</li><li>rsync, სინქრონიზებული მარქაფებისთვის.</"
+"li></ul>"
 
 #: kcm/kupkcm.cpp:201
 #, kde-kuit-format
