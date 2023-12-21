@@ -18,7 +18,7 @@ target_link_libraries(plasma_engine_kup
 )
 
 if(QT_MAJOR_VERSION STREQUAL "6")
-	target_link_libraries(plasma_engine_kup KF6::Plasma5Support Plasma::Plasma)
+	target_link_libraries(plasma_engine_kup Plasma::Plasma5Support Plasma::Plasma)
 else()
 	target_link_libraries(plasma_engine_kup KF5::Plasma)
 endif()

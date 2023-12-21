@@ -43,7 +43,7 @@ KCMUtils
 
 if(QT_MAJOR_VERSION STREQUAL "6")
     find_package(Plasma REQUIRED)
-    find_package(KF6Plasma5Support REQUIRED)
+    find_package(Plasma5Support REQUIRED)
 else()
     find_package(KF5Plasma REQUIRED)
 endif()
