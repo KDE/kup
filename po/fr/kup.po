@@ -4,8 +4,8 @@
 # benoits <benoit.schwinden@free.fr>, 2014-2016.
 # P Rouleau <pfrouleau@gmail.com>, 2018.
 # Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021.
-# Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
+# Xavier Besnard <xavier.besnard@kde.org>, 2020, 2021.
+# Xavier Besnard <xavier.besnard@kde.org>, 2023.
 #
 # Translators:
 # MerMouY, 2015.
