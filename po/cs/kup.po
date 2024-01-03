@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 00:44+0000\n"
+"POT-Creation-Date: 2024-01-03 00:43+0000\n"
 "PO-Revision-Date: 2023-06-22 15:50+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -541,26 +541,26 @@ msgctxt "added after file name in some cases"
 msgid " (file)"
 msgstr "(soubor)"
 
-#: filedigger/restoredialog.cpp:102 kcm/backupplanwidget.cpp:434
+#: filedigger/restoredialog.cpp:104 kcm/backupplanwidget.cpp:434
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder..."
 msgstr "Nová složka…"
 
-#: filedigger/restoredialog.cpp:128 filedigger/restoredialog.cpp:147
+#: filedigger/restoredialog.cpp:130 filedigger/restoredialog.cpp:149
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "No destination was selected, please select one."
 msgstr "Není vybrán cíl – zvolte nějaký."
 
-#: filedigger/restoredialog.cpp:247
+#: filedigger/restoredialog.cpp:249
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "There was a problem while getting a list of all files to restore: %1"
 msgstr ""
 "Vyskytl se problém při získávání seznamu všech souborů které obnovit: %1"
 
-#: filedigger/restoredialog.cpp:262
+#: filedigger/restoredialog.cpp:264
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
@@ -568,7 +568,7 @@ msgid ""
 "different destination or free some space."
 msgstr "V cíli není dostatek volného místa. Zvolte jiný nebo místo uvolněte."
 
-#: filedigger/restoredialog.cpp:274
+#: filedigger/restoredialog.cpp:276
 #, kde-kuit-format
 msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
@@ -576,37 +576,37 @@ msgctxt ""
 msgid " - saved at %1"
 msgstr " - uloženo v %1"
 
-#: filedigger/restoredialog.cpp:275
+#: filedigger/restoredialog.cpp:277
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Folder already exists, please choose a solution"
 msgstr "Složka už existuje, zvolte řešení"
 
-#: filedigger/restoredialog.cpp:281
+#: filedigger/restoredialog.cpp:283
 #, kde-kuit-format
 msgctxt "@info"
 msgid "File already exists"
 msgstr "Soubor už existuje"
 
-#: filedigger/restoredialog.cpp:294
+#: filedigger/restoredialog.cpp:296
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "The new name entered already exists, please enter a different one."
 msgstr "Zadaný nový název už existuje, zadejte jiný."
 
-#: filedigger/restoredialog.cpp:364 kcm/dirselector.cpp:35
+#: filedigger/restoredialog.cpp:366 kcm/dirselector.cpp:35
 #, kde-kuit-format
 msgctxt "default folder name when creating a new folder"
 msgid "New Folder"
 msgstr "Nová složka"
 
-#: filedigger/restoredialog.cpp:369 kcm/dirselector.cpp:40
+#: filedigger/restoredialog.cpp:371 kcm/dirselector.cpp:40
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "Nová složka"
 
-#: filedigger/restoredialog.cpp:370 kcm/dirselector.cpp:41
+#: filedigger/restoredialog.cpp:372 kcm/dirselector.cpp:41
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid ""
@@ -616,12 +616,12 @@ msgstr ""
 "Vytvořte novou složku v:\n"
 "%1"
 
-#: filedigger/restoredialog.cpp:383 kcm/dirselector.cpp:53
+#: filedigger/restoredialog.cpp:385 kcm/dirselector.cpp:53
 #, kde-format
 msgid "A folder named %1 already exists."
 msgstr "Složka nazvaná %1 už existuje."
 
-#: filedigger/restoredialog.cpp:389 kcm/dirselector.cpp:59
+#: filedigger/restoredialog.cpp:391 kcm/dirselector.cpp:59
 #, kde-format
 msgid "You do not have permission to create %1."
 msgstr "Nemáte potřebná oprávnění pro vytvoření %1."

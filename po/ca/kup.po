@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 00:44+0000\n"
+"POT-Creation-Date: 2024-01-03 00:43+0000\n"
 "PO-Revision-Date: 2023-02-24 15:01+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -544,19 +544,19 @@ msgctxt "added after file name in some cases"
 msgid " (file)"
 msgstr " (fitxer)"
 
-#: filedigger/restoredialog.cpp:102 kcm/backupplanwidget.cpp:434
+#: filedigger/restoredialog.cpp:104 kcm/backupplanwidget.cpp:434
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder..."
 msgstr "Carpeta nova..."
 
-#: filedigger/restoredialog.cpp:128 filedigger/restoredialog.cpp:147
+#: filedigger/restoredialog.cpp:130 filedigger/restoredialog.cpp:149
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "No destination was selected, please select one."
 msgstr "No s'ha seleccionat cap destinació, trieu-ne una."
 
-#: filedigger/restoredialog.cpp:247
+#: filedigger/restoredialog.cpp:249
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "There was a problem while getting a list of all files to restore: %1"
@@ -564,7 +564,7 @@ msgstr ""
 "S'ha produït un problema en obtenir una llista de tots els fitxers a "
 "restaurar: %1"
 
-#: filedigger/restoredialog.cpp:262
+#: filedigger/restoredialog.cpp:264
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
@@ -574,7 +574,7 @@ msgstr ""
 "La destinació no té prou espai disponible. Si us plau, trieu-ne una de "
 "diferent o allibereu espai."
 
-#: filedigger/restoredialog.cpp:274
+#: filedigger/restoredialog.cpp:276
 #, kde-kuit-format
 msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
@@ -582,37 +582,37 @@ msgctxt ""
 msgid " - saved at %1"
 msgstr " - desada a %1"
 
-#: filedigger/restoredialog.cpp:275
+#: filedigger/restoredialog.cpp:277
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Folder already exists, please choose a solution"
 msgstr "La carpeta ja existeix, trieu una solució"
 
-#: filedigger/restoredialog.cpp:281
+#: filedigger/restoredialog.cpp:283
 #, kde-kuit-format
 msgctxt "@info"
 msgid "File already exists"
 msgstr "El fitxer ja existeix"
 
-#: filedigger/restoredialog.cpp:294
+#: filedigger/restoredialog.cpp:296
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "The new name entered already exists, please enter a different one."
 msgstr "El nom nou que heu introduït ja existeix, introduïu-ne un de diferent."
 
-#: filedigger/restoredialog.cpp:364 kcm/dirselector.cpp:35
+#: filedigger/restoredialog.cpp:366 kcm/dirselector.cpp:35
 #, kde-kuit-format
 msgctxt "default folder name when creating a new folder"
 msgid "New Folder"
 msgstr "Carpeta nova"
 
-#: filedigger/restoredialog.cpp:369 kcm/dirselector.cpp:40
+#: filedigger/restoredialog.cpp:371 kcm/dirselector.cpp:40
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "Carpeta nova"
 
-#: filedigger/restoredialog.cpp:370 kcm/dirselector.cpp:41
+#: filedigger/restoredialog.cpp:372 kcm/dirselector.cpp:41
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid ""
@@ -622,12 +622,12 @@ msgstr ""
 "Crea una carpeta nova a:\n"
 "%1"
 
-#: filedigger/restoredialog.cpp:383 kcm/dirselector.cpp:53
+#: filedigger/restoredialog.cpp:385 kcm/dirselector.cpp:53
 #, kde-format
 msgid "A folder named %1 already exists."
 msgstr "Ja existeix una carpeta anomenada %1."
 
-#: filedigger/restoredialog.cpp:389 kcm/dirselector.cpp:59
+#: filedigger/restoredialog.cpp:391 kcm/dirselector.cpp:59
 #, kde-format
 msgid "You do not have permission to create %1."
 msgstr "No teniu permís per a crear %1."

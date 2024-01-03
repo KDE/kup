@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 00:44+0000\n"
+"POT-Creation-Date: 2024-01-03 00:43+0000\n"
 "PO-Revision-Date: 2023-04-16 14:05+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -550,19 +550,19 @@ msgctxt "added after file name in some cases"
 msgid " (file)"
 msgstr " (Datei)"
 
-#: filedigger/restoredialog.cpp:102 kcm/backupplanwidget.cpp:434
+#: filedigger/restoredialog.cpp:104 kcm/backupplanwidget.cpp:434
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder..."
 msgstr "Neuer Ordner..."
 
-#: filedigger/restoredialog.cpp:128 filedigger/restoredialog.cpp:147
+#: filedigger/restoredialog.cpp:130 filedigger/restoredialog.cpp:149
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "No destination was selected, please select one."
 msgstr "Es wurde kein Ziel angegeben, bitte wählen Sie eines aus."
 
-#: filedigger/restoredialog.cpp:247
+#: filedigger/restoredialog.cpp:249
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "There was a problem while getting a list of all files to restore: %1"
@@ -570,7 +570,7 @@ msgstr ""
 "Es gab ein Problem beim Erstellen einer Liste wiederherzustellender Dateien: "
 "%1"
 
-#: filedigger/restoredialog.cpp:262
+#: filedigger/restoredialog.cpp:264
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
@@ -580,7 +580,7 @@ msgstr ""
 "Auf dem gewählten Ziel ist nicht genügend freier Speicherplatz verfügbar. "
 "Bitte wählen Sie ein anderes Ziel aus oder geben Sie etwas Speicher frei."
 
-#: filedigger/restoredialog.cpp:274
+#: filedigger/restoredialog.cpp:276
 #, kde-kuit-format
 msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
@@ -588,38 +588,38 @@ msgctxt ""
 msgid " - saved at %1"
 msgstr " - gespeichert am %1"
 
-#: filedigger/restoredialog.cpp:275
+#: filedigger/restoredialog.cpp:277
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Folder already exists, please choose a solution"
 msgstr "Der Ordner existiert bereits, bitte wählen Sie eine Lösung aus"
 
-#: filedigger/restoredialog.cpp:281
+#: filedigger/restoredialog.cpp:283
 #, kde-kuit-format
 msgctxt "@info"
 msgid "File already exists"
 msgstr "Die Datei existiert bereits"
 
-#: filedigger/restoredialog.cpp:294
+#: filedigger/restoredialog.cpp:296
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "The new name entered already exists, please enter a different one."
 msgstr ""
 "Der angegebene Name existiert bereits, bitte geben Sie einen anderen ein."
 
-#: filedigger/restoredialog.cpp:364 kcm/dirselector.cpp:35
+#: filedigger/restoredialog.cpp:366 kcm/dirselector.cpp:35
 #, kde-kuit-format
 msgctxt "default folder name when creating a new folder"
 msgid "New Folder"
 msgstr "Neuer Ordner"
 
-#: filedigger/restoredialog.cpp:369 kcm/dirselector.cpp:40
+#: filedigger/restoredialog.cpp:371 kcm/dirselector.cpp:40
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "Neuer Ordner"
 
-#: filedigger/restoredialog.cpp:370 kcm/dirselector.cpp:41
+#: filedigger/restoredialog.cpp:372 kcm/dirselector.cpp:41
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid ""
@@ -629,12 +629,12 @@ msgstr ""
 "Neuen Ordner anlegen in:\n"
 "%1"
 
-#: filedigger/restoredialog.cpp:383 kcm/dirselector.cpp:53
+#: filedigger/restoredialog.cpp:385 kcm/dirselector.cpp:53
 #, kde-format
 msgid "A folder named %1 already exists."
 msgstr "Ein Ordner namens %1 existiert bereits."
 
-#: filedigger/restoredialog.cpp:389 kcm/dirselector.cpp:59
+#: filedigger/restoredialog.cpp:391 kcm/dirselector.cpp:59
 #, kde-format
 msgid "You do not have permission to create %1."
 msgstr "Sie haben keine Berechtigung zum Erstellen von %1."
