@@ -10,17 +10,19 @@
 #include "kupfiledigger_debug.h"
 
 #include <KFileUtils>
+#include <KFileWidget>
 #include <KIO/CopyJob>
-#include <KIO/OpenUrlJob>
 #include <KIO/JobUiDelegate>
 #include <KIO/JobUiDelegateFactory>
-#include <QStorageInfo>
-#include <KFileWidget>
+#include <KIO/ListJob>
+#include <KIO/OpenUrlJob>
+#include <KIO/UDSEntry>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KMessageWidget>
 #include <KProcess>
 #include <KWidgetJobTracker>
+#include <QStorageInfo>
 
 #include <QDir>
 #include <QInputDialog>

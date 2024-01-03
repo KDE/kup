@@ -8,6 +8,8 @@
 #include "versionlistmodel.h"
 
 #include <KIO/Job>
+#include <KIO/UDSEntry>
+
 #include <QDialog>
 #include <QFileInfo>
 
