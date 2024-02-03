@@ -59,7 +59,7 @@ void RestoreJob::timerEvent(QTimerEvent *pTimerEvent) {
 
 	while(mRestoreProcess.canReadLine()) {
 		QString lFileName = QString::fromLocal8Bit(mRestoreProcess.readLine()).trimmed();
-		if(lFileName.count() == 0) {
+		if(lFileName.size() == 0) {
 			break;
 		}
 		if(lFileName.endsWith(QLatin1Char('/'))) { // it's a directory

@@ -28,7 +28,7 @@ BackupJob::BackupJob(BackupPlan &pBackupPlan, QString pDestinationPath, QString 
 void BackupJob::start() {
 	mKupDaemon->registerJob(this);
 	QStringList lRemovedPaths;
-	for(const QString &lPath: qAsConst(mBackupPlan.mPathsIncluded)) {
+	for(const QString &lPath: std::as_const(mBackupPlan.mPathsIncluded)) {
 		if(!QFile::exists(lPath)) {
 			lRemovedPaths << lPath;
 		}

@@ -38,16 +38,20 @@ void DriveSelectionDelegate::paint(QPainter* pPainter, const QStyleOptionViewIte
 	auto lUsedSize = pIndex.data(DriveSelection::UsedSpace).toULongLong();
 	bool lIsDisconnected = pIndex.data(DriveSelection::UDI).toString().isEmpty();
 
+	auto lFontMetrics = mListView->fontMetrics();
+
 	if(lTotalSize == 0 || lIsDisconnected) {
 		mCapacityBar->setValue(0);
 	} else {
 		mCapacityBar->setValue(static_cast<int>((lUsedSize * 100) / lTotalSize));
 	}
-	mCapacityBar->drawCapacityBar(pPainter, pOption.rect.adjusted(cMargin,
-	                                                              cMargin+QApplication::fontMetrics().height()+cMargin,
-	                                                              -cMargin,
-	                                                              4*cMargin + QApplication::fontMetrics().height() -
-	                                                              pOption.rect.height()));
+	mCapacityBar->drawCapacityBar(
+		pPainter,
+		pOption.rect.adjusted(
+			cMargin,
+			cMargin+lFontMetrics.height()+cMargin,
+			-cMargin,
+			4*cMargin + lFontMetrics.height() - pOption.rect.height()));
 
 	if (pOption.state & QStyle::State_HasFocus)
 		pPainter->setPen(pOption.palette.color(QPalette::HighlightedText));
@@ -64,9 +68,9 @@ void DriveSelectionDelegate::paint(QPainter* pPainter, const QStyleOptionViewIte
 		if(lTotalSize > 0) {
 			QString lFreeSpace = xi18nc("@label %1 is amount of free storage space of hard drive","%1 free",
 			                            lFormat.formatByteSize(lTotalSize - lUsedSize));
-			int lTextWidth = QApplication::fontMetrics().horizontalAdvance(lFreeSpace);
+			int lTextWidth = lFontMetrics.horizontalAdvance(lFreeSpace);
 			lTextEnd -= lTextWidth + cMargin;
-			QPoint lOffset = QPoint(-cMargin - lTextWidth, cMargin + QApplication::fontMetrics().height());
+			QPoint lOffset = QPoint(-cMargin - lTextWidth, cMargin + lFontMetrics.height());
 			pPainter->drawText(pOption.rect.topRight() + lOffset, lFreeSpace);
 		}
 	}
@@ -93,8 +97,8 @@ void DriveSelectionDelegate::paint(QPainter* pPainter, const QStyleOptionViewIte
 		lDisplayLabel = xi18nc("@item:inlistbox %1 is drive(partition) label, %2 is storage capacity",
 		                      "%1: %2 total capacity", lPartitionLabel, lFormat.formatByteSize(lTotalSize));
 	}
-	lDisplayLabel = QApplication::fontMetrics().elidedText(lDisplayLabel, Qt::ElideMiddle, lTextEnd - pOption.rect.left() - cMargin);
-	pPainter->drawText(pOption.rect.topLeft() + QPoint(cMargin, cMargin+QApplication::fontMetrics().height()), lDisplayLabel);
+	lDisplayLabel = lFontMetrics.elidedText(lDisplayLabel, Qt::ElideMiddle, lTextEnd - pOption.rect.left() - cMargin);
+	pPainter->drawText(pOption.rect.topLeft() + QPoint(cMargin, cMargin+lFontMetrics.height()), lDisplayLabel);
 
 	int lIconSize = 48;
 	QRect lWarningRect = warningRect(pOption.rect.adjusted(lIconSize + cMargin, 0, 0, 0), pIndex);
@@ -109,9 +113,10 @@ void DriveSelectionDelegate::paint(QPainter* pPainter, const QStyleOptionViewIte
 
 QSize DriveSelectionDelegate::sizeHint(const QStyleOptionViewItem& pOption, const QModelIndex& pIndex) const {
 	Q_UNUSED(pOption)
+	auto lFontMetrics = mListView->fontMetrics();
 	QSize lSize;
-	lSize.setWidth(cMargin*2 + QApplication::fontMetrics().horizontalAdvance(pIndex.data().toString()));
-	lSize.setHeight(cMargin*5 + QApplication::fontMetrics().height());
+	lSize.setWidth(cMargin*2 + lFontMetrics.horizontalAdvance(pIndex.data().toString()));
+	lSize.setHeight(cMargin*5 + lFontMetrics.height());
 	int lIconSize = 48;
 	QRect lWarningRect = warningRect(mListView->rect().adjusted(lIconSize + cMargin, 0, 0, 0), pIndex);
 	if(!lWarningRect.isEmpty()) {
@@ -121,12 +126,13 @@ QSize DriveSelectionDelegate::sizeHint(const QStyleOptionViewItem& pOption, cons
 }
 
 QRect DriveSelectionDelegate::warningRect(const QRect &pRect, const QModelIndex &pIndex) const {
-	QRect lTextLocation = pRect.adjusted(cMargin, 5*cMargin + QApplication::fontMetrics().height(), -cMargin, -cMargin);
+	auto lFontMetrics = mListView->fontMetrics();
+	QRect lTextLocation = pRect.adjusted(cMargin, 5*cMargin + lFontMetrics.height(), -cMargin, -cMargin);
 	QString lWarningText = warningText(pIndex);
 	if(lWarningText.isEmpty()) {
 		return {};
 	}
-	QRect lTextBoundary = QApplication::fontMetrics().boundingRect(lTextLocation, Qt::TextWordWrap, lWarningText);
+	QRect lTextBoundary = lFontMetrics.boundingRect(lTextLocation, Qt::TextWordWrap, lWarningText);
 	int lIconSize = 48;
 	if(lTextBoundary.height() < lIconSize) {
 		lTextBoundary.setHeight(lIconSize);
