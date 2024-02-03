@@ -53,9 +53,9 @@ void KupDaemon::setupGuiStuff() {
 	mUsageAccTimer->start();
 	KIdleTime *lIdleTime = KIdleTime::instance();
 	lIdleTime->addIdleTimeout(KUP_IDLE_TIMEOUT_S * 1000);
-	connect(lIdleTime, SIGNAL(timeoutReached(int)), mUsageAccTimer, SLOT(stop()));
-	connect(lIdleTime, SIGNAL(timeoutReached(int)), lIdleTime, SLOT(catchNextResumeEvent()));
-	connect(lIdleTime, SIGNAL(resumingFromIdle()), mUsageAccTimer, SLOT(start()));
+	connect(lIdleTime, qOverload<int, int>(&KIdleTime::timeoutReached), mUsageAccTimer, &QTimer::stop);
+	connect(lIdleTime, qOverload<int, int>(&KIdleTime::timeoutReached), lIdleTime, &KIdleTime::catchNextResumeEvent);
+	connect(lIdleTime, &KIdleTime::resumingFromIdle, mUsageAccTimer, qOverload<>(&QTimer::start));
 
 	// delay status update to avoid sending a status to plasma applet
 	// that will be changed again just a microsecond later anyway
