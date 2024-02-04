@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-03 00:43+0000\n"
+"POT-Creation-Date: 2024-02-04 01:38+0000\n"
 "PO-Revision-Date: 2023-02-24 15:01+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -1267,19 +1267,19 @@ msgstr ""
 "Connecteu l'emmagatzematge extern que voleu fer servir i, a continuació, "
 "seleccioneu-lo en aquesta llista."
 
-#: kcm/driveselectiondelegate.cpp:61
+#: kcm/driveselectiondelegate.cpp:65
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
 msgstr " (desconnectat)"
 
-#: kcm/driveselectiondelegate.cpp:65
+#: kcm/driveselectiondelegate.cpp:69
 #, kde-kuit-format
 msgctxt "@label %1 is amount of free storage space of hard drive"
 msgid "%1 free"
 msgstr "%1 lliure"
 
-#: kcm/driveselectiondelegate.cpp:80
+#: kcm/driveselectiondelegate.cpp:84
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used for unnamed filesystems, more than one filesystem on "
@@ -1288,7 +1288,7 @@ msgctxt ""
 msgid "Partition %1 on %2%3"
 msgstr "Partició %1 a %2%3"
 
-#: kcm/driveselectiondelegate.cpp:83
+#: kcm/driveselectiondelegate.cpp:87
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
@@ -1296,7 +1296,7 @@ msgctxt ""
 msgid "%1%2"
 msgstr "%1%2"
 
-#: kcm/driveselectiondelegate.cpp:87
+#: kcm/driveselectiondelegate.cpp:91
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
@@ -1304,13 +1304,13 @@ msgctxt ""
 msgid "%1 on %2%3"
 msgstr "%1 a %2%3"
 
-#: kcm/driveselectiondelegate.cpp:94
+#: kcm/driveselectiondelegate.cpp:98
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
 msgstr "%1: capacitat total %2"
 
-#: kcm/driveselectiondelegate.cpp:141
+#: kcm/driveselectiondelegate.cpp:147
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1323,7 +1323,7 @@ msgstr ""
 "hi ha més d'un usuari en aquest ordinador o si esteu fent una còpia de "
 "seguretat dels fitxers de programa executables."
 
-#: kcm/driveselectiondelegate.cpp:146
+#: kcm/driveselectiondelegate.cpp:152
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""

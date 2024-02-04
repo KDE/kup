@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-03 00:43+0000\n"
+"POT-Creation-Date: 2024-02-04 01:38+0000\n"
 "PO-Revision-Date: 2023-04-16 14:05+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -1272,19 +1272,19 @@ msgstr ""
 "Schließen Sie den externen Speicher, den Sie verwenden möchten, an und "
 "wählen Sie diesen in der Liste aus."
 
-#: kcm/driveselectiondelegate.cpp:61
+#: kcm/driveselectiondelegate.cpp:65
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
 msgstr " (getrennt)"
 
-#: kcm/driveselectiondelegate.cpp:65
+#: kcm/driveselectiondelegate.cpp:69
 #, kde-kuit-format
 msgctxt "@label %1 is amount of free storage space of hard drive"
 msgid "%1 free"
 msgstr "%1 frei"
 
-#: kcm/driveselectiondelegate.cpp:80
+#: kcm/driveselectiondelegate.cpp:84
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used for unnamed filesystems, more than one filesystem on "
@@ -1293,7 +1293,7 @@ msgctxt ""
 msgid "Partition %1 on %2%3"
 msgstr "Partition %1 auf %2%3"
 
-#: kcm/driveselectiondelegate.cpp:83
+#: kcm/driveselectiondelegate.cpp:87
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
@@ -1301,7 +1301,7 @@ msgctxt ""
 msgid "%1%2"
 msgstr "%1%2"
 
-#: kcm/driveselectiondelegate.cpp:87
+#: kcm/driveselectiondelegate.cpp:91
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
@@ -1309,13 +1309,13 @@ msgctxt ""
 msgid "%1 on %2%3"
 msgstr "%1 auf %2%3"
 
-#: kcm/driveselectiondelegate.cpp:94
+#: kcm/driveselectiondelegate.cpp:98
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
 msgstr "%1: %2 Gesamtgröße"
 
-#: kcm/driveselectiondelegate.cpp:141
+#: kcm/driveselectiondelegate.cpp:147
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1328,7 +1328,7 @@ msgstr ""
 "wenn mehrere Benutzer an diesem Computer arbeiten, oder wenn Sie ausführbare "
 "Programmdateien speichern wollen."
 
-#: kcm/driveselectiondelegate.cpp:146
+#: kcm/driveselectiondelegate.cpp:152
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
