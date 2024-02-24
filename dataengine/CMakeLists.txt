@@ -19,10 +19,10 @@ target_link_libraries(plasma_engine_kup
 
 if(QT_MAJOR_VERSION STREQUAL "6")
 	target_link_libraries(plasma_engine_kup Plasma::Plasma5Support Plasma::Plasma)
+	install(TARGETS plasma_engine_kup DESTINATION ${PLASMA5SUPPORT_DATAENGINES_PLUGINDIR})
+	install(FILES kupservice.operations kupdaemonservice.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)
 else()
 	target_link_libraries(plasma_engine_kup KF5::Plasma)
+	install(TARGETS plasma_engine_kup DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+	install(FILES kupservice.operations kupdaemonservice.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
 endif()
-
-install(TARGETS plasma_engine_kup DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
-install(FILES kupservice.operations kupdaemonservice.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
-
