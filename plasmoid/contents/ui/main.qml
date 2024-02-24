@@ -38,7 +38,7 @@ PlasmoidItem {
 
 	Plasma5Support.DataSource {
 		id: backupPlans
-		engine: "backups"
+		engine: "kup"
 		connectedSources: sources
 
 		onSourceAdded: {

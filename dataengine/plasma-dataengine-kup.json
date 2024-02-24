@@ -57,7 +57,6 @@
         "Description[x-test]": "xxStatus of backup plansxx",
         "EnabledByDefault": true,
         "Icon": "kup",
-        "Id": "backups",
         "License": "GPL",
         "Name": "Backups",
         "Name[ar]": "النسخ الاحتياطية",
