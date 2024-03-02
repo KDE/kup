@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kup package.
 #
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-04 01:38+0000\n"
-"PO-Revision-Date: 2023-05-15 22:26+0300\n"
+"PO-Revision-Date: 2024-03-01 15:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: daemon/backupjob.cpp:39
 #, kde-kuit-format
@@ -759,7 +759,7 @@ msgstr "Geri Yükle"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Exclude Folder"
-msgstr "Klasörü Dışarıda Tut"
+msgstr "Klasörü Dışla"
 
 #: kcm/backupplanwidget.cpp:264
 #, kde-kuit-format
@@ -778,7 +778,7 @@ msgid ""
 msgstr ""
 "Bu klasörü okumaya izniniz yok: <filename>%1</filename><nl/>Kaynak seçiminde "
 "içerilemez. Eğer sizin için önemli bir şey içermiyorsa olası çözümlerden bir "
-"tanesi, bu klasörü yedek tasarısından dışarıda tutmaktır."
+"tanesi, bu klasörü yedek tasarısından dışlamaktır."
 
 #: kcm/backupplanwidget.cpp:376
 #, kde-kuit-format
@@ -791,8 +791,7 @@ msgid ""
 msgstr ""
 "Bu dosyayı okumaya izniniz yok: <filename>%1</filename><nl/>Kaynak seçiminde "
 "içerilemez. Eğer sizin için önemli bir şey içermiyorsa olası çözümlerden bir "
-"tanesi, bu klasörü yedek tasarısından bu dosyayı içeren klasörü dışarıda "
-"tutmaktır."
+"tanesi, bu klasörü yedek tasarısından bu dosyayı içeren klasörü dışlamaktır."
 
 #: kcm/backupplanwidget.cpp:392
 #, kde-kuit-format
@@ -1133,7 +1132,7 @@ msgid ""
 "settings and temporary files for your applications."
 msgstr ""
 "Bu, yedekleme kaynağı seçimine gizli klasörleri açıkça içermeyi veya "
-"dışarıda tutmayı olanaklı kılar. Gizli klasörler, nokta ile başlayan bir ada "
+"dışlamayı olanaklı kılar. Gizli klasörler, nokta ile başlayan bir ada "
 "sahiptir. Genellikle ana klasörünüzde bulunurlar ve uygulamalarınız için "
 "ayarları ve geçici dosyaları depolamak için kullanılırlar."
 
@@ -1189,7 +1188,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
-msgstr "Desenlere bağlı olarak dosyaları ve klasörleri dışarıda tut"
+msgstr "Dizgilere bağlı olarak dosyaları ve klasörleri dışla"
 
 #: kcm/backupplanwidget.cpp:905
 #, kde-kuit-format
@@ -1199,10 +1198,10 @@ msgid ""
 "and folders with names that match any of the patterns will be excluded from "
 "the backup. The pattern format is documented <link url='%1'>here</link>."
 msgstr ""
-"Desenlerin, her satırda bir desen olacak şekilde bir metin dosyasında "
-"listelenmesi gerekir. Desenlerden herhangi biriyle eşleşen adlara sahip "
-"dosya ve klasörler yedeklemeden dışarıda tutulur. Desen biçimi <link "
-"url='%1'>burada</link> belgelendirilmiştir."
+"Dizgilerin, her satırda bir dizgi olacak şekilde bir metin dosyasında "
+"listelenmesi gerekir. Dizgilerden herhangi biriyle eşleşen adlara sahip "
+"dosya ve klasörler yedekten dışlanırlar. Dizgi biçimi <link url='%1'>burada</"
+"link> belgelendirilmiştir."
 
 #: kcm/backupplanwidget.cpp:923
 #, kde-kuit-format
@@ -1213,7 +1212,7 @@ msgstr "Bir dosya seçmek için iletişim kutusu aç"
 #: kcm/backupplanwidget.cpp:925
 #, kde-format
 msgid "Select pattern file"
-msgstr "Desen dosyası seç"
+msgstr "Dizgi dosyası seç"
 
 #: kcm/backupplanwidget.cpp:950
 #, kde-kuit-format
