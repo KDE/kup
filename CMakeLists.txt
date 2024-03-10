@@ -46,8 +46,10 @@ KCMUtils
 if(QT_MAJOR_VERSION STREQUAL "6")
     find_package(Plasma REQUIRED)
     find_package(Plasma5Support REQUIRED)
+    plasma_install_package(plasmoid-qt6 org.kde.kupapplet)
 else()
     find_package(KF5Plasma REQUIRED)
+    plasma_install_package(plasmoid-qt5 org.kde.kupapplet)
 endif()
 
 add_subdirectory(daemon)
@@ -59,7 +61,6 @@ add_subdirectory(kioworker)
 add_subdirectory(purger)
 
 ecm_qt_install_logging_categories(EXPORT kup DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}")
-plasma_install_package(plasmoid org.kde.kupapplet)
 ki18n_install(po)
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/org.kde.kup.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
