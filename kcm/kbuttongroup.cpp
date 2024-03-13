@@ -19,9 +19,9 @@ public:
 		nextId(0),
 		wantToBeId(-1)
 	{
-		connect(&clickedMapper, SIGNAL(mapped(int)), q, SLOT(slotClicked(int)));
-		connect(&pressedMapper, SIGNAL(mapped(int)), q, SIGNAL(pressed(int)));
-		connect(&releasedMapper, SIGNAL(mapped(int)), q, SIGNAL(released(int)));
+		connect(&clickedMapper, SIGNAL(mappedInt(int)), q, SLOT(slotClicked(int)));
+		connect(&pressedMapper, SIGNAL(mappedInt(int)), q, SIGNAL(pressed(int)));
+		connect(&releasedMapper, SIGNAL(mappedInt(int)), q, SIGNAL(released(int)));
 	}
 
     void slotClicked(int id);
