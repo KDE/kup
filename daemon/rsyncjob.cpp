@@ -125,9 +125,9 @@ void RsyncJob::slotReadRsyncOutput() {
 	qulonglong lTransfered{};
 	double lSpeed{};
 	QChar lUnit;
-	QRegularExpression lProgressInfoExp(QStringLiteral("^\\s+([\\d,\\.]+)\\s+(\\d+)%\\s+(\\d*[,\\.]\\d+)(\\S)"));
+	static QRegularExpression lProgressInfoExp(QStringLiteral("^\\s+([\\d,\\.]+)\\s+(\\d+)%\\s+(\\d*[,\\.]\\d+)(\\S)"));
 	// very ugly and rough indication that this is a file path... what else to do..
-	QRegularExpression lNotFileNameExp(QStringLiteral("^(building file list|done$|deleting \\S+|.+/$|$)"));
+	static QRegularExpression lNotFileNameExp(QStringLiteral("^(building file list|done$|deleting \\S+|.+/$|$)"));
 	QString lLine;
 
 	QTextStream lStream(mRsyncProcess.readAllStandardOutput());
