@@ -11,20 +11,21 @@ class KDirModel;
 
 class DirSelector : public QTreeView
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
-	explicit DirSelector(QWidget *pParent = nullptr);
-	QUrl url() const;
+    explicit DirSelector(QWidget *pParent = nullptr);
+    QUrl url() const;
 
 signals:
 
 public slots:
-	void createNewFolder();
-	void selectEntry(QModelIndex pIndex);
-	void expandToUrl(const QUrl &pUrl);
-	void setRootUrl(const QUrl &pUrl);
+    void createNewFolder();
+    void selectEntry(QModelIndex pIndex);
+    void expandToUrl(const QUrl &pUrl);
+    void setRootUrl(const QUrl &pUrl);
+
 private:
-	KDirModel *mDirModel;
+    KDirModel *mDirModel;
 };
 
 #endif // DIRSELECTOR_H

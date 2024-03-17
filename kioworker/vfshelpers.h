@@ -14,36 +14,39 @@ class QBuffer;
 #define DEFAULT_MODE_DIRECTORY 0040755
 #define DEFAULT_MODE_FILE 0100644
 
-class VintStream: public QObject {
-	Q_OBJECT
+class VintStream : public QObject
+{
+    Q_OBJECT
 
 public:
-	VintStream(const void *pData, int pSize, QObject *pParent);
+    VintStream(const void *pData, int pSize, QObject *pParent);
 
-	VintStream &operator>>(qint64 &pInt);
-	VintStream &operator>>(quint64 &pUint);
-	VintStream &operator>>(QString &pString);
-	VintStream &operator>>(QByteArray &pByteArray);
+    VintStream &operator>>(qint64 &pInt);
+    VintStream &operator>>(quint64 &pUint);
+    VintStream &operator>>(QString &pString);
+    VintStream &operator>>(QByteArray &pByteArray);
 
 protected:
-	QByteArray mByteArray;
-	QBuffer *mBuffer;
+    QByteArray mByteArray;
+    QBuffer *mBuffer;
 };
 
 struct Metadata {
-	Metadata() {}
-	explicit Metadata(qint64 pMode);
-	qint64 mMode;
-	qint64 mUid;
-	qint64 mGid;
-	qint64 mAtime;
-	qint64 mMtime;
-	qint64 mSize; //negative if invalid
-	QString mSymlinkTarget;
+    Metadata()
+    {
+    }
+    explicit Metadata(qint64 pMode);
+    qint64 mMode;
+    qint64 mUid;
+    qint64 mGid;
+    qint64 mAtime;
+    qint64 mMtime;
+    qint64 mSize; // negative if invalid
+    QString mSymlinkTarget;
 
-	static qint64 mDefaultUid;
-	static qint64 mDefaultGid;
-	static bool mDefaultsResolved;
+    static qint64 mDefaultUid;
+    static qint64 mDefaultGid;
+    static bool mDefaultsResolved;
 };
 
 int readMetadata(VintStream &pMetadataStream, Metadata &pMetadata);

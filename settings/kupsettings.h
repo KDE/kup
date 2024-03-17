@@ -10,15 +10,15 @@
 
 class KupSettings : public KCoreConfigSkeleton
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
-	explicit KupSettings(KSharedConfigPtr pConfig, QObject *pParent = nullptr);
+    explicit KupSettings(KSharedConfigPtr pConfig, QObject *pParent = nullptr);
 
-	// Common enable of backup plans
-	bool mBackupsEnabled{};
+    // Common enable of backup plans
+    bool mBackupsEnabled{};
 
-	// Number of backup plans configured
-	int mNumberOfPlans{};
+    // Number of backup plans configured
+    int mNumberOfPlans{};
 };
 
 #endif // KUPSETTINGS_H

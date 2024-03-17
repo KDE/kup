@@ -23,36 +23,36 @@ class QTimer;
 
 class KupDaemon : public QObject
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	KupDaemon();
-	~KupDaemon() override;
-	bool shouldStart();
-	void setupGuiStuff();
-	void slotShutdownRequest(QSessionManager &pManager);
-	void registerJob(KJob *pJob);
-	void unregisterJob(KJob *pJob);
+    KupDaemon();
+    ~KupDaemon() override;
+    bool shouldStart();
+    void setupGuiStuff();
+    void slotShutdownRequest(QSessionManager &pManager);
+    void registerJob(KJob *pJob);
+    void unregisterJob(KJob *pJob);
 
 public slots:
-	void reloadConfig();
-	void runIntegrityCheck(const QString& pPath);
-	void saveNewBackup(int pPlanNumber);
+    void reloadConfig();
+    void runIntegrityCheck(const QString &pPath);
+    void saveNewBackup(int pPlanNumber);
 
 private:
-	void setupExecutors();
-	void handleRequests(QLocalSocket *pSocket);
-	void sendStatus(QLocalSocket *pSocket);
+    void setupExecutors();
+    void handleRequests(QLocalSocket *pSocket);
+    void sendStatus(QLocalSocket *pSocket);
 
-	KSharedConfigPtr mConfig;
-	KupSettings *mSettings;
-	QList<PlanExecutor *> mExecutors;
-	QTimer *mUsageAccTimer;
-	QTimer *mStatusUpdateTimer;
-	bool mWaitingToReloadConfig;
-	KUiServerJobTracker *mJobTracker;
-	QLocalServer *mLocalServer;
-	QList<QLocalSocket *> mSockets;
+    KSharedConfigPtr mConfig;
+    KupSettings *mSettings;
+    QList<PlanExecutor *> mExecutors;
+    QTimer *mUsageAccTimer;
+    QTimer *mStatusUpdateTimer;
+    bool mWaitingToReloadConfig;
+    KUiServerJobTracker *mJobTracker;
+    QLocalServer *mLocalServer;
+    QList<QLocalSocket *> mSockets;
 };
 
 #endif /*KUPDAEMON_H*/

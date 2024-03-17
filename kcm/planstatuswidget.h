@@ -14,26 +14,28 @@ class QPushButton;
 
 class QLabel;
 
-class PlanStatusWidget: public QGroupBox
+class PlanStatusWidget : public QGroupBox
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
-	explicit PlanStatusWidget(BackupPlan *pPlan, QWidget *pParent = nullptr);
-	BackupPlan *plan() const {return mPlan;}
+    explicit PlanStatusWidget(BackupPlan *pPlan, QWidget *pParent = nullptr);
+    BackupPlan *plan() const
+    {
+        return mPlan;
+    }
 
-	BackupPlan *mPlan;
-	QLabel *mDescriptionLabel;
-	QLabel *mStatusIconLabel;
-	QLabel *mStatusTextLabel;
+    BackupPlan *mPlan;
+    QLabel *mDescriptionLabel;
+    QLabel *mStatusIconLabel;
+    QLabel *mStatusTextLabel;
 
 public slots:
-	void updateIcon();
+    void updateIcon();
 
 signals:
-	void removeMe();
-	void configureMe();
-	void duplicateMe();
+    void removeMe();
+    void configureMe();
+    void duplicateMe();
 };
-
 
 #endif // PLANSTATUSWIDGET_H

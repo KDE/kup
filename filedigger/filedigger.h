@@ -18,31 +18,31 @@ class QTreeView;
 
 class FileDigger : public KMainWindow
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
-	explicit FileDigger(QString pRepoPath, QString pBranchName, QWidget *pParent = nullptr);
-	QSize sizeHint() const override;
+    explicit FileDigger(QString pRepoPath, QString pBranchName, QWidget *pParent = nullptr);
+    QSize sizeHint() const override;
 
 protected slots:
-	void updateVersionModel(const QModelIndex &pCurrent, const QModelIndex &pPrevious);
-	void open(const QModelIndex &pIndex);
-	void restore(const QModelIndex &pIndex);
-	void repoPathAvailable();
-	void checkFileWidgetPath();
-	void enterUrl(const QUrl &pUrl);
+    void updateVersionModel(const QModelIndex &pCurrent, const QModelIndex &pPrevious);
+    void open(const QModelIndex &pIndex);
+    void restore(const QModelIndex &pIndex);
+    void repoPathAvailable();
+    void checkFileWidgetPath();
+    void enterUrl(const QUrl &pUrl);
 
 protected:
-	MergedRepository *createRepo();
-	void createRepoView(MergedRepository *pRepository);
-	void createSelectionView();
-	MergedVfsModel *mMergedVfsModel{};
-	QTreeView *mMergedVfsView{};
+    MergedRepository *createRepo();
+    void createRepoView(MergedRepository *pRepository);
+    void createSelectionView();
+    MergedVfsModel *mMergedVfsModel{};
+    QTreeView *mMergedVfsView{};
 
-	VersionListModel *mVersionModel{};
-	QListView *mVersionView{};
-	QString mRepoPath;
-	QString mBranchName;
-	KDirOperator *mDirOperator;
+    VersionListModel *mVersionModel{};
+    QListView *mVersionView{};
+    QString mRepoPath;
+    QString mBranchName;
+    KDirOperator *mDirOperator;
 };
 
 #endif // FILEDIGGER_H

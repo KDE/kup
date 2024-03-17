@@ -20,27 +20,27 @@ class QLocalSocket;
 
 class KupService : public Plasma::Service
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	 KupService(int pPlanNumber, QLocalSocket *pSocket, QObject *pParent = nullptr);
-	 Plasma::ServiceJob *createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) override;
+    KupService(int pPlanNumber, QLocalSocket *pSocket, QObject *pParent = nullptr);
+    Plasma::ServiceJob *createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) override;
 
 protected:
-	 QLocalSocket *mSocket;
-	 int mPlanNumber;
+    QLocalSocket *mSocket;
+    int mPlanNumber;
 };
 
 class KupDaemonService : public Plasma::Service
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	 explicit KupDaemonService(QLocalSocket *pSocket, QObject *pParent = nullptr);
-	 Plasma::ServiceJob *createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) override;
+    explicit KupDaemonService(QLocalSocket *pSocket, QObject *pParent = nullptr);
+    Plasma::ServiceJob *createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) override;
 
 protected:
-	 QLocalSocket *mSocket;
+    QLocalSocket *mSocket;
 };
 
 #endif // KUPSERVICE_H

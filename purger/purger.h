@@ -13,26 +13,26 @@
 
 class Purger : public KMainWindow
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
-	explicit Purger(QString pRepoPath, QString pBranchName, QWidget *pParent = nullptr);
-	QSize sizeHint() const override;
+    explicit Purger(QString pRepoPath, QString pBranchName, QWidget *pParent = nullptr);
+    QSize sizeHint() const override;
 
 protected slots:
-	void fillListWidget();
-	void listDone(int, QProcess::ExitStatus);
-	void purge();
-	void purgeDone(int, QProcess::ExitStatus);
+    void fillListWidget();
+    void listDone(int, QProcess::ExitStatus);
+    void purge();
+    void purgeDone(int, QProcess::ExitStatus);
 
 protected:
-	QListWidget *mListWidget {};
-	QTextEdit *mTextEdit {};
-	KProcess *mCollectProcess {};
-	KProcess *mListProcess {};
-	QHash<QString, QListWidgetItem*> mHashes;
-	QAction *mDeleteAction {};
-	QString mRepoPath;
-	QString mBranchName;
+    QListWidget *mListWidget{};
+    QTextEdit *mTextEdit{};
+    KProcess *mCollectProcess{};
+    KProcess *mListProcess{};
+    QHash<QString, QListWidgetItem *> mHashes;
+    QAction *mDeleteAction{};
+    QString mRepoPath;
+    QString mBranchName;
 };
 
 #endif // PURGER_H

@@ -18,21 +18,21 @@ namespace Plasma = Plasma5Support;
 
 class KupEngine : public Plasma::DataEngine
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
-	KupEngine(QObject *pParent, const QVariantList &pArgs);
-	Plasma::Service *serviceForSource (const QString &pSource) override;
+    KupEngine(QObject *pParent, const QVariantList &pArgs);
+    Plasma::Service *serviceForSource(const QString &pSource) override;
 
 public slots:
-//	void refresh();
-	void processData();
-	void checkConnection(QLocalSocket::LocalSocketState pState);
+    //	void refresh();
+    void processData();
+    void checkConnection(QLocalSocket::LocalSocketState pState);
 
 private:
-	void setPlanData(int i, const QJsonObject &pPlan, const QString &pKey);
-	void setCommonData(const QJsonObject &pCommonStatus, const QString &pKey);
-	QLocalSocket *mSocket;
-	QString mSocketName;
+    void setPlanData(int i, const QJsonObject &pPlan, const QString &pKey);
+    void setCommonData(const QJsonObject &pCommonStatus, const QString &pKey);
+    QLocalSocket *mSocket;
+    QString mSocketName;
 };
 
 #endif // KUPENGINE_H

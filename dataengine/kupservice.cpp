@@ -8,21 +8,26 @@
 #include <QLocalSocket>
 
 KupService::KupService(int pPlanNumber, QLocalSocket *pSocket, QObject *pParent)
-   : Plasma::Service(pParent), mSocket(pSocket), mPlanNumber(pPlanNumber)
+    : Plasma::Service(pParent)
+    , mSocket(pSocket)
+    , mPlanNumber(pPlanNumber)
 {
-	setName(QStringLiteral("kupservice"));
+    setName(QStringLiteral("kupservice"));
 }
 
-Plasma::ServiceJob *KupService::createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) {
-	return new KupJob(mPlanNumber, mSocket, pOperation, pParameters, this);
+Plasma::ServiceJob *KupService::createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters)
+{
+    return new KupJob(mPlanNumber, mSocket, pOperation, pParameters, this);
 }
 
 KupDaemonService::KupDaemonService(QLocalSocket *pSocket, QObject *pParent)
-   : Plasma::Service(pParent), mSocket(pSocket)
+    : Plasma::Service(pParent)
+    , mSocket(pSocket)
 {
-	setName(QStringLiteral("kupdaemonservice"));
+    setName(QStringLiteral("kupdaemonservice"));
 }
 
-Plasma::ServiceJob *KupDaemonService::createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters) {
-	return new KupJob(-1, mSocket, pOperation, pParameters, this);
+Plasma::ServiceJob *KupDaemonService::createJob(const QString &pOperation, QMap<QString, QVariant> &pParameters)
+{
+    return new KupJob(-1, mSocket, pOperation, pParameters, this);
 }

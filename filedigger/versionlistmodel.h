@@ -5,41 +5,41 @@
 #ifndef VERSIONLISTMODEL_H
 #define VERSIONLISTMODEL_H
 
-#include <QAbstractListModel>
 #include "mergedvfs.h"
+#include <QAbstractListModel>
 
 struct BupSourceInfo {
-	QUrl mBupKioPath;
-	QString mRepoPath;
-	QString mBranchName;
-	QString mPathInRepo;
-	qint64 mCommitTime;
-	quint64 mSize;
-	bool mIsDirectory;
+    QUrl mBupKioPath;
+    QString mRepoPath;
+    QString mBranchName;
+    QString mPathInRepo;
+    qint64 mCommitTime;
+    quint64 mSize;
+    bool mIsDirectory;
 };
 
 Q_DECLARE_METATYPE(BupSourceInfo)
 
 class VersionListModel : public QAbstractListModel
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
-	explicit VersionListModel(QObject *parent = nullptr);
-	void setNode(const MergedNode *pNode);
-	int rowCount(const QModelIndex &pParent) const override;
-	QVariant data(const QModelIndex &pIndex, int pRole) const override;
+    explicit VersionListModel(QObject *parent = nullptr);
+    void setNode(const MergedNode *pNode);
+    int rowCount(const QModelIndex &pParent) const override;
+    QVariant data(const QModelIndex &pIndex, int pRole) const override;
 
 protected:
-	const VersionList *mVersionList;
-	const MergedNode *mNode{};
+    const VersionList *mVersionList;
+    const MergedNode *mNode{};
 };
 
 enum VersionDataRole {
-	VersionBupUrlRole = Qt::UserRole + 1, // QUrl
-	VersionMimeTypeRole, // QString
-	VersionSizeRole, // quint64
-	VersionSourceInfoRole, // PathInfo
-	VersionIsDirectoryRole // bool
+    VersionBupUrlRole = Qt::UserRole + 1, // QUrl
+    VersionMimeTypeRole, // QString
+    VersionSizeRole, // quint64
+    VersionSourceInfoRole, // PathInfo
+    VersionIsDirectoryRole // bool
 };
 
 #endif // VERSIONLISTMODEL_H

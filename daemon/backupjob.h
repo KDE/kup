@@ -17,32 +17,27 @@ class KupDaemon;
 
 class BackupJob : public KJob
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
-	enum ErrorCodes {
-		ErrorWithLog = UserDefinedError,
-		ErrorWithoutLog,
-		ErrorSuggestRepair,
-		ErrorSourcesConfig
-	};
+    enum ErrorCodes { ErrorWithLog = UserDefinedError, ErrorWithoutLog, ErrorSuggestRepair, ErrorSourcesConfig };
 
-	void start() override;
+    void start() override;
 
 protected slots:
-	virtual void performJob() = 0;
+    virtual void performJob() = 0;
 
 protected:
-	BackupJob(BackupPlan &pBackupPlan, QString pDestinationPath, QString pLogFilePath, KupDaemon *pKupDaemon);
-	static void makeNice(int pPid);
-	static QString quoteArgs(const QStringList &pCommand);
-	void jobFinishedSuccess();
-	void jobFinishedError(ErrorCodes pErrorCode, const QString &pErrorText);
-	BackupPlan &mBackupPlan;
-	QString mDestinationPath;
-	QString mLogFilePath;
-	QFile mLogFile;
-	QTextStream mLogStream;
-	KupDaemon *mKupDaemon;
+    BackupJob(BackupPlan &pBackupPlan, QString pDestinationPath, QString pLogFilePath, KupDaemon *pKupDaemon);
+    static void makeNice(int pPid);
+    static QString quoteArgs(const QStringList &pCommand);
+    void jobFinishedSuccess();
+    void jobFinishedError(ErrorCodes pErrorCode, const QString &pErrorText);
+    BackupPlan &mBackupPlan;
+    QString mDestinationPath;
+    QString mLogFilePath;
+    QFile mLogFile;
+    QTextStream mLogStream;
+    KupDaemon *mKupDaemon;
 };
 
 #endif // BACKUPJOB_H

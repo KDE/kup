@@ -5,24 +5,24 @@
 
 #include "kbuttongroup.h"
 
+#include <QAbstractButton>
 #include <QChildEvent>
 #include <QHash>
-#include <QAbstractButton>
 #include <QSignalMapper>
 
 class KButtonGroup::Private
 {
 public:
-	explicit Private(KButtonGroup *q) :
-		q(q),
-		currentId(-1),
-		nextId(0),
-		wantToBeId(-1)
-	{
-		connect(&clickedMapper, SIGNAL(mappedInt(int)), q, SLOT(slotClicked(int)));
-		connect(&pressedMapper, SIGNAL(mappedInt(int)), q, SIGNAL(pressed(int)));
-		connect(&releasedMapper, SIGNAL(mappedInt(int)), q, SIGNAL(released(int)));
-	}
+    explicit Private(KButtonGroup *q)
+        : q(q)
+        , currentId(-1)
+        , nextId(0)
+        , wantToBeId(-1)
+    {
+        connect(&clickedMapper, SIGNAL(mappedInt(int)), q, SLOT(slotClicked(int)));
+        connect(&pressedMapper, SIGNAL(mappedInt(int)), q, SIGNAL(pressed(int)));
+        connect(&releasedMapper, SIGNAL(mappedInt(int)), q, SIGNAL(released(int)));
+    }
 
     void slotClicked(int id);
 
@@ -37,7 +37,9 @@ public:
     int wantToBeId;
 };
 
-KButtonGroup::KButtonGroup(QWidget *parent) : QGroupBox(parent), d(new Private(this))
+KButtonGroup::KButtonGroup(QWidget *parent)
+    : QGroupBox(parent)
+    , d(new Private(this))
 {
 }
 
@@ -141,5 +143,3 @@ void KButtonGroup::Private::slotClicked(int id)
 }
 
 #include "moc_kbuttongroup.cpp"
-
-

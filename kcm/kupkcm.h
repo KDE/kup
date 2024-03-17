@@ -24,42 +24,42 @@ class QVBoxLayout;
 
 class KupKcm : public KCModule
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
 #if QT_VERSION_MAJOR == 5
-	KupKcm(QWidget *pParent, const QVariantList &pArgs);
-	QSize sizeHint() const override;
+    KupKcm(QWidget *pParent, const QVariantList &pArgs);
+    QSize sizeHint() const override;
 #else
-	KupKcm(QObject *parent, const KPluginMetaData &md, const QVariantList &pArgs);
+    KupKcm(QObject *parent, const KPluginMetaData &md, const QVariantList &pArgs);
 #endif
 
 public slots:
-	void load() override;
-	void save() override;
+    void load() override;
+    void save() override;
 
-	void updateChangedStatus();
-	void showFrontPage();
+    void updateChangedStatus();
+    void showFrontPage();
 
 private:
-	void createSettingsFrontPage();
-	void createPlanWidgets(int pIndex);
-	void completelyRemovePlan(int pIndex);
-	void partiallyRemovePlan(int pIndex);
+    void createSettingsFrontPage();
+    void createPlanWidgets(int pIndex);
+    void completelyRemovePlan(int pIndex);
+    void partiallyRemovePlan(int pIndex);
 
-	KSharedConfigPtr mConfig;
-	KupSettings *mSettings;
-	QWidget *mFrontPage{};
-	QList<BackupPlan *> mPlans;
-	QList<BackupPlanWidget *> mPlanWidgets;
-	QList<PlanStatusWidget *> mStatusWidgets;
-	QList<KConfigDialogManager *> mConfigManagers;
-	QStackedLayout *mStackedLayout;
-	QVBoxLayout *mVerticalLayout{};
-	QCheckBox *mEnableCheckBox{};
-	QString mBupVersion;
-	QString mRsyncVersion;
-	bool mPar2Available;
-	int mSourcePageToShow;
+    KSharedConfigPtr mConfig;
+    KupSettings *mSettings;
+    QWidget *mFrontPage{};
+    QList<BackupPlan *> mPlans;
+    QList<BackupPlanWidget *> mPlanWidgets;
+    QList<PlanStatusWidget *> mStatusWidgets;
+    QList<KConfigDialogManager *> mConfigManagers;
+    QStackedLayout *mStackedLayout;
+    QVBoxLayout *mVerticalLayout{};
+    QCheckBox *mEnableCheckBox{};
+    QString mBupVersion;
+    QString mRsyncVersion;
+    bool mPar2Available;
+    int mSourcePageToShow;
 };
 
 #endif // KUPKCM_H

@@ -11,22 +11,21 @@
 
 class MergedVfsModel : public QAbstractItemModel
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
-	explicit MergedVfsModel(MergedRepository *pRoot, QObject *pParent = nullptr);
-	~MergedVfsModel() override;
-	int columnCount(const QModelIndex &pParent) const override;
-	QVariant data(const QModelIndex &pIndex, int pRole) const override;
-	QModelIndex index(int pRow, int pColumn, const QModelIndex &pParent) const override;
-	QModelIndex parent(const QModelIndex &pChild) const override;
-	int rowCount(const QModelIndex &pParent) const override;
+    explicit MergedVfsModel(MergedRepository *pRoot, QObject *pParent = nullptr);
+    ~MergedVfsModel() override;
+    int columnCount(const QModelIndex &pParent) const override;
+    QVariant data(const QModelIndex &pIndex, int pRole) const override;
+    QModelIndex index(int pRow, int pColumn, const QModelIndex &pParent) const override;
+    QModelIndex parent(const QModelIndex &pChild) const override;
+    int rowCount(const QModelIndex &pParent) const override;
 
-	static const VersionList *versionList(const QModelIndex &pIndex);
-	static const MergedNode *node(const QModelIndex &pIndex);
+    static const VersionList *versionList(const QModelIndex &pIndex);
+    static const MergedNode *node(const QModelIndex &pIndex);
 
 protected:
-	MergedRepository *mRoot;
-
+    MergedRepository *mRoot;
 };
 
 #endif // MERGEDVFSMODEL_H

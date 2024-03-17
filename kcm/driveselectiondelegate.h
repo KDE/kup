@@ -13,15 +13,16 @@ class KCapacityBar;
 class DriveSelectionDelegate : public QStyledItemDelegate
 {
 public:
-	explicit DriveSelectionDelegate(QListView *pParent);
-	~DriveSelectionDelegate() override;
-	void paint(QPainter* pPainter, const QStyleOptionViewItem& pOption, const QModelIndex& pIndex) const override;
-	QSize sizeHint(const QStyleOptionViewItem& pOption, const QModelIndex& pIndex) const override;
+    explicit DriveSelectionDelegate(QListView *pParent);
+    ~DriveSelectionDelegate() override;
+    void paint(QPainter *pPainter, const QStyleOptionViewItem &pOption, const QModelIndex &pIndex) const override;
+    QSize sizeHint(const QStyleOptionViewItem &pOption, const QModelIndex &pIndex) const override;
+
 private:
-	QRect warningRect(const QRect &pRect, const QModelIndex &pIndex) const;
-	static QString warningText(const QModelIndex &pIndex);
-	KCapacityBar *mCapacityBar;
-	QListView *mListView;
+    QRect warningRect(const QRect &pRect, const QModelIndex &pIndex) const;
+    static QString warningText(const QModelIndex &pIndex);
+    KCapacityBar *mCapacityBar;
+    QListView *mListView;
 };
 
 #endif // DRIVESELECTIONDELEGATE_H

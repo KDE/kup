@@ -12,30 +12,34 @@
 
 class RestoreJob : public KJob
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
-	explicit RestoreJob(QString pRepositoryPath, QString pSourcePath, QString pRestorationPath,
-	                    int pTotalDirCount, qint64 pTotalFileSize, const QHash<QString, qint64> &pFileSizes);
-	void start() override;
+    explicit RestoreJob(QString pRepositoryPath,
+                        QString pSourcePath,
+                        QString pRestorationPath,
+                        int pTotalDirCount,
+                        qint64 pTotalFileSize,
+                        const QHash<QString, qint64> &pFileSizes);
+    void start() override;
 
 protected slots:
-	void slotRestoringStarted();
-	void slotRestoringDone(int pExitCode, QProcess::ExitStatus pExitStatus);
+    void slotRestoringStarted();
+    void slotRestoringDone(int pExitCode, QProcess::ExitStatus pExitStatus);
 
 protected:
-	void timerEvent(QTimerEvent *pTimerEvent) override;
-	static void makeNice(int pPid);
-	void moveFolder();
+    void timerEvent(QTimerEvent *pTimerEvent) override;
+    static void makeNice(int pPid);
+    void moveFolder();
 
-	KProcess mRestoreProcess;
-	QString mRepositoryPath;
-	QString mSourcePath;
-	QString mRestorationPath;
-	QString mSourceFileName;
-	int mTotalDirCount;
-	qint64 mTotalFileSize;
-	const QHash<QString, qint64> &mFileSizes;
-	int mTimerId{};
+    KProcess mRestoreProcess;
+    QString mRepositoryPath;
+    QString mSourcePath;
+    QString mRestorationPath;
+    QString mSourceFileName;
+    int mTotalDirCount;
+    qint64 mTotalFileSize;
+    const QHash<QString, qint64> &mFileSizes;
+    int mTimerId{};
 };
 
 #endif // RESTOREJOB_H

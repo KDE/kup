@@ -14,28 +14,28 @@ class KupDaemon;
 
 class RsyncJob : public BackupJob
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	RsyncJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon);
+    RsyncJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon);
 
 protected slots:
-	void performJob() override;
+    void performJob() override;
 
 protected slots:
-	void slotRsyncStarted();
-	void slotRsyncFinished(int pExitCode, QProcess::ExitStatus pExitStatus);
-	void slotReadRsyncOutput();
+    void slotRsyncStarted();
+    void slotRsyncFinished(int pExitCode, QProcess::ExitStatus pExitStatus);
+    void slotReadRsyncOutput();
 
 protected:
-	bool doKill() override;
-	bool doSuspend() override;
-	bool doResume() override;
+    bool doKill() override;
+    bool doSuspend() override;
+    bool doResume() override;
 
-	bool performMigration();
+    bool performMigration();
 
-	KProcess mRsyncProcess;
-	QElapsedTimer mInfoRateLimiter;
+    KProcess mRsyncProcess;
+    QElapsedTimer mInfoRateLimiter;
 };
 
 #endif // RSYNCJOB_H

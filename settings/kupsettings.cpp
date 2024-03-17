@@ -4,15 +4,13 @@
 
 #include "kupsettings.h"
 
-#include <utility>
 #include "backupplan.h"
+#include <utility>
 
 KupSettings::KupSettings(KSharedConfigPtr pConfig, QObject *pParent)
-   : KCoreConfigSkeleton(std::move(pConfig), pParent)
+    : KCoreConfigSkeleton(std::move(pConfig), pParent)
 {
-	setCurrentGroup(QStringLiteral("Kup settings"));
-	addItemBool(QStringLiteral("Backups enabled"), mBackupsEnabled);
-	addItemInt(QStringLiteral("Number of backups"), mNumberOfPlans, 0);
+    setCurrentGroup(QStringLiteral("Kup settings"));
+    addItemBool(QStringLiteral("Backups enabled"), mBackupsEnabled);
+    addItemInt(QStringLiteral("Number of backups"), mNumberOfPlans, 0);
 }
-
-

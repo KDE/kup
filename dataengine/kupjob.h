@@ -18,16 +18,15 @@ class QLocalSocket;
 
 class KupJob : public Plasma::ServiceJob
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	KupJob(int pPlanNumber, QLocalSocket *pSocket, const QString &pOperation,
-	       QMap<QString, QVariant> &pParameters, QObject *pParent = nullptr);
+    KupJob(int pPlanNumber, QLocalSocket *pSocket, const QString &pOperation, QMap<QString, QVariant> &pParameters, QObject *pParent = nullptr);
 
 protected:
-	void start() override;
-	QLocalSocket *mSocket;
-	int mPlanNumber;
+    void start() override;
+    QLocalSocket *mSocket;
+    int mPlanNumber;
 };
 
 #endif

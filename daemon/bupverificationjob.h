@@ -13,19 +13,18 @@ class KupDaemon;
 
 class BupVerificationJob : public BackupJob
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	BupVerificationJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon);
+    BupVerificationJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon);
 
 protected slots:
-	void performJob() override;
-	void slotCheckingStarted();
-	void slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus);
+    void performJob() override;
+    void slotCheckingStarted();
+    void slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus);
 
 protected:
-	KProcess mFsckProcess;
-
+    KProcess mFsckProcess;
 };
 
 #endif // BUPVERIFICATIONJOB_H
