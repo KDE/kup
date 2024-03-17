@@ -409,8 +409,8 @@ void FolderSelectionWidget::updateMessage()
         QFileInfo lFileInfo(i.value());
         if (lFileInfo.isDir()) {
             mMessageWidget->setText(xi18nc("@info message bar appearing on top",
-                                           "The symbolic link <filename>%1</filename> is currently included but it points "
-                                           "to a folder which is not: <filename>%2</filename>.<nl/>That is probably not "
+                                           "The symbolic link <filename>%1</filename> points to a folder which "
+                                           "is not included: <filename>%2</filename>.<nl/>That is probably not "
                                            "what you want. One solution is to simply include the target folder in the "
                                            "backup plan.",
                                            i.key(),
@@ -418,8 +418,8 @@ void FolderSelectionWidget::updateMessage()
             mIncludeActionPath = i.value();
         } else {
             mMessageWidget->setText(xi18nc("@info message bar appearing on top",
-                                           "The symbolic link <filename>%1</filename> is currently included but it points "
-                                           "to a file which is not: <filename>%2</filename>.<nl/>That is probably not "
+                                           "The symbolic link <filename>%1</filename> points to a file which "
+                                           "is not included: <filename>%2</filename>.<nl/>That is probably not "
                                            "what you want. One solution is to simply include the folder where the file "
                                            "is stored in the backup plan.",
                                            i.key(),
