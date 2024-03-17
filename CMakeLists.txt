@@ -19,12 +19,16 @@ find_package(LibGit2 REQUIRED)
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 include(KDEInstallDirs)
+include(KDEClangFormat)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
+include(KDEGitCommitHooks)
 
 include(FeatureSummary)
 include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
+
+kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 
 find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS Core Widgets)
 find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
@@ -66,3 +70,5 @@ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/org.kde.kup.appdata.xml DESTINATION ${
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h *.hpp *.c)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
