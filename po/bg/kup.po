@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-04 01:38+0000\n"
+"POT-Creation-Date: 2024-03-18 02:01+0000\n"
 "PO-Revision-Date: 2023-02-24 18:08+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.2\n"
 
-#: daemon/backupjob.cpp:39
+#: daemon/backupjob.cpp:43
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -33,8 +33,8 @@ msgstr[1] ""
 "%1 папки с източници вече не съществуват. Моля, отворете настройките и "
 "потвърдете какво да include in backup.<nl/><filename>%2</filename>"
 
-#: daemon/bupjob.cpp:46 daemon/buprepairjob.cpp:24
-#: daemon/bupverificationjob.cpp:23
+#: daemon/bupjob.cpp:48 daemon/buprepairjob.cpp:26
+#: daemon/bupverificationjob.cpp:25
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -44,7 +44,7 @@ msgstr ""
 "Необходима е програмата <application>bup</application>, но тя не може да "
 "бъде намерена, може би не е инсталирана?"
 
-#: daemon/bupjob.cpp:52 daemon/buprepairjob.cpp:30
+#: daemon/bupjob.cpp:55 daemon/buprepairjob.cpp:33
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -54,7 +54,7 @@ msgstr ""
 "Програмата <application>par2</application> е необходима, но не може да "
 "бъденамерена, може би не е инсталирана?"
 
-#: daemon/bupjob.cpp:71
+#: daemon/bupjob.cpp:76
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -63,12 +63,12 @@ msgstr ""
 "Дестинацията за архивиране не може да бъде инициализирана. Вижте журналния "
 "файл за повече подробности."
 
-#: daemon/bupjob.cpp:94
+#: daemon/bupjob.cpp:100
 #, kde-format
 msgid "Checking backup integrity"
 msgstr "Проверка на целостта на резервното копие"
 
-#: daemon/bupjob.cpp:109 daemon/bupverificationjob.cpp:58
+#: daemon/bupjob.cpp:119 daemon/bupverificationjob.cpp:63
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -79,7 +79,7 @@ msgstr ""
 "може да са повредени! Вижте журналния файл за повече подробности. Искате ли "
 "да опитате да поправите файловете с резервни копия?"
 
-#: daemon/bupjob.cpp:113
+#: daemon/bupjob.cpp:124
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -89,12 +89,12 @@ msgstr ""
 "Неуспешна проверка на целостта на резервното копие. Вашите резервни копия "
 "може да са повредени! Вижте журналния файл за повече подробности."
 
-#: daemon/bupjob.cpp:144 daemon/rsyncjob.cpp:51
+#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:48
 #, kde-format
 msgid "Checking what to copy"
 msgstr "Проверка на това какво да се копира"
 
-#: daemon/bupjob.cpp:155
+#: daemon/bupjob.cpp:171
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
@@ -102,24 +102,24 @@ msgstr ""
 "Неуспешно анализиране на файловете. Вижте журналния файл за повече "
 "подробности."
 
-#: daemon/bupjob.cpp:176 daemon/bupjob.cpp:288 daemon/rsyncjob.cpp:167
+#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
 #, kde-format
 msgid "Saving backup"
 msgstr "Запазване на резервно копие"
 
-#: daemon/bupjob.cpp:188 daemon/rsyncjob.cpp:111
+#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:110
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
 msgstr ""
 "Не успя да запише резервно копие. Вижте журналния файл за повече подробности."
 
-#: daemon/bupjob.cpp:212
+#: daemon/bupjob.cpp:234
 #, kde-format
 msgid "Generating recovery information"
 msgstr "Генериране на информация за възстановяване"
 
-#: daemon/bupjob.cpp:224
+#: daemon/bupjob.cpp:251
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -129,13 +129,13 @@ msgstr ""
 "Неуспешно генериране на информация за възстановяване за резервното копие. "
 "Вижте журналния файл за повече подробности."
 
-#: daemon/bupjob.cpp:289 daemon/rsyncjob.cpp:168
+#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
 msgstr "Файл"
 
-#: daemon/buprepairjob.cpp:63
+#: daemon/buprepairjob.cpp:70
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -145,7 +145,7 @@ msgstr ""
 "Неуспешна поправка на резервното копие. Вашите резервни копия може да са "
 "повредени! Вижте журналния файл за повече подробности."
 
-#: daemon/buprepairjob.cpp:67
+#: daemon/buprepairjob.cpp:74
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Success! Backup repair worked. See log file for more details."
@@ -153,7 +153,7 @@ msgstr ""
 "Успех! Възстановяването на резервно копие е успешно. Вижте журналния файл за "
 "повече подробности."
 
-#: daemon/buprepairjob.cpp:71
+#: daemon/buprepairjob.cpp:82
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -163,7 +163,7 @@ msgstr ""
 "Не е необходима поправка на резервното копие. Вашите резервни копия не са "
 "повредени. Вижте журналния файл за повече подробности."
 
-#: daemon/buprepairjob.cpp:76
+#: daemon/buprepairjob.cpp:91
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -173,7 +173,7 @@ msgstr ""
 "Неуспешна поправка на резервното копие. Вашите резервни копия все още може "
 "да са повредени! Вижте журналния файл за повече подробности."
 
-#: daemon/bupverificationjob.cpp:61 daemon/bupverificationjob.cpp:78
+#: daemon/bupverificationjob.cpp:68 daemon/bupverificationjob.cpp:94
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -183,7 +183,7 @@ msgstr ""
 "Неуспешна проверка на целостта на резервното копие. Вашите резервни копия са "
 "повредени! Вижте журналния файл за повече подробности."
 
-#: daemon/bupverificationjob.cpp:67
+#: daemon/bupverificationjob.cpp:78
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Backup integrity test was successful. Your backups are fine."
@@ -191,7 +191,7 @@ msgstr ""
 "Тестът за цялостност на резервното копие е успешен. Резервните ви копия са "
 "наред."
 
-#: daemon/bupverificationjob.cpp:74
+#: daemon/bupverificationjob.cpp:88
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -202,68 +202,68 @@ msgstr ""
 "повредени! Вижте журналния файл за повече подробности. Искате ли да опитате "
 "да поправите файловете с резервни копия?"
 
-#: daemon/kupdaemon.cpp:162
+#: daemon/kupdaemon.cpp:173
 #, kde-format
 msgid "Continue"
 msgstr "Продължение"
 
-#: daemon/kupdaemon.cpp:164
+#: daemon/kupdaemon.cpp:174
 #, kde-format
 msgid "Stop"
 msgstr "Стоп"
 
-#: daemon/kupdaemon.cpp:166
+#: daemon/kupdaemon.cpp:175
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "В момента зает: %1"
 
-#: daemon/kupdaemon.cpp:167
+#: daemon/kupdaemon.cpp:176
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "Наистина ли искате да спрете?"
 
-#: daemon/kupdaemon.cpp:170
+#: daemon/kupdaemon.cpp:179
 #, kde-format
 msgid "User Backups"
 msgstr "Резервни копия на потребителя"
 
-#: daemon/kupdaemon.cpp:247
+#: daemon/kupdaemon.cpp:262
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination not available"
 msgstr "Дестинацията на резервното копие не е налична"
 
-#: daemon/kupdaemon.cpp:251 daemon/kupdaemon.cpp:308
+#: daemon/kupdaemon.cpp:266 daemon/kupdaemon.cpp:322
 #, kde-format
 msgid "No backup plans configured"
 msgstr "Няма конфигурирани планове за архивиране"
 
-#: daemon/kupdaemon.cpp:257
+#: daemon/kupdaemon.cpp:272
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination available"
 msgstr "Дестинацията за резервно копие е налична"
 
-#: daemon/kupdaemon.cpp:267 daemon/planexecutor.cpp:72
+#: daemon/kupdaemon.cpp:282 daemon/planexecutor.cpp:79
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup status OK"
 msgstr "Състояние на резервното копие OK"
 
-#: daemon/kupdaemon.cpp:274 daemon/planexecutor.cpp:74
+#: daemon/kupdaemon.cpp:289 daemon/planexecutor.cpp:81
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup suggested"
 msgstr "Предлага се ново резервно копие"
 
-#: daemon/kupdaemon.cpp:281 daemon/planexecutor.cpp:76
+#: daemon/kupdaemon.cpp:296 daemon/planexecutor.cpp:83
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup needed"
 msgstr "Необходимо е ново резервно копие"
 
-#: daemon/main.cpp:27
+#: daemon/main.cpp:28
 #, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
@@ -273,13 +273,13 @@ msgstr ""
 "Kup не е активиран, разрешете го от модула за системни настройки. Можете да "
 "направите това, като изпълните <command>kcmshell5 kup</command>"
 
-#: daemon/main.cpp:33
+#: daemon/main.cpp:35
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Демон на Kup"
 
-#: daemon/main.cpp:34
+#: daemon/main.cpp:37
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -292,62 +292,62 @@ msgstr ""
 "файловете, които действително са се променили след записването на последното "
 "резервно копие."
 
-#: daemon/main.cpp:37 kcm/kupkcm.cpp:46
+#: daemon/main.cpp:41 kcm/kupkcm.cpp:48
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "Copyright (C) 2011-2020 Simon Persson"
 
-#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:47
-#: purger/main.cpp:24
+#: daemon/main.cpp:42 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
+#: purger/main.cpp:28
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:38 filedigger/main.cpp:29 kcm/kupkcm.cpp:47
-#: purger/main.cpp:24
+#: daemon/main.cpp:42 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
+#: purger/main.cpp:28
 #, kde-format
 msgid "Maintainer"
 msgstr "Поддръжка"
 
-#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:48
-#: purger/main.cpp:25
+#: daemon/main.cpp:43 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
+#: purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Минчо Кондарев"
 
-#: daemon/main.cpp:39 filedigger/main.cpp:30 kcm/kupkcm.cpp:49
-#: purger/main.cpp:25
+#: daemon/main.cpp:43 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
+#: purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mkondarev@yahoo.de"
 
-#: daemon/planexecutor.cpp:62
+#: daemon/planexecutor.cpp:69
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Saving backup"
 msgstr "Запазване на резервно копие"
 
-#: daemon/planexecutor.cpp:64
+#: daemon/planexecutor.cpp:71
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Checking backup integrity"
 msgstr "Проверка на целостта на резервното копие"
 
-#: daemon/planexecutor.cpp:66
+#: daemon/planexecutor.cpp:73
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Repairing backups"
 msgstr "Възстановяване на резервни копия"
 
-#: daemon/planexecutor.cpp:96 daemon/planexecutor.cpp:112
+#: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Do you want to save a first backup now?"
 msgstr "Искате ли да запишете първото резервно копие сега?"
 
-#: daemon/planexecutor.cpp:99
+#: daemon/planexecutor.cpp:108
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -357,7 +357,7 @@ msgstr ""
 "Минали са %1, откакто е запазено последното резервно копие.\n"
 "Запазване на ново резервно копие сега?"
 
-#: daemon/planexecutor.cpp:115
+#: daemon/planexecutor.cpp:126
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -367,91 +367,91 @@ msgstr ""
 "Активен сте от %1, откакто е запазен последният архив.\n"
 "Запазете ново резервно копие сега?"
 
-#: daemon/planexecutor.cpp:148 daemon/planexecutor.cpp:153
-#: daemon/planexecutor.cpp:186 daemon/planexecutor.cpp:205
-#: daemon/planexecutor.cpp:344 daemon/planexecutor.cpp:356
+#: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
+#: daemon/planexecutor.cpp:202 daemon/planexecutor.cpp:220
+#: daemon/planexecutor.cpp:368 daemon/planexecutor.cpp:380
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "Да"
 
-#: daemon/planexecutor.cpp:148 daemon/planexecutor.cpp:156
-#: daemon/planexecutor.cpp:187 daemon/planexecutor.cpp:208
-#: daemon/planexecutor.cpp:345 daemon/planexecutor.cpp:359
+#: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
+#: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
+#: daemon/planexecutor.cpp:369 daemon/planexecutor.cpp:383
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "No"
 msgstr "Не"
 
-#: daemon/planexecutor.cpp:177
+#: daemon/planexecutor.cpp:193
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
 msgstr "Неуспешно запазване на резервно копие"
 
-#: daemon/planexecutor.cpp:183 daemon/planexecutor.cpp:202
-#: daemon/planexecutor.cpp:341 daemon/planexecutor.cpp:353
-#: daemon/planexecutor.cpp:389 daemon/planexecutor.cpp:393
+#: daemon/planexecutor.cpp:199 daemon/planexecutor.cpp:217
+#: daemon/planexecutor.cpp:365 daemon/planexecutor.cpp:377
+#: daemon/planexecutor.cpp:415 daemon/planexecutor.cpp:419
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "Показване на журналния файл"
 
-#: daemon/planexecutor.cpp:190 daemon/planexecutor.cpp:211
+#: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
 msgstr "Отваряне на настройките"
 
-#: daemon/planexecutor.cpp:233
+#: daemon/planexecutor.cpp:249
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Backup Saved"
 msgstr "Резервното копие е запазено"
 
-#: daemon/planexecutor.cpp:234
+#: daemon/planexecutor.cpp:250
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
 msgstr "Запазването на резервно копие завърши успешно."
 
-#: daemon/planexecutor.cpp:283 daemon/planexecutor.cpp:290
-#: daemon/planexecutor.cpp:322
+#: daemon/planexecutor.cpp:305 daemon/planexecutor.cpp:312
+#: daemon/planexecutor.cpp:345
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Problem"
 msgstr "Проблем"
 
-#: daemon/planexecutor.cpp:284
+#: daemon/planexecutor.cpp:306
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
 msgstr "Нямате разрешение за запис в дестинацията за архивиране."
 
-#: daemon/planexecutor.cpp:291
+#: daemon/planexecutor.cpp:312
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
 msgstr "Невалиден тип резервно копие в конфигурацията."
 
-#: daemon/planexecutor.cpp:336
+#: daemon/planexecutor.cpp:360
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Integrity Check Completed"
 msgstr "Проверката на целостта е завършена"
 
-#: daemon/planexecutor.cpp:385
+#: daemon/planexecutor.cpp:411
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Repair Completed"
 msgstr "Възстановяването е завършено"
 
-#: daemon/planexecutor.cpp:421
+#: daemon/planexecutor.cpp:446
 #, kde-format
 msgid "Kup Backup System"
 msgstr "Система за архивиране Kup"
 
-#: daemon/rsyncjob.cpp:32
+#: daemon/rsyncjob.cpp:31
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -461,7 +461,7 @@ msgstr ""
 "Програмата <application>rsync</application> е необходима, но не може да бъде "
 "намерена, може би не е инсталирана?"
 
-#: filedigger/filedigger.cpp:105
+#: filedigger/filedigger.cpp:116
 #, kde-kuit-format
 msgctxt "@info messagebox, %1 is a folder path"
 msgid ""
@@ -471,45 +471,45 @@ msgstr ""
 "Архивът на резервно копие <filename>%1</filename> не може да бъде отворен. "
 "Проверете дали резервни копия наистина се намират там."
 
-#: filedigger/filedigger.cpp:113
+#: filedigger/filedigger.cpp:123
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid "You do not have permission needed to read this backup archive."
 msgstr ""
 "Нямате необходимото разрешение, за да прочетете този архив с резервни копия."
 
-#: filedigger/filedigger.cpp:162
+#: filedigger/filedigger.cpp:173
 #, kde-format
 msgid "Select location of backup archive to open."
 msgstr "Изберете местоположението на архива за резервно копие за отваряне."
 
-#: filedigger/main.cpp:26
+#: filedigger/main.cpp:28
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
 msgstr "Анализ на файловете"
 
-#: filedigger/main.cpp:27
+#: filedigger/main.cpp:30
 #, kde-format
 msgid "Browser for bup archives."
 msgstr "Преглед на архиви на bup"
 
-#: filedigger/main.cpp:28
+#: filedigger/main.cpp:32
 #, kde-format
 msgid "Copyright (C) 2013-2020 Simon Persson"
 msgstr "Copyright (C) 2013-2020 Simon Persson"
 
-#: filedigger/main.cpp:35 purger/main.cpp:30
+#: filedigger/main.cpp:39 purger/main.cpp:34
 #, kde-format
 msgid "Name of the branch to be opened."
 msgstr "Име на клона, който трябва да се отвори."
 
-#: filedigger/main.cpp:37 purger/main.cpp:32
+#: filedigger/main.cpp:42 purger/main.cpp:37
 #, kde-format
 msgid "Path to the bup repository to be opened."
 msgstr "Път до архива на bup, който трябва да бъде отворен."
 
-#: filedigger/mergedvfs.cpp:98 filedigger/mergedvfs.cpp:105
+#: filedigger/mergedvfs.cpp:102 filedigger/mergedvfs.cpp:113
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid ""
@@ -520,44 +520,44 @@ msgstr ""
 "повредени. Искате ли да стартирате проверка на целостта, за да проверите "
 "това?"
 
-#: filedigger/mergedvfs.cpp:154
+#: filedigger/mergedvfs.cpp:162
 #, kde-kuit-format
 msgctxt "added after folder name in some cases"
 msgid " (folder)"
 msgstr " (папка)"
 
-#: filedigger/mergedvfs.cpp:156
+#: filedigger/mergedvfs.cpp:164
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (symlink)"
 msgstr " (символна връзка)"
 
-#: filedigger/mergedvfs.cpp:158
+#: filedigger/mergedvfs.cpp:166
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (file)"
 msgstr " (файл)"
 
-#: filedigger/restoredialog.cpp:104 kcm/backupplanwidget.cpp:434
+#: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder..."
 msgstr "Нова папка..."
 
-#: filedigger/restoredialog.cpp:130 filedigger/restoredialog.cpp:149
+#: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "No destination was selected, please select one."
 msgstr "Не е избрана дестинация, моля, изберете такава."
 
-#: filedigger/restoredialog.cpp:249
+#: filedigger/restoredialog.cpp:259
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "There was a problem while getting a list of all files to restore: %1"
 msgstr ""
 "Имаше проблем при получаването на списъка с файловете за възстановяване: %1"
 
-#: filedigger/restoredialog.cpp:264
+#: filedigger/restoredialog.cpp:274
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
@@ -567,7 +567,7 @@ msgstr ""
 "Дестинацията не разполага с достатъчно свободно пространство. Моля, изберете "
 "друга дестинация или освободете малко място."
 
-#: filedigger/restoredialog.cpp:276
+#: filedigger/restoredialog.cpp:286
 #, kde-kuit-format
 msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
@@ -575,37 +575,37 @@ msgctxt ""
 msgid " - saved at %1"
 msgstr " - запазен в %1"
 
-#: filedigger/restoredialog.cpp:277
+#: filedigger/restoredialog.cpp:287
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Folder already exists, please choose a solution"
 msgstr "Папката вече съществува, моля, изберете решение"
 
-#: filedigger/restoredialog.cpp:283
+#: filedigger/restoredialog.cpp:293
 #, kde-kuit-format
 msgctxt "@info"
 msgid "File already exists"
 msgstr "Вече има такъв файл"
 
-#: filedigger/restoredialog.cpp:296
+#: filedigger/restoredialog.cpp:306
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "The new name entered already exists, please enter a different one."
 msgstr "Въведеното ново име вече съществува, моля, въведете друго."
 
-#: filedigger/restoredialog.cpp:366 kcm/dirselector.cpp:35
+#: filedigger/restoredialog.cpp:379 kcm/dirselector.cpp:39
 #, kde-kuit-format
 msgctxt "default folder name when creating a new folder"
 msgid "New Folder"
 msgstr "Нова папка"
 
-#: filedigger/restoredialog.cpp:371 kcm/dirselector.cpp:40
+#: filedigger/restoredialog.cpp:385 kcm/dirselector.cpp:45
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "Нова папка"
 
-#: filedigger/restoredialog.cpp:372 kcm/dirselector.cpp:41
+#: filedigger/restoredialog.cpp:386 kcm/dirselector.cpp:46
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid ""
@@ -615,12 +615,12 @@ msgstr ""
 "Създаване на нова папка в: \n"
 " %1"
 
-#: filedigger/restoredialog.cpp:385 kcm/dirselector.cpp:53
+#: filedigger/restoredialog.cpp:401 kcm/dirselector.cpp:60
 #, kde-format
 msgid "A folder named %1 already exists."
 msgstr "Вече има директория с име \"%1\"."
 
-#: filedigger/restoredialog.cpp:391 kcm/dirselector.cpp:59
+#: filedigger/restoredialog.cpp:407 kcm/dirselector.cpp:66
 #, kde-format
 msgid "You do not have permission to create %1."
 msgstr "Нямате достатъчно права, за да създадете %1."
@@ -740,43 +740,43 @@ msgctxt "Title above progress bar"
 msgid "Checking file sizes"
 msgstr "Проверка на размера на файловете"
 
-#: filedigger/restorejob.cpp:83
+#: filedigger/restorejob.cpp:94
 #, kde-kuit-format
 msgctxt "progress report, current operation"
 msgid "Restoring"
 msgstr "Възстановяване"
 
-#: filedigger/restorejob.cpp:84
+#: filedigger/restorejob.cpp:94
 #, kde-kuit-format
 msgctxt "progress report, label"
 msgid "File"
 msgstr "Файл"
 
-#: filedigger/versionlistdelegate.cpp:121
+#: filedigger/versionlistdelegate.cpp:120
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open"
 msgstr "Отваряне"
 
-#: filedigger/versionlistdelegate.cpp:123
+#: filedigger/versionlistdelegate.cpp:122
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Restore"
 msgstr "Възстановяване"
 
-#: kcm/backupplanwidget.cpp:261
+#: kcm/backupplanwidget.cpp:281
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Exclude Folder"
 msgstr "Изключване на папка"
 
-#: kcm/backupplanwidget.cpp:264
+#: kcm/backupplanwidget.cpp:284
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Include Folder"
 msgstr "Включване на папка"
 
-#: kcm/backupplanwidget.cpp:365
+#: kcm/backupplanwidget.cpp:385
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
@@ -789,7 +789,7 @@ msgstr ""
 "може да бъде включена в избора на източник. Ако тя не съдържа нищо важно за "
 "вас, едно възможно решение е да изключите папката от плана за архивиране."
 
-#: kcm/backupplanwidget.cpp:376
+#: kcm/backupplanwidget.cpp:396
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
@@ -803,53 +803,64 @@ msgstr ""
 "едно възможно решение е да изключите цялата папка, в която е съхранява от "
 "плана за архивиране."
 
-#: kcm/backupplanwidget.cpp:392
-#, kde-kuit-format
+#: kcm/backupplanwidget.cpp:412
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info message bar appearing on top"
+#| msgid ""
+#| "The symbolic link <filename>%1</filename> is currently included but it "
+#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
+#| "probably not what you want. One solution is to simply include the target "
+#| "folder in the backup plan."
 msgctxt "@info message bar appearing on top"
 msgid ""
-"The symbolic link <filename>%1</filename> is currently included but it "
-"points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-"probably not what you want. One solution is to simply include the target "
-"folder in the backup plan."
+"The symbolic link <filename>%1</filename> points to a folder which is not "
+"included: <filename>%2</filename>.<nl/>That is probably not what you want. "
+"One solution is to simply include the target folder in the backup plan."
 msgstr ""
 "Символичната връзка <filename>%1</filename> в момента е включена, но тя сочи "
 "към папка, която не е:<filename>%2</filename>.<nl/>Това е вероятно не е "
 "това, което искате. Едно решение е просто да включите целевата папката в "
 "плана за архивиране."
 
-#: kcm/backupplanwidget.cpp:400
-#, kde-kuit-format
+#: kcm/backupplanwidget.cpp:421
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info message bar appearing on top"
+#| msgid ""
+#| "The symbolic link <filename>%1</filename> is currently included but it "
+#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
+#| "probably not what you want. One solution is to simply include the folder "
+#| "where the file is stored in the backup plan."
 msgctxt "@info message bar appearing on top"
 msgid ""
-"The symbolic link <filename>%1</filename> is currently included but it "
-"points to a file which is not: <filename>%2</filename>.<nl/>That is probably "
-"not what you want. One solution is to simply include the folder where the "
-"file is stored in the backup plan."
+"The symbolic link <filename>%1</filename> points to a file which is not "
+"included: <filename>%2</filename>.<nl/>That is probably not what you want. "
+"One solution is to simply include the folder where the file is stored in the "
+"backup plan."
 msgstr ""
 "Символичната връзка <filename>%1</filename> в момента е включена, но тя сочи "
 "към файл, който не е:<filename>%2</filename>.<nl/>Това вероятно е не е това, "
 "което искате. Едно решение е да включите просто папката, в която се "
 "съхранява, в плана за архивиране."
 
-#: kcm/backupplanwidget.cpp:423
+#: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Select Folder"
 msgstr "Избиране на папка"
 
-#: kcm/backupplanwidget.cpp:461
+#: kcm/backupplanwidget.cpp:483
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Description:"
 msgstr "Описание:"
 
-#: kcm/backupplanwidget.cpp:464
+#: kcm/backupplanwidget.cpp:485
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Back to overview"
 msgstr "Обратно към описанието"
 
-#: kcm/backupplanwidget.cpp:498
+#: kcm/backupplanwidget.cpp:523
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -874,7 +885,7 @@ msgstr ""
 "също така да знаете, че файловете в архива не могат да се отварят директно с "
 "обикновен файлов мениджър, необходима е специална програма."
 
-#: kcm/backupplanwidget.cpp:513
+#: kcm/backupplanwidget.cpp:539
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -884,13 +895,13 @@ msgstr ""
 "Резервно копие (не е налично, защото <application>bup</application> не е "
 "инсталиран)"
 
-#: kcm/backupplanwidget.cpp:518
+#: kcm/backupplanwidget.cpp:544
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Versioned Backup (recommended)"
 msgstr "Резервни копия с версии (препоръчително)"
 
-#: kcm/backupplanwidget.cpp:523
+#: kcm/backupplanwidget.cpp:549
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -911,7 +922,7 @@ msgstr ""
 "поради повреден твърд диск, но не ви помага да възстановите собствените си "
 "грешки."
 
-#: kcm/backupplanwidget.cpp:536
+#: kcm/backupplanwidget.cpp:563
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -921,49 +932,49 @@ msgstr ""
 "Синхронизирано резервно копие (не е налично, защото <application>rsync</"
 "application> не е инсталирана)"
 
-#: kcm/backupplanwidget.cpp:541
+#: kcm/backupplanwidget.cpp:568
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Synchronized Backup"
 msgstr "Синхронизирани резервно копие"
 
-#: kcm/backupplanwidget.cpp:569
+#: kcm/backupplanwidget.cpp:596
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Backup Type"
 msgstr "Тип на резервно копие"
 
-#: kcm/backupplanwidget.cpp:570
+#: kcm/backupplanwidget.cpp:597
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select what type of backup you want"
 msgstr "Изберете какъв вид резервно копие искате"
 
-#: kcm/backupplanwidget.cpp:578
+#: kcm/backupplanwidget.cpp:606
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Sources"
 msgstr "Източници"
 
-#: kcm/backupplanwidget.cpp:579
+#: kcm/backupplanwidget.cpp:607
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select which folders to include in backup"
 msgstr "Изберете кои папки да включите в резервното копие"
 
-#: kcm/backupplanwidget.cpp:593
+#: kcm/backupplanwidget.cpp:622
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Filesystem Path"
 msgstr "Път на файловата система"
 
-#: kcm/backupplanwidget.cpp:594
+#: kcm/backupplanwidget.cpp:623
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "External Storage"
 msgstr "Външно хранилище"
 
-#: kcm/backupplanwidget.cpp:600
+#: kcm/backupplanwidget.cpp:629
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -978,19 +989,19 @@ msgstr ""
 "тук път не е необходимо да съществува през цялото време, съществуването му "
 "ще бъде наблюдавано."
 
-#: kcm/backupplanwidget.cpp:607
+#: kcm/backupplanwidget.cpp:636
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Destination Path for Backup:"
 msgstr "Път за местоназначение на резервното копие:"
 
-#: kcm/backupplanwidget.cpp:619
+#: kcm/backupplanwidget.cpp:647
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
 msgstr "Ще работят само пътищата до локалната файлова система!"
 
-#: kcm/backupplanwidget.cpp:627
+#: kcm/backupplanwidget.cpp:654
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
@@ -998,7 +1009,7 @@ msgstr ""
 "Папката не съществува! Докато не я създадете, няма да бъдат запазени "
 "резервни копия."
 
-#: kcm/backupplanwidget.cpp:646
+#: kcm/backupplanwidget.cpp:673
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1009,55 +1020,55 @@ msgstr ""
 "си на външна памет, която може да бъде включено към този компютър, например "
 "USB твърд диск или памет."
 
-#: kcm/backupplanwidget.cpp:656 kcm/backupplanwidget.cpp:660
+#: kcm/backupplanwidget.cpp:682 kcm/backupplanwidget.cpp:685
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "The specified folder will be created if it does not exist."
 msgstr "Посочената папка ще бъде създадена, ако не съществува."
 
-#: kcm/backupplanwidget.cpp:658
+#: kcm/backupplanwidget.cpp:684
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Folder on Destination Drive:"
 msgstr "Папка на целевия диск:"
 
-#: kcm/backupplanwidget.cpp:666
+#: kcm/backupplanwidget.cpp:691
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a folder"
 msgstr "Отворете диалоговия прозорец, за да изберете папка"
 
-#: kcm/backupplanwidget.cpp:696
+#: kcm/backupplanwidget.cpp:721
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Destination"
 msgstr "Назначение"
 
-#: kcm/backupplanwidget.cpp:697
+#: kcm/backupplanwidget.cpp:722
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select the backup destination"
 msgstr "Изберете дестинацията за архивиране"
 
-#: kcm/backupplanwidget.cpp:714
+#: kcm/backupplanwidget.cpp:740
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Manual Activation"
 msgstr "Ръчно активиране"
 
-#: kcm/backupplanwidget.cpp:715
+#: kcm/backupplanwidget.cpp:741
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Interval"
 msgstr "Интервал"
 
-#: kcm/backupplanwidget.cpp:716
+#: kcm/backupplanwidget.cpp:742
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Active Usage Time"
 msgstr "Време на активно използване"
 
-#: kcm/backupplanwidget.cpp:718
+#: kcm/backupplanwidget.cpp:745
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1068,7 +1079,7 @@ msgstr ""
 "направено с помощта на изскачащото меню от иконата за архивиране в "
 "системната лента."
 
-#: kcm/backupplanwidget.cpp:732
+#: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1079,31 +1090,31 @@ msgstr ""
 "копие стане достъпна и е изминал зададения период от време от последното "
 "резервно копие."
 
-#: kcm/backupplanwidget.cpp:749
+#: kcm/backupplanwidget.cpp:777
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Minutes"
 msgstr "Минути"
 
-#: kcm/backupplanwidget.cpp:750 kcm/backupplanwidget.cpp:777
+#: kcm/backupplanwidget.cpp:778 kcm/backupplanwidget.cpp:805
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Hours"
 msgstr "часа"
 
-#: kcm/backupplanwidget.cpp:751
+#: kcm/backupplanwidget.cpp:779
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Days"
 msgstr "Дни"
 
-#: kcm/backupplanwidget.cpp:752
+#: kcm/backupplanwidget.cpp:780
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Weeks"
 msgstr "Седмици"
 
-#: kcm/backupplanwidget.cpp:762
+#: kcm/backupplanwidget.cpp:790
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1115,31 +1126,31 @@ msgstr ""
 "достъпна и сте използвали активно компютъра си повече от зададения период от "
 "време от последното резервно копие."
 
-#: kcm/backupplanwidget.cpp:783
+#: kcm/backupplanwidget.cpp:810
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
 msgstr "Питане за потвърждение преди запазване на резервно копие"
 
-#: kcm/backupplanwidget.cpp:802
+#: kcm/backupplanwidget.cpp:829
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Schedule"
 msgstr "График"
 
-#: kcm/backupplanwidget.cpp:803
+#: kcm/backupplanwidget.cpp:830
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Specify the backup schedule"
 msgstr "Задайте графика за създаване на резервни копия"
 
-#: kcm/backupplanwidget.cpp:817
+#: kcm/backupplanwidget.cpp:844
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
 msgstr "Показване на скритите папки при избора на източник"
 
-#: kcm/backupplanwidget.cpp:822
+#: kcm/backupplanwidget.cpp:848
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1154,7 +1165,7 @@ msgstr ""
 "използват за съхраняване на настройки и временни файлове за вашите "
 "приложения."
 
-#: kcm/backupplanwidget.cpp:843
+#: kcm/backupplanwidget.cpp:869
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1166,13 +1177,13 @@ msgstr ""
 "съхранение и архивирането ще отнеме малко повече време. В замяна на това ще "
 "бъде възможно да се възстановява от частично повредени резервни копия."
 
-#: kcm/backupplanwidget.cpp:849
+#: kcm/backupplanwidget.cpp:875
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Generate recovery information"
 msgstr "Генериране на информация за възстановяване"
 
-#: kcm/backupplanwidget.cpp:851
+#: kcm/backupplanwidget.cpp:878
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid ""
@@ -1182,13 +1193,13 @@ msgstr ""
 "Генериране на информация за възстановяване (не е налична, защото "
 "<application>par2</application> не е инсталиран)"
 
-#: kcm/backupplanwidget.cpp:867
+#: kcm/backupplanwidget.cpp:894
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Verify integrity of backups"
 msgstr "Проверка на целостта на резервните копия"
 
-#: kcm/backupplanwidget.cpp:871
+#: kcm/backupplanwidget.cpp:898
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1203,13 +1214,13 @@ msgstr ""
 "момента, в който трябва да използвате резервно копие, в този момент може да "
 "е твърде късно."
 
-#: kcm/backupplanwidget.cpp:887
+#: kcm/backupplanwidget.cpp:914
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "Изключване на файлове и папки въз основа на шаблони"
 
-#: kcm/backupplanwidget.cpp:905
+#: kcm/backupplanwidget.cpp:932
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1222,36 +1233,36 @@ msgstr ""
 "изключени от от резервното копие. Форматът на шаблона е документиран <link "
 "url='%1'>тук</link>."
 
-#: kcm/backupplanwidget.cpp:923
+#: kcm/backupplanwidget.cpp:950
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "Отваряне на диалогов прозорец за избор на файл"
 
-#: kcm/backupplanwidget.cpp:925
+#: kcm/backupplanwidget.cpp:952
 #, kde-format
 msgid "Select pattern file"
 msgstr "Избиране на шаблонен файл"
 
-#: kcm/backupplanwidget.cpp:950
+#: kcm/backupplanwidget.cpp:977
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Допълнителни"
 
-#: kcm/backupplanwidget.cpp:951
+#: kcm/backupplanwidget.cpp:978
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Допълнителни опции за напреднали потребители"
 
-#: kcm/backupplanwidget.cpp:980
+#: kcm/backupplanwidget.cpp:1008
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
 msgstr "Създаване на папка"
 
-#: kcm/driveselection.cpp:257
+#: kcm/driveselection.cpp:267
 #, kde-kuit-format
 msgctxt "@label Only shown if no drives are detected"
 msgid ""
@@ -1260,19 +1271,19 @@ msgstr ""
 "Включете външното хранилище, което искате да използвате, след което го "
 "изберете от този списък."
 
-#: kcm/driveselectiondelegate.cpp:65
+#: kcm/driveselectiondelegate.cpp:62
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
 msgstr " (прекъснат)"
 
-#: kcm/driveselectiondelegate.cpp:69
+#: kcm/driveselectiondelegate.cpp:66
 #, kde-kuit-format
 msgctxt "@label %1 is amount of free storage space of hard drive"
 msgid "%1 free"
 msgstr "%1 свободни"
 
-#: kcm/driveselectiondelegate.cpp:84
+#: kcm/driveselectiondelegate.cpp:82
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used for unnamed filesystems, more than one filesystem on "
@@ -1281,7 +1292,7 @@ msgctxt ""
 msgid "Partition %1 on %2%3"
 msgstr "Дял %1 на %2%3"
 
-#: kcm/driveselectiondelegate.cpp:87
+#: kcm/driveselectiondelegate.cpp:90
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
@@ -1289,7 +1300,7 @@ msgctxt ""
 msgid "%1%2"
 msgstr "%1%2"
 
-#: kcm/driveselectiondelegate.cpp:91
+#: kcm/driveselectiondelegate.cpp:96
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
@@ -1297,13 +1308,13 @@ msgctxt ""
 msgid "%1 on %2%3"
 msgstr "%1 on %2%3"
 
-#: kcm/driveselectiondelegate.cpp:98
+#: kcm/driveselectiondelegate.cpp:106
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
 msgstr "%1: %2 общ капацитет"
 
-#: kcm/driveselectiondelegate.cpp:147
+#: kcm/driveselectiondelegate.cpp:161
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1317,7 +1328,7 @@ msgstr ""
 "файловете имат значение само ако има повече от един потребител на тази "
 "компютър или ако архивирате изпълними програмни файлове."
 
-#: kcm/driveselectiondelegate.cpp:152
+#: kcm/driveselectiondelegate.cpp:167
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1330,7 +1341,7 @@ msgstr ""
 "потребител използват този компютър или, ако архивирате изпълними програмни "
 "файлове."
 
-#: kcm/folderselectionmodel.cpp:90
+#: kcm/folderselectionmodel.cpp:93
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1340,13 +1351,13 @@ msgstr ""
 "<filename>%1</filename><nl/> ще бъде включен в резервното копие, с "
 "изключение на немаркираните подпапки"
 
-#: kcm/folderselectionmodel.cpp:94
+#: kcm/folderselectionmodel.cpp:98
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid "<filename>%1</filename><nl/>will be included in the backup"
 msgstr "<filename>%1</filename><nl/>ще бъде включено в резервното копие"
 
-#: kcm/folderselectionmodel.cpp:98
+#: kcm/folderselectionmodel.cpp:103
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1356,7 +1367,7 @@ msgstr ""
 "<filename>%1</filename><nl/>ще <emphasis>не</emphasis>бъде включено в "
 "резервното копие, но съдържа папки, които ще бъдат"
 
-#: kcm/folderselectionmodel.cpp:102
+#: kcm/folderselectionmodel.cpp:108
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1366,17 +1377,17 @@ msgstr ""
 "<filename>%1</filename><nl/> ще <emphasis>не</emphasis> бъде включено в "
 "резервното копие"
 
-#: kcm/kupkcm.cpp:43
+#: kcm/kupkcm.cpp:44
 #, kde-format
 msgid "Kup Configuration Module"
 msgstr "Конфигурационен модул на Kup"
 
-#: kcm/kupkcm.cpp:45
+#: kcm/kupkcm.cpp:46
 #, kde-format
 msgid "Configuration of backup plans for the Kup backup system"
 msgstr "Настройки на резервни планове за архивиращата система на Kup"
 
-#: kcm/kupkcm.cpp:80
+#: kcm/kupkcm.cpp:82
 #, kde-format
 msgid ""
 "<h2>Backup programs are missing</h2><p>Before you can activate any backup "
@@ -1387,7 +1398,7 @@ msgstr ""
 "за архивиранетрябва да инсталирате или  </p> <ul> <li> bup, за резервни "
 "копия с версия </li> или<li> rsync, за синхронизирани архиви </li> </ul>"
 
-#: kcm/kupkcm.cpp:201
+#: kcm/kupkcm.cpp:207
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1395,25 +1406,25 @@ msgid ""
 msgstr ""
 "%1 няма дестинация! <nl/> Няма да се запазват резервни копия от този план."
 
-#: kcm/kupkcm.cpp:204
+#: kcm/kupkcm.cpp:210
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Предупреждение"
 
-#: kcm/kupkcm.cpp:250
+#: kcm/kupkcm.cpp:259
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan"
 msgstr "Добавяне на нов план"
 
-#: kcm/kupkcm.cpp:262
+#: kcm/kupkcm.cpp:272
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
 msgstr "Създаване на резервни копия"
 
-#: kcm/kupkcm.cpp:273
+#: kcm/kupkcm.cpp:283
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
@@ -1425,21 +1436,21 @@ msgctxt "@action:button"
 msgid "Configure"
 msgstr "Настройки"
 
-#: kcm/planstatuswidget.cpp:35
+#: kcm/planstatuswidget.cpp:34
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Изтриване"
 
-#: kcm/planstatuswidget.cpp:38
+#: kcm/planstatuswidget.cpp:36
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Duplicate"
 msgstr "Дублиране"
 
-#: kioworker/bupworker.cpp:74 kioworker/bupworker.cpp:128
-#: kioworker/bupworker.cpp:161 kioworker/bupworker.cpp:218
-#: kioworker/bupworker.cpp:238
+#: kioworker/bupworker.cpp:77 kioworker/bupworker.cpp:132
+#: kioworker/bupworker.cpp:166 kioworker/bupworker.cpp:226
+#: kioworker/bupworker.cpp:247
 #, kde-format
 msgid ""
 "No bup repository found.\n"
@@ -1448,53 +1459,59 @@ msgstr ""
 "Не е намерено хранилище на bup.\n"
 "%1"
 
-#: plasmoid/contents/ui/FullRepresentation.qml:110
+#: plasmoid-qt5/contents/ui/FullRepresentation.qml:109
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:118
 #, kde-format
 msgid "Save new backup"
 msgstr "Запазване на  новото резервно копие"
 
-#: plasmoid/contents/ui/FullRepresentation.qml:116
+#: plasmoid-qt5/contents/ui/FullRepresentation.qml:115
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:124
 #, kde-format
 msgid "Prune old backups"
 msgstr "Подрязване на старите резервни копия"
 
-#: plasmoid/contents/ui/FullRepresentation.qml:121
+#: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:129
 #, kde-format
 msgid "Show files"
 msgstr "Показване на файловете"
 
-#: plasmoid/contents/ui/FullRepresentation.qml:126
+#: plasmoid-qt5/contents/ui/FullRepresentation.qml:125
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:134
 #, kde-format
 msgid "Show log file"
 msgstr "Показване на журналния файл"
 
-#: plasmoid/contents/ui/main.qml:78
+#: plasmoid-qt5/contents/ui/main.qml:69
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:49
 #, kde-format
 msgid "&Configure Kup..."
 msgstr "&Конфигуриране на Kup..."
 
-#: plasmoid/contents/ui/main.qml:80
+#: plasmoid-qt5/contents/ui/main.qml:71
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:38
 #, kde-format
 msgid "&Reload backup plans"
 msgstr "&Презареждане на план за архивиране"
 
-#: purger/main.cpp:21
+#: purger/main.cpp:23
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
 msgstr "Изтриване"
 
-#: purger/main.cpp:22
+#: purger/main.cpp:25
 #, kde-format
 msgid "Purger for bup archives."
 msgstr "Изтриване на архиви на bup"
 
-#: purger/main.cpp:23
+#: purger/main.cpp:27
 #, kde-format
 msgid "Copyright (C) 2013-2021 Simon Persson"
 msgstr "Copyright (C) 2013-2021 Simon Persson"
 
-#: settings/backupplan.cpp:23
+#: settings/backupplan.cpp:24
 #, kde-kuit-format
 msgctxt ""
 "@label Default name for a new backup plan, %1 is the number of the plan in "
@@ -1502,36 +1519,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "План за архивиране %1"
 
-#: settings/backupplan.cpp:56
+#: settings/backupplan.cpp:57
 #, kde-format
 msgid "Backups"
 msgstr "Резервни копия"
 
-#: settings/backupplan.cpp:91
+#: settings/backupplan.cpp:94
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (копиране)"
 
-#: settings/backupplan.cpp:209
+#: settings/backupplan.cpp:219
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Последно запазен: %1"
 
-#: settings/backupplan.cpp:214
+#: settings/backupplan.cpp:223
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Големина: %1"
 
-#: settings/backupplan.cpp:219
+#: settings/backupplan.cpp:227
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Свободно място: %1"
 
-#: settings/backupplan.cpp:223
+#: settings/backupplan.cpp:230
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
