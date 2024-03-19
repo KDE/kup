@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-18 02:01+0000\n"
-"PO-Revision-Date: 2023-02-28 08:54+0100\n"
+"PO-Revision-Date: 2024-03-18 06:45+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -806,13 +806,7 @@ msgstr ""
 "izdelave varnostnih kopij."
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
@@ -820,18 +814,12 @@ msgid ""
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
 "Simbolična povezava <filename>%1</filename> je trenutno vključena, vendar "
-"kaže na mapo, ki je ni: <filename>%2</filename>.<nl/> To jeverjetno ni "
-"tisto, kar želite. Ena od rešitev je preprosto vključiti to mapo v plan "
-"izdelave varnostnih kopij."
+"kaže na mapo, ki je ni: <filename>%2</filename>.<nl/> To verjetno ni tisto, "
+"kar želite. Ena od rešitev je preprosto vključiti to mapo v plan izdelave "
+"varnostnih kopij."
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -839,10 +827,10 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"Simbolična povezava <filename>%1</filename> je trenutno vključena, vendar "
-"kaže na datoteko, ki ni: <filename>%2</filename>.<nl/> To verjetno ni tisto, "
-"kar želite. Ena izmed rešitev je preprosto vključiti mapo, v kateri je ta "
-"datoteka shranjena, v varnostno kopijo."
+"Simbolična povezava <filename>%1</filename> kaže na datoteko, ki ni "
+"vključena: <filename>%2</filename>.<nl/> To verjetno ni tisto, kar želite. "
+"Ena izmed rešitev je preprosto vključiti mapo, kjer je ta datoteka, v plan "
+"za varnostno kopiranje."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format

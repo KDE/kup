@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-18 02:01+0000\n"
-"PO-Revision-Date: 2024-03-01 15:17+0300\n"
+"PO-Revision-Date: 2024-03-18 14:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -281,7 +281,7 @@ msgid ""
 "This allows it to quickly perform incremental backups, only saving the parts "
 "of files that has actually changed since last backup was saved."
 msgstr ""
-"Kup, 'bup' yedekleme depolama sistemini kullanan esnek bir yedekleme "
+"Kup, ‘bup’ yedekleme depolama sistemini kullanan esnek bir yedekleme "
 "çözümüdür. Böylece, yedeğin son kaydedildiği zamandan itibaren dosyaların "
 "yalnızca değiştirilen kısımlarını yedekleyerek kolaylıkla artan yedekler "
 "almanıza olanak sağlar."
@@ -289,7 +289,7 @@ msgstr ""
 #: daemon/main.cpp:41 kcm/kupkcm.cpp:48
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
-msgstr "Telif hakkı (C) 2011-2020 Simon Persson"
+msgstr "Telif hakkı (C) 2011–2020 Simon Persson"
 
 #: daemon/main.cpp:42 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
 #: purger/main.cpp:28
@@ -490,7 +490,7 @@ msgstr "Bup arşivlerine göz atın."
 #: filedigger/main.cpp:32
 #, kde-format
 msgid "Copyright (C) 2013-2020 Simon Persson"
-msgstr "Telif hakkı (C) 2013-2020 Simon Persson"
+msgstr "Telif hakkı (C) 2013–2020 Simon Persson"
 
 #: filedigger/main.cpp:39 purger/main.cpp:34
 #, kde-format
@@ -534,7 +534,7 @@ msgstr " (dosya)"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder..."
-msgstr "Yeni Klasör..."
+msgstr "Yeni Klasör…"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -564,7 +564,7 @@ msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
 "was saved"
 msgid " - saved at %1"
-msgstr " - saved at %1"
+msgstr " — saved at %1"
 
 #: filedigger/restoredialog.cpp:287
 #, kde-kuit-format
@@ -794,32 +794,20 @@ msgstr ""
 "tanesi, bu klasörü yedek tasarısından bu dosyayı içeren klasörü dışlamaktır."
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"<filename>%1</filename> sembolik bağı şu anda içeriliyor; ancak işaret "
-"ettiği klasör içerilmiyor: <filename>%2</filename>.<nl/>Büyük olasılıkla "
-"yapmak istediğiniz şey bu değil. Olası bir çözüm, yedek tasarısında hedef "
-"klasörü içermek olabilir."
+"<filename>%1</filename> sembolik bağı, içerilmeyen bir klasöre işaret "
+"ediyor: <filename>%2</filename>.<nl/>Büyük olasılıkla yapmak istediğiniz şey "
+"bu değildi. Olası bir çözüm, yedek tasarısında hedef klasörü içermek "
+"olabilir."
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -827,10 +815,10 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"<filename>%1</filename> sembolik bağı şu anda içeriliyor; ancak işaret "
-"ettiği dosya içerilmiyor: <filename>%2</filename>.<nl/>Büyük olasılıkla "
-"yapmak istediğiniz şey bu değil. Olası bir çözüm, yedek tasarısında hedef "
-"klasörü içermek olabilir."
+"<filename>%1</filename> sembolik bağı, içerilmeyen bir klasöre işaret "
+"ediyor: <filename>%2</filename>.<nl/>Büyük olasılıkla yapmak istediğiniz şey "
+"bu değildi. Olası bir çözüm, yedek tasarısında dosyanın depolandığı konumu "
+"içermek olabilir."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
@@ -864,7 +852,7 @@ msgid ""
 "files in the archive can not be accessed directly with a general file "
 "manager, a special program is needed."
 msgstr ""
-"Bu yedek türü bir <emphasis>arşiv</emphasis>'dir. Dosyalarınızın hem güncel "
+"Bu yedek türü bir <emphasis>arşiv</emphasis>’dir. Dosyalarınızın hem güncel "
 "hem de önceden yedeklenmiş sürümlerini içerir. Bu tür yedeklemeyi kullanmak, "
 "daha sonradan bilgisayarınızdan silinen veya kaybolan dosyalarınızın eski "
 "sürümlerine erişmenizi olanaklı kılar. Gereken depolama alanı, dosyaların "
@@ -1462,7 +1450,7 @@ msgstr "Günlük dosyasını göster"
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:49
 #, kde-format
 msgid "&Configure Kup..."
-msgstr "Kup'u &Yapılandır..."
+msgstr "Kup’u &Yapılandır…"
 
 #: plasmoid-qt5/contents/ui/main.qml:71
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:38
@@ -1484,7 +1472,7 @@ msgstr "bup arşivleri için silici."
 #: purger/main.cpp:27
 #, kde-format
 msgid "Copyright (C) 2013-2021 Simon Persson"
-msgstr "Telif hakkı (C) 2013-2021 Simon Persson"
+msgstr "Telif hakkı (C) 2013–2021 Simon Persson"
 
 #: settings/backupplan.cpp:24
 #, kde-kuit-format

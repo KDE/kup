@@ -4,13 +4,13 @@
 # Translators:
 # Heimen Stoffels <vistausss@outlook.com>, 2017-2019.
 # Simon Persson <simon.persson@mykolab.com>, 2018.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-18 02:01+0000\n"
-"PO-Revision-Date: 2023-02-24 12:00+0100\n"
+"PO-Revision-Date: 2024-03-18 12:25+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -802,32 +802,20 @@ msgstr ""
 "kiezen om het bestand uit te sluiten."
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"De zachte koppeling, <filename>%1</filename>, is momenteel opgenomen maar "
-"verwijst naar een map die niet <filename>%2</filename> is. <nl/"
-">Waarschijnlijk wil je dit niet. Je kunt ervoor kiezen om de doelmap op te "
-"nemen."
+"De symbolische koppeling <filename>%1</filename> wijst naar een map die niet "
+"is meegenomen: <filename>%2</filename>. <nl/>Waarschijnlijk wilt u dit niet. "
+"Een oplossing is eenvoudig om de doelmap op te nemen in het plan voor de "
+"reservekopieën."
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -835,10 +823,10 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"De zachte koppeling, <filename>%1</filename>, is momenteel opgenomen maar "
-"verwijst naar een bestand dat niet <filename>%2</filename> is. <nl/"
-">Waarschijnlijk wil je dit niet. Je kunt ervoor kiezen om de map waarin het "
-"bestand zich bevindt op te nemen."
+"De symbolische koppeling <filename>%1</filename> wijst naar een bestand dat "
+"niet is meegenomen: <filename>%2</filename>. <nl/>Waarschijnlijk wilt u dat "
+"niet. Een oplossing is eenvoudig om de map waar het bestand is opgeslagen op "
+"te nemen in het plan voor de reservekopieën."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
