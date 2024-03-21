@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kup package.
 #
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-18 02:01+0000\n"
-"PO-Revision-Date: 2023-02-24 18:08+0100\n"
+"PO-Revision-Date: 2024-03-20 10:12+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -800,36 +800,23 @@ msgid ""
 msgstr ""
 "Нямате разрешение за четене на този файл: <filename>%1</filename><nl/>Той не "
 "може да бъде включен в избора на източник. Ако файлът не е важен за вас, "
-"едно възможно решение е да изключите цялата папка, в която е съхранява от "
+"едно възможно решение е да изключите цялата папка, в която се съхранява от "
 "плана за архивиране."
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"Символичната връзка <filename>%1</filename> в момента е включена, но тя сочи "
-"към папка, която не е:<filename>%2</filename>.<nl/>Това е вероятно не е "
-"това, което искате. Едно решение е просто да включите целевата папката в "
-"плана за архивиране."
+"Символичната връзка <filename>%1</filename> сочи към папка, която не е "
+"включена:<filename>%2</filename>.<nl/>Това вероятно не е това, което искате. "
+"Едно решение е просто да включите целевата папката в плана за архивиране."
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -837,10 +824,10 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"Символичната връзка <filename>%1</filename> в момента е включена, но тя сочи "
-"към файл, който не е:<filename>%2</filename>.<nl/>Това вероятно е не е това, "
-"което искате. Едно решение е да включите просто папката, в която се "
-"съхранява, в плана за архивиране."
+"Символичната връзка <filename>%1</filename> сочи към файл, който не е "
+"включен:<filename>%2</filename>.<nl/>Това вероятно не е това, което искате. "
+"Едно решение е да включите просто папката, в която се съхранява, в плана за "
+"архивиране."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format

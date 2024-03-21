@@ -4,7 +4,7 @@
 # benoits <benoit.schwinden@free.fr>, 2014-2016.
 # P Rouleau <pfrouleau@gmail.com>, 2018.
 # Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
-# Xavier Besnard <xavier.besnard@kde.org>, 2020, 2021.
+# SPDX-FileCopyrightText: 2020, 2021, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 #
 # Translators:
@@ -14,15 +14,15 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-18 02:01+0000\n"
-"PO-Revision-Date: 2023-02-24 20:53+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2024-03-19 08:35+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -812,32 +812,20 @@ msgstr ""
 "contenant ce fichier du plan de sauvegarde."
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"Le lien symbolique <filename>%1</filename> est actuellement inclus mais il "
-"réfère à un dossier qu'il ne l'est pas : <filename>%2</filename>.<nl/>Ce "
-"n'est probablement pas ce que vous voulez. Une solution est d'inclure le "
-"dossier cible dans le plan de sauvegarde."
+"Le lien symbolique <filename>%1</filename> fait référence à un dossier non "
+"inclus : <filename>%2</filename>.<nl/>Ce n'est probablement pas ce que vous "
+"voulez. Une solution simple est d'inclure le dossier cible dans le plan "
+"d'archivage."
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -845,10 +833,10 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"Le lien symbolique <filename>%1</filename> est actuellement inclus mais il "
-"réfère à un fichier qu'il ne l'est pas : <filename>%2</filename>.<nl/>Ce "
-"n'est probablement pas ce que vous voulez. Une solution est d'inclure le "
-"dossier contenant ce fichier dans le plan de sauvegarde."
+"Le lien symbolique <filename>%1</filename> fait référence à un dossier non "
+"inclus : <filename>%2</filename>.<nl/>Ce n'est probablement pas ce que vous "
+"voulez. Une solution simple est d'inclure le dossier dans lequel le fichier "
+"est enregistré dans le plan d'archivage."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
