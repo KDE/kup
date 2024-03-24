@@ -81,11 +81,7 @@ void KupEngine::checkConnection(QLocalSocket::LocalSocketState pState)
         });
     }
     if (pState == QLocalSocket::UnconnectedState) {
-        // Don't bother to translate this error message, guessing the error string from qt
-        // is not translated also.
-        QString lErrorText = QStringLiteral("Error, no connection to kup-daemon: ");
-        lErrorText += mSocket->errorString();
-        setData(QStringLiteral("common"), QStringLiteral("no plan reason"), lErrorText);
+        setData(QStringLiteral("common"), QStringLiteral("no plan reason"), "");
     }
 }
 
