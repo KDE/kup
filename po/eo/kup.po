@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-18 02:01+0000\n"
-"PO-Revision-Date: 2024-02-26 21:30+0100\n"
+"PO-Revision-Date: 2024-03-24 10:34+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
 "Language: eo\n"
@@ -57,7 +57,7 @@ msgstr ""
 #: daemon/bupjob.cpp:100
 #, kde-format
 msgid "Checking backup integrity"
-msgstr ""
+msgstr "Kontrolante sekurkopian integrecon"
 
 #: daemon/bupjob.cpp:119 daemon/bupverificationjob.cpp:63
 #, kde-kuit-format
@@ -78,29 +78,31 @@ msgstr ""
 #: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:48
 #, kde-format
 msgid "Checking what to copy"
-msgstr ""
+msgstr "Kontrolante kion kopii"
 
 #: daemon/bupjob.cpp:171
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
 msgstr ""
+"Malsukcesis analizi dosierojn. Vidu protokoldosieron por pliaj detaloj."
 
 #: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
 #, kde-format
 msgid "Saving backup"
-msgstr ""
+msgstr "Konservante sekurkopion"
 
 #: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:110
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
 msgstr ""
+"Malsukcesis konservi sekurkopion. Vidu protokoldosieron por pliaj detaloj."
 
 #: daemon/bupjob.cpp:234
 #, kde-format
 msgid "Generating recovery information"
-msgstr ""
+msgstr "Generante reakiran informon"
 
 #: daemon/bupjob.cpp:251
 #, kde-kuit-format
@@ -129,6 +131,7 @@ msgstr ""
 msgctxt "@info notification"
 msgid "Success! Backup repair worked. See log file for more details."
 msgstr ""
+"Sukceso! Rezerva riparo funkciis. Vidu protokoldosieron por pliaj detaloj."
 
 #: daemon/buprepairjob.cpp:82
 #, kde-kuit-format
@@ -158,7 +161,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Backup integrity test was successful. Your backups are fine."
-msgstr ""
+msgstr "Rezerva integrectesto sukcesis. Viaj sekurkopioj estas bone."
 
 #: daemon/bupverificationjob.cpp:88
 #, kde-kuit-format
@@ -182,52 +185,52 @@ msgstr "Halti"
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
-msgstr ""
+msgstr "Nuntempe okupata: %1"
 
 #: daemon/kupdaemon.cpp:176
 #, kde-format
 msgid "Do you really want to stop?"
-msgstr ""
+msgstr "Ĉu vi vere volas ĉesi?"
 
 #: daemon/kupdaemon.cpp:179
 #, kde-format
 msgid "User Backups"
-msgstr ""
+msgstr "Sekurkopioj de uzantoj"
 
 #: daemon/kupdaemon.cpp:262
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination not available"
-msgstr ""
+msgstr "Rezerva celo ne havebla"
 
 #: daemon/kupdaemon.cpp:266 daemon/kupdaemon.cpp:322
 #, kde-format
 msgid "No backup plans configured"
-msgstr ""
+msgstr "Neniuj rezervaj planoj agordis"
 
 #: daemon/kupdaemon.cpp:272
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination available"
-msgstr ""
+msgstr "Rezerva celo disponebla"
 
 #: daemon/kupdaemon.cpp:282 daemon/planexecutor.cpp:79
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup status OK"
-msgstr ""
+msgstr "Rezerva stato OK"
 
 #: daemon/kupdaemon.cpp:289 daemon/planexecutor.cpp:81
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup suggested"
-msgstr ""
+msgstr "Nova sekurkopio sugestita"
 
 #: daemon/kupdaemon.cpp:296 daemon/planexecutor.cpp:83
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup needed"
-msgstr ""
+msgstr "Nova sekurkopio bezonata"
 
 #: daemon/main.cpp:28
 #, kde-kuit-format
@@ -241,7 +244,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
-msgstr ""
+msgstr "Kup Daemon"
 
 #: daemon/main.cpp:37
 #, kde-format
@@ -254,7 +257,7 @@ msgstr ""
 #: daemon/main.cpp:41 kcm/kupkcm.cpp:48
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
-msgstr ""
+msgstr "Kopirajto (C) 2011-2020 Simon Persson"
 
 #: daemon/main.cpp:42 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
 #: purger/main.cpp:28
@@ -286,25 +289,25 @@ msgstr ""
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Saving backup"
-msgstr ""
+msgstr "Konservante sekurkopion"
 
 #: daemon/planexecutor.cpp:71
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Checking backup integrity"
-msgstr ""
+msgstr "Kontrolante sekurkopian integrecon"
 
 #: daemon/planexecutor.cpp:73
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Repairing backups"
-msgstr ""
+msgstr "Ripari sekurkopiojn"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Do you want to save a first backup now?"
-msgstr ""
+msgstr "Ĉu vi volas konservi unuan sekurkopion nun?"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -342,7 +345,7 @@ msgstr "Ne"
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
-msgstr ""
+msgstr "Konservado de Rezervo Malsukcesis"
 
 #: daemon/planexecutor.cpp:199 daemon/planexecutor.cpp:217
 #: daemon/planexecutor.cpp:365 daemon/planexecutor.cpp:377
@@ -350,25 +353,25 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Show log file"
-msgstr ""
+msgstr "Montri protokoldosieron"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
-msgstr ""
+msgstr "Malfermi agordojn"
 
 #: daemon/planexecutor.cpp:249
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Backup Saved"
-msgstr ""
+msgstr "Rezervo Konservita"
 
 #: daemon/planexecutor.cpp:250
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
-msgstr ""
+msgstr "Konservado de sekurkopio kompletigita sukcese."
 
 #: daemon/planexecutor.cpp:305 daemon/planexecutor.cpp:312
 #: daemon/planexecutor.cpp:345
@@ -381,13 +384,13 @@ msgstr "Problemo"
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
-msgstr ""
+msgstr "Vi ne havas skribpermeson al rezerva celo."
 
 #: daemon/planexecutor.cpp:312
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
-msgstr ""
+msgstr "Nevalida speco de sekurkopio en agordo."
 
 #: daemon/planexecutor.cpp:360
 #, kde-kuit-format
@@ -426,38 +429,38 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid "You do not have permission needed to read this backup archive."
-msgstr ""
+msgstr "Vi ne bezonas permeson por legi ĉi tiun rezervan arkivon."
 
 #: filedigger/filedigger.cpp:173
 #, kde-format
 msgid "Select location of backup archive to open."
-msgstr ""
+msgstr "Elektu lokon de rezerva arkivo por malfermi."
 
 #: filedigger/main.cpp:28
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
-msgstr ""
+msgstr "File Digger"
 
 #: filedigger/main.cpp:30
 #, kde-format
 msgid "Browser for bup archives."
-msgstr ""
+msgstr "Retumilo por bup-arkivoj."
 
 #: filedigger/main.cpp:32
 #, kde-format
 msgid "Copyright (C) 2013-2020 Simon Persson"
-msgstr ""
+msgstr "Kopirajto (C) 2013-2020 Simon Persson"
 
 #: filedigger/main.cpp:39 purger/main.cpp:34
 #, kde-format
 msgid "Name of the branch to be opened."
-msgstr ""
+msgstr "Nomo de la malfermota branĉo."
 
 #: filedigger/main.cpp:42 purger/main.cpp:37
 #, kde-format
 msgid "Path to the bup repository to be opened."
-msgstr ""
+msgstr "Vojo al la bup-deponejo malfermota."
 
 #: filedigger/mergedvfs.cpp:102 filedigger/mergedvfs.cpp:113
 #, kde-kuit-format
@@ -471,19 +474,19 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "added after folder name in some cases"
 msgid " (folder)"
-msgstr ""
+msgstr " (dosierujo)"
 
 #: filedigger/mergedvfs.cpp:164
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (symlink)"
-msgstr ""
+msgstr " (simbolo)"
 
 #: filedigger/mergedvfs.cpp:166
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (file)"
-msgstr ""
+msgstr " (dosiero)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
 #, kde-kuit-format
@@ -495,13 +498,14 @@ msgstr "Nova dosierujo..."
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "No destination was selected, please select one."
-msgstr ""
+msgstr "Neniu celo estis elektita, bonvolu elekti unu."
 
 #: filedigger/restoredialog.cpp:259
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "There was a problem while getting a list of all files to restore: %1"
 msgstr ""
+"Okazis problemo dum ricevado de listo de ĉiuj dosieroj por restarigi: %1"
 
 #: filedigger/restoredialog.cpp:274
 #, kde-kuit-format
@@ -523,7 +527,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Folder already exists, please choose a solution"
-msgstr ""
+msgstr "Dosierujo jam ekzistas, bonvolu elekti solvon"
 
 #: filedigger/restoredialog.cpp:293
 #, kde-kuit-format
@@ -535,7 +539,7 @@ msgstr "Dosiero jam ekzistas"
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "The new name entered already exists, please enter a different one."
-msgstr ""
+msgstr "La nova enigita nomo jam ekzistas, bonvolu enigi alian."
 
 #: filedigger/restoredialog.cpp:379 kcm/dirselector.cpp:39
 #, kde-kuit-format
@@ -565,28 +569,28 @@ msgstr "Dosierujo nomita %1 jam ekzistas."
 #: filedigger/restoredialog.cpp:407 kcm/dirselector.cpp:66
 #, kde-format
 msgid "You do not have permission to create %1."
-msgstr ""
+msgstr "Vi ne havas permeson krei %1."
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, RestoreDialog)
 #: filedigger/restoredialog.ui:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Restore Guide"
-msgstr ""
+msgstr "Restarigi Gvidilon"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreOriginalButton)
 #: filedigger/restoredialog.ui:55
 #, kde-format
 msgctxt "@action:button"
 msgid "Restore to original location"
-msgstr ""
+msgstr "Restarigi al origina loko"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose where to restore"
-msgstr ""
+msgstr "Elekti kie restarigi"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
 #: filedigger/restoredialog.ui:132
@@ -607,14 +611,14 @@ msgstr "Sekva"
 #, kde-format
 msgctxt "@option:radio "
 msgid "Restore the folder under a new name"
-msgstr ""
+msgstr "Restarigi la dosierujon sub nova nomo"
 
 #. i18n: ectx: property (text), widget (QRadioButton, mOverwriteRadioButton)
 #: filedigger/restoredialog.ui:206
 #, kde-format
 msgctxt "@option:radio"
 msgid "Merge folders"
-msgstr ""
+msgstr "Kunfandi dosierujojn"
 
 #. i18n: ectx: property (text), widget (QLabel, mConfirmOverwriteLabel)
 #: filedigger/restoredialog.ui:236
@@ -644,21 +648,21 @@ msgstr "Konfirmi"
 #, kde-format
 msgctxt "Title above progress bar"
 msgid "Restoring files"
-msgstr ""
+msgstr "Restarigi dosierojn"
 
 #. i18n: ectx: property (text), widget (QLabel, mErrorLabel)
 #: filedigger/restoredialog.ui:347
 #, kde-format
 msgctxt "@label above the detailed error message"
 msgid "An error occurred while restoring:"
-msgstr ""
+msgstr "Okazis eraro dum restarigo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: filedigger/restoredialog.ui:378
 #, kde-format
 msgctxt "@label"
 msgid "Restoration completed successfully!"
-msgstr ""
+msgstr "Restarigo kompletigita sukcese!"
 
 #. i18n: ectx: property (text), widget (QPushButton, mOpenDestinationButton)
 #: filedigger/restoredialog.ui:419
@@ -678,13 +682,13 @@ msgstr "Fermi"
 #, kde-format
 msgctxt "Title above progress bar"
 msgid "Checking file sizes"
-msgstr ""
+msgstr "Kontrolante dosiergrandojn"
 
 #: filedigger/restorejob.cpp:94
 #, kde-kuit-format
 msgctxt "progress report, current operation"
 msgid "Restoring"
-msgstr ""
+msgstr "Restarigo"
 
 #: filedigger/restorejob.cpp:94
 #, kde-kuit-format
@@ -708,13 +712,13 @@ msgstr "Restaŭri"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Exclude Folder"
-msgstr ""
+msgstr "Ekskludi Dosierujon"
 
 #: kcm/backupplanwidget.cpp:284
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Include Folder"
-msgstr ""
+msgstr "Inkluzivi Dosierujon"
 
 #: kcm/backupplanwidget.cpp:385
 #, kde-kuit-format
@@ -771,7 +775,7 @@ msgstr "Priskribo:"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Back to overview"
-msgstr ""
+msgstr "Reen al superrigardo"
 
 #: kcm/backupplanwidget.cpp:523
 #, kde-kuit-format
@@ -800,7 +804,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Versioned Backup (recommended)"
-msgstr ""
+msgstr "Versiita Rezervo (rekomendita)"
 
 #: kcm/backupplanwidget.cpp:549
 #, kde-kuit-format
@@ -827,19 +831,19 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Synchronized Backup"
-msgstr ""
+msgstr "Sinkronigita Rezervo"
 
 #: kcm/backupplanwidget.cpp:596
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Backup Type"
-msgstr ""
+msgstr "Rezerva Tipo"
 
 #: kcm/backupplanwidget.cpp:597
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select what type of backup you want"
-msgstr ""
+msgstr "Elekti kian sekurkopion vi volas"
 
 #: kcm/backupplanwidget.cpp:606
 #, kde-kuit-format
@@ -851,19 +855,19 @@ msgstr "Fontoj"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select which folders to include in backup"
-msgstr ""
+msgstr "Elekti kiujn dosierujojn inkludi en sekurkopio"
 
 #: kcm/backupplanwidget.cpp:622
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Filesystem Path"
-msgstr ""
+msgstr "Dosiersistemo Vojo"
 
 #: kcm/backupplanwidget.cpp:623
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "External Storage"
-msgstr ""
+msgstr "Ekstera konservado"
 
 #: kcm/backupplanwidget.cpp:629
 #, kde-kuit-format
@@ -879,19 +883,20 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Destination Path for Backup:"
-msgstr ""
+msgstr "Celvojo por Rezervo:"
 
 #: kcm/backupplanwidget.cpp:647
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "Nur lokaj dosiersistemaj vojoj funkcios!"
 
 #: kcm/backupplanwidget.cpp:654
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
 msgstr ""
+"Dosierujo ne ekzistas! Neniuj sekurkopioj estos konservitaj ĝis vi kreos ĝin."
 
 #: kcm/backupplanwidget.cpp:673
 #, kde-kuit-format
@@ -905,19 +910,19 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "The specified folder will be created if it does not exist."
-msgstr ""
+msgstr "La specifita dosierujo estos kreita se ĝi ne ekzistas."
 
 #: kcm/backupplanwidget.cpp:684
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Folder on Destination Drive:"
-msgstr ""
+msgstr "Dosierujo sur Cela Drive:"
 
 #: kcm/backupplanwidget.cpp:691
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a folder"
-msgstr ""
+msgstr "Malfermi dialogon por elekti dosierujon"
 
 #: kcm/backupplanwidget.cpp:721
 #, kde-kuit-format
@@ -929,13 +934,13 @@ msgstr "Celo"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select the backup destination"
-msgstr ""
+msgstr "Elekti la rezervan celon"
 
 #: kcm/backupplanwidget.cpp:740
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Manual Activation"
-msgstr ""
+msgstr "Mana Aktivigo"
 
 #: kcm/backupplanwidget.cpp:741
 #, kde-kuit-format
@@ -947,7 +952,7 @@ msgstr "Intervalo"
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Active Usage Time"
-msgstr ""
+msgstr "Aktiva Uzotempo"
 
 #: kcm/backupplanwidget.cpp:745
 #, kde-kuit-format
@@ -1002,7 +1007,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
-msgstr ""
+msgstr "Peti konfirmon antaŭ konservi sekurkopion"
 
 #: kcm/backupplanwidget.cpp:829
 #, kde-kuit-format
@@ -1014,13 +1019,13 @@ msgstr "Horaro"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Specify the backup schedule"
-msgstr ""
+msgstr "Indiki la rezervan horaron"
 
 #: kcm/backupplanwidget.cpp:844
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
-msgstr ""
+msgstr "Montri kaŝitajn dosierujojn en fontelekto"
 
 #: kcm/backupplanwidget.cpp:848
 #, kde-kuit-format
@@ -1045,7 +1050,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Generate recovery information"
-msgstr ""
+msgstr "Generi reakiran informon"
 
 #: kcm/backupplanwidget.cpp:878
 #, kde-kuit-format
@@ -1059,7 +1064,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Verify integrity of backups"
-msgstr ""
+msgstr "Kontroli integrecon de sekurkopioj"
 
 #: kcm/backupplanwidget.cpp:898
 #, kde-kuit-format
@@ -1075,7 +1080,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
-msgstr ""
+msgstr "Ekskludi dosierojn kaj dosierujojn laŭ ŝablonoj"
 
 #: kcm/backupplanwidget.cpp:932
 #, kde-kuit-format
@@ -1090,12 +1095,12 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
-msgstr ""
+msgstr "Malfermi dialogon por elekti dosieron"
 
 #: kcm/backupplanwidget.cpp:952
 #, kde-format
 msgid "Select pattern file"
-msgstr ""
+msgstr "Elekti ŝablonodosieron"
 
 #: kcm/backupplanwidget.cpp:977
 #, kde-kuit-format
@@ -1107,7 +1112,7 @@ msgstr "Altnivela"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
-msgstr ""
+msgstr "Kromaj opcioj por progresintaj uzantoj"
 
 #: kcm/backupplanwidget.cpp:1008
 #, kde-kuit-format
@@ -1126,7 +1131,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
-msgstr ""
+msgstr " (malkonektita)"
 
 #: kcm/driveselectiondelegate.cpp:66
 #, kde-kuit-format
@@ -1163,7 +1168,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
-msgstr ""
+msgstr "%1: %2 totala kapablo"
 
 #: kcm/driveselectiondelegate.cpp:161
 #, kde-kuit-format
@@ -1195,7 +1200,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid "<filename>%1</filename><nl/>will be included in the backup"
-msgstr ""
+msgstr "<filename>%1</filename><nl/>estos inkluzivita en la sekurkopio"
 
 #: kcm/folderselectionmodel.cpp:103
 #, kde-kuit-format
@@ -1216,12 +1221,12 @@ msgstr ""
 #: kcm/kupkcm.cpp:44
 #, kde-format
 msgid "Kup Configuration Module"
-msgstr ""
+msgstr "Kup-Agorda Modulo"
 
 #: kcm/kupkcm.cpp:46
 #, kde-format
 msgid "Configuration of backup plans for the Kup backup system"
-msgstr ""
+msgstr "Agordo de rezerva planoj por la Kup rezerva sistemo"
 
 #: kcm/kupkcm.cpp:82
 #, kde-format
@@ -1248,19 +1253,19 @@ msgstr "Averto"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan"
-msgstr ""
+msgstr "Aldoni Novan Planon"
 
 #: kcm/kupkcm.cpp:272
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
-msgstr ""
+msgstr "Sekurkopioj Ebligitaj"
 
 #: kcm/kupkcm.cpp:283
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
-msgstr ""
+msgstr "Malfermi kaj restarigi de ekzistantaj sekurkopioj"
 
 #: kcm/planstatuswidget.cpp:32
 #, kde-kuit-format
@@ -1293,13 +1298,13 @@ msgstr ""
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:118
 #, kde-format
 msgid "Save new backup"
-msgstr ""
+msgstr "Konservi novan sekurkopion"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:115
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:124
 #, kde-format
 msgid "Prune old backups"
-msgstr ""
+msgstr "Pritondi malnovajn sekurkopiojn"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:129
@@ -1311,35 +1316,35 @@ msgstr "Montri dosierojn"
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:134
 #, kde-format
 msgid "Show log file"
-msgstr ""
+msgstr "Montri protokoldosieron"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:49
 #, kde-format
 msgid "&Configure Kup..."
-msgstr ""
+msgstr "&Agordi Kup..."
 
 #: plasmoid-qt5/contents/ui/main.qml:71
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:38
 #, kde-format
 msgid "&Reload backup plans"
-msgstr ""
+msgstr "&Reŝargi rezervajn planojn"
 
 #: purger/main.cpp:23
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
-msgstr ""
+msgstr "Purigilo"
 
 #: purger/main.cpp:25
 #, kde-format
 msgid "Purger for bup archives."
-msgstr ""
+msgstr "Purigilo por bup-arkivoj."
 
 #: purger/main.cpp:27
 #, kde-format
 msgid "Copyright (C) 2013-2021 Simon Persson"
-msgstr ""
+msgstr "Kopirajto (C) 2013-2021 Simon Persson"
 
 #: settings/backupplan.cpp:24
 #, kde-kuit-format
@@ -1364,7 +1369,7 @@ msgstr "%1 (kopio)"
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
-msgstr ""
+msgstr "Laste konservita: %1"
 
 #: settings/backupplan.cpp:223
 #, kde-format
@@ -1382,4 +1387,4 @@ msgstr "Libera spaco: %1"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
-msgstr ""
+msgstr "Ĉi tiu rezerva plano neniam estis rulita."
