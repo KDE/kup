@@ -6,7 +6,7 @@
 # Francesco Marinucci <framari@posteo.org>, 2013-2014,2016-2017.
 # Simon Persson <simon.persson@mykolab.com>, 2014,2018.
 # Tichy <eristico@cryptolab.net>, 2018-2019.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
 # Paolo Zamponi <feus73@gmail.com>, 2022.
 #
 # Translators:
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-18 02:01+0000\n"
-"PO-Revision-Date: 2023-02-25 00:13+0100\n"
+"PO-Revision-Date: 2024-03-18 13:10+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -252,7 +252,7 @@ msgstr "Destinazione per la copia di sicurezza non disponibile"
 #: daemon/kupdaemon.cpp:266 daemon/kupdaemon.cpp:322
 #, kde-format
 msgid "No backup plans configured"
-msgstr "Non sono stati configurati piani di copie di sicurezza"
+msgstr "Non sono stati configurati piani di creazione di copie di sicurezza"
 
 #: daemon/kupdaemon.cpp:272
 #, kde-format
@@ -805,7 +805,7 @@ msgstr ""
 "Non hai i permessi per leggere la cartella: <filename>%1</filename><nl/>Non "
 "può essere inclusa nella selezione dei sorgenti. Se non contiene cose "
 "importanti, una soluzione possibile è di escludere la cartella dal piano di "
-"copie di sicurezza."
+"creazione di copie di sicurezza."
 
 #: kcm/backupplanwidget.cpp:396
 #, kde-kuit-format
@@ -818,36 +818,24 @@ msgid ""
 msgstr ""
 "Non hai i permessi per leggere il file: <filename>%1</filename><nl/>Non può "
 "essere incluso nella selezione dei sorgenti. Se il file non è importante per "
-"te, una soluzione possibile è di escludere dal piano di copie di sicurezza "
-"l'intera cartella dove è memorizzato."
+"te, una soluzione possibile è di escludere dal piano di creazione di copie "
+"di sicurezza l'intera cartella dove è memorizzato."
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"Il collegamento simbolico <filename>%1</filename> è attualmente incluso, ma "
-"punta ad una cartella che non lo è: <filename>%2</filename>.<nl/>Questo non "
-"è probabilmente nelle tue intenzioni. Una soluzione è di includere "
-"semplicemente nel piano di copie di sicurezza la cartella a cui punta."
+"Il collegamento simbolico <filename>%1</filename> punta a una cartella che "
+"non è  inclusa: <filename>%2</filename>.<nl/>Probabilmente non è quello che "
+"desideri. Una soluzione è includere semplicemente la cartella di "
+"destinazione nel piano di creazione di copie di sicurezza."
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -855,11 +843,10 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"Il collegamento simbolico <filename>%1</filename> è attualmente incluso, ma "
-"punta ad un file che non lo è: <filename>%2</filename>.<nl/>Questo non è "
-"probabilmente nelle tue intenzioni. Una soluzione è di includere "
-"semplicemente nel piano di copie di sicurezza la cartella che contiene il "
-"file a cui il collegamento punta."
+"Il collegamento simbolico <filename>%1</filename> punta a un file che non è "
+"incluso: <filename>%2</filename>.<nl/>Probabilmente non è quello che "
+"desideri. Una soluzione è includere semplicemente la cartella in cui è "
+"archiviato il file nel piano di creazione di copie di sicurezza."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
@@ -1404,9 +1391,7 @@ msgstr "Modulo di configurazione di Kup"
 #: kcm/kupkcm.cpp:46
 #, kde-format
 msgid "Configuration of backup plans for the Kup backup system"
-msgstr ""
-"Configurazione dei piani di creazione di copie sicurezza per il sistema di "
-"copie di Kup"
+msgstr "Configurazione dei piani di backup per il sistema di backup Kup"
 
 #: kcm/kupkcm.cpp:82
 #, kde-format
@@ -1516,7 +1501,7 @@ msgstr "&Configura Kup..."
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:38
 #, kde-format
 msgid "&Reload backup plans"
-msgstr "&Ricarica i piani di backup"
+msgstr "&Ricarica i piani di creazione di copie di sicurezza"
 
 #: purger/main.cpp:23
 #, kde-kuit-format
@@ -1540,7 +1525,7 @@ msgctxt ""
 "@label Default name for a new backup plan, %1 is the number of the plan in "
 "order"
 msgid "Backup plan %1"
-msgstr "Piano di creazione di copie %1"
+msgstr "Piano di creazione di copie di sicurezza %1"
 
 #: settings/backupplan.cpp:57
 #, kde-format
@@ -1575,7 +1560,8 @@ msgstr "Spazio libero: %1"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
-msgstr "Questo piano di creazione di copie non è mai stato eseguito."
+msgstr ""
+"Questo piano di creazione di copie di sicurezza non è mai stato eseguito."
 
 #~ msgid "Copyright (C) 2011-2015 Simon Persson"
 #~ msgstr "Copyright (C) 2011-2015 Simon Persson"
