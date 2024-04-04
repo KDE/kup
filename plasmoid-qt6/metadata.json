@@ -28,7 +28,8 @@
                 "Name[sv]": "Simon Persson",
                 "Name[tr]": "Simon Persson",
                 "Name[uk]": "Simon Persson",
-                "Name[x-test]": "xxSimon Perssonxx"
+                "Name[x-test]": "xxSimon Perssonxx",
+                "Name[zh_CN]": "Simon Persson"
             }
         ],
         "Category": "System Information",
@@ -57,6 +58,7 @@
         "Description[tr]": "Yedekleme tasarılarının durumunu görüntüler",
         "Description[uk]": "Показує стан планів резервного копіювання",
         "Description[x-test]": "xxDisplays status of backup plansxx",
+        "Description[zh_CN]": "显示备份计划的状态",
         "EnabledByDefault": true,
         "Icon": "kup",
         "Id": "org.kde.kupapplet",
