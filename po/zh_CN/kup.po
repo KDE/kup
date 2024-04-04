@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-18 02:01+0000\n"
-"PO-Revision-Date: 2024-03-17 20:45\n"
+"PO-Revision-Date: 2024-04-03 19:21\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -759,31 +759,19 @@ msgstr ""
 "该文件所在的文件夹。"
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"符号链接 <filename>%1</filename> 目前被包含在内，但是其指向的文件夹并不包含："
-"<filename>%2</filename>。这可能不是你想要的。<nl/>其中一个解决方法是将目标文"
-"件夹包含在备份计划内。"
+"符号链接 <filename>%1</filename> 指向一个不包含在备份计划中的文件夹："
+"<filename>%2</filename>。<nl/>这很可能不是您想要的状态。要解决此问题，可将该"
+"符号链接的目标文件夹包含在备份计划中。"
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -791,9 +779,9 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"符号链接<filename>%1</filename>目前被包含在内，但是其指向的文件并不包含："
-"<filename>%2</filename>。这可能不是你想要的。其中一个解决方法是将目标文件所在"
-"的文件夹包含在备份计划内。"
+"符号链接 <filename>%1</filename> 指向一个不包含在备份计划中的文件：<filename>"
+"%2</filename>。<nl/>这很可能不是您想要的状态。要解决此问题，可将该符号链接的"
+"目标文件所在的文件夹包含在备份计划中。"
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format

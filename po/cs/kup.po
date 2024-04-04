@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Pavel Borecki <pavel.borecki@gmail.com>, 2017,2019.
 # Simon Persson <simon.persson@mykolab.com>, 2018.
-# Vit Pelcak <vit@pelcak.org>, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 # Translators:
 msgid ""
@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-18 02:01+0000\n"
-"PO-Revision-Date: 2023-06-22 15:50+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-04-03 11:45+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -809,6 +809,9 @@ msgid ""
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
+"Symbolický odkaz <filename>%1</filename> odkazuje na složku která není "
+"zahrnutá: <filename>%2</filename>.<nl/>To nejspíš není to, co chcete. Jedním "
+"z řešení je prostě ji zahrnout do plánu záloh."
 
 #: kcm/backupplanwidget.cpp:421
 #, kde-kuit-format
@@ -819,6 +822,9 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
+"Symbolický odkaz <filename>%1</filename> odkazuje na soubor který není "
+"zahrnutý není: <filename>%2</filename>.<nl/>To nejspíš není to, co chcete. "
+"Jedním z řešení je prostě ho zahrnout do plánu záloh."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
