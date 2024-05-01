@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 {
     QApplication lApp(argc, argv);
     QApplication::setQuitOnLastWindowClosed(false);
+    QApplication::setQuitLockEnabled(false);
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     KLocalizedString::setApplicationDomain("kup");
