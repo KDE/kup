@@ -743,8 +743,8 @@ KPageWidgetItem *BackupPlanWidget::createSchedulePage()
 
     auto lManualLabel = new QLabel(xi18nc("@info",
                                           "Backups are only saved when manually requested. "
-                                          "This can be done by using the popup menu from "
-                                          "the backup system tray icon."));
+                                          "This can be done by using the Backup Status "
+                                          "plasma widget."));
     lManualLabel->setVisible(false);
     lManualLabel->setWordWrap(true);
     connect(lManualRadio, SIGNAL(toggled(bool)), lManualLabel, SLOT(setVisible(bool)));
