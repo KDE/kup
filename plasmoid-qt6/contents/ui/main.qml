@@ -7,6 +7,7 @@ import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasma5support as Plasma5Support
 import org.kde.kirigami as Kirigami
+import org.kde.kcmutils as KCMUtils
 
 PlasmoidItem {
 	readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
@@ -60,4 +61,31 @@ PlasmoidItem {
 	property int planCount: backupPlans.data["common"]["plan count"]
 
 	fullRepresentation: FullRepresentation {}
+
+	function reloadKup() {
+		var service = backupPlans.serviceForSource("daemon");
+		var operation = service.operationDescription("reload");
+		service.startOperationCall(operation);
+	}
+
+	function configureKup() {
+		KCMUtils.KCMLauncher.openSystemSettings("kcm_kup");
+	}
+
+	Plasmoid.contextualActions: [
+		PlasmaCore.Action {
+			text: i18nd("kup", "Reload Backup Plans")
+			icon.name: "view-refresh"
+			onTriggered: reloadKup()
+		},
+		PlasmaCore.Action {
+			text: i18nd("kup", "Configure Backup Plans...")
+			icon.name: "configure"
+			onTriggered: configureKup()
+		}
+	]
+
+	Component.onCompleted: {
+		Plasmoid.removeInternalAction("configure");
+	}
 }

@@ -9,7 +9,6 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
-import org.kde.kcmutils as KCMUtils
 
 PlasmaComponents.Page {
 	Layout.minimumWidth: Kirigami.Units.gridUnit * 12
@@ -28,25 +27,19 @@ PlasmaComponents.Page {
 
 			PlasmaComponents.ToolButton {
 					icon.name: "view-refresh"
-					onClicked: {
-						var service = backupPlans.serviceForSource("daemon");
-						var operation = service.operationDescription("reload");
-						service.startOperationCall(operation);
-					}
+					onClicked: reloadKup()
 
 					PlasmaComponents.ToolTip {
-							text: i18nd("kup", "&Reload backup plans")
+						text: i18nd("kup", "Reload Backup Plans")
 					}
 			}
 
 			PlasmaComponents.ToolButton {
 					icon.name: "configure"
-					onClicked: {
-						KCMUtils.KCMLauncher.openSystemSettings("kcm_kup");
-					}
+					onClicked: configureKup()
 
 					PlasmaComponents.ToolTip {
-							text: i18nd("kup", "&Configure Kup...")
+						text: i18nd("kup", "Configure Backup Plans")
 					}
 			}
 		}
