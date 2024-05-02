@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-18 02:01+0000\n"
+"POT-Creation-Date: 2024-05-02 01:41+0000\n"
 "PO-Revision-Date: 2024-03-19 08:35+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -271,7 +271,7 @@ msgctxt "status in tooltip"
 msgid "New backup needed"
 msgstr "Nouvelle sauvegarde requise"
 
-#: daemon/main.cpp:28
+#: daemon/main.cpp:29
 #, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
@@ -282,13 +282,13 @@ msgstr ""
 "système. Vous pouvez également l'activer en lançant <command>kcmshell5 kup</"
 "command>"
 
-#: daemon/main.cpp:35
+#: daemon/main.cpp:36
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Démon Kup"
 
-#: daemon/main.cpp:37
+#: daemon/main.cpp:38
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -300,31 +300,31 @@ msgstr ""
 "ne sauvegardant que les parties des fichiers qui ont changées depuis la "
 "dernière sauvegarde."
 
-#: daemon/main.cpp:41 kcm/kupkcm.cpp:48
+#: daemon/main.cpp:42 kcm/kupkcm.cpp:48
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "Copyright (C) 2011-2020 Simon Persson"
 
-#: daemon/main.cpp:42 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
+#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
 #: purger/main.cpp:28
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:42 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
+#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
 #: purger/main.cpp:28
 #, kde-format
 msgid "Maintainer"
 msgstr "Mainteneur"
 
-#: daemon/main.cpp:43 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
 #: purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Benoit Schwinden, Patrick Rouleau"
 
-#: daemon/main.cpp:43 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
 #: purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -1068,11 +1068,15 @@ msgid "Active Usage Time"
 msgstr "Temps d'utilisation active"
 
 #: kcm/backupplanwidget.cpp:745
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Backups are only saved when manually requested. This can be done by using "
+#| "the popup menu from the backup system tray icon."
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
-"the popup menu from the backup system tray icon."
+"the Backup Status plasma widget."
 msgstr ""
 "Les sauvegardes ne seront effectuées que de façon manuelle à partir du menu "
 "contextuel à partir de l'icône de la barre des tâches."
@@ -1460,40 +1464,57 @@ msgstr ""
 "%1"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:109
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:118
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:111
 #, kde-format
 msgid "Save new backup"
 msgstr "Créer une nouvelle sauvegarde"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:115
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:124
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:117
 #, kde-format
 msgid "Prune old backups"
 msgstr "Réduire les anciennes sauvegardes"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:129
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:122
 #, kde-format
 msgid "Show files"
 msgstr "Voir les fichiers"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:125
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:134
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:127
 #, kde-format
 msgid "Show log file"
 msgstr "Voir le journal"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:49
 #, kde-format
 msgid "&Configure Kup..."
 msgstr "&Configurer Kup…"
 
 #: plasmoid-qt5/contents/ui/main.qml:71
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:38
 #, kde-format
 msgid "&Reload backup plans"
 msgstr "&Recharger les plans de sauvegarde"
+
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
+#: plasmoid-qt6/contents/ui/main.qml:77
+#, fuzzy, kde-format
+#| msgid "&Reload backup plans"
+msgid "Reload Backup Plans"
+msgstr "&Recharger les plans de sauvegarde"
+
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
+#, fuzzy, kde-format
+#| msgid "&Configure Kup..."
+msgid "Configure Backup Plans"
+msgstr "&Configurer Kup…"
+
+#: plasmoid-qt6/contents/ui/main.qml:82
+#, fuzzy, kde-format
+#| msgid "&Configure Kup..."
+msgid "Configure Backup Plans..."
+msgstr "&Configurer Kup…"
 
 #: purger/main.cpp:23
 #, kde-kuit-format

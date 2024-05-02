@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-18 02:01+0000\n"
+"POT-Creation-Date: 2024-05-02 01:41+0000\n"
 "PO-Revision-Date: 2020-05-09 18:24+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -245,7 +245,7 @@ msgctxt "status in tooltip"
 msgid "New backup needed"
 msgstr ""
 
-#: daemon/main.cpp:28
+#: daemon/main.cpp:29
 #, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
@@ -253,13 +253,13 @@ msgid ""
 "that by running <command>kcmshell5 kup</command>"
 msgstr ""
 
-#: daemon/main.cpp:35
+#: daemon/main.cpp:36
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr ""
 
-#: daemon/main.cpp:37
+#: daemon/main.cpp:38
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -267,31 +267,31 @@ msgid ""
 "of files that has actually changed since last backup was saved."
 msgstr ""
 
-#: daemon/main.cpp:41 kcm/kupkcm.cpp:48
+#: daemon/main.cpp:42 kcm/kupkcm.cpp:48
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr ""
 
-#: daemon/main.cpp:42 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
+#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
 #: purger/main.cpp:28
 #, kde-format
 msgid "Simon Persson"
 msgstr ""
 
-#: daemon/main.cpp:42 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
+#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
 #: purger/main.cpp:28
 #, kde-format
 msgid "Maintainer"
 msgstr ""
 
-#: daemon/main.cpp:43 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
 #: purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: daemon/main.cpp:43 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
 #: purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -974,7 +974,7 @@ msgstr ""
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
-"the popup menu from the backup system tray icon."
+"the Backup Status plasma widget."
 msgstr ""
 
 #: kcm/backupplanwidget.cpp:760
@@ -1315,31 +1315,30 @@ msgstr ""
 "%1"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:109
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:118
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:111
 #, kde-format
 msgid "Save new backup"
 msgstr "Gorde babes-kopia berria"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:115
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:124
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:117
 #, kde-format
 msgid "Prune old backups"
 msgstr ""
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:129
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:122
 #, kde-format
 msgid "Show files"
 msgstr "Erakutsi fitxategiak"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:125
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:134
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:127
 #, kde-format
 msgid "Show log file"
 msgstr "Erakutsi egunkari-fitxategia"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:49
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Configure"
@@ -1347,10 +1346,33 @@ msgid "&Configure Kup..."
 msgstr "Konfiguratu"
 
 #: plasmoid-qt5/contents/ui/main.qml:71
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:38
 #, kde-format
 msgid "&Reload backup plans"
 msgstr ""
+
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
+#: plasmoid-qt6/contents/ui/main.qml:77
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label Default name for a new backup plan, %1 is the number of the plan "
+#| "in order"
+#| msgid "Backup plan %1"
+msgid "Reload Backup Plans"
+msgstr "Babes-kopia egitasmoa %1"
+
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure"
+msgid "Configure Backup Plans"
+msgstr "Konfiguratu"
+
+#: plasmoid-qt6/contents/ui/main.qml:82
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure"
+msgid "Configure Backup Plans..."
+msgstr "Konfiguratu"
 
 #: purger/main.cpp:23
 #, kde-kuit-format
