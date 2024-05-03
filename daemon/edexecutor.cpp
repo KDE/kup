@@ -129,7 +129,7 @@ bool EDExecutor::ensureAccessible(bool &pReturnLater)
         }
         return false;
     }
-    connect(mStorageAccess, SIGNAL(accessibilityChanged(bool, QString)), SLOT(updateAccessibility()));
+    connect(mStorageAccess, &Solid::StorageAccess::accessibilityChanged, this, &EDExecutor::updateAccessibility);
     mStorageAccess->setup(); // try to mount it, fail silently for now.
     pReturnLater = true;
     return false;

@@ -171,8 +171,8 @@ VersionListDelegate::VersionListDelegate(QAbstractItemView *pItemView, QObject *
 {
     mView = pItemView;
     mModel = pItemView->model();
-    connect(pItemView->selectionModel(), SIGNAL(currentChanged(QModelIndex, QModelIndex)), SLOT(updateCurrent(QModelIndex, QModelIndex)));
-    connect(pItemView->model(), SIGNAL(modelReset()), SLOT(reset()));
+    connect(pItemView->selectionModel(), &QItemSelectionModel::currentChanged, this, &VersionListDelegate::updateCurrent);
+    connect(pItemView->model(), &QAbstractItemModel::modelReset, this, &VersionListDelegate::reset);
     pItemView->viewport()->installEventFilter(this); // mouse events
     pItemView->installEventFilter(this); // keyboard events
     pItemView->viewport()->setMouseTracking(true);

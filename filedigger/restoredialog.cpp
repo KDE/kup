@@ -202,8 +202,8 @@ void RestoreDialog::startPrechecks()
         QWidget *lProgressWidget = lJobTracker->widget(lListJob);
         mUI->mSourceScanLayout->insertWidget(2, lProgressWidget);
         lProgressWidget->show();
-        connect(lListJob, SIGNAL(entries(KIO::Job *, KIO::UDSEntryList)), SLOT(collectSourceListing(KIO::Job *, KIO::UDSEntryList)));
-        connect(lListJob, SIGNAL(result(KJob *)), SLOT(sourceListingCompleted(KJob *)));
+        connect(lListJob, &KIO::ListJob::entries, this, &RestoreDialog::collectSourceListing);
+        connect(lListJob, &KJob::result, this, &RestoreDialog::sourceListingCompleted);
         lListJob->start();
         mUI->mStackedWidget->setCurrentIndex(4);
     } else {
@@ -334,7 +334,7 @@ void RestoreDialog::startRestoring()
     QWidget *lProgressWidget = mJobTracker->widget(lRestoreJob);
     mUI->mRestoreProgressLayout->insertWidget(2, lProgressWidget);
     lProgressWidget->show();
-    connect(lRestoreJob, SIGNAL(result(KJob *)), SLOT(restoringCompleted(KJob *)));
+    connect(lRestoreJob, &KJob::result, this, &RestoreDialog::restoringCompleted);
     lRestoreJob->start();
     mUI->mCloseButton->hide();
     mUI->mStackedWidget->setCurrentIndex(3);
@@ -352,7 +352,7 @@ void RestoreDialog::restoringCompleted(KJob *pJob)
             QUrl lSourceUrl = QUrl::fromLocalFile(mRestorationPath + '/' + mSourceFileName);
             QUrl lDestinationUrl = QUrl::fromLocalFile(mRestorationPath + '/' + mDestination.fileName());
             KIO::CopyJob *lFileMoveJob = KIO::move(lSourceUrl, lDestinationUrl, KIO::HideProgressInfo);
-            connect(lFileMoveJob, SIGNAL(result(KJob *)), SLOT(fileMoveCompleted(KJob *)));
+            connect(lFileMoveJob, &KJob::result, this, &RestoreDialog::fileMoveCompleted);
             qCDebug(KUPFILEDIGGER) << "Starting file move job from: " << lSourceUrl << ", to: " << lDestinationUrl;
             lFileMoveJob->start();
         } else {
@@ -436,7 +436,7 @@ void RestoreDialog::moveFolder()
     QUrl lSourceUrl = QUrl::fromLocalFile(mRestorationPath);
     QUrl lDestinationUrl = QUrl::fromLocalFile(mRestorationPath.section(QDir::separator(), 0, -2));
     KIO::CopyJob *lFolderMoveJob = KIO::moveAs(lSourceUrl, lDestinationUrl, KIO::Overwrite | KIO::HideProgressInfo);
-    connect(lFolderMoveJob, SIGNAL(result(KJob *)), SLOT(folderMoveCompleted(KJob *)));
+    connect(lFolderMoveJob, &KJob::result, this, &RestoreDialog::folderMoveCompleted);
     mJobTracker->registerJob(lFolderMoveJob);
     QWidget *lProgressWidget = mJobTracker->widget(lFolderMoveJob);
     mUI->mRestoreProgressLayout->insertWidget(1, lProgressWidget);

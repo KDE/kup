@@ -42,8 +42,8 @@ void BupRepairJob::performJob()
     mFsckProcess << QStringLiteral("fsck") << QStringLiteral("-r");
     mFsckProcess << QStringLiteral("-j") << QString::number(qMin(4, QThread::idealThreadCount()));
 
-    connect(&mFsckProcess, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(slotRepairDone(int, QProcess::ExitStatus)));
-    connect(&mFsckProcess, SIGNAL(started()), SLOT(slotRepairStarted()));
+    connect(&mFsckProcess, &KProcess::finished, this, &BupRepairJob::slotRepairDone);
+    connect(&mFsckProcess, &KProcess::started, this, &BupRepairJob::slotRepairStarted);
     mLogStream << mFsckProcess.program().join(QStringLiteral(" ")) << Qt::endl;
     mFsckProcess.start();
 }

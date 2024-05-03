@@ -47,8 +47,8 @@ void RestoreJob::start()
     mRestoreProcess << QStringLiteral("restore") << QStringLiteral("-vv");
     mRestoreProcess << QStringLiteral("-C") << mRestorationPath;
     mRestoreProcess << mSourcePath;
-    connect(&mRestoreProcess, SIGNAL(started()), SLOT(slotRestoringStarted()));
-    connect(&mRestoreProcess, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(slotRestoringDone(int, QProcess::ExitStatus)));
+    connect(&mRestoreProcess, &KProcess::started, this, &RestoreJob::slotRestoringStarted);
+    connect(&mRestoreProcess, &KProcess::finished, this, &RestoreJob::slotRestoringDone);
     mRestoreProcess.start();
     mTimerId = startTimer(100);
 }

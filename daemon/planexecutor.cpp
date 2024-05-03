@@ -263,7 +263,7 @@ void PlanExecutor::startIntegrityCheck()
         return;
     }
     KJob *lJob = new BupVerificationJob(*mPlan, mDestinationPath, mLogFilePath, mKupDaemon);
-    connect(lJob, SIGNAL(result(KJob *)), SLOT(integrityCheckFinished(KJob *)));
+    connect(lJob, &KJob::result, this, &PlanExecutor::integrityCheckFinished);
     lJob->start();
     mLastState = mState;
     mState = INTEGRITY_TESTING;
@@ -277,7 +277,7 @@ void PlanExecutor::startRepairJob()
         return;
     }
     KJob *lJob = new BupRepairJob(*mPlan, mDestinationPath, mLogFilePath, mKupDaemon);
-    connect(lJob, SIGNAL(result(KJob *)), SLOT(repairFinished(KJob *)));
+    connect(lJob, &KJob::result, this, &PlanExecutor::repairFinished);
     lJob->start();
     mLastState = mState;
     mState = REPAIRING;

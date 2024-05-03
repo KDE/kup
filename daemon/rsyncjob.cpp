@@ -82,9 +82,9 @@ void RsyncJob::performJob()
     mRsyncProcess << mBackupPlan.mPathsIncluded;
     mRsyncProcess << mDestinationPath;
 
-    connect(&mRsyncProcess, SIGNAL(started()), SLOT(slotRsyncStarted()));
+    connect(&mRsyncProcess, &KProcess::started, this, &RsyncJob::slotRsyncStarted);
     connect(&mRsyncProcess, &KProcess::readyReadStandardOutput, this, &RsyncJob::slotReadRsyncOutput);
-    connect(&mRsyncProcess, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(slotRsyncFinished(int, QProcess::ExitStatus)));
+    connect(&mRsyncProcess, &KProcess::finished, this, &RsyncJob::slotRsyncFinished);
     mLogStream << quoteArgs(mRsyncProcess.program()) << Qt::endl;
     mRsyncProcess.start();
     mInfoRateLimiter.start();

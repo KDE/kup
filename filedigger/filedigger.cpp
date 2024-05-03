@@ -138,7 +138,7 @@ void FileDigger::createRepoView(MergedRepository *pRepository)
     mMergedVfsView->setSelectionMode(QAbstractItemView::SingleSelection);
     mMergedVfsView->setModel(mMergedVfsModel);
     lSplitter->addWidget(mMergedVfsView);
-    connect(mMergedVfsView->selectionModel(), SIGNAL(currentChanged(QModelIndex, QModelIndex)), this, SLOT(updateVersionModel(QModelIndex, QModelIndex)));
+    connect(mMergedVfsView->selectionModel(), &QItemSelectionModel::currentChanged, this, &FileDigger::updateVersionModel);
 
     mVersionView = new QListView();
     mVersionView->setSelectionMode(QAbstractItemView::SingleSelection);
@@ -147,8 +147,8 @@ void FileDigger::createRepoView(MergedRepository *pRepository)
     auto lVersionDelegate = new VersionListDelegate(mVersionView, this);
     mVersionView->setItemDelegate(lVersionDelegate);
     lSplitter->addWidget(mVersionView);
-    connect(lVersionDelegate, SIGNAL(openRequested(QModelIndex)), SLOT(open(QModelIndex)));
-    connect(lVersionDelegate, SIGNAL(restoreRequested(QModelIndex)), SLOT(restore(QModelIndex)));
+    connect(lVersionDelegate, &VersionListDelegate::openRequested, this, &FileDigger::open);
+    connect(lVersionDelegate, &VersionListDelegate::restoreRequested, this, &FileDigger::restore);
     mMergedVfsView->setFocus();
 
     // expand all levels from the top until the node has more than one child

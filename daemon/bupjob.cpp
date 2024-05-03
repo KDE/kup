@@ -84,8 +84,8 @@ void BupJob::performJob()
         mFsckProcess << QStringLiteral("fsck") << QStringLiteral("--quick");
         mFsckProcess << QStringLiteral("-j") << QString::number(qMin(4, QThread::idealThreadCount()));
 
-        connect(&mFsckProcess, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(slotCheckingDone(int, QProcess::ExitStatus)));
-        connect(&mFsckProcess, SIGNAL(started()), SLOT(slotCheckingStarted()));
+        connect(&mFsckProcess, &KProcess::finished, this, &BupJob::slotCheckingDone);
+        connect(&mFsckProcess, &KProcess::started, this, &BupJob::slotCheckingStarted);
         mLogStream << quoteArgs(mFsckProcess.program()) << Qt::endl;
         mFsckProcess.start();
         mInfoRateLimiter.start();
@@ -145,8 +145,8 @@ void BupJob::startIndexing()
     }
     mIndexProcess << mBackupPlan.mPathsIncluded;
 
-    connect(&mIndexProcess, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(slotIndexingDone(int, QProcess::ExitStatus)));
-    connect(&mIndexProcess, SIGNAL(started()), SLOT(slotIndexingStarted()));
+    connect(&mIndexProcess, &KProcess::finished, this, &BupJob::slotIndexingDone);
+    connect(&mIndexProcess, &KProcess::started, this, &BupJob::slotIndexingStarted);
     mLogStream << quoteArgs(mIndexProcess.program()) << Qt::endl;
     mIndexProcess.start();
 }
@@ -179,8 +179,8 @@ void BupJob::slotIndexingDone(int pExitCode, QProcess::ExitStatus pExitStatus)
     mSaveProcess << mBackupPlan.mPathsIncluded;
     mLogStream << quoteArgs(mSaveProcess.program()) << Qt::endl;
 
-    connect(&mSaveProcess, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(slotSavingDone(int, QProcess::ExitStatus)));
-    connect(&mSaveProcess, SIGNAL(started()), SLOT(slotSavingStarted()));
+    connect(&mSaveProcess, &KProcess::finished, this, &BupJob::slotSavingDone);
+    connect(&mSaveProcess, &KProcess::started, this, &BupJob::slotSavingStarted);
     connect(&mSaveProcess, &KProcess::readyReadStandardError, this, &BupJob::slotReadBupErrors);
 
     mSaveProcess.setEnv(QStringLiteral("BUP_FORCE_TTY"), QStringLiteral("2"));
@@ -218,8 +218,8 @@ void BupJob::slotSavingDone(int pExitCode, QProcess::ExitStatus pExitStatus)
         mPar2Process << QStringLiteral("fsck") << QStringLiteral("-g");
         mPar2Process << QStringLiteral("-j") << QString::number(qMin(4, QThread::idealThreadCount()));
 
-        connect(&mPar2Process, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(slotRecoveryInfoDone(int, QProcess::ExitStatus)));
-        connect(&mPar2Process, SIGNAL(started()), SLOT(slotRecoveryInfoStarted()));
+        connect(&mPar2Process, &KProcess::finished, this, &BupJob::slotRecoveryInfoDone);
+        connect(&mPar2Process, &KProcess::started, this, &BupJob::slotRecoveryInfoStarted);
         mLogStream << quoteArgs(mPar2Process.program()) << Qt::endl;
         mPar2Process.start();
     } else {

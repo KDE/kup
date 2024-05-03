@@ -57,9 +57,9 @@ DriveSelection::DriveSelection(BackupPlan *pBackupPlan, QWidget *parent)
     foreach (const Solid::Device &lDevice, lDeviceList) {
         deviceAdded(lDevice.udi());
     }
-    connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceAdded(QString)), SLOT(deviceAdded(QString)));
-    connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceRemoved(QString)), SLOT(deviceRemoved(QString)));
-    connect(selectionModel(), SIGNAL(selectionChanged(QItemSelection, QItemSelection)), this, SLOT(updateSelection(QItemSelection, QItemSelection)));
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &DriveSelection::deviceAdded);
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved, this, &DriveSelection::deviceRemoved);
+    connect(selectionModel(), &QItemSelectionModel::selectionChanged, this, &DriveSelection::updateSelection);
 }
 
 QString DriveSelection::mountPathOfSelectedDrive() const
@@ -150,7 +150,7 @@ void DriveSelection::delayedDeviceAdded()
         lItem->setData(mSyncedBackupType && lVolume->fsType() == QStringLiteral("vfat"), DriveSelection::SymlinkLossWarning);
 
         auto *lAccess = lVolumeDevice.as<Solid::StorageAccess>();
-        connect(lAccess, SIGNAL(accessibilityChanged(bool, QString)), SLOT(accessabilityChanged(bool, QString)));
+        connect(lAccess, &Solid::StorageAccess::accessibilityChanged, this, &DriveSelection::accessabilityChanged);
         if (lAccess->isAccessible()) {
             QStorageInfo storageInfo(lAccess->filePath());
             if (storageInfo.isValid()) {

@@ -34,8 +34,8 @@ void BupVerificationJob::performJob()
     mFsckProcess << QStringLiteral("fsck") << QStringLiteral("--quick");
     mFsckProcess << QStringLiteral("-j") << QString::number(qMin(4, QThread::idealThreadCount()));
 
-    connect(&mFsckProcess, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(slotCheckingDone(int, QProcess::ExitStatus)));
-    connect(&mFsckProcess, SIGNAL(started()), SLOT(slotCheckingStarted()));
+    connect(&mFsckProcess, &KProcess::finished, this, &BupVerificationJob::slotCheckingDone);
+    connect(&mFsckProcess, &KProcess::started, this, &BupVerificationJob::slotCheckingStarted);
     mLogStream << mFsckProcess.program().join(QStringLiteral(" ")) << Qt::endl;
     mFsckProcess.start();
 }
