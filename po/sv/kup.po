@@ -6,13 +6,13 @@
 # Simon Persson <simon.persson@mykolab.com>, 2012-2014.
 # Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
 # Simon Persson <simon.persson@mykolab.com>, 2017.
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024 Stefan Asserhäll <stefan.asserhall@bredband.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 01:41+0000\n"
-"PO-Revision-Date: 2023-07-31 10:23+0200\n"
+"PO-Revision-Date: 2024-05-02 15:02+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -791,32 +791,20 @@ msgstr ""
 "så kan en möjlig lösning vara att exkludera hela katalogen där den är lagrad."
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"Den symboliska länken <filename>%1</filename> är inkluderad i planen men "
-"refererar till  katalogen <filename>%2</filename> som inte är med.<nl/"
-">Antagligen är detta inte något du önskar. En möjlig lösning är att helt "
-"enkelt inkludera katalogen."
+"Den symboliska länken <filename>%1</filename> pekar på en katalog som inte "
+"är inkluderad: <filename>%2</filename>.<nl/>Antagligen är detta inte något "
+"du önskar. En möjlig lösning är att helt enkelt inkludera målkatalogen i "
+"säkerhetskopieringsplanen."
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -824,10 +812,10 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"Den symboliska länken <filename>%1</filename> är inkluderad i planen men "
-"refererar till  filen <filename>%2</filename> som inte är med.<nl/"
-">Antagligen är detta inte något du önskar. En möjlig lösning är att "
-"inkludera katalogen där den faktiska filen är lagrad."
+"Den symboliska länken <filename>%1</filename> pekar på en fil som inte är "
+"inkluderad: <filename>%2</filename>.<nl/>Antagligen är detta inte något du "
+"önskar. En möjlig lösning är att inkludera katalogen där filen är lagrad i "
+"säkerhetskopieringsplanen."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format

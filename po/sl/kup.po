@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 01:41+0000\n"
-"PO-Revision-Date: 2024-03-18 06:45+0100\n"
+"PO-Revision-Date: 2024-05-02 08:56+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -1056,19 +1056,14 @@ msgid "Active Usage Time"
 msgstr "Aktivno uporabljen čas"
 
 #: kcm/backupplanwidget.cpp:745
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only saved when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
-"Varnostne kopije se shranjujejo samo, kadar to ročno zahtevate. To je mogoče "
-"storiti z uporabo pojavnega menija z ikone varnostne kopije na sistemskem "
-"pladnju."
+"Varnostne kopije se shranijo samo, če je to ročno zahtevano. To lahko "
+"storite z gradnikom Plasme stanja varnostne kopije."
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -1483,22 +1478,19 @@ msgstr "Ponovno naloži plane varnostnega kopiranja"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
 msgstr "Ponovno naloži plane varnostnega kopiranja"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "Nastavi Kup..."
+msgstr "Konfiguriraj načrte varnostnega kopiranja"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans..."
-msgstr "Nastavi Kup..."
+msgstr "Konfiguriraj načrte varnostnega kopiranja..."
 
 #: purger/main.cpp:23
 #, kde-kuit-format

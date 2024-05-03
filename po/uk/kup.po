@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 01:41+0000\n"
-"PO-Revision-Date: 2024-03-18 21:50+0200\n"
+"PO-Revision-Date: 2024-05-02 08:35+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language-Team: Ukrainian\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -1076,19 +1076,14 @@ msgid "Active Usage Time"
 msgstr "Час активного використання"
 
 #: kcm/backupplanwidget.cpp:745
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only saved when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
 "Резервне копіювання виконуватиметься лише за запитом вручну. Надіслати запит "
-"можна за допомогою контекстного меню піктограми системи резервного "
-"копіювання у системному лотку."
+"можна за допомогою віджета Плазми «Стан резервного копіювання»."
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -1511,22 +1506,19 @@ msgstr "П&ерезавантажити плани резервного копі
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
-msgstr "П&ерезавантажити плани резервного копіювання"
+msgstr "Перезавантажити плани резервного копіювання"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "&Налаштувати Kup…"
+msgstr "Налаштувати плани резервного копіювання"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans..."
-msgstr "&Налаштувати Kup…"
+msgstr "Налаштувати плани резервного копіювання…"
 
 #: purger/main.cpp:23
 #, kde-kuit-format

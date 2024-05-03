@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 01:41+0000\n"
-"PO-Revision-Date: 2024-03-18 12:25+0100\n"
+"PO-Revision-Date: 2024-05-02 10:36+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -1052,18 +1052,14 @@ msgid "Active Usage Time"
 msgstr "Actieve gebruikstijd"
 
 #: kcm/backupplanwidget.cpp:745
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only saved when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
-"Back-ups worden alleen opgeslagen als je er zelf om vraagt. Dit kun je doen "
-"via het menu van het systeemvakpictogram."
+"Back-ups worden alleen opgeslagen als je er zelf om vraagt. Dit kan gedaan "
+"worden met plasma-widget Reservekopiestatus."
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -1477,22 +1473,19 @@ msgstr "Back-up-plannen he&rladen"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
-msgstr "Back-up-plannen he&rladen"
+msgstr "Back-up-plannen herladen"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "Kup &configureren..."
+msgstr "Back-up-plannen configureren"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans..."
-msgstr "Kup &configureren..."
+msgstr "Back-up-plannen configureren..."
 
 #: purger/main.cpp:23
 #, kde-kuit-format
