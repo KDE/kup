@@ -19,7 +19,7 @@ Item {
 
 	PlasmaCore.DataSource {
 		id: backupPlans
-		engine: "backups"
+		engine: "plasma_engine_kup"
 		connectedSources: sources
 
 		onSourceAdded: {
