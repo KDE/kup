@@ -84,7 +84,7 @@ void RsyncJob::performJob()
 
     connect(&mRsyncProcess, &KProcess::started, this, &RsyncJob::slotRsyncStarted);
     connect(&mRsyncProcess, &KProcess::readyReadStandardOutput, this, &RsyncJob::slotReadRsyncOutput);
-    connect(&mRsyncProcess, &KProcess::finished, this, &RsyncJob::slotRsyncFinished);
+    connect(&mRsyncProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, &RsyncJob::slotRsyncFinished);
     mLogStream << quoteArgs(mRsyncProcess.program()) << Qt::endl;
     mRsyncProcess.start();
     mInfoRateLimiter.start();

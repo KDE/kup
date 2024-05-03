@@ -44,7 +44,7 @@ Purger::Purger(QString pRepoPath, QString pBranchName, QWidget *pParent)
         qCInfo(KUPPURGER) << lLogText;
         mTextEdit->append(lLogText);
     });
-    connect(mCollectProcess, &KProcess::finished, this, &Purger::purgeDone);
+    connect(mCollectProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, &Purger::purgeDone);
 
     mListProcess = new KProcess();
     mListProcess->setOutputChannelMode(KProcess::SeparateChannels);
@@ -74,7 +74,7 @@ Purger::Purger(QString pRepoPath, QString pBranchName, QWidget *pParent)
             }
         }
     });
-    connect(mListProcess, &KProcess::finished, this, &Purger::listDone);
+    connect(mListProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, &Purger::listDone);
 
     fillListWidget();
 }

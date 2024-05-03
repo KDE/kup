@@ -84,7 +84,7 @@ void BupJob::performJob()
         mFsckProcess << QStringLiteral("fsck") << QStringLiteral("--quick");
         mFsckProcess << QStringLiteral("-j") << QString::number(qMin(4, QThread::idealThreadCount()));
 
-        connect(&mFsckProcess, &KProcess::finished, this, &BupJob::slotCheckingDone);
+        connect(&mFsckProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, &BupJob::slotCheckingDone);
         connect(&mFsckProcess, &KProcess::started, this, &BupJob::slotCheckingStarted);
         mLogStream << quoteArgs(mFsckProcess.program()) << Qt::endl;
         mFsckProcess.start();
@@ -145,7 +145,7 @@ void BupJob::startIndexing()
     }
     mIndexProcess << mBackupPlan.mPathsIncluded;
 
-    connect(&mIndexProcess, &KProcess::finished, this, &BupJob::slotIndexingDone);
+    connect(&mIndexProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, &BupJob::slotIndexingDone);
     connect(&mIndexProcess, &KProcess::started, this, &BupJob::slotIndexingStarted);
     mLogStream << quoteArgs(mIndexProcess.program()) << Qt::endl;
     mIndexProcess.start();
@@ -179,7 +179,7 @@ void BupJob::slotIndexingDone(int pExitCode, QProcess::ExitStatus pExitStatus)
     mSaveProcess << mBackupPlan.mPathsIncluded;
     mLogStream << quoteArgs(mSaveProcess.program()) << Qt::endl;
 
-    connect(&mSaveProcess, &KProcess::finished, this, &BupJob::slotSavingDone);
+    connect(&mSaveProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, &BupJob::slotSavingDone);
     connect(&mSaveProcess, &KProcess::started, this, &BupJob::slotSavingStarted);
     connect(&mSaveProcess, &KProcess::readyReadStandardError, this, &BupJob::slotReadBupErrors);
 
@@ -218,7 +218,7 @@ void BupJob::slotSavingDone(int pExitCode, QProcess::ExitStatus pExitStatus)
         mPar2Process << QStringLiteral("fsck") << QStringLiteral("-g");
         mPar2Process << QStringLiteral("-j") << QString::number(qMin(4, QThread::idealThreadCount()));
 
-        connect(&mPar2Process, &KProcess::finished, this, &BupJob::slotRecoveryInfoDone);
+        connect(&mPar2Process, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, &BupJob::slotRecoveryInfoDone);
         connect(&mPar2Process, &KProcess::started, this, &BupJob::slotRecoveryInfoStarted);
         mLogStream << quoteArgs(mPar2Process.program()) << Qt::endl;
         mPar2Process.start();
