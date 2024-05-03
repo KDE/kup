@@ -45,6 +45,7 @@ To compile you need:
   - knotifications
   - kconfig
   - kjobwidgets
+  - kcmutils
   - plasma-framework
   - libgit2
 
