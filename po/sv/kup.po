@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 01:41+0000\n"
-"PO-Revision-Date: 2024-05-02 15:02+0200\n"
+"PO-Revision-Date: 2024-05-03 08:50+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -1041,18 +1041,14 @@ msgid "Active Usage Time"
 msgstr "Aktiv användningstid"
 
 #: kcm/backupplanwidget.cpp:745
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only saved when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
-"Säkerhetskopior sparas endast när du ber om det. Det kan göras från den "
-"sammanhangsberoende menyn när du högerklickar på ikonen i systembrickan."
+"Säkerhetskopieringar sparas endast när de begärs manuellt. Det kan göras "
+"genom att använda insticksprogrammet Säkerhetskopieringsstatus i Plasma."
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -1461,26 +1457,23 @@ msgstr "A&npassa Kup..."
 #: plasmoid-qt5/contents/ui/main.qml:71
 #, kde-format
 msgid "&Reload backup plans"
-msgstr "&Läs in planer för säkerhetskopiering igen"
+msgstr "&Läs in säkerhetskopieringsplaner igen"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
-msgstr "&Läs in planer för säkerhetskopiering igen"
+msgstr "Läs in säkerhetskopieringsplaner igen"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "A&npassa Kup..."
+msgstr "Anpassa säkerhetskopieringsplaner"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans..."
-msgstr "A&npassa Kup..."
+msgstr "Anpassa säkerhetskopieringsplaner..."
 
 #: purger/main.cpp:23
 #, kde-kuit-format
