@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 01:41+0000\n"
-"PO-Revision-Date: 2024-03-24 10:34+0100\n"
+"PO-Revision-Date: 2024-05-04 13:15+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
 "Language: eo\n"
@@ -28,7 +28,11 @@ msgid_plural ""
 "%1 source folders no longer exist. Please open settings and confirm what to "
 "include in backup.<nl/><filename>%2</filename>"
 msgstr[0] ""
+"Unu fonta dosierujo ne plu ekzistas. Bonvolu malfermi agordojn kaj konfirmi "
+"kion inkluzivi en sekurkopio.<nl/><filename>%2</filename>"
 msgstr[1] ""
+"%1 fontaj dosierujoj ne plu ekzistas. Bonvolu malfermi agordojn kaj konfirmi "
+"kion inkluzivi en sekurkopio.<nl/><filename>%2</filename>"
 
 #: daemon/bupjob.cpp:48 daemon/buprepairjob.cpp:26
 #: daemon/bupverificationjob.cpp:25
@@ -38,6 +42,8 @@ msgid ""
 "The <application>bup</application> program is needed but could not be found, "
 "maybe it is not installed?"
 msgstr ""
+"La programo <application>bup</application> estas bezonata sed ne troviĝis, "
+"ĉu eble ĝi ne estas instalita?"
 
 #: daemon/bupjob.cpp:55 daemon/buprepairjob.cpp:33
 #, kde-kuit-format
@@ -46,6 +52,8 @@ msgid ""
 "The <application>par2</application> program is needed but could not be "
 "found, maybe it is not installed?"
 msgstr ""
+"La programo <application>par2</application> estas bezonata sed ne troviĝis, "
+"ĉu eble ĝi ne estas instalita?"
 
 #: daemon/bupjob.cpp:76
 #, kde-kuit-format
@@ -53,6 +61,8 @@ msgctxt "@info notification"
 msgid ""
 "Backup destination could not be initialised. See log file for more details."
 msgstr ""
+"Sekurkopia celo ne povus esti pravigita. Vidu protokoldosieron por pliaj "
+"detaloj."
 
 #: daemon/bupjob.cpp:100
 #, kde-format
@@ -66,6 +76,9 @@ msgid ""
 "Failed backup integrity check. Your backups could be corrupted! See log file "
 "for more details. Do you want to try repairing the backup files?"
 msgstr ""
+"Malsukcesa kontrolo de sekurkopia integreco. Viaj sekurkopioj povus esti "
+"difektaj! Vidu protokoldosieron por pliaj detaloj. Ĉu vi volas provi ripari "
+"la sekurigitajn dosierojn?"
 
 #: daemon/bupjob.cpp:124
 #, kde-kuit-format
@@ -74,6 +87,8 @@ msgid ""
 "Failed backup integrity check. Your backups could be corrupted! See log file "
 "for more details."
 msgstr ""
+"Malsukcesa kontrolo de sekurkopia integreco. Viaj sekurkopioj povus esti "
+"difektaj! Vidu protokoldosieron por pliaj detaloj."
 
 #: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:48
 #, kde-format
@@ -111,6 +126,8 @@ msgid ""
 "Failed to generate recovery info for the backup. See log file for more "
 "details."
 msgstr ""
+"Malsukcesis generi reakivan informon por la sekurkopio. Vidu "
+"protokoldosieron por pliaj detaloj."
 
 #: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
 #, kde-format
@@ -125,6 +142,8 @@ msgid ""
 "Backup repair failed. Your backups could be corrupted! See log file for more "
 "details."
 msgstr ""
+"Riparo de sekurkopio malsukcesis. Viaj sekurkopioj povus esti difektaj! Vidu "
+"protokoldosieron por pliaj detaloj."
 
 #: daemon/buprepairjob.cpp:74
 #, kde-kuit-format
@@ -140,6 +159,8 @@ msgid ""
 "Backup repair was not necessary. Your backups are not corrupted. See log "
 "file for more details."
 msgstr ""
+"Sekurkopia riparo ne estis necesa. Viaj sekurkopioj ne estas difektaj. Vidu "
+"protokoldosieron por pliaj detaloj."
 
 #: daemon/buprepairjob.cpp:91
 #, kde-kuit-format
@@ -148,6 +169,8 @@ msgid ""
 "Backup repair failed. Your backups could still be corrupted! See log file "
 "for more details."
 msgstr ""
+"Sekurkopia riparo malsukcesis. Viaj sekurkopioj ankoraŭ povus esti difektaj! "
+"Vidu protokoldosieron por pliaj detaloj."
 
 #: daemon/bupverificationjob.cpp:68 daemon/bupverificationjob.cpp:94
 #, kde-kuit-format
@@ -156,6 +179,8 @@ msgid ""
 "Failed backup integrity check. Your backups are corrupted! See log file for "
 "more details."
 msgstr ""
+"Malsukcesa kontrolo de sekurkopia integreco. Viaj sekurkopioj estas "
+"difektaj! Vidu protokoldosieron por pliaj detaloj."
 
 #: daemon/bupverificationjob.cpp:78
 #, kde-kuit-format
@@ -170,6 +195,9 @@ msgid ""
 "Failed backup integrity check. Your backups are corrupted! See log file for "
 "more details. Do you want to try repairing the backup files?"
 msgstr ""
+"Malsukcesa kontrolo de sekurkopia integreco. Viaj sekurkopioj estas "
+"difektaj! Vidu protokoldosieron por pliaj detaloj. Ĉu vi volas provi ripari "
+"la sekurkopiajn dosierojn?"
 
 #: daemon/kupdaemon.cpp:173
 #, kde-format
@@ -239,6 +267,8 @@ msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell5 kup</command>"
 msgstr ""
+"Kup ne estas ebligita, ebligu ĝin de la modulo de sistemaj agordoj. Vi povas "
+"fari tion rulante <command>kcmshell5 kup</command>"
 
 #: daemon/main.cpp:36
 #, kde-kuit-format
@@ -253,6 +283,10 @@ msgid ""
 "This allows it to quickly perform incremental backups, only saving the parts "
 "of files that has actually changed since last backup was saved."
 msgstr ""
+"Kup estas fleksebla sekurkopiila solvo uzanta la sekurkonservejan sistemon "
+"'bup'. Ĉi tio permesas al ĝi rapide fari pliigajn sekurkopiojn, nur "
+"konservante la partojn de dosieroj, kiuj efektive ŝanĝiĝis ekde la lasta "
+"sekurkopio estis konservita."
 
 #: daemon/main.cpp:42 kcm/kupkcm.cpp:48
 #, kde-format
@@ -276,14 +310,14 @@ msgstr "Prizorganto"
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Oliver Kellogg  "
 
 #: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
 #: purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "okellogg@users.sourceforge.net"
 
 #: daemon/planexecutor.cpp:69
 #, kde-format
@@ -316,6 +350,8 @@ msgid ""
 "It has been %1 since last backup was saved.\n"
 "Save a new backup now?"
 msgstr ""
+"Ĝi estas %1 ekde la lasta sekurkopio estis konservita.\n"
+"Ĉu konservi novan sekurkopion nun?"
 
 #: daemon/planexecutor.cpp:126
 #, kde-kuit-format
@@ -324,6 +360,8 @@ msgid ""
 "You have been active for %1 since last backup was saved.\n"
 "Save a new backup now?"
 msgstr ""
+"Vi estas aktiva por %1 ekde la lasta sekurkopio estis konservita.\n"
+"Ĉu konservi novan sekurkopion nun?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
 #: daemon/planexecutor.cpp:202 daemon/planexecutor.cpp:220
@@ -407,7 +445,7 @@ msgstr "Riparo Finita"
 #: daemon/planexecutor.cpp:446
 #, kde-format
 msgid "Kup Backup System"
-msgstr "Kup Rezerva Sistemo"
+msgstr "Kup Sekurkopia Sistemo"
 
 #: daemon/rsyncjob.cpp:31
 #, kde-kuit-format
@@ -416,6 +454,8 @@ msgid ""
 "The <application>rsync</application> program is needed but could not be "
 "found, maybe it is not installed?"
 msgstr ""
+"La programo <application>rsync</application> necesas sed ne troviĝis, ĉu "
+"eble ĝi ne estas instalita?"
 
 #: filedigger/filedigger.cpp:116
 #, kde-kuit-format
@@ -424,6 +464,8 @@ msgid ""
 "The backup archive <filename>%1</filename> could not be opened. Check if the "
 "backups really are located there."
 msgstr ""
+"La sekurkopia arkivo <filename>%1</filename> ne povis esti malfermita. "
+"Kontrolu ĉu la sekurkopioj vere troviĝas tie."
 
 #: filedigger/filedigger.cpp:123
 #, kde-kuit-format
@@ -469,6 +511,8 @@ msgid ""
 "Could not read this backup archive. Perhaps some files have become "
 "corrupted. Do you want to run an integrity check to test this?"
 msgstr ""
+"Ne eblis legi ĉi tiun sekurkopian arkivon. Eble iuj dosieroj koruptiĝis. Ĉu "
+"vi volas fari integreckontrolon por testi ĉi tion?"
 
 #: filedigger/mergedvfs.cpp:162
 #, kde-kuit-format
@@ -514,6 +558,8 @@ msgid ""
 "The destination does not have enough space available. Please choose a "
 "different destination or free some space."
 msgstr ""
+"La celloko ne havas sufiĉe da spaco disponebla. Bonvolu elekti alian celon "
+"aŭ liberigi iom da spaco."
 
 #: filedigger/restoredialog.cpp:286
 #, kde-kuit-format
@@ -521,7 +567,7 @@ msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
 "was saved"
 msgid " - saved at %1"
-msgstr ""
+msgstr "- konservita ĉe %1"
 
 #: filedigger/restoredialog.cpp:287
 #, kde-kuit-format
@@ -560,6 +606,8 @@ msgid ""
 "Create new folder in:\n"
 "%1"
 msgstr ""
+"Kreu novan dosierujon en:\n"
+"%1"
 
 #: filedigger/restoredialog.cpp:401 kcm/dirselector.cpp:60
 #, kde-format
@@ -628,6 +676,7 @@ msgid ""
 "The following files would be overwritten, please confirm that you wish to "
 "continue."
 msgstr ""
+"La sekvaj dosieroj estus anstataŭitaj, bonvolu konfirmi, ke vi volas daŭrigi."
 
 #. i18n: ectx: property (text), widget (QPushButton, mOverwriteBackButton)
 #: filedigger/restoredialog.ui:272
@@ -729,6 +778,9 @@ msgid ""
 "anything important to you, one possible solution is to exclude the folder "
 "from the backup plan."
 msgstr ""
+"Vi ne havas permeson legi ĉi tiun dosierujon: <filename>%1</filename><nl/>Ĝi "
+"ne povas esti inkluzivita en la fontelekto. Se ĝi enhavas nenion gravan por "
+"vi, unu ebla solvo estas forbari la dosierujon de la sekurkopia plano."
 
 #: kcm/backupplanwidget.cpp:396
 #, kde-kuit-format
@@ -739,6 +791,10 @@ msgid ""
 "you, one possible solution is to exclude the whole folder where the file is "
 "stored from the backup plan."
 msgstr ""
+"Vi ne havas permeson legi ĉi tiun dosieron: <filename>%1</filename><nl/>Ĝi "
+"ne povas esti inkluzivita en la fontelekto. Se la dosiero ne gravas por vi, "
+"unu ebla solvo estas forbari la tutan dosierujon kie la dosiero estas "
+"konservita de la sekurkopia plano."
 
 #: kcm/backupplanwidget.cpp:412
 #, kde-kuit-format
@@ -748,6 +804,10 @@ msgid ""
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
+"La simbola ligilo <filename>%1</filename> montras al dosierujo, kiu ne estas "
+"inkluzivita: <filename>%2</filename>.<nl/>Tio verŝajne ne estas tio, kion vi "
+"volas. Unu solvo estas simple inkluzivi la celan dosierujon en la sekurkopia "
+"plano."
 
 #: kcm/backupplanwidget.cpp:421
 #, kde-kuit-format
@@ -758,6 +818,10 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
+"La simbola ligilo <filename>%1</filename> montras al dosiero, kiu ne estas "
+"inkluzivita: <filename>%2</filename>.<nl/>Tio verŝajne ne estas tio, kion vi "
+"volas. Unu solvo estas simple inkluzivi la dosierujon kie la dosiero estas "
+"konservita en la sekurkopia plano."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
@@ -791,6 +855,15 @@ msgid ""
 "files in the archive can not be accessed directly with a general file "
 "manager, a special program is needed."
 msgstr ""
+"Ĉi tiu tipo de sekurkopio estas <emphasis>arkivo</emphasis>. Ĝi enhavas "
+"ambaŭ la lastan version de viaj dosieroj kaj pli frue sekurkopiitajn "
+"versiojn. Uzado de ĉi tiu tipo de sekurkopio ebligas al vi reakiri malnovajn "
+"versiojn de viaj dosieroj, aŭ dosierojn, kiuj estis forigitaj de via "
+"komputilo poste. La bezonata konservejo estas minimumigita serĉante komunajn "
+"partojn de viaj dosieroj inter versioj kaj konservante tiujn partojn nur "
+"unufoje. Tamen, la sekurkopia arkivo daŭre kreskos laŭlonge de la tempo.<nl/"
+">Ankaŭ gravas scii, ke la dosieroj en la arkivo ne alireblas rekte per "
+"ĝenerala dosieradministranto, necesas speciala programo."
 
 #: kcm/backupplanwidget.cpp:539
 #, kde-kuit-format
@@ -799,6 +872,8 @@ msgid ""
 "Versioned Backup (not available because <application>bup</application> is "
 "not installed)"
 msgstr ""
+"Versiita Sekurkopio (ne havebla ĉar <application>bup</application> ne estas "
+"instalita)"
 
 #: kcm/backupplanwidget.cpp:544
 #, kde-kuit-format
@@ -818,6 +893,13 @@ msgid ""
 "due to a broken hard drive but it does not help you to recover from your own "
 "mistakes."
 msgstr ""
+"Ĉi tiu tipo de sekurkopio estas dosierujo sinkronigita kun viaj elektitaj "
+"fontdosierujoj. Konservi sekurkopion simple signifas igi la sekurkopian "
+"celon enhavi precizan kopion de viaj fontaj dosierujoj kiel ili estas nun "
+"kaj nenio alia. Se dosiero estis forigita en fonta dosierujo, ĝi estos "
+"forigita de la sekurkopia dosierujo.<nl/>Tiu tipo de sekurkopio povas "
+"protekti vin kontraŭ datumperdo pro rompita malmola disko sed ĝi ne helpas "
+"vin renormaliĝi de via propra eraroj."
 
 #: kcm/backupplanwidget.cpp:563
 #, kde-kuit-format
@@ -826,6 +908,8 @@ msgid ""
 "Synchronized Backup (not available because <application>rsync</application> "
 "is not installed)"
 msgstr ""
+"Sinkronigita Sekurkopio (ne havebla ĉar <application>rsync</application> ne "
+"estas instalita)"
 
 #: kcm/backupplanwidget.cpp:568
 #, kde-kuit-format
@@ -861,7 +945,7 @@ msgstr "Elekti kiujn dosierujojn inkludi en sekurkopio"
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Filesystem Path"
-msgstr "Dosiersistemo Vojo"
+msgstr "Dosiersistema Vojo"
 
 #: kcm/backupplanwidget.cpp:623
 #, kde-kuit-format
@@ -878,6 +962,10 @@ msgid ""
 "always mount it at the same path in the filesystem. The path specified here "
 "does not need to exist at all times, its existence will be monitored."
 msgstr ""
+"Vi povas uzi ĉi tiun elekteblon por sekurkopii al malĉefa interna malmola "
+"disko, ekstera eSATA-disko aŭ interreta konservejo. La postulo estas nur, ke "
+"vi ĉiam muntu ĝin ĉe la sama vojo en la dosiersistemo. La vojo specifita ĉi "
+"tie ne bezonas ekzisti ĉiam, ĝia ekzisto estos monitorita."
 
 #: kcm/backupplanwidget.cpp:636
 #, kde-kuit-format
@@ -905,6 +993,9 @@ msgid ""
 "Use this option if you want to backup your files on an external storage that "
 "can be plugged in to this computer, such as a USB hard drive or memory stick."
 msgstr ""
+"Uzu ĉi tiun elekteblon se vi volas sekurkopii viajn dosierojn sur ekstera "
+"konservejo, kiu povas esti konektita al ĉi tiu komputilo, kiel USB-malmola "
+"disko aŭ memorbastono."
 
 #: kcm/backupplanwidget.cpp:682 kcm/backupplanwidget.cpp:685
 #, kde-kuit-format
@@ -961,6 +1052,8 @@ msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
+"Sekurkopioj estas konservitaj nur kiam permane petataj. Ĉi tio povas esti "
+"farita per uzado de la Plasma fenestraĵo de Sekurkopia Statuso."
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -969,6 +1062,8 @@ msgid ""
 "New backup will be triggered when backup destination becomes available and "
 "more than the configured interval has passed since the last backup was saved."
 msgstr ""
+"Nova sekurkopio estos ekigita kiam sekurkopio iĝas disponebla kaj pli ol la "
+"agordita intervalo pasis ekde la lasta sekurkopio estis konservita."
 
 #: kcm/backupplanwidget.cpp:777
 #, kde-kuit-format
@@ -1002,6 +1097,9 @@ msgid ""
 "you have been using your computer actively for more than the configured time "
 "limit since the last backup was saved."
 msgstr ""
+"Nova sekurkopio estos ekigita kiam sekurkopia celo fariĝas disponebla kaj vi "
+"uzas vian komputilon aktive dum pli ol la agordita tempolimo ekde la lasta "
+"sekurkopio estis konservita."
 
 #: kcm/backupplanwidget.cpp:810
 #, kde-kuit-format
@@ -1036,6 +1134,10 @@ msgid ""
 "dot. They are typically located in your home folder and are used to store "
 "settings and temporary files for your applications."
 msgstr ""
+"Ĉi tio ebligas eksplicite inkluzivi aŭ forbari kaŝitajn dosierujojn en la "
+"sekurkopia font-elekto. Kaŝitaj dosierujoj havas nomon kiu komenciĝas per "
+"punkto. Ili kutime troviĝas en via hejma dosierujo kaj estas uzataj por "
+"konservi agordojn kaj provizorajn dosierojn por viaj aplikoj."
 
 #: kcm/backupplanwidget.cpp:869
 #, kde-kuit-format
@@ -1045,6 +1147,9 @@ msgid ""
 "backups will take slightly longer time. In return it will be possible to "
 "recover from a partially corrupted backup."
 msgstr ""
+"Ĉi tio igos viajn sekurkopiojn uzi ĉirkaŭ 10% pli da konserveja spaco kaj "
+"konservi sekurkopiojn daŭros iomete pli longan tempon. Rekompence eblos "
+"resaniĝi de parte difekta sekurkopio."
 
 #: kcm/backupplanwidget.cpp:875
 #, kde-kuit-format
@@ -1059,6 +1164,8 @@ msgid ""
 "Generate recovery information (not available because <application>par2</"
 "application> is not installed)"
 msgstr ""
+"Generi informojn pri reakiro (ne havebla ĉar <application>par2</application> "
+"ne estas instalita)"
 
 #: kcm/backupplanwidget.cpp:894
 #, kde-kuit-format
@@ -1075,6 +1182,10 @@ msgid ""
 "corruption problems sooner than at the time you need to use a backup, at "
 "that time it could be too late."
 msgstr ""
+"Kontrolas la tutan sekurkopian arkivon por korupto ĉiufoje kiam vi konservas "
+"novajn datumojn. Konservado de sekurkopioj daŭros iom pli longan tempon, sed "
+"ĝi permesas vin kapti koruptajn problemojn pli frue ol tiutempe, kiam vi "
+"bezonas uzi sekurkopion, tiam ĝi povus esti tro malfrue."
 
 #: kcm/backupplanwidget.cpp:914
 #, kde-kuit-format
@@ -1090,6 +1201,10 @@ msgid ""
 "and folders with names that match any of the patterns will be excluded from "
 "the backup. The pattern format is documented <link url='%1'>here</link>."
 msgstr ""
+"Ŝablonoj devas esti listigitaj en tekstdosiero kun unu ŝablono po linio. "
+"Dosieroj kaj dosierujoj kun nomoj kongruaj kun iu ajn el la ŝablonoj estos "
+"forbaritaj de la sekurkopio. La ŝablono formato estas dokumentita <link "
+"url='%1'>ĉi tie</link>."
 
 #: kcm/backupplanwidget.cpp:950
 #, kde-kuit-format
@@ -1126,6 +1241,8 @@ msgctxt "@label Only shown if no drives are detected"
 msgid ""
 "Plug in the external storage you wish to use, then select it in this list."
 msgstr ""
+"Konektu la eksteran konservadon, kiun vi volas uzi, tiam elektu ĝin en ĉi "
+"tiu listo."
 
 #: kcm/driveselectiondelegate.cpp:62
 #, kde-kuit-format
@@ -1146,7 +1263,7 @@ msgctxt ""
 "device. %1 is partition number, %2 is device description, %3 is either empty "
 "or the \" (disconnected)\" text"
 msgid "Partition %1 on %2%3"
-msgstr ""
+msgstr "Dispartigi %1 sur %2%3"
 
 #: kcm/driveselectiondelegate.cpp:90
 #, kde-kuit-format
@@ -1162,7 +1279,7 @@ msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
 "either empty or the \" (disconnected)\" text"
 msgid "%1 on %2%3"
-msgstr ""
+msgstr "%1 sur %2%3"
 
 #: kcm/driveselectiondelegate.cpp:106
 #, kde-kuit-format
@@ -1178,6 +1295,9 @@ msgid ""
 "system. File permissions only matters if there is more than one user of this "
 "computer or if you are backing up executable program files."
 msgstr ""
+"Averto: Simbolaj ligiloj kaj dosierpermesoj ne povas esti konservitaj al ĉi "
+"tiu dosiersistemo. Dosieraj permesoj nur gravas se estas pli ol unu uzanto "
+"de ĉi tiu komputilo aŭ se vi sekurkopias ruleblajn programdosierojn."
 
 #: kcm/driveselectiondelegate.cpp:167
 #, kde-kuit-format
@@ -1187,6 +1307,9 @@ msgid ""
 "permissions only matters if there is more than one user of this computer or "
 "if you are backing up executable program files."
 msgstr ""
+"Averto: Dosieraj permesoj ne povas esti konservitaj al ĉi tiu dosiersistemo. "
+"Dosieraj permesoj nur gravas se estas pli ol unu uzanto de ĉi tiu komputilo "
+"aŭ se vi sekurkopias ruleblajn programdosierojn."
 
 #: kcm/folderselectionmodel.cpp:93
 #, kde-kuit-format
@@ -1195,6 +1318,8 @@ msgid ""
 "<filename>%1</filename><nl/>will be included in the backup, except for "
 "unchecked subfolders"
 msgstr ""
+"<filename>%1</filename><nl/>estos inkluzivita en la sekurkopio, krom "
+"nemarkitaj subdosierujoj"
 
 #: kcm/folderselectionmodel.cpp:98
 #, kde-kuit-format
@@ -1209,6 +1334,8 @@ msgid ""
 "<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
 "the backup but contains folders that will"
 msgstr ""
+"<filename>%1</filename><nl/> <emphasis>ne</emphasis> estos inkluzivita en la "
+"sekurkopio sed enhavas dosierujojn kiuj estos"
 
 #: kcm/folderselectionmodel.cpp:108
 #, kde-kuit-format
@@ -1217,6 +1344,8 @@ msgid ""
 "<filename>%1</filename><nl/> will <emphasis>not</emphasis> be included in "
 "the backup"
 msgstr ""
+"<filename>%1</filename><nl/> <emphasis>ne</emphasis> estos inkluzivita en la "
+"sekurkopio"
 
 #: kcm/kupkcm.cpp:44
 #, kde-format
@@ -1235,6 +1364,9 @@ msgid ""
 "plan you need to install either of</p><ul><li>bup, for versioned backups</"
 "li><li>rsync, for synchronized backups</li></ul>"
 msgstr ""
+"<h2>Sekurkopioj mankas</h2><p>Antaŭ ol vi povas aktivigi ajnan sekurkopian "
+"planon, vi bezonas instali iun ajn el</p><ul><li>bup, por versionitaj "
+"sekurkopioj</li><li>rsync , por sinkronigitaj sekurkopioj</li></ul>"
 
 #: kcm/kupkcm.cpp:207
 #, kde-kuit-format
@@ -1242,6 +1374,7 @@ msgctxt "@info %1 is the name of the backup plan"
 msgid ""
 "%1 does not have a destination!<nl/>No backups will be saved by this plan."
 msgstr ""
+"%1 ne havas celon!<nl/>Neniaj sekurkopioj estos konservitaj per ĉi tiu plano."
 
 #: kcm/kupkcm.cpp:210
 #, kde-kuit-format
@@ -1293,6 +1426,8 @@ msgid ""
 "No bup repository found.\n"
 "%1"
 msgstr ""
+"Neniu bup-deponejo trovita.\n"
+"%1"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:109
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:111
@@ -1326,26 +1461,23 @@ msgstr "&Agordi Kup..."
 #: plasmoid-qt5/contents/ui/main.qml:71
 #, kde-format
 msgid "&Reload backup plans"
-msgstr "&Reŝargi rezervajn planojn"
+msgstr "&Reŝargi sekurkopiajn planojn"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
-msgstr "&Reŝargi rezervajn planojn"
+msgstr "Reŝargi Sekurkopiajn Planojn"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "&Agordi Kup..."
+msgstr "Agordi Sekurkopiajn Planojn"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans..."
-msgstr "&Agordi Kup..."
+msgstr "Agordi Sekurkopiajn Planojn..."
 
 #: purger/main.cpp:23
 #, kde-kuit-format
@@ -1369,7 +1501,7 @@ msgctxt ""
 "@label Default name for a new backup plan, %1 is the number of the plan in "
 "order"
 msgid "Backup plan %1"
-msgstr ""
+msgstr "Sekurkopia plano %1"
 
 #: settings/backupplan.cpp:57
 #, kde-format
