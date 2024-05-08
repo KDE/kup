@@ -992,17 +992,12 @@ msgid "Active Usage Time"
 msgstr "活跃使用时间"
 
 #: kcm/backupplanwidget.cpp:745
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only saved when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
-"备份将只会在你手动要求时进行。这可以通过备份系统托盘图标的弹出菜单完成。"
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -1395,22 +1390,19 @@ msgstr "重新加载备份计划(&R)"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
-msgstr "重新加载备份计划(&R)"
+msgstr ""
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "配置 Kup(&C)..."
+msgstr ""
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans..."
-msgstr "配置 Kup(&C)..."
+msgstr ""
 
 #: purger/main.cpp:23
 #, kde-kuit-format
