@@ -997,7 +997,7 @@ msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
-msgstr ""
+msgstr "备份将只会在你手动要求时进行。这可以通过 Plasma 的备份状态挂件完成。"
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -1392,17 +1392,17 @@ msgstr "重新加载备份计划(&R)"
 #: plasmoid-qt6/contents/ui/main.qml:77
 #, kde-format
 msgid "Reload Backup Plans"
-msgstr ""
+msgstr "重新加载备份计划"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
 #, kde-format
 msgid "Configure Backup Plans"
-msgstr ""
+msgstr "配置备份计划"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Backup Plans..."
-msgstr ""
+msgstr "配置备份计划..."
 
 #: purger/main.cpp:23
 #, kde-kuit-format

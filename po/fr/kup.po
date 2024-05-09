@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 01:41+0000\n"
-"PO-Revision-Date: 2024-04-26 11:22+0200\n"
+"PO-Revision-Date: 2024-05-03 12:09+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -1068,18 +1068,15 @@ msgid "Active Usage Time"
 msgstr "Temps d'utilisation active"
 
 #: kcm/backupplanwidget.cpp:745
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only saved when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
-"Les sauvegardes ne seront effectuées que de façon manuelle à partir du menu "
-"contextuel à partir de l'icône de la barre des tâches."
+"Les sauvegardes ne sont effectuées que sur demande manuelle. Ceci peut être "
+"réaliser par l'utilisation du composant graphique de Plasma « État de "
+"sauvegarde »."
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -1499,22 +1496,19 @@ msgstr "&Recharger les plans de sauvegarde"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
-msgstr "&Recharger les plans de sauvegarde"
+msgstr "Recharger les plans de sauvegarde"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "&Configurer Kup…"
+msgstr "Configurer les plans de sauvegarde"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans..."
-msgstr "&Configurer Kup…"
+msgstr "Configurer les plans de sauvegarde..."
 
 #: purger/main.cpp:23
 #, kde-kuit-format
