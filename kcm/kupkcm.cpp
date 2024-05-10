@@ -173,7 +173,8 @@ void KupKcm::save()
         auto *lPlan = mPlans.at(i);
         auto *lManager = mConfigManagers.at(i);
         if (lManager == nullptr) {
-            lPlan->removePlanFromConfig();
+            lPlan->setDefaults();
+            lPlan->save();
             delete mPlans.takeAt(i);
             mConfigManagers.removeAt(i);
             mStatusWidgets.removeAt(i);
@@ -183,15 +184,17 @@ void KupKcm::save()
             continue;
         }
         if (lPlansRemoved != 0) {
-            lPlan->removePlanFromConfig();
-            lPlan->setPlanNumber(i + 1);
             // config manager does not detect a changed group name of the config items.
             // To work around, read default settings - config manager will then notice
             // changed values and save current widget status into the config using the
             // new group name. If all settings for the plan already was default then
             // nothing was saved anyway, either under old or new group name.
+            // This also removes all entries from the config file under the old plan
+            // number group.
             lPlan->setDefaults();
             lPlan->save();
+
+            lPlan->setPlanNumber(i + 1);
         }
         mPlanWidgets.at(i)->saveExtraData();
         lManager->updateSettings();
