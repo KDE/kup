@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-02 01:41+0000\n"
+"POT-Creation-Date: 2024-05-12 01:57+0000\n"
 "PO-Revision-Date: 2019-11-21 14:07-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -1226,32 +1226,32 @@ msgid ""
 "li><li>rsync, for synchronized backups</li></ul>"
 msgstr ""
 
-#: kcm/kupkcm.cpp:207
+#: kcm/kupkcm.cpp:210
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
 "%1 does not have a destination!<nl/>No backups will be saved by this plan."
 msgstr ""
 
-#: kcm/kupkcm.cpp:210
+#: kcm/kupkcm.cpp:213
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr ""
 
-#: kcm/kupkcm.cpp:259
+#: kcm/kupkcm.cpp:262
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan"
 msgstr ""
 
-#: kcm/kupkcm.cpp:272
+#: kcm/kupkcm.cpp:275
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
 msgstr ""
 
-#: kcm/kupkcm.cpp:283
+#: kcm/kupkcm.cpp:286
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
@@ -1363,31 +1363,31 @@ msgstr ""
 msgid "Backups"
 msgstr ""
 
-#: settings/backupplan.cpp:94
+#: settings/backupplan.cpp:88
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr ""
 
-#: settings/backupplan.cpp:219
+#: settings/backupplan.cpp:213
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr ""
 
-#: settings/backupplan.cpp:223
+#: settings/backupplan.cpp:217
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr ""
 
-#: settings/backupplan.cpp:227
+#: settings/backupplan.cpp:221
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr ""
 
-#: settings/backupplan.cpp:230
+#: settings/backupplan.cpp:224
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."

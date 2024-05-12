@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-02 01:41+0000\n"
+"POT-Creation-Date: 2024-05-12 01:57+0000\n"
 "PO-Revision-Date: 2024-05-02 13:15+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -1360,7 +1360,7 @@ msgstr ""
 "etkinleştirmeden önce</p><ul><li>sürümlendirilmiş yedeklemeler için bup,</"
 "li><li>eşzamanlı yedeklemeler için rsync</li></ul> kurmanız gerekiyor"
 
-#: kcm/kupkcm.cpp:207
+#: kcm/kupkcm.cpp:210
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1369,25 +1369,25 @@ msgstr ""
 "%1 için bir hedef konum yok!<nl/>Bu tasarı tarafından herhangi bir yedek "
 "kaydedilmeyecek."
 
-#: kcm/kupkcm.cpp:210
+#: kcm/kupkcm.cpp:213
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Uyarı"
 
-#: kcm/kupkcm.cpp:259
+#: kcm/kupkcm.cpp:262
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan"
 msgstr "Yeni Tasarı Ekle"
 
-#: kcm/kupkcm.cpp:272
+#: kcm/kupkcm.cpp:275
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
 msgstr "Yedek alımını etkinleştir"
 
-#: kcm/kupkcm.cpp:283
+#: kcm/kupkcm.cpp:286
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
@@ -1501,31 +1501,31 @@ msgstr "Yedek tasarısı %1"
 msgid "Backups"
 msgstr "Yedeklemeler"
 
-#: settings/backupplan.cpp:94
+#: settings/backupplan.cpp:88
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (kopyala)"
 
-#: settings/backupplan.cpp:219
+#: settings/backupplan.cpp:213
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Son kaydetme: %1"
 
-#: settings/backupplan.cpp:223
+#: settings/backupplan.cpp:217
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Boyut: %1"
 
-#: settings/backupplan.cpp:227
+#: settings/backupplan.cpp:221
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Boş alan: %1"
 
-#: settings/backupplan.cpp:230
+#: settings/backupplan.cpp:224
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."

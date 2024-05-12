@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-02 01:41+0000\n"
+"POT-Creation-Date: 2024-05-12 01:57+0000\n"
 "PO-Revision-Date: 2024-05-06 10:20+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -1384,7 +1384,7 @@ msgstr ""
 "за архивиранетрябва да инсталирате или  </p> <ul> <li> bup, за резервни "
 "копия с версия </li> или<li> rsync, за синхронизирани архиви </li> </ul>"
 
-#: kcm/kupkcm.cpp:207
+#: kcm/kupkcm.cpp:210
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1392,25 +1392,25 @@ msgid ""
 msgstr ""
 "%1 няма дестинация! <nl/> Няма да се запазват резервни копия от този план."
 
-#: kcm/kupkcm.cpp:210
+#: kcm/kupkcm.cpp:213
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Предупреждение"
 
-#: kcm/kupkcm.cpp:259
+#: kcm/kupkcm.cpp:262
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan"
 msgstr "Добавяне на нов план"
 
-#: kcm/kupkcm.cpp:272
+#: kcm/kupkcm.cpp:275
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups Enabled"
 msgstr "Създаване на резервни копия"
 
-#: kcm/kupkcm.cpp:283
+#: kcm/kupkcm.cpp:286
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
@@ -1524,31 +1524,31 @@ msgstr "План за архивиране %1"
 msgid "Backups"
 msgstr "Резервни копия"
 
-#: settings/backupplan.cpp:94
+#: settings/backupplan.cpp:88
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (копиране)"
 
-#: settings/backupplan.cpp:219
+#: settings/backupplan.cpp:213
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Последно запазен: %1"
 
-#: settings/backupplan.cpp:223
+#: settings/backupplan.cpp:217
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Големина: %1"
 
-#: settings/backupplan.cpp:227
+#: settings/backupplan.cpp:221
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Свободно място: %1"
 
-#: settings/backupplan.cpp:230
+#: settings/backupplan.cpp:224
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
