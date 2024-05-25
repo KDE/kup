@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kup package.
 #
-# Steve Allewell <steve.allewell@gmail.com>, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 01:57+0000\n"
-"PO-Revision-Date: 2023-02-27 19:41+0000\n"
+"PO-Revision-Date: 2024-05-24 19:14+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -790,32 +790,19 @@ msgstr ""
 "stored from the backup plan."
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"The symbolic link <filename>%1</filename> is currently included but it "
-"points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-"probably not what you want. One solution is to simply include the target "
-"folder in the backup plan."
+"The symbolic link <filename>%1</filename> points to a folder which is not "
+"included: <filename>%2</filename>.<nl/>That is probably not what you want. "
+"One solution is to simply include the target folder in the backup plan."
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -823,10 +810,10 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"The symbolic link <filename>%1</filename> is currently included but it "
-"points to a file which is not: <filename>%2</filename>.<nl/>That is probably "
-"not what you want. One solution is to simply include the folder where the "
-"file is stored in the backup plan."
+"The symbolic link <filename>%1</filename> points to a file which is not "
+"included: <filename>%2</filename>.<nl/>That is probably not what you want. "
+"One solution is to simply include the folder where the file is stored in the "
+"backup plan."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
@@ -1049,18 +1036,14 @@ msgid "Active Usage Time"
 msgstr "Active Usage Time"
 
 #: kcm/backupplanwidget.cpp:745
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only saved when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
 "Backups are only saved when manually requested. This can be done by using "
-"the popup menu from the backup system tray icon."
+"the Backup Status plasma widget."
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -1470,22 +1453,19 @@ msgstr "&Reload backup plans"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
-msgstr "&Reload backup plans"
+msgstr "Reload Backup Plans"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "&Configure Kup..."
+msgstr "Configure Backup Plans"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans..."
-msgstr "&Configure Kup..."
+msgstr "Configure Backup Plans..."
 
 #: purger/main.cpp:23
 #, kde-kuit-format
