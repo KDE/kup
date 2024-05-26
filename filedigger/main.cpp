@@ -26,7 +26,7 @@ int main(int pArgCount, char **pArgArray)
 
     KAboutData lAbout(QStringLiteral("kupfiledigger"),
                       xi18nc("@title", "File Digger"),
-                      QStringLiteral("0.9.1"),
+                      QStringLiteral("0.10.0"),
                       i18n("Browser for bup archives."),
                       KAboutLicense::GPL,
                       i18n("Copyright (C) 2013-2020 Simon Persson"));

@@ -42,7 +42,7 @@ KupKcm::KupKcm(QObject *pParent, const KPluginMetaData &md, const QVariantList &
 #if QT_VERSION_MAJOR == 5
     KAboutData lAbout(QStringLiteral("kcm_kup"),
                       i18n("Kup Configuration Module"),
-                      QStringLiteral("0.9.1"),
+                      QStringLiteral("0.10.0"),
                       i18n("Configuration of backup plans for the Kup backup system"),
                       KAboutLicense::GPL,
                       i18n("Copyright (C) 2011-2020 Simon Persson"));

@@ -21,7 +21,7 @@ int main(int pArgCount, char **pArgArray)
 
     KAboutData lAbout(QStringLiteral("kuppurger"),
                       xi18nc("@title", "Purger"),
-                      QStringLiteral("0.9.1"),
+                      QStringLiteral("0.10.0"),
                       i18n("Purger for bup archives."),
                       KAboutLicense::GPL,
                       i18n("Copyright (C) 2013-2021 Simon Persson"));

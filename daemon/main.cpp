@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 
     KAboutData lAbout(QStringLiteral("kupdaemon"),
                       xi18nc("@title", "Kup Daemon"),
-                      QStringLiteral("0.9.1"),
+                      QStringLiteral("0.10.0"),
                       i18n("Kup is a flexible backup solution using the backup storage system 'bup'. "
                            "This allows it to quickly perform incremental backups, only saving the "
                            "parts of files that has actually changed since last backup was saved."),
