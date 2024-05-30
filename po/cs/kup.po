@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 01:57+0000\n"
-"PO-Revision-Date: 2024-04-03 11:45+0200\n"
+"PO-Revision-Date: 2024-05-29 11:26+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -1052,6 +1052,8 @@ msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
+"Zálohy jsou uloženy pouze na ruční požadavek. Ten je možné vyvolat pomocí "
+"widgetu Stav Zálohy."
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -1457,17 +1459,17 @@ msgstr "O&bnovit plány zálohování"
 #: plasmoid-qt6/contents/ui/main.qml:77
 #, kde-format
 msgid "Reload Backup Plans"
-msgstr ""
+msgstr "Obnovit plány zálohování"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
 #, kde-format
 msgid "Configure Backup Plans"
-msgstr ""
+msgstr "Nastavit plány na zálohování"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Backup Plans..."
-msgstr ""
+msgstr "Nastavit plány na zálohování..."
 
 #: purger/main.cpp:23
 #, kde-kuit-format
