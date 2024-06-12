@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kup package.
+# SPDX-FileCopyrightText: 2021, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 01:57+0000\n"
-"PO-Revision-Date: 2023-02-27 19:21+0400\n"
+"PO-Revision-Date: 2024-06-08 11:45+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -796,31 +797,19 @@ msgstr ""
 "هو استبعاد المجلد بأكمله حيث يتم تخزين الملف من خطة النسخ الاحتياطي."
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"رابط النظام <filename>%1</filename> مضمن حاليًا ولكنه يشير إلى مجلد ليس: "
-"<filename>%2 </filename>. <nl/> ربما لم يكن هذا ما تريده. أحد الحلول هو "
-"ببساطة تضمين المجلد الهدف في خطة النسخ الاحتياطي."
+"يشير الرابط الرمزي <filename>%1</filename> إلى مجلد لم يتم تضمينه: <filename>"
+"%2</filename>.<nl/>ربما هذا ليس ما تريد. أحد الحلول هو ببساطة تضمين المجلد "
+"الهدف في خطة النسخ الاحتياطي."
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -828,9 +817,9 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"رابط النظام <filename>%1 </filename> مضمن حاليًا ولكنه يشير إلى ملف ليس: "
-"<filename>%2 </filename>. <nl/> ربما لم يكن هذا ما تريده. يتمثل أحد الحلول "
-"في تضمين المجلد حيث يتم تخزين الملف في خطة النسخ الاحتياطي."
+"يشير الرابط الرمزي <filename>%1</filename> إلى ملف لم يتم تضمينه: <filename>"
+"%2</filename>.<nl/>ربما هذا ليس ما تريد. أحد الحلول هو ببساطة تضمين المجلد "
+"الذي تم تخزين الملف فيه في خطة النسخ الاحتياطي."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
@@ -1052,18 +1041,14 @@ msgid "Active Usage Time"
 msgstr "وقت الاستعمال النشط"
 
 #: kcm/backupplanwidget.cpp:745
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only saved when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
-"تحفظ النسخ الاحتياطية فقط عند طلبها يدويًا. يمكن القيام بذلك باستخدام القائمة "
-"المنبثقة من أيقونة صينية النظام للنسخ الاحتياطي."
+"تحفظ النسخ الاحتياطية فقط عند طلبها يدويًا. يمكن القيام بذلك باستخدام أداة "
+"بلازما حالة النسخ الاحتياطي."
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -1469,22 +1454,19 @@ msgstr "أعد ت&حميل خطط النسخ الاحتياطية"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
 msgstr "أعد ت&حميل خطط النسخ الاحتياطية"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "اضبط &كيوب..."
+msgstr "اضبط خطط النسخ الاحتياطية"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans..."
-msgstr "اضبط &كيوب..."
+msgstr "اضبط خطط النسخ الاحتياطية..."
 
 #: purger/main.cpp:23
 #, kde-kuit-format
