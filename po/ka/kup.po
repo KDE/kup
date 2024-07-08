@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 01:57+0000\n"
-"PO-Revision-Date: 2023-11-18 21:55+0100\n"
+"PO-Revision-Date: 2024-07-07 08:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -791,32 +791,19 @@ msgstr ""
 "შიეცავს."
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"სიმბმული <filename>%1</filename> ამჟამად ჩასმულია, მაგრამ ის მიუთითებს "
-"საქაღალდეზე, რომელიც არაა <filename>%2</filename>.<nl/>ეს ალბათ ის არაა, რაც "
-"თქვენ გნებავთ. ერთ-ერთი გადაწყვეტილებაა მარქაფის გეგმაში სამიზნე საქაღალდე "
-"ჩასვათ."
+"სიმბმული <filename>%1</filename> ამჟამად მიუთითებს საქაღალდეზე, რომელიც "
+"ჩასმული არაა: <filename>%2</filename>.<nl/>ეს ალბათ ის არაა, რაც თქვენ "
+"გნებავთ. ერთ-ერთი გადაწყვეტილებაა მარქაფის გეგმაში სამიზნე საქაღალდე ჩასვათ."
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -824,10 +811,10 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"სიმბოლური ბმული <filename>%1</filename> ამჟამად ჩასმულია, მაგრამ მიუთითებს "
-"ფაილზე, რომელიც არაა: <filename>%2</filename>.<nl/>ეს ალბათ ის არაა, რაც "
-"თქვენ გნებავთ. ერთ-ერთი გადაწყვეტილებაა, მარქაფის გეგმაში უბრალოდ ჩასვათ "
-"საქაღალდე, რომელშიც სასურველი ფაილია მოთავსებული."
+"სიმბოლური ბმული <filename>%1</filename> ამჟამად ფაილზე, რომელიც ჩასმული "
+"არაა: <filename>%2</filename>.<nl/>ეს ალბათ ის არაა, რაც თქვენ გნებავთ. ერთ-"
+"ერთი გადაწყვეტილებაა, მარქაფის გეგმაში უბრალოდ ჩასვათ საქაღალდე, რომელშიც "
+"სასურველი ფაილია მოთავსებული."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
@@ -1050,18 +1037,14 @@ msgid "Active Usage Time"
 msgstr "აქტიური გამოყენების დრო"
 
 #: kcm/backupplanwidget.cpp:745
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only saved when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
-"მარქაფები მხოლოდ მაშინ შეინახება, როცა ხელით მოითხოვს. ეს სისტემურ საათთან "
-"მდებარე მარქაფის ხატულის მხტუნარა მენიუთი შეგიძლიათ."
+"მარქაფები, მხოლოდ, მაშინ შეინახება, როცა ეს ხელითაა მოთხოვნილი. ეს მარქაფის "
+"სტატუსის Plasma-ის ვიჯეტით შეგიძლიათ, გააკეთოთ."
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -1476,22 +1459,19 @@ msgstr "&მარქაფის გეგმების გადატვი
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
-msgstr "&მარქაფის გეგმების გადატვირთვა"
+msgstr "მარქაფის გეგმების თავიდან ჩატვირთვა"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "&Kup-ის ჩვენება..."
+msgstr "მარქაფის გეგმების მორგება"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans..."
-msgstr "&Kup-ის ჩვენება..."
+msgstr "მარქაფის გეგმების მორგება..."
 
 #: purger/main.cpp:23
 #, kde-kuit-format
