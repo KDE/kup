@@ -1,18 +1,18 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
-# Translators:
 # Marcin Kralka <marcink96@gmail.com>, 2014.
 # Przemyslaw Ka. <przemyslaw.karpeta@gmail.com>, 2017,2019.
 # Simon Persson <simon.persson@mykolab.com>, 2014.
 # Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+#
+# Translators:
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 01:57+0000\n"
-"PO-Revision-Date: 2023-04-10 11:46+0200\n"
+"PO-Revision-Date: 2024-07-21 13:06+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -21,6 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -813,32 +814,20 @@ msgstr ""
 "tworzenia kopii."
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"Dowiązanie symboliczne <filename>%1</filename> jest dołączone do kopii "
-"zapasowej, ale wskazuje na katalog, który nie jest: <filename>%2</filename>."
-"<nl/>To prawdopodobnie nie jest pożądana sytuacja. Rozwiązaniem jest "
-"dołączenie wskazywanego katalogu do planu tworzenia kopii."
+"Dowiązanie symboliczne <filename>%1</filename> wskazuje na katalog, który "
+"nie jest załączony: <filename>%2</filename>.<nl/>To prawdopodobnie nie jest "
+"pożądana sytuacja. Rozwiązaniem jest dołączenie wskazywanego katalogu do "
+"planu tworzenia kopii."
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -846,10 +835,10 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"Dowiązanie symboliczne <filename>%1</filename> jest dołączone do kopii "
-"zapasowej, ale wskazuje na plik, który nie jest: <filename>%2</filename>.<nl/"
-">To prawdopodobnie nie jest pożądana sytuacja. Rozwiązaniem jest dołączenie "
-"wskazywanego katalogu do planu tworzenia kopii."
+"Dowiązanie symboliczne <filename>%1</filename> wskazuje na plik, który nie "
+"jest dołączony: <filename>%2</filename>.<nl/>To prawdopodobnie nie jest "
+"pożądana sytuacja. Rozwiązaniem jest dołączenie wskazywanego katalogu do "
+"planu tworzenia kopii."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
@@ -1076,18 +1065,14 @@ msgid "Active Usage Time"
 msgstr "Czas aktywnego używania"
 
 #: kcm/backupplanwidget.cpp:745
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only saved when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
-"Kopie zapasowe są zapisywane tylko, gdy ręcznie tego zażądano. Zażądać można "
-"z menu podręcznego ikony tacki systemowej."
+"Kopie zapasowe są zapisywane tylko wtedy, gdy ręcznie tego zażądano. Zażądać "
+"tego można z elementu interfejsu kopii zapasowych Plazmy."
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -1503,22 +1488,19 @@ msgstr "&Wczytaj ponownie plany kopii zapasowych"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
-msgstr "&Wczytaj ponownie plany kopii zapasowych"
+msgstr "Wczytaj ponownie plany kopii zapasowych"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "&Ustawienia Kup..."
+msgstr "Ustawienia planów kopii zapasowych"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans..."
-msgstr "&Ustawienia Kup..."
+msgstr "Ustawienia planów kopii zapasowych..."
 
 #: purger/main.cpp:23
 #, kde-kuit-format
