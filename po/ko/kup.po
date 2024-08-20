@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kup package.
-# Shinjo Park <kde@peremen.name>, 2021, 2023.
+# SPDX-FileCopyrightText: 2021, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 01:57+0000\n"
-"PO-Revision-Date: 2023-07-24 00:04+0200\n"
+"PO-Revision-Date: 2024-08-20 00:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -782,31 +782,19 @@ msgstr ""
 "서 해당 파일이 포함된 폴더를 제외하십시오."
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"심볼릭 링크 <filename>%1</filename>이(가) 포함되어 있지만 가리키는 다음 폴더"
-"는 포함되지 않았습니다: <filename>%2</filename>.<nl/>백업에 누락될 수도 있습"
-"니다. 백업 계획에 링크가 가리키는 대상 폴더를 포함시키십시오."
+"심볼릭 링크 <filename>%1</filename>은(는) 포함되지 않은 다음 폴더를 가리킵니"
+"다: <filename>%2</filename>.<nl/>백업에서 누락될 수도 있습니다. 백업 계획에 "
+"링크가 가리키는 대상 폴더를 포함시키십시오."
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -814,9 +802,9 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"심볼릭 링크 <filename>%1</filename>이(가) 포함되어 있지만 가리키는 다음 파일"
-"은 포함되지 않았습니다: <filename>%2</filename>.<nl/>백업에 누락될 수도 있습"
-"니다. 백업 계획에 링크가 가리키는 대상 파일이 포함된 폴더를 포함시키십시오."
+"심볼릭 링크 <filename>%1</filename>은(는) 포함되지 않은 다음 파일을 가리킵니"
+"다: <filename>%2</filename>.<nl/>백업에서 누락될 수도 있습니다. 백업 계획에 "
+"링크가 가리키는 대상 폴더를 포함시키십시오."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
@@ -1035,18 +1023,14 @@ msgid "Active Usage Time"
 msgstr "활성 사용 시간"
 
 #: kcm/backupplanwidget.cpp:745
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only saved when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
-"요청했을 때에만 백업을 만듭니다. 시스템 트레이 아이콘의 팝업 메뉴에서 호출할 "
-"수 있습니다."
+"요청했을 때에만 백업을 만듭니다. 백업 상태 Plasma 위젯에서 호출할 수 있습니"
+"다."
 
 #: kcm/backupplanwidget.cpp:760
 #, kde-kuit-format
@@ -1449,22 +1433,19 @@ msgstr "백업 계획 새로 고침(&R)"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
-msgstr "백업 계획 새로 고침(&R)"
+msgstr "백업 계획 새로 고침"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "Kup 설정(&C)..."
+msgstr "백업 계획 설정"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans..."
-msgstr "Kup 설정(&C)..."
+msgstr "백업 계획 설정..."
 
 #: purger/main.cpp:23
 #, kde-kuit-format
