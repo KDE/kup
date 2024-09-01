@@ -44,6 +44,7 @@ KF${QT_MAJOR_VERSION}::Solid
 KF${QT_MAJOR_VERSION}::Notifications
 KF${QT_MAJOR_VERSION}::CoreAddons
 KF${QT_MAJOR_VERSION}::DBusAddons
+KF${QT_MAJOR_VERSION}::Crash
 )
 
 ########### install files ###############

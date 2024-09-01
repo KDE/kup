@@ -22,6 +22,7 @@ Qt::Widgets
 KF${QT_MAJOR_VERSION}::I18n
 KF${QT_MAJOR_VERSION}::CoreAddons
 KF${QT_MAJOR_VERSION}::XmlGui
+KF${QT_MAJOR_VERSION}::Crash
 )
 
 ########### install files ###############

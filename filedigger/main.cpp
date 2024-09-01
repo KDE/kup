@@ -8,6 +8,7 @@
 #include <git2/global.h>
 
 #include <KAboutData>
+#include <KCrash>
 #include <KLocalizedString>
 
 #include <QApplication>
@@ -33,6 +34,8 @@ int main(int pArgCount, char **pArgArray)
     lAbout.addAuthor(i18n("Simon Persson"), i18n("Maintainer"), "simon.persson@mykolab.com");
     lAbout.setTranslator(xi18nc("NAME OF TRANSLATORS", "Your names"), xi18nc("EMAIL OF TRANSLATORS", "Your emails"));
     KAboutData::setApplicationData(lAbout); // this calls qApp.setApplicationName, setVersion, etc.
+
+    KCrash::initialize();
 
     QCommandLineParser lParser;
     lParser.addOption(QCommandLineOption(QStringList() << QStringLiteral("b") << QStringLiteral("branch"),

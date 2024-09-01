@@ -15,6 +15,7 @@ Dependencies:
     'frameworks/kjobwidgets': '@stable'
     'frameworks/kwidgetsaddons': '@stable'
     'frameworks/kcmutils': '@stable'
+    'frameworks/kcrash': '@stable'
     'plasma/libplasma': 'kf5'
 
 - 'on': ['Linux/Qt6', 'FreeBSD/Qt6']
@@ -30,5 +31,6 @@ Dependencies:
     'frameworks/kjobwidgets': '@latest-kf6'
     'frameworks/kwidgetsaddons': '@latest-kf6'
     'frameworks/kcmutils': '@latest-kf6'
+    'frameworks/kcrash': '@lastest-kf6'
     'plasma/libplasma': '@latest-kf6'
     'plasma/plasma5support': '@latest-kf6'

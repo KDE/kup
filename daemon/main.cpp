@@ -6,6 +6,7 @@
 #include "kupdaemon_debug.h"
 
 #include <KAboutData>
+#include <KCrash>
 #include <KDBusService>
 #include <KLocalizedString>
 
@@ -43,6 +44,8 @@ int main(int argc, char *argv[])
     lAbout.addAuthor(i18n("Simon Persson"), i18n("Maintainer"), "simon.persson@mykolab.com");
     lAbout.setTranslator(xi18nc("NAME OF TRANSLATORS", "Your names"), xi18nc("EMAIL OF TRANSLATORS", "Your emails"));
     KAboutData::setApplicationData(lAbout);
+
+    KCrash::initialize();
 
     QCommandLineParser lParser;
     lAbout.setupCommandLine(&lParser);

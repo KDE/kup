@@ -44,6 +44,7 @@ JobWidgets
 WidgetsAddons
 XmlGui
 KCMUtils
+Crash
 )
 
 
