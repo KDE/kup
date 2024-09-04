@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 01:57+0000\n"
+"POT-Creation-Date: 2024-09-04 01:46+0000\n"
 "PO-Revision-Date: 2020-06-13 19:52+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -254,7 +254,7 @@ msgctxt "status in tooltip"
 msgid "New backup needed"
 msgstr "Vaja on teha uus varukoopia"
 
-#: daemon/main.cpp:29
+#: daemon/main.cpp:30
 #, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
@@ -264,13 +264,13 @@ msgstr ""
 "Kup ei ole lubatud, lülita see sisse Süsteemi seadistuste moodulis. Seda "
 "saab teha käsuga <command>kcmshell5 kup</command>"
 
-#: daemon/main.cpp:36
+#: daemon/main.cpp:37
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Kupi deemon"
 
-#: daemon/main.cpp:38
+#: daemon/main.cpp:39
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -282,32 +282,32 @@ msgstr ""
 "inkrementvarundamist ehk teisisõnu salvestada ainult failide need osad, mida "
 "on pärast viimast varundamist muudetud."
 
-#: daemon/main.cpp:42 kcm/kupkcm.cpp:48
+#: daemon/main.cpp:43 kcm/kupkcm.cpp:48
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "Autoriõigus (C) 2011-2020: Simon Persson"
 
-#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:28
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
+#: purger/main.cpp:29
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:28
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
+#: purger/main.cpp:29
 #, kde-format
 msgid "Maintainer"
 msgstr "Hooldaja"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:29
+#: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
+#: purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Marek Laane"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:29
+#: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
+#: purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -472,28 +472,28 @@ msgstr "Sul ei ole selle varukoopiaarhiivi lugemiseks õigusi."
 msgid "Select location of backup archive to open."
 msgstr "Avatava varukoopiaarhiivi asukoha valimine."
 
-#: filedigger/main.cpp:28
+#: filedigger/main.cpp:29
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
 msgstr "Failikaevur"
 
-#: filedigger/main.cpp:30
+#: filedigger/main.cpp:31
 #, kde-format
 msgid "Browser for bup archives."
 msgstr "bup-arhiivide sirvija."
 
-#: filedigger/main.cpp:32
+#: filedigger/main.cpp:33
 #, kde-format
 msgid "Copyright (C) 2013-2020 Simon Persson"
 msgstr "Autoriõigus (C) 2013-2020: Simon Persson"
 
-#: filedigger/main.cpp:39 purger/main.cpp:34
+#: filedigger/main.cpp:42 purger/main.cpp:37
 #, kde-format
 msgid "Name of the branch to be opened."
 msgstr "Avatava haru nimi."
 
-#: filedigger/main.cpp:42 purger/main.cpp:37
+#: filedigger/main.cpp:45 purger/main.cpp:40
 #, kde-format
 msgid "Path to the bup repository to be opened."
 msgstr "Avatava bup-hoidla asukoht."
@@ -1496,19 +1496,19 @@ msgstr "Seadista"
 msgid "Configure Backup Plans..."
 msgstr "Seadista"
 
-#: purger/main.cpp:23
+#: purger/main.cpp:24
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
 msgstr ""
 
-#: purger/main.cpp:25
+#: purger/main.cpp:26
 #, fuzzy, kde-format
 #| msgid "Browser for bup archives."
 msgid "Purger for bup archives."
 msgstr "bup-arhiivide sirvija."
 
-#: purger/main.cpp:27
+#: purger/main.cpp:28
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2013-2020 Simon Persson"
 msgid "Copyright (C) 2013-2021 Simon Persson"

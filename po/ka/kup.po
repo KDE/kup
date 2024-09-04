@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 01:57+0000\n"
+"POT-Creation-Date: 2024-09-04 01:46+0000\n"
 "PO-Revision-Date: 2024-07-07 08:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -259,7 +259,7 @@ msgctxt "status in tooltip"
 msgid "New backup needed"
 msgstr "ახალი მარქაფი აუცილებელია"
 
-#: daemon/main.cpp:29
+#: daemon/main.cpp:30
 #, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
@@ -269,13 +269,13 @@ msgstr ""
 "Kup ჩართული არაა. მისი ჩართვა სისტემური პარამეტრების მოდულიდან შეგიძლიათ. ეს "
 "ბრძანებით <command>kcmshell5 kup</command> ხდება"
 
-#: daemon/main.cpp:36
+#: daemon/main.cpp:37
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Kup დემონი"
 
-#: daemon/main.cpp:38
+#: daemon/main.cpp:39
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -286,32 +286,32 @@ msgstr ""
 "'bup'-ს იყენებს. ეს მას საშუალებას აძლევს, შექმნას ინკრემენტული მარქაფები, "
 "რაც მხოლოდ ბოლო მარქაფის შემდეგ მომხდარი ცვლილებების მარქაფს გულისხმობს."
 
-#: daemon/main.cpp:42 kcm/kupkcm.cpp:48
+#: daemon/main.cpp:43 kcm/kupkcm.cpp:48
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "Copyright (C) 2011-2020 Simon Persson"
 
-#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:28
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
+#: purger/main.cpp:29
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:28
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
+#: purger/main.cpp:29
 #, kde-format
 msgid "Maintainer"
 msgstr "წამყვანი პროგრამისტი"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:29
+#: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
+#: purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Temuri Doghonadze"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:29
+#: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
+#: purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -476,28 +476,28 @@ msgstr "მარქაფის არქივის წასაკითხ�
 msgid "Select location of backup archive to open."
 msgstr "აირჩიეთ მარქაფის არქივების მდებარეობა."
 
-#: filedigger/main.cpp:28
+#: filedigger/main.cpp:29
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
 msgstr "ფაილმძებნი"
 
-#: filedigger/main.cpp:30
+#: filedigger/main.cpp:31
 #, kde-format
 msgid "Browser for bup archives."
 msgstr "Bup არქივების მოძებნა."
 
-#: filedigger/main.cpp:32
+#: filedigger/main.cpp:33
 #, kde-format
 msgid "Copyright (C) 2013-2020 Simon Persson"
 msgstr "Copyright (C) 2013-2020 Simon Persson"
 
-#: filedigger/main.cpp:39 purger/main.cpp:34
+#: filedigger/main.cpp:42 purger/main.cpp:37
 #, kde-format
 msgid "Name of the branch to be opened."
 msgstr "გასახსნელი ბრენჩის სახელი."
 
-#: filedigger/main.cpp:42 purger/main.cpp:37
+#: filedigger/main.cpp:45 purger/main.cpp:40
 #, kde-format
 msgid "Path to the bup repository to be opened."
 msgstr "გასახსნელი bup რეპოზიტორიის ბილიკი."
@@ -1473,18 +1473,18 @@ msgstr "მარქაფის გეგმების მორგება"
 msgid "Configure Backup Plans..."
 msgstr "მარქაფის გეგმების მორგება..."
 
-#: purger/main.cpp:23
+#: purger/main.cpp:24
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
 msgstr "შემკვეცი"
 
-#: purger/main.cpp:25
+#: purger/main.cpp:26
 #, kde-format
 msgid "Purger for bup archives."
 msgstr "Bup-ის არქივებმკვეცი."
 
-#: purger/main.cpp:27
+#: purger/main.cpp:28
 #, kde-format
 msgid "Copyright (C) 2013-2021 Simon Persson"
 msgstr "(C) 2013-2021 საიმონ პერსონი, ყველა უფლება დაცულია"

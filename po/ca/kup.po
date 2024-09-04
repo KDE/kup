@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 01:57+0000\n"
+"POT-Creation-Date: 2024-09-04 01:46+0000\n"
 "PO-Revision-Date: 2024-05-02 16:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -271,7 +271,7 @@ msgctxt "status in tooltip"
 msgid "New backup needed"
 msgstr "Cal fer una còpia de seguretat nova"
 
-#: daemon/main.cpp:29
+#: daemon/main.cpp:30
 #, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
@@ -281,13 +281,13 @@ msgstr ""
 "El Kup no està habilitat, habiliteu-lo des del mòdul de configuració del "
 "sistema. Podreu fer-ho executant <command>kcmshell5 kup</command>"
 
-#: daemon/main.cpp:36
+#: daemon/main.cpp:37
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Dimoni del Kup"
 
-#: daemon/main.cpp:38
+#: daemon/main.cpp:39
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -299,32 +299,32 @@ msgstr ""
 "còpies de seguretat incrementals, desant només les parts dels fitxers que "
 "realment han canviat des que es va desar l'última còpia de seguretat."
 
-#: daemon/main.cpp:42 kcm/kupkcm.cpp:48
+#: daemon/main.cpp:43 kcm/kupkcm.cpp:48
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "Copyright (C) 2011-2020 Simon Persson"
 
-#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:28
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
+#: purger/main.cpp:29
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:28
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
+#: purger/main.cpp:29
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantenidor"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:29
+#: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
+#: purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Antoni Bella"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:29
+#: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
+#: purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -489,28 +489,28 @@ msgstr "No teniu permís per a llegir aquest arxiu de còpia de seguretat."
 msgid "Select location of backup archive to open."
 msgstr "Seleccioneu la ubicació de l'arxiu de còpia de seguretat a obrir."
 
-#: filedigger/main.cpp:28
+#: filedigger/main.cpp:29
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
 msgstr "Excavador de fitxers"
 
-#: filedigger/main.cpp:30
+#: filedigger/main.cpp:31
 #, kde-format
 msgid "Browser for bup archives."
 msgstr "Explorador per a arxius «bup»."
 
-#: filedigger/main.cpp:32
+#: filedigger/main.cpp:33
 #, kde-format
 msgid "Copyright (C) 2013-2020 Simon Persson"
 msgstr "Copyright (C) 2013-2020 Simon Persson"
 
-#: filedigger/main.cpp:39 purger/main.cpp:34
+#: filedigger/main.cpp:42 purger/main.cpp:37
 #, kde-format
 msgid "Name of the branch to be opened."
 msgstr "Nom de la branca que s'obrirà."
 
-#: filedigger/main.cpp:42 purger/main.cpp:37
+#: filedigger/main.cpp:45 purger/main.cpp:40
 #, kde-format
 msgid "Path to the bup repository to be opened."
 msgstr "Camí fins al repositori «bup» que s'obrirà."
@@ -1505,18 +1505,18 @@ msgstr "Configura els plans de còpia de seguretat"
 msgid "Configure Backup Plans..."
 msgstr "Configura els plans de còpia de seguretat..."
 
-#: purger/main.cpp:23
+#: purger/main.cpp:24
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
 msgstr "Purgador"
 
-#: purger/main.cpp:25
+#: purger/main.cpp:26
 #, kde-format
 msgid "Purger for bup archives."
 msgstr "Purga els arxius «bup»."
 
-#: purger/main.cpp:27
+#: purger/main.cpp:28
 #, kde-format
 msgid "Copyright (C) 2013-2021 Simon Persson"
 msgstr "Copyright (C) 2013-2021 Simon Persson"

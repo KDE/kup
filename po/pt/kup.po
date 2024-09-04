@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 01:57+0000\n"
+"POT-Creation-Date: 2024-09-04 01:46+0000\n"
 "PO-Revision-Date: 2023-03-06 16:36+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -268,7 +268,7 @@ msgctxt "status in tooltip"
 msgid "New backup needed"
 msgstr "É necessária uma nova cópia de segurança"
 
-#: daemon/main.cpp:29
+#: daemon/main.cpp:30
 #, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
@@ -278,13 +278,13 @@ msgstr ""
 "O Kup não está activo. Active-o no módulo de configuração do sistema. Podê-"
 "lo-á fazer se executar <command>kcmshell5 kup</command>"
 
-#: daemon/main.cpp:36
+#: daemon/main.cpp:37
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Servidor do Kup"
 
-#: daemon/main.cpp:38
+#: daemon/main.cpp:39
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -297,32 +297,32 @@ msgstr ""
 "ficheiros que foram alteradas de facto desde a criação da última cópia de "
 "segurança."
 
-#: daemon/main.cpp:42 kcm/kupkcm.cpp:48
+#: daemon/main.cpp:43 kcm/kupkcm.cpp:48
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "Copyright (C) 2011-2020 de Simon Persson"
 
-#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:28
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
+#: purger/main.cpp:29
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:28
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
+#: purger/main.cpp:29
 #, kde-format
 msgid "Maintainer"
 msgstr "Manutenção"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:29
+#: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
+#: purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "José Nuno Pires"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:29
+#: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
+#: purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -488,28 +488,28 @@ msgstr ""
 msgid "Select location of backup archive to open."
 msgstr "Seleccione a localização do pacote da cópia de segurança a abrir."
 
-#: filedigger/main.cpp:28
+#: filedigger/main.cpp:29
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
 msgstr "Escavador de Ficheiros"
 
-#: filedigger/main.cpp:30
+#: filedigger/main.cpp:31
 #, kde-format
 msgid "Browser for bup archives."
 msgstr "Navegador de pacotes do 'bup'."
 
-#: filedigger/main.cpp:32
+#: filedigger/main.cpp:33
 #, kde-format
 msgid "Copyright (C) 2013-2020 Simon Persson"
 msgstr "Copyright (C) 2013-2020 Simon Persson"
 
-#: filedigger/main.cpp:39 purger/main.cpp:34
+#: filedigger/main.cpp:42 purger/main.cpp:37
 #, kde-format
 msgid "Name of the branch to be opened."
 msgstr "Nome da ramificação a abrir."
 
-#: filedigger/main.cpp:42 purger/main.cpp:37
+#: filedigger/main.cpp:45 purger/main.cpp:40
 #, kde-format
 msgid "Path to the bup repository to be opened."
 msgstr "A localização do repositório 'bup' a abrir."
@@ -1525,18 +1525,18 @@ msgstr "&Configurar o Kup..."
 msgid "Configure Backup Plans..."
 msgstr "&Configurar o Kup..."
 
-#: purger/main.cpp:23
+#: purger/main.cpp:24
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
 msgstr "Eliminação"
 
-#: purger/main.cpp:25
+#: purger/main.cpp:26
 #, kde-format
 msgid "Purger for bup archives."
 msgstr "Eliminação de pacotes com cópias de segurança do 'bup'."
 
-#: purger/main.cpp:27
+#: purger/main.cpp:28
 #, kde-format
 msgid "Copyright (C) 2013-2021 Simon Persson"
 msgstr "Copyright (C) 2013-2021 Simon Persson"

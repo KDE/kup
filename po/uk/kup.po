@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 01:57+0000\n"
+"POT-Creation-Date: 2024-09-04 01:46+0000\n"
 "PO-Revision-Date: 2024-05-02 08:35+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -277,7 +277,7 @@ msgctxt "status in tooltip"
 msgid "New backup needed"
 msgstr "Потрібне нове резервне копіювання"
 
-#: daemon/main.cpp:29
+#: daemon/main.cpp:30
 #, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
@@ -288,13 +288,13 @@ msgstr ""
 "параметрів». Запустити модуль можна за допомогою команди <command>kcmshell5 "
 "kup</command>."
 
-#: daemon/main.cpp:36
+#: daemon/main.cpp:37
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Фонова служба Kup"
 
-#: daemon/main.cpp:38
+#: daemon/main.cpp:39
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -306,32 +306,32 @@ msgstr ""
 "резервне копіювання, зберігаючи лише ту частину файлів, які було змінено з "
 "моменту збереження попередньої резервної копії."
 
-#: daemon/main.cpp:42 kcm/kupkcm.cpp:48
+#: daemon/main.cpp:43 kcm/kupkcm.cpp:48
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "© Simon Persson, 2011–2020"
 
-#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:28
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
+#: purger/main.cpp:29
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:43 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:28
+#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
+#: purger/main.cpp:29
 #, kde-format
 msgid "Maintainer"
 msgstr "Супровідник"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:29
+#: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
+#: purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Юрій Чорноіван"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:29
+#: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
+#: purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -500,28 +500,28 @@ msgstr ""
 msgid "Select location of backup archive to open."
 msgstr "Виберіть архів резервної копії, який слід відкрити."
 
-#: filedigger/main.cpp:28
+#: filedigger/main.cpp:29
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
 msgstr "Файлокопач"
 
-#: filedigger/main.cpp:30
+#: filedigger/main.cpp:31
 #, kde-format
 msgid "Browser for bup archives."
 msgstr "Навігатор архівами bup."
 
-#: filedigger/main.cpp:32
+#: filedigger/main.cpp:33
 #, kde-format
 msgid "Copyright (C) 2013-2020 Simon Persson"
 msgstr "© Simon Persson, 2013–2020"
 
-#: filedigger/main.cpp:39 purger/main.cpp:34
+#: filedigger/main.cpp:42 purger/main.cpp:37
 #, kde-format
 msgid "Name of the branch to be opened."
 msgstr "Назва гілки, яку буде відкрито."
 
-#: filedigger/main.cpp:42 purger/main.cpp:37
+#: filedigger/main.cpp:45 purger/main.cpp:40
 #, kde-format
 msgid "Path to the bup repository to be opened."
 msgstr "Шлях до сховища bup, яке слід відкрити."
@@ -1520,18 +1520,18 @@ msgstr "Налаштувати плани резервного копіюван�
 msgid "Configure Backup Plans..."
 msgstr "Налаштувати плани резервного копіювання…"
 
-#: purger/main.cpp:23
+#: purger/main.cpp:24
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
 msgstr "Витирач"
 
-#: purger/main.cpp:25
+#: purger/main.cpp:26
 #, kde-format
 msgid "Purger for bup archives."
 msgstr "Витирач для архівів bup."
 
-#: purger/main.cpp:27
+#: purger/main.cpp:28
 #, kde-format
 msgid "Copyright (C) 2013-2021 Simon Persson"
 msgstr "© Simon Persson, 2013–2021"
