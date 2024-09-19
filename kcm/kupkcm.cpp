@@ -259,7 +259,7 @@ void KupKcm::createSettingsFrontPage()
     lScrollArea->setWidgetResizable(true);
     lScrollArea->setFrameStyle(QFrame::NoFrame);
 
-    auto lAddPlanButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")), xi18nc("@action:button", "Add New Plan"));
+    auto lAddPlanButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")), xi18nc("@action:button", "Add New Plan…"));
     connect(lAddPlanButton, &QPushButton::clicked, this, [this] {
         mPlans.append(new BackupPlan(mPlans.count() + 1, mConfig, this));
         if (mBupVersion.isEmpty())
@@ -272,7 +272,7 @@ void KupKcm::createSettingsFrontPage()
         emit mStatusWidgets.at(mPlans.count() - 1)->configureMe();
     });
 
-    mEnableCheckBox = new QCheckBox(xi18nc("@option:check", "Backups Enabled"));
+    mEnableCheckBox = new QCheckBox(xi18nc("@option:check", "Backups enabled"));
     mEnableCheckBox->setObjectName(QStringLiteral("kcfg_Backups enabled"));
     connect(mEnableCheckBox, &QCheckBox::toggled, lAddPlanButton, &QPushButton::setEnabled);
 
