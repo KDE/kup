@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 01:46+0000\n"
+"POT-Creation-Date: 2024-09-20 01:57+0000\n"
 "PO-Revision-Date: 2019-11-22 01:49+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -1374,15 +1374,19 @@ msgid "Warning"
 msgstr "警告"
 
 #: kcm/kupkcm.cpp:262
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Add New Plan"
 msgctxt "@action:button"
-msgid "Add New Plan"
+msgid "Add New Plan…"
 msgstr "加入新的計畫"
 
 #: kcm/kupkcm.cpp:275
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@option:check"
+#| msgid "Backups Enabled"
 msgctxt "@option:check"
-msgid "Backups Enabled"
+msgid "Backups enabled"
 msgstr "備份已啟用"
 
 #: kcm/kupkcm.cpp:286

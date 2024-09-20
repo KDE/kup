@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 01:46+0000\n"
+"POT-Creation-Date: 2024-09-20 01:57+0000\n"
 "PO-Revision-Date: 2024-05-24 19:14+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -1371,15 +1371,19 @@ msgid "Warning"
 msgstr "Warning"
 
 #: kcm/kupkcm.cpp:262
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Add New Plan"
 msgctxt "@action:button"
-msgid "Add New Plan"
+msgid "Add New Plan…"
 msgstr "Add New Plan"
 
 #: kcm/kupkcm.cpp:275
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@option:check"
+#| msgid "Backups Enabled"
 msgctxt "@option:check"
-msgid "Backups Enabled"
+msgid "Backups enabled"
 msgstr "Backups Enabled"
 
 #: kcm/kupkcm.cpp:286
