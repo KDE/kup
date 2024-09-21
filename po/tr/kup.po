@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-20 01:57+0000\n"
-"PO-Revision-Date: 2024-05-02 13:15+0300\n"
+"PO-Revision-Date: 2024-09-20 19:16+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -232,7 +232,7 @@ msgstr "Yedek hedef konumu kullanılamıyor"
 #: daemon/kupdaemon.cpp:266 daemon/kupdaemon.cpp:322
 #, kde-format
 msgid "No backup plans configured"
-msgstr "Yedek tasarıları yapılandırılmamış"
+msgstr "Yapılandırılmış yedek planı yok"
 
 #: daemon/kupdaemon.cpp:272
 #, kde-format
@@ -778,7 +778,7 @@ msgid ""
 msgstr ""
 "Bu klasörü okumaya izniniz yok: <filename>%1</filename><nl/>Kaynak seçiminde "
 "içerilemez. Eğer sizin için önemli bir şey içermiyorsa olası çözümlerden bir "
-"tanesi, bu klasörü yedek tasarısından dışlamaktır."
+"tanesi, bu klasörü yedek planından dışlamaktır."
 
 #: kcm/backupplanwidget.cpp:396
 #, kde-kuit-format
@@ -791,7 +791,7 @@ msgid ""
 msgstr ""
 "Bu dosyayı okumaya izniniz yok: <filename>%1</filename><nl/>Kaynak seçiminde "
 "içerilemez. Eğer sizin için önemli bir şey içermiyorsa olası çözümlerden bir "
-"tanesi, bu klasörü yedek tasarısından bu dosyayı içeren klasörü dışlamaktır."
+"tanesi, bu klasörü yedek planından bu dosyayı içeren klasörü dışlamaktır."
 
 #: kcm/backupplanwidget.cpp:412
 #, kde-kuit-format
@@ -803,8 +803,7 @@ msgid ""
 msgstr ""
 "<filename>%1</filename> sembolik bağı, içerilmeyen bir klasöre işaret "
 "ediyor: <filename>%2</filename>.<nl/>Büyük olasılıkla yapmak istediğiniz şey "
-"bu değildi. Olası bir çözüm, yedek tasarısında hedef klasörü içermek "
-"olabilir."
+"bu değildi. Olası bir çözüm, yedek planında hedef klasörü içermek olabilir."
 
 #: kcm/backupplanwidget.cpp:421
 #, kde-kuit-format
@@ -817,7 +816,7 @@ msgid ""
 msgstr ""
 "<filename>%1</filename> sembolik bağı, içerilmeyen bir klasöre işaret "
 "ediyor: <filename>%2</filename>.<nl/>Büyük olasılıkla yapmak istediğiniz şey "
-"bu değildi. Olası bir çözüm, yedek tasarısında dosyanın depolandığı konumu "
+"bu değildi. Olası bir çözüm, yedek planında dosyanın depolandığı konumu "
 "içermek olabilir."
 
 #: kcm/backupplanwidget.cpp:447
@@ -1347,7 +1346,7 @@ msgstr "Kup Yapılandırma Modülü"
 #: kcm/kupkcm.cpp:46
 #, kde-format
 msgid "Configuration of backup plans for the Kup backup system"
-msgstr "Kup yedekleme sistemi için yedekleme tasarılarının yapılandırması"
+msgstr "Kup yedekleme sistemi için yedekleme planlarının yapılandırması"
 
 #: kcm/kupkcm.cpp:82
 #, kde-format
@@ -1356,7 +1355,7 @@ msgid ""
 "plan you need to install either of</p><ul><li>bup, for versioned backups</"
 "li><li>rsync, for synchronized backups</li></ul>"
 msgstr ""
-"<h2>Yedekleme programları eksik</h2><p>Herhangi bir yedek tasarısını "
+"<h2>Yedekleme programları eksik</h2><p>Herhangi bir yedek planını "
 "etkinleştirmeden önce</p><ul><li>sürümlendirilmiş yedeklemeler için bup,</"
 "li><li>eşzamanlı yedeklemeler için rsync</li></ul> kurmanız gerekiyor"
 
@@ -1366,7 +1365,7 @@ msgctxt "@info %1 is the name of the backup plan"
 msgid ""
 "%1 does not have a destination!<nl/>No backups will be saved by this plan."
 msgstr ""
-"%1 için bir hedef konum yok!<nl/>Bu tasarı tarafından herhangi bir yedek "
+"%1 için bir hedef konum yok!<nl/>Bu plan tarafından herhangi bir yedek "
 "kaydedilmeyecek."
 
 #: kcm/kupkcm.cpp:213
@@ -1376,20 +1375,16 @@ msgid "Warning"
 msgstr "Uyarı"
 
 #: kcm/kupkcm.cpp:262
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Add New Plan"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
-msgstr "Yeni Tasarı Ekle"
+msgstr "Yeni Plan Ekle…"
 
 #: kcm/kupkcm.cpp:275
-#, fuzzy, kde-kuit-format
-#| msgctxt "@option:check"
-#| msgid "Backups Enabled"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
-msgstr "Yedek alımını etkinleştir"
+msgstr "Yedekler etkin"
 
 #: kcm/kupkcm.cpp:286
 #, kde-kuit-format
@@ -1458,7 +1453,7 @@ msgstr "Kup’u &Yapılandır…"
 #: plasmoid-qt5/contents/ui/main.qml:71
 #, kde-format
 msgid "&Reload backup plans"
-msgstr "Yedekleme tasarılarını ge&ri yükle"
+msgstr "Yedek planlarını ge&ri yükle"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
@@ -1498,7 +1493,7 @@ msgctxt ""
 "@label Default name for a new backup plan, %1 is the number of the plan in "
 "order"
 msgid "Backup plan %1"
-msgstr "Yedek tasarısı %1"
+msgstr "Yedek planı %1"
 
 #: settings/backupplan.cpp:57
 #, kde-format
@@ -1533,4 +1528,4 @@ msgstr "Boş alan: %1"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
-msgstr "Bu yedekleme tasarısı daha önce çalıştırılmadı."
+msgstr "Bu yedekleme planı daha önce çalıştırılmadı."
