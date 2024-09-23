@@ -1,14 +1,12 @@
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Translation of kup to Spanish
+# This file is distributed under the same license as the kup package.
 #
-# Translators:
 # Administrador de Sistemas de Koali <admin@koali.es>, 2014.
 # Alex Castilla <alex.castillap@gmail.com>, 2017.
 # Francisco García Cisneros <fgarciacis@koali.es>, 2013.
-# seryeb - <seryeb@gmail.com>, 2017.
-# Simon Persson <simon.persson@mykolab.com>, 2014.
-# Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
-# Victor García <victor.garcia@iberdomo.net>, 2018-2019.
+# seryeb <seryeb@gmail.com>, 2017.
+# Simon Persson <simon.persson@mykolab.com>, 2014, 2015, 2018.
+# Victor García <victor.garcia@iberdomo.net>, 2018, 2019.
 # Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2019, 2020, 2021, 2022, 2023, 2024.
 # Eloy Cuadra <ecuadra@eloihr.net>, 2020.
 msgid ""
@@ -16,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-20 01:57+0000\n"
-"PO-Revision-Date: 2024-05-11 17:39+0200\n"
+"PO-Revision-Date: 2024-09-22 16:40+0200\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1411,17 +1409,13 @@ msgid "Warning"
 msgstr "Aviso"
 
 #: kcm/kupkcm.cpp:262
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Add New Plan"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
-msgstr "Añadir nuevo plan"
+msgstr "Añadir nuevo plan..."
 
 #: kcm/kupkcm.cpp:275
-#, fuzzy, kde-kuit-format
-#| msgctxt "@option:check"
-#| msgid "Backups Enabled"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "Copias de seguridad activadas"
