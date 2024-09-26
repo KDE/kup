@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-20 01:57+0000\n"
-"PO-Revision-Date: 2024-05-02 14:27+0200\n"
+"PO-Revision-Date: 2024-09-20 13:30+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -1421,17 +1421,13 @@ msgid "Warning"
 msgstr "Attenzione"
 
 #: kcm/kupkcm.cpp:262
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Add New Plan"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
-msgstr "Aggiungi nuovo piano"
+msgstr "Aggiungi nuovo piano…"
 
 #: kcm/kupkcm.cpp:275
-#, fuzzy, kde-kuit-format
-#| msgctxt "@option:check"
-#| msgid "Backups Enabled"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "Copie di sicurezza abilitate"
