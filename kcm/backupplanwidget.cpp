@@ -520,15 +520,11 @@ KPageWidgetItem *BackupPlanWidget::createTypePage(const QString &pBupVersion, co
 {
     mVersionedRadio = new QRadioButton;
     QString lVersionedInfo = xi18nc("@info",
-                                    "This type of backup is an <emphasis>archive</emphasis>. It contains both "
-                                    "the latest version of your files and earlier backed up versions. "
-                                    "Using this type of backup allows you to recover older versions of your "
-                                    "files, or files which were deleted on your computer at a later time. "
-                                    "The storage space needed is minimized by looking for common parts of "
-                                    "your files between versions and only storing those parts once. "
-                                    "Nevertheless, the backup archive will keep growing in size as time goes by.<nl/>"
-                                    "Also important to know is that the files in the archive can not be accessed "
-                                    "directly with a general file manager, a special program is needed.");
+                                    "Back up multiple versions over time of the files in the source folders. "
+                                    "This allows older versions of files or deleted files to be recovered."
+                                    "<nl/></nl/>"
+                                    "The backup archive will grow in size over time, and can only be accessed "
+                                    "using the recovery tools provided by this program.");
     auto lVersionedInfoLabel = new QLabel(lVersionedInfo);
     lVersionedInfoLabel->setWordWrap(true);
     auto lVersionedWidget = new QWidget;
@@ -546,13 +542,11 @@ KPageWidgetItem *BackupPlanWidget::createTypePage(const QString &pBupVersion, co
 
     mSyncedRadio = new QRadioButton;
     QString lSyncedInfo = xi18nc("@info",
-                                 "This type of backup is a folder which is synchronized with your "
-                                 "selected source folders. Saving a backup simply means making the "
-                                 "backup destination contain an exact copy of your source folders as "
-                                 "they are now and nothing else. If a file has been deleted in a "
-                                 "source folder it will get deleted from the backup folder.<nl/>"
-                                 "This type of backup can protect you against data loss due to a broken "
-                                 "hard drive but it does not help you to recover from your own mistakes.");
+                                 "Make the destination folder identical to the source folder. Files "
+                                 "deleted from a source folder will be deleted from the backup folder "
+                                 "as well.<nl/><nl/>"
+                                 "This can prevent data loss due to a broken disk, but not due to files"
+                                 "being accidentally deleted or changed.");
     auto lSyncedInfoLabel = new QLabel(lSyncedInfo);
     lSyncedInfoLabel->setWordWrap(true);
     auto lSyncedWidget = new QWidget;
