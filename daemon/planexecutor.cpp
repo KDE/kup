@@ -101,7 +101,7 @@ void PlanExecutor::enterAvailableState()
         QDateTime lNextTime = mPlan->nextScheduledTime();
         if (!lNextTime.isValid() || lNextTime < lNow) {
             if (!mPlan->mLastCompleteBackup.isValid())
-                askUserOrStart(xi18nc("@info", "Do you want to save a first backup now?"));
+                askUserOrStart(xi18nc("@info", "Save the first backup now?"));
             else {
                 QString t = KFormat().formatSpelloutDuration(static_cast<quint64>(mPlan->mLastCompleteBackup.secsTo(lNow)) * 1000);
                 askUserOrStart(xi18nc("@info",
@@ -119,7 +119,7 @@ void PlanExecutor::enterAvailableState()
     }
     case BackupPlan::USAGE:
         if (!mPlan->mLastCompleteBackup.isValid()) {
-            askUserOrStart(xi18nc("@info", "Do you want to save a first backup now?"));
+            askUserOrStart(xi18nc("@info", "Save the first backup now?"));
         } else if (mPlan->mAccumulatedUsageTime > static_cast<quint32>(mPlan->mUsageLimit) * 3600) {
             QString t = KFormat().formatSpelloutDuration(mPlan->mAccumulatedUsageTime * 1000);
             askUserOrStart(xi18nc("@info",
@@ -159,15 +159,15 @@ void PlanExecutor::askUser(const QString &pQuestion)
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QStringList lAnswers;
-    lAnswers << xi18nc("@action:button", "Yes") << xi18nc("@action:button", "No");
+    lAnswers << xi18nc("@action:button", "Save Backup") << xi18nc("@action:button", "Cancel");
     mQuestion->setActions(lAnswers);
     connect(mQuestion, SIGNAL(action1Activated()), SLOT(startBackupSaveJob()));
     connect(mQuestion, SIGNAL(action2Activated()), SLOT(discardUserQuestion()));
 #else
-    KNotificationAction *yes = mQuestion->addAction(xi18nc("@action:button", "Yes"));
+    KNotificationAction *yes = mQuestion->addAction(xi18nc("@action:button", "Save Backup"));
     connect(yes, &KNotificationAction::activated, this, &PlanExecutor::startBackupSaveJob);
 
-    KNotificationAction *no = mQuestion->addAction(xi18nc("@action:button", "No"));
+    KNotificationAction *no = mQuestion->addAction(xi18nc("@action:button", "Cancel"));
     connect(no, &KNotificationAction::activated, this, &PlanExecutor::discardUserQuestion);
 #endif
     connect(mQuestion, SIGNAL(closed()), SLOT(discardUserQuestion()));
@@ -199,8 +199,8 @@ void PlanExecutor::notifyBackupFailed(KJob *pFailedJob)
         lAnswers << xi18nc("@action:button", "Show log file");
         connect(mFailNotification, SIGNAL(action1Activated()), SLOT(showLog()));
     } else if (pFailedJob->error() == BackupJob::ErrorSuggestRepair) {
-        lAnswers << xi18nc("@action:button", "Yes");
-        lAnswers << xi18nc("@action:button", "No");
+        lAnswers << xi18nc("@action:button", "Repair");
+        lAnswers << xi18nc("@action:button", "Cancel");
         connect(mFailNotification, SIGNAL(action1Activated()), SLOT(startRepairJob()));
     } else if (pFailedJob->error() == BackupJob::ErrorSourcesConfig) {
         lAnswers << xi18nc("@action:button", "Open settings");
@@ -217,10 +217,10 @@ void PlanExecutor::notifyBackupFailed(KJob *pFailedJob)
         KNotificationAction *showLogFile = mFailNotification->addAction(xi18nc("@action:button", "Show log file"));
         connect(showLogFile, &KNotificationAction::activated, this, &PlanExecutor::showLog);
     } else if (pFailedJob->error() == BackupJob::ErrorSuggestRepair) {
-        KNotificationAction *yes = mFailNotification->addAction(xi18nc("@action:button", "Yes"));
+        KNotificationAction *yes = mFailNotification->addAction(xi18nc("@action:button", "Repair"));
         connect(yes, &KNotificationAction::activated, this, &PlanExecutor::startRepairJob);
 
-        KNotificationAction *no = mFailNotification->addAction(xi18nc("@action:button", "No"));
+        KNotificationAction *no = mFailNotification->addAction(xi18nc("@action:button", "Cancel"));
         connect(no, &KNotificationAction::activated, this, &PlanExecutor::discardFailNotification);
     } else if (pFailedJob->error() == BackupJob::ErrorSourcesConfig) {
         KNotificationAction *openSettings = mFailNotification->addAction(xi18nc("@action:button", "Open settings"));
@@ -365,8 +365,8 @@ void PlanExecutor::integrityCheckFinished(KJob *pJob)
         lAnswers << xi18nc("@action:button", "Show log file");
         connect(mIntegrityNotification, SIGNAL(action1Activated()), SLOT(showLog()));
     } else if (pJob->error() == BackupJob::ErrorSuggestRepair) {
-        lAnswers << xi18nc("@action:button", "Yes");
-        lAnswers << xi18nc("@action:button", "No");
+        lAnswers << xi18nc("@action:button", "Repair");
+        lAnswers << xi18nc("@action:button", "Cancel");
         connect(mIntegrityNotification, SIGNAL(action1Activated()), SLOT(startRepairJob()));
     }
     mIntegrityNotification->setActions(lAnswers);
@@ -377,10 +377,10 @@ void PlanExecutor::integrityCheckFinished(KJob *pJob)
         KNotificationAction *showLogFile = new KNotificationAction(xi18nc("@action:button", "Show log file"));
         connect(showLogFile, &KNotificationAction::activated, this, &PlanExecutor::showLog);
     } else if (pJob->error() == BackupJob::ErrorSuggestRepair) {
-        KNotificationAction *yes = mIntegrityNotification->addAction(xi18nc("@action:button", "Yes"));
+        KNotificationAction *yes = mIntegrityNotification->addAction(xi18nc("@action:button", "Repair"));
         connect(yes, &KNotificationAction::activated, this, &PlanExecutor::startRepairJob);
 
-        KNotificationAction *no = mIntegrityNotification->addAction(xi18nc("@action:button", "No"));
+        KNotificationAction *no = mIntegrityNotification->addAction(xi18nc("@action:button", "Cancel"));
         connect(no, &KNotificationAction::activated, this, &PlanExecutor::discardIntegrityNotification);
     }
 #endif

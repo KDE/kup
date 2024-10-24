@@ -108,12 +108,12 @@ void MergedNode::askForIntegrityCheck()
     if (lAnswer == KMessageBox::PrimaryAction) {
 #else
 
-    int lAnswer = KMessageBox::questionYesNo(nullptr,
-                                             xi18nc("@info messagebox",
-                                                    "Could not read this backup archive. Perhaps some files "
-                                                    "have become corrupted. Do you want to run an integrity "
-                                                    "check to test this?"));
-    if (lAnswer == KMessageBox::Yes) {
+    int lAnswer = KMessageBox::warningContinueCancel(nullptr,
+                                                     xi18nc("@info messagebox",
+                                                            "Could not read this backup archive. Perhaps some files "
+                                                            "have become corrupted. Do you want to run an integrity "
+                                                            "check to test this?"));
+    if (lAnswer == KMessageBox::Continue) {
 #endif
         QDBusInterface lInterface(KUP_DBUS_SERVICE_NAME, KUP_DBUS_OBJECT_PATH);
         if (lInterface.isValid()) {
