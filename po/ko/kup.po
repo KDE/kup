@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-20 01:57+0000\n"
+"POT-Creation-Date: 2024-11-12 01:54+0000\n"
 "PO-Revision-Date: 2024-08-20 00:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -326,9 +326,11 @@ msgid "Repairing backups"
 msgstr "백업 복구 중"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Do you want to save a first backup now?"
 msgctxt "@info"
-msgid "Do you want to save a first backup now?"
+msgid "Save the first backup now?"
 msgstr "첫 백업을 저장하시겠습니까?"
 
 #: daemon/planexecutor.cpp:108
@@ -352,20 +354,19 @@ msgstr ""
 "새 백업을 저장하시겠습니까?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#: daemon/planexecutor.cpp:202 daemon/planexecutor.cpp:220
-#: daemon/planexecutor.cpp:368 daemon/planexecutor.cpp:380
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgid "Save new backup"
 msgctxt "@action:button"
-msgid "Yes"
-msgstr "예"
+msgid "Save Backup"
+msgstr "새 백업 저장"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
 #: daemon/planexecutor.cpp:369 daemon/planexecutor.cpp:383
 #, kde-kuit-format
 msgctxt "@action:button"
-msgid "No"
-msgstr "아니요"
+msgid "Cancel"
+msgstr ""
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -380,6 +381,13 @@ msgstr "백업 저장 실패"
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "로그 파일 표시"
+
+#: daemon/planexecutor.cpp:202 daemon/planexecutor.cpp:220
+#: daemon/planexecutor.cpp:368 daemon/planexecutor.cpp:380
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Repair"
+msgstr ""
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -825,28 +833,15 @@ msgid "Back to overview"
 msgstr "개요로 돌아가기"
 
 #: kcm/backupplanwidget.cpp:523
-#, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"This type of backup is an <emphasis>archive</emphasis>. It contains both the "
-"latest version of your files and earlier backed up versions. Using this type "
-"of backup allows you to recover older versions of your files, or files which "
-"were deleted on your computer at a later time. The storage space needed is "
-"minimized by looking for common parts of your files between versions and "
-"only storing those parts once. Nevertheless, the backup archive will keep "
-"growing in size as time goes by.<nl/>Also important to know is that the "
-"files in the archive can not be accessed directly with a general file "
-"manager, a special program is needed."
+"Back up multiple versions over time of the files in the source folders. This "
+"allows older versions of files or deleted files to be recovered.<nl/></nl/"
+">The backup archive will grow in size over time, and can only be accessed "
+"using the recovery tools provided by this program."
 msgstr ""
-"이 형식의 백업은 <emphasis>압축 파일</emphasis>을 생성합니다. 파일의 최신 버"
-"전과 이전 백업된 버전을 모두 포함합니다. 이 형식의 백업을 사용하면 컴퓨터에"
-"서 나중에 삭제한 파일이라도 이전 버전을 복원할 수 있습니다. 파일을 저장할 때 "
-"버전간의 차이점을 비교하여 같은 부분은 한 번만 저장하는 식으로 저장 공간 사용"
-"을 최소화합니다. 그래도 시간에 따라서 백업 압축 파일의 크기는 계속 증가합니"
-"다.<nl/>이 형식으로 백업한 압축 파일은 일반적인 파일 관리자로는 접근할 수 없"
-"으며 특별한 프로그램이 필요합니다."
 
-#: kcm/backupplanwidget.cpp:539
+#: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -856,31 +851,23 @@ msgstr ""
 "버전된 백업(<application>bup</application>이 설치되어 있지 않아서 사용할 수 "
 "없음)"
 
-#: kcm/backupplanwidget.cpp:544
+#: kcm/backupplanwidget.cpp:540
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Versioned Backup (recommended)"
 msgstr "버전된 백업(추천)"
 
-#: kcm/backupplanwidget.cpp:549
+#: kcm/backupplanwidget.cpp:545
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"This type of backup is a folder which is synchronized with your selected "
-"source folders. Saving a backup simply means making the backup destination "
-"contain an exact copy of your source folders as they are now and nothing "
-"else. If a file has been deleted in a source folder it will get deleted from "
-"the backup folder.<nl/>This type of backup can protect you against data loss "
-"due to a broken hard drive but it does not help you to recover from your own "
-"mistakes."
+"Make the destination folder identical to the source folder. Files deleted "
+"from a source folder will be deleted from the backup folder as well.<nl/><nl/"
+">This can prevent data loss due to a broken disk, but not due to filesbeing "
+"accidentally deleted or changed."
 msgstr ""
-"이 형식의 백업은 선택한 원본 폴더와 동기화된 폴더를 생성합니다. 백업 저장 과"
-"정은 현재 시점에서의 원본 폴더의 정확한 복사본을 백업 대상에 저장하는 것입니"
-"다. 원본 폴더에서 파일이 삭제되었다면 백업 폴더에서도 삭제됩니다.<nl/>이 형식"
-"의 백업은 하드 드라이브가 고장났을 때 데이터를 복구할 수 있으나 사용자의 실수"
-"를 보호하지는 못합니다."
 
-#: kcm/backupplanwidget.cpp:563
+#: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -890,49 +877,49 @@ msgstr ""
 "동기화된 백업(<application>rsync</application>가 설치되어 있지 않아서 사용할 "
 "수 없음)"
 
-#: kcm/backupplanwidget.cpp:568
+#: kcm/backupplanwidget.cpp:562
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Synchronized Backup"
 msgstr "동기화된 백업"
 
-#: kcm/backupplanwidget.cpp:596
+#: kcm/backupplanwidget.cpp:590
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Backup Type"
 msgstr "백업 형식"
 
-#: kcm/backupplanwidget.cpp:597
+#: kcm/backupplanwidget.cpp:591
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select what type of backup you want"
 msgstr "백업 종류를 선택하십시오"
 
-#: kcm/backupplanwidget.cpp:606
+#: kcm/backupplanwidget.cpp:600
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Sources"
 msgstr "원본"
 
-#: kcm/backupplanwidget.cpp:607
+#: kcm/backupplanwidget.cpp:601
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select which folders to include in backup"
 msgstr "백업에 포함될 폴더를 선택하십시오"
 
-#: kcm/backupplanwidget.cpp:622
+#: kcm/backupplanwidget.cpp:616
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Filesystem Path"
 msgstr "파일 시스템 경로"
 
-#: kcm/backupplanwidget.cpp:623
+#: kcm/backupplanwidget.cpp:617
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "External Storage"
 msgstr "외부 저장소"
 
-#: kcm/backupplanwidget.cpp:629
+#: kcm/backupplanwidget.cpp:623
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -945,26 +932,26 @@ msgstr ""
 "크 저장소에 백업합니다. 이 옵션을 사용하려면 해당 장치를 항상 파일 시스템의 "
 "같은 경로에 마운트해야 합니다. 지정한 경로의 존재 여부는 계속 관찰합니다."
 
-#: kcm/backupplanwidget.cpp:636
+#: kcm/backupplanwidget.cpp:630
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Destination Path for Backup:"
 msgstr "백업 대상 경로:"
 
-#: kcm/backupplanwidget.cpp:647
+#: kcm/backupplanwidget.cpp:641
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
 msgstr "로컬 파일 시스템 경로만 사용할 수 있습니다!"
 
-#: kcm/backupplanwidget.cpp:654
+#: kcm/backupplanwidget.cpp:648
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
 msgstr ""
 "폴더가 존재하지 않습니다! 폴더를 만들기 전까지 백업을 수행하지 않을 것입니다."
 
-#: kcm/backupplanwidget.cpp:673
+#: kcm/backupplanwidget.cpp:667
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -974,55 +961,55 @@ msgstr ""
 "이 옵션을 사용하면 USB 외장형 하드 드라이브나 메모리와 같은 외부 저장소를 컴"
 "퓨터에 연결했을 때에만 파일을 백업합니다."
 
-#: kcm/backupplanwidget.cpp:682 kcm/backupplanwidget.cpp:685
+#: kcm/backupplanwidget.cpp:676 kcm/backupplanwidget.cpp:679
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "The specified folder will be created if it does not exist."
 msgstr "지정한 폴더가 없으면 생성합니다."
 
-#: kcm/backupplanwidget.cpp:684
+#: kcm/backupplanwidget.cpp:678
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Folder on Destination Drive:"
 msgstr "대상 드라이브의 폴더:"
 
-#: kcm/backupplanwidget.cpp:691
+#: kcm/backupplanwidget.cpp:685
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a folder"
 msgstr "폴더 선택 대화 상자 열기"
 
-#: kcm/backupplanwidget.cpp:721
+#: kcm/backupplanwidget.cpp:715
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Destination"
 msgstr "대상"
 
-#: kcm/backupplanwidget.cpp:722
+#: kcm/backupplanwidget.cpp:716
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select the backup destination"
 msgstr "백업 대상 선택"
 
-#: kcm/backupplanwidget.cpp:740
+#: kcm/backupplanwidget.cpp:734
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Manual Activation"
 msgstr "수동 활성화"
 
-#: kcm/backupplanwidget.cpp:741
+#: kcm/backupplanwidget.cpp:735
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Interval"
 msgstr "간격"
 
-#: kcm/backupplanwidget.cpp:742
+#: kcm/backupplanwidget.cpp:736
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Active Usage Time"
 msgstr "활성 사용 시간"
 
-#: kcm/backupplanwidget.cpp:745
+#: kcm/backupplanwidget.cpp:739
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1032,7 +1019,7 @@ msgstr ""
 "요청했을 때에만 백업을 만듭니다. 백업 상태 Plasma 위젯에서 호출할 수 있습니"
 "다."
 
-#: kcm/backupplanwidget.cpp:760
+#: kcm/backupplanwidget.cpp:754
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1042,31 +1029,31 @@ msgstr ""
 "백업 대상을 사용할 수 있으며 마지막으로 백업을 저장한 후 지정한 시간이 지났다"
 "면 새 백업을 만듭니다."
 
-#: kcm/backupplanwidget.cpp:777
+#: kcm/backupplanwidget.cpp:771
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Minutes"
 msgstr "분"
 
-#: kcm/backupplanwidget.cpp:778 kcm/backupplanwidget.cpp:805
+#: kcm/backupplanwidget.cpp:772 kcm/backupplanwidget.cpp:799
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Hours"
 msgstr "시간"
 
-#: kcm/backupplanwidget.cpp:779
+#: kcm/backupplanwidget.cpp:773
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Days"
 msgstr "일"
 
-#: kcm/backupplanwidget.cpp:780
+#: kcm/backupplanwidget.cpp:774
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Weeks"
 msgstr "주"
 
-#: kcm/backupplanwidget.cpp:790
+#: kcm/backupplanwidget.cpp:784
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1077,31 +1064,31 @@ msgstr ""
 "백업 대상을 사용할 수 있으며 마지막으로 백업을 저장한 후 지정한 시간 동안 컴"
 "퓨터를 사용했다면 새 백업을 만듭니다."
 
-#: kcm/backupplanwidget.cpp:810
+#: kcm/backupplanwidget.cpp:804
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
 msgstr "백업을 저장하기 전에 묻기"
 
-#: kcm/backupplanwidget.cpp:829
+#: kcm/backupplanwidget.cpp:823
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Schedule"
 msgstr "일정"
 
-#: kcm/backupplanwidget.cpp:830
+#: kcm/backupplanwidget.cpp:824
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Specify the backup schedule"
 msgstr "백업 일정 지정"
 
-#: kcm/backupplanwidget.cpp:844
+#: kcm/backupplanwidget.cpp:838
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
 msgstr "원본 선택에 숨김 폴더 표시"
 
-#: kcm/backupplanwidget.cpp:848
+#: kcm/backupplanwidget.cpp:842
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1114,7 +1101,7 @@ msgstr ""
 "숨김 폴더의 이름은 점(.)으로 시작합니다. 대부분 홈 폴더 아래에 있으며 앱의 설"
 "정이나 임시 파일을 저장합니다."
 
-#: kcm/backupplanwidget.cpp:869
+#: kcm/backupplanwidget.cpp:863
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1125,13 +1112,13 @@ msgstr ""
 "백업 저장 공간의 약 10%를 더 사용하며 백업 저장에 시간이 조금 더 걸릴 수 있습"
 "니다. 그 대신 일부 손상된 백업에서 복구가 가능합니다."
 
-#: kcm/backupplanwidget.cpp:875
+#: kcm/backupplanwidget.cpp:869
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Generate recovery information"
 msgstr "복구 정보 생성"
 
-#: kcm/backupplanwidget.cpp:878
+#: kcm/backupplanwidget.cpp:872
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid ""
@@ -1141,13 +1128,13 @@ msgstr ""
 "복구 정보 생성(<application>par2</application>가 설치되어 있지 않아서 사용할 "
 "수 없음)"
 
-#: kcm/backupplanwidget.cpp:894
+#: kcm/backupplanwidget.cpp:888
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Verify integrity of backups"
 msgstr "백업 무결성 검사"
 
-#: kcm/backupplanwidget.cpp:898
+#: kcm/backupplanwidget.cpp:892
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1160,13 +1147,13 @@ msgstr ""
 "장에 더 긴 시간이 걸릴 수도 있지만 백업 파일에 문제가 발생했을 때 더 늦기 전"
 "에 빠르게 알 수 있습니다."
 
-#: kcm/backupplanwidget.cpp:914
+#: kcm/backupplanwidget.cpp:908
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "패턴과 일치하는 파일이나 폴더 제외"
 
-#: kcm/backupplanwidget.cpp:932
+#: kcm/backupplanwidget.cpp:926
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1178,30 +1165,30 @@ msgstr ""
 "과 이름이 일치하는 파일이나 폴더는 백업에서 제외됩니다. 패턴 형식은 <link "
 "url='%1'>여기</link>를 참조하십시오."
 
-#: kcm/backupplanwidget.cpp:950
+#: kcm/backupplanwidget.cpp:944
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "파일 선택 대화 상자 열기"
 
-#: kcm/backupplanwidget.cpp:952
+#: kcm/backupplanwidget.cpp:946
 #, kde-format
 msgid "Select pattern file"
 msgstr "패턴 파일 선택"
 
-#: kcm/backupplanwidget.cpp:977
+#: kcm/backupplanwidget.cpp:971
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "고급"
 
-#: kcm/backupplanwidget.cpp:978
+#: kcm/backupplanwidget.cpp:972
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "고급 사용자용 추가 옵션"
 
-#: kcm/backupplanwidget.cpp:1008
+#: kcm/backupplanwidget.cpp:1002
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
@@ -1509,3 +1496,47 @@ msgstr "사용 가능한 공간: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "이 백업 계획은 실행되지 않았습니다."
+
+#~ msgctxt "@action:button"
+#~ msgid "Yes"
+#~ msgstr "예"
+
+#~ msgctxt "@action:button"
+#~ msgid "No"
+#~ msgstr "아니요"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This type of backup is an <emphasis>archive</emphasis>. It contains both "
+#~ "the latest version of your files and earlier backed up versions. Using "
+#~ "this type of backup allows you to recover older versions of your files, "
+#~ "or files which were deleted on your computer at a later time. The storage "
+#~ "space needed is minimized by looking for common parts of your files "
+#~ "between versions and only storing those parts once. Nevertheless, the "
+#~ "backup archive will keep growing in size as time goes by.<nl/>Also "
+#~ "important to know is that the files in the archive can not be accessed "
+#~ "directly with a general file manager, a special program is needed."
+#~ msgstr ""
+#~ "이 형식의 백업은 <emphasis>압축 파일</emphasis>을 생성합니다. 파일의 최신 "
+#~ "버전과 이전 백업된 버전을 모두 포함합니다. 이 형식의 백업을 사용하면 컴퓨"
+#~ "터에서 나중에 삭제한 파일이라도 이전 버전을 복원할 수 있습니다. 파일을 저"
+#~ "장할 때 버전간의 차이점을 비교하여 같은 부분은 한 번만 저장하는 식으로 저"
+#~ "장 공간 사용을 최소화합니다. 그래도 시간에 따라서 백업 압축 파일의 크기는 "
+#~ "계속 증가합니다.<nl/>이 형식으로 백업한 압축 파일은 일반적인 파일 관리자로"
+#~ "는 접근할 수 없으며 특별한 프로그램이 필요합니다."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This type of backup is a folder which is synchronized with your selected "
+#~ "source folders. Saving a backup simply means making the backup "
+#~ "destination contain an exact copy of your source folders as they are now "
+#~ "and nothing else. If a file has been deleted in a source folder it will "
+#~ "get deleted from the backup folder.<nl/>This type of backup can protect "
+#~ "you against data loss due to a broken hard drive but it does not help you "
+#~ "to recover from your own mistakes."
+#~ msgstr ""
+#~ "이 형식의 백업은 선택한 원본 폴더와 동기화된 폴더를 생성합니다. 백업 저장 "
+#~ "과정은 현재 시점에서의 원본 폴더의 정확한 복사본을 백업 대상에 저장하는 것"
+#~ "입니다. 원본 폴더에서 파일이 삭제되었다면 백업 폴더에서도 삭제됩니다.<nl/>"
+#~ "이 형식의 백업은 하드 드라이브가 고장났을 때 데이터를 복구할 수 있으나 사"
+#~ "용자의 실수를 보호하지는 못합니다."

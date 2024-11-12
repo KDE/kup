@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-20 01:57+0000\n"
+"POT-Creation-Date: 2024-11-12 01:54+0000\n"
 "PO-Revision-Date: 2024-10-05 12:43+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -353,9 +353,11 @@ msgid "Repairing backups"
 msgstr "Naprawianie kopii"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Do you want to save a first backup now?"
 msgctxt "@info"
-msgid "Do you want to save a first backup now?"
+msgid "Save the first backup now?"
 msgstr "Czy chcesz teraz zapisać pierwszą kopię zapasową?"
 
 #: daemon/planexecutor.cpp:108
@@ -380,20 +382,19 @@ msgstr ""
 "Czy chcesz zapisać kopię teraz?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#: daemon/planexecutor.cpp:202 daemon/planexecutor.cpp:220
-#: daemon/planexecutor.cpp:368 daemon/planexecutor.cpp:380
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgid "Save new backup"
 msgctxt "@action:button"
-msgid "Yes"
-msgstr "Tak"
+msgid "Save Backup"
+msgstr "Zapisz nową kopię"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
 #: daemon/planexecutor.cpp:369 daemon/planexecutor.cpp:383
 #, kde-kuit-format
 msgctxt "@action:button"
-msgid "No"
-msgstr "Nie"
+msgid "Cancel"
+msgstr ""
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -408,6 +409,13 @@ msgstr "Zapisywanie kopii nie powiodło się"
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "Wyświetl plik dziennika"
+
+#: daemon/planexecutor.cpp:202 daemon/planexecutor.cpp:220
+#: daemon/planexecutor.cpp:368 daemon/planexecutor.cpp:380
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Repair"
+msgstr ""
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -859,30 +867,15 @@ msgid "Back to overview"
 msgstr "Wróć do przeglądu"
 
 #: kcm/backupplanwidget.cpp:523
-#, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"This type of backup is an <emphasis>archive</emphasis>. It contains both the "
-"latest version of your files and earlier backed up versions. Using this type "
-"of backup allows you to recover older versions of your files, or files which "
-"were deleted on your computer at a later time. The storage space needed is "
-"minimized by looking for common parts of your files between versions and "
-"only storing those parts once. Nevertheless, the backup archive will keep "
-"growing in size as time goes by.<nl/>Also important to know is that the "
-"files in the archive can not be accessed directly with a general file "
-"manager, a special program is needed."
+"Back up multiple versions over time of the files in the source folders. This "
+"allows older versions of files or deleted files to be recovered.<nl/></nl/"
+">The backup archive will grow in size over time, and can only be accessed "
+"using the recovery tools provided by this program."
 msgstr ""
-"Ten rodzaj kopii to <emphasis>archiwum</emphasis>. Zawiera zarówno ostatnią "
-"wersję twoich plików, jak i wersje zachowane poprzednio. Użycie tego rodzaju "
-"kopii pozwala na odtworzenie starszych wersji plików bądź też plików "
-"usuniętych wcześniej z dysku. Przestrzeń dyskowa potrzebna do zachowania "
-"kopii jest minimalizowana poprzez wyszukiwanie w kolejnych wersjach plików "
-"ich części wspólnych i zapisywanie tych części tylko raz. Niemniej jednak "
-"archiwum będzie z czasem coraz większe.<nl/>Należy również pamiętać, że "
-"pliki archiwum tego rodzaju nie będą dostępne bezpośrednio w systemowym "
-"menedżerze plików - niezbędny jest specjalny program."
 
-#: kcm/backupplanwidget.cpp:539
+#: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -892,34 +885,23 @@ msgstr ""
 "Wersjonowana kopia zapasowa (nie jest dostępna ponieważ <application>bup</"
 "application> nie jest zainstalowany)"
 
-#: kcm/backupplanwidget.cpp:544
+#: kcm/backupplanwidget.cpp:540
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Versioned Backup (recommended)"
 msgstr "Wersjonowana kopia zapasowa (rekomendowane)"
 
-#: kcm/backupplanwidget.cpp:549
+#: kcm/backupplanwidget.cpp:545
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"This type of backup is a folder which is synchronized with your selected "
-"source folders. Saving a backup simply means making the backup destination "
-"contain an exact copy of your source folders as they are now and nothing "
-"else. If a file has been deleted in a source folder it will get deleted from "
-"the backup folder.<nl/>This type of backup can protect you against data loss "
-"due to a broken hard drive but it does not help you to recover from your own "
-"mistakes."
+"Make the destination folder identical to the source folder. Files deleted "
+"from a source folder will be deleted from the backup folder as well.<nl/><nl/"
+">This can prevent data loss due to a broken disk, but not due to filesbeing "
+"accidentally deleted or changed."
 msgstr ""
-"Ten rodzaj kopii to katalog docelowy synchronizowany z wybranymi katalogami "
-"źródłowymi. Utworzenie kopii oznacza po prostu przekopiowanie do miejsca "
-"docelowego dokładnie wszystkich plików zawartych w katalogach źródłowych i "
-"nic poza tym. Jeśli jakiś plik został usunięty w katalogu źródłowym, to po "
-"utworzeniu kopii nie będzie go również w katalogu docelowym.<nl/>Ten rodzaj "
-"kopii zabezpiecza cię przed utratą danych na skutek uszkodzenia dysku "
-"twardego, ale nie pomoże ci odzyskać plików utraconych w wyniku twych "
-"własnych pomyłek."
 
-#: kcm/backupplanwidget.cpp:563
+#: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -929,49 +911,49 @@ msgstr ""
 "Synchronizowana kopia zapasowa (nie dostępna ponieważ <application>rsync</"
 "application> nie jest zainstalowany)"
 
-#: kcm/backupplanwidget.cpp:568
+#: kcm/backupplanwidget.cpp:562
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Synchronized Backup"
 msgstr "Synchronizowana kopia zapasowa"
 
-#: kcm/backupplanwidget.cpp:596
+#: kcm/backupplanwidget.cpp:590
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Backup Type"
 msgstr "Rodzaj kopii zapasowej"
 
-#: kcm/backupplanwidget.cpp:597
+#: kcm/backupplanwidget.cpp:591
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select what type of backup you want"
 msgstr "Wybierz jaki rodzaj kopii zapasowej chcesz"
 
-#: kcm/backupplanwidget.cpp:606
+#: kcm/backupplanwidget.cpp:600
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Sources"
 msgstr "Źródła"
 
-#: kcm/backupplanwidget.cpp:607
+#: kcm/backupplanwidget.cpp:601
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select which folders to include in backup"
 msgstr "Wybierz które katalogi mają być zawarte w kopii zapasowej"
 
-#: kcm/backupplanwidget.cpp:622
+#: kcm/backupplanwidget.cpp:616
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Filesystem Path"
 msgstr "Ścieżka systemu plików"
 
-#: kcm/backupplanwidget.cpp:623
+#: kcm/backupplanwidget.cpp:617
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "External Storage"
 msgstr "Pamięć zewnętrzna"
 
-#: kcm/backupplanwidget.cpp:629
+#: kcm/backupplanwidget.cpp:623
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -985,19 +967,19 @@ msgstr ""
 "podpinanie dysku zawsze w tej samej ścieżce. Określona ścieżka nie musi "
 "istnieć cały czas, jej dostępność będzie monitorowana."
 
-#: kcm/backupplanwidget.cpp:636
+#: kcm/backupplanwidget.cpp:630
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Destination Path for Backup:"
 msgstr "Ścieżka docelowa dla kopii zapasowej:"
 
-#: kcm/backupplanwidget.cpp:647
+#: kcm/backupplanwidget.cpp:641
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
 msgstr "Tylko miejscowe ścieżki zadziałają!"
 
-#: kcm/backupplanwidget.cpp:654
+#: kcm/backupplanwidget.cpp:648
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
@@ -1005,7 +987,7 @@ msgstr ""
 "Katalog nie istnieje! Żadna kopia zapasowa nie zostanie zapisana, dopóki go "
 "nie stworzysz."
 
-#: kcm/backupplanwidget.cpp:673
+#: kcm/backupplanwidget.cpp:667
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1016,55 +998,55 @@ msgstr ""
 "pamięci zewnętrznej, która może być podłączana do tego komputera, czyli na "
 "przykład dysk zewnętrzny lub karta pamięci."
 
-#: kcm/backupplanwidget.cpp:682 kcm/backupplanwidget.cpp:685
+#: kcm/backupplanwidget.cpp:676 kcm/backupplanwidget.cpp:679
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "The specified folder will be created if it does not exist."
 msgstr "Określony katalog zostanie stworzony, jeżeli jeszcze nie istnieje."
 
-#: kcm/backupplanwidget.cpp:684
+#: kcm/backupplanwidget.cpp:678
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Folder on Destination Drive:"
 msgstr "Katalog na dysku docelowym:"
 
-#: kcm/backupplanwidget.cpp:691
+#: kcm/backupplanwidget.cpp:685
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a folder"
 msgstr "Otwórz okno dialogowe aby wybrać katalog"
 
-#: kcm/backupplanwidget.cpp:721
+#: kcm/backupplanwidget.cpp:715
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Destination"
 msgstr "Miejsce docelowe"
 
-#: kcm/backupplanwidget.cpp:722
+#: kcm/backupplanwidget.cpp:716
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select the backup destination"
 msgstr "Wybierz miejsce docelowe kopii zapasowej"
 
-#: kcm/backupplanwidget.cpp:740
+#: kcm/backupplanwidget.cpp:734
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Manual Activation"
 msgstr "Ręczne wyzwalanie"
 
-#: kcm/backupplanwidget.cpp:741
+#: kcm/backupplanwidget.cpp:735
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Interval"
 msgstr "Interwał"
 
-#: kcm/backupplanwidget.cpp:742
+#: kcm/backupplanwidget.cpp:736
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Active Usage Time"
 msgstr "Czas aktywnego używania"
 
-#: kcm/backupplanwidget.cpp:745
+#: kcm/backupplanwidget.cpp:739
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1074,7 +1056,7 @@ msgstr ""
 "Kopie zapasowe są zapisywane tylko wtedy, gdy ręcznie tego zażądano. Zażądać "
 "tego można z elementu interfejsu kopii zapasowych Plazmy."
 
-#: kcm/backupplanwidget.cpp:760
+#: kcm/backupplanwidget.cpp:754
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1085,31 +1067,31 @@ msgstr ""
 "dostępne i kiedy więcej czasu minie niż w ustawionym okresie od kiedy "
 "ostatnia kopia została zrobiona."
 
-#: kcm/backupplanwidget.cpp:777
+#: kcm/backupplanwidget.cpp:771
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Minutes"
 msgstr "Minuty"
 
-#: kcm/backupplanwidget.cpp:778 kcm/backupplanwidget.cpp:805
+#: kcm/backupplanwidget.cpp:772 kcm/backupplanwidget.cpp:799
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Hours"
 msgstr "Godziny"
 
-#: kcm/backupplanwidget.cpp:779
+#: kcm/backupplanwidget.cpp:773
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Days"
 msgstr "Dni"
 
-#: kcm/backupplanwidget.cpp:780
+#: kcm/backupplanwidget.cpp:774
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Weeks"
 msgstr "Tygodnie"
 
-#: kcm/backupplanwidget.cpp:790
+#: kcm/backupplanwidget.cpp:784
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1121,31 +1103,31 @@ msgstr ""
 "czas aktywnego użycia komputera od chwili utworzenia ostatniej kopii "
 "przekroczy wartość podaną w ustawieniach."
 
-#: kcm/backupplanwidget.cpp:810
+#: kcm/backupplanwidget.cpp:804
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
 msgstr "Zapytaj o potwierdzenie przed zapisaniem kopii zapasowej"
 
-#: kcm/backupplanwidget.cpp:829
+#: kcm/backupplanwidget.cpp:823
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Schedule"
 msgstr "Harmonogram"
 
-#: kcm/backupplanwidget.cpp:830
+#: kcm/backupplanwidget.cpp:824
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Specify the backup schedule"
 msgstr "Określ harmonogram wykonywania kopii zapasowych"
 
-#: kcm/backupplanwidget.cpp:844
+#: kcm/backupplanwidget.cpp:838
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
 msgstr "Wyświetl ukryte katalogi w wyborze ścieżki"
 
-#: kcm/backupplanwidget.cpp:848
+#: kcm/backupplanwidget.cpp:842
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1160,7 +1142,7 @@ msgstr ""
 "i używane do przechowywania ustawień oraz plików tymczasowych Twoich "
 "aplikacji."
 
-#: kcm/backupplanwidget.cpp:869
+#: kcm/backupplanwidget.cpp:863
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1172,13 +1154,13 @@ msgstr ""
 "tworzenie zajmie nieco więcej czasu. W zamian za to będzie możliwe "
 "odzyskanie danych z częściowo uszkodzonej kopii zapasowej."
 
-#: kcm/backupplanwidget.cpp:875
+#: kcm/backupplanwidget.cpp:869
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Generate recovery information"
 msgstr "Generowanie informacji ratunkowych"
 
-#: kcm/backupplanwidget.cpp:878
+#: kcm/backupplanwidget.cpp:872
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid ""
@@ -1188,13 +1170,13 @@ msgstr ""
 "Generowanie informacji ratunkowych (niedostępne z uwagi na brak "
 "zainstalowanej aplikacji <application>par2</application>)"
 
-#: kcm/backupplanwidget.cpp:894
+#: kcm/backupplanwidget.cpp:888
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Verify integrity of backups"
 msgstr "Sprawdź spójność kopii zapasowych"
 
-#: kcm/backupplanwidget.cpp:898
+#: kcm/backupplanwidget.cpp:892
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1208,13 +1190,13 @@ msgstr ""
 "więcej czasu, ale pozwoli znaleźć błędy zanim nadejdzie potrzeba użycia "
 "kopii, kiedy może być już za późno."
 
-#: kcm/backupplanwidget.cpp:914
+#: kcm/backupplanwidget.cpp:908
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "Wyklucz pliki i katalogi na podstawie wzorców"
 
-#: kcm/backupplanwidget.cpp:932
+#: kcm/backupplanwidget.cpp:926
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1227,30 +1209,30 @@ msgstr ""
 "wykluczone z kopii zapasowej. Zapis wzorców został objaśniony <link "
 "url='%1'>tutaj</link>."
 
-#: kcm/backupplanwidget.cpp:950
+#: kcm/backupplanwidget.cpp:944
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "Otwórz okno dialogowe do wyboru pliku"
 
-#: kcm/backupplanwidget.cpp:952
+#: kcm/backupplanwidget.cpp:946
 #, kde-format
 msgid "Select pattern file"
 msgstr "Wybierz plik wzorców"
 
-#: kcm/backupplanwidget.cpp:977
+#: kcm/backupplanwidget.cpp:971
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Rozszerzone"
 
-#: kcm/backupplanwidget.cpp:978
+#: kcm/backupplanwidget.cpp:972
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Dodatkowe ustawienia dla doświadczonych użytkowników"
 
-#: kcm/backupplanwidget.cpp:1008
+#: kcm/backupplanwidget.cpp:1002
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
@@ -1560,6 +1542,56 @@ msgstr "Wolne miejsce: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Ten plan kopii zapasowej nigdy nie był uruchomiony."
+
+#~ msgctxt "@action:button"
+#~ msgid "Yes"
+#~ msgstr "Tak"
+
+#~ msgctxt "@action:button"
+#~ msgid "No"
+#~ msgstr "Nie"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This type of backup is an <emphasis>archive</emphasis>. It contains both "
+#~ "the latest version of your files and earlier backed up versions. Using "
+#~ "this type of backup allows you to recover older versions of your files, "
+#~ "or files which were deleted on your computer at a later time. The storage "
+#~ "space needed is minimized by looking for common parts of your files "
+#~ "between versions and only storing those parts once. Nevertheless, the "
+#~ "backup archive will keep growing in size as time goes by.<nl/>Also "
+#~ "important to know is that the files in the archive can not be accessed "
+#~ "directly with a general file manager, a special program is needed."
+#~ msgstr ""
+#~ "Ten rodzaj kopii to <emphasis>archiwum</emphasis>. Zawiera zarówno "
+#~ "ostatnią wersję twoich plików, jak i wersje zachowane poprzednio. Użycie "
+#~ "tego rodzaju kopii pozwala na odtworzenie starszych wersji plików bądź "
+#~ "też plików usuniętych wcześniej z dysku. Przestrzeń dyskowa potrzebna do "
+#~ "zachowania kopii jest minimalizowana poprzez wyszukiwanie w kolejnych "
+#~ "wersjach plików ich części wspólnych i zapisywanie tych części tylko raz. "
+#~ "Niemniej jednak archiwum będzie z czasem coraz większe.<nl/>Należy "
+#~ "również pamiętać, że pliki archiwum tego rodzaju nie będą dostępne "
+#~ "bezpośrednio w systemowym menedżerze plików - niezbędny jest specjalny "
+#~ "program."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This type of backup is a folder which is synchronized with your selected "
+#~ "source folders. Saving a backup simply means making the backup "
+#~ "destination contain an exact copy of your source folders as they are now "
+#~ "and nothing else. If a file has been deleted in a source folder it will "
+#~ "get deleted from the backup folder.<nl/>This type of backup can protect "
+#~ "you against data loss due to a broken hard drive but it does not help you "
+#~ "to recover from your own mistakes."
+#~ msgstr ""
+#~ "Ten rodzaj kopii to katalog docelowy synchronizowany z wybranymi "
+#~ "katalogami źródłowymi. Utworzenie kopii oznacza po prostu przekopiowanie "
+#~ "do miejsca docelowego dokładnie wszystkich plików zawartych w katalogach "
+#~ "źródłowych i nic poza tym. Jeśli jakiś plik został usunięty w katalogu "
+#~ "źródłowym, to po utworzeniu kopii nie będzie go również w katalogu "
+#~ "docelowym.<nl/>Ten rodzaj kopii zabezpiecza cię przed utratą danych na "
+#~ "skutek uszkodzenia dysku twardego, ale nie pomoże ci odzyskać plików "
+#~ "utraconych w wyniku twych własnych pomyłek."
 
 #~ msgid "Copyright (C) 2011-2015 Simon Persson"
 #~ msgstr "Wszystkie prawa zastrzeżone (C) 2011-2015 Simon Persson"

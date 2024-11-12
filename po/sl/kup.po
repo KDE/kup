@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-20 01:57+0000\n"
+"POT-Creation-Date: 2024-11-12 01:54+0000\n"
 "PO-Revision-Date: 2024-09-20 07:01+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -346,9 +346,11 @@ msgid "Repairing backups"
 msgstr "Popravljanje varnostnih kopij"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Do you want to save a first backup now?"
 msgctxt "@info"
-msgid "Do you want to save a first backup now?"
+msgid "Save the first backup now?"
 msgstr "Ali želite zdaj shraniti prvo varnostno kopijo?"
 
 #: daemon/planexecutor.cpp:108
@@ -372,20 +374,19 @@ msgstr ""
 "Ali želite zdaj shraniti novo varnostno kopijo?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#: daemon/planexecutor.cpp:202 daemon/planexecutor.cpp:220
-#: daemon/planexecutor.cpp:368 daemon/planexecutor.cpp:380
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgid "Save new backup"
 msgctxt "@action:button"
-msgid "Yes"
-msgstr "Da"
+msgid "Save Backup"
+msgstr "Shrani novo varnostno kopijo"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
 #: daemon/planexecutor.cpp:369 daemon/planexecutor.cpp:383
 #, kde-kuit-format
 msgctxt "@action:button"
-msgid "No"
-msgstr "Ne"
+msgid "Cancel"
+msgstr ""
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -400,6 +401,13 @@ msgstr "Shranjevanje varnostne kopije ni uspelo"
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "Pokaži datoteko dnevnika"
+
+#: daemon/planexecutor.cpp:202 daemon/planexecutor.cpp:220
+#: daemon/planexecutor.cpp:368 daemon/planexecutor.cpp:380
+#, kde-kuit-format
+msgctxt "@action:button"
+msgid "Repair"
+msgstr ""
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -851,30 +859,15 @@ msgid "Back to overview"
 msgstr "Nazaj na splošni pregled"
 
 #: kcm/backupplanwidget.cpp:523
-#, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"This type of backup is an <emphasis>archive</emphasis>. It contains both the "
-"latest version of your files and earlier backed up versions. Using this type "
-"of backup allows you to recover older versions of your files, or files which "
-"were deleted on your computer at a later time. The storage space needed is "
-"minimized by looking for common parts of your files between versions and "
-"only storing those parts once. Nevertheless, the backup archive will keep "
-"growing in size as time goes by.<nl/>Also important to know is that the "
-"files in the archive can not be accessed directly with a general file "
-"manager, a special program is needed."
+"Back up multiple versions over time of the files in the source folders. This "
+"allows older versions of files or deleted files to be recovered.<nl/></nl/"
+">The backup archive will grow in size over time, and can only be accessed "
+"using the recovery tools provided by this program."
 msgstr ""
-"Ta vrsta varnostne kopije je <emphasis>arhiv</emphasis>. Vsebuje oboje "
-"najnovejšo različico datotek in starejše varnostne kopije. Uporaba te vrste "
-"varnostne kopije vam omogoča, da obnovite starejše različice datotek ali "
-"datotek, ki so bili pozneje izbrisane iz vašega računalnika. Potreben je "
-"prostor za shranjevanje je zmanjšan z iskanjem skupnih delov datotek med "
-"različicami in le enkratno hrambo teh delov. Kljub temu bo shranjen arhiv "
-"varnostnih kopij s časom naraščal glede velikosti.<nl/>Pomembno je vedeti "
-"tudi to, da do datotek v arhivu ni mogoče dostopati neposredno s splošnim "
-"upravljalnikom datotek, ampak je potreben posebni program."
 
-#: kcm/backupplanwidget.cpp:539
+#: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -884,33 +877,23 @@ msgstr ""
 "Varnostno kopiranje z verzijami (ni na voljo, ker ni nameščena aplikacija "
 "<application>bup</application>)"
 
-#: kcm/backupplanwidget.cpp:544
+#: kcm/backupplanwidget.cpp:540
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Versioned Backup (recommended)"
 msgstr "Varnostno kopiranje z verzijami (priporočena)"
 
-#: kcm/backupplanwidget.cpp:549
+#: kcm/backupplanwidget.cpp:545
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"This type of backup is a folder which is synchronized with your selected "
-"source folders. Saving a backup simply means making the backup destination "
-"contain an exact copy of your source folders as they are now and nothing "
-"else. If a file has been deleted in a source folder it will get deleted from "
-"the backup folder.<nl/>This type of backup can protect you against data loss "
-"due to a broken hard drive but it does not help you to recover from your own "
-"mistakes."
+"Make the destination folder identical to the source folder. Files deleted "
+"from a source folder will be deleted from the backup folder as well.<nl/><nl/"
+">This can prevent data loss due to a broken disk, but not due to filesbeing "
+"accidentally deleted or changed."
 msgstr ""
-"Ta vrsta varnostne kopije je mapa, ki je sinhronizirana z izbranimi "
-"izvornimi mapami. Shranjevanje varnostne kopije preprosto pomeni, da cilj "
-"varnostne kopije vsebuje natančno kopijo izvornih map, kakršne so zdaj, in "
-"nič drugega. Če je bila datoteka izbrisana v izvorni mapi, se bo izbrisala "
-"iz tudi iz mape za varnostno kopijo.<nl/>Ta vrsta varnostne kopije vas lahko "
-"zaščiti pred izgubo podatkov zaradi pokvarjenega trdega diska, a vam ne "
-"pomaga, da si opomorete od svoje lastne napake."
 
-#: kcm/backupplanwidget.cpp:563
+#: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -920,49 +903,49 @@ msgstr ""
 "Sinhronizirana varnostna kopija (ni na voljo, ker ni nameščena "
 "<application>rsync</application>)"
 
-#: kcm/backupplanwidget.cpp:568
+#: kcm/backupplanwidget.cpp:562
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Synchronized Backup"
 msgstr "Sinhronizirana varnostna kopija"
 
-#: kcm/backupplanwidget.cpp:596
+#: kcm/backupplanwidget.cpp:590
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Backup Type"
 msgstr "Vrsta varnostne kopije"
 
-#: kcm/backupplanwidget.cpp:597
+#: kcm/backupplanwidget.cpp:591
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select what type of backup you want"
 msgstr "Izberite, kakšno vrsto varnostne kopije želite"
 
-#: kcm/backupplanwidget.cpp:606
+#: kcm/backupplanwidget.cpp:600
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Sources"
 msgstr "Viri"
 
-#: kcm/backupplanwidget.cpp:607
+#: kcm/backupplanwidget.cpp:601
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select which folders to include in backup"
 msgstr "Izberite mape, ki jih želite vključiti v varnostno kopijo"
 
-#: kcm/backupplanwidget.cpp:622
+#: kcm/backupplanwidget.cpp:616
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Filesystem Path"
 msgstr "Pot datotečnega sistema"
 
-#: kcm/backupplanwidget.cpp:623
+#: kcm/backupplanwidget.cpp:617
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "External Storage"
 msgstr "Zunanja hramba"
 
-#: kcm/backupplanwidget.cpp:629
+#: kcm/backupplanwidget.cpp:623
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -976,19 +959,19 @@ msgstr ""
 "to, da ga vedno namestite na isto pot v datotečnem sistemu. Ni nujno, da tu "
 "navedena pot obstaja ves čas, njen obstoj se bo spremljal."
 
-#: kcm/backupplanwidget.cpp:636
+#: kcm/backupplanwidget.cpp:630
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Destination Path for Backup:"
 msgstr "Ciljna pot za varnostno kopiranje:"
 
-#: kcm/backupplanwidget.cpp:647
+#: kcm/backupplanwidget.cpp:641
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
 msgstr "Delovale bodo samo poti sistema lokalnih datotek!"
 
-#: kcm/backupplanwidget.cpp:654
+#: kcm/backupplanwidget.cpp:648
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
@@ -996,7 +979,7 @@ msgstr ""
 "Mapa ne obstaja! Nobene varnostne kopije ne bo shranjene, dokler ne "
 "ustvarite mape."
 
-#: kcm/backupplanwidget.cpp:673
+#: kcm/backupplanwidget.cpp:667
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1007,55 +990,55 @@ msgstr ""
 "pomnilnik, ki ga lahko priključite na ta računalnik, na primer trdi disk USB "
 "ali pomnilniško kartico."
 
-#: kcm/backupplanwidget.cpp:682 kcm/backupplanwidget.cpp:685
+#: kcm/backupplanwidget.cpp:676 kcm/backupplanwidget.cpp:679
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "The specified folder will be created if it does not exist."
 msgstr "Navedena mapa bo ustvarjena, če še ne obstaja."
 
-#: kcm/backupplanwidget.cpp:684
+#: kcm/backupplanwidget.cpp:678
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Folder on Destination Drive:"
 msgstr "Mapa na ciljni napravi:"
 
-#: kcm/backupplanwidget.cpp:691
+#: kcm/backupplanwidget.cpp:685
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a folder"
 msgstr "Odprite pogovorno okno, da izberete mapo"
 
-#: kcm/backupplanwidget.cpp:721
+#: kcm/backupplanwidget.cpp:715
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Destination"
 msgstr "Cilj"
 
-#: kcm/backupplanwidget.cpp:722
+#: kcm/backupplanwidget.cpp:716
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select the backup destination"
 msgstr "Izberite cilj varnostne kopije"
 
-#: kcm/backupplanwidget.cpp:740
+#: kcm/backupplanwidget.cpp:734
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Manual Activation"
 msgstr "Ročna aktivacija"
 
-#: kcm/backupplanwidget.cpp:741
+#: kcm/backupplanwidget.cpp:735
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Interval"
 msgstr "Interval"
 
-#: kcm/backupplanwidget.cpp:742
+#: kcm/backupplanwidget.cpp:736
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Active Usage Time"
 msgstr "Aktivno uporabljen čas"
 
-#: kcm/backupplanwidget.cpp:745
+#: kcm/backupplanwidget.cpp:739
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1065,7 +1048,7 @@ msgstr ""
 "Varnostne kopije se shranijo samo, če je to ročno zahtevano. To lahko "
 "storite z gradnikom Plasme stanja varnostne kopije."
 
-#: kcm/backupplanwidget.cpp:760
+#: kcm/backupplanwidget.cpp:754
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1076,31 +1059,31 @@ msgstr ""
 "kopije in je od shranjevanja zadnje varnostne kopije minilo več kot zadani "
 "časovni interval."
 
-#: kcm/backupplanwidget.cpp:777
+#: kcm/backupplanwidget.cpp:771
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Minutes"
 msgstr "Minute"
 
-#: kcm/backupplanwidget.cpp:778 kcm/backupplanwidget.cpp:805
+#: kcm/backupplanwidget.cpp:772 kcm/backupplanwidget.cpp:799
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Hours"
 msgstr "Ure"
 
-#: kcm/backupplanwidget.cpp:779
+#: kcm/backupplanwidget.cpp:773
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Days"
 msgstr "Dnevi"
 
-#: kcm/backupplanwidget.cpp:780
+#: kcm/backupplanwidget.cpp:774
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Weeks"
 msgstr "Tedni"
 
-#: kcm/backupplanwidget.cpp:790
+#: kcm/backupplanwidget.cpp:784
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1112,31 +1095,31 @@ msgstr ""
 "kopije in računalnik aktivno uporabljate že več kot postavljeni omejitveni "
 "čas, odkar je bila shranjena zadnja varnostna kopija."
 
-#: kcm/backupplanwidget.cpp:810
+#: kcm/backupplanwidget.cpp:804
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
 msgstr "Prosi za potrditev pred shranjevanjem varnostne kopije"
 
-#: kcm/backupplanwidget.cpp:829
+#: kcm/backupplanwidget.cpp:823
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Schedule"
 msgstr "Časovni plan"
 
-#: kcm/backupplanwidget.cpp:830
+#: kcm/backupplanwidget.cpp:824
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Specify the backup schedule"
 msgstr "Določi časovni plan varnostnega kopiranja"
 
-#: kcm/backupplanwidget.cpp:844
+#: kcm/backupplanwidget.cpp:838
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
 msgstr "Pokaži skrite mape v izbiri vira"
 
-#: kcm/backupplanwidget.cpp:848
+#: kcm/backupplanwidget.cpp:842
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1150,7 +1133,7 @@ msgstr ""
 "Običajno se nahajajo v vaši domači mapi in se uporabljajo za shranjevanje "
 "nastavitev in začasnih datotek vaši aplikacij."
 
-#: kcm/backupplanwidget.cpp:869
+#: kcm/backupplanwidget.cpp:863
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1163,13 +1146,13 @@ msgstr ""
 "zameno bo mogoče obnoviti datoteke tudi iz deloma pokvarjene varnostne "
 "kopije."
 
-#: kcm/backupplanwidget.cpp:875
+#: kcm/backupplanwidget.cpp:869
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Generate recovery information"
 msgstr "Ustvari podatke za obnovo"
 
-#: kcm/backupplanwidget.cpp:878
+#: kcm/backupplanwidget.cpp:872
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid ""
@@ -1179,13 +1162,13 @@ msgstr ""
 "Ustvari podatke o obnovitvi (ni na voljo, ker ni nameščena aplikacija "
 "<application>par2</application>)"
 
-#: kcm/backupplanwidget.cpp:894
+#: kcm/backupplanwidget.cpp:888
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Verify integrity of backups"
 msgstr "Preveri celovitost varnostnih kopij"
 
-#: kcm/backupplanwidget.cpp:898
+#: kcm/backupplanwidget.cpp:892
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1199,13 +1182,13 @@ msgstr ""
 "omogoča, da zaznavanje težav s pokvarjenimi podatki prej kot morate "
 "varnostno kopijo tudi uporabiti, saj bi takrat lahko bilo prepozno."
 
-#: kcm/backupplanwidget.cpp:914
+#: kcm/backupplanwidget.cpp:908
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "Izključi datoteke in mape na podlagi vzorcev"
 
-#: kcm/backupplanwidget.cpp:932
+#: kcm/backupplanwidget.cpp:926
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1218,30 +1201,30 @@ msgstr ""
 "izključene iz varnostne kopije. Oblika vzorca je dokumentirana <link "
 "url='%1'>tukaj</link>."
 
-#: kcm/backupplanwidget.cpp:950
+#: kcm/backupplanwidget.cpp:944
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "Odpri pogovorno okno za izbiro datoteke"
 
-#: kcm/backupplanwidget.cpp:952
+#: kcm/backupplanwidget.cpp:946
 #, kde-format
 msgid "Select pattern file"
 msgstr "Izberi datoteko vzorcev"
 
-#: kcm/backupplanwidget.cpp:977
+#: kcm/backupplanwidget.cpp:971
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Napredno"
 
-#: kcm/backupplanwidget.cpp:978
+#: kcm/backupplanwidget.cpp:972
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Posebne možnosti za napredne uporabnike"
 
-#: kcm/backupplanwidget.cpp:1008
+#: kcm/backupplanwidget.cpp:1002
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
@@ -1550,3 +1533,52 @@ msgstr "Prosti prostor: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Ta časovni plan varnostnega kopiranja še ni bil nikoli zagnan."
+
+#~ msgctxt "@action:button"
+#~ msgid "Yes"
+#~ msgstr "Da"
+
+#~ msgctxt "@action:button"
+#~ msgid "No"
+#~ msgstr "Ne"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This type of backup is an <emphasis>archive</emphasis>. It contains both "
+#~ "the latest version of your files and earlier backed up versions. Using "
+#~ "this type of backup allows you to recover older versions of your files, "
+#~ "or files which were deleted on your computer at a later time. The storage "
+#~ "space needed is minimized by looking for common parts of your files "
+#~ "between versions and only storing those parts once. Nevertheless, the "
+#~ "backup archive will keep growing in size as time goes by.<nl/>Also "
+#~ "important to know is that the files in the archive can not be accessed "
+#~ "directly with a general file manager, a special program is needed."
+#~ msgstr ""
+#~ "Ta vrsta varnostne kopije je <emphasis>arhiv</emphasis>. Vsebuje oboje "
+#~ "najnovejšo različico datotek in starejše varnostne kopije. Uporaba te "
+#~ "vrste varnostne kopije vam omogoča, da obnovite starejše različice "
+#~ "datotek ali datotek, ki so bili pozneje izbrisane iz vašega računalnika. "
+#~ "Potreben je prostor za shranjevanje je zmanjšan z iskanjem skupnih delov "
+#~ "datotek med različicami in le enkratno hrambo teh delov. Kljub temu bo "
+#~ "shranjen arhiv varnostnih kopij s časom naraščal glede velikosti.<nl/"
+#~ ">Pomembno je vedeti tudi to, da do datotek v arhivu ni mogoče dostopati "
+#~ "neposredno s splošnim upravljalnikom datotek, ampak je potreben posebni "
+#~ "program."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This type of backup is a folder which is synchronized with your selected "
+#~ "source folders. Saving a backup simply means making the backup "
+#~ "destination contain an exact copy of your source folders as they are now "
+#~ "and nothing else. If a file has been deleted in a source folder it will "
+#~ "get deleted from the backup folder.<nl/>This type of backup can protect "
+#~ "you against data loss due to a broken hard drive but it does not help you "
+#~ "to recover from your own mistakes."
+#~ msgstr ""
+#~ "Ta vrsta varnostne kopije je mapa, ki je sinhronizirana z izbranimi "
+#~ "izvornimi mapami. Shranjevanje varnostne kopije preprosto pomeni, da cilj "
+#~ "varnostne kopije vsebuje natančno kopijo izvornih map, kakršne so zdaj, "
+#~ "in nič drugega. Če je bila datoteka izbrisana v izvorni mapi, se bo "
+#~ "izbrisala iz tudi iz mape za varnostno kopijo.<nl/>Ta vrsta varnostne "
+#~ "kopije vas lahko zaščiti pred izgubo podatkov zaradi pokvarjenega trdega "
+#~ "diska, a vam ne pomaga, da si opomorete od svoje lastne napake."
