@@ -545,7 +545,7 @@ KPageWidgetItem *BackupPlanWidget::createTypePage(const QString &pBupVersion, co
                                  "Make the destination folder identical to the source folder. Files "
                                  "deleted from a source folder will be deleted from the backup folder "
                                  "as well.<nl/><nl/>"
-                                 "This can prevent data loss due to a broken disk, but not due to files"
+                                 "This can prevent data loss due to a broken disk, but not due to files "
                                  "being accidentally deleted or changed.");
     auto lSyncedInfoLabel = new QLabel(lSyncedInfo);
     lSyncedInfoLabel->setWordWrap(true);
