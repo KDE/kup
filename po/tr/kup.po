@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 01:54+0000\n"
-"PO-Revision-Date: 2024-09-23 15:31+0300\n"
+"POT-Creation-Date: 2024-11-13 01:50+0000\n"
+"PO-Revision-Date: 2024-11-12 19:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -336,12 +336,10 @@ msgid "Repairing backups"
 msgstr "Yedekler onarılıyor"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "İlk yedeğinizi şimdi kaydetmek istiyor musunuz?"
+msgstr "İlk yedek şimdi kaydedilsin mi?"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -364,11 +362,10 @@ msgstr ""
 "Şimdi yeni bir yedek alınsın mı?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "Yeni yedek kaydet"
+msgstr "Yedeği Kaydet"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -376,7 +373,7 @@ msgstr "Yeni yedek kaydet"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "İptal"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -397,7 +394,7 @@ msgstr "Günlük dosyasını göster"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Onar"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -853,6 +850,11 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"Kaynak klasörlerdeki dosyaların zaman içinde birden fazla sürümünü "
+"yedekleyin. Bu, dosyaların eski sürümlerinin veya silinmiş dosyaların "
+"kurtarılmasına olanak tanır.<nl/></nl/>Yedekleme arşivinin boyutu zamanla "
+"büyür ve yalnızca bu program tarafından sağlanan kurtarma araçları "
+"kullanılarak erişilebilir."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -871,14 +873,24 @@ msgid "Versioned Backup (recommended)"
 msgstr "Sürümlendirilmiş Yedekleme (önerilir)"
 
 #: kcm/backupplanwidget.cpp:545
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Make the destination folder identical to the source folder. Files deleted "
+#| "from a source folder will be deleted from the backup folder as well.<nl/"
+#| "><nl/>This can prevent data loss due to a broken disk, but not due to "
+#| "filesbeing accidentally deleted or changed."
 msgctxt "@info"
 msgid ""
 "Make the destination folder identical to the source folder. Files deleted "
 "from a source folder will be deleted from the backup folder as well.<nl/><nl/"
-">This can prevent data loss due to a broken disk, but not due to filesbeing "
+">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"Hedef klasörü kaynak klasörle aynı yapın. Kaynak klasörden silinen dosyalar "
+"yedek klasörden de silinecektir.<nl/><nl/>Bu, bozuk bir disk nedeniyle veri "
+"kaybını önleyebilir; ancak dosyaların yanlışlıkla silinmesi veya "
+"değiştirilmesi nedeniyle olması durumunda önleyemez."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format

@@ -3,14 +3,14 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2019, 2020.
 # SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 01:54+0000\n"
-"PO-Revision-Date: 2024-09-20 11:14+0200\n"
+"POT-Creation-Date: 2024-11-13 01:50+0000\n"
+"PO-Revision-Date: 2024-11-12 12:15+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -349,12 +349,10 @@ msgid "Repairing backups"
 msgstr "S'estan reparant les còpies de seguretat"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "Voleu desar una primera còpia de seguretat ara?"
+msgstr "Deso la primera còpia de seguretat ara?"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -377,11 +375,10 @@ msgstr ""
 "Voleu desar una nova còpia de seguretat ara?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "Desa una còpia de seguretat nova"
+msgstr "Desa una còpia de seguretat"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -389,7 +386,7 @@ msgstr "Desa una còpia de seguretat nova"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -410,7 +407,7 @@ msgstr "Mostra el fitxer de registre"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Repara"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -869,6 +866,11 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"Feu còpies de seguretat de múltiples versions al llarg del temps dels "
+"fitxers a les carpetes d'origen. Això permet recuperar versions antigues "
+"dels fitxers o els fitxers suprimits.<nl/></nl/>L'arxiu de còpia de "
+"seguretat creixerà en mida amb el temps, i només s'hi pot accedir utilitzant "
+"les eines de recuperació proporcionades per aquest programa."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -887,14 +889,24 @@ msgid "Versioned Backup (recommended)"
 msgstr "Còpia de seguretat amb versions (recomanat)"
 
 #: kcm/backupplanwidget.cpp:545
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Make the destination folder identical to the source folder. Files deleted "
+#| "from a source folder will be deleted from the backup folder as well.<nl/"
+#| "><nl/>This can prevent data loss due to a broken disk, but not due to "
+#| "filesbeing accidentally deleted or changed."
 msgctxt "@info"
 msgid ""
 "Make the destination folder identical to the source folder. Files deleted "
 "from a source folder will be deleted from the backup folder as well.<nl/><nl/"
-">This can prevent data loss due to a broken disk, but not due to filesbeing "
+">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"Fa que la carpeta de destinació sigui idèntica a la carpeta d'origen. Els "
+"fitxers esborrats d'una carpeta d'origen també s'eliminaran de la carpeta de "
+"còpia de seguretat.<nl/><nl/>Això pot evitar la pèrdua de dades a causa d'un "
+"disc trencat, però no a causa d'una eliminació o canvi accidental de fitxers."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format

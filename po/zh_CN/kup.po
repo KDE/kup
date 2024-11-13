@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 01:54+0000\n"
+"POT-Creation-Date: 2024-11-13 01:50+0000\n"
 "PO-Revision-Date: 2024-04-22 16:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -309,12 +309,10 @@ msgid "Repairing backups"
 msgstr "正在修复备份"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "您想要立即保存首次备份吗？"
+msgstr ""
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -337,11 +335,10 @@ msgstr ""
 "现在储存新备份？"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "保存新备份"
+msgstr ""
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -838,7 +835,7 @@ msgctxt "@info"
 msgid ""
 "Make the destination folder identical to the source folder. Files deleted "
 "from a source folder will be deleted from the backup folder as well.<nl/><nl/"
-">This can prevent data loss due to a broken disk, but not due to filesbeing "
+">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
 
@@ -1452,45 +1449,3 @@ msgstr "剩余空间：%1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "这个备份计划从未运行过。"
-
-#~ msgctxt "@action:button"
-#~ msgid "Yes"
-#~ msgstr "是"
-
-#~ msgctxt "@action:button"
-#~ msgid "No"
-#~ msgstr "否"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This type of backup is an <emphasis>archive</emphasis>. It contains both "
-#~ "the latest version of your files and earlier backed up versions. Using "
-#~ "this type of backup allows you to recover older versions of your files, "
-#~ "or files which were deleted on your computer at a later time. The storage "
-#~ "space needed is minimized by looking for common parts of your files "
-#~ "between versions and only storing those parts once. Nevertheless, the "
-#~ "backup archive will keep growing in size as time goes by.<nl/>Also "
-#~ "important to know is that the files in the archive can not be accessed "
-#~ "directly with a general file manager, a special program is needed."
-#~ msgstr ""
-#~ "这种类型的备份是一个<emphasis>压缩文件</emphasis>。它同时包含了你文件的最"
-#~ "新版本及较早的备份版本。使用这个类型的备份让您可以将你的文件恢复到旧版本，"
-#~ "或是救回稍后从你的电脑中删除的文件。储存空间是最小的，因为其只储存你文件每"
-#~ "个版本间的差异。然而，备份文件会随着时间的过去而逐渐增大。<nl/>同时尤其要"
-#~ "注意的是，在压缩文件里的文件是无法使用一般的文件管理器直接存取的，必须使用"
-#~ "特殊的程序。"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This type of backup is a folder which is synchronized with your selected "
-#~ "source folders. Saving a backup simply means making the backup "
-#~ "destination contain an exact copy of your source folders as they are now "
-#~ "and nothing else. If a file has been deleted in a source folder it will "
-#~ "get deleted from the backup folder.<nl/>This type of backup can protect "
-#~ "you against data loss due to a broken hard drive but it does not help you "
-#~ "to recover from your own mistakes."
-#~ msgstr ""
-#~ "这个类型的备份是一个与你选定的来源文件夹同步的文件夹。这种备份只将要备份的"
-#~ "目标完整地复制到目的路径。如果文件被从来源文件夹删除，它也会从备份文件夹中"
-#~ "删除。<nl/>这种类型的备份可以防止因为坏掉的磁盘而损失文件，但对您复原自己"
-#~ "造成的错误并没有帮助。"

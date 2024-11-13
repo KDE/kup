@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 01:54+0000\n"
-"PO-Revision-Date: 2024-09-20 07:01+0200\n"
+"POT-Creation-Date: 2024-11-13 01:50+0000\n"
+"PO-Revision-Date: 2024-11-12 07:40+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -346,12 +346,10 @@ msgid "Repairing backups"
 msgstr "Popravljanje varnostnih kopij"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "Ali želite zdaj shraniti prvo varnostno kopijo?"
+msgstr "Naj hranim zdaj prvo varnostno kopijo?"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -374,11 +372,10 @@ msgstr ""
 "Ali želite zdaj shraniti novo varnostno kopijo?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "Shrani novo varnostno kopijo"
+msgstr "Shrani varnostno kopijo"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -386,7 +383,7 @@ msgstr "Shrani novo varnostno kopijo"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Prekliči"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -407,7 +404,7 @@ msgstr "Pokaži datoteko dnevnika"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Popravi"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -866,6 +863,10 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"Varnostno kopiranje sčasoma pridela več različic datotek v izvornih mapah. "
+"To omogoča obnovitev starejših različic datotek ali izbrisanih datotek.<nl/"
+"></nl/>Arhiv varnostne kopije se bo sčasoma povečal in do njega lahko "
+"dostopate samo z orodji za obnovitev, ki jih ponuja ta program."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -884,14 +885,24 @@ msgid "Versioned Backup (recommended)"
 msgstr "Varnostno kopiranje z verzijami (priporočena)"
 
 #: kcm/backupplanwidget.cpp:545
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Make the destination folder identical to the source folder. Files deleted "
+#| "from a source folder will be deleted from the backup folder as well.<nl/"
+#| "><nl/>This can prevent data loss due to a broken disk, but not due to "
+#| "filesbeing accidentally deleted or changed."
 msgctxt "@info"
 msgid ""
 "Make the destination folder identical to the source folder. Files deleted "
 "from a source folder will be deleted from the backup folder as well.<nl/><nl/"
-">This can prevent data loss due to a broken disk, but not due to filesbeing "
+">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"Naj bo ciljna mapa enaka izvorni mapi. Datoteke, izbrisane iz izvorne mape, "
+"bodo izbrisane tudi iz mape za varnostno kopiranje.<nl/><nl/>To lahko "
+"prepreči izgubo podatkov zaradi pokvarjenega diska, ne pa tudi zaradi "
+"pomotoma izbrisanih ali spremenjenih datotek."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
