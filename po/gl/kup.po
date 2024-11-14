@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-09-20 10:52+0200\n"
+"PO-Revision-Date: 2024-11-13 21:29+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -340,12 +340,10 @@ msgid "Repairing backups"
 msgstr "Reparando as salvagardas"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "Quere facer a primeira salvagarda agora?"
+msgstr "Quere gardar a primeira salvagarda agora?"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -368,11 +366,10 @@ msgstr ""
 "Quere facer unha nova salvagarda agora?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "Facer unha nova salvagarda"
+msgstr "Gardar a salvagarda"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -380,7 +377,7 @@ msgstr "Facer unha nova salvagarda"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -401,7 +398,7 @@ msgstr "Amosar o ficheiro de rexistro"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Reparar"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -859,6 +856,11 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"Salvagardar varias versións ao longo do tempo dos ficheiros dos cartafoles "
+"de orixe. Isto permite recuperar versións anteriores de ficheiros ou "
+"ficheiros eliminados.<nl/></nl/>O arquivo de salvagarda medrará co tempo, e "
+"só pode accederse a el mediante as ferramentas de recuperación deste "
+"programa."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -885,6 +887,10 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"Facer o cartafol de destino idéntico ao de orixe. Os ficheiros eliminados do "
+"de orixe eliminaranse tamén do de salvagarda.<nl/><nl/>Isto pode evitar a "
+"perda de datos por rotura de disco, pero non pola eliminación ou cambio "
+"accidental de ficheiros."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format

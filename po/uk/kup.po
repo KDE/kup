@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-11-12 15:04+0200\n"
+"PO-Revision-Date: 2024-11-13 12:24+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -905,13 +905,7 @@ msgid "Versioned Backup (recommended)"
 msgstr "Резервне копіювання із версіями (рекомендовано)"
 
 #: kcm/backupplanwidget.cpp:545
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Make the destination folder identical to the source folder. Files deleted "
-#| "from a source folder will be deleted from the backup folder as well.<nl/"
-#| "><nl/>This can prevent data loss due to a broken disk, but not due to "
-#| "filesbeing accidentally deleted or changed."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Make the destination folder identical to the source folder. Files deleted "

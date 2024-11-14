@@ -3,14 +3,14 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2019, 2020.
 # SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-09-20 11:14+0200\n"
+"PO-Revision-Date: 2024-11-13 10:07+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -349,12 +349,10 @@ msgid "Repairing backups"
 msgstr "S'estan reparant les còpies de seguretat"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "Voleu guardar una primera còpia de seguretat ara?"
+msgstr "Voleu guardar la primera còpia de seguretat ara?"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -378,11 +376,10 @@ msgstr ""
 "Voleu guardar una nova còpia de seguretat ara?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "Guarda una còpia de seguretat nova"
+msgstr "Guarda una còpia de seguretat"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -390,7 +387,7 @@ msgstr "Guarda una còpia de seguretat nova"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -411,7 +408,7 @@ msgstr "Mostra el fitxer de registre"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Repara"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -870,6 +867,11 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"Feu còpies de seguretat de múltiples versions al llarg del temps dels "
+"fitxers a les carpetes d'origen. Açò permet recuperar versions antigues dels "
+"fitxers o els fitxers suprimits.<nl/></nl/>L'arxiu de còpia de seguretat "
+"creixerà en mida amb el temps, i només s'hi pot accedir utilitzant les eines "
+"de recuperació proporcionades per este programa."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -896,6 +898,10 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"Fa que la carpeta de destinació siga idèntica a la carpeta d'origen. Els "
+"fitxers esborrats d'una carpeta d'origen també s'eliminaran de la carpeta de "
+"còpia de seguretat.<nl/><nl/>Açò pot evitar la pèrdua de dades a causa d'un "
+"disc trencat, però no a causa d'una eliminació o canvi accidental de fitxers."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
@@ -1545,54 +1551,3 @@ msgstr "Espai lliure: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Este pla de còpia de seguretat no s'ha executat mai."
-
-#~ msgctxt "@action:button"
-#~ msgid "Yes"
-#~ msgstr "Sí"
-
-#~ msgctxt "@action:button"
-#~ msgid "No"
-#~ msgstr "No"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This type of backup is an <emphasis>archive</emphasis>. It contains both "
-#~ "the latest version of your files and earlier backed up versions. Using "
-#~ "this type of backup allows you to recover older versions of your files, "
-#~ "or files which were deleted on your computer at a later time. The storage "
-#~ "space needed is minimized by looking for common parts of your files "
-#~ "between versions and only storing those parts once. Nevertheless, the "
-#~ "backup archive will keep growing in size as time goes by.<nl/>Also "
-#~ "important to know is that the files in the archive can not be accessed "
-#~ "directly with a general file manager, a special program is needed."
-#~ msgstr ""
-#~ "Este tipus de còpia de seguretat és un <emphasis>arxiu</emphasis>. Conté "
-#~ "l'última versió dels vostres fitxers i versions anteriors de còpia de "
-#~ "seguretat. L'ús d'este tipus de còpia de seguretat permet recuperar les "
-#~ "versions anteriors dels vostres fitxers o els fitxers que s'han anat "
-#~ "eliminant en l'ordinador. L'espai d'emmagatzematge necessari es minimitza "
-#~ "en buscar les parts comunes dels fitxers entre versions i només "
-#~ "emmagatzemar estes parts una vegada. No obstant açò, l'arxiu de la còpia "
-#~ "de seguretat seguirà creixent en grandària a mesura que passe el temps."
-#~ "<nl/>També és important saber que no es pot accedir directament als "
-#~ "fitxers en l'arxiu amb un gestor de fitxers general, es necessita un "
-#~ "programa especial."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This type of backup is a folder which is synchronized with your selected "
-#~ "source folders. Saving a backup simply means making the backup "
-#~ "destination contain an exact copy of your source folders as they are now "
-#~ "and nothing else. If a file has been deleted in a source folder it will "
-#~ "get deleted from the backup folder.<nl/>This type of backup can protect "
-#~ "you against data loss due to a broken hard drive but it does not help you "
-#~ "to recover from your own mistakes."
-#~ msgstr ""
-#~ "Este tipus de còpia de seguretat és una carpeta que se sincronitza amb "
-#~ "les carpetes d'origen seleccionades. En guardar una còpia de seguretat "
-#~ "senzillament vol dir fer que la destinació de la còpia de seguretat "
-#~ "continga una còpia exacta de les vostres carpetes d'origen tal com estan "
-#~ "ara i res més. Si s'ha suprimit un fitxer en una carpeta d'origen, se "
-#~ "suprimirà de la carpeta en la còpia de seguretat.<nl/>Este tipus de còpia "
-#~ "de seguretat protegix contra la pèrdua de dades a causa d'un disc dur "
-#~ "trencat, però no ajudarà a recuperar-se dels vostres propis errors."
