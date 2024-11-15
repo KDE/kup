@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-11-12 11:54+0100\n"
+"PO-Revision-Date: 2024-11-13 11:56+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -882,13 +882,7 @@ msgid "Versioned Backup (recommended)"
 msgstr "Back-up met versiebeheer (aanbevolen)"
 
 #: kcm/backupplanwidget.cpp:545
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Make the destination folder identical to the source folder. Files deleted "
-#| "from a source folder will be deleted from the backup folder as well.<nl/"
-#| "><nl/>This can prevent data loss due to a broken disk, but not due to "
-#| "filesbeing accidentally deleted or changed."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Make the destination folder identical to the source folder. Files deleted "

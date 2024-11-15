@@ -312,7 +312,7 @@ msgstr "正在修复备份"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr ""
+msgstr "您想要马上进行首次备份吗？"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -338,7 +338,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr ""
+msgstr "保存备份"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -346,7 +346,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -367,7 +367,7 @@ msgstr "显示日志文件"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "修复"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -437,7 +437,8 @@ msgctxt "@info messagebox, %1 is a folder path"
 msgid ""
 "The backup archive <filename>%1</filename> could not be opened. Check if the "
 "backups really are located there."
-msgstr "备份归档 <filename>%1</filename> 无法打开。请确认备份是否存在。"
+msgstr ""
+"备份归档压缩文件 <filename>%1</filename> 无法打开。请检查备份是否存在。"
 
 #: filedigger/filedigger.cpp:123
 #, kde-kuit-format
@@ -459,7 +460,7 @@ msgstr "文件挖掘器"
 #: filedigger/main.cpp:31
 #, kde-format
 msgid "Browser for bup archives."
-msgstr "Bup 归档的浏览程序。"
+msgstr "Bup 归档压缩文件的浏览程序。"
 
 #: filedigger/main.cpp:33
 #, kde-format
@@ -814,6 +815,9 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"备份来源文件夹中文件的多个版本。这样可以恢复旧版本的文件或者已删除的文件夹。"
+"<nl/></nl/>备份压缩文件将随着时间的推移而变大，且只能通过本程序提供的工具进行"
+"访问。"
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -830,7 +834,7 @@ msgid "Versioned Backup (recommended)"
 msgstr "版本控制备份(建议)"
 
 #: kcm/backupplanwidget.cpp:545
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Make the destination folder identical to the source folder. Files deleted "
@@ -838,6 +842,9 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"将目标文件夹与来源文件夹设置为同一个文件夹。从来源文件夹中删除的文件也将从备"
+"份文件夹中删除。<nl/><nl/>这可以防止磁盘损坏时丢失数据，但无法防止因为意外删"
+"除或者更改导致的数据丢失。"
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
@@ -1400,7 +1407,7 @@ msgstr "清除程序"
 #: purger/main.cpp:26
 #, kde-format
 msgid "Purger for bup archives."
-msgstr "Bup 归档的清除程序。"
+msgstr "Bup 归档压缩文件的清除程序。"
 
 #: purger/main.cpp:28
 #, kde-format

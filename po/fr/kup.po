@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-09-21 08:59+0200\n"
+"PO-Revision-Date: 2024-11-13 12:12+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -350,12 +350,10 @@ msgid "Repairing backups"
 msgstr "Réparation des sauvegardes"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "Voulez-vous lancer une première sauvegarde maintenant ?"
+msgstr "Voulez-vous enregistrer la première sauvegarde maintenant ?"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -378,11 +376,10 @@ msgstr ""
 "Voulez-vous sauvegarder maintenant ?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "Créer une nouvelle sauvegarde"
+msgstr "Enregistrer une sauvegarde"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -390,7 +387,7 @@ msgstr "Créer une nouvelle sauvegarde"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -411,7 +408,7 @@ msgstr "Voir le journal"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Réparer"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -872,6 +869,11 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"Sauvegardez plusieurs versions au fil du temps des fichiers dans les "
+"dossiers de sources. Cela permet de récupérer des versions plus anciennes de "
+"fichiers ou des fichiers supprimés.<nl/></nl/>La taille des sauvegarde "
+"augmentera au fil du temps. La sauvegarde ne sera plus accessible qu'à "
+"l'aide des outils de récupération fournis par ce programme."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
