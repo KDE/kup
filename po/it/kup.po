@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-11-12 12:43+0100\n"
+"PO-Revision-Date: 2024-11-13 14:35+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -902,13 +902,7 @@ msgid "Versioned Backup (recommended)"
 msgstr "Copia di sicurezza incrementale (consigliata)"
 
 #: kcm/backupplanwidget.cpp:545
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Make the destination folder identical to the source folder. Files deleted "
-#| "from a source folder will be deleted from the backup folder as well.<nl/"
-#| "><nl/>This can prevent data loss due to a broken disk, but not due to "
-#| "filesbeing accidentally deleted or changed."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Make the destination folder identical to the source folder. Files deleted "
@@ -918,9 +912,9 @@ msgid ""
 msgstr ""
 "Rendi la cartella di destinazione identica alla cartella di origine. I file "
 "eliminati da una cartella di origine saranno eliminati anche dalla cartella "
-"delle copie di sicurezza.\n"
-"<nl/><nl/>Questo può impedire la perdita di dati a causa di un disco rotto, "
-"ma non a causa di file eliminati o modificati accidentalmente."
+"delle copie di sicurezza.<nl/><nl/>Questo può impedire la perdita di dati a "
+"causa di un disco danneggiato, ma non a causa di file eliminati o modificati "
+"accidentalmente."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
