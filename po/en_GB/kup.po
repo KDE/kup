@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-10-18 18:53+0100\n"
+"PO-Revision-Date: 2024-11-16 12:59+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -330,12 +330,10 @@ msgid "Repairing backups"
 msgstr "Repairing backups"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "Do you want to save a first backup now?"
+msgstr "Save the first backup now?"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -358,11 +356,10 @@ msgstr ""
 "Save a new backup now?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "Save new backup"
+msgstr "Save Backup"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -370,7 +367,7 @@ msgstr "Save new backup"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -391,7 +388,7 @@ msgstr "Show log file"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Repair"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -849,6 +846,10 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"Back up multiple versions over time of the files in the source folders. This "
+"allows older versions of files or deleted files to be recovered.<nl/></nl/"
+">The backup archive will grow in size over time, and can only be accessed "
+"using the recovery tools provided by this program."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -875,6 +876,10 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"Make the destination folder identical to the source folder. Files deleted "
+"from a source folder will be deleted from the backup folder as well.<nl/><nl/"
+">This can prevent data loss due to a broken disk, but not due to files being "
+"accidentally deleted or changed."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format

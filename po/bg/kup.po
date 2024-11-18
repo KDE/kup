@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-09-26 10:03+0200\n"
+"PO-Revision-Date: 2024-11-17 21:16+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -342,9 +342,7 @@ msgid "Repairing backups"
 msgstr "Възстановяване на резервни копия"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
 msgstr "Искате ли да запишете първото резервно копие сега?"
@@ -370,11 +368,10 @@ msgstr ""
 "Запазете ново резервно копие сега?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "Запазване на  новото резервно копие"
+msgstr "Запазване на резервно копие"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -382,7 +379,7 @@ msgstr "Запазване на  новото резервно копие"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Отказ"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -403,7 +400,7 @@ msgstr "Показване на журналния файл"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Поправяне"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -863,6 +860,11 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"Архивирайте множество версии във времето на файловете в изходните папки. "
+"Това позволява да бъдат възстановени по-стари версии на файлове или изтрити "
+"файлове.<nl/></nl/>Архивът с резервно копие ще нараства с течение на времето "
+"и може да бъде достъпен само с помощта на инструментите за възстановяване, "
+"предоставени от тази програма."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -889,6 +891,10 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"Направете целевата папка идентична с изходната папка. Файловете, изтрити от "
+"папка източник, ще бъдат изтрити и от папката за архивиране.<nl/><nl/>Това "
+"може да предотврати загуба на данни поради повреден диск, но не и поради "
+"случайно изтриване или промяна на файлове."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format

@@ -1,20 +1,20 @@
 # Translation of kup to Spanish
 # This file is distributed under the same license as the kup package.
 #
-# Administrador de Sistemas de Koali <admin@koali.es>, 2014.
-# Alex Castilla <alex.castillap@gmail.com>, 2017.
-# Francisco García Cisneros <fgarciacis@koali.es>, 2013.
-# seryeb <seryeb@gmail.com>, 2017.
-# Simon Persson <simon.persson@mykolab.com>, 2014, 2015, 2018.
-# Victor García <victor.garcia@iberdomo.net>, 2018, 2019.
-# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2019, 2020, 2021, 2022, 2023, 2024.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2020.
+# SPDX-FileCopyrightText: 2014 Administrador de Sistemas de Koali <admin@koali.es>
+# SPDX-FileCopyrightText: 2017 Alex Castilla <alex.castillap@gmail.com>
+# SPDX-FileCopyrightText: 2013 Francisco García Cisneros <fgarciacis@koali.es>
+# SPDX-FileCopyrightText: 2017 seryeb <seryeb@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2018 Simon Persson <simon.persson@mykolab.com>
+# SPDX-FileCopyrightText: 2018, 2019 Victor García <victor.garcia@iberdomo.net>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2020 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-09-22 16:40+0200\n"
+"PO-Revision-Date: 2024-11-16 20:09+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -355,12 +355,10 @@ msgid "Repairing backups"
 msgstr "Reparando copias de seguridad"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "¿Desea realizar la primera copia de seguridad ahora?"
+msgstr "¿Realizar la primera copia de seguridad ahora?"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -384,11 +382,10 @@ msgstr ""
 " ¿Desea realizar una copia de seguridad ahora?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "Guardar nueva copia"
+msgstr "Guardar copia"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -396,7 +393,7 @@ msgstr "Guardar nueva copia"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -417,7 +414,7 @@ msgstr "Mostrar el archivo de registro"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Reparar"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -879,6 +876,11 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"Respaldar múltiples versiones de los archivos en las carpetas origen a lo "
+"largo del tiempo. Esto permite recuperar versiones antiguas o archivos "
+"borrados.<nl/></nl/>El archivo de respaldo crecerá en tamaño con el tiempo y "
+"solo se podrá acceder a él con las herramientas de recuperación "
+"proporcionadas por este programa."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -905,6 +907,10 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"Replicar la carpeta origen en la de destino. Los archivos que se borren de "
+"la carpeta origen se borrarán también del respaldo.<nl/><nl/>Puede prevenir "
+"la pérdida de datos de un disco roto, pero no debido a archivos borrados o "
+"cambiados accidentalmente."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
@@ -1546,52 +1552,3 @@ msgstr "Espacio libre: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Este plan de copias de seguridad nunca ha sido usado."
-
-#~ msgctxt "@action:button"
-#~ msgid "Yes"
-#~ msgstr "Sí"
-
-#~ msgctxt "@action:button"
-#~ msgid "No"
-#~ msgstr "No"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This type of backup is an <emphasis>archive</emphasis>. It contains both "
-#~ "the latest version of your files and earlier backed up versions. Using "
-#~ "this type of backup allows you to recover older versions of your files, "
-#~ "or files which were deleted on your computer at a later time. The storage "
-#~ "space needed is minimized by looking for common parts of your files "
-#~ "between versions and only storing those parts once. Nevertheless, the "
-#~ "backup archive will keep growing in size as time goes by.<nl/>Also "
-#~ "important to know is that the files in the archive can not be accessed "
-#~ "directly with a general file manager, a special program is needed."
-#~ msgstr ""
-#~ "Este tipo de copia es un <emphasis> archivo</emphasis>. Contiene tanto la "
-#~ "última versión de sus archivos como las versiones anteriormente copiadas. "
-#~ "Usar este tipo de copia te permite recuperar versiones antiguas de tus "
-#~ "archivos, o archivos que fueron borrados del ordenador más tarde. El "
-#~ "espacio necesario se minimiza buscando partes comunes en tus archivos "
-#~ "entre versiones, sólo copiando dichas partes una única vez. Sin embargo, "
-#~ "el archivo de copias seguirá creciendo de tamaño según el tiempo avance."
-#~ "<nl/>También es importante saber que los archivos no pueden abrirse "
-#~ "directamente con un gestor de archivos estándar, se necesita un programa "
-#~ "especial."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This type of backup is a folder which is synchronized with your selected "
-#~ "source folders. Saving a backup simply means making the backup "
-#~ "destination contain an exact copy of your source folders as they are now "
-#~ "and nothing else. If a file has been deleted in a source folder it will "
-#~ "get deleted from the backup folder.<nl/>This type of backup can protect "
-#~ "you against data loss due to a broken hard drive but it does not help you "
-#~ "to recover from your own mistakes."
-#~ msgstr ""
-#~ "Este tipo de copia de seguridad es una carpeta que está sincronizada con "
-#~ "sus carpetas origen seleccionadas. Hacer una copia simplemente significa "
-#~ "hacer que el destino de la copia contenga una copia exacta del origen tal "
-#~ "cual está ahora y nada más. Si un archivo ha sido borrado en el origen, "
-#~ "éste será borrado en la carpeta copia.<nl/>Este tipo de copia puede "
-#~ "protegerte contra una pérdida de información por un disco duro "
-#~ "defectuoso, pero no le ayudará a recuperarse de sus propios errores."

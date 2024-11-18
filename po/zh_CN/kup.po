@@ -842,6 +842,9 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"将目标文件夹与来源文件夹设置为同一个文件夹。从来源文件夹中删除的文件也将从备"
+"份文件夹中删除。<nl/><nl/>这可以防止磁盘损坏时丢失数据，但无法防止因为意外删"
+"除或者更改导致的数据丢失。"
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
