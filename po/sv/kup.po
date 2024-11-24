@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-09-20 21:06+0200\n"
+"PO-Revision-Date: 2024-11-23 17:11+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -335,12 +335,10 @@ msgid "Repairing backups"
 msgstr "Reparerar säkerhetskopior"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "Vill du spara den första säkerhetskopian nu?"
+msgstr "Spara den första säkerhetskopian nu?"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -363,8 +361,7 @@ msgstr ""
 "Vill du spara en ny kopia nu?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
 msgstr "Spara säkerhetskopia"
@@ -375,7 +372,7 @@ msgstr "Spara säkerhetskopia"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -396,7 +393,7 @@ msgstr "Visa loggfil"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Reparera"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -851,6 +848,11 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"Säkerhetskopiera flera versioner över tiden av filerna i källkatalogerna. "
+"Det gör att äldre versioner av filer eller raderade filer kan återställas."
+"<nl/></nl/>Säkerhetskopieringsarkivet växer i storlek med tiden och kan "
+"endast nås med hjälp av återställningsverktygen som tillhandahålls av "
+"programmet."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -877,6 +879,10 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"Gör målkatalogen identisk med källkatalogen. Filer som tas bort från en "
+"källkatalog tas också bort från säkerhetskopieringskatalogen.<nl/><nl/>Det "
+"kan förhindra dataförlust på grund av en felaktig disk, men inte på grund av "
+"att filer av misstag tas bort eller ändras."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
