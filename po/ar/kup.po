@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-09-26 11:37+0400\n"
+"PO-Revision-Date: 2024-11-28 13:21+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -342,12 +342,10 @@ msgid "Repairing backups"
 msgstr "يصلح النسخ الاحتياطية"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "هل تريد حفظ أول نسخة احتياطية؟"
+msgstr "هل تريد حفظ أول نسخة احتياطية الآن؟"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -370,11 +368,10 @@ msgstr ""
 "هل تريد حفظ نسخة احتياطية الآن؟"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "احفظ نسخة احتياطية جديدة"
+msgstr "احفظ نسخة احتياطية"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -382,7 +379,7 @@ msgstr "احفظ نسخة احتياطية جديدة"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "ألغِ"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -403,7 +400,7 @@ msgstr "أظهر ملف السجل"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "أصلح"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -855,6 +852,10 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"أنشئ نسخة احتياطية لإصدارات متعددة على مدار الوقت من الملفات الموجودة في "
+"المجلدات المصدر. يتيح لك هذا استرداد الإصدارات الأقدم من الملفات أو الملفات "
+"المحذوفة.<nl/></nl/>سيزداد حجم أرشيف النسخ الاحتياطي بمرور الوقت، ولا يمكن "
+"الوصول إليه إلا باستخدام أدوات الاسترداد التي يوفرها هذا البرنامج."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -881,6 +882,9 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"اجعل مجلد المقصد مطابقًا لمجلد المصدر. إذا حذفت الملفات من مجلد المصدر  ستحذف "
+"من مجلد النسخ الاحتياطي أيضًا.<nl/><nl/>يمكن أن يمنع هذا فقد البيانات بسبب "
+"قرص تالف، ولكن ليس بسبب حذف الملفات أو تغييرها عن طريق الخطأ."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
