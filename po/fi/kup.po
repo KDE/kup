@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kup package.
-# Tommi Nieminen <translator@legisign.org>, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2023-03-06 20:58+0200\n"
+"PO-Revision-Date: 2024-10-16 21:06+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -797,32 +797,19 @@ msgstr ""
 "varmuuskopiosuunnitelmasta."
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"Symbolinen linkki <filename>%1</filename> on sisällytetty suunnitelmaan "
-"mutta viittaa kansioon, jota ei ole: <filename>%2</filename>.<nl/>Tämä "
-"tuskin on, mitä haluat. Yksi ratkaisu on yksinkertaisesti sisällyttää "
-"suunnitelmaan kohdekansiokin."
+"Symbolinen linkki <filename>%1</filename> viittaa kansioon, jota ei ole "
+"sisällytetty: <filename>%2</filename>.<nl/>Tämä tuskin on, mitä haluat. Yksi "
+"ratkaisu on yksinkertaisesti sisällyttää suunnitelmaan kohdekansiokin."
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -830,10 +817,10 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"Symbolinen linkki <filename>%1</filename> on sisällytetty suunnitelmaan "
-"mutta viittaa tiedostoon, jota ei ole: <filename>%2</filename>.<nl/>Tämä "
-"tuskin on, mitä haluat. Yksi ratkaisu on yksinkertaisesti sisällyttää "
-"suunnitelmaan tiedoston sisältävä kansiokin."
+"Symbolinen linkki <filename>%1</filename> viittaa tiedostoon, jota ei ole "
+"sisällytetty: <filename>%2</filename>.<nl/>Tämä tuskin on, mitä haluat. Yksi "
+"ratkaisu on yksinkertaisesti sisällyttää suunnitelmaan tiedoston sisältävä "
+"kansiokin."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
@@ -1032,11 +1019,7 @@ msgid "Active Usage Time"
 msgstr "Aktiivinen käyttöaika"
 
 #: kcm/backupplanwidget.cpp:739
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only saved when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
@@ -1371,20 +1354,16 @@ msgid "Warning"
 msgstr "Varoitus"
 
 #: kcm/kupkcm.cpp:262
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Add New Plan"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
-msgstr "Lisää uusi suunnitelma"
+msgstr "Lisää uusi suunnitelma…"
 
 #: kcm/kupkcm.cpp:275
-#, fuzzy, kde-kuit-format
-#| msgctxt "@option:check"
-#| msgid "Backups Enabled"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
-msgstr "Varmuuskopiot ovat käytössä"
+msgstr "Varmuuskopiot käytössä"
 
 #: kcm/kupkcm.cpp:286
 #, kde-kuit-format
@@ -1457,22 +1436,19 @@ msgstr "&Lataa varmuuskopiosuunnitelmat uudelleen"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
 #: plasmoid-qt6/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
-msgstr "&Lataa varmuuskopiosuunnitelmat uudelleen"
+msgstr "V&irkistä varmuuskopiosuunnitelmat"
 
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "&Kupin asetukset…"
+msgstr "Varmuuskopiosuunnitelmien asetukset"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "Configure Backup Plans..."
-msgstr "&Kupin asetukset…"
+msgstr "Varmuuskopiosuunnitelmien asetukset…"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
