@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-10-16 21:06+0300\n"
+"PO-Revision-Date: 2024-12-01 14:52+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -330,12 +330,10 @@ msgid "Repairing backups"
 msgstr "Korjataan varmuuskopioita"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "Haluatko nyt tallentaa ensimmäisen varmuuskopiosi?"
+msgstr "Tallennetaanko ensimmäinen varmuuskopio nyt?"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -358,11 +356,10 @@ msgstr ""
 "Tallennetaanko nyt uusi varmuuskopio?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "Tallenna uusi varmuuskopio"
+msgstr "Tallenna varmuuskopio"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -370,7 +367,7 @@ msgstr "Tallenna uusi varmuuskopio"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Peru"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -391,7 +388,7 @@ msgstr "Avaa lokitiedosto"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Korjaa"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -848,6 +845,10 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"Varmista lähdekansioiden tiedostoista ajan myötä useita versioita. Tämä "
+"mahdollistaa tiedostojen aikaisemmat versiot tai poistettujen tiedostojen "
+"palauttamisen.<nl/><nl/>Varmuuskopioarkiston koko kasvaa ajan myötä, ja sitä "
+"voi käsitellä vain tämän ohjelman tarjoamilla palautustyökaluilla."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -874,6 +875,10 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"Tee kohdekansiosta identtinen lähdekansion kanssa. Lähdekansiosta poistetut "
+"tiedostot poistetaan myös varmuuskopiokansiosta.<nl/><nl/>Tämä voi estää "
+"tiedonmenetyksen rikkonaisen levyn takia, mutta ei estä tiedostojen "
+"poistamista tai muuttamista vahingossa."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-11-13 21:29+0100\n"
+"PO-Revision-Date: 2024-12-08 20:37+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -270,7 +270,7 @@ msgid ""
 "that by running <command>kcmshell5 kup</command>"
 msgstr ""
 "Kup non está activado, actíveo no módulo de configuración do sistema. Pode "
-"facelo coa orde <command>kcmshell5 kup</command>."
+"facelo executando <command>kcmshell5 kup</command>."
 
 #: daemon/main.cpp:37
 #, kde-kuit-format
