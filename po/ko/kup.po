@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-08-20 00:19+0200\n"
+"PO-Revision-Date: 2024-12-10 01:12+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -326,12 +326,10 @@ msgid "Repairing backups"
 msgstr "백업 복구 중"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "첫 백업을 저장하시겠습니까?"
+msgstr "지금 첫 백업을 저장하시겠습니까?"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -354,11 +352,10 @@ msgstr ""
 "새 백업을 저장하시겠습니까?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "새 백업 저장"
+msgstr "백업 저장"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -366,7 +363,7 @@ msgstr "새 백업 저장"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "취소"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -387,7 +384,7 @@ msgstr "로그 파일 표시"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "복구"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -840,6 +837,9 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"원본 폴더에 있는 파일의 시간별 여러 버전을 백업합니다. 파일의 과거 버전이나 "
+"삭제된 파일을 복구할 수 있습니다.<nl/></nl/>백업 보관 파일의 크기는 시간이 지"
+"날수록 증가하며, 이 프로그램에서 제공한 복구 도구로만 접근할 수 있습니다."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -866,6 +866,9 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"대상 폴더와 원본 폴더를 같은 상태로 유지합니다. 원본 폴더에서 삭제된 파일도 "
+"백업 폴더에서 같이 삭제합니다.<nl/><nl/>디스크가 망가졌을 때 데이터 손실에서 "
+"복구할 수 있으나, 파일의 의도하지 않은 변경이나 삭제는 복구할 수 없습니다."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
@@ -1338,17 +1341,13 @@ msgid "Warning"
 msgstr "경고"
 
 #: kcm/kupkcm.cpp:262
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Add New Plan"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
-msgstr "새 계획 추가"
+msgstr "새 계획 추가…"
 
 #: kcm/kupkcm.cpp:275
-#, fuzzy, kde-kuit-format
-#| msgctxt "@option:check"
-#| msgid "Backups Enabled"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "백업 활성화됨"
