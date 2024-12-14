@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-12-08 20:37+0100\n"
+"PO-Revision-Date: 2024-12-13 20:50+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -464,6 +464,7 @@ msgstr ""
 "Necesítase o programa <application>rsync</application>, pero non foi posíbel "
 "atopalo. Pode ser que non estea instalado?"
 
+# skip-rule: trasno-locate
 #: filedigger/filedigger.cpp:116
 #, kde-kuit-format
 msgctxt "@info messagebox, %1 is a folder path"
@@ -1115,6 +1116,7 @@ msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
 msgstr "Amosar os cartafoles agochados na selección de orixes."
 
+# skip-rule: trasno-locate
 #: kcm/backupplanwidget.cpp:842
 #, kde-kuit-format
 msgctxt "@info"
