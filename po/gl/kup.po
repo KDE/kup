@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:50+0000\n"
-"PO-Revision-Date: 2024-12-14 11:25+0100\n"
+"PO-Revision-Date: 2024-12-17 22:35+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -849,6 +849,7 @@ msgctxt "@action:button"
 msgid "Back to overview"
 msgstr "Volver á vista xeral"
 
+# skip-rule: trasno-provide
 #: kcm/backupplanwidget.cpp:523
 msgctxt "@info"
 msgid ""
