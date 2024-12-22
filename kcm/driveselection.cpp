@@ -145,9 +145,10 @@ void DriveSelection::delayedDeviceAdded()
         lItem->setData(lPartitionNumber, DriveSelection::PartitionNumber);
         lItem->setData(lVolumeDeviceList.count(), DriveSelection::PartitionsOnDrive);
         lItem->setData(lVolume->fsType(), DriveSelection::FileSystem);
-        lItem->setData(mSyncedBackupType && (lVolume->fsType() == QStringLiteral("vfat") || lVolume->fsType() == QStringLiteral("ntfs")),
+        lItem->setData(mSyncedBackupType && (lVolume->fsType() == QStringLiteral("vfat") || lVolume->fsType() == QStringLiteral("exfat") || lVolume->fsType() == QStringLiteral("ntfs")),
                        DriveSelection::PermissionLossWarning);
-        lItem->setData(mSyncedBackupType && lVolume->fsType() == QStringLiteral("vfat"), DriveSelection::SymlinkLossWarning);
+        lItem->setData(mSyncedBackupType && (lVolume->fsType() == QStringLiteral("vfat") || lVolume->fsType() == QStringLiteral("exfat")),
+                       DriveSelection::SymlinkLossWarning);
 
         auto *lAccess = lVolumeDevice.as<Solid::StorageAccess>();
         connect(lAccess, &Solid::StorageAccess::accessibilityChanged, this, &DriveSelection::accessabilityChanged);
@@ -304,9 +305,10 @@ void DriveSelection::updateSyncWarning(bool pSyncBackupSelected)
     mSyncedBackupType = pSyncBackupSelected;
     for (int i = 0; i < mDrivesModel->rowCount(); ++i) {
         QString lFsType = mDrivesModel->item(i)->data(DriveSelection::FileSystem).toString();
-        mDrivesModel->item(i)->setData(mSyncedBackupType && (lFsType == QStringLiteral("vfat") || lFsType == QStringLiteral("ntfs")),
+        mDrivesModel->item(i)->setData(mSyncedBackupType && (lFsType == QStringLiteral("vfat") || lFsType == QStringLiteral("exfat") || lFsType == QStringLiteral("ntfs")),
                                        DriveSelection::PermissionLossWarning);
-        mDrivesModel->item(i)->setData(mSyncedBackupType && lFsType == QStringLiteral("vfat"), DriveSelection::SymlinkLossWarning);
+        mDrivesModel->item(i)->setData(mSyncedBackupType && (lFsType == QStringLiteral("vfat") || lFsType == QStringLiteral("exfat")),
+                                       DriveSelection::SymlinkLossWarning);
     }
 }
 
