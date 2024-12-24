@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-13 01:50+0000\n"
+"POT-Creation-Date: 2024-12-24 01:53+0000\n"
 "PO-Revision-Date: 2024-09-20 15:13+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -1214,7 +1214,7 @@ msgctxt "@action:button"
 msgid "Create Folder"
 msgstr "Vytvořit složku"
 
-#: kcm/driveselection.cpp:267
+#: kcm/driveselection.cpp:268
 #, kde-kuit-format
 msgctxt "@label Only shown if no drives are detected"
 msgid ""

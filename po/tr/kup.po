@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-13 01:50+0000\n"
+"POT-Creation-Date: 2024-12-24 01:53+0000\n"
 "PO-Revision-Date: 2024-11-15 22:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -1220,7 +1220,7 @@ msgctxt "@action:button"
 msgid "Create Folder"
 msgstr "Klasör Oluştur"
 
-#: kcm/driveselection.cpp:267
+#: kcm/driveselection.cpp:268
 #, kde-kuit-format
 msgctxt "@label Only shown if no drives are detected"
 msgid ""
