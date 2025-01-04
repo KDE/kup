@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-24 01:53+0000\n"
-"PO-Revision-Date: 2024-05-04 13:15+0100\n"
+"PO-Revision-Date: 2025-01-03 21:16+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -338,12 +338,10 @@ msgid "Repairing backups"
 msgstr "Ripari sekurkopiojn"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "Ĉu vi volas konservi unuan sekurkopion nun?"
+msgstr "Ĉu konservi unuan sekurkopion nun?"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -366,11 +364,10 @@ msgstr ""
 "Ĉu konservi novan sekurkopion nun?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "Konservi novan sekurkopion"
+msgstr "Konservi Sekurkopion"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -378,7 +375,7 @@ msgstr "Konservi novan sekurkopion"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Nuligi"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -399,7 +396,7 @@ msgstr "Montri protokoldosieron"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Ripari"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -1210,7 +1207,7 @@ msgstr "Altnivela"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
-msgstr "Kromaj opcioj por progresintaj uzantoj"
+msgstr "Kromaj elektebloj por progresintaj uzantoj"
 
 #: kcm/backupplanwidget.cpp:1002
 #, kde-kuit-format
@@ -1366,20 +1363,16 @@ msgid "Warning"
 msgstr "Averto"
 
 #: kcm/kupkcm.cpp:262
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Add New Plan"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
-msgstr "Aldoni Novan Planon"
+msgstr "Aldoni Novan Planon…"
 
 #: kcm/kupkcm.cpp:275
-#, fuzzy, kde-kuit-format
-#| msgctxt "@option:check"
-#| msgid "Backups Enabled"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
-msgstr "Sekurkopioj Ebligitaj"
+msgstr "Sekurkopioj ebligitaj"
 
 #: kcm/kupkcm.cpp:286
 #, kde-kuit-format
@@ -1524,52 +1517,3 @@ msgstr "Libera spaco: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Ĉi tiu rezerva plano neniam estis rulita."
-
-#~ msgctxt "@action:button"
-#~ msgid "Yes"
-#~ msgstr "Jes"
-
-#~ msgctxt "@action:button"
-#~ msgid "No"
-#~ msgstr "Ne"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This type of backup is an <emphasis>archive</emphasis>. It contains both "
-#~ "the latest version of your files and earlier backed up versions. Using "
-#~ "this type of backup allows you to recover older versions of your files, "
-#~ "or files which were deleted on your computer at a later time. The storage "
-#~ "space needed is minimized by looking for common parts of your files "
-#~ "between versions and only storing those parts once. Nevertheless, the "
-#~ "backup archive will keep growing in size as time goes by.<nl/>Also "
-#~ "important to know is that the files in the archive can not be accessed "
-#~ "directly with a general file manager, a special program is needed."
-#~ msgstr ""
-#~ "Ĉi tiu tipo de sekurkopio estas <emphasis>arkivo</emphasis>. Ĝi enhavas "
-#~ "ambaŭ la lastan version de viaj dosieroj kaj pli frue sekurkopiitajn "
-#~ "versiojn. Uzado de ĉi tiu tipo de sekurkopio ebligas al vi reakiri "
-#~ "malnovajn versiojn de viaj dosieroj, aŭ dosierojn, kiuj estis forigitaj "
-#~ "de via komputilo poste. La bezonata konservejo estas minimumigita "
-#~ "serĉante komunajn partojn de viaj dosieroj inter versioj kaj konservante "
-#~ "tiujn partojn nur unufoje. Tamen, la sekurkopia arkivo daŭre kreskos "
-#~ "laŭlonge de la tempo.<nl/>Ankaŭ gravas scii, ke la dosieroj en la arkivo "
-#~ "ne alireblas rekte per ĝenerala dosieradministranto, necesas speciala "
-#~ "programo."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This type of backup is a folder which is synchronized with your selected "
-#~ "source folders. Saving a backup simply means making the backup "
-#~ "destination contain an exact copy of your source folders as they are now "
-#~ "and nothing else. If a file has been deleted in a source folder it will "
-#~ "get deleted from the backup folder.<nl/>This type of backup can protect "
-#~ "you against data loss due to a broken hard drive but it does not help you "
-#~ "to recover from your own mistakes."
-#~ msgstr ""
-#~ "Ĉi tiu tipo de sekurkopio estas dosierujo sinkronigita kun viaj elektitaj "
-#~ "fontdosierujoj. Konservi sekurkopion simple signifas igi la sekurkopian "
-#~ "celon enhavi precizan kopion de viaj fontaj dosierujoj kiel ili estas nun "
-#~ "kaj nenio alia. Se dosiero estis forigita en fonta dosierujo, ĝi estos "
-#~ "forigita de la sekurkopia dosierujo.<nl/>Tiu tipo de sekurkopio povas "
-#~ "protekti vin kontraŭ datumperdo pro rompita malmola disko sed ĝi ne "
-#~ "helpas vin renormaliĝi de via propra eraroj."
