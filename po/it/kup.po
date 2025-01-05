@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-24 01:53+0000\n"
-"PO-Revision-Date: 2024-11-13 14:35+0100\n"
+"PO-Revision-Date: 2024-12-28 13:19+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -270,13 +270,13 @@ msgstr "Stato copia di sicurezza OK"
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup suggested"
-msgstr "Si consiglia una nuova copia di sicurezza"
+msgstr "Nuova copia di sicurezza suggerita"
 
 #: daemon/kupdaemon.cpp:296 daemon/planexecutor.cpp:83
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup needed"
-msgstr "È necessaria una nuova copia di sicurezza"
+msgstr "Nuova copia di sicurezza necessaria"
 
 #: daemon/main.cpp:30
 #, kde-kuit-format
@@ -348,7 +348,7 @@ msgstr "Salvataggio della copia di sicurezza"
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Checking backup integrity"
-msgstr "Controllo integrità della copia di sicurezza"
+msgstr "Controllo dell'integrità della copia di sicurezza"
 
 #: daemon/planexecutor.cpp:73
 #, kde-format
@@ -547,19 +547,19 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "added after folder name in some cases"
 msgid " (folder)"
-msgstr "(cartella)"
+msgstr " (cartella)"
 
 #: filedigger/mergedvfs.cpp:164
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (symlink)"
-msgstr "(collegamento)"
+msgstr " (collegamento)"
 
 #: filedigger/mergedvfs.cpp:166
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (file)"
-msgstr "(file)"
+msgstr " (file)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
 #, kde-kuit-format
@@ -642,7 +642,7 @@ msgstr ""
 #: filedigger/restoredialog.cpp:401 kcm/dirselector.cpp:60
 #, kde-format
 msgid "A folder named %1 already exists."
-msgstr "Esiste già una cartella di nome %1."
+msgstr "Esiste già una cartella con nome %1."
 
 #: filedigger/restoredialog.cpp:407 kcm/dirselector.cpp:66
 #, kde-format
@@ -696,7 +696,7 @@ msgstr "Ripristina la cartella con un nuovo nome"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Merge folders"
-msgstr "Unisci cartelle"
+msgstr "Unisci le cartelle"
 
 #. i18n: ectx: property (text), widget (QLabel, mConfirmOverwriteLabel)
 #: filedigger/restoredialog.ui:236
@@ -790,13 +790,13 @@ msgstr "Ripristina"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Exclude Folder"
-msgstr "Escludi Cartelle"
+msgstr "Escludi cartelle"
 
 #: kcm/backupplanwidget.cpp:284
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Include Folder"
-msgstr "Includi Cartelle"
+msgstr "Includi cartelle"
 
 #: kcm/backupplanwidget.cpp:385
 #, kde-kuit-format
@@ -999,7 +999,9 @@ msgstr "Funzioneranno solo i percorsi del file system locale!"
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
-msgstr "La cartella non esiste! Nessun backup sarà salvato finché non la crei."
+msgstr ""
+"La cartella non esiste! Nessuna copia di sicurezza sarà salvata finché non "
+"la crei."
 
 #: kcm/backupplanwidget.cpp:667
 #, kde-kuit-format
@@ -1464,7 +1466,7 @@ msgstr "Salva nuova copia di sicurezza"
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:117
 #, kde-format
 msgid "Prune old backups"
-msgstr "Elimina i vecchi backup"
+msgstr "Elimina le vecchie copie di sicurezza"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
 #: plasmoid-qt6/contents/ui/FullRepresentation.qml:122
