@@ -387,7 +387,7 @@ msgstr "Uložit novou zálohu"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -408,7 +408,7 @@ msgstr "Zobrazit soubor se záznamem událostí (log)"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Opravit"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
