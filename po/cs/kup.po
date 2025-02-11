@@ -347,12 +347,10 @@ msgid "Repairing backups"
 msgstr "Oprava záloh"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "Chcete nyní uložit první zálohu?"
+msgstr ""
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -375,11 +373,10 @@ msgstr ""
 "Uložit nyní novou zálohu?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "Uložit novou zálohu"
+msgstr ""
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -1514,49 +1511,3 @@ msgstr "Volné místo: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Tento plán záloh ještě nebyl nikdy spuštěn."
-
-#~ msgctxt "@action:button"
-#~ msgid "Yes"
-#~ msgstr "Ano"
-
-#~ msgctxt "@action:button"
-#~ msgid "No"
-#~ msgstr "Ne"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This type of backup is an <emphasis>archive</emphasis>. It contains both "
-#~ "the latest version of your files and earlier backed up versions. Using "
-#~ "this type of backup allows you to recover older versions of your files, "
-#~ "or files which were deleted on your computer at a later time. The storage "
-#~ "space needed is minimized by looking for common parts of your files "
-#~ "between versions and only storing those parts once. Nevertheless, the "
-#~ "backup archive will keep growing in size as time goes by.<nl/>Also "
-#~ "important to know is that the files in the archive can not be accessed "
-#~ "directly with a general file manager, a special program is needed."
-#~ msgstr ""
-#~ "Tento typ zálohy je <emphasis>archiv</emphasis>. Obsahuje jak nejnovější "
-#~ "verze vašich souborů, tak ty dříve zazálohované. Pomocí tohoto typu "
-#~ "zálohy je možné obnovit starší verze vašich souborů, nebo souborů, které "
-#~ "byly z počítače vymazány. Spotřeba úložného prostoru je snížena "
-#~ "vyhledáváním společných částí souborů napříč jejich verzemi a ukládáním "
-#~ "takových částí pouze jednou. Ale i tak bude velikost archivu časem růst."
-#~ "<nl/>Je také důležité vědět, že k souborům k archivu se nedá přistupovat "
-#~ "přímo z nějakého správce souborů, ale je zapotřebí speciálního programu."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This type of backup is a folder which is synchronized with your selected "
-#~ "source folders. Saving a backup simply means making the backup "
-#~ "destination contain an exact copy of your source folders as they are now "
-#~ "and nothing else. If a file has been deleted in a source folder it will "
-#~ "get deleted from the backup folder.<nl/>This type of backup can protect "
-#~ "you against data loss due to a broken hard drive but it does not help you "
-#~ "to recover from your own mistakes."
-#~ msgstr ""
-#~ "Tento typ záloh je složka která je synchronizována s vybranou zdrojovou "
-#~ "složkou. Uložení zálohy znamená vytvoření záložního umístění obsahujícího "
-#~ "přesnou kopii zdrojových složek ve stávajícím stavu a nic víc. Pokud byl "
-#~ "soubor smazán ve zdrojové složce, bude smazán také v záloze.<nl/>Tento "
-#~ "typ zálohy chrání proti ztrátě dat kvůli rozbité jednotce datového "
-#~ "úložiště ale nepomůže v případě chyby uživatele."
