@@ -925,7 +925,8 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available)
         lExcludesLabel->setText(xi18nc("@info",
                                        "Patterns need to be listed in a text file with one pattern per line. "
                                        "Files and folders with names that match any of the patterns will be "
-                                       "excluded from the backup. The pattern format is documented <link url='%1'>here</link>.",
+                                       "excluded from the backup. The pattern format is documented in the "
+                                       "<link url='%1'>bup-index manual page</link>.",
                                        lHelpUrl));
     };
     lLabelUpdater(false);
