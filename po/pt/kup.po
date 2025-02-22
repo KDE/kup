@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-24 01:53+0000\n"
+"POT-Creation-Date: 2025-02-22 01:54+0000\n"
 "PO-Revision-Date: 2023-03-06 16:36+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -1213,42 +1213,49 @@ msgid "Exclude files and folders based on patterns"
 msgstr "Excluir os ficheiros e pastas com base em padrões"
 
 #: kcm/backupplanwidget.cpp:926
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Patterns need to be listed in a text file with one pattern per line. "
+#| "Files and folders with names that match any of the patterns will be "
+#| "excluded from the backup. The pattern format is documented <link "
+#| "url='%1'>here</link>."
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
 "and folders with names that match any of the patterns will be excluded from "
-"the backup. The pattern format is documented <link url='%1'>here</link>."
+"the backup. The pattern format is documented in the <link url='%1'>bup-index "
+"manual page</link>."
 msgstr ""
 "Os padrões têm de estar enumerados num ficheiro de texto com um padrão por "
 "cada linha. Os ficheiros e pastas cujos nomes correspondam a algum dos "
 "padrões serão excluídos da cópia de segurança. O formato dos padrões está "
 "documentado <link url='%1'>aqui</link>."
 
-#: kcm/backupplanwidget.cpp:944
+#: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "Abrir uma janela para seleccionar um ficheiro"
 
-#: kcm/backupplanwidget.cpp:946
+#: kcm/backupplanwidget.cpp:947
 #, kde-format
 msgid "Select pattern file"
 msgstr "Seleccionar o ficheiro de padrões"
 
-#: kcm/backupplanwidget.cpp:971
+#: kcm/backupplanwidget.cpp:972
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Avançado"
 
-#: kcm/backupplanwidget.cpp:972
+#: kcm/backupplanwidget.cpp:973
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Opções extra para os utilizadores avançados"
 
-#: kcm/backupplanwidget.cpp:1002
+#: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"

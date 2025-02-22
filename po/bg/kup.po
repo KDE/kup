@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-24 01:53+0000\n"
+"POT-Creation-Date: 2025-02-22 01:54+0000\n"
 "PO-Revision-Date: 2024-11-17 21:16+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -1194,42 +1194,49 @@ msgid "Exclude files and folders based on patterns"
 msgstr "Изключване на файлове и папки въз основа на шаблони"
 
 #: kcm/backupplanwidget.cpp:926
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Patterns need to be listed in a text file with one pattern per line. "
+#| "Files and folders with names that match any of the patterns will be "
+#| "excluded from the backup. The pattern format is documented <link "
+#| "url='%1'>here</link>."
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
 "and folders with names that match any of the patterns will be excluded from "
-"the backup. The pattern format is documented <link url='%1'>here</link>."
+"the backup. The pattern format is documented in the <link url='%1'>bup-index "
+"manual page</link>."
 msgstr ""
 "Шаблоните трябва да бъдат изброени в текстов файл с по един шаблон на ред. "
 "Файловете и папки с имена, които съвпадат с някой от шаблоните, ще бъдат "
 "изключени от от резервното копие. Форматът на шаблона е документиран <link "
 "url='%1'>тук</link>."
 
-#: kcm/backupplanwidget.cpp:944
+#: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "Отваряне на диалогов прозорец за избор на файл"
 
-#: kcm/backupplanwidget.cpp:946
+#: kcm/backupplanwidget.cpp:947
 #, kde-format
 msgid "Select pattern file"
 msgstr "Избиране на шаблонен файл"
 
-#: kcm/backupplanwidget.cpp:971
+#: kcm/backupplanwidget.cpp:972
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Допълнителни"
 
-#: kcm/backupplanwidget.cpp:972
+#: kcm/backupplanwidget.cpp:973
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Допълнителни опции за напреднали потребители"
 
-#: kcm/backupplanwidget.cpp:1002
+#: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"

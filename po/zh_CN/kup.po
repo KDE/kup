@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-24 01:53+0000\n"
+"POT-Creation-Date: 2025-02-22 01:54+0000\n"
 "PO-Revision-Date: 2024-04-22 16:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1125,40 +1125,47 @@ msgid "Exclude files and folders based on patterns"
 msgstr "基于模式排除文件和文件夹"
 
 #: kcm/backupplanwidget.cpp:926
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Patterns need to be listed in a text file with one pattern per line. "
+#| "Files and folders with names that match any of the patterns will be "
+#| "excluded from the backup. The pattern format is documented <link "
+#| "url='%1'>here</link>."
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
 "and folders with names that match any of the patterns will be excluded from "
-"the backup. The pattern format is documented <link url='%1'>here</link>."
+"the backup. The pattern format is documented in the <link url='%1'>bup-index "
+"manual page</link>."
 msgstr ""
 "每行一个模式。文件名匹配这些模式的文件和文件夹将被排除在备份之外。模式格式参"
 "见<link url='%1'>此处</link>。"
 
-#: kcm/backupplanwidget.cpp:944
+#: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "打开对话框选择文件"
 
-#: kcm/backupplanwidget.cpp:946
+#: kcm/backupplanwidget.cpp:947
 #, kde-format
 msgid "Select pattern file"
 msgstr "选择模式文件"
 
-#: kcm/backupplanwidget.cpp:971
+#: kcm/backupplanwidget.cpp:972
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "高级"
 
-#: kcm/backupplanwidget.cpp:972
+#: kcm/backupplanwidget.cpp:973
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "进阶用户的额外选项"
 
-#: kcm/backupplanwidget.cpp:1002
+#: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
