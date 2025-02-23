@@ -6,13 +6,13 @@
 # Simon Persson <simon.persson@mykolab.com>, 2012-2014.
 # Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
 # Simon Persson <simon.persson@mykolab.com>, 2017.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 01:54+0000\n"
-"PO-Revision-Date: 2024-11-23 17:11+0100\n"
+"PO-Revision-Date: 2025-02-22 16:19+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -1179,13 +1179,7 @@ msgid "Exclude files and folders based on patterns"
 msgstr "Undanta filer och kataloger baserat på mönster"
 
 #: kcm/backupplanwidget.cpp:926
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented <link "
-#| "url='%1'>here</link>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1195,8 +1189,8 @@ msgid ""
 msgstr ""
 "Mönster måste listas i en textfil med ett mönster per rad. Filer och "
 "kataloger med namn som matchar något av mönstren exkluderas från "
-"säkerhetskopieringen. Mönsterformatet är dokumenterat <link url='%1'>här</"
-"link>."
+"säkerhetskopieringen. Mönsterformatet är dokumenterat på <link "
+"url='%1'>manualsidan för bup-index</link>."
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format

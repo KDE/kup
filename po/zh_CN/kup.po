@@ -1125,13 +1125,7 @@ msgid "Exclude files and folders based on patterns"
 msgstr "基于模式排除文件和文件夹"
 
 #: kcm/backupplanwidget.cpp:926
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented <link "
-#| "url='%1'>here</link>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1139,8 +1133,6 @@ msgid ""
 "the backup. The pattern format is documented in the <link url='%1'>bup-index "
 "manual page</link>."
 msgstr ""
-"每行一个模式。文件名匹配这些模式的文件和文件夹将被排除在备份之外。模式格式参"
-"见<link url='%1'>此处</link>。"
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format

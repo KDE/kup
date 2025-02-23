@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 01:54+0000\n"
-"PO-Revision-Date: 2025-02-14 12:34+0200\n"
+"PO-Revision-Date: 2025-02-22 21:38+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -1144,13 +1144,7 @@ msgid "Exclude files and folders based on patterns"
 msgstr "להחריג קבצים ותיקיות לפי תבניות"
 
 #: kcm/backupplanwidget.cpp:926
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented <link "
-#| "url='%1'>here</link>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1159,8 +1153,8 @@ msgid ""
 "manual page</link>."
 msgstr ""
 "יש לאגד את התבניות בקובץ טקסט כאשר בכל שורה מופיעה תבנית אחת. קבצים ותיקיות "
-"עם שמות שתואמים לאי אילו מהתבניות יוחרגו מהגיבוי. תחביר התבנית מתועד <link "
-"url='%1'>כאן</link>."
+"עם שמות שתואמים לאי אילו מהתבניות יוחרגו מהגיבוי. תחביר התבנית מתועד ב<link "
+"url='%1'>עמוד המפתח של ההסברים על bup</link>."
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format

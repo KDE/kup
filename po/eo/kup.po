@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 01:54+0000\n"
-"PO-Revision-Date: 2025-01-03 21:16+0100\n"
+"PO-Revision-Date: 2025-02-22 16:15+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -880,6 +880,10 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"Igi la celdosierujon identa al la fonta dosierujo. Dosieroj forigitaj de "
+"fonta dosierujo estos forigitaj ankaŭ de la rezerva dosierujo.<nl/><nl/>Ĉi "
+"tio povas malhelpi datumperdon pro rompita disko, sed ne pro dosieroj "
+"hazarde forigitaj aŭ ŝanĝitaj."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
@@ -1174,13 +1178,7 @@ msgid "Exclude files and folders based on patterns"
 msgstr "Ekskludi dosierojn kaj dosierujojn laŭ ŝablonoj"
 
 #: kcm/backupplanwidget.cpp:926
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented <link "
-#| "url='%1'>here</link>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1190,8 +1188,8 @@ msgid ""
 msgstr ""
 "Ŝablonoj devas esti listigitaj en tekstdosiero kun unu ŝablono po linio. "
 "Dosieroj kaj dosierujoj kun nomoj kongruaj kun iu ajn el la ŝablonoj estos "
-"forbaritaj de la sekurkopio. La ŝablono formato estas dokumentita <link "
-"url='%1'>ĉi tie</link>."
+"forbaritaj de la sekurkopio. La ŝablonformato estas dokumentita en la <link "
+"url='%1'>manlibro bup-index</link>."
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format
