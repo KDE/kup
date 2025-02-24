@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kup package.
-# SPDX-FileCopyrightText: 2021, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 01:54+0000\n"
-"PO-Revision-Date: 2024-11-28 13:21+0400\n"
+"PO-Revision-Date: 2025-02-23 19:06+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -295,19 +295,19 @@ msgstr ""
 #: daemon/main.cpp:43 kcm/kupkcm.cpp:48
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
-msgstr "حقوق النشر (C) 2011-2020 Simon Persson"
+msgstr "حقوق النشر (ج) 2011-2020 سيمون بيرسون"
 
 #: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
 #: purger/main.cpp:29
 #, kde-format
 msgid "Simon Persson"
-msgstr "Simon Persson"
+msgstr "سيمون بيرسون"
 
 #: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
 #: purger/main.cpp:29
 #, kde-format
 msgid "Maintainer"
-msgstr "المصين"
+msgstr "الصائن"
 
 #: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
 #: purger/main.cpp:30
@@ -501,7 +501,7 @@ msgstr "يتصفح عن أراشيف bup"
 #: filedigger/main.cpp:33
 #, kde-format
 msgid "Copyright (C) 2013-2020 Simon Persson"
-msgstr "حقوق النشر (C) 2013-2020 Simon Persson"
+msgstr "حقوق النشر (ج) 2013-2020 سيمون بيرسون"
 
 #: filedigger/main.cpp:42 purger/main.cpp:37
 #, kde-format
@@ -1175,13 +1175,7 @@ msgid "Exclude files and folders based on patterns"
 msgstr "استبعد ملفات ومجلدات بالاعتماد على أنماط"
 
 #: kcm/backupplanwidget.cpp:926
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented <link "
-#| "url='%1'>here</link>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1189,9 +1183,9 @@ msgid ""
 "the backup. The pattern format is documented in the <link url='%1'>bup-index "
 "manual page</link>."
 msgstr ""
-"يجب إدراج الأنماط في ملف نصي بنمط واحد في كل سطر. الملفاتوالمجلدات التي "
-"تتطابق مع أي من الأنماط سيتم استبعادها من النسخة الاحتياطية. توثيق تنسيق "
-"الأنماط تجده <link url='%1'>هنا</link>."
+"يجب إدراج الأنماط في ملف نصي بنمط واحد في كل سطر. الملفات والمجلدات التي "
+"تتطابق مع أي من الأنماط ستُستبعد من النسخة الاحتياطية. توثيق تنسيق الأنماط "
+"تجده <link url='%1'>صفحة توثيق bup-index</link>."
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format
@@ -1477,7 +1471,7 @@ msgstr "المصفي لأراشيف bup"
 #: purger/main.cpp:28
 #, kde-format
 msgid "Copyright (C) 2013-2021 Simon Persson"
-msgstr "حقوق النشر (C) 2013-2021 Simon Persson"
+msgstr "حقوق النشر (ج) 2013-2021 سيمون بيرسون"
 
 #: settings/backupplan.cpp:24
 #, kde-kuit-format

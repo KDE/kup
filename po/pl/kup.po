@@ -4,7 +4,7 @@
 # Przemyslaw Ka. <przemyslaw.karpeta@gmail.com>, 2017,2019.
 # Simon Persson <simon.persson@mykolab.com>, 2014.
 # Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 # Translators:
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 01:54+0000\n"
-"PO-Revision-Date: 2024-11-30 09:39+0100\n"
+"PO-Revision-Date: 2025-02-23 12:27+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -1203,13 +1203,7 @@ msgid "Exclude files and folders based on patterns"
 msgstr "Wyklucz pliki i katalogi na podstawie wzorców"
 
 #: kcm/backupplanwidget.cpp:926
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented <link "
-#| "url='%1'>here</link>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1219,8 +1213,8 @@ msgid ""
 msgstr ""
 "Wzorce muszą być spisane w pliku tekstowym z każdym wzorcem w osobnym "
 "wierszu. Pliki i katalogi o nazwach, pasujące do dowolnego wzorca, zostaną "
-"wykluczone z kopii zapasowej. Zapis wzorców został objaśniony <link "
-"url='%1'>tutaj</link>."
+"wykluczone z kopii zapasowej. Zapis wzorców został objaśniony na <link "
+"url='%1'>stronie podręcznika bup</link>."
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format

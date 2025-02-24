@@ -1133,6 +1133,8 @@ msgid ""
 "the backup. The pattern format is documented in the <link url='%1'>bup-index "
 "manual page</link>."
 msgstr ""
+"每行一个模式。文件名匹配这些模式的文件和文件夹将被排除在备份之外。模式格式请"
+"见<link url='%1'>bup-index 手册页面</link>。"
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format

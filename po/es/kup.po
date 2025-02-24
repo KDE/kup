@@ -7,14 +7,14 @@
 # SPDX-FileCopyrightText: 2017 seryeb <seryeb@gmail.com>
 # SPDX-FileCopyrightText: 2014, 2015, 2018 Simon Persson <simon.persson@mykolab.com>
 # SPDX-FileCopyrightText: 2018, 2019 Victor García <victor.garcia@iberdomo.net>
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 # SPDX-FileCopyrightText: 2020 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 01:54+0000\n"
-"PO-Revision-Date: 2024-11-16 20:09+0100\n"
+"PO-Revision-Date: 2025-02-22 19:47+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1208,13 +1208,7 @@ msgid "Exclude files and folders based on patterns"
 msgstr "Excluir archivos y carpetas basándose en patrones"
 
 #: kcm/backupplanwidget.cpp:926
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented <link "
-#| "url='%1'>here</link>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1225,7 +1219,8 @@ msgstr ""
 "Los patrones deben listarse en un archivo de texto con un patrón por línea. "
 "Los archivos y carpetas con nombres que correspondan con cualquiera de los "
 "patrones se excluirán de la copia de seguridad. El formato de los patrones "
-"se encuentra documentado <link url='%1'>aquí</link>."
+"se encuentra documentado la <link url='%1'>página del manual de bup-index</"
+"link>."
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format
