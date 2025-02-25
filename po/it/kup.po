@@ -6,7 +6,7 @@
 # Francesco Marinucci <framari@posteo.org>, 2013-2014,2016-2017.
 # Simon Persson <simon.persson@mykolab.com>, 2014,2018.
 # Tichy <eristico@cryptolab.net>, 2018-2019.
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025 Vincenzo Reale <smart2128vr@gmail.com>
 # Paolo Zamponi <feus73@gmail.com>, 2022.
 #
 # Translators:
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 01:54+0000\n"
-"PO-Revision-Date: 2024-12-28 13:19+0100\n"
+"PO-Revision-Date: 2025-02-23 07:38+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: daemon/backupjob.cpp:43
 #, kde-kuit-format
@@ -1218,13 +1218,7 @@ msgid "Exclude files and folders based on patterns"
 msgstr "Escludi i file e le cartelle sulla base di modelli"
 
 #: kcm/backupplanwidget.cpp:926
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented <link "
-#| "url='%1'>here</link>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1233,9 +1227,9 @@ msgid ""
 "manual page</link>."
 msgstr ""
 "I modelli devono essere elencati in un file di testo con un modello per "
-"riga. I file e le cartelle con nomi corrispondenti a uno dei modelli saranno "
-"esclusi dalla copia di sicurezza. Il formato del modello è documentato <link "
-"url='%1'>qui</link>."
+"riga. I file e le cartelle con nomi che corrispondono a uno dei modelli "
+"saranno esclusi dalla copia di sicurezza. Il formato del modello è "
+"documentato nella <link url='%1'>pagina di manuale bup-index</link>."
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format
