@@ -1,16 +1,16 @@
 # Translation of kup.po to Catalan (Valencian)
-# Copyright (C) 2019-2024 This_file_is_part_of_KDE
+# Copyright (C) 2019-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 01:54+0000\n"
-"PO-Revision-Date: 2024-11-13 10:07+0100\n"
+"PO-Revision-Date: 2025-02-22 08:47+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -1203,13 +1203,7 @@ msgid "Exclude files and folders based on patterns"
 msgstr "Exclou fitxers i carpetes basant-se en patrons"
 
 #: kcm/backupplanwidget.cpp:926
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented <link "
-#| "url='%1'>here</link>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1220,7 +1214,7 @@ msgstr ""
 "Cal que els patrons estiguen llistats en un fitxer de text amb un patró per "
 "línia. Els fitxers i carpetes amb noms que coincidisquen amb qualsevol dels "
 "patrons s'exclouran de la còpia de seguretat. El format dels patrons està "
-"documentat <link url='%1'>ací</link>."
+"documentat a la <link url='%1'>pàgina bup-index del manual</link>."
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format
