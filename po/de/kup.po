@@ -325,14 +325,14 @@ msgstr "Hauptentwickler"
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Georg Lassnig"
+msgstr "Deutsches KDE-Übersetzungsteam"
 
 #: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
 #: purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "g.assnig@e67-its.de"
+msgstr "kde-i18n-de@kde.org"
 
 #: daemon/planexecutor.cpp:69
 #, kde-format
