@@ -15,6 +15,8 @@
 #include <KIO/Global>
 #include <KLocalizedString>
 
+#include <kwidgetsaddons_version.h>
+
 static const int cMargin = 6;
 
 DriveSelectionDelegate::DriveSelectionDelegate(QListView *pParent)
@@ -48,7 +50,12 @@ void DriveSelectionDelegate::paint(QPainter *pPainter, const QStyleOptionViewIte
     }
     mCapacityBar->drawCapacityBar(
         pPainter,
-        pOption.rect.adjusted(cMargin, cMargin + lFontMetrics.height() + cMargin, -cMargin, 4 * cMargin + lFontMetrics.height() - pOption.rect.height()));
+        pOption.rect.adjusted(cMargin, cMargin + lFontMetrics.height() + cMargin, -cMargin, 4 * cMargin + lFontMetrics.height() - pOption.rect.height())
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(6, 11, 0)
+            ,
+        pOption.state
+#endif
+    );
 
     if (pOption.state & QStyle::State_HasFocus)
         pPainter->setPen(pOption.palette.color(QPalette::HighlightedText));
