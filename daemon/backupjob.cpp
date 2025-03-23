@@ -26,6 +26,9 @@ BackupJob::BackupJob(BackupPlan &pBackupPlan, QString pDestinationPath, QString 
     mLogFile.setFileName(mLogFilePath);
     mLogFile.open(QIODevice::WriteOnly | QIODevice::Truncate);
     mLogStream.setDevice(&mLogFile);
+
+    // Magic property that tells the job tracker the destination of this job.
+    setProperty("destUrl", mDestinationPath);
 }
 
 void BackupJob::start()
