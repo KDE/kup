@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 01:54+0000\n"
+"POT-Creation-Date: 2025-03-24 01:56+0000\n"
 "PO-Revision-Date: 2023-03-06 16:36+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-POFile-SpellExtra: Persson rsync eSATA bup Bup kup kcmshell Kup\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: daemon/backupjob.cpp:43
+#: daemon/backupjob.cpp:46
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -1540,36 +1540,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "Plano de cópias de segurança %1"
 
-#: settings/backupplan.cpp:57
+#: settings/backupplan.cpp:60
 #, kde-format
 msgid "Backups"
 msgstr "Cópias de segurança"
 
-#: settings/backupplan.cpp:88
+#: settings/backupplan.cpp:91
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (cópia)"
 
-#: settings/backupplan.cpp:213
+#: settings/backupplan.cpp:216
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Última gravação: %1"
 
-#: settings/backupplan.cpp:217
+#: settings/backupplan.cpp:220
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Tamanho: %1"
 
-#: settings/backupplan.cpp:221
+#: settings/backupplan.cpp:224
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Espaço livre: %1"
 
-#: settings/backupplan.cpp:224
+#: settings/backupplan.cpp:227
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."

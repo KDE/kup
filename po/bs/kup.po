@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 01:54+0000\n"
+"POT-Creation-Date: 2025-03-24 01:56+0000\n"
 "PO-Revision-Date: 2018-12-31 05:49+0000\n"
 "Last-Translator: Simon Persson <simon.persson@mykolab.com>\n"
 "Language-Team: Bosnian (Bosnia and Herzegovina) (http://www.transifex.com/"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: daemon/backupjob.cpp:43
+#: daemon/backupjob.cpp:46
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -1553,36 +1553,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "Backup plan %1"
 
-#: settings/backupplan.cpp:57
+#: settings/backupplan.cpp:60
 #, kde-format
 msgid "Backups"
 msgstr "Backupi"
 
-#: settings/backupplan.cpp:88
+#: settings/backupplan.cpp:91
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr ""
 
-#: settings/backupplan.cpp:213
+#: settings/backupplan.cpp:216
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr ""
 
-#: settings/backupplan.cpp:217
+#: settings/backupplan.cpp:220
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr ""
 
-#: settings/backupplan.cpp:221
+#: settings/backupplan.cpp:224
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Slobodan prostor: %1"
 
-#: settings/backupplan.cpp:224
+#: settings/backupplan.cpp:227
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
