@@ -1,7 +1,6 @@
 # Translation of kup.po to Ukrainian
 # Copyright (C) 2019-2021 This_file_is_part_of_KDE
-# This file is distributed under the license LGPL version 2.1 or
-# version 3 or later versions approved by the membership of KDE e.V.
+# This file is distributed under the same license as the kup-backup package.
 #
 # Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2021, 2023, 2024, 2025.
 msgid ""
