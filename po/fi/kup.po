@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-24 01:56+0000\n"
+"POT-Creation-Date: 2025-04-01 01:55+0000\n"
 "PO-Revision-Date: 2024-12-01 14:52+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -1226,19 +1226,19 @@ msgid ""
 msgstr ""
 "Kytke haluamasi ulkoinen talletustila ja valitse se sitten luettelosta."
 
-#: kcm/driveselectiondelegate.cpp:62
+#: kcm/driveselectiondelegate.cpp:69
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
 msgstr "(ei kytketty)"
 
-#: kcm/driveselectiondelegate.cpp:66
+#: kcm/driveselectiondelegate.cpp:73
 #, kde-kuit-format
 msgctxt "@label %1 is amount of free storage space of hard drive"
 msgid "%1 free"
 msgstr "%1 vapaana"
 
-#: kcm/driveselectiondelegate.cpp:82
+#: kcm/driveselectiondelegate.cpp:89
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used for unnamed filesystems, more than one filesystem on "
@@ -1247,7 +1247,7 @@ msgctxt ""
 msgid "Partition %1 on %2%3"
 msgstr "Osio %1 laitteella %2%3"
 
-#: kcm/driveselectiondelegate.cpp:90
+#: kcm/driveselectiondelegate.cpp:97
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
@@ -1255,7 +1255,7 @@ msgctxt ""
 msgid "%1%2"
 msgstr "%1%2"
 
-#: kcm/driveselectiondelegate.cpp:96
+#: kcm/driveselectiondelegate.cpp:103
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
@@ -1263,13 +1263,13 @@ msgctxt ""
 msgid "%1 on %2%3"
 msgstr "%1 laitteella %2%3"
 
-#: kcm/driveselectiondelegate.cpp:106
+#: kcm/driveselectiondelegate.cpp:113
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
 msgstr "%1: kokonaiskapasiteetti %2"
 
-#: kcm/driveselectiondelegate.cpp:161
+#: kcm/driveselectiondelegate.cpp:168
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1281,7 +1281,7 @@ msgstr ""
 "eikä käyttöoikeuksia. Käyttöoikeuksilla on merkitystä vain, jos koneella on "
 "useampi käyttäjä tai varmuuskopioit ohjelmatiedostoja."
 
-#: kcm/driveselectiondelegate.cpp:167
+#: kcm/driveselectiondelegate.cpp:174
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""

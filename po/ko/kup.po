@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-24 01:56+0000\n"
+"POT-Creation-Date: 2025-04-01 01:55+0000\n"
 "PO-Revision-Date: 2024-12-10 01:12+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1211,19 +1211,19 @@ msgid ""
 "Plug in the external storage you wish to use, then select it in this list."
 msgstr "사용할 외장 저장 장치를 연결하고 이 목록에서 선택하십시오."
 
-#: kcm/driveselectiondelegate.cpp:62
+#: kcm/driveselectiondelegate.cpp:69
 #, kde-kuit-format
 msgctxt "@item:inlistbox this text is added if selected drive is disconnected"
 msgid " (disconnected)"
 msgstr "(연결 끊김)"
 
-#: kcm/driveselectiondelegate.cpp:66
+#: kcm/driveselectiondelegate.cpp:73
 #, kde-kuit-format
 msgctxt "@label %1 is amount of free storage space of hard drive"
 msgid "%1 free"
 msgstr "%1 남음"
 
-#: kcm/driveselectiondelegate.cpp:82
+#: kcm/driveselectiondelegate.cpp:89
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used for unnamed filesystems, more than one filesystem on "
@@ -1232,7 +1232,7 @@ msgctxt ""
 msgid "Partition %1 on %2%3"
 msgstr "%2의 파티션 %1%3"
 
-#: kcm/driveselectiondelegate.cpp:90
+#: kcm/driveselectiondelegate.cpp:97
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox used when there is only one unnamed filesystem on device. %1 "
@@ -1240,7 +1240,7 @@ msgctxt ""
 msgid "%1%2"
 msgstr "%1%2"
 
-#: kcm/driveselectiondelegate.cpp:96
+#: kcm/driveselectiondelegate.cpp:103
 #, kde-kuit-format
 msgctxt ""
 "@item:inlistbox %1 is filesystem label, %2 is the device description, %3 is "
@@ -1248,13 +1248,13 @@ msgctxt ""
 msgid "%1 on %2%3"
 msgstr "%2의 %1%3"
 
-#: kcm/driveselectiondelegate.cpp:106
+#: kcm/driveselectiondelegate.cpp:113
 #, kde-kuit-format
 msgctxt "@item:inlistbox %1 is drive(partition) label, %2 is storage capacity"
 msgid "%1: %2 total capacity"
 msgstr "%1: 총 용량 %2"
 
-#: kcm/driveselectiondelegate.cpp:161
+#: kcm/driveselectiondelegate.cpp:168
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
@@ -1266,7 +1266,7 @@ msgstr ""
 "에 사용자가 한 명 이상 있거나 실행 가능한 프로그램 파일을 백업한다면 파일 권"
 "한이 중요합니다."
 
-#: kcm/driveselectiondelegate.cpp:167
+#: kcm/driveselectiondelegate.cpp:174
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid ""
