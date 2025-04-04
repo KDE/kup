@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kup package.
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 01:55+0000\n"
-"PO-Revision-Date: 2024-12-01 14:52+0200\n"
+"PO-Revision-Date: 2025-03-15 09:25+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -1171,13 +1171,7 @@ msgid "Exclude files and folders based on patterns"
 msgstr "Sulje tiedostoja ja kansioita pois kuvioilla"
 
 #: kcm/backupplanwidget.cpp:926
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented <link "
-#| "url='%1'>here</link>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1187,7 +1181,7 @@ msgid ""
 msgstr ""
 "Kuviot luetellaan tekstitiedostossa kuvio per rivi. Mitä tahansa kuviota "
 "vastaavat tiedostot ja kansiot suljetaan pois varmuuskopiosta. Kuvion "
-"muodosta löytyy lisätietoa <link url='%1'>täältä</link>."
+"muodosta löytyy lisätietoa <link url='%1'>bup-indexin man-sivulta</link>."
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format
