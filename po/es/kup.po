@@ -1,11 +1,12 @@
-# Translation of kup to Spanish
+# Spanish translations for kup.po package.
+# Copyright (C) 2013-2025 This file is copyright:
 # This file is distributed under the same license as the kup package.
 #
-# SPDX-FileCopyrightText: 2014 Administrador de Sistemas de Koali <admin@koali.es>
-# SPDX-FileCopyrightText: 2017 Alex Castilla <alex.castillap@gmail.com>
 # SPDX-FileCopyrightText: 2013 Francisco García Cisneros <fgarciacis@koali.es>
-# SPDX-FileCopyrightText: 2017 seryeb <seryeb@gmail.com>
+# SPDX-FileCopyrightText: 2014 Administrador de Sistemas de Koali <admin@koali.es>
 # SPDX-FileCopyrightText: 2014, 2015, 2018 Simon Persson <simon.persson@mykolab.com>
+# SPDX-FileCopyrightText: 2017 Alex Castilla <alex.castillap@gmail.com>
+# SPDX-FileCopyrightText: 2017 seryeb <seryeb@gmail.com>
 # SPDX-FileCopyrightText: 2018, 2019 Victor García <victor.garcia@iberdomo.net>
 # SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 # SPDX-FileCopyrightText: 2020 Eloy Cuadra <ecuadra@eloihr.net>
@@ -14,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 01:55+0000\n"
-"PO-Revision-Date: 2025-02-22 19:47+0100\n"
+"PO-Revision-Date: 2025-06-09 02:39+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -561,7 +562,7 @@ msgstr "(archivo)"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder..."
-msgstr "Nueva Carpeta..."
+msgstr "Nueva Carpeta…"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1403,7 +1404,7 @@ msgstr "Aviso"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
-msgstr "Añadir nuevo plan..."
+msgstr "Añadir nuevo plan…"
 
 #: kcm/kupkcm.cpp:275
 #, kde-kuit-format
@@ -1473,7 +1474,7 @@ msgstr "Mostrar el archivo de registro"
 #: plasmoid-qt5/contents/ui/main.qml:69
 #, kde-format
 msgid "&Configure Kup..."
-msgstr "&Configurar Kup..."
+msgstr "&Configurar Kup…"
 
 #: plasmoid-qt5/contents/ui/main.qml:71
 #, kde-format
@@ -1494,7 +1495,7 @@ msgstr "&Configurar planes de copia de seguridad"
 #: plasmoid-qt6/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Backup Plans..."
-msgstr "Configurar planes de copia de seguridad..."
+msgstr "Configurar planes de copia de seguridad…"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
