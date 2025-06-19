@@ -3,7 +3,6 @@
 // SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 #include "filedigger.h"
-#include "mergedvfs.h"
 
 #include <git2/global.h>
 
@@ -38,10 +37,8 @@ int main(int pArgCount, char **pArgArray)
     KCrash::initialize();
 
     QCommandLineParser lParser;
-    lParser.addOption(QCommandLineOption(QStringList() << QStringLiteral("b") << QStringLiteral("branch"),
-                                         i18n("Name of the branch to be opened."),
-                                         QStringLiteral("branch name"),
-                                         QStringLiteral("kup")));
+    lParser.addOption({{"b", "branch"}, i18n("Name of the branch to be opened."), "branch name", "kup"});
+    lParser.addOption({{"p", "path"}, i18n("File or folder path to be focused."), "path"});
     lParser.addPositionalArgument(QStringLiteral("<repository path>"), i18n("Path to the bup repository to be opened."));
 
     lAbout.setupCommandLine(&lParser);
@@ -58,7 +55,7 @@ int main(int pArgCount, char **pArgArray)
     // This needs to be called first thing, before any other calls to libgit2.
     git_libgit2_init();
 
-    auto lFileDigger = new FileDigger(lRepoPath, lParser.value(QStringLiteral("branch")));
+    auto lFileDigger = new FileDigger(lRepoPath, lParser.value("branch"), lParser.value("path"));
     lFileDigger->show();
     int lRetVal = QApplication::exec();
     git_libgit2_shutdown();

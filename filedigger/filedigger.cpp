@@ -31,7 +31,7 @@
 #include <kio_version.h>
 #include <utility>
 
-FileDigger::FileDigger(QString pRepoPath, QString pBranchName, QWidget *pParent)
+FileDigger::FileDigger(QString pRepoPath, QString pBranchName, QString pPathToFocus, QWidget *pParent)
     : KMainWindow(pParent)
     , mRepoPath(std::move(pRepoPath))
     , mBranchName(std::move(pBranchName))
@@ -40,8 +40,8 @@ FileDigger::FileDigger(QString pRepoPath, QString pBranchName, QWidget *pParent)
     setWindowIcon(QIcon::fromTheme(QStringLiteral("kup")));
     KToolBar *lAppToolBar = toolBar();
     lAppToolBar->addAction(KStandardAction::quit(this, SLOT(close()), this));
-    QTimer::singleShot(0, this, [this] {
-        repoPathAvailable();
+    QTimer::singleShot(0, this, [this, pPathToFocus] {
+        repoPathAvailable(pPathToFocus);
     });
 }
 
@@ -76,7 +76,7 @@ void FileDigger::restore(const QModelIndex &pIndex)
     lDialog->show();
 }
 
-void FileDigger::repoPathAvailable()
+void FileDigger::repoPathAvailable(const QString &pPathToFocus)
 {
     if (mRepoPath.isEmpty()) {
         createSelectionView();
@@ -84,7 +84,7 @@ void FileDigger::repoPathAvailable()
         QGuiApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
         MergedRepository *lRepository = createRepo();
         if (lRepository != nullptr) {
-            createRepoView(lRepository);
+            createRepoView(lRepository, pPathToFocus);
         }
         QGuiApplication::restoreOverrideCursor();
     }
@@ -99,7 +99,7 @@ void FileDigger::checkFileWidgetPath()
         mRepoPath = lList.first().url().toLocalFile();
     }
     mBranchName = QStringLiteral("kup");
-    repoPathAvailable();
+    repoPathAvailable(QString());
 }
 
 void FileDigger::enterUrl(const QUrl &pUrl)
@@ -129,7 +129,7 @@ MergedRepository *FileDigger::createRepo()
     return lRepository;
 }
 
-void FileDigger::createRepoView(MergedRepository *pRepository)
+void FileDigger::createRepoView(MergedRepository *pRepository, const QString &pPathToFocus)
 {
     auto lSplitter = new QSplitter();
     mMergedVfsModel = new MergedVfsModel(pRepository, this);
@@ -151,17 +151,32 @@ void FileDigger::createRepoView(MergedRepository *pRepository)
     connect(lVersionDelegate, &VersionListDelegate::restoreRequested, this, &FileDigger::restore);
     mMergedVfsView->setFocus();
 
-    // expand all levels from the top until the node has more than one child
     QModelIndex lIndex;
-    forever {
-        mMergedVfsView->expand(lIndex);
-        if (mMergedVfsModel->rowCount(lIndex) == 1) {
+    if (pPathToFocus.isEmpty()) {
+        // expand all levels from the top until the node has more than one child
+        while (mMergedVfsModel->rowCount(lIndex.parent()) == 1) {
+            mMergedVfsView->expand(lIndex);
             lIndex = mMergedVfsModel->index(0, 0, lIndex);
-        } else {
-            break;
+        }
+    } else {
+        const auto lPathSegments = pPathToFocus.split('/', Qt::SkipEmptyParts);
+        for (const auto &lPathSegment : lPathSegments) {
+            mMergedVfsView->expand(lIndex);
+
+            if (mMergedVfsModel->rowCount(lIndex) == 0) {
+                break;
+            }
+
+            auto lFirstChild = mMergedVfsModel->index(0, 0, lIndex);
+            auto lNextIndexList = mMergedVfsModel->match(lFirstChild, Qt::DisplayRole, lPathSegment, 1, Qt::MatchExactly);
+            if (lNextIndexList.isEmpty()) {
+                break;
+            }
+            lIndex = lNextIndexList.front();
         }
     }
-    mMergedVfsView->selectionModel()->setCurrentIndex(mMergedVfsModel->index(0, 0, lIndex), QItemSelectionModel::Select);
+
+    mMergedVfsView->selectionModel()->setCurrentIndex(lIndex, QItemSelectionModel::Select);
     setCentralWidget(lSplitter);
 }
 

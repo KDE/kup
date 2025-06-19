@@ -20,20 +20,20 @@ class FileDigger : public KMainWindow
 {
     Q_OBJECT
 public:
-    explicit FileDigger(QString pRepoPath, QString pBranchName, QWidget *pParent = nullptr);
+    explicit FileDigger(QString pRepoPath, QString pBranchName, QString pPathToFocus = QString(), QWidget *pParent = nullptr);
     QSize sizeHint() const override;
 
 protected slots:
     void updateVersionModel(const QModelIndex &pCurrent, const QModelIndex &pPrevious);
     void open(const QModelIndex &pIndex);
     void restore(const QModelIndex &pIndex);
-    void repoPathAvailable();
+    void repoPathAvailable(const QString &pPathToFocus);
     void checkFileWidgetPath();
     void enterUrl(const QUrl &pUrl);
 
 protected:
     MergedRepository *createRepo();
-    void createRepoView(MergedRepository *pRepository);
+    void createRepoView(MergedRepository *pRepository, const QString &pPathToFocus);
     void createSelectionView();
     MergedVfsModel *mMergedVfsModel{};
     QTreeView *mMergedVfsView{};
