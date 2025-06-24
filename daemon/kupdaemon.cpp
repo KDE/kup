@@ -23,7 +23,7 @@
 
 #include <KIdleTime>
 #include <KLocalizedString>
-#include <KUiServerJobTracker>
+#include <KUiServerV2JobTracker>
 
 KupDaemon::KupDaemon()
     : mConfig(KSharedConfig::openConfig(QStringLiteral("kuprc")))
@@ -31,7 +31,7 @@ KupDaemon::KupDaemon()
     , mUsageAccTimer(new QTimer(this))
     , mStatusUpdateTimer(new QTimer(this))
     , mWaitingToReloadConfig(false)
-    , mJobTracker(new KUiServerJobTracker(this))
+    , mJobTracker(new KUiServerV2JobTracker(this))
     , mLocalServer(new QLocalServer(this))
 {
 }

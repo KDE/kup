@@ -14,7 +14,7 @@ class KupSettings;
 class PlanExecutor;
 
 class KJob;
-class KUiServerJobTracker;
+class KUiServerV2JobTracker;
 
 class QLocalServer;
 class QLocalSocket;
@@ -50,7 +50,7 @@ private:
     QTimer *mUsageAccTimer;
     QTimer *mStatusUpdateTimer;
     bool mWaitingToReloadConfig;
-    KUiServerJobTracker *mJobTracker;
+    KUiServerV2JobTracker * const mJobTracker;
     QLocalServer *mLocalServer;
     QList<QLocalSocket *> mSockets;
 };
