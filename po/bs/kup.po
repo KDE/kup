@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-01 01:55+0000\n"
+"POT-Creation-Date: 2025-06-27 02:02+0000\n"
 "PO-Revision-Date: 2018-12-31 05:49+0000\n"
 "Last-Translator: Simon Persson <simon.persson@mykolab.com>\n"
 "Language-Team: Bosnian (Bosnia and Herzegovina) (http://www.transifex.com/"
@@ -298,26 +298,26 @@ msgstr ""
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "Copyright (C) 2011-2015 Simon Persson"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
+#: daemon/main.cpp:44 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
 #: purger/main.cpp:29
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:34 kcm/kupkcm.cpp:49
+#: daemon/main.cpp:44 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
 #: purger/main.cpp:29
 #, kde-format
 msgid "Maintainer"
 msgstr "Održavatelj"
 
-#: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
+#: daemon/main.cpp:45 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
 #: purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Vaša imena"
 
-#: daemon/main.cpp:45 filedigger/main.cpp:35 kcm/kupkcm.cpp:50
+#: daemon/main.cpp:45 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
 #: purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -489,34 +489,39 @@ msgctxt "@info messagebox"
 msgid "You do not have permission needed to read this backup archive."
 msgstr "Nemate permisije potrebne za čitanje ove backup arhive."
 
-#: filedigger/filedigger.cpp:173
+#: filedigger/filedigger.cpp:188
 #, kde-format
 msgid "Select location of backup archive to open."
 msgstr ""
 
-#: filedigger/main.cpp:29
+#: filedigger/main.cpp:28
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
 msgstr "File Digger"
 
-#: filedigger/main.cpp:31
+#: filedigger/main.cpp:30
 #, kde-format
 msgid "Browser for bup archives."
 msgstr "Pretraživač bup arhiva"
 
-#: filedigger/main.cpp:33
+#: filedigger/main.cpp:32
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2013-2015 Simon Persson"
 msgid "Copyright (C) 2013-2020 Simon Persson"
 msgstr "Copyright (C) 2013-2015 Simon Persson"
 
-#: filedigger/main.cpp:42 purger/main.cpp:37
+#: filedigger/main.cpp:40 purger/main.cpp:37
 #, kde-format
 msgid "Name of the branch to be opened."
 msgstr "Ime grane koju treba otvoriti."
 
-#: filedigger/main.cpp:45 purger/main.cpp:40
+#: filedigger/main.cpp:41
+#, kde-format
+msgid "File or folder path to be focused."
+msgstr ""
+
+#: filedigger/main.cpp:42 purger/main.cpp:40
 #, kde-format
 msgid "Path to the bup repository to be opened."
 msgstr "Putanja do bup repozitorija koju treba otvoriti."
