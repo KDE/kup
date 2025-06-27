@@ -298,7 +298,7 @@ bool BupWorker::checkCorrectRepository(const QUrl &pUrl, QStringList &pPathInRep
 QString BupWorker::getUserName(uid_t pUid)
 {
     if (!mUsercache.contains(pUid)) {
-        struct passwd *lUserInfo = getpwuid(pUid);
+        const struct passwd *lUserInfo = getpwuid(pUid);
         if (lUserInfo) {
             mUsercache.insert(pUid, QString::fromLocal8Bit(lUserInfo->pw_name));
         } else {
@@ -311,7 +311,7 @@ QString BupWorker::getUserName(uid_t pUid)
 QString BupWorker::getGroupName(gid_t pGid)
 {
     if (!mGroupcache.contains(pGid)) {
-        struct group *lGroupInfo = getgrgid(pGid);
+        const struct group *lGroupInfo = getgrgid(pGid);
         if (lGroupInfo) {
             mGroupcache.insert(pGid, QString::fromLocal8Bit(lGroupInfo->gr_name));
         } else {

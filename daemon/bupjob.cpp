@@ -10,7 +10,7 @@
 #include <QFileInfo>
 #include <QThread>
 
-#include <csignal>
+#include <signal.h>
 
 BupJob::BupJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon)
     : BackupJob(pBackupPlan, pDestinationPath, pLogFilePath, pKupDaemon)
@@ -135,7 +135,7 @@ void BupJob::startIndexing()
     mIndexProcess << QStringLiteral("-d") << mDestinationPath;
     mIndexProcess << QStringLiteral("index") << QStringLiteral("-u");
 
-    foreach (QString lExclude, mBackupPlan.mPathsExcluded) {
+    foreach (const QString &lExclude, mBackupPlan.mPathsExcluded) {
         mIndexProcess << QStringLiteral("--exclude");
         mIndexProcess << lExclude;
     }

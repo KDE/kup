@@ -31,7 +31,7 @@
 #include <kio_version.h>
 #include <utility>
 
-static const QString cKupTempRestoreFolder = QStringLiteral("_kup_temporary_restore_folder_");
+static const char *cKupTempRestoreFolder = "_kup_temporary_restore_folder_";
 
 RestoreDialog::RestoreDialog(BupSourceInfo pPathInfo, QWidget *parent)
     : QDialog(parent)

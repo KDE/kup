@@ -4,7 +4,6 @@
 
 #include "kupsettings.h"
 
-#include "backupplan.h"
 #include <utility>
 
 KupSettings::KupSettings(KSharedConfigPtr pConfig, QObject *pParent)

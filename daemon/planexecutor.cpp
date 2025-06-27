@@ -21,10 +21,10 @@
 #include <QStorageInfo>
 #include <QTimer>
 
-static const QString cPwrMgmtServiceName = QStringLiteral("org.freedesktop.PowerManagement");
-static const QString cPwrMgmtPath = QStringLiteral("/org/freedesktop/PowerManagement");
-static const QString cPwrMgmtInhibitInterface = QStringLiteral("org.freedesktop.PowerManagement.Inhibit");
-static const QString cPwrMgmtInterface = QStringLiteral("org.freedesktop.PowerManagement");
+static const char *cPwrMgmtServiceName = "org.freedesktop.PowerManagement";
+static const char *cPwrMgmtPath = "/org/freedesktop/PowerManagement";
+static const char *cPwrMgmtInhibitInterface = "org.freedesktop.PowerManagement.Inhibit";
+static const char *cPwrMgmtInterface = "org.freedesktop.PowerManagement";
 
 PlanExecutor::PlanExecutor(BackupPlan *pPlan, KupDaemon *pKupDaemon)
     : QObject(pKupDaemon)

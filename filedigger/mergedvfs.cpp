@@ -172,13 +172,11 @@ void MergedNode::generateSubNodes()
                     mSubNodes->append(lSubNode);
                 }
             }
-            bool lAlreadySeen = false;
-            foreach (VersionData *lVersion, lSubNode->mVersionList) {
-                if (lVersion->mOid == *lOid) {
-                    lAlreadySeen = true;
-                    break;
-                }
-            }
+
+            bool lAlreadySeen = std::any_of(lSubNode->mVersionList.cbegin(), lSubNode->mVersionList.cend(), [&](auto pVersion) {
+                return pVersion->mOid == *lOid;
+            });
+
             if (S_ISDIR(lMode)) {
                 if (!lAlreadySeen) {
                     lSubNode->mVersionList.append(new VersionData(lOid, lCurrentVersion->mCommitTime, lCurrentVersion->mModifiedDate, 0));

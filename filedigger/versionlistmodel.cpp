@@ -3,7 +3,6 @@
 // SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 #include "versionlistmodel.h"
-#include "vfshelpers.h"
 
 #include <KFormat>
 #include <KLocalizedString>

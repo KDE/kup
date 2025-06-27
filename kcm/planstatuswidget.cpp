@@ -4,7 +4,6 @@
 
 #include "planstatuswidget.h"
 #include "backupplan.h"
-#include "kupsettings.h"
 
 #include <QBoxLayout>
 #include <QLabel>

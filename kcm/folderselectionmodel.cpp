@@ -27,12 +27,9 @@ bool setContainsSubdir(const QSet<QString> &pSet, const QString &pParentDir)
     // we need the trailing slash to be able to use the startsWith() function to check for parent dirs.
     QString lPathWithSlash = pParentDir;
     ensureTrailingSlash(lPathWithSlash);
-    foreach (QString lTestedPath, pSet) {
-        if (lTestedPath.startsWith(lPathWithSlash)) {
-            return true;
-        }
-    }
-    return false;
+    return std::any_of(pSet.cbegin(), pSet.cend(), [&](auto pTestedPath) {
+        return pTestedPath.startsWith(lPathWithSlash);
+    });
 }
 
 }

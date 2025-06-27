@@ -109,12 +109,15 @@ void KupDaemon::setupGuiStuff()
 
 void KupDaemon::reloadConfig()
 {
-    foreach (PlanExecutor *lExecutor, mExecutors) {
-        if (lExecutor->busy()) {
-            mWaitingToReloadConfig = true;
-            return;
-        }
+    auto lBusy = std::any_of(mExecutors.cbegin(), mExecutors.cend(), [&](auto pExecutor) {
+        return pExecutor->busy();
+    });
+
+    if (lBusy) {
+        mWaitingToReloadConfig = true;
+        return;
     }
+
     mWaitingToReloadConfig = false;
 
     mSettings->load();
@@ -167,21 +170,23 @@ void KupDaemon::slotShutdownRequest(QSessionManager &pManager)
     // daemon instead.
     pManager.setRestartHint(QSessionManager::RestartNever);
 
-    foreach (PlanExecutor *lExecutor, mExecutors) {
-        if (lExecutor->busy() && pManager.allowsErrorInteraction()) {
-            QMessageBox lMessageBox;
-            QPushButton *lContinueButton = lMessageBox.addButton(i18n("Continue"), QMessageBox::RejectRole);
-            lMessageBox.addButton(i18n("Stop"), QMessageBox::AcceptRole);
-            lMessageBox.setText(i18nc("%1 is a text explaining the current activity", "Currently busy: %1", lExecutor->currentActivityTitle()));
-            lMessageBox.setInformativeText(i18n("Do you really want to stop?"));
-            lMessageBox.setIcon(QMessageBox::Warning);
-            lMessageBox.setWindowIcon(QIcon::fromTheme(QStringLiteral("kup")));
-            lMessageBox.setWindowTitle(i18n("User Backups"));
-            lMessageBox.exec();
-            if (lMessageBox.clickedButton() == lContinueButton) {
-                pManager.cancel();
-            }
-            return; // only ask for one active executor.
+    auto lExecutor = std::find_if(mExecutors.cbegin(), mExecutors.cend(), [&](auto pExecutor) {
+        return pExecutor->busy() && pManager.allowsErrorInteraction();
+    });
+
+    if (lExecutor != mExecutors.cend()) {
+        QMessageBox lMessageBox;
+        const QPushButton *lContinueButton = lMessageBox.addButton(i18n("Continue"), QMessageBox::RejectRole);
+        lMessageBox.addButton(i18n("Stop"), QMessageBox::AcceptRole);
+        lMessageBox.setText(i18nc("%1 is a text explaining the current activity", "Currently busy: %1", (*lExecutor)->currentActivityTitle()));
+        lMessageBox.setInformativeText(i18n("Do you really want to stop?"));
+        lMessageBox.setIcon(QMessageBox::Warning);
+        lMessageBox.setWindowIcon(QIcon::fromTheme(QStringLiteral("kup")));
+        lMessageBox.setWindowTitle(i18n("User Backups"));
+        lMessageBox.exec();
+
+        if (lMessageBox.clickedButton() == lContinueButton) {
+            pManager.cancel();
         }
     }
 }

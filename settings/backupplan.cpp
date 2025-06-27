@@ -159,7 +159,7 @@ BackupPlan::Status BackupPlan::backupStatus()
         break;
     case USAGE:
         lStatus = mAccumulatedUsageTime;
-        lInterval = mUsageLimit * 3600;
+        lInterval = static_cast<qint64>(mUsageLimit) * 3600;
         break;
     }
 

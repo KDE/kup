@@ -10,12 +10,11 @@
 #include <QList>
 #include <QPainter>
 #include <QStandardItemModel>
+#include <QStorageInfo>
 #include <QTimer>
 
 #include <KConfigDialogManager>
 #include <KLocalizedString>
-#include <QStorageInfo>
-
 #include <Solid/Device>
 #include <Solid/DeviceNotifier>
 #include <Solid/StorageAccess>

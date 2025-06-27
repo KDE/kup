@@ -4,7 +4,6 @@
 
 #include "mergedvfsmodel.h"
 #include "mergedvfs.h"
-#include "vfshelpers.h"
 
 #include <KIO/Global>
 
@@ -101,8 +100,7 @@ int MergedVfsModel::rowCount(const QModelIndex &pParent) const
 
 const VersionList *MergedVfsModel::versionList(const QModelIndex &pIndex)
 {
-    auto lNode = static_cast<MergedNode *>(pIndex.internalPointer());
-    return lNode->versionList();
+    return node(pIndex)->versionList();
 }
 
 const MergedNode *MergedVfsModel::node(const QModelIndex &pIndex)

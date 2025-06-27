@@ -12,10 +12,9 @@
 
 KupEngine::KupEngine(QObject *pParent, const QVariantList &pArgs)
     : Plasma::DataEngine(pParent /* pArgs*/)
+    , mSocketName(QString("kup-daemon-%1").arg(QString::fromLocal8Bit(qgetenv("USER"))))
 {
     Q_UNUSED(pArgs);
-    mSocketName = QStringLiteral("kup-daemon-");
-    mSocketName += QString::fromLocal8Bit(qgetenv("USER"));
     mSocket = new QLocalSocket(this);
     connect(mSocket, &QLocalSocket::readyRead, this, &KupEngine::processData);
     connect(mSocket, &QLocalSocket::stateChanged, this, &KupEngine::checkConnection);
