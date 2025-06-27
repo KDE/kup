@@ -33,6 +33,7 @@ protected:
     bool doResume() override;
 
     bool performMigration();
+    bool onlySaveFileContents();
 
     KProcess mRsyncProcess;
     QElapsedTimer mInfoRateLimiter;

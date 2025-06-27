@@ -12,6 +12,8 @@
 #include <QTextStream>
 
 #include <KLocalizedString>
+#include <Solid/Device>
+#include <Solid/StorageVolume>
 
 RsyncJob::RsyncJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const QString &pLogFilePath, KupDaemon *pKupDaemon)
     : BackupJob(pBackupPlan, pDestinationPath, pLogFilePath, pKupDaemon)
@@ -46,7 +48,16 @@ void RsyncJob::performJob()
     mLogStream << QStringLiteral("Kup is starting rsync backup job at ") << QLocale().toString(QDateTime::currentDateTime()) << Qt::endl;
 
     emit description(this, i18n("Checking what to copy"));
-    mRsyncProcess << QStringLiteral("rsync") << QStringLiteral("-avX") << QStringLiteral("--delete-excluded") << QStringLiteral("--delete-before")
+
+    mRsyncProcess << QStringLiteral("rsync");
+
+    if (onlySaveFileContents()) {
+        mRsyncProcess << QStringLiteral("-recursive") << QStringLiteral("--times");
+    } else {
+        mRsyncProcess << QStringLiteral("--archive") << QStringLiteral("--xattrs");
+    }
+
+    mRsyncProcess << QStringLiteral("--delete-excluded") << QStringLiteral("--delete-before") << QStringLiteral("--verbose")
                   << QStringLiteral("--info=progress2");
 
     QStringList lIncludeNames;
@@ -212,4 +223,16 @@ bool RsyncJob::performMigration()
     }
     mLogStream << QStringLiteral("File migration completed.") << Qt::endl;
     return true;
+}
+
+bool RsyncJob::onlySaveFileContents()
+{
+    auto lDevice = Solid::Device::storageAccessFromPath(mDestinationPath);
+    auto *lVolume = lDevice.as<Solid::StorageVolume>();
+    if (!lVolume) {
+        return false;
+    }
+
+    auto lFileSystemType = lVolume->fsType();
+    return lFileSystemType == "vfat" || lFileSystemType == "exfat";
 }
