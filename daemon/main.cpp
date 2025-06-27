@@ -29,7 +29,11 @@ int main(int argc, char *argv[])
         qCCritical(KUPDAEMON) << xi18nc("@info:shell Error message at startup",
                                         "Kup is not enabled, enable it from the "
                                         "system settings module. You can do that by running "
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
                                         "<command>kcmshell5 kup</command>");
+#else
+                                        "<command>kcmshell6 kup</command>");
+#endif
         return 0;
     }
 
