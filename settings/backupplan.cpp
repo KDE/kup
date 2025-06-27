@@ -8,9 +8,11 @@
 #include <QDir>
 #include <QStandardPaths>
 #include <QString>
+#include <QTimeZone>
 
 #include <KFormat>
 #include <KLocalizedString>
+
 #include <utility>
 
 BackupPlan::BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pParent)
@@ -194,7 +196,7 @@ QString BackupPlan::absoluteExcludesFilePath()
 void BackupPlan::usrRead()
 {
     // correct the time spec after default read routines.
-    mLastCompleteBackup.setTimeSpec(Qt::UTC);
+    mLastCompleteBackup.setTimeZone(QTimeZone::utc());
     QMutableStringListIterator lExcludes(mPathsExcluded);
     while (lExcludes.hasNext()) {
         ensureNoTrailingSlash(lExcludes.next());

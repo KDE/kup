@@ -34,22 +34,11 @@ K_PLUGIN_CLASS_WITH_JSON(KupKcm, "kcm_kup.json")
 KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
     : KCModule(pParent, pArgs)
 #else
-KupKcm::KupKcm(QObject *pParent, const KPluginMetaData &md, const QVariantList &pArgs)
-    : KCModule(pParent, md)
+KupKcm::KupKcm(QObject *pParent, const KPluginMetaData &pPluginMetaData, const QVariantList &pArgs)
+    : KCModule(pParent, pPluginMetaData)
 #endif
     , mSourcePageToShow(0)
 {
-#if QT_VERSION_MAJOR == 5
-    KAboutData lAbout(QStringLiteral("kcm_kup"),
-                      i18n("Kup Configuration Module"),
-                      QStringLiteral("0.10.0"),
-                      i18n("Configuration of backup plans for the Kup backup system"),
-                      KAboutLicense::GPL,
-                      i18n("Copyright (C) 2011-2020 Simon Persson"));
-    lAbout.addAuthor(i18n("Simon Persson"), i18n("Maintainer"), "simon.persson@mykolab.com");
-    lAbout.setTranslator(xi18nc("NAME OF TRANSLATORS", "Your names"), xi18nc("EMAIL OF TRANSLATORS", "Your emails"));
-    setAboutData(new KAboutData(lAbout));
-#endif
     setObjectName(QStringLiteral("kcm_kup")); // needed for the kconfigdialogmanager magic
     setButtons((Apply | buttons()) & ~Default);
 
@@ -121,7 +110,7 @@ KupKcm::KupKcm(QObject *pParent, const KPluginMetaData &md, const QVariantList &
         QListIterator<QVariant> lIter(pArgs);
         while (lIter.hasNext()) {
             QVariant lVariant = lIter.next();
-            if (lVariant.type() == QVariant::String) {
+            if (lVariant.userType() == QMetaType::QString) {
                 QString lArgument = lVariant.toString();
                 if (lArgument == QStringLiteral("show_sources") && lIter.hasNext()) {
                     mSourcePageToShow = lIter.next().toString().toInt();
