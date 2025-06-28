@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-27 02:02+0000\n"
-"PO-Revision-Date: 2025-02-22 08:47+0100\n"
+"PO-Revision-Date: 2025-06-27 10:07+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -519,7 +519,7 @@ msgstr "Nom de la branca que s'obrirà."
 #: filedigger/main.cpp:41
 #, kde-format
 msgid "File or folder path to be focused."
-msgstr ""
+msgstr "Camí de fitxer o carpeta que se centrarà."
 
 #: filedigger/main.cpp:42 purger/main.cpp:40
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-27 02:02+0000\n"
-"PO-Revision-Date: 2025-02-22 14:34+0100\n"
+"PO-Revision-Date: 2025-06-27 11:39+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -510,7 +510,7 @@ msgstr "Naam van de te openen afsplitsing."
 #: filedigger/main.cpp:41
 #, kde-format
 msgid "File or folder path to be focused."
-msgstr ""
+msgstr "Pad van bestand of map waarop gefocust moet worden."
 
 #: filedigger/main.cpp:42 purger/main.cpp:40
 #, kde-format

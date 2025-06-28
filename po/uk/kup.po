@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-27 02:02+0000\n"
-"PO-Revision-Date: 2025-02-22 09:03+0200\n"
+"PO-Revision-Date: 2025-06-27 10:27+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -528,7 +528,7 @@ msgstr "Назва гілки, яку буде відкрито."
 #: filedigger/main.cpp:41
 #, kde-format
 msgid "File or folder path to be focused."
-msgstr ""
+msgstr "Шлях до файла або теки, які перебуватимуть у фокусі."
 
 #: filedigger/main.cpp:42 purger/main.cpp:40
 #, kde-format
