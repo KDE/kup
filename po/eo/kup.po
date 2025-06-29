@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-27 02:02+0000\n"
+"POT-Creation-Date: 2025-06-29 02:05+0000\n"
 "PO-Revision-Date: 2025-03-17 21:10+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -199,62 +199,62 @@ msgstr ""
 "difektaj! Vidu protokoldosieron por pliaj detaloj. Ĉu vi volas provi ripari "
 "la sekurkopiajn dosierojn?"
 
-#: daemon/kupdaemon.cpp:173
+#: daemon/kupdaemon.cpp:179
 #, kde-format
 msgid "Continue"
 msgstr "Daŭrigi"
 
-#: daemon/kupdaemon.cpp:174
+#: daemon/kupdaemon.cpp:180
 #, kde-format
 msgid "Stop"
 msgstr "Halti"
 
-#: daemon/kupdaemon.cpp:175
+#: daemon/kupdaemon.cpp:181
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "Nuntempe okupata: %1"
 
-#: daemon/kupdaemon.cpp:176
+#: daemon/kupdaemon.cpp:182
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "Ĉu vi vere volas ĉesi?"
 
-#: daemon/kupdaemon.cpp:179
+#: daemon/kupdaemon.cpp:185
 #, kde-format
 msgid "User Backups"
 msgstr "Sekurkopioj de uzantoj"
 
-#: daemon/kupdaemon.cpp:262
+#: daemon/kupdaemon.cpp:267
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination not available"
 msgstr "Rezerva celo ne havebla"
 
-#: daemon/kupdaemon.cpp:266 daemon/kupdaemon.cpp:322
+#: daemon/kupdaemon.cpp:271 daemon/kupdaemon.cpp:327
 #, kde-format
 msgid "No backup plans configured"
 msgstr "Neniuj rezervaj planoj agordis"
 
-#: daemon/kupdaemon.cpp:272
+#: daemon/kupdaemon.cpp:277
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination available"
 msgstr "Rezerva celo disponebla"
 
-#: daemon/kupdaemon.cpp:282 daemon/planexecutor.cpp:79
+#: daemon/kupdaemon.cpp:287 daemon/planexecutor.cpp:79
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup status OK"
 msgstr "Rezerva stato OK"
 
-#: daemon/kupdaemon.cpp:289 daemon/planexecutor.cpp:81
+#: daemon/kupdaemon.cpp:294 daemon/planexecutor.cpp:81
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup suggested"
 msgstr "Nova sekurkopio sugestita"
 
-#: daemon/kupdaemon.cpp:296 daemon/planexecutor.cpp:83
+#: daemon/kupdaemon.cpp:301 daemon/planexecutor.cpp:83
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup needed"
@@ -270,13 +270,13 @@ msgstr ""
 "Kup ne estas ebligita, ebligu ĝin de la modulo de sistemaj agordoj. Vi povas "
 "fari tion rulante <command>kcmshell5 kup</command>"
 
-#: daemon/main.cpp:37
+#: daemon/main.cpp:41
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Kup Daemon"
 
-#: daemon/main.cpp:39
+#: daemon/main.cpp:43
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -288,32 +288,28 @@ msgstr ""
 "konservante la partojn de dosieroj, kiuj efektive ŝanĝiĝis ekde la lasta "
 "sekurkopio estis konservita."
 
-#: daemon/main.cpp:43 kcm/kupkcm.cpp:48
+#: daemon/main.cpp:47
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "Kopirajto (C) 2011-2020 Simon Persson"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:29
+#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:29
+#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
 msgid "Maintainer"
 msgstr "Prizorganto"
 
-#: daemon/main.cpp:45 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:30
+#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Oliver Kellogg  "
 
-#: daemon/main.cpp:45 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:30
+#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -1229,7 +1225,7 @@ msgctxt "@action:button"
 msgid "Create Folder"
 msgstr "Krei Dosierujon"
 
-#: kcm/driveselection.cpp:268
+#: kcm/driveselection.cpp:267
 #, kde-kuit-format
 msgctxt "@label Only shown if no drives are detected"
 msgid ""
@@ -1305,7 +1301,7 @@ msgstr ""
 "Dosieraj permesoj nur gravas se estas pli ol unu uzanto de ĉi tiu komputilo "
 "aŭ se vi sekurkopias ruleblajn programdosierojn."
 
-#: kcm/folderselectionmodel.cpp:93
+#: kcm/folderselectionmodel.cpp:90
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1315,13 +1311,13 @@ msgstr ""
 "<filename>%1</filename><nl/>estos inkluzivita en la sekurkopio, krom "
 "nemarkitaj subdosierujoj"
 
-#: kcm/folderselectionmodel.cpp:98
+#: kcm/folderselectionmodel.cpp:95
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid "<filename>%1</filename><nl/>will be included in the backup"
 msgstr "<filename>%1</filename><nl/>estos inkluzivita en la sekurkopio"
 
-#: kcm/folderselectionmodel.cpp:103
+#: kcm/folderselectionmodel.cpp:100
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1331,7 +1327,7 @@ msgstr ""
 "<filename>%1</filename><nl/> <emphasis>ne</emphasis> estos inkluzivita en la "
 "sekurkopio sed enhavas dosierujojn kiuj estos"
 
-#: kcm/folderselectionmodel.cpp:108
+#: kcm/folderselectionmodel.cpp:105
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1341,17 +1337,7 @@ msgstr ""
 "<filename>%1</filename><nl/> <emphasis>ne</emphasis> estos inkluzivita en la "
 "sekurkopio"
 
-#: kcm/kupkcm.cpp:44
-#, kde-format
-msgid "Kup Configuration Module"
-msgstr "Kup-Agorda Modulo"
-
-#: kcm/kupkcm.cpp:46
-#, kde-format
-msgid "Configuration of backup plans for the Kup backup system"
-msgstr "Agordo de rezerva planoj por la Kup rezerva sistemo"
-
-#: kcm/kupkcm.cpp:82
+#: kcm/kupkcm.cpp:71
 #, kde-format
 msgid ""
 "<h2>Backup programs are missing</h2><p>Before you can activate any backup "
@@ -1362,7 +1348,7 @@ msgstr ""
 "planon, vi bezonas instali iun ajn el</p><ul><li>bup, por versionitaj "
 "sekurkopioj</li><li>rsync , por sinkronigitaj sekurkopioj</li></ul>"
 
-#: kcm/kupkcm.cpp:210
+#: kcm/kupkcm.cpp:199
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1370,43 +1356,43 @@ msgid ""
 msgstr ""
 "%1 ne havas celon!<nl/>Neniaj sekurkopioj estos konservitaj per ĉi tiu plano."
 
-#: kcm/kupkcm.cpp:213
+#: kcm/kupkcm.cpp:202
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Averto"
 
-#: kcm/kupkcm.cpp:262
+#: kcm/kupkcm.cpp:251
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
 msgstr "Aldoni Novan Planon…"
 
-#: kcm/kupkcm.cpp:275
+#: kcm/kupkcm.cpp:264
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "Sekurkopioj ebligitaj"
 
-#: kcm/kupkcm.cpp:286
+#: kcm/kupkcm.cpp:275
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
 msgstr "Malfermi kaj restarigi de ekzistantaj sekurkopioj"
 
-#: kcm/planstatuswidget.cpp:32
+#: kcm/planstatuswidget.cpp:31
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "Agordi"
 
-#: kcm/planstatuswidget.cpp:34
+#: kcm/planstatuswidget.cpp:33
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Forigi"
 
-#: kcm/planstatuswidget.cpp:36
+#: kcm/planstatuswidget.cpp:35
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Duplicate"
@@ -1489,7 +1475,7 @@ msgstr "Purigilo por bup-arkivoj."
 msgid "Copyright (C) 2013-2021 Simon Persson"
 msgstr "Kopirajto (C) 2013-2021 Simon Persson"
 
-#: settings/backupplan.cpp:24
+#: settings/backupplan.cpp:26
 #, kde-kuit-format
 msgctxt ""
 "@label Default name for a new backup plan, %1 is the number of the plan in "
@@ -1497,37 +1483,43 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "Sekurkopia plano %1"
 
-#: settings/backupplan.cpp:60
+#: settings/backupplan.cpp:62
 #, kde-format
 msgid "Backups"
 msgstr "Sekurkopioj"
 
-#: settings/backupplan.cpp:91
+#: settings/backupplan.cpp:93
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (kopio)"
 
-#: settings/backupplan.cpp:216
+#: settings/backupplan.cpp:218
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Laste konservita: %1"
 
-#: settings/backupplan.cpp:220
+#: settings/backupplan.cpp:222
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Grandeco: %1"
 
-#: settings/backupplan.cpp:224
+#: settings/backupplan.cpp:226
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Libera spaco: %1"
 
-#: settings/backupplan.cpp:227
+#: settings/backupplan.cpp:229
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Ĉi tiu rezerva plano neniam estis rulita."
+
+#~ msgid "Kup Configuration Module"
+#~ msgstr "Kup-Agorda Modulo"
+
+#~ msgid "Configuration of backup plans for the Kup backup system"
+#~ msgstr "Agordo de rezerva planoj por la Kup rezerva sistemo"

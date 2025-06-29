@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-27 02:02+0000\n"
+"POT-Creation-Date: 2025-06-29 02:05+0000\n"
 "PO-Revision-Date: 2025-04-26 10:31+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -198,62 +198,62 @@ msgstr ""
 "დეტალებისთვის იხილეთ ჟურნალის ფაილი. გნებავთ, ვცადო მარქაფის ფაილების "
 "შეკეთება?"
 
-#: daemon/kupdaemon.cpp:173
+#: daemon/kupdaemon.cpp:179
 #, kde-format
 msgid "Continue"
 msgstr "გაგრძელება"
 
-#: daemon/kupdaemon.cpp:174
+#: daemon/kupdaemon.cpp:180
 #, kde-format
 msgid "Stop"
 msgstr "შეჩერება"
 
-#: daemon/kupdaemon.cpp:175
+#: daemon/kupdaemon.cpp:181
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "ამჟამად დაკავებული: %1"
 
-#: daemon/kupdaemon.cpp:176
+#: daemon/kupdaemon.cpp:182
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "მართლა გნებავთ გაჩერება?"
 
-#: daemon/kupdaemon.cpp:179
+#: daemon/kupdaemon.cpp:185
 #, kde-format
 msgid "User Backups"
 msgstr "მომხმარებლის მარქაფები"
 
-#: daemon/kupdaemon.cpp:262
+#: daemon/kupdaemon.cpp:267
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination not available"
 msgstr "მარქაფის სამიზნე მიუწვდომელია"
 
-#: daemon/kupdaemon.cpp:266 daemon/kupdaemon.cpp:322
+#: daemon/kupdaemon.cpp:271 daemon/kupdaemon.cpp:327
 #, kde-format
 msgid "No backup plans configured"
 msgstr "მარქაფის გეგმები მორგებული არაა"
 
-#: daemon/kupdaemon.cpp:272
+#: daemon/kupdaemon.cpp:277
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination available"
 msgstr "მარქაფის სამიზნე ხელმისაწვდომია"
 
-#: daemon/kupdaemon.cpp:282 daemon/planexecutor.cpp:79
+#: daemon/kupdaemon.cpp:287 daemon/planexecutor.cpp:79
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup status OK"
 msgstr "მარქაფის სტატუსი დაგეგმილია"
 
-#: daemon/kupdaemon.cpp:289 daemon/planexecutor.cpp:81
+#: daemon/kupdaemon.cpp:294 daemon/planexecutor.cpp:81
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup suggested"
 msgstr "ახალი მარქაფი ნარჩევია"
 
-#: daemon/kupdaemon.cpp:296 daemon/planexecutor.cpp:83
+#: daemon/kupdaemon.cpp:301 daemon/planexecutor.cpp:83
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup needed"
@@ -269,13 +269,13 @@ msgstr ""
 "Kup ჩართული არაა. მისი ჩართვა სისტემური პარამეტრების მოდულიდან შეგიძლიათ. ეს "
 "ბრძანებით <command>kcmshell5 kup</command> ხდება"
 
-#: daemon/main.cpp:37
+#: daemon/main.cpp:41
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Kup დემონი"
 
-#: daemon/main.cpp:39
+#: daemon/main.cpp:43
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -286,32 +286,28 @@ msgstr ""
 "'bup'-ს იყენებს. ეს მას საშუალებას აძლევს, შექმნას ინკრემენტული მარქაფები, "
 "რაც მხოლოდ ბოლო მარქაფის შემდეგ მომხდარი ცვლილებების მარქაფს გულისხმობს."
 
-#: daemon/main.cpp:43 kcm/kupkcm.cpp:48
+#: daemon/main.cpp:47
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "Copyright (C) 2011-2020 Simon Persson"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:29
+#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:29
+#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
 msgid "Maintainer"
 msgstr "წამყვანი პროგრამისტი"
 
-#: daemon/main.cpp:45 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:30
+#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Temuri Doghonadze"
 
-#: daemon/main.cpp:45 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:30
+#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -1214,7 +1210,7 @@ msgctxt "@action:button"
 msgid "Create Folder"
 msgstr "საქაღალდის შექმნა"
 
-#: kcm/driveselection.cpp:268
+#: kcm/driveselection.cpp:267
 #, kde-kuit-format
 msgctxt "@label Only shown if no drives are detected"
 msgid ""
@@ -1292,7 +1288,7 @@ msgstr ""
 "კომპიუტერს ერთზე მეტი მომხმარებელი მოიხმარს ან თუ გამშვები ფაილების მარქაფს "
 "აპირებთ."
 
-#: kcm/folderselectionmodel.cpp:93
+#: kcm/folderselectionmodel.cpp:90
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1302,13 +1298,13 @@ msgstr ""
 "<filename>%1</filename><nl/> ჩასმული იქნება მარქაფში, გამორთული "
 "ქვესაქაღალდეების გარდა"
 
-#: kcm/folderselectionmodel.cpp:98
+#: kcm/folderselectionmodel.cpp:95
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid "<filename>%1</filename><nl/>will be included in the backup"
 msgstr "<filename>%1</filename><nl/> ჩასმული იქნება მარქაფში"
 
-#: kcm/folderselectionmodel.cpp:103
+#: kcm/folderselectionmodel.cpp:100
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1318,7 +1314,7 @@ msgstr ""
 "<filename>%1</filename><nl/> არ <emphasis>იქნება</emphasis> ჩასმული "
 "მარქაფში, მაგრამ შეიცავს საქაღალდეებს, რომლებიც იქნება"
 
-#: kcm/folderselectionmodel.cpp:108
+#: kcm/folderselectionmodel.cpp:105
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1327,17 +1323,7 @@ msgid ""
 msgstr ""
 "<filename>%1</filename><nl/> არ <emphasis>იქნება</emphasis> ჩასმული მარქაფში"
 
-#: kcm/kupkcm.cpp:44
-#, kde-format
-msgid "Kup Configuration Module"
-msgstr "Kup-ის მორგების მოდული"
-
-#: kcm/kupkcm.cpp:46
-#, kde-format
-msgid "Configuration of backup plans for the Kup backup system"
-msgstr "მარქაფის გეგმების მორგება მარქაფის სისტემისთვის Kup"
-
-#: kcm/kupkcm.cpp:82
+#: kcm/kupkcm.cpp:71
 #, kde-format
 msgid ""
 "<h2>Backup programs are missing</h2><p>Before you can activate any backup "
@@ -1349,7 +1335,7 @@ msgstr ""
 "ვერსიებიანი მარქაფებისთვის</li><li>rsync, სინქრონიზებული მარქაფებისთვის.</"
 "li></ul>"
 
-#: kcm/kupkcm.cpp:210
+#: kcm/kupkcm.cpp:199
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1357,43 +1343,43 @@ msgid ""
 msgstr ""
 "%1-ს სამიზნე არ გააჩნია!<nl/>ამ გეგმის მიხედვით მარქაფები შენახული არ იქნება."
 
-#: kcm/kupkcm.cpp:213
+#: kcm/kupkcm.cpp:202
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "გაფრთხილება"
 
-#: kcm/kupkcm.cpp:262
+#: kcm/kupkcm.cpp:251
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
 msgstr "ახალი გეგმის დამატება…"
 
-#: kcm/kupkcm.cpp:275
+#: kcm/kupkcm.cpp:264
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "მარქაფები ჩაირთო"
 
-#: kcm/kupkcm.cpp:286
+#: kcm/kupkcm.cpp:275
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
 msgstr "გახსნა და არსებული მარქაფებიდან აღდგენა"
 
-#: kcm/planstatuswidget.cpp:32
+#: kcm/planstatuswidget.cpp:31
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "მორგება"
 
-#: kcm/planstatuswidget.cpp:34
+#: kcm/planstatuswidget.cpp:33
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "წაშლა"
 
-#: kcm/planstatuswidget.cpp:36
+#: kcm/planstatuswidget.cpp:35
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Duplicate"
@@ -1476,7 +1462,7 @@ msgstr "Bup-ის არქივებმკვეცი."
 msgid "Copyright (C) 2013-2021 Simon Persson"
 msgstr "(C) 2013-2021 საიმონ პერსონი, ყველა უფლება დაცულია"
 
-#: settings/backupplan.cpp:24
+#: settings/backupplan.cpp:26
 #, kde-kuit-format
 msgctxt ""
 "@label Default name for a new backup plan, %1 is the number of the plan in "
@@ -1484,40 +1470,46 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "მარქაფის გეგმა %1"
 
-#: settings/backupplan.cpp:60
+#: settings/backupplan.cpp:62
 #, kde-format
 msgid "Backups"
 msgstr "მარქაფები"
 
-#: settings/backupplan.cpp:91
+#: settings/backupplan.cpp:93
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (ასლი)"
 
-#: settings/backupplan.cpp:216
+#: settings/backupplan.cpp:218
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "ბოლოს შენახვა: %1"
 
-#: settings/backupplan.cpp:220
+#: settings/backupplan.cpp:222
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "ზომა: %1"
 
-#: settings/backupplan.cpp:224
+#: settings/backupplan.cpp:226
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "თავისუფალი ადგილი: %1"
 
-#: settings/backupplan.cpp:227
+#: settings/backupplan.cpp:229
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "მარქაფის ეს გეგმა არასოდეს გაშვებულა."
+
+#~ msgid "Kup Configuration Module"
+#~ msgstr "Kup-ის მორგების მოდული"
+
+#~ msgid "Configuration of backup plans for the Kup backup system"
+#~ msgstr "მარქაფის გეგმების მორგება მარქაფის სისტემისთვის Kup"
 
 #~ msgctxt "@action:button"
 #~ msgid "Yes"

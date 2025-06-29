@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-27 02:02+0000\n"
-"PO-Revision-Date: 2025-02-23 19:06+0400\n"
+"POT-Creation-Date: 2025-06-29 02:05+0000\n"
+"PO-Revision-Date: 2025-06-28 17:01+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -204,62 +204,62 @@ msgstr ""
 "فشل فحص سلامة النسخ الاحتياطي. نُسخك الاحتياطية تالفة! انظر ملف السجل لمزيد "
 "من التفاصيل. هل تريد محاولة إصلاح ملفات النسخة الاحتياطية؟"
 
-#: daemon/kupdaemon.cpp:173
+#: daemon/kupdaemon.cpp:179
 #, kde-format
 msgid "Continue"
 msgstr "تابع"
 
-#: daemon/kupdaemon.cpp:174
+#: daemon/kupdaemon.cpp:180
 #, kde-format
 msgid "Stop"
 msgstr "أوقف"
 
-#: daemon/kupdaemon.cpp:175
+#: daemon/kupdaemon.cpp:181
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "حاليا مشغول:‏ %1"
 
-#: daemon/kupdaemon.cpp:176
+#: daemon/kupdaemon.cpp:182
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "هل تريد حقًا التوقف؟"
 
-#: daemon/kupdaemon.cpp:179
+#: daemon/kupdaemon.cpp:185
 #, kde-format
 msgid "User Backups"
 msgstr "النسخ الاحتياطية للمستخدم"
 
-#: daemon/kupdaemon.cpp:262
+#: daemon/kupdaemon.cpp:267
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination not available"
 msgstr "وجهة النسخة الاحتياطية غير موجودة"
 
-#: daemon/kupdaemon.cpp:266 daemon/kupdaemon.cpp:322
+#: daemon/kupdaemon.cpp:271 daemon/kupdaemon.cpp:327
 #, kde-format
 msgid "No backup plans configured"
 msgstr "لم تضبط أي خطة للنسخ الاحتياطي"
 
-#: daemon/kupdaemon.cpp:272
+#: daemon/kupdaemon.cpp:277
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination available"
 msgstr "وجهة النسخة الاحتياطية موجودة"
 
-#: daemon/kupdaemon.cpp:282 daemon/planexecutor.cpp:79
+#: daemon/kupdaemon.cpp:287 daemon/planexecutor.cpp:79
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup status OK"
 msgstr "حالة النسخة الاحتياطية جيدة"
 
-#: daemon/kupdaemon.cpp:289 daemon/planexecutor.cpp:81
+#: daemon/kupdaemon.cpp:294 daemon/planexecutor.cpp:81
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup suggested"
 msgstr "يقترح نسخة احتياطية جديدة"
 
-#: daemon/kupdaemon.cpp:296 daemon/planexecutor.cpp:83
+#: daemon/kupdaemon.cpp:301 daemon/planexecutor.cpp:83
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup needed"
@@ -275,13 +275,13 @@ msgstr ""
 "كيوب غير ممكن، مكنه عن طريق وحدة إعدادات النظام. يمكنك فعل ذلك بواسطة تشغيل "
 "<command>kcmshell5 kup</command>"
 
-#: daemon/main.cpp:37
+#: daemon/main.cpp:41
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "عفريت كيوب"
 
-#: daemon/main.cpp:39
+#: daemon/main.cpp:43
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -292,32 +292,28 @@ msgstr ""
 "هذا بإجراء نسخ احتياطي تزايدي بسرعة ، يقوم فقط بحفظ أجزاء الملفات التي تغيرت "
 "بالفعل منذ آخر نسخة احتياطية."
 
-#: daemon/main.cpp:43 kcm/kupkcm.cpp:48
+#: daemon/main.cpp:47
 #, kde-format
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "حقوق النشر (ج) 2011-2020 سيمون بيرسون"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:29
+#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
 msgid "Simon Persson"
 msgstr "سيمون بيرسون"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:29
+#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
 msgid "Maintainer"
 msgstr "الصائن"
 
-#: daemon/main.cpp:45 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:30
+#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "زايد السعيدي"
 
-#: daemon/main.cpp:45 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:30
+#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -511,7 +507,7 @@ msgstr "اسم الفرع لفتحه"
 #: filedigger/main.cpp:41
 #, kde-format
 msgid "File or folder path to be focused."
-msgstr ""
+msgstr "مسار الملف أو المجلد المراد التركيز عليه."
 
 #: filedigger/main.cpp:42 purger/main.cpp:40
 #, kde-format
@@ -1221,7 +1217,7 @@ msgctxt "@action:button"
 msgid "Create Folder"
 msgstr "أنشئ مجلّدًا"
 
-#: kcm/driveselection.cpp:268
+#: kcm/driveselection.cpp:267
 #, kde-kuit-format
 msgctxt "@label Only shown if no drives are detected"
 msgid ""
@@ -1295,7 +1291,7 @@ msgstr ""
 "إذا كان هناك أكثر من مستخدم لهذا الحاسوب أو إذا كنت تقوم بعمل نسخة احتياطية "
 "من ملفات البرامج القابلة للتنفيذ."
 
-#: kcm/folderselectionmodel.cpp:93
+#: kcm/folderselectionmodel.cpp:90
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1305,13 +1301,13 @@ msgstr ""
 "سيضمن <filename>%1</filename><nl/> في النسخة الاحتياطية باستثناء المجلدات "
 "الفرعية غير المعلمة"
 
-#: kcm/folderselectionmodel.cpp:98
+#: kcm/folderselectionmodel.cpp:95
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid "<filename>%1</filename><nl/>will be included in the backup"
 msgstr "سيضمن <filename>%1</filename><nl/> في النسخة الاحتياطية"
 
-#: kcm/folderselectionmodel.cpp:103
+#: kcm/folderselectionmodel.cpp:100
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1321,7 +1317,7 @@ msgstr ""
 "<emphasis>لن</emphasis> يضمن <filename>%1</filename><nl/> في النسخة "
 "الاحتياطية لكن يحوي على مجلدات ستكون من ضمنها."
 
-#: kcm/folderselectionmodel.cpp:108
+#: kcm/folderselectionmodel.cpp:105
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1331,17 +1327,7 @@ msgstr ""
 "<emphasis>لن</emphasis> يضمن <filename>%1</filename><nl/> في النسخة "
 "الاحتياطية"
 
-#: kcm/kupkcm.cpp:44
-#, kde-format
-msgid "Kup Configuration Module"
-msgstr "وحدة ضبط كيوب"
-
-#: kcm/kupkcm.cpp:46
-#, kde-format
-msgid "Configuration of backup plans for the Kup backup system"
-msgstr "ضبط خطط النسخ الاحتياطية لنظام النسخ الاحتياطية كيوب"
-
-#: kcm/kupkcm.cpp:82
+#: kcm/kupkcm.cpp:71
 #, kde-format
 msgid ""
 "<h2>Backup programs are missing</h2><p>Before you can activate any backup "
@@ -1352,50 +1338,50 @@ msgstr ""
 "على تثبيت أحد هذين البرنامجين </p><ul><li>bup للنسخ الاحتياطية التزايدية</"
 "li> <li>rsync لتزامن النسخ الاحتياطية</li></ul>"
 
-#: kcm/kupkcm.cpp:210
+#: kcm/kupkcm.cpp:199
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
 "%1 does not have a destination!<nl/>No backups will be saved by this plan."
 msgstr "‏%1 لا تملك وجهة!<nl/> لن تحفظ أي نسخة احتياطية بواسطة هذه الخطة."
 
-#: kcm/kupkcm.cpp:213
+#: kcm/kupkcm.cpp:202
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "تحذير"
 
-#: kcm/kupkcm.cpp:262
+#: kcm/kupkcm.cpp:251
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
 msgstr "أضف خطة جديدة…"
 
-#: kcm/kupkcm.cpp:275
+#: kcm/kupkcm.cpp:264
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "النسخ الاحتياطي ممكن"
 
-#: kcm/kupkcm.cpp:286
+#: kcm/kupkcm.cpp:275
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
 msgstr "افتح واستعد من النسخ الاحتياطية الموجودة"
 
-#: kcm/planstatuswidget.cpp:32
+#: kcm/planstatuswidget.cpp:31
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "اضبط"
 
-#: kcm/planstatuswidget.cpp:34
+#: kcm/planstatuswidget.cpp:33
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "أزل"
 
-#: kcm/planstatuswidget.cpp:36
+#: kcm/planstatuswidget.cpp:35
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Duplicate"
@@ -1478,7 +1464,7 @@ msgstr "المصفي لأراشيف bup"
 msgid "Copyright (C) 2013-2021 Simon Persson"
 msgstr "حقوق النشر (ج) 2013-2021 سيمون بيرسون"
 
-#: settings/backupplan.cpp:24
+#: settings/backupplan.cpp:26
 #, kde-kuit-format
 msgctxt ""
 "@label Default name for a new backup plan, %1 is the number of the plan in "
@@ -1486,40 +1472,46 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "خطة النسخ الاحتياطية %1"
 
-#: settings/backupplan.cpp:60
+#: settings/backupplan.cpp:62
 #, kde-format
 msgid "Backups"
 msgstr "النسخ الاحتياطية"
 
-#: settings/backupplan.cpp:91
+#: settings/backupplan.cpp:93
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "‏%1 (نسخة)"
 
-#: settings/backupplan.cpp:216
+#: settings/backupplan.cpp:218
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "آخر حفظ: %1"
 
-#: settings/backupplan.cpp:220
+#: settings/backupplan.cpp:222
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "الحجم: %1"
 
-#: settings/backupplan.cpp:224
+#: settings/backupplan.cpp:226
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "المساحة الحرّة: %1"
 
-#: settings/backupplan.cpp:227
+#: settings/backupplan.cpp:229
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "هذه الخطة للنسخ الاحتياطية لم تشغل قط."
+
+#~ msgid "Kup Configuration Module"
+#~ msgstr "وحدة ضبط كيوب"
+
+#~ msgid "Configuration of backup plans for the Kup backup system"
+#~ msgstr "ضبط خطط النسخ الاحتياطية لنظام النسخ الاحتياطية كيوب"
 
 #~ msgctxt "@action:button"
 #~ msgid "Yes"

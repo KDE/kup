@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-27 02:02+0000\n"
+"POT-Creation-Date: 2025-06-29 02:05+0000\n"
 "PO-Revision-Date: 2019-11-22 01:49+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -178,62 +178,62 @@ msgstr ""
 "備份完整性校驗失敗。您的備份已損毀！參見記錄檔以取得更多詳細資訊。您想要嘗試"
 "修復備份檔案嗎？"
 
-#: daemon/kupdaemon.cpp:173
+#: daemon/kupdaemon.cpp:179
 #, kde-format
 msgid "Continue"
 msgstr "繼續"
 
-#: daemon/kupdaemon.cpp:174
+#: daemon/kupdaemon.cpp:180
 #, kde-format
 msgid "Stop"
 msgstr "停止"
 
-#: daemon/kupdaemon.cpp:175
+#: daemon/kupdaemon.cpp:181
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "忙碌中：%1"
 
-#: daemon/kupdaemon.cpp:176
+#: daemon/kupdaemon.cpp:182
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "您真的想要停止嗎？"
 
-#: daemon/kupdaemon.cpp:179
+#: daemon/kupdaemon.cpp:185
 #, kde-format
 msgid "User Backups"
 msgstr "使用者備份"
 
-#: daemon/kupdaemon.cpp:262
+#: daemon/kupdaemon.cpp:267
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination not available"
 msgstr "備份目的地不可用"
 
-#: daemon/kupdaemon.cpp:266 daemon/kupdaemon.cpp:322
+#: daemon/kupdaemon.cpp:271 daemon/kupdaemon.cpp:327
 #, kde-format
 msgid "No backup plans configured"
 msgstr "未設定備份計畫"
 
-#: daemon/kupdaemon.cpp:272
+#: daemon/kupdaemon.cpp:277
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination available"
 msgstr "備份目的地可用"
 
-#: daemon/kupdaemon.cpp:282 daemon/planexecutor.cpp:79
+#: daemon/kupdaemon.cpp:287 daemon/planexecutor.cpp:79
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup status OK"
 msgstr "備份狀態 OK"
 
-#: daemon/kupdaemon.cpp:289 daemon/planexecutor.cpp:81
+#: daemon/kupdaemon.cpp:294 daemon/planexecutor.cpp:81
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup suggested"
 msgstr "已建議新備份"
 
-#: daemon/kupdaemon.cpp:296 daemon/planexecutor.cpp:83
+#: daemon/kupdaemon.cpp:301 daemon/planexecutor.cpp:83
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup needed"
@@ -249,13 +249,13 @@ msgstr ""
 "Kup 未啟用，在系統設定模組中啟用它。您也可以利用執行「kcmshell5 kup」來做到這"
 "件事。"
 
-#: daemon/main.cpp:37
+#: daemon/main.cpp:41
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Kup 守護進程"
 
-#: daemon/main.cpp:39
+#: daemon/main.cpp:43
 #, fuzzy, kde-format
 #| msgid ""
 #| "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -269,33 +269,29 @@ msgstr ""
 "Kup 是一個使用備份儲存系統「bup」的靈活的備份解決方案。讓您可以快速的進行增量"
 "備份，只儲存在您最後一次備份之後所變更的檔案部份。"
 
-#: daemon/main.cpp:43 kcm/kupkcm.cpp:48
+#: daemon/main.cpp:47
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2011-2015 Simon Persson"
 msgid "Copyright (C) 2011-2020 Simon Persson"
 msgstr "Copyright (C) 2011-2015 Simon Persson"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:29
+#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:44 filedigger/main.cpp:33 kcm/kupkcm.cpp:49
-#: purger/main.cpp:29
+#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
 msgid "Maintainer"
 msgstr "維護者"
 
-#: daemon/main.cpp:45 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:30
+#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "黃柏諺"
 
-#: daemon/main.cpp:45 filedigger/main.cpp:34 kcm/kupkcm.cpp:50
-#: purger/main.cpp:30
+#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -1221,7 +1217,7 @@ msgctxt "@action:button"
 msgid "Create Folder"
 msgstr "新資料夾"
 
-#: kcm/driveselection.cpp:268
+#: kcm/driveselection.cpp:267
 #, kde-kuit-format
 msgctxt "@label Only shown if no drives are detected"
 msgid ""
@@ -1293,7 +1289,7 @@ msgstr ""
 "警告：檔案權限不會儲存到檔案系統中。檔案權限只在這臺電腦上有多於一個的使用者"
 "時需要煩惱，或是如果您備份的是可執行的程式檔。"
 
-#: kcm/folderselectionmodel.cpp:93
+#: kcm/folderselectionmodel.cpp:90
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1301,13 +1297,13 @@ msgid ""
 "unchecked subfolders"
 msgstr "<filename>%1</filename><nl/>將會被包括在備份中，除了未勾選的子資料夾"
 
-#: kcm/folderselectionmodel.cpp:98
+#: kcm/folderselectionmodel.cpp:95
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid "<filename>%1</filename><nl/>will be included in the backup"
 msgstr "<filename>%1</filename><nl/>將會被包括在備份中"
 
-#: kcm/folderselectionmodel.cpp:103
+#: kcm/folderselectionmodel.cpp:100
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1317,7 +1313,7 @@ msgstr ""
 "<filename>%1</filename><nl/>將 <emphasis>不會</emphasis> 被包括在備份中，但包"
 "含它的資料夾會"
 
-#: kcm/folderselectionmodel.cpp:108
+#: kcm/folderselectionmodel.cpp:105
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1326,17 +1322,7 @@ msgid ""
 msgstr ""
 "<filename>%1</filename><nl/>將 <emphasis>不會</emphasis> 被包括在備份中"
 
-#: kcm/kupkcm.cpp:44
-#, kde-format
-msgid "Kup Configuration Module"
-msgstr "Kup 設定模組"
-
-#: kcm/kupkcm.cpp:46
-#, kde-format
-msgid "Configuration of backup plans for the Kup backup system"
-msgstr "Kup 備份系統的備份計畫設定"
-
-#: kcm/kupkcm.cpp:82
+#: kcm/kupkcm.cpp:71
 #, kde-format
 msgid ""
 "<h2>Backup programs are missing</h2><p>Before you can activate any backup "
@@ -1346,20 +1332,20 @@ msgstr ""
 "<h2>備份程式遺失</h2><p>在您啟動任何備份計畫之前，您需要先安裝</"
 "p><ul><li>bup，給版本備份使用</li><li>rsync，給同步備份使用</li></ul>"
 
-#: kcm/kupkcm.cpp:210
+#: kcm/kupkcm.cpp:199
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
 "%1 does not have a destination!<nl/>No backups will be saved by this plan."
 msgstr "%1 沒有目的地！<nl/>這個計畫中將不會有備份被儲存。"
 
-#: kcm/kupkcm.cpp:213
+#: kcm/kupkcm.cpp:202
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "警告"
 
-#: kcm/kupkcm.cpp:262
+#: kcm/kupkcm.cpp:251
 #, fuzzy, kde-kuit-format
 #| msgctxt "@action:button"
 #| msgid "Add New Plan"
@@ -1367,7 +1353,7 @@ msgctxt "@action:button"
 msgid "Add New Plan…"
 msgstr "加入新的計畫"
 
-#: kcm/kupkcm.cpp:275
+#: kcm/kupkcm.cpp:264
 #, fuzzy, kde-kuit-format
 #| msgctxt "@option:check"
 #| msgid "Backups Enabled"
@@ -1375,25 +1361,25 @@ msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "備份已啟用"
 
-#: kcm/kupkcm.cpp:286
+#: kcm/kupkcm.cpp:275
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
 msgstr "自既有的備份開啟並復原"
 
-#: kcm/planstatuswidget.cpp:32
+#: kcm/planstatuswidget.cpp:31
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "設定"
 
-#: kcm/planstatuswidget.cpp:34
+#: kcm/planstatuswidget.cpp:33
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "移除"
 
-#: kcm/planstatuswidget.cpp:36
+#: kcm/planstatuswidget.cpp:35
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Duplicate"
@@ -1486,7 +1472,7 @@ msgstr "bup 檔案的瀏覽程式。"
 msgid "Copyright (C) 2013-2021 Simon Persson"
 msgstr "Copyright (C) 2013-2015 Simon Persson"
 
-#: settings/backupplan.cpp:24
+#: settings/backupplan.cpp:26
 #, kde-kuit-format
 msgctxt ""
 "@label Default name for a new backup plan, %1 is the number of the plan in "
@@ -1494,40 +1480,46 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "備份計畫 %1"
 
-#: settings/backupplan.cpp:60
+#: settings/backupplan.cpp:62
 #, kde-format
 msgid "Backups"
 msgstr "備份"
 
-#: settings/backupplan.cpp:91
+#: settings/backupplan.cpp:93
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (副本)"
 
-#: settings/backupplan.cpp:216
+#: settings/backupplan.cpp:218
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "最後儲存：%1"
 
-#: settings/backupplan.cpp:220
+#: settings/backupplan.cpp:222
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "大小：%1"
 
-#: settings/backupplan.cpp:224
+#: settings/backupplan.cpp:226
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "剩餘空間：%1"
 
-#: settings/backupplan.cpp:227
+#: settings/backupplan.cpp:229
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "這個備份計畫尚未執行過。"
+
+#~ msgid "Kup Configuration Module"
+#~ msgstr "Kup 設定模組"
+
+#~ msgid "Configuration of backup plans for the Kup backup system"
+#~ msgstr "Kup 備份系統的備份計畫設定"
 
 #~ msgctxt "@action:button"
 #~ msgid "Yes"
