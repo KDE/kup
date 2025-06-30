@@ -38,6 +38,7 @@ public slots:
     void reloadConfig();
     void runIntegrityCheck(const QString &pPath);
     void saveNewBackup(int pPlanNumber);
+    QString getRepositoryPath(const QString &pPath) const;
 
 private:
     void setupExecutors();
