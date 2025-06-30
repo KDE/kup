@@ -153,6 +153,26 @@ void KupDaemon::saveNewBackup(int pPlanNumber)
     }
 }
 
+QString KupDaemon::getRepositoryPath(const QString &pPath) const
+{
+    for (const auto lExecutor : mExecutors) {
+        auto lPlan = lExecutor->mPlan;
+
+        bool lIsIncluded = std::any_of(lPlan->mPathsIncluded.cbegin(), lPlan->mPathsIncluded.cend(), [&](const QString &lIncludedPath) {
+            bool lIsExcluded = std::any_of(lPlan->mPathsExcluded.cbegin(), lPlan->mPathsExcluded.cend(), [&](const QString &lExcludedPath) {
+                return pPath.startsWith(lExcludedPath) && lExcludedPath.length() > lIncludedPath.length();
+            });
+            return pPath.startsWith(lIncludedPath) && !lIsExcluded;
+        });
+
+        if (lExecutor->destinationAvailable() && lPlan->mBackupType == BackupPlan::BupType && lIsIncluded) {
+            return lExecutor->mDestinationPath;
+        }
+    }
+
+    return QString();
+}
+
 void KupDaemon::registerJob(KJob *pJob)
 {
     mJobTracker->registerJob(pJob);
