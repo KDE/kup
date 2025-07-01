@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 02:05+0000\n"
+"POT-Creation-Date: 2025-07-01 02:02+0000\n"
 "PO-Revision-Date: 2023-03-06 16:36+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -89,7 +89,7 @@ msgstr ""
 "cópias de segurança poderão estar danificadas! Veja o ficheiro de registo "
 "para saber mais detalhes."
 
-#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:48
+#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:50
 #, kde-format
 msgid "Checking what to copy"
 msgstr "A verificar o que será copiado"
@@ -102,12 +102,12 @@ msgstr ""
 "Não foi possível analisar os ficheiros. Veja o ficheiro de registo para "
 "saber mais detalhes."
 
-#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgid "Saving backup"
 msgstr "A gravar a cópia de segurança"
 
-#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:110
+#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:121
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
@@ -130,7 +130,7 @@ msgstr ""
 "Não foi possível gerar os dados de recuperação da cópia de segurança. Veja o "
 "ficheiro de registo para saber mais detalhes."
 
-#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -460,7 +460,7 @@ msgstr "Reparação Completa"
 msgid "Kup Backup System"
 msgstr "Sistema de Cópias de Segurança Kup"
 
-#: daemon/rsyncjob.cpp:31
+#: daemon/rsyncjob.cpp:33
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""

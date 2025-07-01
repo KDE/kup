@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 02:05+0000\n"
+"POT-Creation-Date: 2025-07-01 02:02+0000\n"
 "PO-Revision-Date: 2018-12-31 05:52+0000\n"
 "Last-Translator: Simon Persson <simon.persson@mykolab.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/kup/kup/"
@@ -91,7 +91,7 @@ msgstr ""
 "Atsarginių kopijų integralumo patikra rodo, kad jūsų atsarginės kopijos gali "
 "būti sugadintos! Daugiau informacijos ieškokite žurnalo faile."
 
-#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:48
+#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:50
 #, kde-format
 msgid "Checking what to copy"
 msgstr ""
@@ -104,12 +104,12 @@ msgstr ""
 "Nepavyko indeksuoti failų sistemos. Daugiau informacijos ieškokite žurnalo "
 "faile."
 
-#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgid "Saving backup"
 msgstr ""
 
-#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:110
+#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:121
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
@@ -132,7 +132,7 @@ msgstr ""
 "Nepavyko sukurti atkūrimo informacijos šiai atsarginei kopijai. Daugiau "
 "informacijos ieškokite žurnalo faile."
 
-#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -459,7 +459,7 @@ msgstr "Taisymas atliktas"
 msgid "Kup Backup System"
 msgstr "Kup atsarginių kopijų sistema"
 
-#: daemon/rsyncjob.cpp:31
+#: daemon/rsyncjob.cpp:33
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""

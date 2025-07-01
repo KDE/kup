@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 02:05+0000\n"
+"POT-Creation-Date: 2025-07-01 02:02+0000\n"
 "PO-Revision-Date: 2020-08-01 13:25+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -85,7 +85,7 @@ msgstr ""
 "Integritetskontrol fejlet. Dine backupper kan være beskadigede! Se logfil "
 "for yderligere  detaljer."
 
-#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:48
+#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:50
 #, kde-format
 msgid "Checking what to copy"
 msgstr "Kontrollerer hvad der skal kopieres"
@@ -96,12 +96,12 @@ msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
 msgstr "Kan ikke analysere filerne. Se logfilen for flere detaljer."
 
-#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgid "Saving backup"
 msgstr "Lagrer backup"
 
-#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:110
+#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:121
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
@@ -122,7 +122,7 @@ msgstr ""
 "Kunne ikke skabe gendannelsesinformation for backuppen. Se logfil for "
 "detaljer."
 
-#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -446,7 +446,7 @@ msgstr "Reparation Udført"
 msgid "Kup Backup System"
 msgstr "Kup Backupsystem"
 
-#: daemon/rsyncjob.cpp:31
+#: daemon/rsyncjob.cpp:33
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 02:05+0000\n"
+"POT-Creation-Date: 2025-07-01 02:02+0000\n"
 "PO-Revision-Date: 2025-04-06 23:40+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -84,7 +84,7 @@ msgstr ""
 "백업 무결성 검사에 실패했습니다. 백업이 손상되었을 수도 있습니다! 자세한 정보"
 "는 로그 파일을 참조하십시오."
 
-#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:48
+#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:50
 #, kde-format
 msgid "Checking what to copy"
 msgstr "복사할 항목 검사 중"
@@ -95,12 +95,12 @@ msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
 msgstr "파일을 분석할 수 없습니다. 자세한 정보는 로그 파일을 참조하십시오."
 
-#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgid "Saving backup"
 msgstr "백업 저장 중"
 
-#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:110
+#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:121
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
@@ -121,7 +121,7 @@ msgstr ""
 "백업의 복구 정보를 생성할 수 없습니다. 자세한 정보는 로그 파일을 참조하십시"
 "오."
 
-#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -436,7 +436,7 @@ msgstr "복구 완료됨"
 msgid "Kup Backup System"
 msgstr "Kup 백업 시스템"
 
-#: daemon/rsyncjob.cpp:31
+#: daemon/rsyncjob.cpp:33
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""

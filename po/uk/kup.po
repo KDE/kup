@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 02:05+0000\n"
+"POT-Creation-Date: 2025-07-01 02:02+0000\n"
 "PO-Revision-Date: 2025-06-27 10:27+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -101,7 +101,7 @@ msgstr ""
 "Резервна копія не пройшла перевірки цілісності. Резервну копію може бути "
 "пошкоджено! Ознайомтеся із файлом журналу, щоб дізнатися більше."
 
-#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:48
+#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:50
 #, kde-format
 msgid "Checking what to copy"
 msgstr "Визначаємо дані для копіювання"
@@ -114,12 +114,12 @@ msgstr ""
 "Не вдалося виконати аналіз файлів. Ознайомтеся із файлом журналу, щоб "
 "дізнатися більше."
 
-#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgid "Saving backup"
 msgstr "Зберігаємо резервну копію"
 
-#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:110
+#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:121
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
@@ -142,7 +142,7 @@ msgstr ""
 "Не вдалося створити дані для відновлення для резервної копії. Ознайомтеся із "
 "файлом журналу, щоб дізнатися більше."
 
-#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -468,7 +468,7 @@ msgstr "Виправлення завершено"
 msgid "Kup Backup System"
 msgstr "Система резервного копіювання Kup"
 
-#: daemon/rsyncjob.cpp:31
+#: daemon/rsyncjob.cpp:33
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""

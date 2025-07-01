@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 02:05+0000\n"
+"POT-Creation-Date: 2025-07-01 02:02+0000\n"
 "PO-Revision-Date: 2025-06-27 06:07+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -96,7 +96,7 @@ msgstr ""
 "Preverjanje celovitosti varnostne kopije neuspešno. Varnostne kopije so "
 "lahko poškodovane! Glejte datoteko dnevnikaza več podrobnosti."
 
-#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:48
+#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:50
 #, kde-format
 msgid "Checking what to copy"
 msgstr "Preverjanje kaj kopirati"
@@ -107,12 +107,12 @@ msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
 msgstr "Analiza datotek ni uspela. Glejte datoteko dnevnika za podrobnosti."
 
-#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgid "Saving backup"
 msgstr "Shranjevanje varnostne kopije"
 
-#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:110
+#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:121
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
@@ -134,7 +134,7 @@ msgstr ""
 "Podatkov za obnovitev podatkov iz te varnostne kopije ni bilo mogoče "
 "ustvariti. Glejte datoteko dnevnika za več podrobnosti."
 
-#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -456,7 +456,7 @@ msgstr "Popravilo končano"
 msgid "Kup Backup System"
 msgstr "Kup sistem izdelave varnostnih kopij"
 
-#: daemon/rsyncjob.cpp:31
+#: daemon/rsyncjob.cpp:33
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""

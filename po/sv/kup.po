@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 02:05+0000\n"
-"PO-Revision-Date: 2025-02-22 16:19+0100\n"
+"POT-Creation-Date: 2025-07-01 02:02+0000\n"
+"PO-Revision-Date: 2025-06-30 21:38+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -92,7 +92,7 @@ msgstr ""
 "Integritetskontroll misslyckades. Dina säkerhetskopior kan vara skadade! Se "
 "loggfil för detaljer."
 
-#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:48
+#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:50
 #, kde-format
 msgid "Checking what to copy"
 msgstr "Kollar vad som ska kopieras"
@@ -103,12 +103,12 @@ msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
 msgstr "Misslyckades att analysera filer. Se loggfil för detaljer."
 
-#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgid "Saving backup"
 msgstr "Sparar säkerhetskopia"
 
-#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:110
+#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:121
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
@@ -128,7 +128,7 @@ msgid ""
 msgstr ""
 "Misslyckades med att generera återställningsinfo. Se loggfil för detaljer."
 
-#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:166
+#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -445,7 +445,7 @@ msgstr "Färdig med reparation"
 msgid "Kup Backup System"
 msgstr "Kup Säkerhetskopiering"
 
-#: daemon/rsyncjob.cpp:31
+#: daemon/rsyncjob.cpp:33
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -500,7 +500,7 @@ msgstr "Namn på arkivgren att öppna"
 #: filedigger/main.cpp:41
 #, kde-format
 msgid "File or folder path to be focused."
-msgstr ""
+msgstr "Fil- eller katalogsökväg som ska fokuseras."
 
 #: filedigger/main.cpp:42 purger/main.cpp:40
 #, kde-format
