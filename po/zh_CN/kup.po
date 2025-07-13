@@ -471,7 +471,7 @@ msgstr "所要开启的分支的名称。"
 #: filedigger/main.cpp:41
 #, kde-format
 msgid "File or folder path to be focused."
-msgstr ""
+msgstr "要聚焦的文件或文件夹路径。"
 
 #: filedigger/main.cpp:42 purger/main.cpp:40
 #, kde-format
@@ -1448,9 +1448,3 @@ msgstr "剩余空间：%1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "这个备份计划从未运行过。"
-
-#~ msgid "Kup Configuration Module"
-#~ msgstr "K 备份配置模块"
-
-#~ msgid "Configuration of backup plans for the Kup backup system"
-#~ msgstr "K 备份系统的备份计划设置"
