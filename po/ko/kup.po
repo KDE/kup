@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 02:02+0000\n"
-"PO-Revision-Date: 2025-04-06 23:40+0200\n"
+"PO-Revision-Date: 2025-07-20 01:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -491,7 +491,7 @@ msgstr "열 브랜치 이름입니다."
 #: filedigger/main.cpp:41
 #, kde-format
 msgid "File or folder path to be focused."
-msgstr ""
+msgstr "포커스를 부여할 파일이나 폴더 경로입니다."
 
 #: filedigger/main.cpp:42 purger/main.cpp:40
 #, kde-format
