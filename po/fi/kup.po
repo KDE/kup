@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 02:02+0000\n"
-"PO-Revision-Date: 2025-03-15 09:25+0200\n"
+"PO-Revision-Date: 2025-07-13 23:16+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -497,7 +497,7 @@ msgstr "Avattavan haaran nimi."
 #: filedigger/main.cpp:41
 #, kde-format
 msgid "File or folder path to be focused."
-msgstr ""
+msgstr "Kohdistettavan tiedoston tai kansion sijainti."
 
 #: filedigger/main.cpp:42 purger/main.cpp:40
 #, kde-format
