@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 02:02+0000\n"
-"PO-Revision-Date: 2025-06-28 17:01+0400\n"
+"PO-Revision-Date: 2025-08-05 20:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -774,7 +774,7 @@ msgstr "استثني المجلد"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Include Folder"
-msgstr "ضمن المجلد"
+msgstr "ضمّن المجلد"
 
 #: kcm/backupplanwidget.cpp:385
 #, kde-kuit-format
@@ -800,7 +800,7 @@ msgid ""
 msgstr ""
 "ليس لديك إذن لقراءة هذا الملف: <filename>%1</filename> <nl/> لا يمكن تضمينه "
 "في تحديد المصدر. إذا لم يكن الملف مهمًا بالنسبة لك ، فإن أحد الحلول الممكنة "
-"هو استبعاد المجلد بأكمله حيث يتم تخزين الملف من خطة النسخ الاحتياطي."
+"هو استبعاد المجلد بأكمله حيث يخزن الملف من خطة النسخ الاحتياطي."
 
 #: kcm/backupplanwidget.cpp:412
 #, kde-kuit-format
@@ -810,9 +810,9 @@ msgid ""
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"يشير الرابط الرمزي <filename>%1</filename> إلى مجلد لم يتم تضمينه: <filename>"
-"%2</filename>.<nl/>ربما هذا ليس ما تريد. أحد الحلول هو ببساطة تضمين المجلد "
-"الهدف في خطة النسخ الاحتياطي."
+"يشير الرابط الرمزي <filename>%1</filename> إلى مجلد غير مضمن: <filename>%2</"
+"filename>.<nl/>ربما هذا ليس ما تريد. أحد الحلول هو ببساطة تضمين المجلد الهدف "
+"في خطة النسخ الاحتياطي."
 
 #: kcm/backupplanwidget.cpp:421
 #, kde-kuit-format
@@ -823,9 +823,9 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"يشير الرابط الرمزي <filename>%1</filename> إلى ملف لم يتم تضمينه: <filename>"
-"%2</filename>.<nl/>ربما هذا ليس ما تريد. أحد الحلول هو ببساطة تضمين المجلد "
-"الذي تم تخزين الملف فيه في خطة النسخ الاحتياطي."
+"يشير الرابط الرمزي <filename>%1</filename> إلى ملف غير مضمن: <filename>%2</"
+"filename>.<nl/>ربما هذا ليس ما تريد. أحد الحلول هو ببساطة تضمين المجلد الذي "
+"يحوي الملف في خطة النسخ الاحتياطي."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
@@ -951,7 +951,7 @@ msgstr ""
 "يمكنك استخدام هذا الخيار للنسخ الاحتياطي إلى محرك أقراص ثابت داخلي ثانوي أو "
 "محرك أقراص eSATA خارجي أو وحدة تخزين متصلة بالشبكة. الشرط هو أن تقوم دائمًا "
 "بتثبيته على نفس المسار في نظام الملفات. المسار المحدد هنا ليس بالضرورة أن "
-"يكون موجودًا في جميع الأوقات ، سيتم مراقبة وجوده."
+"يكون موجودًا في جميع الأوقات، سيراقب باستمرار."
 
 #: kcm/backupplanwidget.cpp:630
 #, kde-kuit-format
@@ -1119,7 +1119,7 @@ msgid ""
 msgstr ""
 "هذا يجعل من الممكن تضمين أو استبعاد المجلدات المخفية بشكل صريح في تحديد مصدر "
 "النسخ الاحتياطي. المجلدات المخفية لها اسم يبدأ بنقطة. توجد عادةً في المجلد "
-"الرئيسي الخاص بك ويتم استخدامها لتخزين الإعدادات والملفات المؤقتة لتطبيقاتك."
+"الرئيسي الخاص بك وستستخدم لتخزين الإعدادات والملفات المؤقتة لتطبيقاتك."
 
 #: kcm/backupplanwidget.cpp:863
 #, kde-kuit-format
