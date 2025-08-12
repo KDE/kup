@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
                            "This allows it to quickly perform incremental backups, only saving the "
                            "parts of files that has actually changed since last backup was saved."),
                       KAboutLicense::GPL,
-                      i18n("Copyright (C) 2011-2020 Simon Persson"));
+                      i18n("© 2011–2020 Simon Persson"));
     lAbout.addAuthor(i18n("Simon Persson"), i18n("Maintainer"), "simon.persson@mykolab.com");
     lAbout.setTranslator(xi18nc("NAME OF TRANSLATORS", "Your names"), xi18nc("EMAIL OF TRANSLATORS", "Your emails"));
     KAboutData::setApplicationData(lAbout);

@@ -79,7 +79,7 @@ PlasmoidItem {
 			onTriggered: reloadKup()
 		},
 		PlasmaCore.Action {
-			text: i18nd("kup", "Configure Backup Plans...")
+			text: i18nd("kup", "Configure Backup Plans…")
 			icon.name: "configure"
 			onTriggered: configureKup()
 		}

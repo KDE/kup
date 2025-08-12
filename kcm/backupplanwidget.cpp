@@ -454,7 +454,7 @@ DirDialog::DirDialog(const QUrl &pRootDir, const QString &pStartSubDir, QWidget 
     auto lButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     connect(lButtonBox, SIGNAL(accepted()), this, SLOT(accept()));
     connect(lButtonBox, SIGNAL(rejected()), this, SLOT(reject()));
-    auto lNewFolderButton = new QPushButton(xi18nc("@action:button", "New Folder..."));
+    auto lNewFolderButton = new QPushButton(xi18nc("@action:button", "New Folder…"));
     connect(lNewFolderButton, SIGNAL(clicked()), mDirSelector, SLOT(createNewFolder()));
     lButtonBox->addButton(lNewFolderButton, QDialogButtonBox::ActionRole);
     QPushButton *lOkButton = lButtonBox->button(QDialogButtonBox::Ok);

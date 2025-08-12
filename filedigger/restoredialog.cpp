@@ -109,7 +109,7 @@ void RestoreDialog::setCustomDestination()
         mDirSelector->expandToUrl(QUrl::fromLocalFile(lDirPath));
         mUI->mDestinationVLayout->insertWidget(0, mDirSelector);
 
-        auto lNewFolderButton = new QPushButton(QIcon::fromTheme(QStringLiteral("folder-new")), xi18nc("@action:button", "New Folder..."));
+        auto lNewFolderButton = new QPushButton(QIcon::fromTheme(QStringLiteral("folder-new")), xi18nc("@action:button", "New Folder…"));
         connect(lNewFolderButton, SIGNAL(clicked()), SLOT(createNewFolder()));
         mUI->mDestinationHLayout->insertWidget(0, lNewFolderButton);
     } else if (!mSourceInfo.mIsDirectory && mFileWidget == nullptr) {

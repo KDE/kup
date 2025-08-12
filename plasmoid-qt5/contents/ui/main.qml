@@ -66,7 +66,7 @@ Item {
 
 	Component.onCompleted: {
 		plasmoid.removeAction("configure");
-		plasmoid.setAction("configure", i18nd("kup", "&Configure Kup..."), "configure");
+		plasmoid.setAction("configure", i18nd("kup", "&Configure Kup…"), "configure");
 
 		plasmoid.setAction("reloadKup", i18nd("kup", "&Reload backup plans"), "view-refresh");
 	}

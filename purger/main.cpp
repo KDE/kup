@@ -25,7 +25,7 @@ int main(int pArgCount, char **pArgArray)
                       QStringLiteral("0.10.0"),
                       i18n("Purger for bup archives."),
                       KAboutLicense::GPL,
-                      i18n("Copyright (C) 2013-2021 Simon Persson"));
+                      i18n("© 2013–2021 Simon Persson"));
     lAbout.addAuthor(i18n("Simon Persson"), i18n("Maintainer"), "simon.persson@mykolab.com");
     lAbout.setTranslator(xi18nc("NAME OF TRANSLATORS", "Your names"), xi18nc("EMAIL OF TRANSLATORS", "Your emails"));
     KAboutData::setApplicationData(lAbout); // this calls qApp.setApplicationName, setVersion, etc.
