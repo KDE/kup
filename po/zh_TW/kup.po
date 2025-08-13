@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 02:02+0000\n"
+"POT-Creation-Date: 2025-08-13 02:02+0000\n"
 "PO-Revision-Date: 2019-11-22 01:49+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -272,7 +272,7 @@ msgstr ""
 #: daemon/main.cpp:47
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2011-2015 Simon Persson"
-msgid "Copyright (C) 2011-2020 Simon Persson"
+msgid "© 2011–2020 Simon Persson"
 msgstr "Copyright (C) 2011-2015 Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
@@ -478,7 +478,7 @@ msgstr "bup 檔案的瀏覽程式。"
 #: filedigger/main.cpp:32
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2013-2015 Simon Persson"
-msgid "Copyright (C) 2013-2020 Simon Persson"
+msgid "© 2013–2020 Simon Persson"
 msgstr "Copyright (C) 2013-2015 Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
@@ -525,10 +525,12 @@ msgid " (file)"
 msgstr "(檔案)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "default folder name when creating a new folder"
+#| msgid "New Folder"
 msgctxt "@action:button"
-msgid "New Folder..."
-msgstr "新資料夾..."
+msgid "New Folder…"
+msgstr "新資料夾"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1424,7 +1426,7 @@ msgstr "顯示紀錄檔"
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Configure"
-msgid "&Configure Kup..."
+msgid "&Configure Kup…"
 msgstr "設定"
 
 #: plasmoid-qt5/contents/ui/main.qml:71
@@ -1451,7 +1453,7 @@ msgstr "設定"
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Configure"
-msgid "Configure Backup Plans..."
+msgid "Configure Backup Plans…"
 msgstr "設定"
 
 #: purger/main.cpp:24
@@ -1469,7 +1471,7 @@ msgstr "bup 檔案的瀏覽程式。"
 #: purger/main.cpp:28
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2013-2015 Simon Persson"
-msgid "Copyright (C) 2013-2021 Simon Persson"
+msgid "© 2013–2021 Simon Persson"
 msgstr "Copyright (C) 2013-2015 Simon Persson"
 
 #: settings/backupplan.cpp:26
@@ -1514,6 +1516,16 @@ msgstr "剩餘空間：%1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "這個備份計畫尚未執行過。"
+
+#~ msgctxt "@action:button"
+#~ msgid "New Folder..."
+#~ msgstr "新資料夾..."
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Configure"
+#~ msgid "Configure Backup Plans..."
+#~ msgstr "設定"
 
 #~ msgid "Kup Configuration Module"
 #~ msgstr "Kup 設定模組"

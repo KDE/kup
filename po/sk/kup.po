@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 02:02+0000\n"
+"POT-Creation-Date: 2025-08-13 02:02+0000\n"
 "PO-Revision-Date: 2021-11-15 18:39+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -251,9 +251,10 @@ msgid ""
 msgstr ""
 
 #: daemon/main.cpp:47
-#, kde-format
-msgid "Copyright (C) 2011-2020 Simon Persson"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Simon Persson"
+msgid "© 2011–2020 Simon Persson"
+msgstr "Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
@@ -446,9 +447,10 @@ msgid "Browser for bup archives."
 msgstr ""
 
 #: filedigger/main.cpp:32
-#, kde-format
-msgid "Copyright (C) 2013-2020 Simon Persson"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Simon Persson"
+msgid "© 2013–2020 Simon Persson"
+msgstr "Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
 #, kde-format
@@ -492,10 +494,12 @@ msgid " (file)"
 msgstr " (súbor)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "default folder name when creating a new folder"
+#| msgid "New Folder"
 msgctxt "@action:button"
-msgid "New Folder..."
-msgstr "Nový priečinok..."
+msgid "New Folder…"
+msgstr "Nový priečinok"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1312,7 +1316,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Configure"
-msgid "&Configure Kup..."
+msgid "&Configure Kup…"
 msgstr "Nastaviť"
 
 #: plasmoid-qt5/contents/ui/main.qml:71
@@ -1337,7 +1341,7 @@ msgstr "Nastaviť"
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Configure"
-msgid "Configure Backup Plans..."
+msgid "Configure Backup Plans…"
 msgstr "Nastaviť"
 
 #: purger/main.cpp:24
@@ -1352,9 +1356,10 @@ msgid "Purger for bup archives."
 msgstr ""
 
 #: purger/main.cpp:28
-#, kde-format
-msgid "Copyright (C) 2013-2021 Simon Persson"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Simon Persson"
+msgid "© 2013–2021 Simon Persson"
+msgstr "Simon Persson"
 
 #: settings/backupplan.cpp:26
 #, kde-kuit-format
@@ -1398,6 +1403,16 @@ msgstr "Voľné miesto: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "New Folder..."
+#~ msgstr "Nový priečinok..."
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Configure"
+#~ msgid "Configure Backup Plans..."
+#~ msgstr "Nastaviť"
 
 #~ msgctxt "@action:button"
 #~ msgid "Yes"

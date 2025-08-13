@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 02:02+0000\n"
+"POT-Creation-Date: 2025-08-13 02:02+0000\n"
 "PO-Revision-Date: 2025-06-27 10:07+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -300,8 +300,9 @@ msgstr ""
 "realment han canviat des que es va desar l'última còpia de seguretat."
 
 #: daemon/main.cpp:47
-#, kde-format
-msgid "Copyright (C) 2011-2020 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2011-2020 Simon Persson"
+msgid "© 2011–2020 Simon Persson"
 msgstr "Copyright (C) 2011-2020 Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
@@ -502,8 +503,9 @@ msgid "Browser for bup archives."
 msgstr "Explorador per a arxius «bup»."
 
 #: filedigger/main.cpp:32
-#, kde-format
-msgid "Copyright (C) 2013-2020 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2013-2020 Simon Persson"
+msgid "© 2013–2020 Simon Persson"
 msgstr "Copyright (C) 2013-2020 Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
@@ -551,10 +553,12 @@ msgid " (file)"
 msgstr " (fitxer)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "default folder name when creating a new folder"
+#| msgid "New Folder"
 msgctxt "@action:button"
-msgid "New Folder..."
-msgstr "Carpeta nova..."
+msgid "New Folder…"
+msgstr "Carpeta nova"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1457,8 +1461,9 @@ msgid "Show log file"
 msgstr "Mostra el fitxer de registre"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#, kde-format
-msgid "&Configure Kup..."
+#, fuzzy, kde-format
+#| msgid "&Configure Kup..."
+msgid "&Configure Kup…"
 msgstr "&Configura el Kup..."
 
 #: plasmoid-qt5/contents/ui/main.qml:71
@@ -1478,9 +1483,10 @@ msgid "Configure Backup Plans"
 msgstr "Configura els plans de còpia de seguretat"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, kde-format
-msgid "Configure Backup Plans..."
-msgstr "Configura els plans de còpia de seguretat..."
+#, fuzzy, kde-format
+#| msgid "Configure Backup Plans"
+msgid "Configure Backup Plans…"
+msgstr "Configura els plans de còpia de seguretat"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1494,8 +1500,9 @@ msgid "Purger for bup archives."
 msgstr "Purga els arxius «bup»."
 
 #: purger/main.cpp:28
-#, kde-format
-msgid "Copyright (C) 2013-2021 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2013-2021 Simon Persson"
+msgid "© 2013–2021 Simon Persson"
 msgstr "Copyright (C) 2013-2021 Simon Persson"
 
 #: settings/backupplan.cpp:26
@@ -1540,6 +1547,13 @@ msgstr "Espai lliure: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Aquest pla de còpia de seguretat no s'ha executat mai."
+
+#~ msgctxt "@action:button"
+#~ msgid "New Folder..."
+#~ msgstr "Carpeta nova..."
+
+#~ msgid "Configure Backup Plans..."
+#~ msgstr "Configura els plans de còpia de seguretat..."
 
 #~ msgid "Kup Configuration Module"
 #~ msgstr "Mòdul de configuració del Kup"

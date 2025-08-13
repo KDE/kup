@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 02:02+0000\n"
+"POT-Creation-Date: 2025-08-13 02:02+0000\n"
 "PO-Revision-Date: 2025-07-20 01:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -277,8 +277,9 @@ msgstr ""
 "로 백업한 이후 변경된 파일만 백업하는 증분 백업을 빠르게 수행할 수 있습니다."
 
 #: daemon/main.cpp:47
-#, kde-format
-msgid "Copyright (C) 2011-2020 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2011-2020 Simon Persson"
+msgid "© 2011–2020 Simon Persson"
 msgstr "Copyright (C) 2011-2020 Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
@@ -479,8 +480,9 @@ msgid "Browser for bup archives."
 msgstr "bup 압축 파일 탐색기입니다."
 
 #: filedigger/main.cpp:32
-#, kde-format
-msgid "Copyright (C) 2013-2020 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2013-2020 Simon Persson"
+msgid "© 2013–2020 Simon Persson"
 msgstr "Copyright (C) 2013-2020 Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
@@ -527,10 +529,12 @@ msgid " (file)"
 msgstr "(파일)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "default folder name when creating a new folder"
+#| msgid "New Folder"
 msgctxt "@action:button"
-msgid "New Folder..."
-msgstr "새 폴더..."
+msgid "New Folder…"
+msgstr "새 폴더"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1404,8 +1408,9 @@ msgid "Show log file"
 msgstr "로그 파일 표시"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#, kde-format
-msgid "&Configure Kup..."
+#, fuzzy, kde-format
+#| msgid "&Configure Kup..."
+msgid "&Configure Kup…"
 msgstr "Kup 설정(&C)..."
 
 #: plasmoid-qt5/contents/ui/main.qml:71
@@ -1425,9 +1430,10 @@ msgid "Configure Backup Plans"
 msgstr "백업 계획 설정"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, kde-format
-msgid "Configure Backup Plans..."
-msgstr "백업 계획 설정..."
+#, fuzzy, kde-format
+#| msgid "Configure Backup Plans"
+msgid "Configure Backup Plans…"
+msgstr "백업 계획 설정"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1441,8 +1447,9 @@ msgid "Purger for bup archives."
 msgstr "bup 저장소 정리 도구입니다."
 
 #: purger/main.cpp:28
-#, kde-format
-msgid "Copyright (C) 2013-2021 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2013-2021 Simon Persson"
+msgid "© 2013–2021 Simon Persson"
 msgstr "Copyright (C) 2013-2021 Simon Persson"
 
 #: settings/backupplan.cpp:26
@@ -1487,6 +1494,13 @@ msgstr "사용 가능한 공간: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "이 백업 계획은 실행되지 않았습니다."
+
+#~ msgctxt "@action:button"
+#~ msgid "New Folder..."
+#~ msgstr "새 폴더..."
+
+#~ msgid "Configure Backup Plans..."
+#~ msgstr "백업 계획 설정..."
 
 #~ msgid "Kup Configuration Module"
 #~ msgstr "Kup 설정 모듈"

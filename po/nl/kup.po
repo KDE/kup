@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 02:02+0000\n"
+"POT-Creation-Date: 2025-08-13 02:02+0000\n"
 "PO-Revision-Date: 2025-06-27 11:39+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -290,8 +290,9 @@ msgstr ""
 "opgeslagen."
 
 #: daemon/main.cpp:47
-#, kde-format
-msgid "Copyright (C) 2011-2020 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2011-2020 Simon Persson"
+msgid "© 2011–2020 Simon Persson"
 msgstr "Copyright (C) 2011-2020 Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
@@ -494,8 +495,9 @@ msgid "Browser for bup archives."
 msgstr "Verkenner voor bup-archieven."
 
 #: filedigger/main.cpp:32
-#, kde-format
-msgid "Copyright (C) 2013-2020 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2013-2020 Simon Persson"
+msgid "© 2013–2020 Simon Persson"
 msgstr "Copyright (C) 2013-2020 Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
@@ -542,10 +544,12 @@ msgid " (file)"
 msgstr "(bestand)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "default folder name when creating a new folder"
+#| msgid "New Folder"
 msgctxt "@action:button"
-msgid "New Folder..."
-msgstr "Nieuwe map..."
+msgid "New Folder…"
+msgstr "Nieuwe map"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1443,8 +1447,9 @@ msgid "Show log file"
 msgstr "Logbestand tonen"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#, kde-format
-msgid "&Configure Kup..."
+#, fuzzy, kde-format
+#| msgid "&Configure Kup..."
+msgid "&Configure Kup…"
 msgstr "Kup &configureren..."
 
 #: plasmoid-qt5/contents/ui/main.qml:71
@@ -1464,9 +1469,10 @@ msgid "Configure Backup Plans"
 msgstr "Back-up-plannen configureren"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, kde-format
-msgid "Configure Backup Plans..."
-msgstr "Back-up-plannen configureren..."
+#, fuzzy, kde-format
+#| msgid "Configure Backup Plans"
+msgid "Configure Backup Plans…"
+msgstr "Back-up-plannen configureren"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1480,8 +1486,9 @@ msgid "Purger for bup archives."
 msgstr "Opschoner voor bup-archieven."
 
 #: purger/main.cpp:28
-#, kde-format
-msgid "Copyright (C) 2013-2021 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2013-2021 Simon Persson"
+msgid "© 2013–2021 Simon Persson"
 msgstr "Copyright (C) 2013-2021 Simon Persson"
 
 #: settings/backupplan.cpp:26
@@ -1526,6 +1533,13 @@ msgstr "Vrije ruimte: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Dit back-upschema is nog nooit gebruikt."
+
+#~ msgctxt "@action:button"
+#~ msgid "New Folder..."
+#~ msgstr "Nieuwe map..."
+
+#~ msgid "Configure Backup Plans..."
+#~ msgstr "Back-up-plannen configureren..."
 
 #~ msgid "Kup Configuration Module"
 #~ msgstr "Kup-configuratiemodule"

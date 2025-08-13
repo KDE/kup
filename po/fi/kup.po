@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 02:02+0000\n"
+"POT-Creation-Date: 2025-08-13 02:02+0000\n"
 "PO-Revision-Date: 2025-07-13 23:16+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -281,8 +281,9 @@ msgstr ""
 "viimeisimmän varmuuskopion jälkeen muuttuneet tiedoston osat."
 
 #: daemon/main.cpp:47
-#, kde-format
-msgid "Copyright (C) 2011-2020 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2011-2020 Simon Persson"
+msgid "© 2011–2020 Simon Persson"
 msgstr "Tekijänoikeudet © 2011–202 Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
@@ -485,8 +486,9 @@ msgid "Browser for bup archives."
 msgstr "bup-arkistojen selain."
 
 #: filedigger/main.cpp:32
-#, kde-format
-msgid "Copyright (C) 2013-2020 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2013-2020 Simon Persson"
+msgid "© 2013–2020 Simon Persson"
 msgstr "Tekijänoikeudet © 2013–2020 Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
@@ -533,10 +535,12 @@ msgid " (file)"
 msgstr " (tiedosto)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "default folder name when creating a new folder"
+#| msgid "New Folder"
 msgctxt "@action:button"
-msgid "New Folder..."
-msgstr "Uusi kansio…"
+msgid "New Folder…"
+msgstr "Uusi kansio"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1422,8 +1426,9 @@ msgid "Show log file"
 msgstr "Näytä lokitiedosto"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#, kde-format
-msgid "&Configure Kup..."
+#, fuzzy, kde-format
+#| msgid "&Configure Kup..."
+msgid "&Configure Kup…"
 msgstr "&Kupin asetukset…"
 
 #: plasmoid-qt5/contents/ui/main.qml:71
@@ -1443,9 +1448,10 @@ msgid "Configure Backup Plans"
 msgstr "Varmuuskopiosuunnitelmien asetukset"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, kde-format
-msgid "Configure Backup Plans..."
-msgstr "Varmuuskopiosuunnitelmien asetukset…"
+#, fuzzy, kde-format
+#| msgid "Configure Backup Plans"
+msgid "Configure Backup Plans…"
+msgstr "Varmuuskopiosuunnitelmien asetukset"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1459,8 +1465,9 @@ msgid "Purger for bup archives."
 msgstr "bup-arkistojen siivoaja."
 
 #: purger/main.cpp:28
-#, kde-format
-msgid "Copyright (C) 2013-2021 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2013-2021 Simon Persson"
+msgid "© 2013–2021 Simon Persson"
 msgstr "Tekijänoikeudet © 2013–2021 Simon Persson"
 
 #: settings/backupplan.cpp:26
@@ -1505,6 +1512,13 @@ msgstr "Vapaa tila: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Tätä varmuuskopiosuunnitelma ei ole suoritettu koskaan."
+
+#~ msgctxt "@action:button"
+#~ msgid "New Folder..."
+#~ msgstr "Uusi kansio…"
+
+#~ msgid "Configure Backup Plans..."
+#~ msgstr "Varmuuskopiosuunnitelmien asetukset…"
 
 #~ msgid "Kup Configuration Module"
 #~ msgstr "Kup-asetusmoduuli"

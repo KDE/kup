@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 02:02+0000\n"
+"POT-Creation-Date: 2025-08-13 02:02+0000\n"
 "PO-Revision-Date: 2020-06-13 19:52+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -283,8 +283,9 @@ msgstr ""
 "on pärast viimast varundamist muudetud."
 
 #: daemon/main.cpp:47
-#, kde-format
-msgid "Copyright (C) 2011-2020 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2011-2020 Simon Persson"
+msgid "© 2011–2020 Simon Persson"
 msgstr "Autoriõigus (C) 2011-2020: Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
@@ -488,8 +489,9 @@ msgid "Browser for bup archives."
 msgstr "bup-arhiivide sirvija."
 
 #: filedigger/main.cpp:32
-#, kde-format
-msgid "Copyright (C) 2013-2020 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2013-2020 Simon Persson"
+msgid "© 2013–2020 Simon Persson"
 msgstr "Autoriõigus (C) 2013-2020: Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
@@ -536,10 +538,12 @@ msgid " (file)"
 msgstr " (fail)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "default folder name when creating a new folder"
+#| msgid "New Folder"
 msgctxt "@action:button"
-msgid "New Folder..."
-msgstr "Uus kataloog ..."
+msgid "New Folder…"
+msgstr "Uus kataloog"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1451,7 +1455,7 @@ msgstr "Näita logifaili"
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Configure"
-msgid "&Configure Kup..."
+msgid "&Configure Kup…"
 msgstr "Seadista"
 
 #: plasmoid-qt5/contents/ui/main.qml:71
@@ -1478,7 +1482,7 @@ msgstr "Seadista"
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Configure"
-msgid "Configure Backup Plans..."
+msgid "Configure Backup Plans…"
 msgstr "Seadista"
 
 #: purger/main.cpp:24
@@ -1496,7 +1500,7 @@ msgstr "bup-arhiivide sirvija."
 #: purger/main.cpp:28
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2013-2020 Simon Persson"
-msgid "Copyright (C) 2013-2021 Simon Persson"
+msgid "© 2013–2021 Simon Persson"
 msgstr "Autoriõigus (C) 2013-2020: Simon Persson"
 
 #: settings/backupplan.cpp:26
@@ -1541,6 +1545,16 @@ msgstr "Vaba ruum: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Seda varukoopiakava ei ole kunagi kasutatud."
+
+#~ msgctxt "@action:button"
+#~ msgid "New Folder..."
+#~ msgstr "Uus kataloog ..."
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Configure"
+#~ msgid "Configure Backup Plans..."
+#~ msgstr "Seadista"
 
 #~ msgid "Kup Configuration Module"
 #~ msgstr "Kupi seadistamismoodul"

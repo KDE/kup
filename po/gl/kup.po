@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 02:02+0000\n"
+"POT-Creation-Date: 2025-08-13 02:02+0000\n"
 "PO-Revision-Date: 2025-02-24 07:31+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -291,8 +291,9 @@ msgstr ""
 "cambiaron desde a última salvagarda."
 
 #: daemon/main.cpp:47
-#, kde-format
-msgid "Copyright (C) 2011-2020 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2011-2020 Simon Persson"
+msgid "© 2011–2020 Simon Persson"
 msgstr "© 2011-2020 Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
@@ -494,8 +495,9 @@ msgid "Browser for bup archives."
 msgstr "Navegador de arquivos bup."
 
 #: filedigger/main.cpp:32
-#, kde-format
-msgid "Copyright (C) 2013-2020 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2013-2020 Simon Persson"
+msgid "© 2013–2020 Simon Persson"
 msgstr "© 2013-2020 Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
@@ -543,10 +545,12 @@ msgid " (file)"
 msgstr " (ficheiro)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "default folder name when creating a new folder"
+#| msgid "New Folder"
 msgctxt "@action:button"
-msgid "New Folder..."
-msgstr "Novo cartafol…"
+msgid "New Folder…"
+msgstr "Novo cartafol"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1441,8 +1445,9 @@ msgid "Show log file"
 msgstr "Amosar o ficheiro de rexistro"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#, kde-format
-msgid "&Configure Kup..."
+#, fuzzy, kde-format
+#| msgid "&Configure Kup..."
+msgid "&Configure Kup…"
 msgstr "&Configurar Kup…"
 
 #: plasmoid-qt5/contents/ui/main.qml:71
@@ -1462,9 +1467,10 @@ msgid "Configure Backup Plans"
 msgstr "Configurar os plans de salvagardas"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, kde-format
-msgid "Configure Backup Plans..."
-msgstr "Configurar os plans de salvagardas…"
+#, fuzzy, kde-format
+#| msgid "Configure Backup Plans"
+msgid "Configure Backup Plans…"
+msgstr "Configurar os plans de salvagardas"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1478,8 +1484,9 @@ msgid "Purger for bup archives."
 msgstr "Liberador de arquivos bup."
 
 #: purger/main.cpp:28
-#, kde-format
-msgid "Copyright (C) 2013-2021 Simon Persson"
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2013-2021 Simon Persson"
+msgid "© 2013–2021 Simon Persson"
 msgstr "© 2013-2021 Simon Persson"
 
 #: settings/backupplan.cpp:26
@@ -1524,6 +1531,13 @@ msgstr "Espazo libre: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Esta planificación de salvagarda non se executou nunca."
+
+#~ msgctxt "@action:button"
+#~ msgid "New Folder..."
+#~ msgstr "Novo cartafol…"
+
+#~ msgid "Configure Backup Plans..."
+#~ msgstr "Configurar os plans de salvagardas…"
 
 #~ msgid "Kup Configuration Module"
 #~ msgstr "Módulo de configuración de Kup"
