@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 02:02+0000\n"
-"PO-Revision-Date: 2025-06-27 09:47+0300\n"
+"PO-Revision-Date: 2025-08-13 17:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -281,16 +281,15 @@ msgid ""
 "This allows it to quickly perform incremental backups, only saving the parts "
 "of files that has actually changed since last backup was saved."
 msgstr ""
-"Kup, ‘bup’ yedekleme depolama sistemini kullanan esnek bir yedekleme "
+"Kup, “bup” yedekleme depolama sistemini kullanan esnek bir yedekleme "
 "çözümüdür. Böylece, yedeğin son kaydedildiği zamandan itibaren dosyaların "
 "yalnızca değiştirilen kısımlarını yedekleyerek kolaylıkla artan yedekler "
 "almanıza olanak sağlar."
 
 #: daemon/main.cpp:47
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2011-2020 Simon Persson"
+#, kde-format
 msgid "© 2011–2020 Simon Persson"
-msgstr "Telif hakkı © 2011–2020 Simon Persson"
+msgstr "© 2011–2020 Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
@@ -490,10 +489,9 @@ msgid "Browser for bup archives."
 msgstr "Bup arşivlerine göz atın."
 
 #: filedigger/main.cpp:32
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2020 Simon Persson"
+#, kde-format
 msgid "© 2013–2020 Simon Persson"
-msgstr "Telif hakkı © 2013–2020 Simon Persson"
+msgstr "© 2013–2020 Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
 #, kde-format
@@ -539,12 +537,10 @@ msgid " (file)"
 msgstr " (dosya)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder…"
-msgstr "Yeni Klasör"
+msgstr "Yeni Klasör…"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1432,8 +1428,7 @@ msgid "Show log file"
 msgstr "Günlük dosyasını göster"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "&Configure Kup…"
 msgstr "Kup’u &Yapılandır…"
 
@@ -1454,10 +1449,9 @@ msgid "Configure Backup Plans"
 msgstr "Yedek Planlarını Yapılandır"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Configure Backup Plans"
+#, kde-format
 msgid "Configure Backup Plans…"
-msgstr "Yedek Planlarını Yapılandır"
+msgstr "Yedek Planlarını Yapılandır…"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1471,10 +1465,9 @@ msgid "Purger for bup archives."
 msgstr "bup arşivleri için silici."
 
 #: purger/main.cpp:28
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2021 Simon Persson"
+#, kde-format
 msgid "© 2013–2021 Simon Persson"
-msgstr "Telif hakkı © 2013–2021 Simon Persson"
+msgstr "© 2013–2021 Simon Persson"
 
 #: settings/backupplan.cpp:26
 #, kde-kuit-format

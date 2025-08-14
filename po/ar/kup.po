@@ -289,7 +289,7 @@ msgid ""
 "of files that has actually changed since last backup was saved."
 msgstr ""
 "كيوب هو حل نسخ احتياطي مرن باستخدام نظام تخزين النسخ الاحتياطي \"bup\".يسمح "
-"هذا بإجراء نسخ احتياطي تزايدي بسرعة ، يقوم فقط بحفظ أجزاء الملفات التي تغيرت "
+"هذا بإجراء نسخ احتياطي تزايدي بسرعة، يقوم فقط بحفظ أجزاء الملفات التي تغيرت "
 "بالفعل منذ آخر نسخة احتياطية."
 
 #: daemon/main.cpp:47
@@ -477,7 +477,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid "You do not have permission needed to read this backup archive."
-msgstr "لا تملك التصريح المطلوب لقراءة أرشيف النسخة الاحتياطية هذه."
+msgstr "لا تملك الإذْن المطلوب لقراءة أرشيف النسخة الاحتياطية هذه."
 
 #: filedigger/filedigger.cpp:188
 #, kde-format
@@ -629,7 +629,7 @@ msgstr "هناك مجلّد له الاسم %1 فعلًا."
 #: filedigger/restoredialog.cpp:407 kcm/dirselector.cpp:66
 #, kde-format
 msgid "You do not have permission to create %1."
-msgstr "لا تملك تصريح لإنشاء %1."
+msgstr "لا تملك إذْن لإنشاء %1."
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, RestoreDialog)
 #: filedigger/restoredialog.ui:14
@@ -790,7 +790,7 @@ msgid ""
 "from the backup plan."
 msgstr ""
 "ليس لديك إذن لقراءة هذا المجلد: <filename>%1 </filename> <nl/> لا يمكن "
-"تضمينه في تحديد المصدر. إذا لم يكن يحتوي على أي شيء مهم بالنسبة لك ، فإن أحد "
+"تضمينه في تحديد المصدر. إذا لم يكن يحتوي على أي شيء مهم بالنسبة لك، فإن أحد "
 "الحلول الممكنة هو استبعاد المجلد من خطة النسخ الاحتياطي."
 
 #: kcm/backupplanwidget.cpp:396
@@ -803,8 +803,8 @@ msgid ""
 "stored from the backup plan."
 msgstr ""
 "ليس لديك إذن لقراءة هذا الملف: <filename>%1</filename> <nl/> لا يمكن تضمينه "
-"في تحديد المصدر. إذا لم يكن الملف مهمًا بالنسبة لك ، فإن أحد الحلول الممكنة "
-"هو استبعاد المجلد بأكمله حيث يخزن الملف من خطة النسخ الاحتياطي."
+"في تحديد المصدر. إذا لم يكن الملف مهمًا بالنسبة لك، فإن أحد الحلول الممكنة هو "
+"استبعاد المجلد بأكمله حيث يخزن الملف من خطة النسخ الاحتياطي."
 
 #: kcm/backupplanwidget.cpp:412
 #, kde-kuit-format
@@ -983,7 +983,7 @@ msgid ""
 "can be plugged in to this computer, such as a USB hard drive or memory stick."
 msgstr ""
 "استخدم هذا الخيار إذا كنت تريد نسخ ملفاتك احتياطيًا على وحدة تخزين خارجية "
-"يمكن توصيلها بهذا الحاسوب ، مثل محرك أقراص ثابتة USB أو أصبع ذاكرة."
+"يمكن توصيلها بهذا الحاسوب، مثل محرك أقراص ثابتة USB أو أصبع ذاكرة."
 
 #: kcm/backupplanwidget.cpp:676 kcm/backupplanwidget.cpp:679
 #, kde-kuit-format
@@ -1134,7 +1134,7 @@ msgid ""
 "recover from a partially corrupted backup."
 msgstr ""
 "سيؤدي هذا إلى جعل النسخ الاحتياطية الخاصة بك تستخدم مساحة تخزين أكبر بنسبة "
-"10٪ وسيستغرق توفير النسخ الاحتياطية وقتًا أطول قليلاً. في المقابل ، سيكون من "
+"10٪ وسيستغرق توفير النسخ الاحتياطية وقتًا أطول قليلاً. في المقابل، سيكون من "
 "الممكن الاسترداد من نسخة احتياطية تالفة جزئيًا."
 
 #: kcm/backupplanwidget.cpp:869
@@ -1226,7 +1226,7 @@ msgstr "أنشئ مجلّدًا"
 msgctxt "@label Only shown if no drives are detected"
 msgid ""
 "Plug in the external storage you wish to use, then select it in this list."
-msgstr "ضم جهاز التخزين الخارجي الذي ترغب به ، ثم اختره في هذه القائمة"
+msgstr "ضم جهاز التخزين الخارجي الذي ترغب به، ثم اختره في هذه القائمة"
 
 #: kcm/driveselectiondelegate.cpp:69
 #, kde-kuit-format

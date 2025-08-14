@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 02:02+0000\n"
-"PO-Revision-Date: 2025-06-27 06:07+0200\n"
+"PO-Revision-Date: 2025-08-13 07:08+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -297,10 +297,9 @@ msgstr ""
 "spremenile od shranjevanja zadnje varnostne kopije."
 
 #: daemon/main.cpp:47
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2011-2020 Simon Persson"
+#, kde-format
 msgid "© 2011–2020 Simon Persson"
-msgstr "Copyright (C) 2011-2020 Simon Persson"
+msgstr "© 2011-2020 Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
@@ -500,10 +499,9 @@ msgid "Browser for bup archives."
 msgstr "Brskalnik za arhive bup."
 
 #: filedigger/main.cpp:32
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2020 Simon Persson"
+#, kde-format
 msgid "© 2013–2020 Simon Persson"
-msgstr "Copyright (C) 2013-2020 Simon Persson"
+msgstr "© 2013-2020 Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
 #, kde-format
@@ -550,12 +548,10 @@ msgid " (file)"
 msgstr " (datoteka)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder…"
-msgstr "Nova mapa"
+msgstr "Nova mapa…"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1451,10 +1447,9 @@ msgid "Show log file"
 msgstr "Prikaži datoteko dnevnika"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "&Configure Kup…"
-msgstr "Nastavi Kup..."
+msgstr "Konfiguriraj Kup..."
 
 #: plasmoid-qt5/contents/ui/main.qml:71
 #, kde-format
@@ -1473,10 +1468,9 @@ msgid "Configure Backup Plans"
 msgstr "Konfiguriraj načrte varnostnega kopiranja"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Configure Backup Plans"
+#, kde-format
 msgid "Configure Backup Plans…"
-msgstr "Konfiguriraj načrte varnostnega kopiranja"
+msgstr "Konfiguriraj načrte varnostnega kopiranja…"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1490,10 +1484,9 @@ msgid "Purger for bup archives."
 msgstr "Čistka arhivov bup."
 
 #: purger/main.cpp:28
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2021 Simon Persson"
+#, kde-format
 msgid "© 2013–2021 Simon Persson"
-msgstr "Copyright (C) 2013-2021 Simon Persson"
+msgstr "© 2013-2021 Simon Persson"
 
 #: settings/backupplan.cpp:26
 #, kde-kuit-format
