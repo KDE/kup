@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 02:02+0000\n"
-"PO-Revision-Date: 2025-08-05 20:44+0400\n"
+"PO-Revision-Date: 2025-08-14 09:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -289,8 +289,8 @@ msgid ""
 "of files that has actually changed since last backup was saved."
 msgstr ""
 "كيوب هو حل نسخ احتياطي مرن باستخدام نظام تخزين النسخ الاحتياطي \"bup\".يسمح "
-"هذا بإجراء نسخ احتياطي تزايدي بسرعة، يقوم فقط بحفظ أجزاء الملفات التي تغيرت "
-"بالفعل منذ آخر نسخة احتياطية."
+"هذا بإجراء نسخ احتياطي تزايدي بسرعة، يحفظ فقط أجزاء الملفات التي تغيرت فعلًا "
+"منذ آخر نسخة احتياطية."
 
 #: daemon/main.cpp:47
 #, fuzzy, kde-format
@@ -471,7 +471,7 @@ msgid ""
 "backups really are located there."
 msgstr ""
 "تعذر فتح أرشيف النسخة الاحتياطية <filename>%1</filename>. تأكد من أن النسخ "
-"موجودة هناك بالفعل."
+"موجودة هناك فعلًا."
 
 #: filedigger/filedigger.cpp:123
 #, kde-kuit-format
@@ -585,19 +585,19 @@ msgstr " - محفوظ في %1"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Folder already exists, please choose a solution"
-msgstr "المجلّد موجود بالفعل، الرجاء اختر حلا"
+msgstr "المجلّد موجود فعلًا، الرجاء اختر حلا"
 
 #: filedigger/restoredialog.cpp:293
 #, kde-kuit-format
 msgctxt "@info"
 msgid "File already exists"
-msgstr "الملفّ موجود بالفعل"
+msgstr "الملفّ موجود فعلًا"
 
 #: filedigger/restoredialog.cpp:306
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "The new name entered already exists, please enter a different one."
-msgstr "الاسم المدخل موجود بالفعل، الرجاء أدخل اسم أخر."
+msgstr "الاسم المدخل موجود فعلًا، الرجاء أدخل اسم أخر."
 
 #: filedigger/restoredialog.cpp:379 kcm/dirselector.cpp:39
 #, kde-kuit-format
