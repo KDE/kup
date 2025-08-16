@@ -262,7 +262,7 @@ msgstr ""
 #: daemon/main.cpp:47
 #, kde-format
 msgid "© 2011–2020 Simon Persson"
-msgstr ""
+msgstr "© 2011–2020 Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
@@ -461,7 +461,7 @@ msgstr "Bup 归档压缩文件的浏览程序。"
 #: filedigger/main.cpp:32
 #, kde-format
 msgid "© 2013–2020 Simon Persson"
-msgstr ""
+msgstr "© 2013–2020 Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
 #, kde-format
@@ -510,7 +510,7 @@ msgstr "(文件)"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder…"
-msgstr ""
+msgstr "新建文件夹…"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1367,7 +1367,7 @@ msgstr "显示日志文件"
 #: plasmoid-qt5/contents/ui/main.qml:69
 #, kde-format
 msgid "&Configure Kup…"
-msgstr ""
+msgstr "配置 Kup(&C)…"
 
 #: plasmoid-qt5/contents/ui/main.qml:71
 #, kde-format
@@ -1388,7 +1388,7 @@ msgstr "配置备份计划"
 #: plasmoid-qt6/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Backup Plans…"
-msgstr ""
+msgstr "配置备份计划…"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1404,7 +1404,7 @@ msgstr "Bup 归档压缩文件的清除程序。"
 #: purger/main.cpp:28
 #, kde-format
 msgid "© 2013–2021 Simon Persson"
-msgstr ""
+msgstr "© 2013–2021 Simon Persson"
 
 #: settings/backupplan.cpp:26
 #, kde-kuit-format
