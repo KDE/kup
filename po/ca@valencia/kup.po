@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 02:02+0000\n"
-"PO-Revision-Date: 2025-06-27 10:07+0200\n"
+"PO-Revision-Date: 2025-08-13 20:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -300,10 +300,9 @@ msgstr ""
 "realment han canviat des que es va guardar l'última còpia de seguretat."
 
 #: daemon/main.cpp:47
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2011-2020 Simon Persson"
+#, kde-format
 msgid "© 2011–2020 Simon Persson"
-msgstr "Copyright (C) 2011-2020 Simon Persson"
+msgstr "© 2011–2020 Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
@@ -504,10 +503,9 @@ msgid "Browser for bup archives."
 msgstr "Explorador per a arxius «bup»."
 
 #: filedigger/main.cpp:32
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2020 Simon Persson"
+#, kde-format
 msgid "© 2013–2020 Simon Persson"
-msgstr "Copyright (C) 2013-2020 Simon Persson"
+msgstr "© 2013–2020 Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
 #, kde-format
@@ -554,12 +552,10 @@ msgid " (file)"
 msgstr " (fitxer)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder…"
-msgstr "Carpeta nova"
+msgstr "Carpeta nova…"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -582,7 +578,7 @@ msgid ""
 "The destination does not have enough space available. Please choose a "
 "different destination or free some space."
 msgstr ""
-"La destinació no té prou espai disponible. Seleccioneu-ne una de diferent o "
+"La destinació no té prou espai disponible. Trieu-ne una de diferent o "
 "allibereu espai."
 
 #: filedigger/restoredialog.cpp:286
@@ -662,7 +658,7 @@ msgstr "Restaura a la ubicació original"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose where to restore"
-msgstr "Seleccioneu a on cal restaurar"
+msgstr "Trieu a on cal restaurar"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
 #: filedigger/restoredialog.ui:132
@@ -934,7 +930,7 @@ msgstr "Tipus de còpia de seguretat"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select what type of backup you want"
-msgstr "Seleccioneu quin tipus de còpia de seguretat voleu"
+msgstr "Trieu quin tipus de còpia de seguretat voleu"
 
 #: kcm/backupplanwidget.cpp:600
 #, kde-kuit-format
@@ -1462,8 +1458,7 @@ msgid "Show log file"
 msgstr "Mostra el fitxer de registre"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "&Configure Kup…"
 msgstr "&Configura Kup…"
 
@@ -1484,10 +1479,9 @@ msgid "Configure Backup Plans"
 msgstr "Configura els plans de còpia de seguretat"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Configure Backup Plans"
+#, kde-format
 msgid "Configure Backup Plans…"
-msgstr "Configura els plans de còpia de seguretat"
+msgstr "Configura els plans de còpia de seguretat…"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1501,10 +1495,9 @@ msgid "Purger for bup archives."
 msgstr "Purga els arxius «bup»."
 
 #: purger/main.cpp:28
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2021 Simon Persson"
+#, kde-format
 msgid "© 2013–2021 Simon Persson"
-msgstr "Copyright (C) 2013-2021 Simon Persson"
+msgstr "© 2013–2021 Simon Persson"
 
 #: settings/backupplan.cpp:26
 #, kde-kuit-format
@@ -1548,18 +1541,3 @@ msgstr "Espai lliure: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Este pla de còpia de seguretat no s'ha executat mai."
-
-#~ msgctxt "@action:button"
-#~ msgid "New Folder..."
-#~ msgstr "Carpeta nova…"
-
-#~ msgid "Configure Backup Plans..."
-#~ msgstr "Configura els plans de còpia de seguretat…"
-
-#~ msgid "Kup Configuration Module"
-#~ msgstr "Mòdul de configuració de Kup"
-
-#~ msgid "Configuration of backup plans for the Kup backup system"
-#~ msgstr ""
-#~ "Configureu els plans de còpia de seguretat per al sistema de còpies de "
-#~ "seguretat Kup"
