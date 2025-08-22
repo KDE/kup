@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 02:02+0000\n"
-"PO-Revision-Date: 2025-05-28 23:23+0200\n"
+"PO-Revision-Date: 2025-08-21 18:03+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -30,7 +30,11 @@ msgid_plural ""
 "%1 source folders no longer exist. Please open settings and confirm what to "
 "include in backup.<nl/><filename>%2</filename>"
 msgstr[0] ""
+"Sorburu-karpeta bat jada ez da existitzen. Mesedez, ireki ezarpenak eta "
+"baieztatu babeskopian zer barneratu behar den.<nl/><filename>%2</filename>"
 msgstr[1] ""
+"%1 sorburu-karpeta jada ez dira existitzen. Mesedez, ireki ezarpenak eta "
+"baieztatu babeskopian zer barneratu behar den.<nl/><filename>%2</filename>"
 
 #: daemon/bupjob.cpp:48 daemon/buprepairjob.cpp:26
 #: daemon/bupverificationjob.cpp:25
@@ -74,6 +78,9 @@ msgid ""
 "Failed backup integrity check. Your backups could be corrupted! See log file "
 "for more details. Do you want to try repairing the backup files?"
 msgstr ""
+"Babeskopiaren osotasun egiaztapenak huts egin du. Baliteke zure babeskopiak "
+"hondatuta egotea! Begiratu egunkari-fitxategia xehetasun gehiagorako. "
+"Babeskopia-fitxategiak konpontzen saiatu nahi duzu?"
 
 #: daemon/bupjob.cpp:124
 #, kde-kuit-format
@@ -82,6 +89,8 @@ msgid ""
 "Failed backup integrity check. Your backups could be corrupted! See log file "
 "for more details."
 msgstr ""
+"Babeskopiaren osotasun egiaztapenak huts egin du. Zure babeskopiak hondatuta "
+"egon daitezke! Begiratu egunkari-fitxategia xehetasun gehiagorako."
 
 #: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:50
 #, kde-format
@@ -93,6 +102,8 @@ msgstr "Zer kopiatu aztertzen"
 msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
 msgstr ""
+"Fitxategiak analizatzea huts egin du. Begiratu egunkari-fitxategiak "
+"xehetasun gehiagorako."
 
 #: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
@@ -104,6 +115,8 @@ msgstr "Babeskopia gordetzen"
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
 msgstr ""
+"Babeskopia gordetzea huts egin du. Begiratu egunkari-fitxategiak xehetasun "
+"gehiagorako."
 
 #: daemon/bupjob.cpp:234
 #, kde-format
@@ -187,6 +200,9 @@ msgid ""
 "Failed backup integrity check. Your backups are corrupted! See log file for "
 "more details. Do you want to try repairing the backup files?"
 msgstr ""
+"Babeskopiaren osotasun egiaztapenak huts egin du. Zure babeskopiak hondatuta "
+"daude! Begiratu egunkari-fitxategia xehetasun gehiagorako. Babeskopia-"
+"fitxategiak konpontzen saiatu nahi duzu?"
 
 #: daemon/kupdaemon.cpp:179
 #, kde-format
@@ -272,12 +288,15 @@ msgid ""
 "This allows it to quickly perform incremental backups, only saving the parts "
 "of files that has actually changed since last backup was saved."
 msgstr ""
+"Kup, 'bup' babeskopia-biltegiratze sistema erabiltzen duen babeskopia-"
+"soluzio malgu bat da. Horri esker, babeskopia inkrementalak azkar egin "
+"ditzake, azken babeskopia gorde zenetik benetan aldatu diren fitxategien "
+"zatiak bakarrik gordez."
 
 #: daemon/main.cpp:47
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2011-2020 Simon Persson"
+#, kde-format
 msgid "© 2011–2020 Simon Persson"
-msgstr "Copyright (C) 2011-2020 Simon Persson"
+msgstr "© 2011–2020 Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
@@ -332,6 +351,8 @@ msgid ""
 "It has been %1 since last backup was saved.\n"
 "Save a new backup now?"
 msgstr ""
+"Azken babeskopia gorde zenetik %1 igaro d(ir)a.\n"
+"Orain babeskopia berri bat gorde?"
 
 #: daemon/planexecutor.cpp:126
 #, kde-kuit-format
@@ -340,6 +361,8 @@ msgid ""
 "You have been active for %1 since last backup was saved.\n"
 "Save a new backup now?"
 msgstr ""
+"Azken babeskopia gorde zenetik %1 aktibo zaude.\n"
+"Orain babeskopia berri bat gorde?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
 #, kde-kuit-format
@@ -392,7 +415,7 @@ msgstr "Babeskopia gorde da"
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
-msgstr ""
+msgstr "Babeskopia gordetzea ondo osatu da."
 
 #: daemon/planexecutor.cpp:305 daemon/planexecutor.cpp:312
 #: daemon/planexecutor.cpp:345
@@ -405,13 +428,13 @@ msgstr "Arazoa"
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
-msgstr ""
+msgstr "Ez duzu babeskopiaren helburuan idazteko baimenik."
 
 #: daemon/planexecutor.cpp:312
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
-msgstr ""
+msgstr "Konfigurazioan babeskopi-mota baliogabea."
 
 #: daemon/planexecutor.cpp:360
 #, kde-kuit-format
@@ -437,6 +460,8 @@ msgid ""
 "The <application>rsync</application> program is needed but could not be "
 "found, maybe it is not installed?"
 msgstr ""
+"<application>rsync</application> programa behar da baina ezin izan du "
+"aurkitu, agian ez dago instalatuta?"
 
 #: filedigger/filedigger.cpp:116
 #, kde-kuit-format
@@ -445,49 +470,50 @@ msgid ""
 "The backup archive <filename>%1</filename> could not be opened. Check if the "
 "backups really are located there."
 msgstr ""
+"Ezin izan da <filename>%1</filename> babeskopia artxiboa ireki. Egiaztatu "
+"babeskopiak benetan beratan dauden."
 
 #: filedigger/filedigger.cpp:123
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid "You do not have permission needed to read this backup archive."
-msgstr ""
+msgstr "Ez duzu babeskopia artxibo hau irakurtzeko beharrezko baimenik."
 
 #: filedigger/filedigger.cpp:188
 #, kde-format
 msgid "Select location of backup archive to open."
-msgstr ""
+msgstr "Hautatu ireki beharreko babeskopia-artxiboaren kokalekua."
 
 #: filedigger/main.cpp:28
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
-msgstr ""
+msgstr "Fitxategi hondeatzailea"
 
 #: filedigger/main.cpp:30
 #, kde-format
 msgid "Browser for bup archives."
-msgstr "Arakatu bup artxiboen bila."
+msgstr "Bup-artxiboen arakatzailea."
 
 #: filedigger/main.cpp:32
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2020 Simon Persson"
+#, kde-format
 msgid "© 2013–2020 Simon Persson"
-msgstr "Copyright (C) 2013-2020 Simon Persson"
+msgstr "© 2013–2020 Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
 #, kde-format
 msgid "Name of the branch to be opened."
-msgstr ""
+msgstr "Ireki beharreko adarraren izena."
 
 #: filedigger/main.cpp:41
 #, kde-format
 msgid "File or folder path to be focused."
-msgstr ""
+msgstr "Arreta jarri beharreko fitxategi edo karpetaren bide-izena."
 
 #: filedigger/main.cpp:42 purger/main.cpp:40
 #, kde-format
 msgid "Path to the bup repository to be opened."
-msgstr ""
+msgstr "Ireki beharreko bup-gordetegiaren bide-izena."
 
 #: filedigger/mergedvfs.cpp:102 filedigger/mergedvfs.cpp:113
 #, kde-kuit-format
@@ -496,6 +522,8 @@ msgid ""
 "Could not read this backup archive. Perhaps some files have become "
 "corrupted. Do you want to run an integrity check to test this?"
 msgstr ""
+"Ezin izan du babeskopia-artxibo hau irakurri. Agian fitxategi batzuk hondatu "
+"dira. Hori probatzeko osotasun-egiaztapen bat exekutatu nahi duzu?"
 
 #: filedigger/mergedvfs.cpp:162
 #, kde-kuit-format
@@ -516,24 +544,24 @@ msgid " (file)"
 msgstr " (fitxategia)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder…"
-msgstr "Karpeta berria"
+msgstr "Karpeta berria…"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "No destination was selected, please select one."
-msgstr ""
+msgstr "Ez da helbururik hautatu, mesedez, bat hautatu."
 
 #: filedigger/restoredialog.cpp:259
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "There was a problem while getting a list of all files to restore: %1"
 msgstr ""
+"Arazo bat egon da berreskuratu beharreko fitxategi guztien zerrenda bat "
+"eskuratzean: %1"
 
 #: filedigger/restoredialog.cpp:274
 #, kde-kuit-format
@@ -542,6 +570,8 @@ msgid ""
 "The destination does not have enough space available. Please choose a "
 "different destination or free some space."
 msgstr ""
+"Helburuak ez du behar adina leku erabilgarri. Mesedez, hautatu beste helburu "
+"bat edo hustu leku pixka bat."
 
 #: filedigger/restoredialog.cpp:286
 #, kde-kuit-format
@@ -549,7 +579,7 @@ msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
 "was saved"
 msgid " - saved at %1"
-msgstr ""
+msgstr " - %1(e)an gordea"
 
 #: filedigger/restoredialog.cpp:287
 #, kde-kuit-format
@@ -762,6 +792,9 @@ msgid ""
 "anything important to you, one possible solution is to exclude the folder "
 "from the backup plan."
 msgstr ""
+"Ez duzu karpeta hau irakurtzeko baimenik: <filename>%1</filename><nl/>Ezin "
+"da sorburu-hautapenean barneratu. Zuretzako ezer garrantzitsurik ez badu, "
+"aukeratako bat karpeta babeskopia egitasmotik kanporatzea da."
 
 #: kcm/backupplanwidget.cpp:396
 #, kde-kuit-format
@@ -772,6 +805,10 @@ msgid ""
 "you, one possible solution is to exclude the whole folder where the file is "
 "stored from the backup plan."
 msgstr ""
+"Ez duzu karpeta hau irakurtzeko baimenik: <filename>%1</filename><nl/>Ezin "
+"da sorburu-hautapenean barneratu. Fitxategia zuretzako garrantzitsua ez "
+"bada, aukeratako bat fitxategia gordeta dagoen karpeta osoa babeskopia "
+"egitasmotik kanporatzea da."
 
 #: kcm/backupplanwidget.cpp:412
 #, kde-kuit-format
@@ -781,6 +818,10 @@ msgid ""
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
+"<filename>%1</filename> esteka sinbolikoak barneratuta ez dagoen karpeta "
+"batera seinalatzen du: <filename>%2</filename>.<nl/>Baliteke hori, nahi "
+"duzuna ez izatea. Aukeratako bat jomuga-karpeta babeskopia egitasmoan "
+"barneratzea da."
 
 #: kcm/backupplanwidget.cpp:421
 #, kde-kuit-format
@@ -791,6 +832,10 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
+"<filename>%1</filename> esteka sinbolikoak barneratuta ez dagoen fitxategi "
+"batera seinalatzen du: <filename>%2</filename>.<nl/>Baliteke hori, nahi "
+"duzuna ez izatea. Aukeratako bat fitxategia duen karpeta babeskopia "
+"egitasmoan barneratzea da."
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
@@ -818,6 +863,11 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"Denboran zehar sorburu-karpetako fitxategien babeskopia bertsio anizkoitzak "
+"egin. Horrek fitxategien bertsio zaharragoak edo ezabatutako fitxategiak "
+"berreskuratzeko aukera ematen du.<nl/></nl/>Denborarekin Babeskopia-artxiboa "
+"handitu egingo da, eta programa honek eskaintzen dituen tresnak erabiliz "
+"bakarrik atzitu ahal izango da."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -844,6 +894,10 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"Egin helburuko karpeta sorburuko karpetaren berdin-berdina. Sorburu-karpeta "
+"batetik ezabatutako fitxategiak babeskopia karpetatik ere ezabatuko da.<nl/"
+"><nl/>Horrek disko hausturagatiko datu galera saihesten du, baina ez "
+"fitxategiak ustekabean ezabatzeagatik edo aldatzeagatik."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
@@ -906,6 +960,11 @@ msgid ""
 "always mount it at the same path in the filesystem. The path specified here "
 "does not need to exist at all times, its existence will be monitored."
 msgstr ""
+"Aukera hau erabil dezakezu babeskopia bigarren mailako barneko disko-zurrun "
+"batean, eSATA unitate batean edo sareko biltegiratze batean gordetzeko. "
+"Baldintza bakarra beti fitxategi-sistemaren bide-izen berean muntatzea da. "
+"Hemen zehaztutako bide-izena ez da uneoro existitu behar, bere existentzia "
+"gainbegiratuko da."
 
 #: kcm/backupplanwidget.cpp:630
 #, kde-kuit-format
@@ -982,7 +1041,7 @@ msgstr "Bitartea"
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Active Usage Time"
-msgstr ""
+msgstr "Erabilera-aktiboaren denbora"
 
 #: kcm/backupplanwidget.cpp:739
 #, kde-kuit-format
@@ -991,6 +1050,8 @@ msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
 msgstr ""
+"Babeskopiak eskuz eskatzen denean bakarrik gordetzen dira. Horretarako, "
+"Plasmaren Babeskopia egoera trepeta erabil daiteke."
 
 #: kcm/backupplanwidget.cpp:754
 #, kde-kuit-format
@@ -999,6 +1060,9 @@ msgid ""
 "New backup will be triggered when backup destination becomes available and "
 "more than the configured interval has passed since the last backup was saved."
 msgstr ""
+"Babeskopia berria babeskopiaren helburua erabilgarri jartzen denean eta "
+"azken babeskopia gorde zenetik konfiguratutako bitartea baino denbora "
+"gehiago igaro denean eragingo da."
 
 #: kcm/backupplanwidget.cpp:771
 #, kde-kuit-format
@@ -1032,6 +1096,9 @@ msgid ""
 "you have been using your computer actively for more than the configured time "
 "limit since the last backup was saved."
 msgstr ""
+"Babeskopia berria babeskopiaren helburua erabilgarri jartzen denean eta "
+"azken babeskopia gorde zenetik zure ordenagailua konfiguratutako denbora-"
+"muga baino denbora luzeagoz aktiboki erabili duzunean eragingo da."
 
 #: kcm/backupplanwidget.cpp:804
 #, kde-kuit-format
@@ -1055,7 +1122,7 @@ msgstr "Zehaztu babeskopien ordutegia"
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
-msgstr ""
+msgstr "Erakutsi sorburu-hautapeneko ezkutuko karpetak"
 
 #: kcm/backupplanwidget.cpp:842
 #, kde-kuit-format
@@ -1066,6 +1133,11 @@ msgid ""
 "dot. They are typically located in your home folder and are used to store "
 "settings and temporary files for your applications."
 msgstr ""
+"Horri esker, babeskopia-sorburuaren hautapenean ezkutuko karpetak "
+"esplizituki barneratu edo kanporatu daitezke. Ezkutuko karpeten izenak puntu "
+"batekin hasten dira. Zure etxeko karpetan egon ohi dira eta zure "
+"aplikazioetarako ezarpenak eta aldi baterako fitxategiak gordetzeko "
+"erabiltzen dira."
 
 #: kcm/backupplanwidget.cpp:863
 #, kde-kuit-format
@@ -1075,6 +1147,9 @@ msgid ""
 "backups will take slightly longer time. In return it will be possible to "
 "recover from a partially corrupted backup."
 msgstr ""
+"Horren ondorioz zure babeskopiek % 10 biltegiratze-leku gehiago inguru "
+"erabiliko dute eta haiek gordetzea denbora gehixeago beharko du. Horren "
+"truk, neurri batean hondatutako babeskopia berreskuratzea posible izango da."
 
 #: kcm/backupplanwidget.cpp:869
 #, kde-kuit-format
@@ -1107,6 +1182,10 @@ msgid ""
 "corruption problems sooner than at the time you need to use a backup, at "
 "that time it could be too late."
 msgstr ""
+"Datu berriak gordetzen dituzun bakoitzean babeskopia-artxibo osoa "
+"egiaztatzen du. Babeskopiak gordetzea pixka bat luzeago joko du, baina "
+"hondatze-arazoak babeskopia erabili behar duzun unean baino lehenago "
+"atzemateko aukera ematen dizu, une horretan beranduegi litzateke."
 
 #: kcm/backupplanwidget.cpp:908
 #, kde-kuit-format
@@ -1123,6 +1202,10 @@ msgid ""
 "the backup. The pattern format is documented in the <link url='%1'>bup-index "
 "manual page</link>."
 msgstr ""
+"Ereduak testu-fitxategi batean zerrendatu behar dira, eredu bat lerroko. "
+"Ereduetako edozeinekin bat datozen izenak dituzten fitxategiak eta karpetak "
+"babeskopiatik kanpo utziko dira. Ereduen formatu <link url='%1'>eskuliburuko "
+"bup-index orrialdean</link> dokumentatuta dago."
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format
@@ -1213,6 +1296,10 @@ msgid ""
 "system. File permissions only matters if there is more than one user of this "
 "computer or if you are backing up executable program files."
 msgstr ""
+"Abisua: Fitxategi-sistema honetan ezin dira esteka-sinbolikoak ez eta "
+"fitxategi-baimenak gorde. Fitxategi-baimenek axola dute bakarrik ordenagailu "
+"honek erabiltzaile bat baino gehiago badu edo programa exekutagarrien "
+"fitxategien babeskopia egiten baduzu."
 
 #: kcm/driveselectiondelegate.cpp:174
 #, kde-kuit-format
@@ -1222,6 +1309,10 @@ msgid ""
 "permissions only matters if there is more than one user of this computer or "
 "if you are backing up executable program files."
 msgstr ""
+"Abisua: Fitxategi-sistema honetan ezin dira fitxategi-baimenak gorde. "
+"Fitxategi-baimenek axola dute bakarrik ordenagailu honek erabiltzaile bat "
+"baino gehiago badu edo programa exekutagarrien fitxategien babeskopia egiten "
+"baduzu."
 
 #: kcm/folderselectionmodel.cpp:90
 #, kde-kuit-format
@@ -1275,7 +1366,7 @@ msgctxt "@info %1 is the name of the backup plan"
 msgid ""
 "%1 does not have a destination!<nl/>No backups will be saved by this plan."
 msgstr ""
-"%1(e)k ez du jomugarik!<nl/>Egitasmo honek ez du babeskopiarik gordeko."
+"%1(e)k ez du helbururik!<nl/>Egitasmo honek ez du babeskopiarik gordeko."
 
 #: kcm/kupkcm.cpp:202
 #, kde-kuit-format
@@ -1287,7 +1378,7 @@ msgstr "Abisua"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
-msgstr "Gehitu egitasmo berria..."
+msgstr "Gehitu egitasmo berria…"
 
 #: kcm/kupkcm.cpp:264
 #, kde-kuit-format
@@ -1355,10 +1446,9 @@ msgid "Show log file"
 msgstr "Erakutsi egunkari-fitxategia"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "&Configure Kup…"
-msgstr "&Konfiguratu Kup..."
+msgstr "&Konfiguratu Kup…"
 
 #: plasmoid-qt5/contents/ui/main.qml:71
 #, kde-format
@@ -1377,10 +1467,9 @@ msgid "Configure Backup Plans"
 msgstr "Konfiguratu babeskopia egitasmoak"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Configure Backup Plans"
+#, kde-format
 msgid "Configure Backup Plans…"
-msgstr "Konfiguratu babeskopia egitasmoak"
+msgstr "Konfiguratu babeskopia egitasmoak…"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1394,10 +1483,9 @@ msgid "Purger for bup archives."
 msgstr "bup artxiboetarako purgatzailea."
 
 #: purger/main.cpp:28
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2021 Simon Persson"
+#, kde-format
 msgid "© 2013–2021 Simon Persson"
-msgstr "Copyright (C) 2013-2021 Simon Persson"
+msgstr "© 2013–2021 Simon Persson"
 
 #: settings/backupplan.cpp:26
 #, kde-kuit-format
