@@ -298,10 +298,9 @@ msgstr ""
 "zálohy."
 
 #: daemon/main.cpp:47
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2011-2020 Simon Persson"
+#, kde-format
 msgid "© 2011–2020 Simon Persson"
-msgstr "Autorská práva (C) 2011-2020 Simon Persson"
+msgstr ""
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
@@ -501,10 +500,9 @@ msgid "Browser for bup archives."
 msgstr "Prohlížeč bup archivů"
 
 #: filedigger/main.cpp:32
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2020 Simon Persson"
+#, kde-format
 msgid "© 2013–2020 Simon Persson"
-msgstr "Autorská práva (C) 2013-2020 Simon Persson"
+msgstr ""
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
 #, kde-format
@@ -550,12 +548,10 @@ msgid " (file)"
 msgstr "(soubor)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder…"
-msgstr "Nová složka"
+msgstr ""
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1424,10 +1420,9 @@ msgid "Show log file"
 msgstr "Zobrazit obsah souboru se záznamem událostí (log)"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "&Configure Kup…"
-msgstr "&Nastavit Kup..."
+msgstr ""
 
 #: plasmoid-qt5/contents/ui/main.qml:71
 #, kde-format
@@ -1446,10 +1441,9 @@ msgid "Configure Backup Plans"
 msgstr "Nastavit plány na zálohování"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Configure Backup Plans"
+#, kde-format
 msgid "Configure Backup Plans…"
-msgstr "Nastavit plány na zálohování"
+msgstr ""
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1463,10 +1457,9 @@ msgid "Purger for bup archives."
 msgstr "Čistič archivů bup."
 
 #: purger/main.cpp:28
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2021 Simon Persson"
+#, kde-format
 msgid "© 2013–2021 Simon Persson"
-msgstr "Autorská práva (C) 2013-2021 Simon Persson"
+msgstr ""
 
 #: settings/backupplan.cpp:26
 #, kde-kuit-format
@@ -1510,16 +1503,3 @@ msgstr "Volné místo: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Tento plán záloh ještě nebyl nikdy spuštěn."
-
-#~ msgctxt "@action:button"
-#~ msgid "New Folder..."
-#~ msgstr "Nová složka…"
-
-#~ msgid "Configure Backup Plans..."
-#~ msgstr "Nastavit plány na zálohování..."
-
-#~ msgid "Kup Configuration Module"
-#~ msgstr "Modul pro nastavení Kup"
-
-#~ msgid "Configuration of backup plans for the Kup backup system"
-#~ msgstr "Nastavení plánů záloh pro zálohovací systém Kup"
