@@ -489,7 +489,7 @@ msgstr "No teniu permís per a llegir este arxiu de còpia de seguretat."
 #: filedigger/filedigger.cpp:188
 #, kde-format
 msgid "Select location of backup archive to open."
-msgstr "Seleccioneu la ubicació de l'arxiu de còpia de seguretat que s'obrirà."
+msgstr "Trieu la ubicació de l'arxiu de còpia de seguretat que s'obrirà."
 
 #: filedigger/main.cpp:28
 #, kde-kuit-format
@@ -846,7 +846,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Select Folder"
-msgstr "Seleccioneu una carpeta"
+msgstr "Trieu una carpeta"
 
 #: kcm/backupplanwidget.cpp:483
 #, kde-kuit-format
@@ -942,7 +942,7 @@ msgstr "Orígens"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select which folders to include in backup"
-msgstr "Seleccioneu quines carpetes incloure en la còpia de seguretat"
+msgstr "Trieu quines carpetes incloure en la còpia de seguretat"
 
 #: kcm/backupplanwidget.cpp:616
 #, kde-kuit-format
@@ -1030,7 +1030,7 @@ msgstr "Destinació"
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select the backup destination"
-msgstr "Selecciona la destinació de la còpia de seguretat"
+msgstr "Tria la destinació de la còpia de seguretat"
 
 #: kcm/backupplanwidget.cpp:734
 #, kde-kuit-format
@@ -1226,7 +1226,7 @@ msgstr "Obri el diàleg per a seleccionar un fitxer"
 #: kcm/backupplanwidget.cpp:947
 #, kde-format
 msgid "Select pattern file"
-msgstr "Selecciona un fitxer de patrons"
+msgstr "Tria un fitxer de patrons"
 
 #: kcm/backupplanwidget.cpp:972
 #, kde-kuit-format
@@ -1253,7 +1253,7 @@ msgid ""
 "Plug in the external storage you wish to use, then select it in this list."
 msgstr ""
 "Connecteu l'emmagatzematge extern que voleu utilitzar i, a continuació, "
-"seleccioneu-lo en esta llista."
+"trieu-lo en esta llista."
 
 #: kcm/driveselectiondelegate.cpp:69
 #, kde-kuit-format
