@@ -15,15 +15,15 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 02:02+0000\n"
-"PO-Revision-Date: 2025-06-29 00:18+0100\n"
-"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"PO-Revision-Date: 2025-09-07 00:49+0100\n"
+"Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -307,10 +307,9 @@ msgstr ""
 "seguridad."
 
 #: daemon/main.cpp:47
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2011-2020 Simon Persson"
+#, kde-format
 msgid "© 2011–2020 Simon Persson"
-msgstr "Copyright (C) 2011-2020 Simon Persson"
+msgstr "© 2011–2020 Simon Persson"
 
 #: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format
@@ -512,10 +511,9 @@ msgid "Browser for bup archives."
 msgstr "Navegador para archivos bup."
 
 #: filedigger/main.cpp:32
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2020 Simon Persson"
+#, kde-format
 msgid "© 2013–2020 Simon Persson"
-msgstr "Copyright (C) 2013-2020 Simon Persson"
+msgstr "© 2013–2020 Simon Persson"
 
 #: filedigger/main.cpp:40 purger/main.cpp:37
 #, kde-format
@@ -562,12 +560,10 @@ msgid " (file)"
 msgstr "(archivo)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder…"
-msgstr "Nueva Carpeta"
+msgstr "Nueva carpeta…"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -1467,8 +1463,7 @@ msgid "Show log file"
 msgstr "Mostrar el archivo de registro"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "&Configure Kup…"
 msgstr "&Configurar Kup…"
 
@@ -1489,10 +1484,9 @@ msgid "Configure Backup Plans"
 msgstr "&Configurar planes de copia de seguridad"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Configure Backup Plans"
+#, kde-format
 msgid "Configure Backup Plans…"
-msgstr "&Configurar planes de copia de seguridad"
+msgstr "Configurar planes de copia de seguridad…"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1506,10 +1500,9 @@ msgid "Purger for bup archives."
 msgstr "Purificador para archivos bup."
 
 #: purger/main.cpp:28
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2021 Simon Persson"
+#, kde-format
 msgid "© 2013–2021 Simon Persson"
-msgstr "Copyright (C) 2013-2021 Simon Persson"
+msgstr "© 2013–2021 Simon Persson"
 
 #: settings/backupplan.cpp:26
 #, kde-kuit-format
@@ -1553,16 +1546,3 @@ msgstr "Espacio libre: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Este plan de copias de seguridad nunca ha sido usado."
-
-#~ msgctxt "@action:button"
-#~ msgid "New Folder..."
-#~ msgstr "Nueva Carpeta…"
-
-#~ msgid "Configure Backup Plans..."
-#~ msgstr "Configurar planes de copia de seguridad…"
-
-#~ msgid "Kup Configuration Module"
-#~ msgstr "Módulo de configuración de Kup"
-
-#~ msgid "Configuration of backup plans for the Kup backup system"
-#~ msgstr "Planes de configuración para el sistema de copias de seguridad Kup"
