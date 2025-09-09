@@ -30,7 +30,6 @@
                 "Name[sv]": "Simon Persson",
                 "Name[tr]": "Simon Persson",
                 "Name[uk]": "Simon Persson",
-                "Name[x-test]": "xxSimon Perssonxx",
                 "Name[zh_CN]": "Simon Persson"
             }
         ],
@@ -61,7 +60,6 @@
         "Description[sv]": "Säkerhetskopieringsplanernas status",
         "Description[tr]": "Yedekleme tasarılarının durumu",
         "Description[uk]": "Стан планів резервного копіювання",
-        "Description[x-test]": "xxStatus of backup plansxx",
         "Description[zh_CN]": "备份计划状态",
         "EnabledByDefault": true,
         "Icon": "kup",
@@ -98,7 +96,6 @@
         "Name[sv]": "Säkerhetskopior",
         "Name[tr]": "Yedekler",
         "Name[uk]": "Резервні копії",
-        "Name[x-test]": "xxBackupsxx",
         "Name[zh_CN]": "备份",
         "Name[zh_TW]": "備份",
         "ServiceTypes": [

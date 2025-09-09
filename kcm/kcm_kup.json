@@ -28,7 +28,6 @@
         "Description[sv]": "Anpassa säkerhetskopieringsplaner",
         "Description[tr]": "Yedekleme tasarılarını yapılandır",
         "Description[uk]": "Налаштовування планів резервного копіювання",
-        "Description[x-test]": "xxConfigure backup plansxx",
         "Description[zh_CN]": "配置备份计划",
         "Icon": "kup",
         "Name": "Backups",
@@ -63,7 +62,6 @@
         "Name[sv]": "Säkerhetskopior",
         "Name[tr]": "Yedekler",
         "Name[uk]": "Резервні копії",
-        "Name[x-test]": "xxBackupsxx",
         "Name[zh_CN]": "备份",
         "Name[zh_TW]": "備份"
     },
@@ -93,7 +91,6 @@
     "X-KDE-Keywords[sv]": "säkerhetskopia,återställning,säkerhet",
     "X-KDE-Keywords[tr]": "yedek,kurtarma,güvenlik",
     "X-KDE-Keywords[uk]": "backup,recovery,safety,резерв,копіювання,відновлення,безпека",
-    "X-KDE-Keywords[x-test]": "xxbackupxx,xxrecoveryxx,xxsafetyxx",
     "X-KDE-Keywords[zh_CN]": "backup,recovery,safety,beifen,huifu,anquan,备份,恢复,安全",
     "X-KDE-Keywords[zh_TW]": "backup,recovery,safety,備份,復原,安全性",
     "X-KDE-System-Settings-Parent-Category": "system-administration",
