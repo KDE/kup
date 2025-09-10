@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-13 02:02+0000\n"
+"POT-Creation-Date: 2025-09-10 01:58+0000\n"
 "PO-Revision-Date: 2023-03-06 16:36+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -207,62 +207,62 @@ msgstr ""
 "cópias de segurança estão danificadas! Veja o ficheiro de registo para saber "
 "mais detalhes. Deseja tentar reparar os ficheiros das cópias de segurança?"
 
-#: daemon/kupdaemon.cpp:179
+#: daemon/kupdaemon.cpp:199
 #, kde-format
 msgid "Continue"
 msgstr "Continuar"
 
-#: daemon/kupdaemon.cpp:180
+#: daemon/kupdaemon.cpp:200
 #, kde-format
 msgid "Stop"
 msgstr "Parar"
 
-#: daemon/kupdaemon.cpp:181
+#: daemon/kupdaemon.cpp:201
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "Ocupado de momento: %1"
 
-#: daemon/kupdaemon.cpp:182
+#: daemon/kupdaemon.cpp:202
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "Deseja realmente parar?"
 
-#: daemon/kupdaemon.cpp:185
+#: daemon/kupdaemon.cpp:205
 #, kde-format
 msgid "User Backups"
 msgstr "Cópias de Segurança do Utilizador"
 
-#: daemon/kupdaemon.cpp:267
+#: daemon/kupdaemon.cpp:287
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination not available"
 msgstr "O destino das cópias de segurança não está disponível"
 
-#: daemon/kupdaemon.cpp:271 daemon/kupdaemon.cpp:327
+#: daemon/kupdaemon.cpp:291 daemon/kupdaemon.cpp:347
 #, kde-format
 msgid "No backup plans configured"
 msgstr "Não estão configurados nenhuns planos de cópias de segurança"
 
-#: daemon/kupdaemon.cpp:277
+#: daemon/kupdaemon.cpp:297
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup destination available"
 msgstr "O destino das cópias de segurança está disponível"
 
-#: daemon/kupdaemon.cpp:287 daemon/planexecutor.cpp:79
+#: daemon/kupdaemon.cpp:307 daemon/planexecutor.cpp:79
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Backup status OK"
 msgstr "Estado da cópia de segurança OK"
 
-#: daemon/kupdaemon.cpp:294 daemon/planexecutor.cpp:81
+#: daemon/kupdaemon.cpp:314 daemon/planexecutor.cpp:81
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup suggested"
 msgstr "Sugere-se uma nova cópia de segurança"
 
-#: daemon/kupdaemon.cpp:301 daemon/planexecutor.cpp:83
+#: daemon/kupdaemon.cpp:321 daemon/planexecutor.cpp:83
 #, kde-format
 msgctxt "status in tooltip"
 msgid "New backup needed"
@@ -780,6 +780,18 @@ msgstr "Abrir"
 msgctxt "@action:button"
 msgid "Restore"
 msgstr "Repor"
+
+#: fileitemaction/fileitemaction.cpp:63
+#, fuzzy, kde-format
+#| msgctxt "Title above progress bar"
+#| msgid "Restoring files"
+msgid "Restore Missing Files…"
+msgstr "A repor os ficheiros"
+
+#: fileitemaction/fileitemaction.cpp:63
+#, kde-format
+msgid "Restore Previous Version…"
+msgstr ""
 
 #: kcm/backupplanwidget.cpp:281
 #, kde-kuit-format
