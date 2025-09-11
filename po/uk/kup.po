@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-10 01:58+0000\n"
-"PO-Revision-Date: 2025-08-13 21:56+0300\n"
+"PO-Revision-Date: 2025-09-10 20:29+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -790,16 +790,14 @@ msgid "Restore"
 msgstr "Відновити"
 
 #: fileitemaction/fileitemaction.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "Title above progress bar"
-#| msgid "Restoring files"
+#, kde-format
 msgid "Restore Missing Files…"
-msgstr "Відновлюємо файли"
+msgstr "Відновити файли, яких не вистачає…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
 msgid "Restore Previous Version…"
-msgstr ""
+msgstr "Відновити попередню версію…"
 
 #: kcm/backupplanwidget.cpp:281
 #, kde-kuit-format

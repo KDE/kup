@@ -728,11 +728,9 @@ msgid "Restore"
 msgstr "恢复"
 
 #: fileitemaction/fileitemaction.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "Title above progress bar"
-#| msgid "Restoring files"
+#, kde-format
 msgid "Restore Missing Files…"
-msgstr "正在还原文件"
+msgstr ""
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format

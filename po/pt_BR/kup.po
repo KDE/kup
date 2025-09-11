@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-10 01:58+0000\n"
-"PO-Revision-Date: 2025-08-28 07:42-0300\n"
+"PO-Revision-Date: 2025-09-10 07:36-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -769,16 +769,14 @@ msgid "Restore"
 msgstr "Restaurar"
 
 #: fileitemaction/fileitemaction.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "Title above progress bar"
-#| msgid "Restoring files"
+#, kde-format
 msgid "Restore Missing Files…"
-msgstr "Restaurando arquivos"
+msgstr "Restaurar os arquivos que faltam…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
 msgid "Restore Previous Version…"
-msgstr ""
+msgstr "Restaurar versão anterior…"
 
 #: kcm/backupplanwidget.cpp:281
 #, kde-kuit-format
