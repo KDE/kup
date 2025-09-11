@@ -5,6 +5,7 @@
             "inode/directory"
         ],
         "Name": "kupfileitemaction",
+        "Name[sl]": "kupfileitemaction",
         "ServiceTypes": [
             "KFileItemAction/Plugin"
         ]
