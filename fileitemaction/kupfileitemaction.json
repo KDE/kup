@@ -5,7 +5,14 @@
             "inode/directory"
         ],
         "Name": "kupfileitemaction",
+        "Name[ca@valencia]": "kupfileitemaction",
+        "Name[ca]": "kupfileitemaction",
+        "Name[nl]": "kupfileitemaction",
+        "Name[pt_BR]": "kupfileitemaction",
         "Name[sl]": "kupfileitemaction",
+        "Name[sv]": "kupfileitemaction",
+        "Name[uk]": "kupfileitemaction",
+        "Name[zh_CN]": "kupfileitemaction",
         "ServiceTypes": [
             "KFileItemAction/Plugin"
         ]
