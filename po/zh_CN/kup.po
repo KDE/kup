@@ -730,12 +730,12 @@ msgstr "恢复"
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
 msgid "Restore Missing Files…"
-msgstr ""
+msgstr "恢复丢失的文件…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
 msgid "Restore Previous Version…"
-msgstr ""
+msgstr "恢复上一个版本…"
 
 #: kcm/backupplanwidget.cpp:281
 #, kde-kuit-format
