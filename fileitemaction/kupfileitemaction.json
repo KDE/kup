@@ -5,19 +5,6 @@
             "inode/directory"
         ],
         "Name": "Restore Previous Version…",
-        "Name[ar]": "kupfileitemaction",
-        "Name[bg]": "kupfileitemaction",
-        "Name[ca@valencia]": "kupfileitemaction",
-        "Name[ca]": "kupfileitemaction",
-        "Name[es]": "kupfileitemaction",
-        "Name[fr]": "kupfileitemaction",
-        "Name[nl]": "kupfileitemaction",
-        "Name[pt_BR]": "kupfileitemaction",
-        "Name[sl]": "kupfileitemaction",
-        "Name[sv]": "kupfileitemaction",
-        "Name[tr]": "Kup Dosya Ögesi Eylemi",
-        "Name[uk]": "kupfileitemaction",
-        "Name[zh_CN]": "kupfileitemaction",
         "ServiceTypes": [
             "KFileItemAction/Plugin"
         ]
