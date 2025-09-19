@@ -5,6 +5,8 @@
             "inode/directory"
         ],
         "Name": "Restore Previous Version…",
+        "Name[pt_BR]": "Restaurar versão anterior…",
+        "Name[sl]": "Obnovi prejšnjo različico…",
         "ServiceTypes": [
             "KFileItemAction/Plugin"
         ]
