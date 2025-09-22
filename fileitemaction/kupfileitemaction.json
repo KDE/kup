@@ -5,11 +5,13 @@
             "inode/directory"
         ],
         "Name": "Restore Previous Version…",
+        "Name[ar]": "استعد الإصدارة السابقة…",
         "Name[ca]": "Restaura la versió anterior…",
         "Name[he]": "שחזור גרסה קודמת…",
         "Name[nl]": "Herstel vorige versie…",
         "Name[pt_BR]": "Restaurar versão anterior…",
         "Name[sl]": "Obnovi prejšnjo različico…",
+        "Name[sv]": "Återställ föregående version…",
         "Name[tr]": "Önceki Sürümü Geri Yükle…",
         "Name[uk]": "Відновити попередню версію…",
         "ServiceTypes": [
