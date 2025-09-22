@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-10 01:58+0000\n"
-"PO-Revision-Date: 2025-08-21 18:03+0200\n"
+"PO-Revision-Date: 2025-09-21 21:25+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -772,16 +772,14 @@ msgid "Restore"
 msgstr "Berreskuratu"
 
 #: fileitemaction/fileitemaction.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "Title above progress bar"
-#| msgid "Restoring files"
+#, kde-format
 msgid "Restore Missing Files…"
-msgstr "Fitxategiak berreskuratzen"
+msgstr "Lehengoratu falta diren fitxategiak…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
 msgid "Restore Previous Version…"
-msgstr ""
+msgstr "Lehengoratu aurreko bertsioa…"
 
 #: kcm/backupplanwidget.cpp:281
 #, kde-kuit-format
