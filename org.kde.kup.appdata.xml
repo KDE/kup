@@ -44,7 +44,7 @@
   <summary xml:lang="bg">Планиране на създаване на резервни копия за работна среда Plasma на KDE</summary>
   <summary xml:lang="ca">Planificador de la còpia de seguretat per a l'escriptori Plasma del KDE</summary>
   <summary xml:lang="ca-valencia">Planificador de la còpia de seguretat per a l'escriptori Plasma de KDE</summary>
-  <summary xml:lang="de">Sicherungsplaner für die KDE-Plasma-Arbeitsfläche</summary>
+  <summary xml:lang="de">Sicherungsplaner für KDE Plasma</summary>
   <summary xml:lang="en-GB">Backup scheduler for KDE's Plasma desktop</summary>
   <summary xml:lang="eo">Sekurkopia planilo por la Plasma-labortablo de KDE</summary>
   <summary xml:lang="es">Organizador de copias de seguridad para el escritorio KDE Plasma</summary>
@@ -108,7 +108,7 @@
       <li xml:lang="bg">Архивиране на  резервни копия със задаване на версия с помощта на "bup".</li>
       <li xml:lang="ca">Arxiu de còpia de seguretat incremental emprant «bup».</li>
       <li xml:lang="ca-valencia">Arxiu de còpia de seguretat incremental emprant «bup».</li>
-      <li xml:lang="de">Inkrementelles Sicherungsarchiv mit der Verwendung von „bup“.</li>
+      <li xml:lang="de">Inkrementelles Sicherungsarchiv mithilfe von „bup“.</li>
       <li xml:lang="en-GB">Incremental backup archive with the use of "bup".</li>
       <li xml:lang="eo">Alkrementan sekurkopian arkivon per uzo de "bup".</li>
       <li xml:lang="es">Copias de seguridad incrementales usando «bup».</li>
@@ -139,7 +139,7 @@
       <li xml:lang="bg">Синхронизиране на папки с помощта на "rsync".</li>
       <li xml:lang="ca">Carpetes sincronitzades emprant «rsync».</li>
       <li xml:lang="ca-valencia">Carpetes sincronitzades emprant «rsync».</li>
-      <li xml:lang="de">Abgleich von Ordnern mit Hilfe von „rsync“.</li>
+      <li xml:lang="de">Synchronisierte Ordner mithilfe von „rsync“.</li>
       <li xml:lang="en-GB">Synchronised folders with the use of "rsync".</li>
       <li xml:lang="eo">Sinkronigitajn dosierujojn per uzo de "rsync".</li>
       <li xml:lang="es">Carpetas sincronizadas usando «rsync»</li>
@@ -171,7 +171,7 @@
       <li xml:lang="bg">Поддръжка на локална файлова система или външно usb хранилище.</li>
       <li xml:lang="ca">Suport per a sistema de fitxers local o emmagatzematge extern USB.</li>
       <li xml:lang="ca-valencia">Suport per a sistema de fitxers local o emmagatzematge extern USB.</li>
-      <li xml:lang="de">Unterstützung für lokale Dateisysteme oder externen USB-Speicher.</li>
+      <li xml:lang="de">Unterstützung für lokale Dateisysteme oder externe USB-Speicher.</li>
       <li xml:lang="en-GB">Support for local filesystem or external USB storage.</li>
       <li xml:lang="eo">Subtenon por loka dosiersistemo aŭ ekstera usb-konservejo.</li>
       <li xml:lang="es">Soporte para sistema de archivos local o almacenaje USB externo.</li>
@@ -201,7 +201,7 @@
       <li xml:lang="bg">Следене за наличността на дестинациите за архивиране, като например монтирано мрежово хранилище.</li>
       <li xml:lang="ca">Supervisa la disponibilitat de les destinacions de còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
       <li xml:lang="ca-valencia">Supervisa la disponibilitat de les destinacions de còpia de seguretat, com ara un emmagatzematge de xarxa muntat.</li>
-      <li xml:lang="de">Überwachung der Verfügbarkeit von Sicherungszielen, wie z. B. einem eingehänten Netzwerkspeicher.</li>
+      <li xml:lang="de">Überwachung der Verfügbarkeit von Sicherungszielen, wie z. B. einem eingehängten Netzwerkspeicher.</li>
       <li xml:lang="en-GB">Monitor availability of backup destinations, like for example a mounted network storage.</li>
       <li xml:lang="eo">Monitoru disponeblon de sekurkopiaj celoj, kiel ekzemple muntita enreta konservejo.</li>
       <li xml:lang="es">Monitorización de disponibilidad de destinos para las copias de seguridad, como por ejemplo almacenamiento de red.</li>
