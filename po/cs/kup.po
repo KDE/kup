@@ -770,11 +770,9 @@ msgid "Restore"
 msgstr "Obnovit"
 
 #: fileitemaction/fileitemaction.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "Title above progress bar"
-#| msgid "Restoring files"
+#, kde-format
 msgid "Restore Missing Files…"
-msgstr "Obnovuji soubory"
+msgstr ""
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
