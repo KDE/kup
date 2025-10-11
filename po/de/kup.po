@@ -1,4 +1,4 @@
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2025 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the kup package.
 # SPDX-FileCopyrightText: 2013 Georg Lassnig <g.lassnig@e67-its.de>
 # SPDX-FileCopyrightText: 2014, 2016, 2018 Simon Persson <simon.persson@mykolab.com>
