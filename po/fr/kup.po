@@ -1235,7 +1235,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
-msgstr "Ouvrir une boîte de dialogue pour sélectionner un fichier"
+msgstr "Ouvrir une boite de dialogue pour sélectionner un fichier"
 
 #: kcm/backupplanwidget.cpp:947
 #, kde-format
