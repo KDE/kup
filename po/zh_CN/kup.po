@@ -1002,7 +1002,7 @@ msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
-msgstr "备份将只会在你手动要求时进行。这可以通过 Plasma 的备份状态挂件完成。"
+msgstr "备份将只会在你手动要求时进行。这可以通过 Plasma 的备份状态小部件进行。"
 
 #: kcm/backupplanwidget.cpp:754
 #, kde-kuit-format
