@@ -78,9 +78,10 @@ msgid ""
 "Failed backup integrity check. Your backups could be corrupted! See log file "
 "for more details. Do you want to try repairing the backup files?"
 msgstr ""
-"No s'ha pogut verificar la integritat de la còpia de seguretat. Les vostres "
-"còpies de seguretat podrien estar malmeses! Per a més detalls, vegeu el "
-"fitxer de registre. Voleu intentar reparar els fitxers de còpia de seguretat?"
+"Ha fallat mentre es verificava la integritat de la còpia de seguretat. Les "
+"vostres còpies de seguretat podrien estar malmeses! Per a més detalls, vegeu "
+"el fitxer de registre. Voleu intentar reparar els fitxers de còpia de "
+"seguretat?"
 
 #: daemon/bupjob.cpp:124
 #, kde-kuit-format
@@ -89,9 +90,9 @@ msgid ""
 "Failed backup integrity check. Your backups could be corrupted! See log file "
 "for more details."
 msgstr ""
-"No s'ha pogut verificar la integritat de la còpia de seguretat. Les vostres "
-"còpies de seguretat podrien estar malmeses! Per a més detalls, vegeu el "
-"fitxer de registre."
+"Ha fallat mentre es verificava la integritat de la còpia de seguretat. Les "
+"vostres còpies de seguretat podrien estar malmeses! Per a més detalls, vegeu "
+"el fitxer de registre."
 
 #: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:50
 #, kde-format
@@ -103,8 +104,8 @@ msgstr "S'està comprovant què copiar"
 msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
 msgstr ""
-"No s'han pogut analitzar els fitxers. Per a més detalls, vegeu el fitxer de "
-"registre."
+"Ha fallat durant l'anàlisi dels fitxers. Per a més detalls, vegeu el fitxer "
+"de registre."
 
 #: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
 #, kde-format
@@ -116,8 +117,8 @@ msgstr "S'està guardant la còpia de seguretat"
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
 msgstr ""
-"No s'ha pogut guardar la còpia de seguretat. Per a més detalls, vegeu el "
-"fitxer de registre."
+"Ha fallat mentre es guardava la còpia de seguretat. Per a més detalls, vegeu "
+"el fitxer de registre."
 
 #: daemon/bupjob.cpp:234
 #, kde-format
@@ -131,7 +132,7 @@ msgid ""
 "Failed to generate recovery info for the backup. See log file for more "
 "details."
 msgstr ""
-"No s'ha pogut generar la informació de recuperació per a la còpia de "
+"Ha fallat mentre es generava la informació de recuperació per a la còpia de "
 "seguretat. Per a més detalls, vegeu el fitxer de registre."
 
 #: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
@@ -187,9 +188,9 @@ msgid ""
 "Failed backup integrity check. Your backups are corrupted! See log file for "
 "more details."
 msgstr ""
-"No s'ha pogut verificar la integritat de la còpia de seguretat. Les vostres "
-"còpies de seguretat estan malmeses! Per a més detalls, vegeu el fitxer de "
-"registre."
+"Ha fallat mentre es verificava la integritat de la còpia de seguretat. Les "
+"vostres còpies de seguretat estan malmeses! Per a més detalls, vegeu el "
+"fitxer de registre."
 
 #: daemon/bupverificationjob.cpp:78
 #, kde-kuit-format
@@ -206,9 +207,9 @@ msgid ""
 "Failed backup integrity check. Your backups are corrupted! See log file for "
 "more details. Do you want to try repairing the backup files?"
 msgstr ""
-"No s'ha pogut verificar la integritat de la còpia de seguretat. Les vostres "
-"còpies de seguretat estan malmeses! Per a més detalls, vegeu el fitxer de "
-"registre. Voleu intentar reparar els fitxers de còpia de seguretat?"
+"Ha fallat mentre es verificava la integritat de la còpia de seguretat. Les "
+"vostres còpies de seguretat estan malmeses! Per a més detalls, vegeu el "
+"fitxer de registre. Voleu intentar reparar els fitxers de còpia de seguretat?"
 
 #: daemon/kupdaemon.cpp:199
 #, kde-format
@@ -389,7 +390,7 @@ msgstr "Cancel·la"
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
-msgstr "No s'ha pogut guardar la còpia de seguretat"
+msgstr "Ha fallat mentre es guardava la còpia de seguretat"
 
 #: daemon/planexecutor.cpp:199 daemon/planexecutor.cpp:217
 #: daemon/planexecutor.cpp:365 daemon/planexecutor.cpp:377
@@ -568,8 +569,8 @@ msgstr "No s'ha seleccionat cap destinació, trieu-ne una."
 msgctxt "@info message bar appearing on top"
 msgid "There was a problem while getting a list of all files to restore: %1"
 msgstr ""
-"S'ha produït un problema en obtindre una llista de tots els fitxers que "
-"s'han de restaurar: %1"
+"S'ha produït un problema mentre s'obtenia una llista de tots els fitxers a "
+"restaurar: %1"
 
 #: filedigger/restoredialog.cpp:274
 #, kde-kuit-format
@@ -723,7 +724,7 @@ msgstr "S'estan restaurant els fitxers"
 #, kde-format
 msgctxt "@label above the detailed error message"
 msgid "An error occurred while restoring:"
-msgstr "S'ha produït un error en restaurar:"
+msgstr "S'ha produït un error mentre es restaurava:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: filedigger/restoredialog.ui:378
