@@ -8,23 +8,23 @@
 # Kostiantyn_N <nagumyk.k@gmail.com>, 2018.
 # Sergey Suhih <post@linuxmasterclub.ru>, 2019.
 # Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 # SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 09:01+0000\n"
-"PO-Revision-Date: 2024-05-06 17:09+0300\n"
-"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
-"Language-Team: Basealt Translation Team\n"
+"PO-Revision-Date: 2026-02-13 13:36+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -309,8 +309,7 @@ msgstr ""
 "момента прошлого резервного копирования)."
 
 #: daemon/main.cpp:47
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2011-2020 Simon Persson"
+#, kde-format
 msgid "© 2011–2020 Simon Persson"
 msgstr "© Simon Persson, 2011–2020"
 
@@ -355,9 +354,7 @@ msgid "Repairing backups"
 msgstr "Восстановление резервной копии"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
 msgstr "Сохранить первую резервную копию сейчас?"
@@ -383,11 +380,10 @@ msgstr ""
 "Сохранить новую резервную копию сейчас?"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "Сохранить новую резервную копию"
+msgstr "Сохранить резервную копию"
 
 #: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
 #: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
@@ -395,7 +391,7 @@ msgstr "Сохранить новую резервную копию"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 #: daemon/planexecutor.cpp:193
 #, kde-kuit-format
@@ -416,7 +412,7 @@ msgstr "Показать файл журнала"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "Восстановить"
 
 #: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
 #, kde-kuit-format
@@ -515,8 +511,7 @@ msgid "Browser for bup archives."
 msgstr "Браузер bup-архивов."
 
 #: filedigger/main.cpp:32
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2020 Simon Persson"
+#, kde-format
 msgid "© 2013–2020 Simon Persson"
 msgstr "© Simon Persson, 2013–2020"
 
@@ -528,7 +523,7 @@ msgstr "Имя открываемой ветки."
 #: filedigger/main.cpp:41
 #, kde-format
 msgid "File or folder path to be focused."
-msgstr ""
+msgstr "Путь к файлу или папке для фокусировки."
 
 #: filedigger/main.cpp:42 purger/main.cpp:40
 #, kde-format
@@ -564,12 +559,10 @@ msgid " (file)"
 msgstr " (файл)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder…"
-msgstr "Новая папка"
+msgstr "Создать папку…"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -789,16 +782,14 @@ msgid "Restore"
 msgstr "Восстановить"
 
 #: fileitemaction/fileitemaction.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "Title above progress bar"
-#| msgid "Restoring files"
+#, kde-format
 msgid "Restore Missing Files…"
-msgstr "Восстановление файлов"
+msgstr "Восстановить отсутствующие файлы…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
 msgid "Restore Previous Version…"
-msgstr ""
+msgstr "Восстановить предыдущую версию…"
 
 #: kcm/backupplanwidget.cpp:281
 #, kde-kuit-format
@@ -892,6 +883,11 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"Создание резервных копий нескольких версий файлов из исходных папок с "
+"течением времени. Это позволяет восстанавливать старые версии файлов или "
+"удалённые файлы.<nl/></nl/>Размер архива резервных копий будет увеличиваться "
+"с течением времени, и доступ к нему возможен только с помощью инструментов "
+"восстановления, предоставляемых этой программой."
 
 #: kcm/backupplanwidget.cpp:535
 #, kde-kuit-format
@@ -918,6 +914,10 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"Делает папку назначения идентичной исходной папке. Файлы, удалённые из "
+"исходной папки, также будут удалены из папки резервной копии.<nl/><nl/>Это "
+"может предотвратить потерю данных из-за неисправного диска, но не из-за "
+"случайного удаления или изменения файлов."
 
 #: kcm/backupplanwidget.cpp:557
 #, kde-kuit-format
@@ -1217,13 +1217,7 @@ msgid "Exclude files and folders based on patterns"
 msgstr "Исключение файлов и папок на основе шаблонов"
 
 #: kcm/backupplanwidget.cpp:926
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented <link "
-#| "url='%1'>here</link>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1231,10 +1225,10 @@ msgid ""
 "the backup. The pattern format is documented in the <link url='%1'>bup-index "
 "manual page</link>."
 msgstr ""
-"Список шаблонов должен находиться в текстовом файле (по одному шаблону на "
-"строку). Файлы и папки, имена которых соответствуют какому-либо из шаблонов, "
-"не будут включены в резервную копию. Описание формата шаблона приводится "
-"<link url='%1'>здесь</link>."
+"Шаблоны должны быть перечислены в текстовом файле по одному на строку. Файлы "
+"и папки с именами, соответствующими любому из шаблонов, будут исключены из "
+"резервной копии. Формат шаблонов описан в <link url='%1'>справочной странице "
+"bup-index</link>."
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format
@@ -1405,20 +1399,16 @@ msgid "Warning"
 msgstr "Предупреждение"
 
 #: kcm/kupkcm.cpp:251
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Add New Plan"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
-msgstr "Добавить новый план"
+msgstr "Создать план…"
 
 #: kcm/kupkcm.cpp:264
-#, fuzzy, kde-kuit-format
-#| msgctxt "@option:check"
-#| msgid "Backups Enabled"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
-msgstr "Включение резервного копирования"
+msgstr "Включить резервное копирование"
 
 #: kcm/kupkcm.cpp:275
 #, kde-kuit-format
@@ -1480,8 +1470,7 @@ msgid "Show log file"
 msgstr "Показать файл журнала"
 
 #: plasmoid-qt5/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
+#, kde-format
 msgid "&Configure Kup…"
 msgstr "&Настроить Kup…"
 
@@ -1502,10 +1491,9 @@ msgid "Configure Backup Plans"
 msgstr "Настроить планы резервного копирования"
 
 #: plasmoid-qt6/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Configure Backup Plans"
+#, kde-format
 msgid "Configure Backup Plans…"
-msgstr "Настроить планы резервного копирования"
+msgstr "Настроить планы резервного копирования…"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1519,8 +1507,7 @@ msgid "Purger for bup archives."
 msgstr "Средство удаления bup-архивов."
 
 #: purger/main.cpp:28
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2021 Simon Persson"
+#, kde-format
 msgid "© 2013–2021 Simon Persson"
 msgstr "© Simon Persson, 2013–2021"
 
