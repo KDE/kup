@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 09:01+0000\n"
-"PO-Revision-Date: 2026-02-17 01:57+0000\n"
+"PO-Revision-Date: 2026-02-19 19:22+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -28,14 +28,14 @@ msgid_plural ""
 "%1 source folders no longer exist. Please open settings and confirm what to "
 "include in backup.<nl/><filename>%2</filename>"
 msgstr[0] ""
-"Un dosar sursă nu mai există. Vă rugăm să deschideți configurările și să "
-"confirmați ce se include în copia de rezervă.<nl/><filename>%2</filename>"
+"Un dosar-sursă nu mai există. Deschideți configurările și confirmați ce se "
+"include în copia de rezervă.<nl/><filename>%2</filename>"
 msgstr[1] ""
-"%1 dosare sursă nu mai există. Vă rugăm să deschideți configurările și să "
-"confirmați ce se include în copia de rezervă.<nl/><filename>%2</filename>"
+"%1 dosare-sursă nu mai există. Deschideți configurările și confirmați ce se "
+"include în copia de rezervă.<nl/><filename>%2</filename>"
 msgstr[2] ""
-"%1 de dosare sursă nu mai există. Vă rugăm să deschideți configurările și să "
-"confirmați ce se include în copia de rezervă.<nl/><filename>%2</filename>"
+"%1 de dosare-sursă nu mai există. Deschideți configurările și confirmați ce "
+"se include în copia de rezervă.<nl/><filename>%2</filename>"
 
 #: daemon/bupjob.cpp:48 daemon/buprepairjob.cpp:26
 #: daemon/bupverificationjob.cpp:25
@@ -967,6 +967,10 @@ msgid ""
 "always mount it at the same path in the filesystem. The path specified here "
 "does not need to exist at all times, its existence will be monitored."
 msgstr ""
+"Puteți folosi această opțiune pentru a copia pe un disc intern secundar, un "
+"disc extern eSATA sau stocare în rețea. Se cere doar să-l montați mereu la "
+"aceeași cale în sistemul de fișiere. Calea specificată aici nu trebuie să "
+"existe tot timpul, existența acesteia va fi monitorizată."
 
 #: kcm/backupplanwidget.cpp:630
 #, kde-kuit-format
@@ -1149,6 +1153,9 @@ msgid ""
 "backups will take slightly longer time. In return it will be possible to "
 "recover from a partially corrupted backup."
 msgstr ""
+"Acesta va face ca copiile de rezervă să folosească cam cu 10% mai mult "
+"spațiu de stocare și salvarea copiilor de rezervă va dura puțin mai mult. În "
+"schimb, devine posibilă recuperarea unei copii de rezervă corupte parțial."
 
 #: kcm/backupplanwidget.cpp:869
 #, kde-kuit-format
@@ -1181,6 +1188,11 @@ msgid ""
 "corruption problems sooner than at the time you need to use a backup, at "
 "that time it could be too late."
 msgstr ""
+"Verifică întreaga arhivă de rezervă pentru corupere de fiecare dată când "
+"salvați date noi. Salvarea copiilor de rezervă va dura puțin mai mult, dar "
+"aceasta vă permite să depistați problemele de corupere mai devreme. Să "
+"depistați aceste probleme în momentul restabilirii se poate dovedi a fi prea "
+"târziu."
 
 #: kcm/backupplanwidget.cpp:908
 #, kde-kuit-format
@@ -1197,6 +1209,10 @@ msgid ""
 "the backup. The pattern format is documented in the <link url='%1'>bup-index "
 "manual page</link>."
 msgstr ""
+"Modelele trebuiesc enumerate într-un fișier textual cu un model pe fiecare "
+"rând. Fișierele și dosarele cu denumiri ce se potrivesc oricărui model vor "
+"fi excluse din copia de rezervă. Formatul modelelor e documentat în <link "
+"url='%1'>pagina de manual bup-index</link>."
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format
@@ -1207,7 +1223,7 @@ msgstr "Deschide dialogul pentru selectarea unui fișier"
 #: kcm/backupplanwidget.cpp:947
 #, kde-format
 msgid "Select pattern file"
-msgstr ""
+msgstr "Alegeți fișierul cu model"
 
 #: kcm/backupplanwidget.cpp:972
 #, kde-kuit-format
@@ -1287,6 +1303,10 @@ msgid ""
 "system. File permissions only matters if there is more than one user of this "
 "computer or if you are backing up executable program files."
 msgstr ""
+"Atenție: Legăturile simbolice și permisiunile fișierelor nu pot fi salvate "
+"pe acest sistem de fișiere. Permisiunile fișierelor contează doar dacă mai "
+"mulți utilizatori folosesc acest calculator sau dacă copiați fișiere cu "
+"programe executabile."
 
 #: kcm/driveselectiondelegate.cpp:174
 #, kde-kuit-format
@@ -1296,6 +1316,9 @@ msgid ""
 "permissions only matters if there is more than one user of this computer or "
 "if you are backing up executable program files."
 msgstr ""
+"Atenție: Permisiunile fișierelor nu pot fi salvate pe acest sistem de "
+"fișiere. Permisiunile fișierelor contează doar dacă mai mulți utilizatori "
+"folosesc acest calculator sau dacă copiați fișiere cu programe executabile."
 
 #: kcm/folderselectionmodel.cpp:90
 #, kde-kuit-format
