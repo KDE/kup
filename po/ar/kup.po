@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kup package.
-# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 09:01+0000\n"
-"PO-Revision-Date: 2025-09-15 12:55+0400\n"
+"PO-Revision-Date: 2026-02-26 12:23+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -1232,7 +1232,7 @@ msgstr "أنشئ مجلّدًا"
 msgctxt "@label Only shown if no drives are detected"
 msgid ""
 "Plug in the external storage you wish to use, then select it in this list."
-msgstr "ضم جهاز التخزين الخارجي الذي ترغب به، ثم اختره في هذه القائمة"
+msgstr "صِل جهاز التخزين الخارجي الذي ترغب به، ثم اختره في هذه القائمة"
 
 #: kcm/driveselectiondelegate.cpp:69
 #, kde-kuit-format
