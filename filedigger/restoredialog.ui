@@ -75,7 +75,7 @@
          <item>
           <widget class="QPushButton" name="mRestoreCustomButton">
            <property name="text">
-            <string comment="@action:button">Choose where to restore</string>
+            <string comment="@action:button">Choose where to restore…</string>
            </property>
           </widget>
          </item>

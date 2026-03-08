@@ -119,7 +119,7 @@ VersionItemAnimation::VersionItemAnimation(QWidget *pParent)
     mOpacity = 0;
     mOpenButton = new Button(xi18nc("@action:button", "Open"), pParent);
     connect(mOpenButton, SIGNAL(focusChangeRequested(bool)), SLOT(changeFocus(bool)), Qt::QueuedConnection);
-    mRestoreButton = new Button(xi18nc("@action:button", "Restore"), pParent);
+    mRestoreButton = new Button(xi18nc("@action:button", "Restore…"), pParent);
     connect(mRestoreButton, SIGNAL(focusChangeRequested(bool)), SLOT(changeFocus(bool)), Qt::QueuedConnection);
     auto lHeightAnimation = new QPropertyAnimation(this, "extraHeight", this);
     lHeightAnimation->setStartValue(0.0);
