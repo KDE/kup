@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 09:01+0000\n"
+"POT-Creation-Date: 2026-03-09 02:09+0000\n"
 "PO-Revision-Date: 2025-09-21 21:25+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -648,9 +648,11 @@ msgstr "Berreskuratu jatorrizko kokalekuan"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Choose where to restore"
 msgctxt "@action:button"
-msgid "Choose where to restore"
+msgid "Choose where to restore…"
 msgstr "Aukeratu non berreskuratu"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
@@ -766,9 +768,11 @@ msgid "Open"
 msgstr "Ireki"
 
 #: filedigger/versionlistdelegate.cpp:122
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Restore"
 msgctxt "@action:button"
-msgid "Restore"
+msgid "Restore…"
 msgstr "Berreskuratu"
 
 #: fileitemaction/fileitemaction.cpp:63

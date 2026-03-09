@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 09:01+0000\n"
+"POT-Creation-Date: 2026-03-09 02:09+0000\n"
 "PO-Revision-Date: 2025-09-11 09:16+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -666,9 +666,11 @@ msgstr "Ripristina nella posizione originale"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Choose where to restore"
 msgctxt "@action:button"
-msgid "Choose where to restore"
+msgid "Choose where to restore…"
 msgstr "Scegli dove ripristinare"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
@@ -782,9 +784,11 @@ msgid "Open"
 msgstr "Apri"
 
 #: filedigger/versionlistdelegate.cpp:122
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Restore"
 msgctxt "@action:button"
-msgid "Restore"
+msgid "Restore…"
 msgstr "Ripristina"
 
 #: fileitemaction/fileitemaction.cpp:63

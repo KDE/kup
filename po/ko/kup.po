@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 09:01+0000\n"
+"POT-Creation-Date: 2026-03-09 02:09+0000\n"
 "PO-Revision-Date: 2025-10-09 01:03+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -628,9 +628,11 @@ msgstr "원래 위치로 복원"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Choose where to restore"
 msgctxt "@action:button"
-msgid "Choose where to restore"
+msgid "Choose where to restore…"
 msgstr "복원할 위치 선택"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
@@ -744,9 +746,11 @@ msgid "Open"
 msgstr "열기"
 
 #: filedigger/versionlistdelegate.cpp:122
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Restore"
 msgctxt "@action:button"
-msgid "Restore"
+msgid "Restore…"
 msgstr "복원"
 
 #: fileitemaction/fileitemaction.cpp:63
