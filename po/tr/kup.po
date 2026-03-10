@@ -1,21 +1,21 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kup package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 02:09+0000\n"
-"PO-Revision-Date: 2025-09-12 10:02+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"POT-Creation-Date: 2026-03-10 02:11+0000\n"
+"PO-Revision-Date: 2026-03-09 18:21+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -638,12 +638,10 @@ msgstr "Özgün konuma geri yükle"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Choose where to restore"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose where to restore…"
-msgstr "Nereye geri yükleneceğini seç"
+msgstr "Geri Yükleme Konumu…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
 #: filedigger/restoredialog.ui:132
@@ -758,12 +756,10 @@ msgid "Open"
 msgstr "Aç"
 
 #: filedigger/versionlistdelegate.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Restore"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Restore…"
-msgstr "Geri Yükle"
+msgstr "Geri Yükle…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
@@ -1491,36 +1487,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "Yedek planı %1"
 
-#: settings/backupplan.cpp:62
+#: settings/backupplan.cpp:63
 #, kde-format
 msgid "Backups"
 msgstr "Yedeklemeler"
 
-#: settings/backupplan.cpp:93
+#: settings/backupplan.cpp:94
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (kopyala)"
 
-#: settings/backupplan.cpp:218
+#: settings/backupplan.cpp:219
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Son kaydetme: %1"
 
-#: settings/backupplan.cpp:222
+#: settings/backupplan.cpp:223
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Boyut: %1"
 
-#: settings/backupplan.cpp:226
+#: settings/backupplan.cpp:227
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Boş alan: %1"
 
-#: settings/backupplan.cpp:229
+#: settings/backupplan.cpp:230
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."

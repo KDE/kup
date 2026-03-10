@@ -1,16 +1,16 @@
 # Translation of kup.po to Catalan (Valencian)
-# Copyright (C) 2019-2025 This_file_is_part_of_KDE
+# Copyright (C) 2019-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2019, 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 02:09+0000\n"
-"PO-Revision-Date: 2025-09-10 08:03+0200\n"
+"POT-Creation-Date: 2026-03-10 02:11+0000\n"
+"PO-Revision-Date: 2026-03-09 11:42+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -656,12 +656,10 @@ msgstr "Restaura a la ubicació original"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Choose where to restore"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose where to restore…"
-msgstr "Trieu a on cal restaurar"
+msgstr "Trieu a on cal restaurar…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
 #: filedigger/restoredialog.ui:132
@@ -774,12 +772,10 @@ msgid "Open"
 msgstr "Obri"
 
 #: filedigger/versionlistdelegate.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Restore"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Restore…"
-msgstr "Restaura"
+msgstr "Restaura…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
@@ -1522,36 +1518,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "Pla %1 de còpia de seguretat"
 
-#: settings/backupplan.cpp:62
+#: settings/backupplan.cpp:63
 #, kde-format
 msgid "Backups"
 msgstr "Còpies de seguretat"
 
-#: settings/backupplan.cpp:93
+#: settings/backupplan.cpp:94
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (còpia)"
 
-#: settings/backupplan.cpp:218
+#: settings/backupplan.cpp:219
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Guardada per última vegada: %1"
 
-#: settings/backupplan.cpp:222
+#: settings/backupplan.cpp:223
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Mida: %1"
 
-#: settings/backupplan.cpp:226
+#: settings/backupplan.cpp:227
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Espai lliure: %1"
 
-#: settings/backupplan.cpp:229
+#: settings/backupplan.cpp:230
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 02:09+0000\n"
+"POT-Creation-Date: 2026-03-10 02:11+0000\n"
 "PO-Revision-Date: 2026-02-19 19:22+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -1507,36 +1507,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "Planul copiei de rezervă %1"
 
-#: settings/backupplan.cpp:62
+#: settings/backupplan.cpp:63
 #, kde-format
 msgid "Backups"
 msgstr "Copii de rezervă"
 
-#: settings/backupplan.cpp:93
+#: settings/backupplan.cpp:94
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (copie)"
 
-#: settings/backupplan.cpp:218
+#: settings/backupplan.cpp:219
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Salvat ultima dată: %1"
 
-#: settings/backupplan.cpp:222
+#: settings/backupplan.cpp:223
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Dimensiune: %1"
 
-#: settings/backupplan.cpp:226
+#: settings/backupplan.cpp:227
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Spațiu liber: %1"
 
-#: settings/backupplan.cpp:229
+#: settings/backupplan.cpp:230
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."

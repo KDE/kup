@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 02:09+0000\n"
+"POT-Creation-Date: 2026-03-10 02:11+0000\n"
 "PO-Revision-Date: 2018-12-31 05:52+0000\n"
 "Last-Translator: Simon Persson <simon.persson@mykolab.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/kup/kup/"
@@ -1545,36 +1545,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "Atsarginių kopijų planas %1"
 
-#: settings/backupplan.cpp:62
+#: settings/backupplan.cpp:63
 #, kde-format
 msgid "Backups"
 msgstr "Atsarginės kopijos"
 
-#: settings/backupplan.cpp:93
+#: settings/backupplan.cpp:94
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr ""
 
-#: settings/backupplan.cpp:218
+#: settings/backupplan.cpp:219
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr ""
 
-#: settings/backupplan.cpp:222
+#: settings/backupplan.cpp:223
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr ""
 
-#: settings/backupplan.cpp:226
+#: settings/backupplan.cpp:227
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr ""
 
-#: settings/backupplan.cpp:229
+#: settings/backupplan.cpp:230
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."

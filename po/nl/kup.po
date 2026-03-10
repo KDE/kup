@@ -4,13 +4,13 @@
 # Translators:
 # Heimen Stoffels <vistausss@outlook.com>, 2017-2019.
 # Simon Persson <simon.persson@mykolab.com>, 2018.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024, 2025, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 02:09+0000\n"
-"PO-Revision-Date: 2025-09-18 21:43+0200\n"
+"POT-Creation-Date: 2026-03-10 02:11+0000\n"
+"PO-Revision-Date: 2026-03-09 11:14+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -645,12 +645,10 @@ msgstr "Terugzetten op oorspronkelijke locatie"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Choose where to restore"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose where to restore…"
-msgstr "Kies de herstellocatie"
+msgstr "Kies de herstellocatie…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
 #: filedigger/restoredialog.ui:132
@@ -764,12 +762,10 @@ msgid "Open"
 msgstr "Openen"
 
 #: filedigger/versionlistdelegate.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Restore"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Restore…"
-msgstr "Herstellen"
+msgstr "Herstellen…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
@@ -1506,36 +1502,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "Back-upschema: %1"
 
-#: settings/backupplan.cpp:62
+#: settings/backupplan.cpp:63
 #, kde-format
 msgid "Backups"
 msgstr "Back-ups"
 
-#: settings/backupplan.cpp:93
+#: settings/backupplan.cpp:94
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (kopie)"
 
-#: settings/backupplan.cpp:218
+#: settings/backupplan.cpp:219
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Laatst opgeslagen: %1"
 
-#: settings/backupplan.cpp:222
+#: settings/backupplan.cpp:223
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Grootte: %1"
 
-#: settings/backupplan.cpp:226
+#: settings/backupplan.cpp:227
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Vrije ruimte: %1"
 
-#: settings/backupplan.cpp:229
+#: settings/backupplan.cpp:230
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
