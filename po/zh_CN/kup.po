@@ -609,7 +609,7 @@ msgstr "还原到原始位置"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose where to restore…"
-msgstr ""
+msgstr "选择要还原的位置…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
 #: filedigger/restoredialog.ui:132
@@ -725,7 +725,7 @@ msgstr "打开"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Restore…"
-msgstr ""
+msgstr "还原…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
