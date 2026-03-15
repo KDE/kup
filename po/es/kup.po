@@ -1,5 +1,5 @@
 # Spanish translations for kup.po package.
-# Copyright (C) 2013-2025 This file is copyright:
+# Copyright (C) 2013-2026 This file is copyright:
 # This file is distributed under the same license as the kup package.
 #
 # SPDX-FileCopyrightText: 2013 Francisco García Cisneros <fgarciacis@koali.es>
@@ -8,14 +8,14 @@
 # SPDX-FileCopyrightText: 2017 Alex Castilla <alex.castillap@gmail.com>
 # SPDX-FileCopyrightText: 2017 seryeb <seryeb@gmail.com>
 # SPDX-FileCopyrightText: 2018, 2019 Victor García <victor.garcia@iberdomo.net>
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 # SPDX-FileCopyrightText: 2020 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-10 02:11+0000\n"
-"PO-Revision-Date: 2025-09-20 22:25+0100\n"
+"PO-Revision-Date: 2026-03-15 00:24+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -663,12 +663,10 @@ msgstr "Restaurar a su ubicación original"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Choose where to restore"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose where to restore…"
-msgstr "Elegir dónde restaurar"
+msgstr "Elegir dónde restaurar…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
 #: filedigger/restoredialog.ui:132
@@ -783,12 +781,10 @@ msgid "Open"
 msgstr "Abrir"
 
 #: filedigger/versionlistdelegate.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Restore"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Restore…"
-msgstr "Restaurar"
+msgstr "Restaurar…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
