@@ -188,16 +188,29 @@ void KupKcm::save()
         mPlanWidgets.at(i)->saveExtraData();
         lManager->updateSettings();
         mStatusWidgets.at(i)->updateIcon();
-        if (lPlan->mDestinationType == 1 && lPlan->mExternalUUID.isEmpty()) {
+
 #if QT_VERSION_MAJOR == 5
-            QWidget *wid = this;
+        QWidget *wid = this;
 #else
-            QWidget *wid = widget();
+        QWidget *wid = widget();
 #endif
+
+        if (lPlan->mDestinationType == 1 && lPlan->mExternalUUID.isEmpty()) {
             KMessageBox::information(wid,
                                      xi18nc("@info %1 is the name of the backup plan",
                                             "%1 does not have a destination!<nl/>"
                                             "No backups will be saved by this plan.",
+                                            lPlan->mDescription),
+                                     xi18nc("@title:window", "Warning"),
+                                     QString(),
+                                     KMessageBox::Dangerous);
+        }
+
+        if (lPlan->mPathsIncluded.isEmpty()) {
+            KMessageBox::information(wid,
+                                     xi18nc("@info %1 is the name of the backup plan",
+                                            "%1 does not include any files!<nl/>"
+                                            "This plan will not be activated.",
                                             lPlan->mDescription),
                                      xi18nc("@title:window", "Warning"),
                                      QString(),
