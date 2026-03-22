@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-10 02:11+0000\n"
+"POT-Creation-Date: 2026-03-22 02:04+0000\n"
 "PO-Revision-Date: 2026-03-09 11:42+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -1383,7 +1383,7 @@ msgstr ""
 "per a les còpies de seguretat amb versions i «rsync»</li><li>per a les "
 "còpies de seguretat sincronitzades.</li></ul>"
 
-#: kcm/kupkcm.cpp:199
+#: kcm/kupkcm.cpp:201
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1391,25 +1391,31 @@ msgid ""
 msgstr ""
 "%1 no té una destinació!<nl/>Este pla no guardarà cap còpia de seguretat."
 
-#: kcm/kupkcm.cpp:202
+#: kcm/kupkcm.cpp:204 kcm/kupkcm.cpp:215
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Avís"
 
-#: kcm/kupkcm.cpp:251
+#: kcm/kupkcm.cpp:212
+#, kde-kuit-format
+msgctxt "@info %1 is the name of the backup plan"
+msgid "%1 does not include any files!<nl/>This plan will not be activated."
+msgstr ""
+
+#: kcm/kupkcm.cpp:264
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
 msgstr "Afig un pla nou…"
 
-#: kcm/kupkcm.cpp:264
+#: kcm/kupkcm.cpp:277
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "Còpies de seguretat activades"
 
-#: kcm/kupkcm.cpp:275
+#: kcm/kupkcm.cpp:288
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"

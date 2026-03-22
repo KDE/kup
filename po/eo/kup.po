@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-10 02:11+0000\n"
+"POT-Creation-Date: 2026-03-22 02:04+0000\n"
 "PO-Revision-Date: 2025-03-17 21:10+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -1368,7 +1368,7 @@ msgstr ""
 "planon, vi bezonas instali iun ajn el</p><ul><li>bup, por versionitaj "
 "sekurkopioj</li><li>rsync , por sinkronigitaj sekurkopioj</li></ul>"
 
-#: kcm/kupkcm.cpp:199
+#: kcm/kupkcm.cpp:201
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1376,25 +1376,31 @@ msgid ""
 msgstr ""
 "%1 ne havas celon!<nl/>Neniaj sekurkopioj estos konservitaj per ĉi tiu plano."
 
-#: kcm/kupkcm.cpp:202
+#: kcm/kupkcm.cpp:204 kcm/kupkcm.cpp:215
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Averto"
 
-#: kcm/kupkcm.cpp:251
+#: kcm/kupkcm.cpp:212
+#, kde-kuit-format
+msgctxt "@info %1 is the name of the backup plan"
+msgid "%1 does not include any files!<nl/>This plan will not be activated."
+msgstr ""
+
+#: kcm/kupkcm.cpp:264
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
 msgstr "Aldoni Novan Planon…"
 
-#: kcm/kupkcm.cpp:264
+#: kcm/kupkcm.cpp:277
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "Sekurkopioj ebligitaj"
 
-#: kcm/kupkcm.cpp:275
+#: kcm/kupkcm.cpp:288
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"

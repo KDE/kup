@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-10 02:11+0000\n"
+"POT-Creation-Date: 2026-03-22 02:04+0000\n"
 "PO-Revision-Date: 2025-10-09 01:03+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1332,7 +1332,7 @@ msgstr ""
 "<h2>백업 프로그램 없음</h2><p>백업 계획을 활성화하려면 다음 프로그램을 설치해"
 "야 합니다</p><ul><li>bup: 버전된 백업</li><li>rsync: 동기화된 백업</li></ul>"
 
-#: kcm/kupkcm.cpp:199
+#: kcm/kupkcm.cpp:201
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1340,25 +1340,31 @@ msgid ""
 msgstr ""
 "%1의 대상을 설정하지 않았습니다!<nl/> 이 백업 계획은 실행되지 않습니다."
 
-#: kcm/kupkcm.cpp:202
+#: kcm/kupkcm.cpp:204 kcm/kupkcm.cpp:215
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "경고"
 
-#: kcm/kupkcm.cpp:251
+#: kcm/kupkcm.cpp:212
+#, kde-kuit-format
+msgctxt "@info %1 is the name of the backup plan"
+msgid "%1 does not include any files!<nl/>This plan will not be activated."
+msgstr ""
+
+#: kcm/kupkcm.cpp:264
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
 msgstr "새 계획 추가…"
 
-#: kcm/kupkcm.cpp:264
+#: kcm/kupkcm.cpp:277
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "백업 활성화됨"
 
-#: kcm/kupkcm.cpp:275
+#: kcm/kupkcm.cpp:288
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"

@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-10 02:11+0000\n"
-"PO-Revision-Date: 2026-01-01 12:43+0100\n"
+"POT-Creation-Date: 2026-03-22 02:04+0000\n"
+"PO-Revision-Date: 2026-03-21 06:57+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -656,12 +656,10 @@ msgstr "Przywróć do pierwotnego położenia"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Choose where to restore"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose where to restore…"
-msgstr "Wybierz gdzie chcesz przywrócić"
+msgstr "Wybierz gdzie przywrócić…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
 #: filedigger/restoredialog.ui:132
@@ -776,12 +774,10 @@ msgid "Open"
 msgstr "Otwórz"
 
 #: filedigger/versionlistdelegate.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Restore"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Restore…"
-msgstr "Przywróć"
+msgstr "Przywróć…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
@@ -1384,7 +1380,7 @@ msgstr ""
 "wersjonowanych kopii zapasowych</li><li>rsync, do synchronizowanych kopii "
 "zapasowych</li></ul>"
 
-#: kcm/kupkcm.cpp:199
+#: kcm/kupkcm.cpp:201
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1393,25 +1389,31 @@ msgstr ""
 "%1 nie ma miejsca docelowego!<nl/>Żadna kopia zapasowa nie zostanie zapisana "
 "przez ten plan."
 
-#: kcm/kupkcm.cpp:202
+#: kcm/kupkcm.cpp:204 kcm/kupkcm.cpp:215
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
-#: kcm/kupkcm.cpp:251
+#: kcm/kupkcm.cpp:212
+#, kde-kuit-format
+msgctxt "@info %1 is the name of the backup plan"
+msgid "%1 does not include any files!<nl/>This plan will not be activated."
+msgstr ""
+
+#: kcm/kupkcm.cpp:264
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
 msgstr "Dodaj nowy plan…"
 
-#: kcm/kupkcm.cpp:264
+#: kcm/kupkcm.cpp:277
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "Kopie zapasowe włączone"
 
-#: kcm/kupkcm.cpp:275
+#: kcm/kupkcm.cpp:288
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"

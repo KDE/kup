@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-10 02:11+0000\n"
+"POT-Creation-Date: 2026-03-22 02:04+0000\n"
 "PO-Revision-Date: 2024-04-22 16:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1290,32 +1290,38 @@ msgstr ""
 "<h2>备份程序丢失</h2><p>在您启动任何备份计划之前，您需要先安装</"
 "p><ul><li>bup，给版本备份使用</li><li>rsync，给同步备份使用</li></ul>\""
 
-#: kcm/kupkcm.cpp:199
+#: kcm/kupkcm.cpp:201
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
 "%1 does not have a destination!<nl/>No backups will be saved by this plan."
 msgstr "%1 没有目的地！<nl/>这个计划中将不会有备份被储存。"
 
-#: kcm/kupkcm.cpp:202
+#: kcm/kupkcm.cpp:204 kcm/kupkcm.cpp:215
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "警告"
 
-#: kcm/kupkcm.cpp:251
+#: kcm/kupkcm.cpp:212
+#, kde-kuit-format
+msgctxt "@info %1 is the name of the backup plan"
+msgid "%1 does not include any files!<nl/>This plan will not be activated."
+msgstr ""
+
+#: kcm/kupkcm.cpp:264
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
 msgstr "添加新计划…"
 
-#: kcm/kupkcm.cpp:264
+#: kcm/kupkcm.cpp:277
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "备份已启用"
 
-#: kcm/kupkcm.cpp:275
+#: kcm/kupkcm.cpp:288
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
