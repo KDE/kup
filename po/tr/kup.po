@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-22 02:04+0000\n"
-"PO-Revision-Date: 2026-03-09 18:21+0300\n"
+"PO-Revision-Date: 2026-03-22 11:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -1370,7 +1370,7 @@ msgstr "Uyarı"
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid "%1 does not include any files!<nl/>This plan will not be activated."
-msgstr ""
+msgstr "%1 hiçbir dosya içermiyor!<nl/>Bu plan etkinleştirilmeyecek."
 
 #: kcm/kupkcm.cpp:264
 #, kde-kuit-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-22 02:04+0000\n"
-"PO-Revision-Date: 2026-03-09 06:58+0100\n"
+"PO-Revision-Date: 2026-03-22 07:57+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -1389,7 +1389,7 @@ msgstr "Opozorilo"
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid "%1 does not include any files!<nl/>This plan will not be activated."
-msgstr ""
+msgstr "%1 ne vključuje nobenih datotek!<nl/>Ta plan ne bo aktiviran."
 
 #: kcm/kupkcm.cpp:264
 #, kde-kuit-format
