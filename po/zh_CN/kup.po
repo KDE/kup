@@ -1307,7 +1307,7 @@ msgstr "警告"
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid "%1 does not include any files!<nl/>This plan will not be activated."
-msgstr ""
+msgstr "%1 不包含任何文件。<nl/>此计划将不会被激活。"
 
 #: kcm/kupkcm.cpp:264
 #, kde-kuit-format
