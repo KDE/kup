@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-22 02:04+0000\n"
-"PO-Revision-Date: 2026-03-15 00:24+0100\n"
+"PO-Revision-Date: 2026-03-29 01:39+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1403,7 +1403,7 @@ msgstr "Aviso"
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid "%1 does not include any files!<nl/>This plan will not be activated."
-msgstr ""
+msgstr "¡%1 no incluye ningún archivo!<nl/>Este plan no será activado."
 
 #: kcm/kupkcm.cpp:264
 #, kde-kuit-format
