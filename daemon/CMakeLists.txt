@@ -50,5 +50,6 @@ KF${QT_MAJOR_VERSION}::Crash
 ########### install files ###############
 install(TARGETS kup-daemon ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES kup-daemon.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
+install(FILES kup-daemon.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES kupdaemon.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
 
