@@ -50,14 +50,14 @@ void KupEngine::processData()
     }
     QJsonObject lEvent = lDoc.object();
     if (lEvent["event"] == QStringLiteral("status update")) {
-        QJsonArray lPlans = lEvent["plans"].toArray();
-        setData(QStringLiteral("common"), QStringLiteral("plan count"), lPlans.count());
         setCommonData(lEvent, QStringLiteral("tray icon active"));
         setCommonData(lEvent, QStringLiteral("tooltip icon name"));
         setCommonData(lEvent, QStringLiteral("tooltip title"));
         setCommonData(lEvent, QStringLiteral("tooltip subtitle"));
         setCommonData(lEvent, QStringLiteral("any plan busy"));
         setCommonData(lEvent, QStringLiteral("no plan reason"));
+
+        QJsonArray lPlans = lEvent["plans"].toArray();
         for (int i = 0; i < lPlans.count(); ++i) {
             QJsonObject lPlan = lPlans[i].toObject();
             setPlanData(i, lPlan, QStringLiteral("description"));
@@ -69,6 +69,9 @@ void KupEngine::processData()
             setPlanData(i, lPlan, QStringLiteral("busy"));
             setPlanData(i, lPlan, QStringLiteral("bup type"));
         }
+
+        // Update plan count last, such that new plans have data before their existance is announced.
+        setData(QStringLiteral("common"), QStringLiteral("plan count"), lPlans.count());
     }
 }
 
