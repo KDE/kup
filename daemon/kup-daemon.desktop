@@ -1,5 +1,12 @@
 [Desktop Entry]
 Name=Backup Scheduler
+Name[ca]=Planificador de còpies de seguretat
+Name[ca@valencia]=Planificador de còpies de seguretat
+Name[nl]=Planner voor reservekopieën
+Name[pt_BR]=Agendador de backup
+Name[sl]=Razporejevalnik varnostnega kopiranja
+Name[tr]=Yedekleme Zamanlayıcısı
+Name[uk]=Планувальник резервного копіювання
 GenericName=Backup Monitor
 GenericName[ar]=مراقب كيوب
 GenericName[bg]=Наблюдение на архивиране
