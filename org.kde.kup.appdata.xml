@@ -65,6 +65,7 @@
   <summary xml:lang="pt-BR">Agendador de backups para a área de trabalho Plasma da KDE</summary>
   <summary xml:lang="ro">Planificator de copii de rezervă pentru biroul KDE Plasma</summary>
   <summary xml:lang="ru">Планировщик резервного копирования для среды рабочего стола Plasma от KDE</summary>
+  <summary xml:lang="sk">Plánovač záloh pre pracovnú plochu KDE Plasma</summary>
   <summary xml:lang="sl">Planer izdelave varnostnih kopij za namizje KDE Plasma</summary>
   <summary xml:lang="sv">Schemaläggning av säkerhetskopiering för KDE:s Plasma-skrivbord</summary>
   <summary xml:lang="tr">KDE’nin Plasma Masaüstü için yedek planlayıcısı</summary>
@@ -98,6 +99,7 @@
     <p xml:lang="pt-BR">O Kup pode ajudá-lo a lembrar de manter backups atualizados de seus arquivos pessoais. Ele fornece:</p>
     <p xml:lang="ro">Kup vă poate aminti să păstrați copii de rezervă actuale ale fișierelor dumneavoastră personale. Acesta oferă:</p>
     <p xml:lang="ru">Kup помогает поддерживать актуальность резервных копий личных файлов. Программа предоставляет следующие возможности:</p>
+    <p xml:lang="sk">Kup vám môže pomôcť pamätať na udržiavanie aktuálnych záloh vašich osobných súborov. Poskytuje:</p>
     <p xml:lang="sl">Kup vam lahko pomaga pri spominjanju nenehnega zagotavljanja varnostnih kopij svojih osebnih datotek.Zagotavlja:</p>
     <p xml:lang="sv">Kup kan hjälpa till att komma ihåg att ha aktuella säkerhetskopior av personliga filer. Det tillhandahåller:</p>
     <p xml:lang="tr">Kup, kişisel dosyalarınızın güncel yedeklerini tutmanıza yardımcı olur. Sunduğu özellikler:</p>
@@ -130,6 +132,7 @@
       <li xml:lang="pt-BR">Arquivo de backup incremental com o uso do "bup".</li>
       <li xml:lang="ro">Arhivă de rezervă incrementală prin folosirea „bup”.</li>
       <li xml:lang="ru">Инкрементальное резервное копирование с помощью программы «bup».</li>
+      <li xml:lang="sk">Inkrementálny záložný archív s použitím "bup".</li>
       <li xml:lang="sl">Inkrementalno varnostno arhiviranje z uporabo programa "bup".</li>
       <li xml:lang="sv">Inkrementellt säkerhetskopieringsarkiv med användning av "bup".</li>
       <li xml:lang="tr">“bup” kullanarak artan yedek arşivi desteği</li>
@@ -162,6 +165,7 @@
       <li xml:lang="pt-BR">Pastas sincronizadas com o uso do "rsync".</li>
       <li xml:lang="ro">Dosare sincronizate prin folosirea „rsync”.</li>
       <li xml:lang="ru">Синхронизация папок с помощью программы «rsync».</li>
+      <li xml:lang="sk">Synchronizované priečinky s použitím "rsync".</li>
       <li xml:lang="sl">Sinhronizirane mape z uporabo programa "rsync".</li>
       <li xml:lang="sv">Synkroniserade kataloger med användning av "rsync".</li>
       <li xml:lang="tr">“rsync” kullararak eşzamanlanmış klasörler</li>
@@ -194,6 +198,7 @@
       <li xml:lang="pt-BR">Suporte a sistema de arquivos local e armazenamento USB externo.</li>
       <li xml:lang="ro">Suport pentru sistem de fișiere local sau stocare USB externă.</li>
       <li xml:lang="ru">Поддержка сохранения в локальной файловой системе или на внешнем USB-накопителе.</li>
+      <li xml:lang="sk">Podpora lokálneho súborového systému alebo externého USB úložiska.</li>
       <li xml:lang="sl">Podporo lokalnemu datotečnemu sistemu ali zunanji hrambi USB.</li>
       <li xml:lang="sv">Stöd för lokala filsystem eller extern USB-lagring</li>
       <li xml:lang="tr">Yerel dosya sistemi veya dış USB depolama desteği</li>
@@ -225,6 +230,7 @@
       <li xml:lang="pt-BR">Monitore a disponibilidade dos destinos de backup, como, por exemplo, um armazenamento de rede montado.</li>
       <li xml:lang="ro">Monitorizarea disponibilității destinațiilor de rezervă, cum ar fi stocarea montată prin rețea.</li>
       <li xml:lang="ru">Отслеживание доступности мест для сохранения резервных копий (например, подключённого сетевого хранилища).</li>
+      <li xml:lang="sk">Sledovanie dostupnosti cieľov zálohovania, ako napríklad pripojené sieťové úložisko.</li>
       <li xml:lang="sl">Nadzoruje razpoložljivost rezervnih ciljev varnostnih kopij, kot je na primer nameščen omrežni disk.</li>
       <li xml:lang="sv">Övervakning av säkerhetskopieringsmål, som exempelvis monterad nätverkslagring.</li>
       <li xml:lang="tr">Yedek konumlarının uygunluğunu izleme; örneğin takılı bir ağ depolama aygıtı gibi</li>
@@ -256,6 +262,7 @@
       <li xml:lang="pt-BR">Integração com a área de trabalho Plasma.</li>
       <li xml:lang="ro">Integrarea în biroul KDE Plasma.</li>
       <li xml:lang="ru">Интеграция со средой рабочего стола Plasma от KDE.</li>
+      <li xml:lang="sk">Integrácia do pracovnej plochy KDE Plasma.</li>
       <li xml:lang="sl">Integracija v namizje KDE Plasma.</li>
       <li xml:lang="sv">Integration med KDE:s Plasma-skrivbord.</li>
       <li xml:lang="tr">KDE Plasma Masaüstü ile tümleşim</li>
@@ -297,6 +304,7 @@
   <developer_name xml:lang="pt-BR">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="ro">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="ru">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
+  <developer_name xml:lang="sk">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="sl">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="sv">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
   <developer_name xml:lang="tr">Simon Persson &lt;simon.persson@mykolab.com&gt;</developer_name>
