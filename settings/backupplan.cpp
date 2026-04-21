@@ -33,6 +33,7 @@ BackupPlan::BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pPare
     lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.thumbnails");
     lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.local/share/Trash");
     lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.local/share/baloo");
+    lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.local/share/container");
     lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.local/share/TelegramDesktop/tdata/temp");
     lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.config/Riot/Cache");
     lDefaultExcludeList << QDir::homePath() + QStringLiteral("/Vaults"); // might be mounted; don't leak data
