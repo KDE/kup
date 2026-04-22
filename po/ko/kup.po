@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-22 02:04+0000\n"
+"POT-Creation-Date: 2026-04-22 02:09+0000\n"
 "PO-Revision-Date: 2025-10-09 01:03+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1473,36 +1473,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "백업 계획 %1"
 
-#: settings/backupplan.cpp:63
+#: settings/backupplan.cpp:64
 #, kde-format
 msgid "Backups"
 msgstr "백업"
 
-#: settings/backupplan.cpp:94
+#: settings/backupplan.cpp:95
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1(사본)"
 
-#: settings/backupplan.cpp:219
+#: settings/backupplan.cpp:220
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "마지막 저장: %1"
 
-#: settings/backupplan.cpp:223
+#: settings/backupplan.cpp:224
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "크기: %1"
 
-#: settings/backupplan.cpp:227
+#: settings/backupplan.cpp:228
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "사용 가능한 공간: %1"
 
-#: settings/backupplan.cpp:230
+#: settings/backupplan.cpp:231
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."

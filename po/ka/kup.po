@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-22 02:04+0000\n"
+"POT-Creation-Date: 2026-04-22 02:09+0000\n"
 "PO-Revision-Date: 2025-04-26 10:31+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -1499,36 +1499,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "მარქაფის გეგმა %1"
 
-#: settings/backupplan.cpp:63
+#: settings/backupplan.cpp:64
 #, kde-format
 msgid "Backups"
 msgstr "მარქაფები"
 
-#: settings/backupplan.cpp:94
+#: settings/backupplan.cpp:95
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (ასლი)"
 
-#: settings/backupplan.cpp:219
+#: settings/backupplan.cpp:220
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "ბოლოს შენახვა: %1"
 
-#: settings/backupplan.cpp:223
+#: settings/backupplan.cpp:224
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "ზომა: %1"
 
-#: settings/backupplan.cpp:227
+#: settings/backupplan.cpp:228
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "თავისუფალი ადგილი: %1"
 
-#: settings/backupplan.cpp:230
+#: settings/backupplan.cpp:231
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."

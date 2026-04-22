@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-22 02:04+0000\n"
+"POT-Creation-Date: 2026-04-22 02:09+0000\n"
 "PO-Revision-Date: 2025-09-12 16:41+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -1491,36 +1491,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "Varmuuskopiosuunnitelma %1"
 
-#: settings/backupplan.cpp:63
+#: settings/backupplan.cpp:64
 #, kde-format
 msgid "Backups"
 msgstr "Varmuuskopiot"
 
-#: settings/backupplan.cpp:94
+#: settings/backupplan.cpp:95
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (kopio)"
 
-#: settings/backupplan.cpp:219
+#: settings/backupplan.cpp:220
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Viimeksi tallennettu: %1"
 
-#: settings/backupplan.cpp:223
+#: settings/backupplan.cpp:224
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Koko: %1"
 
-#: settings/backupplan.cpp:227
+#: settings/backupplan.cpp:228
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Vapaa tila: %1"
 
-#: settings/backupplan.cpp:230
+#: settings/backupplan.cpp:231
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
