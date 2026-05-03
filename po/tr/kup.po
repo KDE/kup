@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-22 02:09+0000\n"
-"PO-Revision-Date: 2026-03-22 11:17+0300\n"
+"PO-Revision-Date: 2026-05-02 18:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -576,19 +576,19 @@ msgstr " — saved at %1"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Folder already exists, please choose a solution"
-msgstr "Klasör halihazırda var, lütfen bir çözüm seçin"
+msgstr "Klasör hâlihazırda var, lütfen bir çözüm seçin"
 
 #: filedigger/restoredialog.cpp:293
 #, kde-kuit-format
 msgctxt "@info"
 msgid "File already exists"
-msgstr "Dosya halihazırda var"
+msgstr "Dosya hâlihazırda var"
 
 #: filedigger/restoredialog.cpp:306
 #, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid "The new name entered already exists, please enter a different one."
-msgstr "Yeni ad halihazırda var, lütfen başka bir tane girin."
+msgstr "Yeni ad hâlihazırda var, lütfen başka bir tane girin."
 
 #: filedigger/restoredialog.cpp:379 kcm/dirselector.cpp:39
 #, kde-kuit-format
@@ -615,7 +615,7 @@ msgstr ""
 #: filedigger/restoredialog.cpp:401 kcm/dirselector.cpp:60
 #, kde-format
 msgid "A folder named %1 already exists."
-msgstr "%1 adlı bir klasör halihazırda var."
+msgstr "%1 adlı bir klasör hâlihazırda var."
 
 #: filedigger/restoredialog.cpp:407 kcm/dirselector.cpp:66
 #, kde-format
