@@ -24,7 +24,6 @@ ecm_qt_declare_logging_category(kupdaemon_SRCS
     HEADER kupdaemon_debug.h
     IDENTIFIER KUPDAEMON
     CATEGORY_NAME kup.daemon
-    DEFAULT_SEVERITY Warning
     EXPORT kup
     DESCRIPTION "Kup Daemon"
 )

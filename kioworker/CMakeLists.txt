@@ -12,7 +12,6 @@ ecm_qt_declare_logging_category(bupworker_SRCS
     HEADER kupkio_debug.h
     IDENTIFIER KUPKIO
     CATEGORY_NAME kup.kio
-    DEFAULT_SEVERITY Warning
     EXPORT kup
     DESCRIPTION "Kup KIO worker for bup"
 )

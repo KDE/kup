@@ -11,7 +11,6 @@ ecm_qt_declare_logging_category(purger_SRCS
     HEADER kuppurger_debug.h
     IDENTIFIER KUPPURGER
     CATEGORY_NAME kup.purger
-    DEFAULT_SEVERITY Warning
     EXPORT kup
     DESCRIPTION "Kup Purger"
 )
