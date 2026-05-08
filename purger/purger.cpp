@@ -41,7 +41,7 @@ Purger::Purger(QString pRepoPath, QString pBranchName, QWidget *pParent)
     *mCollectProcess << QStringLiteral("gc") << QStringLiteral("--unsafe") << QStringLiteral("--verbose");
     connect(mCollectProcess, &KProcess::readyReadStandardError, this, [this] {
         auto lLogText = QString::fromUtf8(mCollectProcess->readAllStandardError());
-        qCInfo(KUPPURGER) << lLogText;
+        qCDebug(KUPPURGER) << lLogText;
         mTextEdit->append(lLogText);
     });
     connect(mCollectProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, &Purger::purgeDone);
@@ -101,12 +101,12 @@ void Purger::listDone(int, QProcess::ExitStatus)
 
 void Purger::purge()
 {
-    qCInfo(KUPPURGER) << "Starting purge operation.";
+    qCDebug(KUPPURGER) << "Starting purge operation.";
     mDeleteAction->setEnabled(false);
     bool lAnythingRemoved = false;
     for (int i = 0; i < mListWidget->count(); ++i) {
         auto lItem = mListWidget->item(i);
-        qCInfo(KUPPURGER) << lItem->text() << lItem->whatsThis() << lItem->checkState();
+        qCDebug(KUPPURGER) << lItem->text() << lItem->whatsThis() << lItem->checkState();
         if (lItem->checkState() == Qt::Checked) {
             const auto lTimeStamps = lItem->whatsThis().split(QChar::LineFeed);
             for (const QString &lTimeStamp : lTimeStamps) {
@@ -116,20 +116,20 @@ void Purger::purge()
                 lRemoveProcess << QStringLiteral("-d") << mRepoPath << QStringLiteral("rm");
                 lRemoveProcess << QStringLiteral("--unsafe") << QStringLiteral("--verbose");
                 lRemoveProcess << QString("%1/%2").arg(mBranchName, lTimeStamp);
-                qCInfo(KUPPURGER) << lRemoveProcess.program();
+                qCDebug(KUPPURGER) << lRemoveProcess.program();
                 if (lRemoveProcess.execute() == 0) {
                     lAnythingRemoved = true;
-                    qCInfo(KUPPURGER) << "Successfully removed snapshot";
+                    qCDebug(KUPPURGER) << "Successfully removed snapshot";
                 }
                 const auto lLogText = QString::fromUtf8(lRemoveProcess.readAllStandardError());
-                qCInfo(KUPPURGER) << lLogText;
+                qCDebug(KUPPURGER) << lLogText;
                 mTextEdit->append(lLogText);
             }
         }
     }
     if (lAnythingRemoved) {
         QGuiApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
-        qCInfo(KUPPURGER) << mCollectProcess->program();
+        qCDebug(KUPPURGER) << mCollectProcess->program();
         mCollectProcess->start();
     } else {
         mDeleteAction->setEnabled(true);
@@ -138,11 +138,11 @@ void Purger::purge()
 
 void Purger::purgeDone(int pExitCode, QProcess::ExitStatus pExitStatus)
 {
-    qCInfo(KUPPURGER) << pExitCode << pExitStatus;
+    qCDebug(KUPPURGER) << pExitCode << pExitStatus;
     QGuiApplication::restoreOverrideCursor();
     mDeleteAction->setEnabled(true);
     const auto lLogText = QString::fromUtf8(mCollectProcess->readAllStandardError());
-    qCInfo(KUPPURGER) << lLogText;
+    qCDebug(KUPPURGER) << lLogText;
     mTextEdit->append(lLogText);
     fillListWidget();
 }
