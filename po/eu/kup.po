@@ -1,16 +1,16 @@
 # Translation of kup.po to Euskara/Basque (eu).
-# Copyright (C) 2020-2025 This file is copyright:
+# Copyright (C) 2020-2026 This file is copyright:
 # This file is distributed under the same license as the kup package.
-# SPDX-FileCopyrightText: 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2025-2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-22 02:09+0000\n"
-"PO-Revision-Date: 2025-09-21 21:25+0200\n"
+"PO-Revision-Date: 2026-05-17 17:46+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -648,12 +648,10 @@ msgstr "Berreskuratu jatorrizko kokalekuan"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Choose where to restore"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose where to restore…"
-msgstr "Aukeratu non berreskuratu"
+msgstr "Aukeratu non berreskuratu…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
 #: filedigger/restoredialog.ui:132
@@ -768,12 +766,10 @@ msgid "Open"
 msgstr "Ireki"
 
 #: filedigger/versionlistdelegate.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Restore"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Restore…"
-msgstr "Berreskuratu"
+msgstr "Berreskuratu…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
@@ -1392,7 +1388,7 @@ msgstr "Abisua"
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid "%1 does not include any files!<nl/>This plan will not be activated."
-msgstr ""
+msgstr "%1(e)k ez du fitxategirik barneratzen!<nl/>Plan hau ez da aktibatuko."
 
 #: kcm/kupkcm.cpp:264
 #, kde-kuit-format
