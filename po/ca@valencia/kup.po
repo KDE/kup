@@ -588,7 +588,7 @@ msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
 "was saved"
 msgid " - saved at %1"
-msgstr " - guardada a %1"
+msgstr " – guardada a %1"
 
 #: filedigger/restoredialog.cpp:287
 #, kde-kuit-format
