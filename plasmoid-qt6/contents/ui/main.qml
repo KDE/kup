@@ -76,11 +76,13 @@ PlasmoidItem {
 		PlasmaCore.Action {
 			text: i18nd("kup", "Reload Backup Plans")
 			icon.name: "view-refresh"
+			priority: PlasmaCore.Action.HighPriority
 			onTriggered: reloadKup()
 		},
 		PlasmaCore.Action {
 			text: i18nd("kup", "Configure Backup Plans…")
 			icon.name: "configure"
+			priority: PlasmaCore.Action.HighPriority
 			onTriggered: configureKup()
 		}
 	]
