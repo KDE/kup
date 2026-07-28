@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 02:09+0000\n"
+"POT-Creation-Date: 2026-07-28 02:10+0000\n"
 "PO-Revision-Date: 2025-04-26 10:31+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -1423,25 +1423,21 @@ msgstr ""
 "%1"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:109
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:111
 #, kde-format
 msgid "Save new backup"
 msgstr "ახალი მარქაფის შენახვა"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:115
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:117
 #, kde-format
 msgid "Prune old backups"
 msgstr "ძველი მარქაფების შეკვეცა"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:122
 #, kde-format
 msgid "Show files"
 msgstr "ფაილების ჩვენება"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:125
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:127
 #, kde-format
 msgid "Show log file"
 msgstr "ჟურნალის ფაილის ჩვენება"
@@ -1457,22 +1453,47 @@ msgstr "&Kup-ის ჩვენება..."
 msgid "&Reload backup plans"
 msgstr "&მარქაფის გეგმების გადატვირთვა"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:34
 #: plasmoid-qt6/contents/ui/main.qml:77
 #, kde-format
 msgid "Reload Backup Plans"
 msgstr "მარქაფის გეგმების თავიდან ჩატვირთვა"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:43
 #, kde-format
 msgid "Configure Backup Plans"
 msgstr "მარქაფის გეგმების მორგება"
 
-#: plasmoid-qt6/contents/ui/main.qml:82
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:91
+#: plasmoid-qt6/contents/ui/main.qml:83
 #, fuzzy, kde-format
 #| msgid "Configure Backup Plans"
 msgid "Configure Backup Plans…"
 msgstr "მარქაფის გეგმების მორგება"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:33
+#, fuzzy, kde-format
+#| msgid "Show files"
+msgid "Show Files"
+msgstr "ფაილების ჩვენება"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:41
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Save Backup"
+msgid "Save Backup"
+msgstr "მარქაფის შენახვა"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:49
+#, fuzzy, kde-format
+#| msgid "Prune old backups"
+msgid "Prune Old Backups"
+msgstr "ძველი მარქაფების შეკვეცა"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:57
+#, kde-format
+msgid "View Log"
+msgstr ""
 
 #: purger/main.cpp:24
 #, kde-kuit-format

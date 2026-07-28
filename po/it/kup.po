@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 02:09+0000\n"
+"POT-Creation-Date: 2026-07-28 02:10+0000\n"
 "PO-Revision-Date: 2026-03-23 14:20+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -1465,25 +1465,21 @@ msgstr ""
 "%1"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:109
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:111
 #, kde-format
 msgid "Save new backup"
 msgstr "Salva nuova copia di sicurezza"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:115
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:117
 #, kde-format
 msgid "Prune old backups"
 msgstr "Elimina le vecchie copie di sicurezza"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:122
 #, kde-format
 msgid "Show files"
 msgstr "Mostra file"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:125
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:127
 #, kde-format
 msgid "Show log file"
 msgstr "Mostra il file di registro"
@@ -1498,21 +1494,46 @@ msgstr "&Configura Kup…"
 msgid "&Reload backup plans"
 msgstr "&Ricarica i piani di creazione di copie di sicurezza"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:34
 #: plasmoid-qt6/contents/ui/main.qml:77
 #, kde-format
 msgid "Reload Backup Plans"
 msgstr "Ricarica i piani di creazione di copie di sicurezza"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:43
 #, kde-format
 msgid "Configure Backup Plans"
 msgstr "Configura i piani delle copie di sicurezza"
 
-#: plasmoid-qt6/contents/ui/main.qml:82
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:91
+#: plasmoid-qt6/contents/ui/main.qml:83
 #, kde-format
 msgid "Configure Backup Plans…"
 msgstr "Configura i piani delle copie di sicurezza…"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:33
+#, fuzzy, kde-format
+#| msgid "Show files"
+msgid "Show Files"
+msgstr "Mostra file"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:41
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Save Backup"
+msgid "Save Backup"
+msgstr "Salva copia di sicurezza"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:49
+#, fuzzy, kde-format
+#| msgid "Prune old backups"
+msgid "Prune Old Backups"
+msgstr "Elimina le vecchie copie di sicurezza"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:57
+#, kde-format
+msgid "View Log"
+msgstr ""
 
 #: purger/main.cpp:24
 #, kde-kuit-format

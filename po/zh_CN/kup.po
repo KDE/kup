@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 02:09+0000\n"
+"POT-Creation-Date: 2026-07-28 02:10+0000\n"
 "PO-Revision-Date: 2024-04-22 16:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1357,25 +1357,21 @@ msgstr ""
 "%1"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:109
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:111
 #, kde-format
 msgid "Save new backup"
 msgstr "保存新备份"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:115
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:117
 #, kde-format
 msgid "Prune old backups"
 msgstr "删除旧备份"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:122
 #, kde-format
 msgid "Show files"
 msgstr "显示文件"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:125
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:127
 #, kde-format
 msgid "Show log file"
 msgstr "显示日志文件"
@@ -1390,21 +1386,46 @@ msgstr "配置 Kup(&C)…"
 msgid "&Reload backup plans"
 msgstr "重新加载备份计划(&R)"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:34
 #: plasmoid-qt6/contents/ui/main.qml:77
 #, kde-format
 msgid "Reload Backup Plans"
 msgstr "重新加载备份计划"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:43
 #, kde-format
 msgid "Configure Backup Plans"
 msgstr "配置备份计划"
 
-#: plasmoid-qt6/contents/ui/main.qml:82
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:91
+#: plasmoid-qt6/contents/ui/main.qml:83
 #, kde-format
 msgid "Configure Backup Plans…"
 msgstr "配置备份计划…"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:33
+#, fuzzy, kde-format
+#| msgid "Show files"
+msgid "Show Files"
+msgstr "显示文件"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:41
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Save Backup"
+msgid "Save Backup"
+msgstr "保存备份"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:49
+#, fuzzy, kde-format
+#| msgid "Prune old backups"
+msgid "Prune Old Backups"
+msgstr "删除旧备份"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:57
+#, kde-format
+msgid "View Log"
+msgstr ""
 
 #: purger/main.cpp:24
 #, kde-kuit-format

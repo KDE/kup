@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 02:09+0000\n"
+"POT-Creation-Date: 2026-07-28 02:10+0000\n"
 "PO-Revision-Date: 2026-04-10 12:00+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -1421,25 +1421,21 @@ msgstr ""
 "%1"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:109
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:111
 #, kde-format
 msgid "Save new backup"
 msgstr "Uložiť novú zálohu"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:115
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:117
 #, kde-format
 msgid "Prune old backups"
 msgstr "Vyčistiť staré zálohy"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:122
 #, kde-format
 msgid "Show files"
 msgstr "Zobraziť súbory"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:125
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:127
 #, kde-format
 msgid "Show log file"
 msgstr "Zobraziť súbor denníka"
@@ -1454,21 +1450,46 @@ msgstr "&Nastaviť Kup…"
 msgid "&Reload backup plans"
 msgstr "&Obnoviť plány zálohovania"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:34
 #: plasmoid-qt6/contents/ui/main.qml:77
 #, kde-format
 msgid "Reload Backup Plans"
 msgstr "Znovu načítať plány zálohovania"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:43
 #, kde-format
 msgid "Configure Backup Plans"
 msgstr "Nastaviť plány zálohovania"
 
-#: plasmoid-qt6/contents/ui/main.qml:82
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:91
+#: plasmoid-qt6/contents/ui/main.qml:83
 #, kde-format
 msgid "Configure Backup Plans…"
 msgstr "Nastaviť plány zálohovania…"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:33
+#, fuzzy, kde-format
+#| msgid "Show files"
+msgid "Show Files"
+msgstr "Zobraziť súbory"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:41
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Save Backup"
+msgid "Save Backup"
+msgstr "Uložiť zálohu"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:49
+#, fuzzy, kde-format
+#| msgid "Prune old backups"
+msgid "Prune Old Backups"
+msgstr "Vyčistiť staré zálohy"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:57
+#, kde-format
+msgid "View Log"
+msgstr ""
 
 #: purger/main.cpp:24
 #, kde-kuit-format

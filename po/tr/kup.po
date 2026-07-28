@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 02:09+0000\n"
+"POT-Creation-Date: 2026-07-28 02:10+0000\n"
 "PO-Revision-Date: 2026-05-02 18:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -1420,25 +1420,21 @@ msgstr ""
 "%1"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:109
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:111
 #, kde-format
 msgid "Save new backup"
 msgstr "Yeni yedek kaydet"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:115
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:117
 #, kde-format
 msgid "Prune old backups"
 msgstr "Eski yedekleri buda"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:122
 #, kde-format
 msgid "Show files"
 msgstr "Dosyaları göster"
 
 #: plasmoid-qt5/contents/ui/FullRepresentation.qml:125
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:127
 #, kde-format
 msgid "Show log file"
 msgstr "Günlük dosyasını göster"
@@ -1453,21 +1449,46 @@ msgstr "Kup’u &Yapılandır…"
 msgid "&Reload backup plans"
 msgstr "Yedek planlarını ge&ri yükle"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:33
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:34
 #: plasmoid-qt6/contents/ui/main.qml:77
 #, kde-format
 msgid "Reload Backup Plans"
 msgstr "Yedek Planlarını Yeniden Yükle"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:42
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:43
 #, kde-format
 msgid "Configure Backup Plans"
 msgstr "Yedek Planlarını Yapılandır"
 
-#: plasmoid-qt6/contents/ui/main.qml:82
+#: plasmoid-qt6/contents/ui/FullRepresentation.qml:91
+#: plasmoid-qt6/contents/ui/main.qml:83
 #, kde-format
 msgid "Configure Backup Plans…"
 msgstr "Yedek Planlarını Yapılandır…"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:33
+#, fuzzy, kde-format
+#| msgid "Show files"
+msgid "Show Files"
+msgstr "Dosyaları göster"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:41
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Save Backup"
+msgid "Save Backup"
+msgstr "Yedeği Kaydet"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:49
+#, fuzzy, kde-format
+#| msgid "Prune old backups"
+msgid "Prune Old Backups"
+msgstr "Eski yedekleri buda"
+
+#: plasmoid-qt6/contents/ui/PlanItem.qml:57
+#, kde-format
+msgid "View Log"
+msgstr ""
 
 #: purger/main.cpp:24
 #, kde-kuit-format
