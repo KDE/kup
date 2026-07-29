@@ -3,14 +3,14 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2020-2021, 2023-2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2019, 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-28 02:10+0000\n"
-"PO-Revision-Date: 2026-03-22 09:51+0100\n"
+"PO-Revision-Date: 2026-07-28 11:11+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: daemon/backupjob.cpp:46
 #, kde-kuit-format
@@ -1498,28 +1498,24 @@ msgid "Configure Backup Plans…"
 msgstr "Configura els plans de còpia de seguretat…"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:33
-#, fuzzy, kde-format
-#| msgid "Show files"
+#, kde-format
 msgid "Show Files"
 msgstr "Mostra els fitxers"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Backup"
+#, kde-format
 msgid "Save Backup"
-msgstr "Guarda una còpia de seguretat"
+msgstr "Guarda la còpia de seguretat"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:49
-#, fuzzy, kde-format
-#| msgid "Prune old backups"
+#, kde-format
 msgid "Prune Old Backups"
 msgstr "Elimina les còpies de seguretat antigues"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:57
 #, kde-format
 msgid "View Log"
-msgstr ""
+msgstr "Mostra el registre"
 
 #: purger/main.cpp:24
 #, kde-kuit-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-28 02:10+0000\n"
-"PO-Revision-Date: 2026-03-22 07:57+0100\n"
+"PO-Revision-Date: 2026-07-28 11:25+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -1486,28 +1486,24 @@ msgid "Configure Backup Plans…"
 msgstr "Konfiguriraj načrte varnostnega kopiranja…"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:33
-#, fuzzy, kde-format
-#| msgid "Show files"
+#, kde-format
 msgid "Show Files"
 msgstr "Prikaži datoteke"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Backup"
+#, kde-format
 msgid "Save Backup"
 msgstr "Shrani varnostno kopijo"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:49
-#, fuzzy, kde-format
-#| msgid "Prune old backups"
+#, kde-format
 msgid "Prune Old Backups"
-msgstr "Pospravi stare varnostne kopije"
+msgstr "Odstrani stare varnostne kopije"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:57
 #, kde-format
 msgid "View Log"
-msgstr ""
+msgstr "Poglej dnevnik"
 
 #: purger/main.cpp:24
 #, kde-kuit-format

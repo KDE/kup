@@ -1483,7 +1483,7 @@ msgstr "Omezit staré zálohy"
 #: plasmoid-qt6/contents/ui/PlanItem.qml:57
 #, kde-format
 msgid "View Log"
-msgstr ""
+msgstr "Zobrazit záznam"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
