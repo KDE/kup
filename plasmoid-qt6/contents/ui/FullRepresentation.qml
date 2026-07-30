@@ -98,7 +98,8 @@ PlasmaComponents.Page {
 	}
 
 	function getPlanStatus(planNumber, key){
-		return backupPlans.data["plan " + planNumber.toString()][key];
+		var plan = backupPlans.data["plan " + planNumber.toString()];
+		return plan && plan[key] !== undefined ? plan[key] : "";
 	}
 
 	function startOperation(i, name) {
