@@ -54,6 +54,8 @@ public:
         INTEGRITY_TESTING,
         REPAIRING
     };
+    Q_ENUM(ExecutorState);
+
     ExecutorState mState;
     QString mDestinationPath;
     QString mLogFilePath;

@@ -38,12 +38,16 @@ public slots:
     void reloadConfig();
     void runIntegrityCheck(const QString &pPath);
     void saveNewBackup(int pPlanNumber);
+    void purgeBackups(int pPlanNumber);
+    void browseBackup(int pPlanNumber);
+    QVariantList getPlans();
     QString getRepositoryPath(const QString &pPath) const;
 
 private:
     void setupExecutors();
     void handleRequests(QLocalSocket *pSocket);
     void sendStatus(QLocalSocket *pSocket);
+    void sendPlansChangedSignal();
 
     KSharedConfigPtr mConfig;
     KupSettings *mSettings;

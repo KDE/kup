@@ -11,6 +11,7 @@ class Schedule;
 
 class BackupPlan : public KCoreConfigSkeleton
 {
+    Q_OBJECT
 public:
     BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pParent = nullptr);
     int planNumber() const
@@ -31,10 +32,14 @@ public:
     bool mExcludeSnapshots{};
     bool mExcludeContainers{};
     enum BackupType { BupType = 0, RsyncType };
+    Q_ENUM(BackupType);
+
     qint32 mBackupType{};
     qint32 mBackupVersion{};
 
     enum ScheduleType { MANUAL = 0, INTERVAL, USAGE };
+    Q_ENUM(ScheduleType);
+
     qint32 mScheduleType{};
     qint32 mScheduleInterval{};
     qint32 mScheduleIntervalUnit{};
@@ -68,7 +73,14 @@ public:
     virtual QDateTime nextScheduledTime();
     virtual qint64 scheduleIntervalInSeconds();
 
-    enum Status { GOOD, MEDIUM, BAD, NO_STATUS };
+    enum Status {
+        GOOD,
+        MEDIUM,
+        BAD,
+        NO_STATUS,
+    };
+    Q_ENUM(Status);
+
     Status backupStatus();
     static QString iconName(Status pStatus);
     QString absoluteExcludesFilePath();

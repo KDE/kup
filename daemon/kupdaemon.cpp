@@ -10,6 +10,7 @@
 
 #include <QApplication>
 #include <QDBusConnection>
+#include <QDBusMessage>
 #include <QFileInfo>
 #include <QJsonArray>
 #include <QJsonDocument>
@@ -69,6 +70,7 @@ void KupDaemon::setupGuiStuff()
         foreach (QLocalSocket *lSocket, mSockets) {
             sendStatus(lSocket);
         }
+        sendPlansChangedSignal();
 
         if (mWaitingToReloadConfig) {
             // quite likely the config can be reloaded now, give it a try.
@@ -153,6 +155,16 @@ void KupDaemon::saveNewBackup(int pPlanNumber)
     }
 }
 
+void KupDaemon::browseBackup(int pPlanNumber)
+{
+    mExecutors.at(pPlanNumber)->showBackupFiles();
+}
+
+void KupDaemon::purgeBackups(int pPlanNumber)
+{
+    mExecutors.at(pPlanNumber)->showBackupPurger();
+}
+
 QString KupDaemon::getRepositoryPath(const QString &pPath) const
 {
     for (const auto lExecutor : mExecutors) {
@@ -229,9 +241,11 @@ void KupDaemon::setupExecutors()
             continue;
         }
         connect(lExecutor, &PlanExecutor::stateChanged, this, [this] {
+            sendPlansChangedSignal();
             mStatusUpdateTimer->start();
         });
         connect(lExecutor, &PlanExecutor::backupStatusChanged, this, [this] {
+            sendPlansChangedSignal();
             mStatusUpdateTimer->start();
         });
         connect(mUsageAccTimer, &QTimer::timeout, lExecutor, &PlanExecutor::updateAccumulatedUsageTime);
@@ -276,6 +290,36 @@ void KupDaemon::handleRequests(QLocalSocket *pSocket)
     if (lOperation == QStringLiteral("show backup files")) {
         mExecutors.at(lPlanNumber)->showBackupFiles();
     }
+}
+
+QVariantList KupDaemon::getPlans()
+{
+    QVariantList lPlans;
+    for (const auto lPlanExec : mExecutors) {
+        const auto lPlan = lPlanExec->mPlan;
+        QVariantMap lPlanInfo;
+        lPlanInfo["Description"] = lPlan->mDescription;
+        lPlanInfo["Status"] = QVariant::fromValue(lPlan->backupStatus()).toString();
+        lPlanInfo["Busy"] = lPlanExec->busy();
+        lPlanInfo["ActivityState"] = QVariant::fromValue(lPlanExec->mState).toString();
+        lPlanInfo["LogFile"] = lPlanExec->mLogFilePath;
+        lPlanInfo["LogFileExists"] = QFileInfo::exists(lPlanExec->mLogFilePath);
+        lPlanInfo["Type"] = QVariant::fromValue(static_cast<BackupPlan::BackupType>(lPlan->mBackupType)).toString();
+        lPlanInfo["ScheduleType"] = QVariant::fromValue(static_cast<BackupPlan::ScheduleType>(lPlan->mScheduleType)).toString();
+        lPlanInfo["DestAvailable"] = lPlanExec->destinationAvailable();
+        lPlanInfo["LastCompleteBackup"] = lPlan->mLastCompleteBackup.toUTC();
+        lPlanInfo["LastBackupSize"] = lPlan->mLastBackupSize;
+        lPlanInfo["LastFreeSpace"] = lPlan->mLastAvailableSpace;
+        lPlans << lPlanInfo;
+    }
+    return lPlans;
+}
+
+void KupDaemon::sendPlansChangedSignal()
+{
+    QDBusMessage lSignal = QDBusMessage::createSignal(KUP_DBUS_OBJECT_PATH, KUP_DBUS_SERVICE_NAME, QStringLiteral("PlansChanged"));
+    lSignal << getPlans();
+    QDBusConnection::sessionBus().send(lSignal);
 }
 
 void KupDaemon::sendStatus(QLocalSocket *pSocket)
