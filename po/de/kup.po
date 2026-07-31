@@ -1017,7 +1017,7 @@ msgid ""
 msgstr ""
 "Verwenden Sie diese Option, wenn Sie Ihre Dateien auf einem externen "
 "Speichermedium sichern möchten, das in diesen Computer eingesteckt werden "
-"kann – z. B. eine USB-Festplatte oder ein USB-Stick."
+"kann – z. B. eine USB-Festplatte oder ein USB-Stick."
 
 #: kcm/backupplanwidget.cpp:676 kcm/backupplanwidget.cpp:679
 #, kde-kuit-format
