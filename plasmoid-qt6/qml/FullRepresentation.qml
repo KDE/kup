@@ -28,7 +28,7 @@ PlasmaComponents.Page {
 
 			PlasmaComponents.ToolButton {
 					icon.name: "view-refresh"
-					onClicked: reloadKup()
+					onClicked: planModel.reloadConfig()
 
 					PlasmaComponents.ToolTip {
 						text: i18nd("kup", "Reload Backup Plans")
@@ -51,14 +51,6 @@ PlasmaComponents.Page {
 		anchors.topMargin: Kirigami.Units.smallSpacing * 2
 		focus: true
 
-		Kirigami.Heading {
-			width: parent.width
-			level: 3
-			opacity: 0.6
-			text: getCommonStatus("no plan reason", "")
-			visible: planCount == 0
-		}
-
 		PlasmaComponents.ScrollView {
 			anchors.fill: parent
 
@@ -67,7 +59,7 @@ PlasmaComponents.Page {
 			contentWidth: availableWidth - plansList.leftMargin - plansList.rightMargin
 			contentItem: ListView {
 				id: plansList
-				model: planCount
+				model: planModel
 				clip: true
 				currentIndex: -1
 
@@ -77,15 +69,15 @@ PlasmaComponents.Page {
 				highlightMoveDuration: Kirigami.Units.shortDuration
 				highlightResizeDuration: Kirigami.Units.shortDuration
 
-				delegate: PlanItem {}
+				delegate: PlanItem { }
 
 				PlasmaExtras.PlaceholderMessage {
-					visible: planCount == 0
+					visible: planModel.count === 0
 
 					anchors.centerIn: parent
 					width: parent.width - (Kirigami.Units.gridUnit * 4)
 
-					text: getCommonStatus("no plan reason", "")
+					text: i18nd("kup", "No backup plans configured")
 
 					helpfulAction: QQC2.Action {
 						text: i18nd("kup", "Configure Backup Plans…")
@@ -95,16 +87,5 @@ PlasmaComponents.Page {
 				}
 			}
 		}
-	}
-
-	function getPlanStatus(planNumber, key){
-		var plan = backupPlans.data["plan " + planNumber.toString()];
-		return plan && plan[key] !== undefined ? plan[key] : "";
-	}
-
-	function startOperation(i, name) {
-		var service = backupPlans.serviceForSource(i.toString());
-		var operation = service.operationDescription(name);
-		service.startOperationCall(operation);
 	}
 }
