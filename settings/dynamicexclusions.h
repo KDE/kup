@@ -20,6 +20,7 @@ public:
     bool mExcludeEncryptedMounts{};
     bool mExcludeSnapshots{};
     bool mExcludeContainers{};
+    bool mExcludeUserFlatpaks{};
 
     QStringList pathsExcluded(const QStringList &pPathsIncluded);
 };

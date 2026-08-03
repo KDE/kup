@@ -45,6 +45,7 @@ BackupPlan::BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pPare
     addItemBool(QStringLiteral("Exclude encrypted folders"), mExcludeEncryptedMounts, true);
     addItemBool(QStringLiteral("Exclude snapshots"), mExcludeSnapshots, true);
     addItemBool(QStringLiteral("Exclude containers"), mExcludeContainers, true);
+    addItemBool(QStringLiteral("Exclude user flatpaks"), mExcludeUserFlatpaks, true);
 
     addItemStringList(QStringLiteral("Paths excluded"), mPathsExcluded, lDefaultExcludeList);
     addItemInt(QStringLiteral("Backup type"), mBackupType);
@@ -120,6 +121,7 @@ void BackupPlan::copyFrom(const BackupPlan &pPlan)
     mExcludeEncryptedMounts = pPlan.mExcludeEncryptedMounts;
     mExcludeSnapshots = pPlan.mExcludeSnapshots;
     mExcludeContainers = pPlan.mExcludeContainers;
+    mExcludeUserFlatpaks = pPlan.mExcludeUserFlatpaks;
 }
 
 QDateTime BackupPlan::nextScheduledTime()

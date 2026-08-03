@@ -21,6 +21,7 @@ void DynamicExclusions::setFromPlan(const BackupPlan &pPlan)
     mExcludeEncryptedMounts = pPlan.mExcludeEncryptedMounts;
     mExcludeSnapshots = pPlan.mExcludeSnapshots;
     mExcludeContainers = pPlan.mExcludeContainers;
+    mExcludeUserFlatpaks = pPlan.mExcludeUserFlatpaks;
 }
 
 QStringList DynamicExclusions::pathsExcluded(const QStringList &pPathsIncluded)
@@ -87,6 +88,10 @@ QStringList DynamicExclusions::pathsExcluded(const QStringList &pPathsIncluded)
     if (mExcludeSnapshots) {
         // this catches snapshots of the home dir taken by Snapper, which stores them under the respective subvolume
         lExclusions << QDir::homePath() + QStringLiteral("/.snapshots");
+    }
+
+    if (mExcludeUserFlatpaks) {
+        lExclusions << QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/flatpak");
     }
 
     QMutableStringListIterator lExclusionsIter(lExclusions);

@@ -1036,6 +1036,17 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available)
         mSourceSelectionWidget->mModel->recalculateDynamicExclusions();
     });
 
+    // These can be huge, but aren't user data, and they can be re-downloaded
+    auto [lExcludeUserFlatpaksWidget, lExcludeUserFlatpaksCheckbox] = createCheckBoxWithDescription(
+        lAdvancedWidget,
+        xi18nc("@option:check", "Exclude user-level Flatpaks"),
+        xi18nc("@info", "Flatpak apps and runtimes that can be re-downloaded (will not prevent backing up settings and data for these apps)"),
+        QStringLiteral("kcfg_Exclude user flatpaks"));
+    connect(lExcludeSnapshotsCheckbox, &QCheckBox::toggled, mSourceSelectionWidget, [this](bool state) {
+        mSourceSelectionWidget->mModel->dynamicExclusions.mExcludeUserFlatpaks = state;
+        mSourceSelectionWidget->mModel->recalculateDynamicExclusions();
+    });
+
     lAdvancedLayout->addWidget(lShowHiddenWidget);
     lAdvancedLayout->addWidget(lVerificationWidget);
     lAdvancedLayout->addWidget(lRecoveryWidget);
@@ -1046,6 +1057,7 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available)
     lAdvancedLayout->addWidget(lExcludeAppStatesWidget);
     lAdvancedLayout->addWidget(lExcludeContainersWidget);
     lAdvancedLayout->addWidget(lExcludeSnapshotsWidget);
+    lAdvancedLayout->addWidget(lExcludeUserFlatpaksWidget);
     lAdvancedLayout->addStretch();
     lAdvancedLayout->setSpacing(lIndentation);
     lAdvancedWidget->setLayout(lAdvancedLayout);

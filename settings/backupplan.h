@@ -30,6 +30,7 @@ public:
     bool mExcludeEncryptedMounts{};
     bool mExcludeSnapshots{};
     bool mExcludeContainers{};
+    bool mExcludeUserFlatpaks{};
     enum BackupType { BupType = 0, RsyncType };
     qint32 mBackupType{};
     qint32 mBackupVersion{};
