@@ -1404,23 +1404,19 @@ msgid "Configure Backup Plans…"
 msgstr "配置备份计划…"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:33
-#, fuzzy, kde-format
-#| msgid "Show files"
+#, kde-format
 msgid "Show Files"
-msgstr "显示文件"
+msgstr ""
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Backup"
+#, kde-format
 msgid "Save Backup"
-msgstr "保存备份"
+msgstr ""
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:49
-#, fuzzy, kde-format
-#| msgid "Prune old backups"
+#, kde-format
 msgid "Prune Old Backups"
-msgstr "删除旧备份"
+msgstr ""
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:57
 #, kde-format
