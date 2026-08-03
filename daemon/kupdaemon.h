@@ -45,8 +45,6 @@ public slots:
 
 private:
     void setupExecutors();
-    void handleRequests(QLocalSocket *pSocket);
-    void sendStatus(QLocalSocket *pSocket);
     void sendPlansChangedSignal();
 
     KSharedConfigPtr mConfig;
@@ -55,9 +53,7 @@ private:
     QTimer *mUsageAccTimer;
     QTimer *mStatusUpdateTimer;
     bool mWaitingToReloadConfig;
-    KUiServerV2JobTracker * const mJobTracker;
-    QLocalServer *mLocalServer;
-    QList<QLocalSocket *> mSockets;
+    KUiServerV2JobTracker *const mJobTracker;
 };
 
 #endif /*KUPDAEMON_H*/

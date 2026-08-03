@@ -33,7 +33,6 @@ KupDaemon::KupDaemon()
     , mStatusUpdateTimer(new QTimer(this))
     , mWaitingToReloadConfig(false)
     , mJobTracker(new KUiServerV2JobTracker(this))
-    , mLocalServer(new QLocalServer(this))
 {
 }
 
@@ -67,9 +66,6 @@ void KupDaemon::setupGuiStuff()
     mStatusUpdateTimer->setInterval(500);
     mStatusUpdateTimer->setSingleShot(true);
     connect(mStatusUpdateTimer, &QTimer::timeout, this, [this] {
-        foreach (QLocalSocket *lSocket, mSockets) {
-            sendStatus(lSocket);
-        }
         sendPlansChangedSignal();
 
         if (mWaitingToReloadConfig) {
@@ -84,27 +80,6 @@ void KupDaemon::setupGuiStuff()
             lDBus.registerObject(KUP_DBUS_OBJECT_PATH, this, QDBusConnection::ExportAllSlots);
         }
     }
-    QString lSocketName = QStringLiteral("kup-daemon-");
-    lSocketName += QString::fromLocal8Bit(qgetenv("USER"));
-
-    connect(mLocalServer, &QLocalServer::newConnection, this, [this] {
-        QLocalSocket *lSocket = mLocalServer->nextPendingConnection();
-        if (lSocket == nullptr) {
-            return;
-        }
-        sendStatus(lSocket);
-        mSockets.append(lSocket);
-        connect(lSocket, &QLocalSocket::readyRead, this, [this, lSocket] {
-            handleRequests(lSocket);
-        });
-        connect(lSocket, &QLocalSocket::disconnected, this, [this, lSocket] {
-            mSockets.removeAll(lSocket);
-            lSocket->deleteLater();
-        });
-    });
-    // remove old socket first in case it's still there, otherwise listen() fails.
-    QLocalServer::removeServer(lSocketName);
-    mLocalServer->listen(lSocketName);
 
     reloadConfig();
 }
@@ -254,44 +229,6 @@ void KupDaemon::setupExecutors()
     }
 }
 
-void KupDaemon::handleRequests(QLocalSocket *pSocket)
-{
-    if (pSocket->bytesAvailable() <= 0) {
-        return;
-    }
-    QJsonDocument lDoc = QJsonDocument::fromJson(pSocket->readAll());
-    if (!lDoc.isObject()) {
-        return;
-    }
-    QJsonObject lCommand = lDoc.object();
-    QString lOperation = lCommand["operation name"].toString();
-    if (lOperation == QStringLiteral("get status")) {
-        sendStatus(pSocket);
-        return;
-    }
-    if (lOperation == QStringLiteral("reload")) {
-        reloadConfig();
-        return;
-    }
-
-    int lPlanNumber = lCommand["plan number"].toInt(-1);
-    if (lPlanNumber < 0 || lPlanNumber >= mExecutors.count()) {
-        return;
-    }
-    if (lOperation == QStringLiteral("save backup")) {
-        mExecutors.at(lPlanNumber)->startBackupSaveJob();
-    }
-    if (lOperation == QStringLiteral("remove backups")) {
-        mExecutors.at(lPlanNumber)->showBackupPurger();
-    }
-    if (lOperation == QStringLiteral("show log file")) {
-        mExecutors.at(lPlanNumber)->showLog();
-    }
-    if (lOperation == QStringLiteral("show backup files")) {
-        mExecutors.at(lPlanNumber)->showBackupFiles();
-    }
-}
-
 QVariantList KupDaemon::getPlans()
 {
     QVariantList lPlans;
@@ -320,89 +257,4 @@ void KupDaemon::sendPlansChangedSignal()
     QDBusMessage lSignal = QDBusMessage::createSignal(KUP_DBUS_OBJECT_PATH, KUP_DBUS_SERVICE_NAME, QStringLiteral("PlansChanged"));
     lSignal << getPlans();
     QDBusConnection::sessionBus().send(lSignal);
-}
-
-void KupDaemon::sendStatus(QLocalSocket *pSocket)
-{
-    bool lTrayIconActive = false;
-    bool lAnyPlanBusy = false;
-    // If all backup plans have status == NO_STATUS then tooltip title will be empty
-    QString lToolTipTitle;
-    QString lToolTipSubTitle = i18nc("status in tooltip", "Backup destination not available");
-    QString lToolTipIconName = QStringLiteral("kup");
-
-    if (mExecutors.isEmpty()) {
-        lToolTipTitle = i18n("No backup plans configured");
-        lToolTipSubTitle.clear();
-    }
-
-    foreach (PlanExecutor *lExec, mExecutors) {
-        if (lExec->destinationAvailable()) {
-            lToolTipSubTitle = i18nc("status in tooltip", "Backup destination available");
-            if (lExec->scheduleType() == BackupPlan::MANUAL) {
-                lTrayIconActive = true;
-            }
-        }
-    }
-
-    foreach (PlanExecutor *lExec, mExecutors) {
-        if (lExec->mPlan->backupStatus() == BackupPlan::GOOD) {
-            lToolTipIconName = BackupPlan::iconName(BackupPlan::GOOD);
-            lToolTipTitle = i18nc("status in tooltip", "Backup status OK");
-        }
-    }
-
-    foreach (PlanExecutor *lExec, mExecutors) {
-        if (lExec->mPlan->backupStatus() == BackupPlan::MEDIUM) {
-            lToolTipIconName = BackupPlan::iconName(BackupPlan::MEDIUM);
-            lToolTipTitle = i18nc("status in tooltip", "New backup suggested");
-        }
-    }
-
-    foreach (PlanExecutor *lExec, mExecutors) {
-        if (lExec->mPlan->backupStatus() == BackupPlan::BAD) {
-            lToolTipIconName = BackupPlan::iconName(BackupPlan::BAD);
-            lToolTipTitle = i18nc("status in tooltip", "New backup needed");
-            lTrayIconActive = true;
-        }
-    }
-
-    foreach (PlanExecutor *lExecutor, mExecutors) {
-        if (lExecutor->busy()) {
-            lToolTipIconName = QStringLiteral("kup");
-            lToolTipTitle = lExecutor->currentActivityTitle();
-            lToolTipSubTitle = lExecutor->mPlan->mDescription;
-            lAnyPlanBusy = true;
-        }
-    }
-
-    if (lToolTipTitle.isEmpty() && !lToolTipSubTitle.isEmpty()) {
-        lToolTipTitle = lToolTipSubTitle;
-        lToolTipSubTitle.clear();
-    }
-
-    QJsonObject lStatus;
-    lStatus["event"] = QStringLiteral("status update");
-    lStatus["tray icon active"] = lTrayIconActive;
-    lStatus["tooltip icon name"] = lToolTipIconName;
-    lStatus["tooltip title"] = lToolTipTitle;
-    lStatus["tooltip subtitle"] = lToolTipSubTitle;
-    lStatus["any plan busy"] = lAnyPlanBusy;
-    lStatus["no plan reason"] = mExecutors.isEmpty() ? i18n("No backup plans configured") : QString();
-    QJsonArray lPlans;
-    foreach (PlanExecutor *lExecutor, mExecutors) {
-        QJsonObject lPlan;
-        lPlan[QStringLiteral("description")] = lExecutor->mPlan->mDescription;
-        lPlan[QStringLiteral("destination available")] = lExecutor->destinationAvailable();
-        lPlan[QStringLiteral("status heading")] = lExecutor->currentActivityTitle();
-        lPlan[QStringLiteral("status details")] = lExecutor->mPlan->statusText();
-        lPlan[QStringLiteral("icon name")] = BackupPlan::iconName(lExecutor->mPlan->backupStatus());
-        lPlan[QStringLiteral("log file exists")] = QFileInfo::exists(lExecutor->mLogFilePath);
-        lPlan[QStringLiteral("busy")] = lExecutor->busy();
-        lPlan[QStringLiteral("bup type")] = lExecutor->mPlan->mBackupType == BackupPlan::BupType;
-        lPlans.append(lPlan);
-    }
-    lStatus["plans"] = lPlans;
-    QJsonDocument lDoc(lStatus);
-    pSocket->write(lDoc.toJson());
 }

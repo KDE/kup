@@ -51,10 +51,6 @@ Crash
 if(QT_MAJOR_VERSION STREQUAL "6")
     add_subdirectory(plasmoid-qt6)
     find_package(Plasma REQUIRED)
-else()
-    find_package(KF5Plasma REQUIRED)
-    add_subdirectory(dataengine)
-    plasma_install_package(plasmoid-qt5 org.kde.kupapplet)
 endif()
 
 add_subdirectory(daemon)
