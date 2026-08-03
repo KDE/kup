@@ -522,7 +522,7 @@ KPageWidgetItem *BackupPlanWidget::createTypePage(const QString &pBupVersion, co
     QString lVersionedInfo = xi18nc("@info",
                                     "Back up multiple versions over time of the files in the source folders. "
                                     "This allows older versions of files or deleted files to be recovered."
-                                    "<nl/></nl/>"
+                                    "<nl/><nl/>"
                                     "The backup archive will grow in size over time, and can only be accessed "
                                     "using the recovery tools provided by this program.");
     auto lVersionedInfoLabel = new QLabel(lVersionedInfo);
