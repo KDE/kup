@@ -10,6 +10,8 @@
 #ifndef FOLDER_SELECTION_MODEL_H
 #define FOLDER_SELECTION_MODEL_H
 
+#include "../settings/dynamicexclusions.h"
+
 #include <QFileSystemModel>
 #include <QSet>
 
@@ -20,7 +22,14 @@ class FolderSelectionModel : public QFileSystemModel
 public:
     explicit FolderSelectionModel(bool pHiddenFoldersVisible = false, QObject *pParent = nullptr);
 
-    enum InclusionState { StateNone, StateIncluded, StateExcluded, StateIncludeInherited, StateExcludeInherited };
+    enum InclusionState {
+        StateNone,
+        StateIncluded,
+        StateExcluded,
+        StateIncludeInherited,
+        StateExcludeInherited,
+        StateExcludedAutomatic
+    };
 
     enum CustomRoles { IncludeStateRole = 7777 };
 
@@ -32,6 +41,7 @@ public:
     void setExcludedPaths(const QSet<QString> &pExcludedPaths);
     QSet<QString> includedPaths() const;
     QSet<QString> excludedPaths() const;
+    QSet<QString> dynamicallyExcludedPaths() const;
 
     /**
      * Include the specified path. All subdirs will be reset.
@@ -53,8 +63,11 @@ public:
 
     bool hiddenFoldersVisible() const;
 
+    DynamicExclusions dynamicExclusions;
+
 public slots:
     void setHiddenFoldersVisible(bool pVisible);
+    void recalculateDynamicExclusions();
 
 signals:
     void includedPathAdded(const QString &pPath);
@@ -68,6 +81,7 @@ private:
 
     QSet<QString> mIncludedPaths;
     QSet<QString> mExcludedPaths;
+    QSet<QString> mDynamicallyExcludedPaths;
 };
 
 #endif

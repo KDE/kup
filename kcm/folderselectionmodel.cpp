@@ -36,6 +36,7 @@ bool setContainsSubdir(const QSet<QString> &pSet, const QString &pParentDir)
 
 FolderSelectionModel::FolderSelectionModel(bool pHiddenFoldersVisible, QObject *pParent)
     : QFileSystemModel(pParent)
+    , dynamicExclusions(DynamicExclusions{})
 {
     setHiddenFoldersVisible(pHiddenFoldersVisible);
 }
@@ -44,6 +45,9 @@ Qt::ItemFlags FolderSelectionModel::flags(const QModelIndex &pIndex) const
 {
     Qt::ItemFlags lFlags = QFileSystemModel::flags(pIndex);
     lFlags |= Qt::ItemIsUserCheckable;
+    if (pIndex.isValid() && mDynamicallyExcludedPaths.contains(filePath(pIndex))) {
+        lFlags &= ~Qt::ItemIsEnabled;
+    }
     return lFlags;
 }
 
@@ -59,7 +63,7 @@ QVariant FolderSelectionModel::data(const QModelIndex &pIndex, int pRole) const
         switch (lState) {
         case StateIncluded:
         case StateIncludeInherited:
-            if (setContainsSubdir(mExcludedPaths, lPath)) {
+            if (setContainsSubdir(mExcludedPaths | mDynamicallyExcludedPaths, lPath)) {
                 return Qt::PartiallyChecked;
             }
             return Qt::Checked;
@@ -85,7 +89,7 @@ QVariant FolderSelectionModel::data(const QModelIndex &pIndex, int pRole) const
         switch (lState) {
         case StateIncluded:
         case StateIncludeInherited:
-            if (setContainsSubdir(mExcludedPaths, lPath)) {
+            if (setContainsSubdir(mExcludedPaths | mDynamicallyExcludedPaths, lPath)) {
                 return xi18nc("@info:tooltip %1 is the path of the folder in a listview",
                               "<filename>%1</filename><nl/>will be included in the backup, except "
                               "for unchecked subfolders",
@@ -93,6 +97,11 @@ QVariant FolderSelectionModel::data(const QModelIndex &pIndex, int pRole) const
             }
             return xi18nc("@info:tooltip %1 is the path of the folder in a listview",
                           "<filename>%1</filename><nl/>will be included in the backup",
+                          filePath(pIndex));
+        case StateExcludedAutomatic:
+            return xi18nc("@info:tooltip %1 is the path of the folder in a listview",
+                          "<filename>%1</filename><nl/>is <emphasis>automatically excluded</emphasis> from the backup."
+                          "<nl/>You can control this in the <interface>Advanced</interface> settings.",
                           filePath(pIndex));
         default:
             if (setContainsSubdir(mIncludedPaths, lPath)) {
@@ -160,7 +169,7 @@ void FolderSelectionModel::includePath(const QString &pPath)
 void FolderSelectionModel::excludePath(const QString &pPath)
 {
     const InclusionState lState = inclusionState(pPath);
-    if (lState == StateExcluded) {
+    if (lState == StateExcluded || lState == StateExcludedAutomatic) {
         return;
     }
     removeSubDirs(pPath);
@@ -217,6 +226,11 @@ QSet<QString> FolderSelectionModel::excludedPaths() const
     return mExcludedPaths;
 }
 
+QSet<QString> FolderSelectionModel::dynamicallyExcludedPaths() const
+{
+    return mDynamicallyExcludedPaths;
+}
+
 FolderSelectionModel::InclusionState FolderSelectionModel::inclusionState(const QModelIndex &pIndex) const
 {
     return inclusionState(filePath(pIndex));
@@ -226,6 +240,9 @@ FolderSelectionModel::InclusionState FolderSelectionModel::inclusionState(const 
 {
     if (mIncludedPaths.contains(pPath)) {
         return StateIncluded;
+    }
+    if (mDynamicallyExcludedPaths.contains(pPath)) {
+        return StateExcludedAutomatic;
     }
     if (mExcludedPaths.contains(pPath)) {
         return StateExcluded;
@@ -292,6 +309,42 @@ void FolderSelectionModel::removeSubDirs(const QString &pPath)
             emit includedPathRemoved(lPathCopy);
         } else {
             ++it;
+        }
+    }
+}
+
+void FolderSelectionModel::recalculateDynamicExclusions()
+{
+    QStringList lNewDynamicPathList = dynamicExclusions.pathsExcluded(mIncludedPaths.values());
+    QSet<QString> lNewDynamicPathSet = QSet(lNewDynamicPathList.begin(), lNewDynamicPathList.end());
+
+    QSet<QString> lRemoved = mDynamicallyExcludedPaths - lNewDynamicPathSet;
+    QSet<QString> lAdded = lNewDynamicPathSet - mDynamicallyExcludedPaths;
+    if (lRemoved.count() + lAdded.count() == 0)
+        return;
+
+    mDynamicallyExcludedPaths = lNewDynamicPathSet;
+
+    foreach (const QString &lRemovedPath, lRemoved) {
+        removeSubDirs(lRemovedPath);
+        emit excludedPathRemoved(lRemovedPath);
+        const QModelIndex lRemovedIndex = index(lRemovedPath);
+        emit dataChanged(lRemovedIndex, findLastLeaf(lRemovedIndex));
+        QModelIndex lRecurseIndex = lRemovedIndex.parent();
+        while (lRecurseIndex.isValid()) {
+            emit dataChanged(lRecurseIndex, lRecurseIndex);
+            lRecurseIndex = lRecurseIndex.parent();
+        }
+    }
+    foreach (const QString &lAddedPath, lAdded) {
+        removeSubDirs(lAddedPath);
+        emit excludedPathAdded(lAddedPath);
+        const QModelIndex lAddedIndex = index(lAddedPath);
+        emit dataChanged(lAddedIndex, findLastLeaf(lAddedIndex));
+        QModelIndex lRecurseIndex = lAddedIndex.parent();
+        while (lRecurseIndex.isValid()) {
+            emit dataChanged(lRecurseIndex, lRecurseIndex);
+            lRecurseIndex = lRecurseIndex.parent();
         }
     }
 }

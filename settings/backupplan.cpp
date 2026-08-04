@@ -6,6 +6,7 @@
 #include "kuputils.h"
 
 #include <QDir>
+#include <QDirIterator>
 #include <QStandardPaths>
 #include <QString>
 #include <QTimeZone>
@@ -28,15 +29,8 @@ BackupPlan::BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pPare
     lDefaultIncludeList << QDir::homePath();
     addItemStringList(QStringLiteral("Paths included"), mPathsIncluded, lDefaultIncludeList);
     QStringList lDefaultExcludeList;
-    lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.cache");
     lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.bup");
-    lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.thumbnails");
-    lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.local/share/Trash");
-    lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.local/share/baloo");
-    lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.local/share/container");
-    lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.local/share/TelegramDesktop/tdata/temp");
-    lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.config/Riot/Cache");
-    lDefaultExcludeList << QDir::homePath() + QStringLiteral("/Vaults"); // might be mounted; don't leak data
+
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
     lDefaultExcludeList << QStandardPaths::writableLocation(QStandardPaths::GenericStateLocation);
 #endif
@@ -44,6 +38,13 @@ BackupPlan::BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pPare
     while (i.hasNext()) {
         ensureNoTrailingSlash(i.next());
     }
+
+    addItemBool(QStringLiteral("Exclude trash"), mExcludeTrash, true);
+    addItemBool(QStringLiteral("Exclude app states"), mExcludeAppStates, true);
+    addItemBool(QStringLiteral("Exclude caches"), mExcludeCaches, true);
+    addItemBool(QStringLiteral("Exclude encrypted folders"), mExcludeEncryptedMounts, true);
+    addItemBool(QStringLiteral("Exclude snapshots"), mExcludeSnapshots, true);
+    addItemBool(QStringLiteral("Exclude containers"), mExcludeContainers, true);
 
     addItemStringList(QStringLiteral("Paths excluded"), mPathsExcluded, lDefaultExcludeList);
     addItemInt(QStringLiteral("Backup type"), mBackupType);
@@ -113,6 +114,12 @@ void BackupPlan::copyFrom(const BackupPlan &pPlan)
     mShowHiddenFolders = pPlan.mShowHiddenFolders;
     mGenerateRecoveryInfo = pPlan.mGenerateRecoveryInfo;
     mCheckBackups = pPlan.mCheckBackups;
+    mExcludeTrash = pPlan.mExcludeTrash;
+    mExcludeAppStates = pPlan.mExcludeAppStates;
+    mExcludeCaches = pPlan.mExcludeCaches;
+    mExcludeEncryptedMounts = pPlan.mExcludeEncryptedMounts;
+    mExcludeSnapshots = pPlan.mExcludeSnapshots;
+    mExcludeContainers = pPlan.mExcludeContainers;
 }
 
 QDateTime BackupPlan::nextScheduledTime()

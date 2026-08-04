@@ -69,6 +69,7 @@ class FolderSelectionWidget : public QWidget
 public:
     explicit FolderSelectionWidget(FolderSelectionModel *pModel, QWidget *pParent = nullptr);
     virtual ~FolderSelectionWidget();
+    FolderSelectionModel *mModel;
 
 public slots:
     void setHiddenFoldersVisible(bool pVisible);
@@ -81,7 +82,6 @@ public slots:
 
 protected:
     QTreeView *mTreeView;
-    FolderSelectionModel *mModel;
     KMessageWidget *mMessageWidget;
     QThread *mWorkerThread;
     QStringList mUnreadableFolders;
@@ -160,6 +160,7 @@ protected:
     QRadioButton *mSyncedRadio{};
     FolderSelectionWidget *mSourceSelectionWidget{};
     KPageWidgetItem *mSourcePage;
+    KPageWidgetItem *mAdvancedPage;
     KMessageWidget *mLocalMessage;
     KMessageWidget *mExistMessage;
 

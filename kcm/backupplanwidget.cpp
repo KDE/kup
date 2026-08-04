@@ -336,7 +336,7 @@ void FolderSelectionWidget::setHiddenFoldersVisible(bool pVisible)
 
 void FolderSelectionWidget::expandToShowSelections()
 {
-    foreach (const QString &lFolder, mModel->includedPaths() + mModel->excludedPaths()) {
+    foreach (const QString &lFolder, mModel->includedPaths() + mModel->excludedPaths() + mModel->dynamicallyExcludedPaths()) {
         QFileInfo lFolderInfo(lFolder);
         bool lShouldBeShown = true;
         while (lFolderInfo.absoluteFilePath() != QStringLiteral("/")) {
@@ -491,7 +491,8 @@ BackupPlanWidget::BackupPlanWidget(BackupPlan *pBackupPlan, const QString &pBupV
     mConfigPages->addPage(mSourcePage);
     mConfigPages->addPage(createDestinationPage());
     mConfigPages->addPage(createSchedulePage());
-    mConfigPages->addPage(createAdvancedPage(pPar2Available));
+    mAdvancedPage = createAdvancedPage(pPar2Available);
+    mConfigPages->addPage(mAdvancedPage);
 
     auto lHLayout1 = new QHBoxLayout;
     lHLayout1->addWidget(mConfigureButton);
@@ -595,8 +596,26 @@ KPageWidgetItem *BackupPlanWidget::createTypePage(const QString &pBupVersion, co
 
 KPageWidgetItem *BackupPlanWidget::createSourcePage()
 {
-    mSourceSelectionWidget = new FolderSelectionWidget(new FolderSelectionModel(mBackupPlan->mShowHiddenFolders), this);
-    auto lPage = new KPageWidgetItem(mSourceSelectionWidget);
+    auto lSourceSelectionModel = new FolderSelectionModel(mBackupPlan->mShowHiddenFolders, this);
+    mSourceSelectionWidget = new FolderSelectionWidget(lSourceSelectionModel, this);
+
+    auto lWidget = new QWidget(this);
+    auto lGridLayout = new QGridLayout(lWidget);
+    lGridLayout->addWidget(mSourceSelectionWidget);
+
+    auto lExclusionInfoLabel = new QLabel(lWidget);
+    lExclusionInfoLabel->setText(xi18nc("@info",
+                                        "Some files and folders (such as caches or encrypted folders) are automatically excluded. "
+                                        "You can configure this in the <interface><link>Advanced</link></interface> settings."));
+    lExclusionInfoLabel->setWordWrap(true);
+    connect(lExclusionInfoLabel, &QLabel::linkActivated, mConfigPages, [this]() {
+        mConfigPages->setCurrentPage(mAdvancedPage);
+    });
+    lGridLayout->addWidget(lExclusionInfoLabel);
+
+    lWidget->setLayout(lGridLayout);
+
+    auto lPage = new KPageWidgetItem(lWidget);
     lPage->setName(xi18nc("@title", "Sources"));
     lPage->setHeader(xi18nc("@label", "Select which folders to include in backup"));
     lPage->setIcon(QIcon::fromTheme(QStringLiteral("cloud-upload")));
@@ -826,6 +845,30 @@ KPageWidgetItem *BackupPlanWidget::createSchedulePage()
     return lPage;
 }
 
+std::pair<QWidget *, QCheckBox *> createCheckBoxWithDescription(QWidget *pParent, QString pLabel, QString pExplanation, QString pObjName)
+{
+    auto lWidget = new QWidget(pParent);
+
+    auto lExplanationLabel = new QLabel(pExplanation, lWidget);
+    lExplanationLabel->setWordWrap(true);
+
+    int lIndentation = lWidget->style()->pixelMetric(QStyle::PM_IndicatorWidth) + lWidget->style()->pixelMetric(QStyle::PM_CheckBoxLabelSpacing);
+    auto lLayout = new QGridLayout(lWidget);
+    lLayout->setAlignment(Qt::AlignmentFlag::AlignTop);
+    lLayout->setContentsMargins(0, 0, 0, 0);
+    lLayout->setSpacing(0);
+    lLayout->setColumnMinimumWidth(0, lIndentation);
+
+    auto lCheckbox = new QCheckBox(pLabel, lWidget);
+    lCheckbox->setObjectName(pObjName);
+
+    lLayout->addWidget(lCheckbox, 0, 0, 1, 2);
+    lLayout->addWidget(lExplanationLabel, 1, 1);
+    lWidget->setLayout(lLayout);
+
+    return {lWidget, lCheckbox};
+}
+
 KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available)
 {
     auto lAdvancedWidget = new QWidget(this);
@@ -834,37 +877,28 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available)
     int lIndentation =
         lAdvancedWidget->style()->pixelMetric(QStyle::PM_IndicatorWidth) + lAdvancedWidget->style()->pixelMetric(QStyle::PM_CheckBoxLabelSpacing);
 
-    auto lShowHiddenWidget = new QWidget;
-    auto lShowHiddenCheckBox = new QCheckBox(xi18nc("@option:check", "Show hidden folders in source selection"));
-    lShowHiddenCheckBox->setObjectName(QStringLiteral("kcfg_Show hidden folders"));
+    auto [lShowHiddenWidget, lShowHiddenCheckBox] = createCheckBoxWithDescription(lAdvancedWidget,
+                                                                                  xi18nc("@option:check", "Show hidden folders in source selection"),
+                                                                                  xi18nc("@info",
+                                                                                         "This makes it possible to explicitly include or "
+                                                                                         "exclude hidden folders in the backup source "
+                                                                                         "selection. Hidden folders have a name that starts "
+                                                                                         "with a dot. They are typically located in your home "
+                                                                                         "folder and are used to store settings and temporary "
+                                                                                         "files for your applications."),
+                                                                                  QStringLiteral("kcfg_Show hidden folders"));
     connect(lShowHiddenCheckBox, SIGNAL(toggled(bool)), mSourceSelectionWidget, SLOT(setHiddenFoldersVisible(bool)));
-    auto lShowHiddenLabel = new QLabel(xi18nc("@info",
-                                              "This makes it possible to explicitly include or "
-                                              "exclude hidden folders in the backup source "
-                                              "selection. Hidden folders have a name that starts "
-                                              "with a dot. They are typically located in your home "
-                                              "folder and are used to store settings and temporary "
-                                              "files for your applications."));
-    lShowHiddenLabel->setWordWrap(true);
-    auto lShowHiddenLayout = new QGridLayout;
-    lShowHiddenLayout->setContentsMargins(0, 0, 0, 0);
-    lShowHiddenLayout->setSpacing(0);
-    lShowHiddenLayout->setColumnMinimumWidth(0, lIndentation);
-    lShowHiddenLayout->addWidget(lShowHiddenCheckBox, 0, 0, 1, 2);
-    lShowHiddenLayout->addWidget(lShowHiddenLabel, 1, 1);
-    lShowHiddenWidget->setLayout(lShowHiddenLayout);
 
-    auto lRecoveryWidget = new QWidget;
+    auto [lRecoveryWidget, lRecoveryCheckBox] = createCheckBoxWithDescription(lAdvancedWidget,
+                                                                              QString{}, // will be set below
+                                                                              xi18nc("@info",
+                                                                                     "This will make your backups use around 10% more storage "
+                                                                                     "space and saving backups will take slightly longer time. In "
+                                                                                     "return it will be possible to recover from a partially corrupted "
+                                                                                     "backup."),
+                                                                              QStringLiteral("kcfg_Generate recovery info"));
+
     lRecoveryWidget->setVisible(false);
-    auto lRecoveryCheckBox = new QCheckBox;
-    lRecoveryCheckBox->setObjectName(QStringLiteral("kcfg_Generate recovery info"));
-
-    auto lRecoveryLabel = new QLabel(xi18nc("@info",
-                                            "This will make your backups use around 10% more storage "
-                                            "space and saving backups will take slightly longer time. In "
-                                            "return it will be possible to recover from a partially corrupted "
-                                            "backup."));
-    lRecoveryLabel->setWordWrap(true);
     if (pPar2Available) {
         lRecoveryCheckBox->setText(xi18nc("@option:check", "Generate recovery information"));
     } else {
@@ -872,36 +906,20 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available)
                                           "Generate recovery information (not available "
                                           "because <application>par2</application> is not installed)"));
         lRecoveryCheckBox->setEnabled(false);
-        lRecoveryLabel->setEnabled(false);
     }
-    auto lRecoveryLayout = new QGridLayout;
-    lRecoveryLayout->setContentsMargins(0, 0, 0, 0);
-    lRecoveryLayout->setSpacing(0);
-    lRecoveryLayout->setColumnMinimumWidth(0, lIndentation);
-    lRecoveryLayout->addWidget(lRecoveryCheckBox, 0, 0, 1, 2);
-    lRecoveryLayout->addWidget(lRecoveryLabel, 1, 1);
-    lRecoveryWidget->setLayout(lRecoveryLayout);
     connect(mVersionedRadio, SIGNAL(toggled(bool)), lRecoveryWidget, SLOT(setVisible(bool)));
 
-    auto lVerificationWidget = new QWidget;
+    auto [lVerificationWidget, lVerificationCheckBox] = createCheckBoxWithDescription(lAdvancedWidget,
+                                                                                      xi18nc("@option:check", "Verify integrity of backups"),
+                                                                                      xi18nc("@info",
+                                                                                             "Checks the whole backup archive for corruption "
+                                                                                             "every time you save new data. Saving backups will take a "
+                                                                                             "little bit longer time but it allows you to catch corruption "
+                                                                                             "problems sooner than at the time you need to use a backup, "
+                                                                                             "at that time it could be too late."),
+                                                                                      QStringLiteral("kcfg_Check backups"));
     lVerificationWidget->setVisible(false);
-    auto lVerificationCheckBox = new QCheckBox(xi18nc("@option:check", "Verify integrity of backups"));
-    lVerificationCheckBox->setObjectName(QStringLiteral("kcfg_Check backups"));
 
-    auto lVerificationLabel = new QLabel(xi18nc("@info",
-                                                "Checks the whole backup archive for corruption "
-                                                "every time you save new data. Saving backups will take a "
-                                                "little bit longer time but it allows you to catch corruption "
-                                                "problems sooner than at the time you need to use a backup, "
-                                                "at that time it could be too late."));
-    lVerificationLabel->setWordWrap(true);
-    auto lVerificationLayout = new QGridLayout;
-    lVerificationLayout->setContentsMargins(0, 0, 0, 0);
-    lVerificationLayout->setSpacing(0);
-    lVerificationLayout->setColumnMinimumWidth(0, lIndentation);
-    lVerificationLayout->addWidget(lVerificationCheckBox, 0, 0, 1, 2);
-    lVerificationLayout->addWidget(lVerificationLabel, 1, 1);
-    lVerificationWidget->setLayout(lVerificationLayout);
     connect(mVersionedRadio, SIGNAL(toggled(bool)), lVerificationWidget, SLOT(setVisible(bool)));
 
     auto lExcludesWidget = new QWidget;
@@ -961,10 +979,73 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available)
     lExcludesLayout->addWidget(lExcludesButton, 2, 2);
     lExcludesWidget->setLayout(lExcludesLayout);
 
+    auto [lExcludeCachesWidget, lExcludeCachesCheckbox] = createCheckBoxWithDescription(lAdvancedWidget,
+                                                                                        xi18nc("@option:check", "Exclude caches"),
+                                                                                        xi18nc("@info", "Temporary data that can be recreated"),
+                                                                                        QStringLiteral("kcfg_Exclude caches"));
+    connect(lExcludeCachesCheckbox, &QCheckBox::toggled, mSourceSelectionWidget, [this](bool state) {
+        mSourceSelectionWidget->mModel->dynamicExclusions.mExcludeCaches = state;
+        mSourceSelectionWidget->mModel->recalculateDynamicExclusions();
+    });
+
+    auto [lExcludeEncryptedWidget, lExcludeEncryptedCheckbox] =
+        createCheckBoxWithDescription(lAdvancedWidget,
+                                      xi18nc("@option:check", "Exclude encrypted folders"),
+                                      xi18nc("@info", "Contents of unlocked encrypted folders, such as those created with Plasma Vault"),
+                                      QStringLiteral("kcfg_Exclude encrypted folders"));
+    connect(lExcludeEncryptedCheckbox, &QCheckBox::toggled, mSourceSelectionWidget, [this](bool state) {
+        mSourceSelectionWidget->mModel->dynamicExclusions.mExcludeEncryptedMounts = state;
+        mSourceSelectionWidget->mModel->recalculateDynamicExclusions();
+    });
+
+    auto [lExcludeTrashWidget, lExcludeTrashCheckbox] = createCheckBoxWithDescription(lAdvancedWidget,
+                                                                                      xi18nc("@option:check", "Exclude trash"),
+                                                                                      xi18nc("@info", "Files in trash that have not been permanently deleted"),
+                                                                                      QStringLiteral("kcfg_Exclude trash"));
+    connect(lExcludeTrashCheckbox, &QCheckBox::toggled, mSourceSelectionWidget, [this](bool state) {
+        mSourceSelectionWidget->mModel->dynamicExclusions.mExcludeTrash = state;
+        mSourceSelectionWidget->mModel->recalculateDynamicExclusions();
+    });
+
+    auto [lExcludeAppStatesWidget, lExcludeAppStatesCheckbox] =
+        createCheckBoxWithDescription(lAdvancedWidget,
+                                      xi18nc("@option:check", "Exclude app states"),
+                                      xi18nc("@info", "App-specific state data, such as window position, history, and open files"),
+                                      QStringLiteral("kcfg_Exclude app states"));
+    connect(lExcludeAppStatesCheckbox, &QCheckBox::toggled, mSourceSelectionWidget, [this](bool state) {
+        mSourceSelectionWidget->mModel->dynamicExclusions.mExcludeAppStates = state;
+        mSourceSelectionWidget->mModel->recalculateDynamicExclusions();
+    });
+
+    auto [lExcludeContainersWidget, lExcludeContainersCheckbox] =
+        createCheckBoxWithDescription(lAdvancedWidget,
+                                      xi18nc("@option:check", "Exclude containers and virtual machine images"),
+                                      xi18nc("@info", "Containers or virtual machine images, such as those created by GNOME Boxes, Docker, Podman, and Incus"),
+                                      QStringLiteral("kcfg_Exclude containers"));
+    connect(lExcludeContainersCheckbox, &QCheckBox::toggled, mSourceSelectionWidget, [this](bool state) {
+        mSourceSelectionWidget->mModel->dynamicExclusions.mExcludeContainers = state;
+        mSourceSelectionWidget->mModel->recalculateDynamicExclusions();
+    });
+
+    auto [lExcludeSnapshotsWidget, lExcludeSnapshotsCheckbox] = createCheckBoxWithDescription(lAdvancedWidget,
+                                                                                              xi18nc("@option:check", "Exclude snapshots"),
+                                                                                              xi18nc("@info", "Btrfs filesystem snapshots"),
+                                                                                              QStringLiteral("kcfg_Exclude snapshots"));
+    connect(lExcludeSnapshotsCheckbox, &QCheckBox::toggled, mSourceSelectionWidget, [this](bool state) {
+        mSourceSelectionWidget->mModel->dynamicExclusions.mExcludeSnapshots = state;
+        mSourceSelectionWidget->mModel->recalculateDynamicExclusions();
+    });
+
     lAdvancedLayout->addWidget(lShowHiddenWidget);
     lAdvancedLayout->addWidget(lVerificationWidget);
     lAdvancedLayout->addWidget(lRecoveryWidget);
     lAdvancedLayout->addWidget(lExcludesWidget);
+    lAdvancedLayout->addWidget(lExcludeCachesWidget);
+    lAdvancedLayout->addWidget(lExcludeEncryptedWidget);
+    lAdvancedLayout->addWidget(lExcludeTrashWidget);
+    lAdvancedLayout->addWidget(lExcludeAppStatesWidget);
+    lAdvancedLayout->addWidget(lExcludeContainersWidget);
+    lAdvancedLayout->addWidget(lExcludeSnapshotsWidget);
     lAdvancedLayout->addStretch();
     lAdvancedLayout->setSpacing(lIndentation);
     lAdvancedWidget->setLayout(lAdvancedLayout);

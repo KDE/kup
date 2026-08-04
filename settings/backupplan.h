@@ -24,6 +24,12 @@ public:
     QString mDescription;
     QStringList mPathsIncluded;
     QStringList mPathsExcluded;
+    bool mExcludeTrash{};
+    bool mExcludeAppStates{};
+    bool mExcludeCaches{};
+    bool mExcludeEncryptedMounts{};
+    bool mExcludeSnapshots{};
+    bool mExcludeContainers{};
     enum BackupType { BupType = 0, RsyncType };
     qint32 mBackupType{};
     qint32 mBackupVersion{};

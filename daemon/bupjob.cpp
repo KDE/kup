@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 #include "bupjob.h"
+#include "dynamicexclusions.h"
 #include "kupdaemon_debug.h"
 
 #include <KLocalizedString>
@@ -135,10 +136,14 @@ void BupJob::startIndexing()
     mIndexProcess << QStringLiteral("-d") << mDestinationPath;
     mIndexProcess << QStringLiteral("index") << QStringLiteral("-u");
 
-    foreach (const QString &lExclude, mBackupPlan.mPathsExcluded) {
+    DynamicExclusions lDynExclusions;
+    lDynExclusions.setFromPlan(mBackupPlan);
+
+    foreach (const QString &lExclude, mBackupPlan.mPathsExcluded + lDynExclusions.pathsExcluded(mBackupPlan.mPathsIncluded)) {
         mIndexProcess << QStringLiteral("--exclude");
         mIndexProcess << lExclude;
     }
+
     QString lExcludesPath = mBackupPlan.absoluteExcludesFilePath();
     if (mBackupPlan.mExcludePatterns && QFileInfo::exists(lExcludesPath)) {
         mIndexProcess << QStringLiteral("--exclude-rx-from") << lExcludesPath;

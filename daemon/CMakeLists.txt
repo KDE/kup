@@ -18,6 +18,7 @@ rsyncjob.cpp
 ../settings/backupplan.cpp
 ../settings/kupsettings.cpp
 ../settings/kuputils.cpp
+../settings/dynamicexclusions.cpp
 )
 
 ecm_qt_declare_logging_category(kupdaemon_SRCS

@@ -17,6 +17,7 @@ kbuttongroup.cpp
 ../settings/backupplan.cpp
 ../settings/kupsettings.cpp
 ../settings/kuputils.cpp
+../settings/dynamicexclusions.cpp
 )
 
 kcoreaddons_add_plugin(kcm_kup SOURCES ${kcm_kup_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings_qwidgets")

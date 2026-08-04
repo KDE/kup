@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 #include "rsyncjob.h"
+#include "dynamicexclusions.h"
 #include "kuputils.h"
 
 #include <csignal>
@@ -60,6 +61,9 @@ void RsyncJob::performJob()
     mRsyncProcess << QStringLiteral("--delete-excluded") << QStringLiteral("--delete-before") << QStringLiteral("--verbose")
                   << QStringLiteral("--info=progress2");
 
+    DynamicExclusions lDynExclusions;
+    lDynExclusions.setFromPlan(mBackupPlan);
+
     QStringList lIncludeNames;
     foreach (const QString &lInclude, mBackupPlan.mPathsIncluded) {
         lIncludeNames << lastPartOfPath(lInclude);
@@ -67,13 +71,13 @@ void RsyncJob::performJob()
     if (lIncludeNames.removeDuplicates() > 0) {
         // There would be a naming conflict in the destination folder, instead use full paths.
         mRsyncProcess << QStringLiteral("-R");
-        foreach (const QString &lExclude, mBackupPlan.mPathsExcluded) {
+        foreach (const QString &lExclude, mBackupPlan.mPathsExcluded + lDynExclusions.pathsExcluded(mBackupPlan.mPathsIncluded)) {
             mRsyncProcess << QStringLiteral("--exclude") << lExclude;
         }
     } else {
         // when NOT using -R, need to then strip parent paths from excludes, everything above the
         // include. Leave the leading slash!
-        foreach (QString lExclude, mBackupPlan.mPathsExcluded) {
+        foreach (QString lExclude, mBackupPlan.mPathsExcluded + lDynExclusions.pathsExcluded(mBackupPlan.mPathsIncluded)) {
             for (int i = 0; i < mBackupPlan.mPathsIncluded.length(); ++i) {
                 const QString &lInclude = mBackupPlan.mPathsIncluded.at(i);
                 QString lIncludeWithSlash = lInclude;
