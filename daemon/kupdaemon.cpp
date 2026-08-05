@@ -132,12 +132,16 @@ void KupDaemon::saveNewBackup(int pPlanNumber)
 
 void KupDaemon::browseBackup(int pPlanNumber) const
 {
-    mExecutors.at(pPlanNumber)->showBackupFiles();
+    if (pPlanNumber > 0 && pPlanNumber <= mExecutors.count()) {
+        mExecutors.at(pPlanNumber - 1)->showBackupFiles();
+    }
 }
 
 void KupDaemon::purgeBackups(int pPlanNumber)
 {
-    mExecutors.at(pPlanNumber)->showBackupPurger();
+    if (pPlanNumber > 0 && pPlanNumber <= mExecutors.count()) {
+        mExecutors.at(pPlanNumber - 1)->showBackupPurger();
+    }
 }
 
 QVariantList KupDaemon::getPlans() const

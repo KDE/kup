@@ -116,17 +116,17 @@ void PlanModel::reloadConfig()
 
 void PlanModel::saveNewBackup(int pIdx)
 {
-    mDBusIface.asyncCall(QStringLiteral("saveNewBackup"), pIdx);
+    mDBusIface.asyncCall(QStringLiteral("saveNewBackup"), pIdx + 1);
 }
 
 void PlanModel::purgeBackups(int pIdx)
 {
-    mDBusIface.asyncCall(QStringLiteral("purgeBackups"), pIdx);
+    mDBusIface.asyncCall(QStringLiteral("purgeBackups"), pIdx + 1);
 }
 
 void PlanModel::browseBackup(int pIdx)
 {
-    mDBusIface.asyncCall(QStringLiteral("browseBackup"), pIdx);
+    mDBusIface.asyncCall(QStringLiteral("browseBackup"), pIdx + 1);
 }
 
 void PlanModel::openLogFile(int pIdx)
