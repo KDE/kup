@@ -11,14 +11,18 @@ import org.kde.plasma.plasmoid
 PlasmaExtras.ExpandableListItem {
     required index
 
+    required property string status
     required property string description
     required property bool busy
-    required property string type
     required property string activityState
-    required property string status
-    required property string lastCompleteBackup
-    required property bool destAvailable
+    required property string logFile
     required property bool logFileExists
+    required property string type
+    required property string scheduleType
+    required property bool destAvailable
+    required property string lastCompleteBackup
+    required property real lastBackupSize
+    required property real lastFreeSpace
 
     title: description
     subtitle: {
@@ -66,5 +70,5 @@ PlasmaExtras.ExpandableListItem {
     }
 
     defaultActionButtonAction: openFilesAction.enabled ? openFilesAction : null
-        contextualActions: [saveNewAction, pruneAction, openLogAction]
+    contextualActions: [saveNewAction, pruneAction, openLogAction]
 }

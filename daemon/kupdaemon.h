@@ -39,8 +39,8 @@ public slots:
     void runIntegrityCheck(const QString &pPath);
     void saveNewBackup(int pPlanNumber);
     void purgeBackups(int pPlanNumber);
-    void browseBackup(int pPlanNumber);
-    QVariantList getPlans();
+    void browseBackup(int pPlanNumber) const;
+    QVariantList getPlans() const;
     QString getRepositoryPath(const QString &pPath) const;
 
 private:

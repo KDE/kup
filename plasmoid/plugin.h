@@ -42,7 +42,6 @@ public:
     explicit PlanModel(QObject *parent = nullptr);
     Q_INVOKABLE void fetchFromDaemon();
 
-    const PlanModel *planModel() const;
     bool shouldBeActive() const;
     bool anyBusy() const;
     QString worstStatus() const;
@@ -59,8 +58,6 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-    void setPlans(const QVariantList &plans);
-
 Q_SIGNALS:
     void countChanged(int);
     void shouldBeActiveChanged(bool);
@@ -70,7 +67,8 @@ Q_SIGNALS:
     void anyDestsAvailableChanged(bool);
 
 private:
-    Q_SLOT void slotPlansChanged(const QDBusMessage &msg);
+    Q_SLOT void receiveUpdatedPlans(const QDBusMessage &msg);
+    void setPlans(const QVariantList &plans);
 
     QVariantList mPlans;
     QDBusInterface mDBusIface;

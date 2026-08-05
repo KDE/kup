@@ -130,7 +130,7 @@ void KupDaemon::saveNewBackup(int pPlanNumber)
     }
 }
 
-void KupDaemon::browseBackup(int pPlanNumber)
+void KupDaemon::browseBackup(int pPlanNumber) const
 {
     mExecutors.at(pPlanNumber)->showBackupFiles();
 }
@@ -140,9 +140,32 @@ void KupDaemon::purgeBackups(int pPlanNumber)
     mExecutors.at(pPlanNumber)->showBackupPurger();
 }
 
+QVariantList KupDaemon::getPlans() const
+{
+    QVariantList lPlans;
+    for (const auto lPlanExec : std::as_const(mExecutors)) {
+        const auto lPlan = lPlanExec->mPlan;
+        QVariantMap lPlanInfo;
+        lPlanInfo["Description"] = lPlan->mDescription;
+        lPlanInfo["Status"] = QVariant::fromValue(lPlan->backupStatus()).toString();
+        lPlanInfo["Busy"] = lPlanExec->busy();
+        lPlanInfo["ActivityState"] = QVariant::fromValue(lPlanExec->mState).toString();
+        lPlanInfo["LogFile"] = lPlanExec->mLogFilePath;
+        lPlanInfo["LogFileExists"] = QFileInfo::exists(lPlanExec->mLogFilePath);
+        lPlanInfo["Type"] = QVariant::fromValue(static_cast<BackupPlan::BackupType>(lPlan->mBackupType)).toString();
+        lPlanInfo["ScheduleType"] = QVariant::fromValue(static_cast<BackupPlan::ScheduleType>(lPlan->mScheduleType)).toString();
+        lPlanInfo["DestAvailable"] = lPlanExec->destinationAvailable();
+        lPlanInfo["LastCompleteBackup"] = lPlan->mLastCompleteBackup.toUTC();
+        lPlanInfo["LastBackupSize"] = lPlan->mLastBackupSize;
+        lPlanInfo["LastFreeSpace"] = lPlan->mLastAvailableSpace;
+        lPlans << lPlanInfo;
+    }
+    return lPlans;
+}
+
 QString KupDaemon::getRepositoryPath(const QString &pPath) const
 {
-    for (const auto lExecutor : mExecutors) {
+    for (const auto lExecutor : std::as_const(mExecutors)) {
         auto lPlan = lExecutor->mPlan;
 
         bool lIsIncluded = std::any_of(lPlan->mPathsIncluded.cbegin(), lPlan->mPathsIncluded.cend(), [&](const QString &lIncludedPath) {
@@ -216,40 +239,15 @@ void KupDaemon::setupExecutors()
             continue;
         }
         connect(lExecutor, &PlanExecutor::stateChanged, this, [this] {
-            sendPlansChangedSignal();
             mStatusUpdateTimer->start();
         });
         connect(lExecutor, &PlanExecutor::backupStatusChanged, this, [this] {
-            sendPlansChangedSignal();
             mStatusUpdateTimer->start();
         });
         connect(mUsageAccTimer, &QTimer::timeout, lExecutor, &PlanExecutor::updateAccumulatedUsageTime);
         lExecutor->checkStatus();
         mExecutors.append(lExecutor);
     }
-}
-
-QVariantList KupDaemon::getPlans()
-{
-    QVariantList lPlans;
-    for (const auto lPlanExec : mExecutors) {
-        const auto lPlan = lPlanExec->mPlan;
-        QVariantMap lPlanInfo;
-        lPlanInfo["Description"] = lPlan->mDescription;
-        lPlanInfo["Status"] = QVariant::fromValue(lPlan->backupStatus()).toString();
-        lPlanInfo["Busy"] = lPlanExec->busy();
-        lPlanInfo["ActivityState"] = QVariant::fromValue(lPlanExec->mState).toString();
-        lPlanInfo["LogFile"] = lPlanExec->mLogFilePath;
-        lPlanInfo["LogFileExists"] = QFileInfo::exists(lPlanExec->mLogFilePath);
-        lPlanInfo["Type"] = QVariant::fromValue(static_cast<BackupPlan::BackupType>(lPlan->mBackupType)).toString();
-        lPlanInfo["ScheduleType"] = QVariant::fromValue(static_cast<BackupPlan::ScheduleType>(lPlan->mScheduleType)).toString();
-        lPlanInfo["DestAvailable"] = lPlanExec->destinationAvailable();
-        lPlanInfo["LastCompleteBackup"] = lPlan->mLastCompleteBackup.toUTC();
-        lPlanInfo["LastBackupSize"] = lPlan->mLastBackupSize;
-        lPlanInfo["LastFreeSpace"] = lPlan->mLastAvailableSpace;
-        lPlans << lPlanInfo;
-    }
-    return lPlans;
 }
 
 void KupDaemon::sendPlansChangedSignal()

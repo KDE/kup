@@ -26,46 +26,114 @@ void PlanModel::fetchFromDaemon()
         return;
     }
     QDBusPendingCall lCall = mDBusIface.asyncCall(QStringLiteral("getPlans"));
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(lCall, this);
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher]() {
-        QDBusPendingReply<QVariantList> lPlansReply = *watcher;
+    QDBusPendingCallWatcher *lWatcher = new QDBusPendingCallWatcher(lCall, this);
+    QObject::connect(lWatcher, &QDBusPendingCallWatcher::finished, this, [this, lWatcher]() {
+        QDBusPendingReply<QVariantList> lPlansReply = *lWatcher;
         if (lPlansReply.isError()) {
             qCDebug(KUPAPPLETPLUGIN) << "could not get a reply from daemon to getPlans:" << lPlansReply.error().message();
         } else {
-            const QVariantList lArgs = qdbus_cast<QVariantList>(lPlansReply.value());
-            QVariantList lPlans;
-            for (const QVariant &lArg : lArgs) {
-                lPlans << qdbus_cast<QVariantMap>(lArg);
-            }
-            setPlans(lPlans);
+            receiveUpdatedPlans(lPlansReply.reply());
         }
     });
 
-    QDBusConnection::sessionBus()
-        .connect(mDBusIface.service(), mDBusIface.path(), mDBusIface.interface(), QStringLiteral("PlansChanged"), this, SLOT(slotPlansChanged(QDBusMessage)));
+    QDBusConnection::sessionBus().connect(mDBusIface.service(),
+                                          mDBusIface.path(),
+                                          mDBusIface.interface(),
+                                          QStringLiteral("PlansChanged"),
+                                          this,
+                                          SLOT(receiveUpdatedPlans(QDBusMessage)));
 }
 
-void PlanModel::slotPlansChanged(const QDBusMessage &pMsg)
+bool PlanModel::shouldBeActive() const
 {
-    const QVariantList lArgs = qdbus_cast<QVariantList>(pMsg.arguments().first());
-    QVariantList lPlans;
-    for (const QVariant &lArg : lArgs) {
-        lPlans << qdbus_cast<QVariantMap>(lArg);
+    for (int lRow = 0; lRow < rowCount(); lRow++) {
+        QModelIndex lIndex = index(lRow, 0);
+        if (data(lIndex, PlanModel::ScheduleTypeRole) == QStringLiteral("MANUAL") && data(lIndex, PlanModel::DestAvailableRole) == true) {
+            return true;
+        }
+        if (data(lIndex, PlanModel::StatusRole) == QStringLiteral("BAD")) {
+            return true;
+        }
     }
-    setPlans(lPlans);
+    return false;
 }
 
-void PlanModel::setPlans(const QVariantList &pPlans)
+bool PlanModel::anyBusy() const
 {
-    beginResetModel();
-    mPlans = pPlans;
-    endResetModel();
-    Q_EMIT countChanged(rowCount());
-    Q_EMIT shouldBeActiveChanged(shouldBeActive());
-    Q_EMIT anyBusyChanged(anyBusy());
-    Q_EMIT worstStatusChanged(worstStatus());
-    Q_EMIT activityStateChanged(activityState());
-    Q_EMIT anyDestsAvailableChanged(anyDestsAvailable());
+    for (int lRow = 0; lRow < rowCount(); lRow++) {
+        QModelIndex lIndex = index(lRow, 0);
+        if (data(lIndex, PlanModel::BusyRole) == true) {
+            return true;
+        }
+    }
+    return false;
+}
+
+QString PlanModel::worstStatus() const
+{
+    QString lWorst = QStringLiteral("NO_STATUS");
+    for (int lRow = 0; lRow < rowCount(); lRow++) {
+        QModelIndex lIndex = index(lRow, 0);
+        QString lStatus = data(lIndex, PlanModel::StatusRole).toString();
+        if ((lWorst == QStringLiteral("NO_STATUS"))
+            || (lWorst == QStringLiteral("GOOD") && (lStatus == QStringLiteral("MEDIUM") || lStatus == QStringLiteral("BAD")))
+            || (lWorst == QStringLiteral("MEDIUM") && lStatus == QStringLiteral("BAD"))
+
+        ) {
+            lWorst = lStatus;
+        }
+    }
+
+    return lWorst;
+}
+
+QString PlanModel::activityState() const
+{
+    for (int lRow = 0; lRow < rowCount(); lRow++) {
+        QModelIndex lIndex = index(lRow, 0);
+        if (data(lIndex, PlanModel::BusyRole) == true) {
+            return data(lIndex, PlanModel::ActivityStateRole).toString();
+        }
+    }
+    return QString();
+}
+
+bool PlanModel::anyDestsAvailable() const
+{
+    for (int lRow = 0; lRow < rowCount(); lRow++) {
+        QModelIndex lIndex = index(lRow, 0);
+        if (data(lIndex, PlanModel::DestAvailableRole) == true) {
+            return true;
+        }
+    }
+    return false;
+}
+
+void PlanModel::reloadConfig()
+{
+    mDBusIface.asyncCall(QStringLiteral("reloadConfig"));
+}
+
+void PlanModel::saveNewBackup(int pIdx)
+{
+    mDBusIface.asyncCall(QStringLiteral("saveNewBackup"), pIdx);
+}
+
+void PlanModel::purgeBackups(int pIdx)
+{
+    mDBusIface.asyncCall(QStringLiteral("purgeBackups"), pIdx);
+}
+
+void PlanModel::browseBackup(int pIdx)
+{
+    mDBusIface.asyncCall(QStringLiteral("browseBackup"), pIdx);
+}
+
+void PlanModel::openLogFile(int pIdx)
+{
+    QString lLogFilePath = data(index(pIdx, 0), LogFileRole).toString();
+    auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(lLogFilePath), QStringLiteral("text/x-log"));
+    job->start();
 }
 
 int PlanModel::rowCount(const QModelIndex &pParent) const
@@ -131,94 +199,25 @@ QHash<int, QByteArray> PlanModel::roleNames() const
     return lRoles;
 }
 
-bool PlanModel::shouldBeActive() const
+void PlanModel::receiveUpdatedPlans(const QDBusMessage &pMsg)
 {
-    for (int lRow = 0; lRow < rowCount(); lRow++) {
-        QModelIndex lIdx = index(lRow, 0);
-        if (data(lIdx, PlanModel::ScheduleTypeRole) == QStringLiteral("MANUAL") && data(lIdx, PlanModel::DestAvailableRole) == true) {
-            return true;
-        }
-        if (data(lIdx, PlanModel::StatusRole) == QStringLiteral("BAD")) {
-            return true;
-        }
+    const auto lReceivedPlans = qdbus_cast<QVariantList>(pMsg.arguments().constFirst());
+    QVariantList lPlans;
+    for (const QVariant &lPlanVariant : lReceivedPlans) {
+        lPlans << qdbus_cast<QVariantMap>(lPlanVariant);
     }
-    return false;
+    setPlans(lPlans);
 }
 
-bool PlanModel::anyBusy() const
+void PlanModel::setPlans(const QVariantList &pPlans)
 {
-    for (int lRow = 0; lRow < rowCount(); lRow++) {
-        QModelIndex idx = index(lRow, 0);
-        if (data(idx, PlanModel::BusyRole) == true) {
-            return true;
-        }
-    }
-    return false;
-}
-
-bool PlanModel::anyDestsAvailable() const
-{
-    for (int lRow = 0; lRow < rowCount(); lRow++) {
-        QModelIndex lIdx = index(lRow, 0);
-        if (data(lIdx, PlanModel::DestAvailableRole) == true) {
-            return true;
-        }
-    }
-    return false;
-}
-
-QString PlanModel::worstStatus() const
-{
-    QString lWorst = QStringLiteral("NO_STATUS");
-    for (int lRow = 0; lRow < rowCount(); lRow++) {
-        QModelIndex lIdx = index(lRow, 0);
-        QString lStatus = data(lIdx, PlanModel::StatusRole).toString();
-        if ((lWorst == QStringLiteral("NO_STATUS"))
-            || (lWorst == QStringLiteral("GOOD") && (lStatus == QStringLiteral("MEDIUM") || lStatus == QStringLiteral("BAD")))
-            || (lWorst == QStringLiteral("MEDIUM") && lStatus == QStringLiteral("BAD"))
-
-        ) {
-            lWorst = lStatus;
-        }
-    }
-
-    return lWorst;
-}
-
-QString PlanModel::activityState() const
-{
-    for (int lRow = 0; lRow < rowCount(); lRow++) {
-        QModelIndex lIdx = index(lRow, 0);
-        if (data(lIdx, PlanModel::BusyRole) == true) {
-            return data(lIdx, PlanModel::ActivityStateRole).toString();
-        }
-    }
-    return QString();
-}
-
-void PlanModel::reloadConfig()
-{
-    mDBusIface.asyncCall(QStringLiteral("reloadConfig"));
-}
-
-void PlanModel::saveNewBackup(int pIdx)
-{
-    mDBusIface.asyncCall(QStringLiteral("saveNewBackup"), pIdx);
-}
-
-void PlanModel::purgeBackups(int pIdx)
-{
-    mDBusIface.asyncCall(QStringLiteral("purgeBackups"), pIdx);
-}
-
-void PlanModel::browseBackup(int pIdx)
-{
-    mDBusIface.asyncCall(QStringLiteral("browseBackup"), pIdx);
-}
-
-void PlanModel::openLogFile(int pIdx)
-{
-    QString lLogFilePath = data(index(pIdx, 0), LogFileRole).toString();
-    auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(lLogFilePath), QStringLiteral("text/x-log"));
-    job->start();
+    beginResetModel();
+    mPlans = pPlans;
+    endResetModel();
+    Q_EMIT countChanged(rowCount());
+    Q_EMIT shouldBeActiveChanged(shouldBeActive());
+    Q_EMIT anyBusyChanged(anyBusy());
+    Q_EMIT worstStatusChanged(worstStatus());
+    Q_EMIT activityStateChanged(activityState());
+    Q_EMIT anyDestsAvailableChanged(anyDestsAvailable());
 }
