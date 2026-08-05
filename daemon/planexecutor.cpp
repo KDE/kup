@@ -157,19 +157,12 @@ void PlanExecutor::askUser(const QString &pQuestion)
     mQuestion->setTitle(mPlan->mDescription);
     mQuestion->setText(pQuestion);
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QStringList lAnswers;
-    lAnswers << xi18nc("@action:button", "Save Backup") << xi18nc("@action:button", "Cancel");
-    mQuestion->setActions(lAnswers);
-    connect(mQuestion, SIGNAL(action1Activated()), SLOT(startBackupSaveJob()));
-    connect(mQuestion, SIGNAL(action2Activated()), SLOT(discardUserQuestion()));
-#else
     KNotificationAction *yes = mQuestion->addAction(xi18nc("@action:button", "Save Backup"));
     connect(yes, &KNotificationAction::activated, this, &PlanExecutor::startBackupSaveJob);
 
     KNotificationAction *no = mQuestion->addAction(xi18nc("@action:button", "Cancel"));
     connect(no, &KNotificationAction::activated, this, &PlanExecutor::discardUserQuestion);
-#endif
+
     connect(mQuestion, SIGNAL(closed()), SLOT(discardUserQuestion()));
     connect(mQuestion, SIGNAL(ignored()), SLOT(discardUserQuestion()));
     // enter this "do nothing" state, if user answers "no" or ignores, remain there
@@ -193,26 +186,6 @@ void PlanExecutor::notifyBackupFailed(KJob *pFailedJob)
     mFailNotification->setTitle(xi18nc("@title:window", "Saving of Backup Failed"));
     mFailNotification->setText(pFailedJob->errorText());
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QStringList lAnswers;
-    if (pFailedJob->error() == BackupJob::ErrorWithLog) {
-        lAnswers << xi18nc("@action:button", "Show log file");
-        connect(mFailNotification, SIGNAL(action1Activated()), SLOT(showLog()));
-    } else if (pFailedJob->error() == BackupJob::ErrorSuggestRepair) {
-        lAnswers << xi18nc("@action:button", "Repair");
-        lAnswers << xi18nc("@action:button", "Cancel");
-        connect(mFailNotification, SIGNAL(action1Activated()), SLOT(startRepairJob()));
-    } else if (pFailedJob->error() == BackupJob::ErrorSourcesConfig) {
-        lAnswers << xi18nc("@action:button", "Open settings");
-        connect(mFailNotification, &KNotification::action1Activated, this, [this] {
-            QProcess::startDetached(QStringLiteral("kcmshell5"),
-                                    {QStringLiteral("--args"), QStringLiteral("show_sources %1").arg(mPlan->planNumber()), QStringLiteral("kcm_kup")});
-        });
-    }
-    mFailNotification->setActions(lAnswers);
-
-    connect(mFailNotification, SIGNAL(action2Activated()), SLOT(discardFailNotification()));
-#else
     if (pFailedJob->error() == BackupJob::ErrorWithLog) {
         KNotificationAction *showLogFile = mFailNotification->addAction(xi18nc("@action:button", "Show log file"));
         connect(showLogFile, &KNotificationAction::activated, this, &PlanExecutor::showLog);
@@ -229,7 +202,7 @@ void PlanExecutor::notifyBackupFailed(KJob *pFailedJob)
                                     {QStringLiteral("--args"), QStringLiteral("show_sources %1").arg(mPlan->planNumber()), QStringLiteral("kcm_kup")});
         });
     }
-#endif
+
     connect(mFailNotification, SIGNAL(closed()), SLOT(discardFailNotification()));
     connect(mFailNotification, SIGNAL(ignored()), SLOT(discardFailNotification()));
     mFailNotification->sendEvent();
@@ -359,20 +332,7 @@ void PlanExecutor::integrityCheckFinished(KJob *pJob)
     mIntegrityNotification = new KNotification(QStringLiteral("IntegrityCheckCompleted"), KNotification::Persistent);
     mIntegrityNotification->setTitle(xi18nc("@title:window", "Integrity Check Completed"));
     mIntegrityNotification->setText(pJob->errorText());
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QStringList lAnswers;
-    if (pJob->error() == BackupJob::ErrorWithLog) {
-        lAnswers << xi18nc("@action:button", "Show log file");
-        connect(mIntegrityNotification, SIGNAL(action1Activated()), SLOT(showLog()));
-    } else if (pJob->error() == BackupJob::ErrorSuggestRepair) {
-        lAnswers << xi18nc("@action:button", "Repair");
-        lAnswers << xi18nc("@action:button", "Cancel");
-        connect(mIntegrityNotification, SIGNAL(action1Activated()), SLOT(startRepairJob()));
-    }
-    mIntegrityNotification->setActions(lAnswers);
 
-    connect(mIntegrityNotification, SIGNAL(action2Activated()), SLOT(discardIntegrityNotification()));
-#else
     if (pJob->error() == BackupJob::ErrorWithLog) {
         KNotificationAction *showLogFile = new KNotificationAction(xi18nc("@action:button", "Show log file"));
         connect(showLogFile, &KNotificationAction::activated, this, &PlanExecutor::showLog);
@@ -383,7 +343,6 @@ void PlanExecutor::integrityCheckFinished(KJob *pJob)
         KNotificationAction *no = mIntegrityNotification->addAction(xi18nc("@action:button", "Cancel"));
         connect(no, &KNotificationAction::activated, this, &PlanExecutor::discardIntegrityNotification);
     }
-#endif
 
     connect(mIntegrityNotification, SIGNAL(closed()), SLOT(discardIntegrityNotification()));
     connect(mIntegrityNotification, SIGNAL(ignored()), SLOT(discardIntegrityNotification()));
@@ -410,15 +369,10 @@ void PlanExecutor::repairFinished(KJob *pJob)
     mRepairNotification = new KNotification(QStringLiteral("RepairCompleted"), KNotification::Persistent);
     mRepairNotification->setTitle(xi18nc("@title:window", "Repair Completed"));
     mRepairNotification->setText(pJob->errorText());
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QStringList lAnswers;
-    lAnswers << xi18nc("@action:button", "Show log file");
-    mRepairNotification->setActions(lAnswers);
-    connect(mRepairNotification, SIGNAL(action1Activated()), SLOT(showLog()));
-#else
+
     KNotificationAction *showLogFile = mRepairNotification->addAction(xi18nc("@action:button", "Show log file"));
     connect(showLogFile, &KNotificationAction::activated, this, &PlanExecutor::showLog);
-#endif
+
     connect(mRepairNotification, SIGNAL(closed()), SLOT(discardRepairNotification()));
     connect(mRepairNotification, SIGNAL(ignored()), SLOT(discardRepairNotification()));
     mRepairNotification->sendEvent();

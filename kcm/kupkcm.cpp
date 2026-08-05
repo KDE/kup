@@ -24,19 +24,10 @@
 #include <KPluginFactory>
 #include <KProcess>
 
-#if QT_VERSION_MAJOR == 5
-#include <Kdelibs4ConfigMigrator>
-#endif
-
 K_PLUGIN_CLASS_WITH_JSON(KupKcm, "kcm_kup.json")
 
-#if QT_VERSION_MAJOR == 5
-KupKcm::KupKcm(QWidget *pParent, const QVariantList &pArgs)
-    : KCModule(pParent, pArgs)
-#else
 KupKcm::KupKcm(QObject *pParent, const KPluginMetaData &pPluginMetaData, const QVariantList &pArgs)
     : KCModule(pParent, pPluginMetaData)
-#endif
     , mSourcePageToShow(0)
 {
     setObjectName(QStringLiteral("kcm_kup")); // needed for the kconfigdialogmanager magic
@@ -78,18 +69,8 @@ KupKcm::KupKcm(QObject *pParent, const KPluginMetaData &pPluginMetaData, const Q
         auto lHLayout = new QHBoxLayout;
         lHLayout->addWidget(lSorryIcon);
         lHLayout->addWidget(lSorryText, 1);
-#if QT_VERSION_MAJOR == 5
-        setLayout(lHLayout);
-#else
         widget()->setLayout(lHLayout);
-#endif
     } else {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        Kdelibs4ConfigMigrator lMigrator(QStringLiteral("kup"));
-        lMigrator.setConfigFiles(QStringList() << QStringLiteral("kuprc"));
-        lMigrator.migrate();
-#endif
-
         mConfig = KSharedConfig::openConfig(QStringLiteral("kuprc"));
         mSettings = new KupSettings(mConfig, this);
         for (int i = 0; i < mSettings->mNumberOfPlans; ++i) {
@@ -100,13 +81,11 @@ KupKcm::KupKcm(QObject *pParent, const KPluginMetaData &pPluginMetaData, const Q
         }
         createSettingsFrontPage();
         addConfig(mSettings, mFrontPage);
+
         mStackedLayout = new QStackedLayout;
         mStackedLayout->addWidget(mFrontPage);
-#if QT_VERSION_MAJOR == 5
-        setLayout(mStackedLayout);
-#else
         widget()->setLayout(mStackedLayout);
-#endif
+
         QListIterator<QVariant> lIter(pArgs);
         while (lIter.hasNext()) {
             QVariant lVariant = lIter.next();
@@ -119,13 +98,6 @@ KupKcm::KupKcm(QObject *pParent, const KPluginMetaData &pPluginMetaData, const Q
         }
     }
 }
-
-#if QT_VERSION_MAJOR == 5
-QSize KupKcm::sizeHint() const
-{
-    return {800, 600};
-}
-#endif
 
 void KupKcm::load()
 {
@@ -189,11 +161,7 @@ void KupKcm::save()
         lManager->updateSettings();
         mStatusWidgets.at(i)->updateIcon();
 
-#if QT_VERSION_MAJOR == 5
-        QWidget *wid = this;
-#else
         QWidget *wid = widget();
-#endif
 
         if (lPlan->mDestinationType == 1 && lPlan->mExternalUUID.isEmpty()) {
             KMessageBox::information(wid,

@@ -26,12 +26,7 @@ class KupKcm : public KCModule
 {
     Q_OBJECT
 public:
-#if QT_VERSION_MAJOR == 5
-    KupKcm(QWidget *pParent, const QVariantList &pArgs);
-    QSize sizeHint() const override;
-#else
     KupKcm(QObject *parent, const KPluginMetaData &md, const QVariantList &pArgs);
-#endif
 
 public slots:
     void load() override;
