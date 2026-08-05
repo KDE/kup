@@ -19,6 +19,7 @@ rsyncjob.cpp
 ../settings/kupsettings.cpp
 ../settings/kuputils.cpp
 ../settings/dynamicexclusions.cpp
+../settings/filescanner.cpp
 )
 
 set_source_files_properties(org.kde.kupdaemon.KupDaemon.xml PROPERTIES
