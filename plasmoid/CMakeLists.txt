@@ -7,7 +7,7 @@ find_package(Plasma REQUIRED)
 add_definitions(-DTRANSLATION_DOMAIN=\"kup\")
 
 set(kupappletplugin_SRCS
-    plugin.cpp
+    planmodel.cpp
 )
 
 ecm_qt_declare_logging_category(kupappletplugin_SRCS

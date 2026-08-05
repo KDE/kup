@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-#include "plugin.h"
+#include "planmodel.h"
 #include "kupappletplugin_debug.h"
 
 #include "../daemon/kupdaemon.h"
