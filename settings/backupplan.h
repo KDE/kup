@@ -76,6 +76,7 @@ public:
     Status backupStatus();
     static QString iconName(Status pStatus);
     QString absoluteExcludesFilePath();
+    QSet<QString> excludePatterns();
 
 protected:
     void usrRead() override;

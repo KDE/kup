@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 #include "backupplanwidget.h"
+#include "../settings/filescanner.h"
 #include "backupplan.h"
 #include "dirselector.h"
 #include "driveselection.h"
@@ -35,178 +36,6 @@
 #include <KUrlCompletion>
 #include <KUrlRequester>
 #include <utility>
-
-class ScanFolderEvent : public QEvent
-{
-public:
-    explicit ScanFolderEvent(QString pPath)
-        : QEvent(eventType)
-        , mPath(std::move(pPath))
-    {
-    }
-    QString mPath;
-    static const QEvent::Type eventType = static_cast<QEvent::Type>(QEvent::User + 1);
-};
-
-FileScanner::FileScanner()
-{
-    // create a timer that will call a slot to send the pending updates to UI, one second
-    // after the last update comes in, just to minimize risk of showing incomplete
-    // information to the user.
-    mUnreadablesTimer = new QTimer(this);
-    mUnreadablesTimer->setSingleShot(true);
-    mUnreadablesTimer->setInterval(1000);
-    connect(mUnreadablesTimer, &QTimer::timeout, this, &FileScanner::sendPendingUnreadables);
-
-    mSymlinkTimer = new QTimer(this);
-    mSymlinkTimer->setSingleShot(true);
-    mSymlinkTimer->setInterval(1000);
-    connect(mSymlinkTimer, &QTimer::timeout, this, &FileScanner::sendPendingSymlinks);
-}
-
-bool FileScanner::event(QEvent *pEvent)
-{
-    if (pEvent->type() == ScanFolderEvent::eventType) {
-        auto lEvent = dynamic_cast<ScanFolderEvent *>(pEvent);
-        if (isPathIncluded(lEvent->mPath)) {
-            scanFolder(lEvent->mPath);
-        }
-        return true;
-    }
-    return QObject::event(pEvent);
-}
-
-void FileScanner::includePath(const QString &pPath)
-{
-    if (!mExcludedFolders.remove(pPath)) {
-        mIncludedFolders += pPath;
-    }
-    checkPathForProblems(QFileInfo(pPath));
-
-    QMutableHashIterator<QString, QString> i(mSymlinksNotOk);
-    while (i.hasNext()) {
-        i.next();
-        if (isPathIncluded(i.value())) {
-            mSymlinksOk.insert(i.key(), i.value());
-            i.remove();
-            mSymlinkTimer->start();
-        }
-    }
-}
-
-void FileScanner::excludePath(const QString &pPath)
-{
-    if (!mIncludedFolders.remove(pPath)) {
-        mExcludedFolders += pPath;
-    }
-    QString lPath = pPath + QStringLiteral("/");
-    QSet<QString>::iterator it = mUnreadableFiles.begin();
-    while (it != mUnreadableFiles.end()) {
-        if (it->startsWith(lPath)) {
-            mUnreadablesTimer->start();
-            it = mUnreadableFiles.erase(it);
-        } else {
-            ++it;
-        }
-    }
-    it = mUnreadableFolders.begin();
-    while (it != mUnreadableFolders.end()) {
-        if (it->startsWith(lPath) || *it == pPath) {
-            mUnreadablesTimer->start();
-            it = mUnreadableFolders.erase(it);
-        } else {
-            ++it;
-        }
-    }
-
-    QMutableHashIterator<QString, QString> i(mSymlinksNotOk);
-    while (i.hasNext()) {
-        if (!isPathIncluded(i.next().key())) {
-            i.remove();
-            mSymlinkTimer->start();
-        }
-    }
-
-    i = mSymlinksOk;
-    while (i.hasNext()) {
-        i.next();
-        if (!isPathIncluded(i.key())) {
-            i.remove();
-        } else if (isSymlinkProblematic(i.value())) {
-            mSymlinksNotOk.insert(i.key(), i.value());
-            mSymlinkTimer->start();
-            i.remove();
-        }
-    }
-}
-
-void FileScanner::sendPendingUnreadables()
-{
-    emit unreadablesChanged(QPair<QSet<QString>, QSet<QString>>(mUnreadableFolders, mUnreadableFiles));
-}
-
-void FileScanner::sendPendingSymlinks()
-{
-    emit symlinkProblemsChanged(mSymlinksNotOk);
-}
-
-bool FileScanner::isPathIncluded(const QString &pPath)
-{
-    int lLongestInclude = 0;
-    foreach (const QString &lPath, mIncludedFolders) {
-        bool lMatches = pPath == lPath || pPath.startsWith(lPath + QStringLiteral("/"));
-        if (lMatches && lPath.length() > lLongestInclude) {
-            lLongestInclude = lPath.length();
-        }
-    }
-    int lLongestExclude = 0;
-    foreach (const QString &lPath, mExcludedFolders) {
-        bool lMatches = pPath == lPath || pPath.startsWith(lPath + QStringLiteral("/"));
-        if (lMatches && lPath.length() > lLongestExclude) {
-            lLongestExclude = lPath.length();
-        }
-    }
-    return lLongestInclude > lLongestExclude;
-}
-
-void FileScanner::checkPathForProblems(const QFileInfo &pFileInfo)
-{
-    if (pFileInfo.isSymLink()) {
-        if (isSymlinkProblematic(pFileInfo.symLinkTarget())) {
-            mSymlinksNotOk.insert(pFileInfo.absoluteFilePath(), pFileInfo.symLinkTarget());
-            mSymlinkTimer->start();
-        } else {
-            mSymlinksOk.insert(pFileInfo.absoluteFilePath(), pFileInfo.symLinkTarget());
-        }
-    } else if (pFileInfo.isDir()) {
-        QCoreApplication::postEvent(this, new ScanFolderEvent(pFileInfo.absoluteFilePath()), Qt::LowEventPriority);
-    } else {
-        if (!pFileInfo.isReadable()) {
-            mUnreadableFiles += pFileInfo.absoluteFilePath();
-            mUnreadablesTimer->start();
-        }
-    }
-}
-
-bool FileScanner::isSymlinkProblematic(const QString &pTarget)
-{
-    QFileInfo lTargetInfo(pTarget);
-    return lTargetInfo.exists() && !isPathIncluded(pTarget) && pTarget.startsWith(QStringLiteral("/home/"));
-}
-
-void FileScanner::scanFolder(const QString &pPath)
-{
-    QDir lDir(pPath);
-    if (!lDir.isReadable()) {
-        mUnreadableFolders += pPath;
-        mUnreadablesTimer->start();
-    } else {
-        QFileInfoList lInfoList = lDir.entryInfoList(QDir::Files | QDir::Dirs | QDir::Hidden | QDir::NoDotAndDotDot);
-        foreach (const QFileInfo &lFileInfo, lInfoList) {
-            checkPathForProblems(lFileInfo);
-        }
-    }
-}
 
 ConfigIncludeDummy::ConfigIncludeDummy(FolderSelectionModel *pModel, FolderSelectionWidget *pParent)
     : QWidget(pParent)
@@ -262,9 +91,10 @@ void ConfigExcludeDummy::setExcludeList(QStringList pExcludeList)
     mTreeView->expandToShowSelections();
 }
 
-FolderSelectionWidget::FolderSelectionWidget(FolderSelectionModel *pModel, QWidget *pParent)
+FolderSelectionWidget::FolderSelectionWidget(FolderSelectionModel *pModel, BackupPlan *pBackupPlan, QWidget *pParent)
     : QWidget(pParent)
     , mModel(pModel)
+    , mBackupPlan(pBackupPlan)
 {
     mMessageWidget = new KMessageWidget(this);
     mMessageWidget->setCloseButtonVisible(false);
@@ -306,6 +136,7 @@ FolderSelectionWidget::FolderSelectionWidget(FolderSelectionModel *pModel, QWidg
 
     mWorkerThread = new QThread(this);
     auto lFileScanner = new FileScanner;
+    lFileScanner->setExclusionRegExps(mBackupPlan->excludePatterns());
     lFileScanner->moveToThread(mWorkerThread);
     connect(mWorkerThread, &QThread::finished, lFileScanner, &QObject::deleteLater);
 
@@ -388,6 +219,7 @@ void FolderSelectionWidget::updateMessage()
                                        "solution is to exclude the folder from the backup plan.",
                                        mUnreadableFolders.first()));
         mExcludeActionPath = mUnreadableFolders.first();
+        mExcludeAction->setText(i18nc("@action:button", "Exclude Folder"));
         mMessageWidget->addAction(mExcludeAction);
         mMessageWidget->animatedShow();
     } else if (!mUnreadableFiles.isEmpty()) {
@@ -396,10 +228,10 @@ void FolderSelectionWidget::updateMessage()
                                        "You don't have permission to read this file: <filename>%1</filename><nl/>"
                                        "It cannot be included in the source selection. "
                                        "If the file is not important to you, one possible solution is "
-                                       "to exclude the whole folder where the file is stored from the backup plan.",
+                                       "to exclude this file from the backup plan.",
                                        mUnreadableFiles.first()));
-        QFileInfo lFileInfo(mUnreadableFiles.first());
-        mExcludeActionPath = lFileInfo.absolutePath();
+        mExcludeActionPath = mUnreadableFiles.first();
+        mExcludeAction->setText(i18nc("@action:button", "Exclude File"));
         mMessageWidget->addAction(mExcludeAction);
         mMessageWidget->animatedShow();
     } else if (!mSymlinkProblems.isEmpty()) {
@@ -597,7 +429,7 @@ KPageWidgetItem *BackupPlanWidget::createTypePage(const QString &pBupVersion, co
 KPageWidgetItem *BackupPlanWidget::createSourcePage()
 {
     auto lSourceSelectionModel = new FolderSelectionModel(mBackupPlan->mShowHiddenFolders, this);
-    mSourceSelectionWidget = new FolderSelectionWidget(lSourceSelectionModel, this);
+    mSourceSelectionWidget = new FolderSelectionWidget(lSourceSelectionModel, mBackupPlan, this);
 
     auto lWidget = new QWidget(this);
     auto lGridLayout = new QGridLayout(lWidget);

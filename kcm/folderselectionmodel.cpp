@@ -177,7 +177,10 @@ void FolderSelectionModel::excludePath(const QString &pPath)
         mExcludedPaths.insert(pPath);
         emit excludedPathAdded(pPath);
     }
-    emit dataChanged(index(pPath), findLastLeaf(index(pPath)));
+    const auto lIndex = index(pPath);
+    if (lIndex.isValid()) {
+        emit dataChanged(lIndex, findLastLeaf(lIndex));
+    }
 }
 
 void FolderSelectionModel::setIncludedPaths(const QSet<QString> &pIncludedPaths)
@@ -329,22 +332,26 @@ void FolderSelectionModel::recalculateDynamicExclusions()
         removeSubDirs(lRemovedPath);
         emit excludedPathRemoved(lRemovedPath);
         const QModelIndex lRemovedIndex = index(lRemovedPath);
-        emit dataChanged(lRemovedIndex, findLastLeaf(lRemovedIndex));
-        QModelIndex lRecurseIndex = lRemovedIndex.parent();
-        while (lRecurseIndex.isValid()) {
-            emit dataChanged(lRecurseIndex, lRecurseIndex);
-            lRecurseIndex = lRecurseIndex.parent();
+        if (lRemovedIndex.isValid()) {
+            emit dataChanged(lRemovedIndex, findLastLeaf(lRemovedIndex));
+            QModelIndex lRecurseIndex = lRemovedIndex.parent();
+            while (lRecurseIndex.isValid()) {
+                emit dataChanged(lRecurseIndex, lRecurseIndex);
+                lRecurseIndex = lRecurseIndex.parent();
+            }
         }
     }
     foreach (const QString &lAddedPath, lAdded) {
         removeSubDirs(lAddedPath);
         emit excludedPathAdded(lAddedPath);
         const QModelIndex lAddedIndex = index(lAddedPath);
-        emit dataChanged(lAddedIndex, findLastLeaf(lAddedIndex));
-        QModelIndex lRecurseIndex = lAddedIndex.parent();
-        while (lRecurseIndex.isValid()) {
-            emit dataChanged(lRecurseIndex, lRecurseIndex);
-            lRecurseIndex = lRecurseIndex.parent();
+        if (lAddedIndex.isValid()) {
+            emit dataChanged(lAddedIndex, findLastLeaf(lAddedIndex));
+            QModelIndex lRecurseIndex = lAddedIndex.parent();
+            while (lRecurseIndex.isValid()) {
+                emit dataChanged(lRecurseIndex, lRecurseIndex);
+                lRecurseIndex = lRecurseIndex.parent();
+            }
         }
     }
 }

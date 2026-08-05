@@ -26,48 +26,11 @@ class QThread;
 class QTimer;
 class QTreeView;
 
-class FileScanner : public QObject
-{
-    Q_OBJECT
-public:
-    FileScanner();
-    bool event(QEvent *pEvent) override;
-
-public slots:
-    void includePath(const QString &pPath);
-    void excludePath(const QString &pPath);
-
-signals:
-    void unreadablesChanged(QPair<QSet<QString>, QSet<QString>>);
-    void symlinkProblemsChanged(QHash<QString, QString>);
-
-protected slots:
-    void sendPendingUnreadables();
-    void sendPendingSymlinks();
-
-protected:
-    bool isPathIncluded(const QString &pPath);
-    void checkPathForProblems(const QFileInfo &pFileInfo);
-    bool isSymlinkProblematic(const QString &pTarget);
-    void scanFolder(const QString &pPath);
-
-    QSet<QString> mIncludedFolders;
-    QSet<QString> mExcludedFolders;
-
-    QSet<QString> mUnreadableFolders;
-    QSet<QString> mUnreadableFiles;
-    QTimer *mUnreadablesTimer;
-
-    QHash<QString, QString> mSymlinksNotOk;
-    QHash<QString, QString> mSymlinksOk;
-    QTimer *mSymlinkTimer;
-};
-
 class FolderSelectionWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit FolderSelectionWidget(FolderSelectionModel *pModel, QWidget *pParent = nullptr);
+    explicit FolderSelectionWidget(FolderSelectionModel *pModel, BackupPlan *pBackupPlan, QWidget *pParent = nullptr);
     virtual ~FolderSelectionWidget();
     FolderSelectionModel *mModel;
 
@@ -91,6 +54,7 @@ protected:
     QHash<QString, QString> mSymlinkProblems;
     QString mIncludeActionPath;
     QAction *mIncludeAction;
+    BackupPlan *mBackupPlan;
 };
 
 class ConfigIncludeDummy : public QWidget
