@@ -203,6 +203,11 @@ void PlanExecutor::notifyBackupFailed(KJob *pFailedJob)
             QProcess::startDetached(QStringLiteral("kcmshell6"),
                                     {QStringLiteral("--args"), QStringLiteral("show_sources %1").arg(mPlan->planNumber()), QStringLiteral("kcm_kup")});
         });
+    } else if (pFailedJob->error() == BackupJob::ErrorUnreadableWithLog) {
+        KNotificationAction *showLogFile = mFailNotification->addAction(xi18nc("@action:button", "Show List…"));
+        connect(showLogFile, &KNotificationAction::activated, this, [this]() {
+            showLog(mFailNotification ? mFailNotification->xdgActivationToken() : QString());
+        });
     }
 
     connect(mFailNotification, SIGNAL(closed()), SLOT(discardFailNotification()));

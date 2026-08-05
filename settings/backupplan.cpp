@@ -204,6 +204,27 @@ QString BackupPlan::absoluteExcludesFilePath()
     return mExcludePatternsPath;
 }
 
+QSet<QString> BackupPlan::excludePatterns()
+{
+    QSet<QString> lRegExps;
+    if (!absoluteExcludesFilePath().isEmpty()) {
+        QFile lRegExpsFile(absoluteExcludesFilePath());
+        if (!lRegExpsFile.open(QIODevice::ReadOnly)) {
+            qWarning() << "could not open regexps file" << absoluteExcludesFilePath();
+        } else {
+            while (!lRegExpsFile.atEnd()) {
+                QString lRegExp = QString::fromUtf8(lRegExpsFile.readLine());
+                if (lRegExp.endsWith(QChar('\n'))) {
+                    lRegExp.chop(1);
+                }
+                lRegExps << lRegExp;
+            }
+            lRegExpsFile.close();
+        }
+    }
+    return lRegExps;
+}
+
 void BackupPlan::usrRead()
 {
     // correct the time spec after default read routines.

@@ -19,7 +19,14 @@ class BackupJob : public KJob
 {
     Q_OBJECT
 public:
-    enum ErrorCodes { ErrorWithLog = UserDefinedError, ErrorWithoutLog, ErrorSuggestRepair, ErrorSourcesConfig };
+    enum ErrorCodes {
+        ErrorWithLog = UserDefinedError,
+        ErrorWithoutLog,
+        ErrorSuggestRepair,
+        ErrorSourcesConfig,
+        ErrorUnreadable,
+        ErrorUnreadableWithLog
+    };
 
     void start() override;
 

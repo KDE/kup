@@ -18,6 +18,7 @@ kbuttongroup.cpp
 ../settings/kupsettings.cpp
 ../settings/kuputils.cpp
 ../settings/dynamicexclusions.cpp
+../settings/filescanner.cpp
 )
 
 kcoreaddons_add_plugin(kcm_kup SOURCES ${kcm_kup_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings_qwidgets")
