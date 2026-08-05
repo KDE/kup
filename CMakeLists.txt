@@ -4,7 +4,8 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-set(KF_MIN_VERSION "5.96.0")
+set(QT_MIN_VERSION "6.4.0")
+set(KF_MIN_VERSION "6.23.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.84.0")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -30,7 +31,7 @@ include(ECMQtDeclareLoggingCategory)
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 
-find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS Core Widgets)
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets)
 find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
 Solid
 KIO
@@ -46,13 +47,10 @@ XmlGui
 KCMUtils
 Crash
 )
+find_package(Plasma REQUIRED)
 
 
-if(QT_MAJOR_VERSION STREQUAL "6")
-    add_subdirectory(plasmoid-qt6)
-    find_package(Plasma REQUIRED)
-endif()
-
+add_subdirectory(plasmoid)
 add_subdirectory(daemon)
 add_subdirectory(icons)
 add_subdirectory(filedigger)
