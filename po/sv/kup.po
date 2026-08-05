@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 02:10+0000\n"
-"PO-Revision-Date: 2026-07-28 07:40+0200\n"
+"POT-Creation-Date: 2026-08-05 02:12+0000\n"
+"PO-Revision-Date: 2026-08-04 16:43+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -38,7 +38,7 @@ msgstr[1] ""
 "%1 källkataloger finns inte längre. Öppna inställningarna och bekräfta vad "
 "som ska ingå i säkerhetskopian.<nl/><filename>%2</filename>"
 
-#: daemon/bupjob.cpp:48 daemon/buprepairjob.cpp:26
+#: daemon/bupjob.cpp:49 daemon/buprepairjob.cpp:26
 #: daemon/bupverificationjob.cpp:25
 #, kde-kuit-format
 msgctxt "@info notification"
@@ -49,7 +49,7 @@ msgstr ""
 "Programmet <application>bup</application> behövs men kunde inte hittas, det "
 "kanske inte är installerat?"
 
-#: daemon/bupjob.cpp:55 daemon/buprepairjob.cpp:33
+#: daemon/bupjob.cpp:56 daemon/buprepairjob.cpp:33
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -59,7 +59,7 @@ msgstr ""
 "Programmet <application>par2</application> behövs men kunde inte hittas, det "
 "kanske inte är installerat?"
 
-#: daemon/bupjob.cpp:76
+#: daemon/bupjob.cpp:77
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -67,12 +67,12 @@ msgid ""
 msgstr ""
 "Arkiv för säkerhetskopior kunde inte initialiseras. Se loggfil för detaljer."
 
-#: daemon/bupjob.cpp:100
+#: daemon/bupjob.cpp:101
 #, kde-format
 msgid "Checking backup integrity"
 msgstr "Kontrollerar säkerhetskopiornas integritet"
 
-#: daemon/bupjob.cpp:119 daemon/bupverificationjob.cpp:63
+#: daemon/bupjob.cpp:120 daemon/bupverificationjob.cpp:63
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -82,7 +82,7 @@ msgstr ""
 "Integritetskontroll misslyckades. Dina säkerhetskopior kan vara skadade! Se "
 "loggfil för detaljer. Vill du försöka reparera säkerhetskopiorna?"
 
-#: daemon/bupjob.cpp:124
+#: daemon/bupjob.cpp:125
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -92,34 +92,34 @@ msgstr ""
 "Integritetskontroll misslyckades. Dina säkerhetskopior kan vara skadade! Se "
 "loggfil för detaljer."
 
-#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:50
+#: daemon/bupjob.cpp:162 daemon/rsyncjob.cpp:51
 #, kde-format
 msgid "Checking what to copy"
 msgstr "Kollar vad som ska kopieras"
 
-#: daemon/bupjob.cpp:171
+#: daemon/bupjob.cpp:176
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
 msgstr "Misslyckades att analysera filer. Se loggfil för detaljer."
 
-#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
+#: daemon/bupjob.cpp:198 daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
 #, kde-format
 msgid "Saving backup"
 msgstr "Sparar säkerhetskopia"
 
-#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:121
+#: daemon/bupjob.cpp:215 daemon/rsyncjob.cpp:125
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
 msgstr "Misslyckades att spara ny säkerhetskopia. Se loggfil för detaljer."
 
-#: daemon/bupjob.cpp:234
+#: daemon/bupjob.cpp:239
 #, kde-format
 msgid "Generating recovery information"
 msgstr "Genererar återställningsinformation"
 
-#: daemon/bupjob.cpp:251
+#: daemon/bupjob.cpp:256
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -128,7 +128,7 @@ msgid ""
 msgstr ""
 "Misslyckades med att generera återställningsinfo. Se loggfil för detaljer."
 
-#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
+#: daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -445,7 +445,7 @@ msgstr "Färdig med reparation"
 msgid "Kup Backup System"
 msgstr "Kup Säkerhetskopiering"
 
-#: daemon/rsyncjob.cpp:33
+#: daemon/rsyncjob.cpp:34
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -851,14 +851,8 @@ msgctxt "@action:button"
 msgid "Back to overview"
 msgstr "Tillbaka till översikten"
 
-#: kcm/backupplanwidget.cpp:523
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Back up multiple versions over time of the files in the source folders. "
-#| "This allows older versions of files or deleted files to be recovered.<nl/"
-#| "></nl/>The backup archive will grow in size over time, and can only be "
-#| "accessed using the recovery tools provided by this program."
+#: kcm/backupplanwidget.cpp:524
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Back up multiple versions over time of the files in the source folders. This "
@@ -868,11 +862,11 @@ msgid ""
 msgstr ""
 "Säkerhetskopiera flera versioner över tiden av filerna i källkatalogerna. "
 "Det gör att äldre versioner av filer eller raderade filer kan återställas."
-"<nl/></nl/>Säkerhetskopieringsarkivet växer i storlek med tiden och kan "
+"<nl/><nl/>Säkerhetskopieringsarkivet växer i storlek med tiden och kan "
 "endast nås med hjälp av återställningsverktygen som tillhandahålls av "
 "programmet."
 
-#: kcm/backupplanwidget.cpp:535
+#: kcm/backupplanwidget.cpp:536
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -882,13 +876,13 @@ msgstr ""
 "Arkivering (inte tillgängligt eftersom <application>bup</application> inte "
 "är installerat)"
 
-#: kcm/backupplanwidget.cpp:540
+#: kcm/backupplanwidget.cpp:541
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Versioned Backup (recommended)"
 msgstr "Arkivering (rekommenderas)"
 
-#: kcm/backupplanwidget.cpp:545
+#: kcm/backupplanwidget.cpp:546
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -902,7 +896,7 @@ msgstr ""
 "kan förhindra dataförlust på grund av en felaktig disk, men inte på grund av "
 "att filer av misstag tas bort eller ändras."
 
-#: kcm/backupplanwidget.cpp:557
+#: kcm/backupplanwidget.cpp:558
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -912,49 +906,58 @@ msgstr ""
 "Synkroniserade kataloger (inte tillgängligt eftersom <application>rsync</"
 "application> inte är installerat)"
 
-#: kcm/backupplanwidget.cpp:562
+#: kcm/backupplanwidget.cpp:563
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Synchronized Backup"
 msgstr "Synkroniserade kataloger"
 
-#: kcm/backupplanwidget.cpp:590
+#: kcm/backupplanwidget.cpp:591
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Backup Type"
 msgstr "Kopieringstyp"
 
-#: kcm/backupplanwidget.cpp:591
+#: kcm/backupplanwidget.cpp:592
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select what type of backup you want"
 msgstr "Välj vilken typ av säkerhetskopiering du vill göra"
 
-#: kcm/backupplanwidget.cpp:600
+#: kcm/backupplanwidget.cpp:608
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Some files and folders (such as caches or encrypted folders) are "
+"automatically excluded. You can configure this in the "
+"<interface><link>Advanced</link></interface> settings."
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Sources"
 msgstr "Källor"
 
-#: kcm/backupplanwidget.cpp:601
+#: kcm/backupplanwidget.cpp:620
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select which folders to include in backup"
 msgstr "Välj vilka kataloger som ska inkluderas i säkerhetskopior"
 
-#: kcm/backupplanwidget.cpp:616
+#: kcm/backupplanwidget.cpp:635
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Filesystem Path"
 msgstr "Fast plats i filsystemet"
 
-#: kcm/backupplanwidget.cpp:617
+#: kcm/backupplanwidget.cpp:636
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "External Storage"
 msgstr "Externt lagringsmedium"
 
-#: kcm/backupplanwidget.cpp:623
+#: kcm/backupplanwidget.cpp:642
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -969,19 +972,19 @@ msgstr ""
 "filsystemet. Sökvägen som anges här behöver inte finnas tillgänglig hela "
 "tiden, dess existens kommer att övervakas."
 
-#: kcm/backupplanwidget.cpp:630
+#: kcm/backupplanwidget.cpp:649
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Destination Path for Backup:"
 msgstr "Plats att lagra säkerhetskopiorna:"
 
-#: kcm/backupplanwidget.cpp:641
+#: kcm/backupplanwidget.cpp:660
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
 msgstr "Bara lokala filsystemsökvägar fungerar."
 
-#: kcm/backupplanwidget.cpp:648
+#: kcm/backupplanwidget.cpp:667
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
@@ -989,7 +992,7 @@ msgstr ""
 "Katalogen finns inte. Inga säkerhetskopior kommer att sparas innan den "
 "skapas."
 
-#: kcm/backupplanwidget.cpp:667
+#: kcm/backupplanwidget.cpp:686
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1000,55 +1003,55 @@ msgstr ""
 "lagringsenhet som kopplas in direkt i denna datorn, till exempel en USB-"
 "hårddisk eller minnepinne."
 
-#: kcm/backupplanwidget.cpp:676 kcm/backupplanwidget.cpp:679
+#: kcm/backupplanwidget.cpp:695 kcm/backupplanwidget.cpp:698
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "The specified folder will be created if it does not exist."
 msgstr "Den katalog som väljs kommer att skapas om den inte redan finns."
 
-#: kcm/backupplanwidget.cpp:678
+#: kcm/backupplanwidget.cpp:697
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Folder on Destination Drive:"
 msgstr "Katalog på lagringsenheten:"
 
-#: kcm/backupplanwidget.cpp:685
+#: kcm/backupplanwidget.cpp:704
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a folder"
 msgstr "Öppna dialogruta för att välja en katalog"
 
-#: kcm/backupplanwidget.cpp:715
+#: kcm/backupplanwidget.cpp:734
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Destination"
 msgstr "Lagringsplats"
 
-#: kcm/backupplanwidget.cpp:716
+#: kcm/backupplanwidget.cpp:735
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select the backup destination"
 msgstr "Välj lagringsplats för säkerhetskopior"
 
-#: kcm/backupplanwidget.cpp:734
+#: kcm/backupplanwidget.cpp:753
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Manual Activation"
 msgstr "Manuell aktivering"
 
-#: kcm/backupplanwidget.cpp:735
+#: kcm/backupplanwidget.cpp:754
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Interval"
 msgstr "Intervall"
 
-#: kcm/backupplanwidget.cpp:736
+#: kcm/backupplanwidget.cpp:755
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Active Usage Time"
 msgstr "Aktiv användningstid"
 
-#: kcm/backupplanwidget.cpp:739
+#: kcm/backupplanwidget.cpp:758
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1058,7 +1061,7 @@ msgstr ""
 "Säkerhetskopieringar sparas endast när de begärs manuellt. Det kan göras "
 "genom att använda insticksprogrammet Säkerhetskopieringsstatus i Plasma."
 
-#: kcm/backupplanwidget.cpp:754
+#: kcm/backupplanwidget.cpp:773
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1068,31 +1071,31 @@ msgstr ""
 "En ny säkerhetskopia kommer att sparas när lagringsplatsen är tillgänglig "
 "och mer än inställt intervall har passerat sedan förra kopian sparades."
 
-#: kcm/backupplanwidget.cpp:771
+#: kcm/backupplanwidget.cpp:790
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Minutes"
 msgstr "Minuter"
 
-#: kcm/backupplanwidget.cpp:772 kcm/backupplanwidget.cpp:799
+#: kcm/backupplanwidget.cpp:791 kcm/backupplanwidget.cpp:818
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Hours"
 msgstr "Timmar"
 
-#: kcm/backupplanwidget.cpp:773
+#: kcm/backupplanwidget.cpp:792
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Days"
 msgstr "Dagar"
 
-#: kcm/backupplanwidget.cpp:774
+#: kcm/backupplanwidget.cpp:793
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Weeks"
 msgstr "Veckor"
 
-#: kcm/backupplanwidget.cpp:784
+#: kcm/backupplanwidget.cpp:803
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1104,31 +1107,31 @@ msgstr ""
 "och du har använt datorn aktivt under mer än inställd tidsgräns sedan förra "
 "kopian sparades."
 
-#: kcm/backupplanwidget.cpp:804
+#: kcm/backupplanwidget.cpp:823
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
 msgstr "Fråga innan ny säkerhetskopia sparas"
 
-#: kcm/backupplanwidget.cpp:823
+#: kcm/backupplanwidget.cpp:842
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Schedule"
 msgstr "Schema"
 
-#: kcm/backupplanwidget.cpp:824
+#: kcm/backupplanwidget.cpp:843
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Specify the backup schedule"
 msgstr "Specificera schema för säkerhetskopiering"
 
-#: kcm/backupplanwidget.cpp:838
+#: kcm/backupplanwidget.cpp:881
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
 msgstr "Visa dolda kataloger vid val av källor"
 
-#: kcm/backupplanwidget.cpp:842
+#: kcm/backupplanwidget.cpp:883
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1142,7 +1145,7 @@ msgstr ""
 "punkt. De finns typiskt i din hemkatalog och används för att lagra "
 "inställningar och temporära filer för dina applikationer."
 
-#: kcm/backupplanwidget.cpp:863
+#: kcm/backupplanwidget.cpp:895
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1154,13 +1157,13 @@ msgstr ""
 "det kommer ta lite längre tid att lagra en ny kopia. Fördelen är att det "
 "blir möjligt att reparera delvis skadade säkerhetskopior."
 
-#: kcm/backupplanwidget.cpp:869
+#: kcm/backupplanwidget.cpp:903
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Generate recovery information"
 msgstr "Generera återställningsinformation"
 
-#: kcm/backupplanwidget.cpp:872
+#: kcm/backupplanwidget.cpp:906
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid ""
@@ -1170,13 +1173,13 @@ msgstr ""
 "Generera återställningsinformation (inte tillgängligt eftersom "
 "<application>par2</application> inte är installerat)"
 
-#: kcm/backupplanwidget.cpp:888
+#: kcm/backupplanwidget.cpp:913
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Verify integrity of backups"
 msgstr "Automatisk integritetskontroll"
 
-#: kcm/backupplanwidget.cpp:892
+#: kcm/backupplanwidget.cpp:915
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1190,13 +1193,13 @@ msgstr ""
 "hitta eventuellt skadade filer så tidigt som möjligt. När du behöver använda "
 "en säkerhetskopia så är det oftast för sent."
 
-#: kcm/backupplanwidget.cpp:908
+#: kcm/backupplanwidget.cpp:926
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "Undanta filer och kataloger baserat på mönster"
 
-#: kcm/backupplanwidget.cpp:926
+#: kcm/backupplanwidget.cpp:944
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1210,30 +1213,113 @@ msgstr ""
 "säkerhetskopieringen. Mönsterformatet är dokumenterat på <link "
 "url='%1'>manualsidan för bup-index</link>."
 
-#: kcm/backupplanwidget.cpp:945
+#: kcm/backupplanwidget.cpp:963
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "Öppna dialogruta för att välja en fil"
 
-#: kcm/backupplanwidget.cpp:947
+#: kcm/backupplanwidget.cpp:965
 #, kde-format
 msgid "Select pattern file"
 msgstr "Välj mönsterfil"
 
-#: kcm/backupplanwidget.cpp:972
+#: kcm/backupplanwidget.cpp:983
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Exclude Folder"
+msgctxt "@option:check"
+msgid "Exclude caches"
+msgstr "Exkludera katalog"
+
+#: kcm/backupplanwidget.cpp:984
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Temporary data that can be recreated"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:993
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Exclude Folder"
+msgctxt "@option:check"
+msgid "Exclude encrypted folders"
+msgstr "Exkludera katalog"
+
+#: kcm/backupplanwidget.cpp:994
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Contents of unlocked encrypted folders, such as those created with Plasma "
+"Vault"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1002
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Exclude Folder"
+msgctxt "@option:check"
+msgid "Exclude trash"
+msgstr "Exkludera katalog"
+
+#: kcm/backupplanwidget.cpp:1003
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Files in trash that have not been permanently deleted"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1012
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude app states"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1013
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"App-specific state data, such as window position, history, and open files"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1022
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude containers and virtual machine images"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1023
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Containers or virtual machine images, such as those created by GNOME Boxes, "
+"Docker, Podman, and Incus"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1031
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude snapshots"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1032
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Btrfs filesystem snapshots"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1053
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Avancerat"
 
-#: kcm/backupplanwidget.cpp:973
+#: kcm/backupplanwidget.cpp:1054
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Extra inställningar för avancerade användare"
 
-#: kcm/backupplanwidget.cpp:1003
+#: kcm/backupplanwidget.cpp:1084
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
@@ -1315,7 +1401,7 @@ msgstr ""
 "är bara viktigt om det är flera användare på denna datorn eller om du tar "
 "säkerhetskopior av körbara programfiler."
 
-#: kcm/folderselectionmodel.cpp:90
+#: kcm/folderselectionmodel.cpp:94
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1325,13 +1411,22 @@ msgstr ""
 "<filename>%1</filename><nl/>kommer inkluderas, förutom avmarkerade "
 "underkataloger"
 
-#: kcm/folderselectionmodel.cpp:95
+#: kcm/folderselectionmodel.cpp:99
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid "<filename>%1</filename><nl/>will be included in the backup"
 msgstr "<filename>%1</filename><nl/>kommer inkluderas"
 
-#: kcm/folderselectionmodel.cpp:100
+#: kcm/folderselectionmodel.cpp:103
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/>is <emphasis>automatically excluded</emphasis> "
+"from the backup.<nl/>You can control this in the <interface>Advanced</"
+"interface> settings."
+msgstr ""
+
+#: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1341,7 +1436,7 @@ msgstr ""
 "<filename>%1</filename><nl/>kommer <emphasis>inte</emphasis> inkluderas men "
 "innehåller inkluderade underkataloger "
 
-#: kcm/folderselectionmodel.cpp:105
+#: kcm/folderselectionmodel.cpp:114
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1513,7 +1608,7 @@ msgstr "Rensning av bup-arkiv"
 msgid "© 2013–2021 Simon Persson"
 msgstr "© 2013-2021 Simon Persson"
 
-#: settings/backupplan.cpp:26
+#: settings/backupplan.cpp:27
 #, kde-kuit-format
 msgctxt ""
 "@label Default name for a new backup plan, %1 is the number of the plan in "
@@ -1521,36 +1616,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "Säkerhetskopia %1"
 
-#: settings/backupplan.cpp:64
+#: settings/backupplan.cpp:65
 #, kde-format
 msgid "Backups"
 msgstr "Säkerhetskopior"
 
-#: settings/backupplan.cpp:95
+#: settings/backupplan.cpp:96
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (kopia)"
 
-#: settings/backupplan.cpp:220
+#: settings/backupplan.cpp:227
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Sist sparad: %1"
 
-#: settings/backupplan.cpp:224
+#: settings/backupplan.cpp:231
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Storlek: %1"
 
-#: settings/backupplan.cpp:228
+#: settings/backupplan.cpp:235
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Tillgängligt utrymme: %1"
 
-#: settings/backupplan.cpp:231
+#: settings/backupplan.cpp:238
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 02:10+0000\n"
-"PO-Revision-Date: 2026-07-28 09:30+0300\n"
+"POT-Creation-Date: 2026-08-05 02:12+0000\n"
+"PO-Revision-Date: 2026-08-04 09:15+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -33,7 +33,7 @@ msgstr[1] ""
 "%1 תיקיות מקור לא קיימות עוד. נא לפתוח את ההגדרות ולאשר מה לכלול בגיבוי.<nl/"
 "><filename>%2</filename>"
 
-#: daemon/bupjob.cpp:48 daemon/buprepairjob.cpp:26
+#: daemon/bupjob.cpp:49 daemon/buprepairjob.cpp:26
 #: daemon/bupverificationjob.cpp:25
 #, kde-kuit-format
 msgctxt "@info notification"
@@ -43,7 +43,7 @@ msgid ""
 msgstr ""
 "התוכנית <application>bup</application> נחוצה אך לא נמצאה, אולי אינה מותקנת?"
 
-#: daemon/bupjob.cpp:55 daemon/buprepairjob.cpp:33
+#: daemon/bupjob.cpp:56 daemon/buprepairjob.cpp:33
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -52,19 +52,19 @@ msgid ""
 msgstr ""
 "התוכנית <application>par2</application> נחוצה אך לא נמצאה, אולי אינה מותקנת?"
 
-#: daemon/bupjob.cpp:76
+#: daemon/bupjob.cpp:77
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
 "Backup destination could not be initialised. See log file for more details."
 msgstr "לא ניתן לאתחל את יעד הגיבוי. יש פרטים נוספים ביומן."
 
-#: daemon/bupjob.cpp:100
+#: daemon/bupjob.cpp:101
 #, kde-format
 msgid "Checking backup integrity"
 msgstr "שלמות הגיבוי נבדקת"
 
-#: daemon/bupjob.cpp:119 daemon/bupverificationjob.cpp:63
+#: daemon/bupjob.cpp:120 daemon/bupverificationjob.cpp:63
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -74,7 +74,7 @@ msgstr ""
 "בדיקת שלמות הגיבוי נכשלה. יכול להיות שהגיבויים שלך פגומים! יש פרטים נוספים "
 "ביומן. לנסות לתקן את קובצי הגיבוי?"
 
-#: daemon/bupjob.cpp:124
+#: daemon/bupjob.cpp:125
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -84,34 +84,34 @@ msgstr ""
 "בדיקת שלמות הגיבוי נכשלה. יכול להיות שהגיבויים שלך פגומים! יש פרטים נוספים "
 "ביומן."
 
-#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:50
+#: daemon/bupjob.cpp:162 daemon/rsyncjob.cpp:51
 #, kde-format
 msgid "Checking what to copy"
 msgstr "מתבצעת בדיקה מה להעתיק"
 
-#: daemon/bupjob.cpp:171
+#: daemon/bupjob.cpp:176
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
 msgstr "ניתוח הקבצים נכשל. יש פרטים נוספים ביומן."
 
-#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
+#: daemon/bupjob.cpp:198 daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
 #, kde-format
 msgid "Saving backup"
 msgstr "הגיבוי נשמר"
 
-#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:121
+#: daemon/bupjob.cpp:215 daemon/rsyncjob.cpp:125
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
 msgstr "שמירת הגיבוי נכשלה. יש פרטים נוספים ביומן."
 
-#: daemon/bupjob.cpp:234
+#: daemon/bupjob.cpp:239
 #, kde-format
 msgid "Generating recovery information"
 msgstr "פרטי השחזור נוצרים"
 
-#: daemon/bupjob.cpp:251
+#: daemon/bupjob.cpp:256
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -119,7 +119,7 @@ msgid ""
 "details."
 msgstr "יצירת פרטי השחזור לגיבוי נכשלה. יש פרטים נוספים ביומן."
 
-#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
+#: daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -431,7 +431,7 @@ msgstr "התיקון הושלם"
 msgid "Kup Backup System"
 msgstr "מערכת הגיבויים Kup"
 
-#: daemon/rsyncjob.cpp:33
+#: daemon/rsyncjob.cpp:34
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -832,14 +832,8 @@ msgctxt "@action:button"
 msgid "Back to overview"
 msgstr "חזרה לסקירה"
 
-#: kcm/backupplanwidget.cpp:523
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Back up multiple versions over time of the files in the source folders. "
-#| "This allows older versions of files or deleted files to be recovered.<nl/"
-#| "></nl/>The backup archive will grow in size over time, and can only be "
-#| "accessed using the recovery tools provided by this program."
+#: kcm/backupplanwidget.cpp:524
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Back up multiple versions over time of the files in the source folders. This "
@@ -848,10 +842,10 @@ msgid ""
 "using the recovery tools provided by this program."
 msgstr ""
 "לגבות מגוון גרסאות עם הזמן של הקבצים בתיקיות המקור. מאפשר לשחזר גרסאות ישנות "
-"יותר של קבצים או כאלו שנמחקו.<nl/></nl/>ארכיון הגיבוי יתנפח עם הזמן וניתן "
+"יותר של קבצים או כאלו שנמחקו.<nl/><nl/>ארכיון הגיבוי יתנפח עם הזמן וניתן "
 "יהיה לגשת אליו רק עם כלי השחזור שסופקו על ידי התוכנית."
 
-#: kcm/backupplanwidget.cpp:535
+#: kcm/backupplanwidget.cpp:536
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -860,13 +854,13 @@ msgid ""
 msgstr ""
 "גיבויים לפי גרסאות (לא זמין כיוון ש־<application>bup</application> לא מותקן)"
 
-#: kcm/backupplanwidget.cpp:540
+#: kcm/backupplanwidget.cpp:541
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Versioned Backup (recommended)"
 msgstr "גיבויים לפי גרסאות (מומלץ)"
 
-#: kcm/backupplanwidget.cpp:545
+#: kcm/backupplanwidget.cpp:546
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -879,7 +873,7 @@ msgstr ""
 "מתיקיית הגיבוי.<nl/><nl/>זה יכול למנוע אובדן נתונים עקב פגם בכונן, אך לא עקב "
 "מחיקה או שינוי מקריים של קבצים."
 
-#: kcm/backupplanwidget.cpp:557
+#: kcm/backupplanwidget.cpp:558
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -887,49 +881,58 @@ msgid ""
 "is not installed)"
 msgstr "גיבוי מסונכרן (לא זמין כי <application>rsync</application> לא מותקן)"
 
-#: kcm/backupplanwidget.cpp:562
+#: kcm/backupplanwidget.cpp:563
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Synchronized Backup"
 msgstr "גיבוי מסונכרן"
 
-#: kcm/backupplanwidget.cpp:590
+#: kcm/backupplanwidget.cpp:591
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Backup Type"
 msgstr "סוג גיבוי"
 
-#: kcm/backupplanwidget.cpp:591
+#: kcm/backupplanwidget.cpp:592
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select what type of backup you want"
 msgstr "נא לבחור איזה סוג של גיבוי נחוץ לך"
 
-#: kcm/backupplanwidget.cpp:600
+#: kcm/backupplanwidget.cpp:608
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Some files and folders (such as caches or encrypted folders) are "
+"automatically excluded. You can configure this in the "
+"<interface><link>Advanced</link></interface> settings."
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Sources"
 msgstr "מקורות"
 
-#: kcm/backupplanwidget.cpp:601
+#: kcm/backupplanwidget.cpp:620
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select which folders to include in backup"
 msgstr "נא לבחור אילו תיקיות לכלול בגיבוי"
 
-#: kcm/backupplanwidget.cpp:616
+#: kcm/backupplanwidget.cpp:635
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Filesystem Path"
 msgstr "נתיב במערכת הקבצים"
 
-#: kcm/backupplanwidget.cpp:617
+#: kcm/backupplanwidget.cpp:636
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "External Storage"
 msgstr "אחסון חיצוני"
 
-#: kcm/backupplanwidget.cpp:623
+#: kcm/backupplanwidget.cpp:642
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -942,25 +945,25 @@ msgstr ""
 "אחסון דרך הרשת. הדרישה היא תמיד לעגן אותם באותו הנתיב במערכת הקבצים. הנתיב "
 "שמצוין כאן לא חייב להיות קיים כל הזמן, הקיום שלו נמצא במעקב."
 
-#: kcm/backupplanwidget.cpp:630
+#: kcm/backupplanwidget.cpp:649
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Destination Path for Backup:"
 msgstr "נתיב יעד לגיבוי:"
 
-#: kcm/backupplanwidget.cpp:641
+#: kcm/backupplanwidget.cpp:660
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
 msgstr "רק נתיבים במערכת הקבצים המקומית יעבדו!"
 
-#: kcm/backupplanwidget.cpp:648
+#: kcm/backupplanwidget.cpp:667
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
 msgstr "התיקייה לא קיימת! לא ישמרו גיבויים עד שתיווצר."
 
-#: kcm/backupplanwidget.cpp:667
+#: kcm/backupplanwidget.cpp:686
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -970,55 +973,55 @@ msgstr ""
 "יש להשתמש באפשרות הזאת כדי לגבות את הקבצים שלך לאחסון חיצוני שניתן לחבר "
 "למחשב הזה, כגון כונן USB או כרטיס זיכרון."
 
-#: kcm/backupplanwidget.cpp:676 kcm/backupplanwidget.cpp:679
+#: kcm/backupplanwidget.cpp:695 kcm/backupplanwidget.cpp:698
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "The specified folder will be created if it does not exist."
 msgstr "התיקייה שנבחרה תיווצר אם היא לא קיימת."
 
-#: kcm/backupplanwidget.cpp:678
+#: kcm/backupplanwidget.cpp:697
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Folder on Destination Drive:"
 msgstr "תיקייה בכונן היעד:"
 
-#: kcm/backupplanwidget.cpp:685
+#: kcm/backupplanwidget.cpp:704
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a folder"
 msgstr "פתיחת חלונית לבחירת תיקייה"
 
-#: kcm/backupplanwidget.cpp:715
+#: kcm/backupplanwidget.cpp:734
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Destination"
 msgstr "יעד"
 
-#: kcm/backupplanwidget.cpp:716
+#: kcm/backupplanwidget.cpp:735
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select the backup destination"
 msgstr "נא לבחור את יעד הגיבוי"
 
-#: kcm/backupplanwidget.cpp:734
+#: kcm/backupplanwidget.cpp:753
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Manual Activation"
 msgstr "הפעלה ידנית"
 
-#: kcm/backupplanwidget.cpp:735
+#: kcm/backupplanwidget.cpp:754
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Interval"
 msgstr "הפרש"
 
-#: kcm/backupplanwidget.cpp:736
+#: kcm/backupplanwidget.cpp:755
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Active Usage Time"
 msgstr "זמן השימוש הפעיל"
 
-#: kcm/backupplanwidget.cpp:739
+#: kcm/backupplanwidget.cpp:758
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1028,7 +1031,7 @@ msgstr ""
 "הגיבויים נשמרים רק עקב בקשה ידנית. אפשר לבצע זאת באמצעות וידג׳ט מצב הגיבוי "
 "של פלזמה."
 
-#: kcm/backupplanwidget.cpp:754
+#: kcm/backupplanwidget.cpp:773
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1038,31 +1041,31 @@ msgstr ""
 "גיבוי חדש יוזנק כשיעד הגיבוי נהיה זמין והזמן שעבר מאז שנשמר הגיבוי האחרון "
 "גדול מההפרש שהוגדר."
 
-#: kcm/backupplanwidget.cpp:771
+#: kcm/backupplanwidget.cpp:790
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Minutes"
 msgstr "דקות"
 
-#: kcm/backupplanwidget.cpp:772 kcm/backupplanwidget.cpp:799
+#: kcm/backupplanwidget.cpp:791 kcm/backupplanwidget.cpp:818
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Hours"
 msgstr "שעות"
 
-#: kcm/backupplanwidget.cpp:773
+#: kcm/backupplanwidget.cpp:792
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Days"
 msgstr "ימים"
 
-#: kcm/backupplanwidget.cpp:774
+#: kcm/backupplanwidget.cpp:793
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Weeks"
 msgstr "שבועות"
 
-#: kcm/backupplanwidget.cpp:784
+#: kcm/backupplanwidget.cpp:803
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1073,31 +1076,31 @@ msgstr ""
 "גיבוי חדש יוזנק כשיעד הגיבוי נהיה זמין והשתמשת במחשב שלך באופן פעיל במשך זמן "
 "שעולה על מגבלת הזמן שהוגדרה מאז שהגיבוי האחרון נשמר."
 
-#: kcm/backupplanwidget.cpp:804
+#: kcm/backupplanwidget.cpp:823
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
 msgstr "לבקש אישור לפי שמירת הגיבוי"
 
-#: kcm/backupplanwidget.cpp:823
+#: kcm/backupplanwidget.cpp:842
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Schedule"
 msgstr "תזמון"
 
-#: kcm/backupplanwidget.cpp:824
+#: kcm/backupplanwidget.cpp:843
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Specify the backup schedule"
 msgstr "נא לציין את הגיבוי לתזמון"
 
-#: kcm/backupplanwidget.cpp:838
+#: kcm/backupplanwidget.cpp:881
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
 msgstr "להציג תיקיות מוסתרות בבחירת המקור"
 
-#: kcm/backupplanwidget.cpp:842
+#: kcm/backupplanwidget.cpp:883
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1110,7 +1113,7 @@ msgstr ""
 "של תיקיות מוסתרות נפתחים בנקודה. הם בדרך כלל נמצאים בתיקיית הבית שלך והם "
 "משמשים לאחסון הגדרות וקבצים זמניים ליישומים שלך."
 
-#: kcm/backupplanwidget.cpp:863
+#: kcm/backupplanwidget.cpp:895
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1121,13 +1124,13 @@ msgstr ""
 "כך הגיבויים שלך יתפסו 10% יותר בנפח האחסון ושמירת הגיבויים תארוך קצת יותר "
 "זמן. בתמורה יהיה ניתן לשחזר מגיבוי שנפגם חלקית."
 
-#: kcm/backupplanwidget.cpp:869
+#: kcm/backupplanwidget.cpp:903
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Generate recovery information"
 msgstr "יצירת פרטי שחזור"
 
-#: kcm/backupplanwidget.cpp:872
+#: kcm/backupplanwidget.cpp:906
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid ""
@@ -1136,13 +1139,13 @@ msgid ""
 msgstr ""
 "יצירת פרטי שחזור (לא זמינה כיוון ש־<application>par2</application> לא מותקן)"
 
-#: kcm/backupplanwidget.cpp:888
+#: kcm/backupplanwidget.cpp:913
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Verify integrity of backups"
 msgstr "אימות שלמות הגיבויים"
 
-#: kcm/backupplanwidget.cpp:892
+#: kcm/backupplanwidget.cpp:915
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1155,13 +1158,13 @@ msgstr ""
 "תארוך יותר זמן אבל תאפשר לך לאתר פגמים מהר יותר ממתי שצריך להשתמש בגיבוי, "
 "כשזה קורה אז כנראה כבר מאוחר מדי."
 
-#: kcm/backupplanwidget.cpp:908
+#: kcm/backupplanwidget.cpp:926
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "להחריג קבצים ותיקיות לפי תבניות"
 
-#: kcm/backupplanwidget.cpp:926
+#: kcm/backupplanwidget.cpp:944
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1174,30 +1177,113 @@ msgstr ""
 "עם שמות שתואמים לאי אילו מהתבניות יוחרגו מהגיבוי. תחביר התבנית מתועד ב<link "
 "url='%1'>עמוד המפתח של ההסברים על bup</link>."
 
-#: kcm/backupplanwidget.cpp:945
+#: kcm/backupplanwidget.cpp:963
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "פתיחת חלונית לבחירת קובץ"
 
-#: kcm/backupplanwidget.cpp:947
+#: kcm/backupplanwidget.cpp:965
 #, kde-format
 msgid "Select pattern file"
 msgstr "נא לבחור קובץ תבנית"
 
-#: kcm/backupplanwidget.cpp:972
+#: kcm/backupplanwidget.cpp:983
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Exclude Folder"
+msgctxt "@option:check"
+msgid "Exclude caches"
+msgstr "החרגת תיקייה"
+
+#: kcm/backupplanwidget.cpp:984
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Temporary data that can be recreated"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:993
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Exclude Folder"
+msgctxt "@option:check"
+msgid "Exclude encrypted folders"
+msgstr "החרגת תיקייה"
+
+#: kcm/backupplanwidget.cpp:994
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Contents of unlocked encrypted folders, such as those created with Plasma "
+"Vault"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1002
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Exclude Folder"
+msgctxt "@option:check"
+msgid "Exclude trash"
+msgstr "החרגת תיקייה"
+
+#: kcm/backupplanwidget.cpp:1003
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Files in trash that have not been permanently deleted"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1012
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude app states"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1013
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"App-specific state data, such as window position, history, and open files"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1022
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude containers and virtual machine images"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1023
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Containers or virtual machine images, such as those created by GNOME Boxes, "
+"Docker, Podman, and Incus"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1031
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude snapshots"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1032
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Btrfs filesystem snapshots"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1053
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "מתקדם"
 
-#: kcm/backupplanwidget.cpp:973
+#: kcm/backupplanwidget.cpp:1054
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "אפשרויות נוספות למשתמשים מתקדמים"
 
-#: kcm/backupplanwidget.cpp:1003
+#: kcm/backupplanwidget.cpp:1084
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
@@ -1277,7 +1363,7 @@ msgstr ""
 "אזהרה: לא ניתן לשמור הרשאות קבצים למערכת הקבצים הזה. הרשאות הקבצים משנות רק "
 "אם יש יותר ממשתמש אחד במחשב הזה או אם זה גיבוי של קובצי הפעלה."
 
-#: kcm/folderselectionmodel.cpp:90
+#: kcm/folderselectionmodel.cpp:94
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1287,13 +1373,22 @@ msgstr ""
 "<filename>%1</filename><nl/>יהיה חלק מהגיבוי, למעט תת־תיקיות שהסימון הוסר "
 "מעליהן"
 
-#: kcm/folderselectionmodel.cpp:95
+#: kcm/folderselectionmodel.cpp:99
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid "<filename>%1</filename><nl/>will be included in the backup"
 msgstr "<filename>%1</filename><nl/>יהיה חלק מהגיבוי"
 
-#: kcm/folderselectionmodel.cpp:100
+#: kcm/folderselectionmodel.cpp:103
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/>is <emphasis>automatically excluded</emphasis> "
+"from the backup.<nl/>You can control this in the <interface>Advanced</"
+"interface> settings."
+msgstr ""
+
+#: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1303,7 +1398,7 @@ msgstr ""
 "<filename>%1</filename><nl/><emphasis>לא</emphasis> יהיה חלק מהגיבוי אבל "
 "מכיל תיקיות שכן תהיינה"
 
-#: kcm/folderselectionmodel.cpp:105
+#: kcm/folderselectionmodel.cpp:114
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1471,7 +1566,7 @@ msgstr "מנפה לארכיונים של bup."
 msgid "© 2013–2021 Simon Persson"
 msgstr "© 2013‏-2021 סיימון פרסון"
 
-#: settings/backupplan.cpp:26
+#: settings/backupplan.cpp:27
 #, kde-kuit-format
 msgctxt ""
 "@label Default name for a new backup plan, %1 is the number of the plan in "
@@ -1479,36 +1574,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "תוכנית גיבויים %1"
 
-#: settings/backupplan.cpp:64
+#: settings/backupplan.cpp:65
 #, kde-format
 msgid "Backups"
 msgstr "גיבויים"
 
-#: settings/backupplan.cpp:95
+#: settings/backupplan.cpp:96
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (עותק)"
 
-#: settings/backupplan.cpp:220
+#: settings/backupplan.cpp:227
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "שמירה אחרונה: %1"
 
-#: settings/backupplan.cpp:224
+#: settings/backupplan.cpp:231
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "גודל: %1"
 
-#: settings/backupplan.cpp:228
+#: settings/backupplan.cpp:235
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "נפח פנוי: %1"
 
-#: settings/backupplan.cpp:231
+#: settings/backupplan.cpp:238
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."

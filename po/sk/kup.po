@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 02:10+0000\n"
+"POT-Creation-Date: 2026-08-05 02:12+0000\n"
 "PO-Revision-Date: 2026-04-10 12:00+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -35,7 +35,7 @@ msgstr[2] ""
 "%1 zdrojových priečinkov už neexistuje. Otvorte nastavenia a potvrďte, čo sa "
 "má zahrnúť do zálohy.<nl/><filename>%2</filename>"
 
-#: daemon/bupjob.cpp:48 daemon/buprepairjob.cpp:26
+#: daemon/bupjob.cpp:49 daemon/buprepairjob.cpp:26
 #: daemon/bupverificationjob.cpp:25
 #, kde-kuit-format
 msgctxt "@info notification"
@@ -46,7 +46,7 @@ msgstr ""
 "Program <application>bup</application> je potrebný, ale nepodarilo sa ho "
 "nájsť. Možno nie je nainštalovaný?"
 
-#: daemon/bupjob.cpp:55 daemon/buprepairjob.cpp:33
+#: daemon/bupjob.cpp:56 daemon/buprepairjob.cpp:33
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -56,7 +56,7 @@ msgstr ""
 "Program <application>par2</application> je potrebný, ale nepodarilo sa ho "
 "nájsť. Možno nie je nainštalovaný?"
 
-#: daemon/bupjob.cpp:76
+#: daemon/bupjob.cpp:77
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -65,12 +65,12 @@ msgstr ""
 "Cieľ zálohy sa nepodarilo inicializovať. Podrobnosti nájdete v súbore "
 "denníka."
 
-#: daemon/bupjob.cpp:100
+#: daemon/bupjob.cpp:101
 #, kde-format
 msgid "Checking backup integrity"
 msgstr "Kontrola integrity zálohy"
 
-#: daemon/bupjob.cpp:119 daemon/bupverificationjob.cpp:63
+#: daemon/bupjob.cpp:120 daemon/bupverificationjob.cpp:63
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -81,7 +81,7 @@ msgstr ""
 "Podrobnosti nájdete v súbore denníka. Chcete sa pokúsiť opraviť súbory "
 "zálohy?"
 
-#: daemon/bupjob.cpp:124
+#: daemon/bupjob.cpp:125
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -91,34 +91,34 @@ msgstr ""
 "Kontrola integrity zálohy zlyhala. Vaše zálohy môžu byť poškodené! "
 "Podrobnosti nájdete v súbore denníka."
 
-#: daemon/bupjob.cpp:157 daemon/rsyncjob.cpp:50
+#: daemon/bupjob.cpp:162 daemon/rsyncjob.cpp:51
 #, kde-format
 msgid "Checking what to copy"
 msgstr "Kontrola, čo sa má kopírovať"
 
-#: daemon/bupjob.cpp:171
+#: daemon/bupjob.cpp:176
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
 msgstr "Nepodarilo sa analyzovať súbory. Podrobnosti nájdete v súbore denníka."
 
-#: daemon/bupjob.cpp:193 daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
+#: daemon/bupjob.cpp:198 daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
 #, kde-format
 msgid "Saving backup"
 msgstr "Ukladanie zálohy"
 
-#: daemon/bupjob.cpp:210 daemon/rsyncjob.cpp:121
+#: daemon/bupjob.cpp:215 daemon/rsyncjob.cpp:125
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Failed to save backup. See log file for more details."
 msgstr "Nepodarilo sa uložiť zálohu. Podrobnosti nájdete v súbore denníka."
 
-#: daemon/bupjob.cpp:234
+#: daemon/bupjob.cpp:239
 #, kde-format
 msgid "Generating recovery information"
 msgstr "Generovanie informácií na obnovu"
 
-#: daemon/bupjob.cpp:251
+#: daemon/bupjob.cpp:256
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -128,7 +128,7 @@ msgstr ""
 "Nepodarilo sa vygenerovať informácie na obnovu zálohy. Podrobnosti nájdete v "
 "súbore denníka."
 
-#: daemon/bupjob.cpp:316 daemon/rsyncjob.cpp:177
+#: daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -445,7 +445,7 @@ msgstr "Oprava dokončená"
 msgid "Kup Backup System"
 msgstr "Zálohovací systém Kup"
 
-#: daemon/rsyncjob.cpp:33
+#: daemon/rsyncjob.cpp:34
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -854,7 +854,7 @@ msgctxt "@action:button"
 msgid "Back to overview"
 msgstr "Späť na prehľad"
 
-#: kcm/backupplanwidget.cpp:523
+#: kcm/backupplanwidget.cpp:524
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -874,7 +874,7 @@ msgstr ""
 ">Archív zálohy bude časom narastať a je prístupný len pomocou nástrojov na "
 "obnovu poskytovaných týmto programom."
 
-#: kcm/backupplanwidget.cpp:535
+#: kcm/backupplanwidget.cpp:536
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -884,13 +884,13 @@ msgstr ""
 "Verzionovaná záloha (nie je dostupná, pretože <application>bup</application> "
 "nie je nainštalovaný)"
 
-#: kcm/backupplanwidget.cpp:540
+#: kcm/backupplanwidget.cpp:541
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Versioned Backup (recommended)"
 msgstr "Verzionovaná záloha (odporúčané)"
 
-#: kcm/backupplanwidget.cpp:545
+#: kcm/backupplanwidget.cpp:546
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -904,7 +904,7 @@ msgstr ""
 ">Toto môže zabrániť strate dát kvôli poškodenému disku, ale nie kvôli "
 "náhodne vymazaným alebo zmeneným súborom."
 
-#: kcm/backupplanwidget.cpp:557
+#: kcm/backupplanwidget.cpp:558
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid ""
@@ -914,49 +914,58 @@ msgstr ""
 "Synchronizovaná záloha (nie je dostupná, pretože <application>rsync</"
 "application> nie je nainštalovaný)"
 
-#: kcm/backupplanwidget.cpp:562
+#: kcm/backupplanwidget.cpp:563
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Synchronized Backup"
 msgstr "Synchronizovaná záloha"
 
-#: kcm/backupplanwidget.cpp:590
+#: kcm/backupplanwidget.cpp:591
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Backup Type"
 msgstr "Typ zálohy"
 
-#: kcm/backupplanwidget.cpp:591
+#: kcm/backupplanwidget.cpp:592
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select what type of backup you want"
 msgstr "Vyberte, aký typ zálohy chcete"
 
-#: kcm/backupplanwidget.cpp:600
+#: kcm/backupplanwidget.cpp:608
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Some files and folders (such as caches or encrypted folders) are "
+"automatically excluded. You can configure this in the "
+"<interface><link>Advanced</link></interface> settings."
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Sources"
 msgstr "Zdroje"
 
-#: kcm/backupplanwidget.cpp:601
+#: kcm/backupplanwidget.cpp:620
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select which folders to include in backup"
 msgstr "Vyberte, ktoré priečinky sa majú zahrnúť do zálohy"
 
-#: kcm/backupplanwidget.cpp:616
+#: kcm/backupplanwidget.cpp:635
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Filesystem Path"
 msgstr "Cesta v súborovom systéme"
 
-#: kcm/backupplanwidget.cpp:617
+#: kcm/backupplanwidget.cpp:636
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "External Storage"
 msgstr "Externé úložisko"
 
-#: kcm/backupplanwidget.cpp:623
+#: kcm/backupplanwidget.cpp:642
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -970,26 +979,26 @@ msgstr ""
 "pripojili na rovnakú cestu v súborovom systéme. Cesta zadaná tu nemusí "
 "existovať neustále, jej existencia bude monitorovaná."
 
-#: kcm/backupplanwidget.cpp:630
+#: kcm/backupplanwidget.cpp:649
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Destination Path for Backup:"
 msgstr "Cieľová cesta pre zálohu:"
 
-#: kcm/backupplanwidget.cpp:641
+#: kcm/backupplanwidget.cpp:660
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
 msgstr "Fungujú len cesty v lokálnom súborovom systéme!"
 
-#: kcm/backupplanwidget.cpp:648
+#: kcm/backupplanwidget.cpp:667
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
 msgstr ""
 "Priečinok neexistuje! Žiadne zálohy nebudú uložené, kým ho nevytvoríte."
 
-#: kcm/backupplanwidget.cpp:667
+#: kcm/backupplanwidget.cpp:686
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1000,55 +1009,55 @@ msgstr ""
 "ktoré sa dá pripojiť k tomuto počítaču, napríklad USB pevný disk alebo "
 "pamäťový kľúč."
 
-#: kcm/backupplanwidget.cpp:676 kcm/backupplanwidget.cpp:679
+#: kcm/backupplanwidget.cpp:695 kcm/backupplanwidget.cpp:698
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "The specified folder will be created if it does not exist."
 msgstr "Zadaný priečinok bude vytvorený, ak neexistuje."
 
-#: kcm/backupplanwidget.cpp:678
+#: kcm/backupplanwidget.cpp:697
 #, kde-kuit-format
 msgctxt "@label:textbox"
 msgid "Folder on Destination Drive:"
 msgstr "Priečinok na cieľovom disku:"
 
-#: kcm/backupplanwidget.cpp:685
+#: kcm/backupplanwidget.cpp:704
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a folder"
 msgstr "Otvoriť dialóg na výber priečinka"
 
-#: kcm/backupplanwidget.cpp:715
+#: kcm/backupplanwidget.cpp:734
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Destination"
 msgstr "Cieľ"
 
-#: kcm/backupplanwidget.cpp:716
+#: kcm/backupplanwidget.cpp:735
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Select the backup destination"
 msgstr "Vyberte cieľ zálohy"
 
-#: kcm/backupplanwidget.cpp:734
+#: kcm/backupplanwidget.cpp:753
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Manual Activation"
 msgstr "Ručná aktivácia"
 
-#: kcm/backupplanwidget.cpp:735
+#: kcm/backupplanwidget.cpp:754
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Interval"
 msgstr "Interval"
 
-#: kcm/backupplanwidget.cpp:736
+#: kcm/backupplanwidget.cpp:755
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Active Usage Time"
 msgstr "Čas aktívneho používania"
 
-#: kcm/backupplanwidget.cpp:739
+#: kcm/backupplanwidget.cpp:758
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1058,7 +1067,7 @@ msgstr ""
 "Zálohy sa ukladajú len na manuálnu požiadavku. Toto sa dá urobiť pomocou "
 "widgetu Stav záloh v Plasme."
 
-#: kcm/backupplanwidget.cpp:754
+#: kcm/backupplanwidget.cpp:773
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1068,31 +1077,31 @@ msgstr ""
 "Nová záloha sa spustí, keď bude cieľ zálohy dostupný a od poslednej zálohy "
 "uplynie viac ako nastavený interval."
 
-#: kcm/backupplanwidget.cpp:771
+#: kcm/backupplanwidget.cpp:790
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Minutes"
 msgstr "Minúty"
 
-#: kcm/backupplanwidget.cpp:772 kcm/backupplanwidget.cpp:799
+#: kcm/backupplanwidget.cpp:791 kcm/backupplanwidget.cpp:818
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Hours"
 msgstr "Hodiny"
 
-#: kcm/backupplanwidget.cpp:773
+#: kcm/backupplanwidget.cpp:792
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Days"
 msgstr "Dni"
 
-#: kcm/backupplanwidget.cpp:774
+#: kcm/backupplanwidget.cpp:793
 #, kde-kuit-format
 msgctxt "@item:inlistbox"
 msgid "Weeks"
 msgstr "Týždne"
 
-#: kcm/backupplanwidget.cpp:784
+#: kcm/backupplanwidget.cpp:803
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1103,31 +1112,31 @@ msgstr ""
 "Nová záloha sa spustí, keď bude cieľ zálohy dostupný a od poslednej zálohy "
 "ste aktívne používali počítač dlhšie ako nastavený časový limit."
 
-#: kcm/backupplanwidget.cpp:804
+#: kcm/backupplanwidget.cpp:823
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
 msgstr "Vyžiadať potvrdenie pred uložením zálohy"
 
-#: kcm/backupplanwidget.cpp:823
+#: kcm/backupplanwidget.cpp:842
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Schedule"
 msgstr "Rozvrh"
 
-#: kcm/backupplanwidget.cpp:824
+#: kcm/backupplanwidget.cpp:843
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Specify the backup schedule"
 msgstr "Zadajte plán zálohovania"
 
-#: kcm/backupplanwidget.cpp:838
+#: kcm/backupplanwidget.cpp:881
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
 msgstr "Zobraziť skryté priečinky vo výbere zdrojov"
 
-#: kcm/backupplanwidget.cpp:842
+#: kcm/backupplanwidget.cpp:883
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1141,7 +1150,7 @@ msgstr ""
 "nachádzajú vo vašom domovskom priečinku a slúžia na ukladanie nastavení a "
 "dočasných súborov vašich aplikácií."
 
-#: kcm/backupplanwidget.cpp:863
+#: kcm/backupplanwidget.cpp:895
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1153,13 +1162,13 @@ msgstr ""
 "záloh bude trvať o niečo dlhšie. Na oplátku bude možné obnoviť dáta z "
 "čiastočne poškodenej zálohy."
 
-#: kcm/backupplanwidget.cpp:869
+#: kcm/backupplanwidget.cpp:903
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Generate recovery information"
 msgstr "Generovať informácie na obnovu"
 
-#: kcm/backupplanwidget.cpp:872
+#: kcm/backupplanwidget.cpp:906
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid ""
@@ -1169,13 +1178,13 @@ msgstr ""
 "Generovať informácie na obnovu (nie je dostupné, pretože <application>par2</"
 "application> nie je nainštalovaný)"
 
-#: kcm/backupplanwidget.cpp:888
+#: kcm/backupplanwidget.cpp:913
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Verify integrity of backups"
 msgstr "Overiť integritu záloh"
 
-#: kcm/backupplanwidget.cpp:892
+#: kcm/backupplanwidget.cpp:915
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1189,13 +1198,13 @@ msgstr ""
 "problémy s poškodením skôr, ako keď budete zálohu potrebovať, kedy by už "
 "mohlo byť neskoro."
 
-#: kcm/backupplanwidget.cpp:908
+#: kcm/backupplanwidget.cpp:926
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "Vylúčiť súbory a priečinky na základe vzorov"
 
-#: kcm/backupplanwidget.cpp:926
+#: kcm/backupplanwidget.cpp:944
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1209,30 +1218,113 @@ msgstr ""
 "zo zálohy. Formát vzorov je zdokumentovaný v <link url='%1'>manuálovej "
 "stránke bup-index</link>."
 
-#: kcm/backupplanwidget.cpp:945
+#: kcm/backupplanwidget.cpp:963
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "Otvoriť dialóg na výber súboru"
 
-#: kcm/backupplanwidget.cpp:947
+#: kcm/backupplanwidget.cpp:965
 #, kde-format
 msgid "Select pattern file"
 msgstr "Vybrať súbor so vzormi"
 
-#: kcm/backupplanwidget.cpp:972
+#: kcm/backupplanwidget.cpp:983
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Exclude Folder"
+msgctxt "@option:check"
+msgid "Exclude caches"
+msgstr "Vylúčiť priečinok"
+
+#: kcm/backupplanwidget.cpp:984
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Temporary data that can be recreated"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:993
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Exclude Folder"
+msgctxt "@option:check"
+msgid "Exclude encrypted folders"
+msgstr "Vylúčiť priečinok"
+
+#: kcm/backupplanwidget.cpp:994
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Contents of unlocked encrypted folders, such as those created with Plasma "
+"Vault"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1002
+#, fuzzy, kde-kuit-format
+#| msgctxt "@action:button"
+#| msgid "Exclude Folder"
+msgctxt "@option:check"
+msgid "Exclude trash"
+msgstr "Vylúčiť priečinok"
+
+#: kcm/backupplanwidget.cpp:1003
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Files in trash that have not been permanently deleted"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1012
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude app states"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1013
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"App-specific state data, such as window position, history, and open files"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1022
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude containers and virtual machine images"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1023
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Containers or virtual machine images, such as those created by GNOME Boxes, "
+"Docker, Podman, and Incus"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1031
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude snapshots"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1032
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Btrfs filesystem snapshots"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1053
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Pokročilé"
 
-#: kcm/backupplanwidget.cpp:973
+#: kcm/backupplanwidget.cpp:1054
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Ďalšie možnosti pre pokročilých používateľov"
 
-#: kcm/backupplanwidget.cpp:1003
+#: kcm/backupplanwidget.cpp:1084
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
@@ -1315,7 +1407,7 @@ msgstr ""
 "systém. Oprávnenia súborov sú dôležité len ak tento počítač používa viac ako "
 "jeden používateľ alebo ak zálohujete spustiteľné programové súbory."
 
-#: kcm/folderselectionmodel.cpp:90
+#: kcm/folderselectionmodel.cpp:94
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1325,13 +1417,22 @@ msgstr ""
 "<filename>%1</filename><nl/>bude zahrnutý do zálohy, okrem neoznačených "
 "podpriečinkov"
 
-#: kcm/folderselectionmodel.cpp:95
+#: kcm/folderselectionmodel.cpp:99
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid "<filename>%1</filename><nl/>will be included in the backup"
 msgstr "<filename>%1</filename><nl/>bude zahrnutý do zálohy"
 
-#: kcm/folderselectionmodel.cpp:100
+#: kcm/folderselectionmodel.cpp:103
+#, kde-kuit-format
+msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+msgid ""
+"<filename>%1</filename><nl/>is <emphasis>automatically excluded</emphasis> "
+"from the backup.<nl/>You can control this in the <interface>Advanced</"
+"interface> settings."
+msgstr ""
+
+#: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1341,7 +1442,7 @@ msgstr ""
 "<filename>%1</filename><nl/> <emphasis>nebude</emphasis> zahrnutý do zálohy, "
 "ale obsahuje priečinky, ktoré budú"
 
-#: kcm/folderselectionmodel.cpp:105
+#: kcm/folderselectionmodel.cpp:114
 #, kde-kuit-format
 msgctxt "@info:tooltip %1 is the path of the folder in a listview"
 msgid ""
@@ -1514,7 +1615,7 @@ msgstr "Čistič archívov bup."
 msgid "© 2013–2021 Simon Persson"
 msgstr "© 2013–2021 Simon Persson"
 
-#: settings/backupplan.cpp:26
+#: settings/backupplan.cpp:27
 #, kde-kuit-format
 msgctxt ""
 "@label Default name for a new backup plan, %1 is the number of the plan in "
@@ -1522,36 +1623,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "Plán zálohovania %1"
 
-#: settings/backupplan.cpp:64
+#: settings/backupplan.cpp:65
 #, kde-format
 msgid "Backups"
 msgstr "Zálohy"
 
-#: settings/backupplan.cpp:95
+#: settings/backupplan.cpp:96
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (kópia)"
 
-#: settings/backupplan.cpp:220
+#: settings/backupplan.cpp:227
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Naposledy uložené: %1"
 
-#: settings/backupplan.cpp:224
+#: settings/backupplan.cpp:231
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Veľkosť: %1"
 
-#: settings/backupplan.cpp:228
+#: settings/backupplan.cpp:235
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Voľné miesto: %1"
 
-#: settings/backupplan.cpp:231
+#: settings/backupplan.cpp:238
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
