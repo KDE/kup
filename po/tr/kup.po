@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-05 02:12+0000\n"
-"PO-Revision-Date: 2026-08-04 19:14+0300\n"
+"PO-Revision-Date: 2026-08-05 08:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -934,6 +934,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Kimi dosyalar ve klasörler (önbellekler veya şifreli klasörler gibi), "
+"kendiliğinden dışlanırlar. Bunu, <interface><link>Gelişmiş</link></"
+"interface> ayarlardan yapılandırabilirsiniz."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1225,26 +1228,22 @@ msgid "Select pattern file"
 msgstr "Dizgi dosyası seç"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Klasörü Dışla"
+msgstr "Önbellekleri dışla"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Yeniden oluşturulabilir geçici veri"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Klasörü Dışla"
+msgstr "Şifreli klasörleri dışla"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1253,26 +1252,26 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"Kilidi açık şifreli klasörlerin içeriği; örneğin , Plasma Kasalar ile "
+"oluşturulanlar"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Klasörü Dışla"
+msgstr "Çöp kutusunu dışla"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "Henüz kalıcı olarak silinmemiş çöp kutusundaki dosyalar"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Uygulama durumlarını dışla"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1280,12 +1279,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Uygulamaya özel durum verisi; örneğin, pencere konumu, geçmiş ve açık "
+"dosyalar"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Kapsayıcıları ve sanal makine kalıplarını dışla"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1294,18 +1295,20 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Kapsayıcılar veya sanal makine kalıpları; örneğin, GNOME Boxes, Docker, "
+"Podman, Incus gibi yazılımların oluşturdukları"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Anlık görüntüleri dışla"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Btrfs dosya sistemi anlık görüntüleri"
 
 #: kcm/backupplanwidget.cpp:1053
 #, kde-kuit-format
@@ -1423,6 +1426,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>yedekten <emphasis>kendiliğinden dışlanmıştır</"
+"emphasis>.<nl/>Bunu, <interface>Gelişmiş</interface> ayarlardan "
+"yapılandırabilirsiniz."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format

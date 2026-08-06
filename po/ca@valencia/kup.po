@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-05 02:12+0000\n"
-"PO-Revision-Date: 2026-08-04 09:39+0200\n"
+"PO-Revision-Date: 2026-08-05 12:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -952,6 +952,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Alguns fitxers i carpetes (com ara les memòries cau o les carpetes "
+"encriptades) s'exclouen automàticament. Podeu configurar açò a la "
+"configuració <interface><link>Avançada</link></interface>."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1250,26 +1253,22 @@ msgid "Select pattern file"
 msgstr "Tria un fitxer de patrons"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Exclou la carpeta"
+msgstr "Exclou les memòries cau"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Dades temporals que es poden tornar a crear"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Exclou la carpeta"
+msgstr "Exclou les carpetes encriptades"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1278,26 +1277,26 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"Continguts de carpetes encriptades desbloquejades, com les creades amb la "
+"Caixa forta de Plasma"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Exclou la carpeta"
+msgstr "Exclou la paperera"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "Fitxers a la paperera que no s'han suprimit permanentment"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Exclou els estats de les aplicacions"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1305,13 +1304,16 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Dades d'estat específiques de les aplicacions, com ara la posició de la "
+"finestra, l'historial i els fitxers oberts"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Exclou els contenidors i les imatges de màquines virtuals"
 
+# skip-rule: kct-docker
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
 msgctxt "@info"
@@ -1319,18 +1321,22 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Contenidors o imatges de màquines virtuals, com les creades per Boxes de "
+"GNOME, Docker, Podman i Incus"
 
+# skip-rule: kct-snapshot
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Exclou les instantànies"
 
+# skip-rule: kct-snapshot
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Instantànies del sistema de fitxers Btrfs"
 
 #: kcm/backupplanwidget.cpp:1053
 #, kde-kuit-format
@@ -1452,6 +1458,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>està <emphasis>exclòs automàticament</emphasis> "
+"de la còpia de seguretat.<nl/>Podeu controlar-ho des de la configuració "
+"<interface>Avançada</interface>."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format

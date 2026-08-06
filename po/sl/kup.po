@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-05 02:12+0000\n"
-"PO-Revision-Date: 2026-08-04 07:27+0200\n"
+"PO-Revision-Date: 2026-08-05 07:22+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -946,6 +946,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Nekatere datoteke in mape (kot so predpomnilniki ali šifrirane mape) so "
+"samodejno izključene. To lahko konfigurirate v nastavitvah "
+"<interface><link>Napredno</link></interface>."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1240,26 +1243,22 @@ msgid "Select pattern file"
 msgstr "Izberi datoteko vzorcev"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Izvzemi mapo"
+msgstr "Izključi predpomnilnike"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Začasni podatki, ki jih je mogoče ponovno ustvariti"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Izvzemi mapo"
+msgstr "Izvzemi šifrirane mape"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1268,26 +1267,25 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"Vsebina odklenjenih šifriranih map, kot so tiste, ustvarjene s Plasma Vault"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Izvzemi mapo"
+msgstr "Izvzemi koš za smeti"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "Datoteke v košu za smeti niso bile trajno izbrisane"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Izvzemi stanja aplikacij"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1295,12 +1293,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Podatki o stanju, specifični za aplikacijo, kot so položaj okna, zgodovina "
+"in odprte datoteke"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Izvzemi vsebnike in slike navideznih strojev"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1309,18 +1309,20 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Vsebniki ali slike virtualnih strojev, kot so tiste, ki jih ustvarijo GNOME "
+"Boxes, Docker, Podman in Incus"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Izvzemi posnetke"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Posnetki datotečnega sistema Btrfs"
 
 #: kcm/backupplanwidget.cpp:1053
 #, kde-kuit-format
@@ -1441,6 +1443,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"Datoteka <filename>%1</filename><nl/>je <emphasis>samodejno izvzeta</"
+"emphasis> iz varnostne kopije.<nl/>To lahko nadzorujete v nastavitvah "
+"<interface>Napredno</interface>."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format

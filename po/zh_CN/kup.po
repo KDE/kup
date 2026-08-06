@@ -819,13 +819,7 @@ msgid "Back to overview"
 msgstr "回到概览"
 
 #: kcm/backupplanwidget.cpp:524
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Back up multiple versions over time of the files in the source folders. "
-#| "This allows older versions of files or deleted files to be recovered.<nl/"
-#| "></nl/>The backup archive will grow in size over time, and can only be "
-#| "accessed using the recovery tools provided by this program."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Back up multiple versions over time of the files in the source folders. This "
@@ -834,7 +828,7 @@ msgid ""
 "using the recovery tools provided by this program."
 msgstr ""
 "备份来源文件夹中文件的多个版本。这样可以恢复旧版本的文件或者已删除的文件夹。"
-"<nl/></nl/>备份压缩文件将随着时间的推移而变大，且只能通过本程序提供的工具进行"
+"<nl/><nl/>备份压缩文件将随着时间的推移而变大，且只能通过本程序提供的工具进行"
 "访问。"
 
 #: kcm/backupplanwidget.cpp:536
@@ -1175,12 +1169,10 @@ msgid "Select pattern file"
 msgstr "选择模式文件"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "排除文件夹"
+msgstr ""
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
@@ -1189,12 +1181,10 @@ msgid "Temporary data that can be recreated"
 msgstr ""
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "排除文件夹"
+msgstr ""
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1205,12 +1195,10 @@ msgid ""
 msgstr ""
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "排除文件夹"
+msgstr ""
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
@@ -1514,22 +1502,22 @@ msgstr "配置备份计划…"
 #: plasmoid-qt6/contents/ui/PlanItem.qml:33
 #, kde-format
 msgid "Show Files"
-msgstr ""
+msgstr "显示文件"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:41
 #, kde-format
 msgid "Save Backup"
-msgstr ""
+msgstr "保存备份"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:49
 #, kde-format
 msgid "Prune Old Backups"
-msgstr ""
+msgstr "修剪旧备份"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:57
 #, kde-format
 msgid "View Log"
-msgstr ""
+msgstr "查看日志"
 
 #: purger/main.cpp:24
 #, kde-kuit-format

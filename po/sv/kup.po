@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-05 02:12+0000\n"
-"PO-Revision-Date: 2026-08-04 16:43+0200\n"
+"PO-Revision-Date: 2026-08-05 16:11+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -932,6 +932,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Vissa filer och kataloger (som cacheminnen eller krypterade kataloger) "
+"undantas automatiskt. Det går att ställas in i inställningarna "
+"<interface><link>Avancerat</link></interface>."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1225,26 +1228,22 @@ msgid "Select pattern file"
 msgstr "Välj mönsterfil"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Exkludera katalog"
+msgstr "Uteslut cachelagring"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Tillfällig data som kan återskapas"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Exkludera katalog"
+msgstr "Uteslut krypterade kataloger"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1253,26 +1252,25 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"Innehåll i upplåsta krypterade kataloger, såsom de som skapas med Plasma valv"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Exkludera katalog"
+msgstr "Uteslut papperskorgen"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "Filer i papperskorgen som inte har tagits bort permanent"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Uteslut programtillstånd"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1280,12 +1278,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Programspecifik tillståndsinformation, såsom fönsterposition, historik och "
+"öppna filer"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Undanta behållare och avbilder av virtuella maskiner"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1294,18 +1294,20 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Behållare eller avbildningar av virtuella maskiner, som de som skapats av "
+"GNOME Boxes, Docker, Podman och Incus"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Undanta ögonblicksbilder"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Ögonblicksbilder av Btrfs-filsystemet"
 
 #: kcm/backupplanwidget.cpp:1053
 #, kde-kuit-format
@@ -1425,6 +1427,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>är <emphasis>automatiskt undantagen</emphasis> "
+"från säkerhetskopian.<nl/>Man kan bestämma det under inställningarna "
+"<interface>Avancerat</interface>."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-05 02:12+0000\n"
-"PO-Revision-Date: 2026-08-04 11:10+0300\n"
+"PO-Revision-Date: 2026-08-05 08:39+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -965,6 +965,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Деякі файли і теки (зокрема кеш та шифровані теки) автоматично виключено. Ви "
+"можете змінити це у параметрах на вкладці <interface><link>Додатково</link></"
+"interface>."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1263,26 +1266,22 @@ msgid "Select pattern file"
 msgstr "Виберіть файл взірців"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Виключити теку"
+msgstr "Виключити кеш"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Тимчасові дані, які може бути повторно створено"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Виключити теку"
+msgstr "Виключити шифровані теки"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1291,26 +1290,26 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"Вміст розблокованих шифрованих тек, зокрема тек, які створено за допомогою "
+"Сховища Плазми."
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Виключити теку"
+msgstr "Виключити смітник"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "Файли у смітнику, які не було остаточно вилучено"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Виключити стани програм"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1318,12 +1317,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Специфічні для програм дані станів, зокрема розташування вікон, журналу та "
+"списку відкритих файлів"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Виключити контейнери та образи віртуальних машин"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1332,18 +1333,20 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Контейнери або образи віртуальних машин, зокрема створені за допомогою "
+"Коробок GNOME, Docker, Podman та Incus"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Виключити знімки"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Знімки файлової системи Btrfs"
 
 #: kcm/backupplanwidget.cpp:1053
 #, kde-kuit-format
@@ -1465,6 +1468,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/> <emphasis>автоматично виключено</emphasis> з "
+"резервної копії.<nl/>Змінити це можна за допомогою параметрів на вкладці "
+"<interface>Додатково</interface>."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format

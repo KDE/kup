@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-05 02:12+0000\n"
-"PO-Revision-Date: 2026-08-04 06:02-0300\n"
+"PO-Revision-Date: 2026-08-05 06:18-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -944,6 +944,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Alguns arquivos e pastas (como caches ou pastas criptografadas) são "
+"excluídos automaticamente. Você pode configurar isso na configuração "
+"<interface><link>Avançado</link></interface>."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1234,26 +1237,22 @@ msgid "Select pattern file"
 msgstr "Selecionar arquivo de padrão"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Excluir pasta"
+msgstr "Excluir caches"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Dados temporários que podem ser recriados"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Excluir pasta"
+msgstr "Excluir pastas criptografadas"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1262,26 +1261,26 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"Conteúdo de pastas criptografadas desbloqueadas, como aquelas criadas com o "
+"Plasma Vault"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Excluir pasta"
+msgstr "Excluir lixeira"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "Arquivos na lixeira que não foram excluídos permanentemente"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Excluir estados de aplicativos"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1289,12 +1288,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Dados de estado específicos do aplicativo, como posição da janela, histórico "
+"e arquivos abertos"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Excluir contêineres e imagens de máquinas virtuais"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1303,18 +1304,20 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Containers ou imagens de máquinas virtuais, como os criados pelo GNOME "
+"Boxes, Docker, Podman e Incus"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Excluir snapshots"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Snapshots do sistema de arquivos Btrfs"
 
 #: kcm/backupplanwidget.cpp:1053
 #, kde-kuit-format
@@ -1434,6 +1437,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>é <emphasis>automaticamente excluído</emphasis> "
+"do backup.<nl/>Você pode controlar isso na configuração <interface>Avançado</"
+"interface>."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
