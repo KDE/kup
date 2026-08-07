@@ -892,6 +892,8 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"某些文件和文件夹 (例如缓存或加密文件夹) 会自动被排除。您可以在 "
+"<interface><link>高级</link></interface> 设置中进行配置。"
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1172,19 +1174,19 @@ msgstr "选择模式文件"
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr ""
+msgstr "排除缓存"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "可重新创建的临时数据"
 
 #: kcm/backupplanwidget.cpp:993
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr ""
+msgstr "排除加密文件夹"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1192,38 +1194,38 @@ msgctxt "@info"
 msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
-msgstr ""
+msgstr "已解锁的加密文件夹内容，例如使用Plasma Vault创建的文件夹"
 
 #: kcm/backupplanwidget.cpp:1002
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr ""
+msgstr "排除回收站"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "未被彻底删除的回收站文件"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "排除应用状态"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
-msgstr ""
+msgstr "应用程序特定的状态数据，例如窗口位置、历史记录和打开的文件"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "排除容器和虚拟机镜像"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1232,18 +1234,19 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"容器或虚拟机镜像，例如由 GNOME Boxes、Docker、Podman 和 Incus 创建的镜像"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "排除快照"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Btrfs 文件系统快照"
 
 #: kcm/backupplanwidget.cpp:1053
 #, kde-kuit-format
@@ -1357,6 +1360,8 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>将从备份中<emphasis>自动排除</emphasis> 。<nl/>您"
+"可以在 <interface>高级</interface> 设置中控制此行为。"
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format

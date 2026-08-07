@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-05 02:12+0000\n"
-"PO-Revision-Date: 2026-07-29 08:50+0200\n"
+"PO-Revision-Date: 2026-08-05 12:59+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -873,13 +873,7 @@ msgid "Back to overview"
 msgstr "Retour à la vue d'ensemble"
 
 #: kcm/backupplanwidget.cpp:524
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Back up multiple versions over time of the files in the source folders. "
-#| "This allows older versions of files or deleted files to be recovered.<nl/"
-#| "></nl/>The backup archive will grow in size over time, and can only be "
-#| "accessed using the recovery tools provided by this program."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Back up multiple versions over time of the files in the source folders. This "
@@ -888,10 +882,10 @@ msgid ""
 "using the recovery tools provided by this program."
 msgstr ""
 "Sauvegardez plusieurs versions au fil du temps des fichiers dans les "
-"dossiers de sources. Cela permet de récupérer des versions plus anciennes de "
-"fichiers ou des fichiers supprimés.<nl/></nl/>La taille des sauvegarde "
-"augmentera au fil du temps. La sauvegarde ne sera plus accessible qu'à "
-"l'aide des outils de récupération fournis par ce programme."
+"dossiers sources. Cela permet de retrouver d'anciennes versions de fichiers "
+"ou des fichiers supprimés. <nl/><nl/>La taille de l’archive de sauvegarde "
+"augmentera au fil du temps. L'accès à la sauvegarde ne pourra se faire qu’en "
+"utilisant les outils de récupération fournis par ce programme."
 
 #: kcm/backupplanwidget.cpp:536
 #, kde-kuit-format

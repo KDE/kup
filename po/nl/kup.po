@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-05 02:12+0000\n"
-"PO-Revision-Date: 2026-08-04 12:15+0200\n"
+"PO-Revision-Date: 2026-08-05 18:15+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -943,6 +943,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Sommige bestanden en mappen (zoals caches of versleutelde mappen) worden "
+"automatisch uitgesloten. U kunt dit instellen in de instellingen "
+"<interface><link>Geavanceerde</link></interface>."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1235,26 +1238,22 @@ msgid "Select pattern file"
 msgstr "Patroonbestand selecteren"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Map uitsluiten"
+msgstr "Caches uitsluiten"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Tijdelijke gegevens die opnieuw kunnen worden gegenereerd"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Map uitsluiten"
+msgstr "Versleutelde mappen uitsluiten"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1263,26 +1262,26 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"Inhoud van ontgrendelde versleutelde mappen, zoals die welke met Plasma "
+"Vault (kluis) zijn aangemaakt"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Map uitsluiten"
+msgstr "Prullenbak uitsluiten"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "Bestanden in de prullenbak die niet definitief zijn verwijderd"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Toepassingsstatussen uitsluiten"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1290,12 +1289,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Toepassingsspecifieke statusgegevens, zoals vensterpositie, geschiedenis en "
+"geopende bestanden"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Containers en images van virtuele machines uitsluiten"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1304,18 +1305,20 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Containers of images voor virtuele machines, zoals die welke worden "
+"aangemaakt door GNOME Boxes, Docker, Podman en Incus"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Momentopnamen uitsluiten"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Momentopnamen van btrfs-besturingssysteem"
 
 #: kcm/backupplanwidget.cpp:1053
 #, kde-kuit-format
@@ -1436,6 +1439,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>wordt <emphasis>automatisch uitgesloten</"
+"emphasis> van de reservekopie.<nl/>U kunt dit beheren in de instellingen "
+"<interface>Geavanceerd</interface>."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
