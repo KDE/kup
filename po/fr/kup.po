@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-05 02:12+0000\n"
-"PO-Revision-Date: 2026-08-05 12:59+0200\n"
+"PO-Revision-Date: 2026-08-06 17:08+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -954,6 +954,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Certains fichiers et dossiers (Tels que les caches ou les dossiers chiffrés) "
+"sont automatiquement exclus. Vous pouvez configurer ceci dans la "
+"<interface><link>Configuration Avancée</link></interface>."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1253,26 +1256,22 @@ msgid "Select pattern file"
 msgstr "Sélectionner un fichier de motifs"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Dossiers à exclure"
+msgstr "Exclure les caches"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Données temporaires pouvant être recréées"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Dossiers à exclure"
+msgstr "Exclure les dossiers chiffrés"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1281,26 +1280,26 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"Contenu des dossiers chiffrés déverrouillés, tels que ceux créés avec Plasma "
+"Vault"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Dossiers à exclure"
+msgstr "Exclure la corbeille"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "Fichiers dans la corbeille n'ayant pas été définitivement supprimés"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Exclure les états des applications"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1308,12 +1307,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Données d'état spécifiques à l'application, telles que la position de la "
+"fenêtre, l'historique et les fichiers ouverts"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Exclure les conteneurs et les images de machines virtuelles"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1322,18 +1323,20 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Conteneurs ou images de machines virtuelles, telles que celles créées par "
+"GNOME Boxes, Docker, Podman et Incus"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Exclure les captures d'écran"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Captures d'écran pour le système de fichiers « Btrfs »"
 
 #: kcm/backupplanwidget.cpp:1053
 #, kde-kuit-format
@@ -1455,6 +1458,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>est <emphasis>automatiquement exclu</emphasis> "
+"de la sauvegarde.<nl/>Vous pouvez contrôler ceci dans la "
+"<interface>Configuration Avancée</interface>."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
