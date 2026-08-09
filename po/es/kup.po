@@ -4,18 +4,18 @@
 #
 # SPDX-FileCopyrightText: 2013 Francisco García Cisneros <fgarciacis@koali.es>
 # SPDX-FileCopyrightText: 2014 Administrador de Sistemas de Koali <admin@koali.es>
-# SPDX-FileCopyrightText: 2014, 2015, 2018 Simon Persson <simon.persson@mykolab.com>
+# SPDX-FileCopyrightText: 2014-2015, 2018 Simon Persson <simon.persson@mykolab.com>
 # SPDX-FileCopyrightText: 2017 Alex Castilla <alex.castillap@gmail.com>
 # SPDX-FileCopyrightText: 2017 seryeb <seryeb@gmail.com>
-# SPDX-FileCopyrightText: 2018, 2019 Victor García <victor.garcia@iberdomo.net>
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2018-2019 Victor García <victor.garcia@iberdomo.net>
+# SPDX-FileCopyrightText: 2019-2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 # SPDX-FileCopyrightText: 2020 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-05 02:12+0000\n"
-"PO-Revision-Date: 2026-03-29 01:39+0100\n"
+"POT-Creation-Date: 2026-08-09 02:08+0000\n"
+"PO-Revision-Date: 2026-08-08 17:20+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -881,13 +881,7 @@ msgid "Back to overview"
 msgstr "Volver a vista general"
 
 #: kcm/backupplanwidget.cpp:524
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Back up multiple versions over time of the files in the source folders. "
-#| "This allows older versions of files or deleted files to be recovered.<nl/"
-#| "></nl/>The backup archive will grow in size over time, and can only be "
-#| "accessed using the recovery tools provided by this program."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Back up multiple versions over time of the files in the source folders. This "
@@ -897,7 +891,7 @@ msgid ""
 msgstr ""
 "Respaldar múltiples versiones de los archivos en las carpetas origen a lo "
 "largo del tiempo. Esto permite recuperar versiones antiguas o archivos "
-"borrados.<nl/></nl/>El archivo de respaldo crecerá en tamaño con el tiempo y "
+"borrados.<nl/><nl/>El archivo de respaldo crecerá en tamaño con el tiempo y "
 "solo se podrá acceder a él con las herramientas de recuperación "
 "proporcionadas por este programa."
 
@@ -967,6 +961,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Algunos archivos y carpetas (como las cachés y carpetas cifradas) se "
+"excluyen automáticamente. Puede configurar esto en las preferencias "
+"<interface><link>Avanzadas</link></interface>."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1260,26 +1257,22 @@ msgid "Select pattern file"
 msgstr "Elija un patrón de archivo"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Carpeta excluida"
+msgstr "Excluir cachés"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Los datos temporales pueden recrearse"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Carpeta excluida"
+msgstr "Excluir carpetas cifradas"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1288,26 +1281,25 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"El contenido de carpetas cifradas, como aquellas creadas con Plasma Vault."
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Carpeta excluida"
+msgstr "Excluir basura"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "Archivos en la basura que no han sido permanentemente borrados"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Excluir el estado de las aplicaciones"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1315,12 +1307,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Datos de estado de las aplicaciones, como la posición de la ventana, "
+"historia y archivos abiertos"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Excluir c"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1329,32 +1323,48 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Contenedores e imágenes de máquinas virtuales, como las creadas por GNOME "
+"Boxes, Docker, Podman e Incus."
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Excluir imágenes temporales"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
+msgstr "Imágenes temporales del sistema de archivos Btrfs"
+
+#: kcm/backupplanwidget.cpp:1042
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude user-level Flatpaks"
 msgstr ""
 
-#: kcm/backupplanwidget.cpp:1053
+#: kcm/backupplanwidget.cpp:1043
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Flatpak apps and runtimes that can be re-downloaded (will not prevent "
+"backing up settings and data for these apps)"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Avanzado"
 
-#: kcm/backupplanwidget.cpp:1054
+#: kcm/backupplanwidget.cpp:1066
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Opciones para usuarios avanzados"
 
-#: kcm/backupplanwidget.cpp:1084
+#: kcm/backupplanwidget.cpp:1096
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
@@ -1461,6 +1471,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>se <emphasis>excluye automáticamente</emphasis> "
+"de la copia de seguridad.<nl/>Puede controlar esto en las preferencias "
+"<interface>Avanzadas</interface>"
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
@@ -1608,28 +1621,24 @@ msgid "Configure Backup Plans…"
 msgstr "Configurar planes de copia de seguridad…"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:33
-#, fuzzy, kde-format
-#| msgid "Show files"
+#, kde-format
 msgid "Show Files"
 msgstr "Mostrar archivos"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Backup"
+#, kde-format
 msgid "Save Backup"
 msgstr "Guardar copia"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:49
-#, fuzzy, kde-format
-#| msgid "Prune old backups"
+#, kde-format
 msgid "Prune Old Backups"
 msgstr "Eliminar copias de seguridad"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:57
 #, kde-format
 msgid "View Log"
-msgstr ""
+msgstr "Ver registros"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
@@ -1655,36 +1664,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "Plan de copia de seguridad %1"
 
-#: settings/backupplan.cpp:65
+#: settings/backupplan.cpp:66
 #, kde-format
 msgid "Backups"
 msgstr "Copias de seguridad"
 
-#: settings/backupplan.cpp:96
+#: settings/backupplan.cpp:97
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (copia)"
 
-#: settings/backupplan.cpp:227
+#: settings/backupplan.cpp:229
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Último guardado: %1"
 
-#: settings/backupplan.cpp:231
+#: settings/backupplan.cpp:233
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Tamaño: %1"
 
-#: settings/backupplan.cpp:235
+#: settings/backupplan.cpp:237
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Espacio libre: %1"
 
-#: settings/backupplan.cpp:238
+#: settings/backupplan.cpp:240
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."

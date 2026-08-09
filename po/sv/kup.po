@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-05 02:12+0000\n"
+"POT-Creation-Date: 2026-08-09 02:08+0000\n"
 "PO-Revision-Date: 2026-08-05 16:11+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -1309,19 +1309,33 @@ msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
 msgstr "Ögonblicksbilder av Btrfs-filsystemet"
 
-#: kcm/backupplanwidget.cpp:1053
+#: kcm/backupplanwidget.cpp:1042
+#, kde-kuit-format
+msgctxt "@option:check"
+msgid "Exclude user-level Flatpaks"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1043
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Flatpak apps and runtimes that can be re-downloaded (will not prevent "
+"backing up settings and data for these apps)"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Avancerat"
 
-#: kcm/backupplanwidget.cpp:1054
+#: kcm/backupplanwidget.cpp:1066
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Extra inställningar för avancerade användare"
 
-#: kcm/backupplanwidget.cpp:1084
+#: kcm/backupplanwidget.cpp:1096
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
@@ -1621,36 +1635,36 @@ msgctxt ""
 msgid "Backup plan %1"
 msgstr "Säkerhetskopia %1"
 
-#: settings/backupplan.cpp:65
+#: settings/backupplan.cpp:66
 #, kde-format
 msgid "Backups"
 msgstr "Säkerhetskopior"
 
-#: settings/backupplan.cpp:96
+#: settings/backupplan.cpp:97
 #, kde-format
 msgctxt "default description of newly duplicated backup plan"
 msgid "%1 (copy)"
 msgstr "%1 (kopia)"
 
-#: settings/backupplan.cpp:227
+#: settings/backupplan.cpp:229
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
 msgstr "Sist sparad: %1"
 
-#: settings/backupplan.cpp:231
+#: settings/backupplan.cpp:233
 #, kde-format
 msgctxt "%1 is storage size of archive"
 msgid "Size: %1"
 msgstr "Storlek: %1"
 
-#: settings/backupplan.cpp:235
+#: settings/backupplan.cpp:237
 #, kde-format
 msgctxt "%1 is free storage space"
 msgid "Free space: %1"
 msgstr "Tillgängligt utrymme: %1"
 
-#: settings/backupplan.cpp:238
+#: settings/backupplan.cpp:240
 #, kde-kuit-format
 msgctxt "@label"
 msgid "This backup plan has never been run."
