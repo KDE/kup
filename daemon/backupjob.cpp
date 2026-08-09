@@ -17,6 +17,8 @@
 #include <QTimer>
 #include <utility>
 
+using namespace Qt::StringLiterals;
+
 BackupJob::BackupJob(BackupPlan &pBackupPlan, QString pDestinationPath, QString pLogFilePath, KupDaemon *pKupDaemon)
     : mBackupPlan(pBackupPlan)
     , mDestinationPath(std::move(pDestinationPath))
@@ -28,7 +30,7 @@ BackupJob::BackupJob(BackupPlan &pBackupPlan, QString pDestinationPath, QString 
     mLogStream.setDevice(&mLogFile);
 
     // Magic property that tells the job tracker the destination of this job.
-    setProperty("destUrl", mDestinationPath);
+    setProperty("destUrl", "file://"_L1 + mDestinationPath);
 }
 
 void BackupJob::start()
