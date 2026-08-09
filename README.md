@@ -35,7 +35,7 @@ To compile you need:
 - CMake
 - extra-cmake-modules
 - The following libraries (including their development headers):
-  - qt5-base
+  - qt6-core
   - kcoreaddons
   - kdbusaddons
   - ki18n

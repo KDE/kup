@@ -4,7 +4,8 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-set(KF_MIN_VERSION "5.96.0")
+set(KF_MIN_VERSION "6.26")
+set(QT_MIN_VERSION "6.10")
 set(KDE_COMPILERSETTINGS_LEVEL "5.84.0")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -30,8 +31,8 @@ include(ECMQtDeclareLoggingCategory)
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 
-find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS Core Widgets)
-find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
+find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets)
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
 Solid
 KIO
 IdleTime
@@ -48,14 +49,9 @@ Crash
 )
 
 
-if(QT_MAJOR_VERSION STREQUAL "6")
-    find_package(Plasma REQUIRED)
-    find_package(Plasma5Support REQUIRED)
-    plasma_install_package(plasmoid-qt6 org.kde.kupapplet)
-else()
-    find_package(KF5Plasma REQUIRED)
-    plasma_install_package(plasmoid-qt5 org.kde.kupapplet)
-endif()
+find_package(Plasma REQUIRED)
+find_package(Plasma5Support REQUIRED)
+plasma_install_package(plasmoid-qt6 org.kde.kupapplet)
 
 add_subdirectory(daemon)
 add_subdirectory(dataengine)
