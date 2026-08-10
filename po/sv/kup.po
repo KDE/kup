@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-09 02:08+0000\n"
-"PO-Revision-Date: 2026-08-05 16:11+0200\n"
+"PO-Revision-Date: 2026-08-09 07:46+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -1313,7 +1313,7 @@ msgstr "Ögonblicksbilder av Btrfs-filsystemet"
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "Undanta Flatpak på användarnivå"
 
 #: kcm/backupplanwidget.cpp:1043
 #, kde-kuit-format
@@ -1322,6 +1322,8 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"Program och körbara filer i Flatpak som kan laddas ner igen (förhindrar inte "
+"säkerhetskopiering av inställningar och data för programmen)"
 
 #: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format
