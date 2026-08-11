@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-09 02:08+0000\n"
+"POT-Creation-Date: 2026-08-11 02:20+0000\n"
 "PO-Revision-Date: 2025-09-12 16:41+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.0\n"
 
-#: daemon/backupjob.cpp:46
+#: daemon/backupjob.cpp:48
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""

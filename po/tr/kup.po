@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-09 02:08+0000\n"
-"PO-Revision-Date: 2026-08-05 08:54+0300\n"
+"POT-Creation-Date: 2026-08-11 02:20+0000\n"
+"PO-Revision-Date: 2026-08-10 19:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 26.04.2\n"
 
-#: daemon/backupjob.cpp:46
+#: daemon/backupjob.cpp:48
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -1314,7 +1314,7 @@ msgstr "Btrfs dosya sistemi anlık görüntüleri"
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "Kullanıcı düzeyi Flatpak’leri dışla"
 
 #: kcm/backupplanwidget.cpp:1043
 #, kde-kuit-format
@@ -1323,6 +1323,9 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"Yeniden indirilebilir olan Flatpak uygulamaları ve çalışma zamanları "
+"yedekten dışarıda tutulur (bu uygulamalar için olan ayarlar ve veriler "
+"yedeklenir)."
 
 #: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format

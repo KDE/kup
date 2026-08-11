@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-09 02:08+0000\n"
-"PO-Revision-Date: 2026-03-23 22:26+0400\n"
+"POT-Creation-Date: 2026-08-11 02:20+0000\n"
+"PO-Revision-Date: 2026-08-10 16:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,9 +16,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
-#: daemon/backupjob.cpp:46
+#: daemon/backupjob.cpp:48
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -856,13 +856,7 @@ msgid "Back to overview"
 msgstr "عد للنظرة العامة"
 
 #: kcm/backupplanwidget.cpp:524
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Back up multiple versions over time of the files in the source folders. "
-#| "This allows older versions of files or deleted files to be recovered.<nl/"
-#| "></nl/>The backup archive will grow in size over time, and can only be "
-#| "accessed using the recovery tools provided by this program."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Back up multiple versions over time of the files in the source folders. This "
@@ -872,7 +866,7 @@ msgid ""
 msgstr ""
 "أنشئ نسخة احتياطية لإصدارات متعددة على مدار الوقت من الملفات الموجودة في "
 "المجلدات المصدر. يتيح لك هذا استرداد الإصدارات الأقدم من الملفات أو الملفات "
-"المحذوفة.<nl/></nl/>سيزداد حجم أرشيف النسخ الاحتياطي بمرور الوقت، ولا يمكن "
+"المحذوفة.<nl/><nl/>سيزداد حجم أرشيف النسخ الاحتياطي بمرور الوقت، ولا يمكن "
 "الوصول إليه إلا باستخدام أدوات الاسترداد التي يوفرها هذا البرنامج."
 
 #: kcm/backupplanwidget.cpp:536
@@ -940,6 +934,8 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"تُستثنى بعض الملفات والمجلدات (مثل الخبيئات أو المجلدات المعمّاة) آليًا. يمكنك "
+"ضبط ذلك في إعدادات <interface><link>متقدم</link></interface>."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1226,26 +1222,22 @@ msgid "Select pattern file"
 msgstr "حدد ملف النمط"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "استثني المجلد"
+msgstr "استثنِ الخبيئات"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "بيانات مؤقتة يمكن إعادة إنشائها"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "استثني المجلد"
+msgstr "استثنِ المجلدات المعماة"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1254,26 +1246,25 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"محتويات المجلدات المعمّاة المفتوحة، مثل تلك المنشأة باستخدام خزنة بلازما"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "استثني المجلد"
+msgstr "استثنِ سلة المهملات"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "الملفات في سلة المهملات التي لم تُحذف نهائيًا"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "استثنِ حالات التطبيقات"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1281,12 +1272,13 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"بيانات الحالة الخاصة بالتطبيق، مثل موضع النافذة والسجل والملفات المفتوحة"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "استثنِ الحاويات وصور الآلات الافتراضية"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1295,24 +1287,26 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"الحاويات أو صور الآلات الافتراضية، مثل تلك المنشأة بواسطة جنوم بوكسيس ودوكر "
+"وبودمان وإنكوس"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "استثنِ اللقطات"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "لقطات نظام ملفات بترفز Btrfs"
 
 #: kcm/backupplanwidget.cpp:1042
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "استثنِ فلاتباك على مستوى المستخدم"
 
 #: kcm/backupplanwidget.cpp:1043
 #, kde-kuit-format
@@ -1321,6 +1315,8 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"تطبيقات وبيئات تشغيل فلاتباك التي يمكن إعادة تنزيلها (لن يمنع ذلك نسخ "
+"الإعدادات والبيانات لهذه التطبيقات احتياطيًا)"
 
 #: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format
@@ -1438,6 +1434,8 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>مستثنى <emphasis>آليًا</emphasis> من النسخ "
+"الاحتياطي.<nl/>يمكنك التحكم في ذلك من إعدادات <interface>متقدم</interface>."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
@@ -1584,28 +1582,24 @@ msgid "Configure Backup Plans…"
 msgstr "اضبط خطط النسخ الاحتياطية…"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:33
-#, fuzzy, kde-format
-#| msgid "Show files"
+#, kde-format
 msgid "Show Files"
 msgstr "أظهر الملفات"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Backup"
+#, kde-format
 msgid "Save Backup"
 msgstr "احفظ نسخة احتياطية"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:49
-#, fuzzy, kde-format
-#| msgid "Prune old backups"
+#, kde-format
 msgid "Prune Old Backups"
 msgstr "قلّم النسخ الاحتياطية القديمة"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:57
 #, kde-format
 msgid "View Log"
-msgstr ""
+msgstr "اعرض السجلّ"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
