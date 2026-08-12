@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-11 02:20+0000\n"
-"PO-Revision-Date: 2026-07-28 15:03+0200\n"
+"PO-Revision-Date: 2026-08-09 17:26+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -883,13 +883,7 @@ msgid "Back to overview"
 msgstr "Torna al riepilogo"
 
 #: kcm/backupplanwidget.cpp:524
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Back up multiple versions over time of the files in the source folders. "
-#| "This allows older versions of files or deleted files to be recovered.<nl/"
-#| "></nl/>The backup archive will grow in size over time, and can only be "
-#| "accessed using the recovery tools provided by this program."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Back up multiple versions over time of the files in the source folders. This "
@@ -899,7 +893,7 @@ msgid ""
 msgstr ""
 "Esegui il backup di più versioni nel tempo dei file nelle cartelle di "
 "origine. Ciò consente di recuperare versioni più vecchie dei file o file "
-"eliminati.<nl/></nl/>L'archivio di copie di sicurezza aumenterà di "
+"eliminati.<nl/><nl/>L'archivio delle copie di sicurezza aumenterà di "
 "dimensioni nel tempo e sarà possibile accedervi solo tramite gli strumenti "
 "di recupero forniti da questo programma."
 
@@ -970,6 +964,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Alcuni file e cartelle (come cache o cartelle cifrate) sono esclusi "
+"automaticamente. È possibile configurarlo nelle impostazioni "
+"<interface><link>Avanzate</link></interface>."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1270,26 +1267,22 @@ msgid "Select pattern file"
 msgstr "Seleziona il file dei modelli"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Escludi cartelle"
+msgstr "Escludi cache"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Dati temporanei che possono essere ricreati"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Escludi cartelle"
+msgstr "Escludi le cartelle cifrate"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1298,26 +1291,26 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"Contenuto delle cartelle cifrate sbloccate, come quelle create con Plasma "
+"Vault"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Escludi cartelle"
+msgstr "Escludi il cestino"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "File nel cestino che non sono stati eliminati definitivamente"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Escludi gli stati delle applicazioni"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1325,12 +1318,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Dati di stato specifici dell'applicazione, come la posizione della finestra, "
+"la cronologia e i file aperti."
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Escludi i container e le immagini delle macchine virtuali"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1339,24 +1334,26 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Container o immagini di macchine virtuali, come quelle create da GNOME Boxes,"
+"Docker, Podman e Incus"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Escludi gli snapshot"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Snapshot del filesystem Btrfs"
 
 #: kcm/backupplanwidget.cpp:1042
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "Escludi i Flatpak a livello utente"
 
 #: kcm/backupplanwidget.cpp:1043
 #, kde-kuit-format
@@ -1365,6 +1362,9 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"Applicazioni e runtime Flatpak che possono essere scaricati nuovamente (ciò "
+"non impedirà la copia di sicurezza delle impostazioni e dei dati per queste "
+"applicazioni)."
 
 #: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format
@@ -1485,6 +1485,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>è <emphasis>escluso automaticamente</emphasis> "
+"dalla copia di sicurezza.<nl/>Puoi controllarlo nelle impostazioni "
+"<interface>Avanzate</interface>."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format

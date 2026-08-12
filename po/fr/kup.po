@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-11 02:20+0000\n"
-"PO-Revision-Date: 2026-08-06 17:08+0200\n"
+"PO-Revision-Date: 2026-08-10 08:54+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -1342,7 +1342,7 @@ msgstr "Captures d'écran pour le système de fichiers « Btrfs »"
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "Exclure les Flatpaks de niveau utilisateur"
 
 #: kcm/backupplanwidget.cpp:1043
 #, kde-kuit-format
@@ -1351,6 +1351,9 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"Applications et environnements d'exécution Flatpak pouvant être re-"
+"téléchargés (N'empêcheront pas la sauvegarde de la configuration et des "
+"données de ces applications)"
 
 #: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format
