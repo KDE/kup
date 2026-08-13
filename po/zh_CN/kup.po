@@ -1252,7 +1252,7 @@ msgstr "Btrfs 文件系统快照"
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "排除用户级别的 Flatpak"
 
 #: kcm/backupplanwidget.cpp:1043
 #, kde-kuit-format
@@ -1261,6 +1261,7 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"可重新下载的 Flatpak 应用和运行时组件 (不会阻止为这些应用备份设置和数据)"
 
 #: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format
