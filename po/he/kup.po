@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-11 02:20+0000\n"
-"PO-Revision-Date: 2026-08-04 09:15+0300\n"
+"PO-Revision-Date: 2026-08-12 09:36+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -907,6 +907,8 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"חלק מהקבצים והתיקיות (כגון מטמונים או תיקיות מוצפנות) מוחרגים אוטומטית. אפשר "
+"להגדיר את זה בהגדרות <interface><link>המתקדמות</link></interface>."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1189,26 +1191,22 @@ msgid "Select pattern file"
 msgstr "נא לבחור קובץ תבנית"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "החרגת תיקייה"
+msgstr "החרגת מטמונים"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "נתונים זמניים שאפשר ליצור מחדש"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "החרגת תיקייה"
+msgstr "החרגת תיקיות מוצפנות"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1216,40 +1214,38 @@ msgctxt "@info"
 msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
-msgstr ""
+msgstr "תוכן של תיקיות מוצפנות שאינן נעולות, כמו אלה שנוצרות עם הכספת של פלזמה"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "החרגת תיקייה"
+msgstr "החרגת אשפה"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "קבצים באשפה שלא נמחקו לצמיתות"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "החרגת מצבי יישומים"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
-msgstr ""
+msgstr "נתוני מצב נקודתיים ליישום כגון מקום החלונות, היסטוריה וקבצים פתוחים"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "החרגת מכולות ודמויות של מכונות וירטואליות"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1258,24 +1254,26 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"מכולות או דמויות של מכונות וירטואליות כמו אלו שנוצרות על ידי קופסאות של "
+"GNOME,‏ Docker,‏ Podman ו־Incus."
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "החרגת תמונות מצב"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "תמונות מצב מערכת קבצים Btrfs"
 
 #: kcm/backupplanwidget.cpp:1042
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "החרגת Flatpakים ברמת משתמש"
 
 #: kcm/backupplanwidget.cpp:1043
 #, kde-kuit-format
@@ -1284,6 +1282,8 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"יישומים וזמני ריצה של Flatpak שאפשר להוריד מחדש (לא ימנע גיבוי של הגדרות "
+"ונתונים של היישומים האלה)"
 
 #: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format
@@ -1401,6 +1401,8 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/> <emphasis>מוחרג אוטומטית</emphasis> מהגיבוי.<nl/"
+">אפשר לשלוט בזה דרך ההגדרות <interface>המתקדמות</interface>."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
