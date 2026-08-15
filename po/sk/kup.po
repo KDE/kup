@@ -1596,9 +1596,7 @@ msgid "Show Files"
 msgstr "Zobraziť súbory"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Backup"
+#, kde-format
 msgid "Save Backup"
 msgstr "Uložiť zálohu"
 
@@ -1611,7 +1609,7 @@ msgstr "Vyčistiť staré zálohy"
 #: plasmoid-qt6/contents/ui/PlanItem.qml:57
 #, kde-format
 msgid "View Log"
-msgstr ""
+msgstr "Zobraziť záznam"
 
 #: purger/main.cpp:24
 #, kde-kuit-format
