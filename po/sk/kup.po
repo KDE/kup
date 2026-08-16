@@ -855,13 +855,7 @@ msgid "Back to overview"
 msgstr "Späť na prehľad"
 
 #: kcm/backupplanwidget.cpp:524
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Back up multiple versions over time of the files in the source folders. "
-#| "This allows older versions of files or deleted files to be recovered.<nl/"
-#| "></nl/>The backup archive will grow in size over time, and can only be "
-#| "accessed using the recovery tools provided by this program."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Back up multiple versions over time of the files in the source folders. This "
@@ -870,9 +864,9 @@ msgid ""
 "using the recovery tools provided by this program."
 msgstr ""
 "Zálohovať viacero verzií súborov v zdrojových priečinkoch v priebehu času. "
-"To umožňuje obnoviť staršie verzie súborov alebo zmazané súbory.<nl/></nl/"
-">Archív zálohy bude časom narastať a je prístupný len pomocou nástrojov na "
-"obnovu poskytovaných týmto programom."
+"To umožňuje obnoviť staršie verzie súborov alebo odstránené súbory.<nl/><nl/"
+">Archív zálohy bude časom rásť a pristupovať k nemu možno len nástrojmi na "
+"obnovu, ktoré poskytuje tento program."
 
 #: kcm/backupplanwidget.cpp:536
 #, kde-kuit-format
@@ -940,6 +934,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Niektoré súbory a priečinky (napríklad vyrovnávacie pamäte alebo šifrované "
+"priečinky) sa vylučujú automaticky. Nastaviť sa to dá v "
+"<interface><link>Pokročilých</link></interface> nastaveniach."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1230,26 +1227,22 @@ msgid "Select pattern file"
 msgstr "Vybrať súbor so vzormi"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Vylúčiť priečinok"
+msgstr "Vylúčiť vyrovnávacie pamäte"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Dočasné údaje, ktoré sa dajú znova vytvoriť"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Vylúčiť priečinok"
+msgstr "Vylúčiť šifrované priečinky"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1258,26 +1251,26 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"Obsah odomknutých šifrovaných priečinkov, napríklad tých vytvorených v "
+"Plasma Vault"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Vylúčiť priečinok"
+msgstr "Vylúčiť kôš"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "Súbory v koši, ktoré ešte neboli natrvalo odstránené"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Vylúčiť stavy aplikácií"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1285,12 +1278,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Stavové údaje jednotlivých aplikácií, napríklad poloha okna, história a "
+"otvorené súbory"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Vylúčiť kontajnery a obrazy virtuálnych strojov"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1299,24 +1294,26 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Kontajnery alebo obrazy virtuálnych strojov, napríklad tie vytvorené "
+"nástrojmi GNOME Boxes, Docker, Podman a Incus"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Vylúčiť snímky"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Snímky súborového systému Btrfs"
 
 #: kcm/backupplanwidget.cpp:1042
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "Vylúčiť používateľské Flatpaky"
 
 #: kcm/backupplanwidget.cpp:1043
 #, kde-kuit-format
@@ -1325,6 +1322,8 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"Aplikácie a behové prostredia Flatpak, ktoré sa dajú znova stiahnuť "
+"(nezabráni to zálohovaniu ich nastavení a údajov)"
 
 #: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format
@@ -1445,6 +1444,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>je <emphasis>automaticky vylúčený</emphasis> zo "
+"zálohy.<nl/>Ovládať to môžete v <interface>Pokročilých</interface> "
+"nastaveniach."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
@@ -1590,8 +1592,7 @@ msgid "Configure Backup Plans…"
 msgstr "Nastaviť plány zálohovania…"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:33
-#, fuzzy, kde-format
-#| msgid "Show files"
+#, kde-format
 msgid "Show Files"
 msgstr "Zobraziť súbory"
 
@@ -1601,8 +1602,7 @@ msgid "Save Backup"
 msgstr "Uložiť zálohu"
 
 #: plasmoid-qt6/contents/ui/PlanItem.qml:49
-#, fuzzy, kde-format
-#| msgid "Prune old backups"
+#, kde-format
 msgid "Prune Old Backups"
 msgstr "Vyčistiť staré zálohy"
 
