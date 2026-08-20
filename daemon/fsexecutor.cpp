@@ -81,7 +81,7 @@ void FSExecutor::checkStatus()
             mWatchedParentDir = lExisting;
             mDirWatch->addDir(mWatchedParentDir);
         }
-        if (mState != NOT_AVAILABLE) {
+        if (mState != ExecutorState::NOT_AVAILABLE) {
             enterNotAvailableState();
         }
     } else {
@@ -95,9 +95,9 @@ void FSExecutor::checkStatus()
         mDirWatch->addDir(mDestinationPath);
 
         QFileInfo lInfo(mDestinationPath);
-        if (lInfo.isWritable() && mState == NOT_AVAILABLE) {
+        if (lInfo.isWritable() && mState == ExecutorState::NOT_AVAILABLE) {
             enterAvailableState();
-        } else if (!lInfo.isWritable() && mState != NOT_AVAILABLE) {
+        } else if (!lInfo.isWritable() && mState != ExecutorState::NOT_AVAILABLE) {
             enterNotAvailableState();
         }
     }

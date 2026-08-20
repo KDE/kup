@@ -96,7 +96,6 @@ MergedNodeList &MergedNode::subNodes()
 
 void MergedNode::askForIntegrityCheck()
 {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 101, 0)
     int lAnswer = KMessageBox::questionTwoActions(nullptr,
                                                   xi18nc("@info messagebox",
                                                          "Could not read this backup archive. Perhaps some files "
@@ -106,15 +105,6 @@ void MergedNode::askForIntegrityCheck()
                                                   KStandardGuiItem::ok(),
                                                   KStandardGuiItem::cancel());
     if (lAnswer == KMessageBox::PrimaryAction) {
-#else
-
-    int lAnswer = KMessageBox::warningContinueCancel(nullptr,
-                                                     xi18nc("@info messagebox",
-                                                            "Could not read this backup archive. Perhaps some files "
-                                                            "have become corrupted. Do you want to run an integrity "
-                                                            "check to test this?"));
-    if (lAnswer == KMessageBox::Continue) {
-#endif
         QDBusInterface lInterface(KUP_DBUS_SERVICE_NAME, KUP_DBUS_OBJECT_PATH);
         if (lInterface.isValid()) {
             lInterface.call(QStringLiteral("runIntegrityCheck"), QDir::cleanPath(QString::fromLocal8Bit(git_repository_path(mRepository))));

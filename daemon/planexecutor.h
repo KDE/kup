@@ -5,10 +5,13 @@
 #ifndef PLANEXECUTOR_H
 #define PLANEXECUTOR_H
 
+#include "../kupenums.h"
 #include "backupjob.h"
 #include "backupplan.h"
 
 #include <KProcess>
+
+using namespace Kup;
 
 class KupDaemon;
 
@@ -29,31 +32,22 @@ public:
     PlanExecutor(BackupPlan *pPlan, KupDaemon *pKupDaemon);
     ~PlanExecutor() override;
 
-    BackupPlan::ScheduleType scheduleType()
+    ScheduleType scheduleType()
     {
-        return static_cast<BackupPlan::ScheduleType>(mPlan->mScheduleType);
+        return static_cast<ScheduleType>(mPlan->mScheduleType);
     }
 
     bool busy()
     {
-        return mState == BACKUP_RUNNING || mState == INTEGRITY_TESTING || mState == REPAIRING;
+        return mState == ExecutorState::BACKUP_RUNNING || mState == ExecutorState::INTEGRITY_TESTING || mState == ExecutorState::REPAIRING;
     }
     bool destinationAvailable()
     {
-        return mState != NOT_AVAILABLE;
+        return mState != ExecutorState::NOT_AVAILABLE;
     }
 
     QString currentActivityTitle();
 
-    enum ExecutorState {
-        NOT_AVAILABLE,
-        WAITING_FOR_FIRST_BACKUP,
-        WAITING_FOR_BACKUP_AGAIN,
-        BACKUP_RUNNING,
-        WAITING_FOR_MANUAL_BACKUP,
-        INTEGRITY_TESTING,
-        REPAIRING
-    };
     ExecutorState mState;
     QString mDestinationPath;
     QString mLogFilePath;
@@ -61,13 +55,13 @@ public:
 
 public slots:
     virtual void checkStatus() = 0;
-    virtual void showBackupFiles();
-    virtual void showBackupPurger();
+    virtual void showBackupFiles(const QString &pXdgActivationToken);
+    virtual void showBackupPurger(const QString &pXdgActivationToken);
     void updateAccumulatedUsageTime();
     void startIntegrityCheck();
     void startRepairJob();
     void startBackupSaveJob();
-    void showLog();
+    void showLog(const QString &pXdgActivationToken);
 
 signals:
     void stateChanged();

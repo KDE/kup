@@ -1,0 +1,40 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+"http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+    <interface name="org.kde.kupdaemon.KupDaemon">
+        <method name="reloadConfig" />
+
+        <method name="runIntegrityCheck">
+            <arg name="path" type="s" direction="in"/>
+        </method>
+
+        <method name="saveNewBackup">
+            <arg name="planNumber" type="i" direction="in"/>
+        </method>
+
+        <method name="purgeBackups">
+            <arg name="planNumber" type="i" direction="in"/>
+            <arg name="xdgActivationToken" type="s" direction="in"/>
+        </method>
+
+        <method name="browseBackup">
+            <arg name="planNumber" type="i" direction="in"/>
+            <arg name="xdgActivationToken" type="s" direction="in"/>
+        </method>
+
+        <method name="getPlans">
+            <arg name="plans" type="aa{sv}" direction="out"/>
+            <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QList&lt;QVariantMap&gt;"/>
+        </method>
+
+        <method name="getRepositoryPath">
+            <arg name="path" type="s" direction="in"/>
+            <arg name="repositoryPath" type="s" direction="out"/>
+        </method>
+
+        <signal name="plansChanged">
+            <arg name="plans" type="aa{sv}" direction="out"/>
+            <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QList&lt;QVariantMap&gt;"/>
+        </signal>
+    </interface>
+</node>

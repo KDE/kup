@@ -5,12 +5,17 @@
 #ifndef BACKUPPLAN_H
 #define BACKUPPLAN_H
 
+#include "../kupenums.h"
+
 #include <KCoreConfigSkeleton>
+
+using namespace Kup;
 
 class Schedule;
 
 class BackupPlan : public KCoreConfigSkeleton
 {
+    Q_OBJECT
 public:
     BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pParent = nullptr);
     int planNumber() const
@@ -31,11 +36,10 @@ public:
     bool mExcludeSnapshots{};
     bool mExcludeContainers{};
     bool mExcludeUserFlatpaks{};
-    enum BackupType { BupType = 0, RsyncType };
+
     qint32 mBackupType{};
     qint32 mBackupVersion{};
 
-    enum ScheduleType { MANUAL = 0, INTERVAL, USAGE };
     qint32 mScheduleType{};
     qint32 mScheduleInterval{};
     qint32 mScheduleIntervalUnit{};
@@ -69,7 +73,6 @@ public:
     virtual QDateTime nextScheduledTime();
     virtual qint64 scheduleIntervalInSeconds();
 
-    enum Status { GOOD, MEDIUM, BAD, NO_STATUS };
     Status backupStatus();
     static QString iconName(Status pStatus);
     QString absoluteExcludesFilePath();

@@ -16,7 +16,6 @@
 int main(int pArgCount, char **pArgArray)
 {
     QApplication lApp(pArgCount, pArgArray);
-    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     KLocalizedString::setApplicationDomain("kup");
 

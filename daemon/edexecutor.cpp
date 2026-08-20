@@ -76,9 +76,9 @@ void EDExecutor::updateAccessibility()
     if (mWantsToRunBackup) {
         startBackup(); // run startBackup again now that it has been mounted
     } else if (mWantsToShowFiles) {
-        showBackupFiles();
+        showBackupFiles(QString());
     } else if (mWantsToPurge) {
-        showBackupPurger();
+        showBackupPurger(QString());
     }
 }
 
@@ -91,20 +91,20 @@ void EDExecutor::startBackup()
     PlanExecutor::startBackup();
 }
 
-void EDExecutor::showBackupFiles()
+void EDExecutor::showBackupFiles(const QString &pXdgActivationToken)
 {
     if (!ensureAccessible(mWantsToShowFiles)) {
         return;
     }
-    PlanExecutor::showBackupFiles();
+    PlanExecutor::showBackupFiles(pXdgActivationToken);
 }
 
-void EDExecutor::showBackupPurger()
+void EDExecutor::showBackupPurger(const QString &pXdgActivationToken)
 {
     if (!ensureAccessible(mWantsToPurge)) {
         return;
     }
-    PlanExecutor::showBackupPurger();
+    PlanExecutor::showBackupPurger(pXdgActivationToken);
 }
 
 bool EDExecutor::ensureAccessible(bool &pReturnLater)

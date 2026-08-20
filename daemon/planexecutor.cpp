@@ -28,13 +28,13 @@ static const char *cPwrMgmtInterface = "org.freedesktop.PowerManagement";
 
 PlanExecutor::PlanExecutor(BackupPlan *pPlan, KupDaemon *pKupDaemon)
     : QObject(pKupDaemon)
-    , mState(NOT_AVAILABLE)
+    , mState(ExecutorState::NOT_AVAILABLE)
     , mPlan(pPlan)
     , mQuestion(nullptr)
     , mFailNotification(nullptr)
     , mIntegrityNotification(nullptr)
     , mRepairNotification(nullptr)
-    , mLastState(NOT_AVAILABLE)
+    , mLastState(ExecutorState::NOT_AVAILABLE)
     , mKupDaemon(pKupDaemon)
     , mSleepCookie(0)
 {
@@ -65,21 +65,21 @@ PlanExecutor::~PlanExecutor() = default;
 QString PlanExecutor::currentActivityTitle()
 {
     switch (mState) {
-    case BACKUP_RUNNING:
+    case ExecutorState::BACKUP_RUNNING:
         return i18nc("status in tooltip", "Saving backup");
-    case INTEGRITY_TESTING:
+    case ExecutorState::INTEGRITY_TESTING:
         return i18nc("status in tooltip", "Checking backup integrity");
-    case REPAIRING:
+    case ExecutorState::REPAIRING:
         return i18nc("status in tooltip", "Repairing backups");
     default:;
     }
 
     switch (mPlan->backupStatus()) {
-    case BackupPlan::GOOD:
+    case Status::GOOD:
         return i18nc("status in tooltip", "Backup status OK");
-    case BackupPlan::MEDIUM:
+    case Status::MEDIUM:
         return i18nc("status in tooltip", "New backup suggested");
-    case BackupPlan::BAD:
+    case Status::BAD:
         return i18nc("status in tooltip", "New backup needed");
     default:;
     }
@@ -89,15 +89,15 @@ QString PlanExecutor::currentActivityTitle()
 // dispatcher code for entering one of the available states
 void PlanExecutor::enterAvailableState()
 {
-    if (mState == NOT_AVAILABLE) {
-        mState = WAITING_FOR_FIRST_BACKUP; // initial child state of "Available" state
+    if (mState == ExecutorState::NOT_AVAILABLE) {
+        mState = ExecutorState::WAITING_FOR_FIRST_BACKUP; // initial child state of "Available" state
         emit stateChanged();
     }
     QDateTime lNow = QDateTime::currentDateTimeUtc();
     switch (mPlan->mScheduleType) {
-    case BackupPlan::MANUAL:
+    case ScheduleType::MANUAL:
         break;
-    case BackupPlan::INTERVAL: {
+    case ScheduleType::INTERVAL: {
         QDateTime lNextTime = mPlan->nextScheduledTime();
         if (!lNextTime.isValid() || lNextTime < lNow) {
             if (!mPlan->mLastCompleteBackup.isValid())
@@ -117,7 +117,7 @@ void PlanExecutor::enterAvailableState()
         }
         break;
     }
-    case BackupPlan::USAGE:
+    case ScheduleType::USAGE:
         if (!mPlan->mLastCompleteBackup.isValid()) {
             askUserOrStart(xi18nc("@info", "Save the first backup now?"));
         } else if (mPlan->mAccumulatedUsageTime > static_cast<quint32>(mPlan->mUsageLimit) * 3600) {
@@ -135,7 +135,7 @@ void PlanExecutor::askUserOrStart(const QString &pUserQuestion)
 {
     // Only ask the first time after destination has become available.
     // Always ask if power saving is active.
-    if ((mPlan->mAskBeforeTakingBackup && mState == WAITING_FOR_FIRST_BACKUP) || powerSaveActive()) {
+    if ((mPlan->mAskBeforeTakingBackup && mState == ExecutorState::WAITING_FOR_FIRST_BACKUP) || powerSaveActive()) {
         askUser(pUserQuestion);
     } else {
         startBackupSaveJob();
@@ -146,7 +146,7 @@ void PlanExecutor::enterNotAvailableState()
 {
     discardUserQuestion();
     mSchedulingTimer->stop();
-    mState = NOT_AVAILABLE;
+    mState = ExecutorState::NOT_AVAILABLE;
     emit stateChanged();
 }
 
@@ -157,23 +157,16 @@ void PlanExecutor::askUser(const QString &pQuestion)
     mQuestion->setTitle(mPlan->mDescription);
     mQuestion->setText(pQuestion);
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QStringList lAnswers;
-    lAnswers << xi18nc("@action:button", "Save Backup") << xi18nc("@action:button", "Cancel");
-    mQuestion->setActions(lAnswers);
-    connect(mQuestion, SIGNAL(action1Activated()), SLOT(startBackupSaveJob()));
-    connect(mQuestion, SIGNAL(action2Activated()), SLOT(discardUserQuestion()));
-#else
     KNotificationAction *yes = mQuestion->addAction(xi18nc("@action:button", "Save Backup"));
     connect(yes, &KNotificationAction::activated, this, &PlanExecutor::startBackupSaveJob);
 
     KNotificationAction *no = mQuestion->addAction(xi18nc("@action:button", "Cancel"));
     connect(no, &KNotificationAction::activated, this, &PlanExecutor::discardUserQuestion);
-#endif
+
     connect(mQuestion, SIGNAL(closed()), SLOT(discardUserQuestion()));
     connect(mQuestion, SIGNAL(ignored()), SLOT(discardUserQuestion()));
     // enter this "do nothing" state, if user answers "no" or ignores, remain there
-    mState = WAITING_FOR_MANUAL_BACKUP;
+    mState = ExecutorState::WAITING_FOR_MANUAL_BACKUP;
     emit stateChanged();
     mQuestion->sendEvent();
 }
@@ -193,29 +186,11 @@ void PlanExecutor::notifyBackupFailed(KJob *pFailedJob)
     mFailNotification->setTitle(xi18nc("@title:window", "Saving of Backup Failed"));
     mFailNotification->setText(pFailedJob->errorText());
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QStringList lAnswers;
-    if (pFailedJob->error() == BackupJob::ErrorWithLog) {
-        lAnswers << xi18nc("@action:button", "Show log file");
-        connect(mFailNotification, SIGNAL(action1Activated()), SLOT(showLog()));
-    } else if (pFailedJob->error() == BackupJob::ErrorSuggestRepair) {
-        lAnswers << xi18nc("@action:button", "Repair");
-        lAnswers << xi18nc("@action:button", "Cancel");
-        connect(mFailNotification, SIGNAL(action1Activated()), SLOT(startRepairJob()));
-    } else if (pFailedJob->error() == BackupJob::ErrorSourcesConfig) {
-        lAnswers << xi18nc("@action:button", "Open settings");
-        connect(mFailNotification, &KNotification::action1Activated, this, [this] {
-            QProcess::startDetached(QStringLiteral("kcmshell5"),
-                                    {QStringLiteral("--args"), QStringLiteral("show_sources %1").arg(mPlan->planNumber()), QStringLiteral("kcm_kup")});
-        });
-    }
-    mFailNotification->setActions(lAnswers);
-
-    connect(mFailNotification, SIGNAL(action2Activated()), SLOT(discardFailNotification()));
-#else
     if (pFailedJob->error() == BackupJob::ErrorWithLog) {
         KNotificationAction *showLogFile = mFailNotification->addAction(xi18nc("@action:button", "Show log file"));
-        connect(showLogFile, &KNotificationAction::activated, this, &PlanExecutor::showLog);
+        connect(showLogFile, &KNotificationAction::activated, this, [this]() {
+            showLog(mFailNotification ? mFailNotification->xdgActivationToken() : QString());
+        });
     } else if (pFailedJob->error() == BackupJob::ErrorSuggestRepair) {
         KNotificationAction *yes = mFailNotification->addAction(xi18nc("@action:button", "Repair"));
         connect(yes, &KNotificationAction::activated, this, &PlanExecutor::startRepairJob);
@@ -229,7 +204,7 @@ void PlanExecutor::notifyBackupFailed(KJob *pFailedJob)
                                     {QStringLiteral("--args"), QStringLiteral("show_sources %1").arg(mPlan->planNumber()), QStringLiteral("kcm_kup")});
         });
     }
-#endif
+
     connect(mFailNotification, SIGNAL(closed()), SLOT(discardFailNotification()));
     connect(mFailNotification, SIGNAL(ignored()), SLOT(discardFailNotification()));
     mFailNotification->sendEvent();
@@ -251,36 +226,37 @@ void PlanExecutor::notifyBackupSucceeded()
     lNotification->sendEvent();
 }
 
-void PlanExecutor::showLog()
+void PlanExecutor::showLog(const QString &pXdgActivationToken)
 {
     auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(mLogFilePath), QStringLiteral("text/x-log"));
+    job->setStartupId(pXdgActivationToken.toUtf8());
     job->start();
 }
 
 void PlanExecutor::startIntegrityCheck()
 {
-    if (mPlan->mBackupType != BackupPlan::BupType || busy() || !destinationAvailable()) {
+    if (mPlan->mBackupType != BackupType::BupType || busy() || !destinationAvailable()) {
         return;
     }
     KJob *lJob = new BupVerificationJob(*mPlan, mDestinationPath, mLogFilePath, mKupDaemon);
     connect(lJob, &KJob::result, this, &PlanExecutor::integrityCheckFinished);
     lJob->start();
     mLastState = mState;
-    mState = INTEGRITY_TESTING;
+    mState = ExecutorState::INTEGRITY_TESTING;
     emit stateChanged();
     startSleepInhibit();
 }
 
 void PlanExecutor::startRepairJob()
 {
-    if (mPlan->mBackupType != BackupPlan::BupType || busy() || !destinationAvailable()) {
+    if (mPlan->mBackupType != BackupType::BupType || busy() || !destinationAvailable()) {
         return;
     }
     KJob *lJob = new BupRepairJob(*mPlan, mDestinationPath, mLogFilePath, mKupDaemon);
     connect(lJob, &KJob::result, this, &PlanExecutor::repairFinished);
     lJob->start();
     mLastState = mState;
-    mState = REPAIRING;
+    mState = ExecutorState::REPAIRING;
     emit stateChanged();
     startSleepInhibit();
 }
@@ -291,7 +267,7 @@ void PlanExecutor::startBackupSaveJob()
         return;
     }
     discardUserQuestion();
-    mState = BACKUP_RUNNING;
+    mState = ExecutorState::BACKUP_RUNNING;
     emit stateChanged();
     startSleepInhibit();
     startBackup();
@@ -359,23 +335,12 @@ void PlanExecutor::integrityCheckFinished(KJob *pJob)
     mIntegrityNotification = new KNotification(QStringLiteral("IntegrityCheckCompleted"), KNotification::Persistent);
     mIntegrityNotification->setTitle(xi18nc("@title:window", "Integrity Check Completed"));
     mIntegrityNotification->setText(pJob->errorText());
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QStringList lAnswers;
-    if (pJob->error() == BackupJob::ErrorWithLog) {
-        lAnswers << xi18nc("@action:button", "Show log file");
-        connect(mIntegrityNotification, SIGNAL(action1Activated()), SLOT(showLog()));
-    } else if (pJob->error() == BackupJob::ErrorSuggestRepair) {
-        lAnswers << xi18nc("@action:button", "Repair");
-        lAnswers << xi18nc("@action:button", "Cancel");
-        connect(mIntegrityNotification, SIGNAL(action1Activated()), SLOT(startRepairJob()));
-    }
-    mIntegrityNotification->setActions(lAnswers);
 
-    connect(mIntegrityNotification, SIGNAL(action2Activated()), SLOT(discardIntegrityNotification()));
-#else
     if (pJob->error() == BackupJob::ErrorWithLog) {
         KNotificationAction *showLogFile = new KNotificationAction(xi18nc("@action:button", "Show log file"));
-        connect(showLogFile, &KNotificationAction::activated, this, &PlanExecutor::showLog);
+        connect(showLogFile, &KNotificationAction::activated, this, [this]() {
+            showLog(mIntegrityNotification ? mIntegrityNotification->xdgActivationToken() : QString());
+        });
     } else if (pJob->error() == BackupJob::ErrorSuggestRepair) {
         KNotificationAction *yes = mIntegrityNotification->addAction(xi18nc("@action:button", "Repair"));
         connect(yes, &KNotificationAction::activated, this, &PlanExecutor::startRepairJob);
@@ -383,13 +348,12 @@ void PlanExecutor::integrityCheckFinished(KJob *pJob)
         KNotificationAction *no = mIntegrityNotification->addAction(xi18nc("@action:button", "Cancel"));
         connect(no, &KNotificationAction::activated, this, &PlanExecutor::discardIntegrityNotification);
     }
-#endif
 
     connect(mIntegrityNotification, SIGNAL(closed()), SLOT(discardIntegrityNotification()));
     connect(mIntegrityNotification, SIGNAL(ignored()), SLOT(discardIntegrityNotification()));
     mIntegrityNotification->sendEvent();
 
-    if (mState == INTEGRITY_TESTING) { // only restore if nothing has changed during the run
+    if (mState == ExecutorState::INTEGRITY_TESTING) { // only restore if nothing has changed during the run
         mState = mLastState;
     }
     emit stateChanged();
@@ -410,20 +374,17 @@ void PlanExecutor::repairFinished(KJob *pJob)
     mRepairNotification = new KNotification(QStringLiteral("RepairCompleted"), KNotification::Persistent);
     mRepairNotification->setTitle(xi18nc("@title:window", "Repair Completed"));
     mRepairNotification->setText(pJob->errorText());
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QStringList lAnswers;
-    lAnswers << xi18nc("@action:button", "Show log file");
-    mRepairNotification->setActions(lAnswers);
-    connect(mRepairNotification, SIGNAL(action1Activated()), SLOT(showLog()));
-#else
+
     KNotificationAction *showLogFile = mRepairNotification->addAction(xi18nc("@action:button", "Show log file"));
-    connect(showLogFile, &KNotificationAction::activated, this, &PlanExecutor::showLog);
-#endif
+    connect(showLogFile, &KNotificationAction::activated, this, [this]() {
+        showLog(mRepairNotification ? mRepairNotification->xdgActivationToken() : QString());
+    });
+
     connect(mRepairNotification, SIGNAL(closed()), SLOT(discardRepairNotification()));
     connect(mRepairNotification, SIGNAL(ignored()), SLOT(discardRepairNotification()));
     mRepairNotification->sendEvent();
 
-    if (mState == REPAIRING) { // only restore if nothing has changed during the run
+    if (mState == ExecutorState::REPAIRING) { // only restore if nothing has changed during the run
         mState = mLastState;
     }
     emit stateChanged();
@@ -464,12 +425,12 @@ void PlanExecutor::exitBackupRunningState(bool pWasSuccessful)
 {
     endSleepInhibit();
     if (pWasSuccessful) {
-        if (mPlan->mScheduleType == BackupPlan::USAGE) {
+        if (mPlan->mScheduleType == ScheduleType::USAGE) {
             // reset usage time after successful backup
             mPlan->mAccumulatedUsageTime = 0;
             mPlan->save();
         }
-        mState = WAITING_FOR_BACKUP_AGAIN;
+        mState = ExecutorState::WAITING_FOR_BACKUP_AGAIN;
         emit stateChanged();
 
         // don't know if status actually changed, potentially did... so trigger a re-read of status
@@ -478,18 +439,18 @@ void PlanExecutor::exitBackupRunningState(bool pWasSuccessful)
         // re-enter the main "available" state dispatcher
         enterAvailableState();
     } else {
-        mState = WAITING_FOR_MANUAL_BACKUP;
+        mState = ExecutorState::WAITING_FOR_MANUAL_BACKUP;
         emit stateChanged();
     }
 }
 
 void PlanExecutor::updateAccumulatedUsageTime()
 {
-    if (mState == BACKUP_RUNNING) { // usage time during backup doesn't count...
+    if (mState == ExecutorState::BACKUP_RUNNING) { // usage time during backup doesn't count...
         return;
     }
 
-    if (mPlan->mScheduleType == BackupPlan::USAGE) {
+    if (mPlan->mScheduleType == ScheduleType::USAGE) {
         mPlan->mAccumulatedUsageTime += KUP_USAGE_MONITOR_INTERVAL_S;
         mPlan->save();
     }
@@ -500,41 +461,44 @@ void PlanExecutor::updateAccumulatedUsageTime()
     emit backupStatusChanged();
 
     // if we're waiting to run backup again, check if it is time now.
-    if (mPlan->mScheduleType == BackupPlan::USAGE && (mState == WAITING_FOR_FIRST_BACKUP || mState == WAITING_FOR_BACKUP_AGAIN)) {
+    if (mPlan->mScheduleType == ScheduleType::USAGE
+        && (mState == ExecutorState::WAITING_FOR_FIRST_BACKUP || mState == ExecutorState::WAITING_FOR_BACKUP_AGAIN)) {
         enterAvailableState();
     }
 }
 
-void PlanExecutor::showBackupFiles()
+void PlanExecutor::showBackupFiles(const QString &pXdgActivationToken)
 {
-    if (mState == NOT_AVAILABLE)
+    if (mState == ExecutorState::NOT_AVAILABLE)
         return;
-    if (mPlan->mBackupType == BackupPlan::BupType) {
-        QStringList lArgs;
-        lArgs << mDestinationPath;
-        KProcess::startDetached(QStringLiteral("kup-filedigger"), lArgs);
-    } else if (mPlan->mBackupType == BackupPlan::RsyncType) {
+    if (mPlan->mBackupType == BackupType::BupType) {
+        KProcess lFileDiggerProcess;
+        lFileDiggerProcess.setEnv(QStringLiteral("XDG_ACTIVATION_TOKEN"), pXdgActivationToken);
+        lFileDiggerProcess.setProgram(QStringLiteral("kup-filedigger"), {mDestinationPath});
+        lFileDiggerProcess.startDetached();
+    } else if (mPlan->mBackupType == BackupType::RsyncType) {
         auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(mDestinationPath));
         job->start();
     }
 }
 
-void PlanExecutor::showBackupPurger()
+void PlanExecutor::showBackupPurger(const QString &pXdgActivationToken)
 {
-    if (mPlan->mBackupType != BackupPlan::BupType || busy() || !destinationAvailable()) {
+    if (mPlan->mBackupType != BackupType::BupType || busy() || !destinationAvailable()) {
         return;
     }
-    QStringList lArgs;
-    lArgs << mDestinationPath;
-    KProcess::startDetached(QStringLiteral("kup-purger"), lArgs);
+    KProcess lPurgerProcess;
+    lPurgerProcess.setEnv(QStringLiteral("XDG_ACTIVATION_TOKEN"), pXdgActivationToken);
+    lPurgerProcess.setProgram(QStringLiteral("kup-purger"), {mDestinationPath});
+    lPurgerProcess.startDetached();
 }
 
 BackupJob *PlanExecutor::createBackupJob()
 {
-    if (mPlan->mBackupType == BackupPlan::BupType) {
+    if (mPlan->mBackupType == BackupType::BupType) {
         return new BupJob(*mPlan, mDestinationPath, mLogFilePath, mKupDaemon);
     }
-    if (mPlan->mBackupType == BackupPlan::RsyncType) {
+    if (mPlan->mBackupType == BackupType::RsyncType) {
         return new RsyncJob(*mPlan, mDestinationPath, mLogFilePath, mKupDaemon);
     }
     qCWarning(KUPDAEMON) << "Invalid backup type in configuration!";

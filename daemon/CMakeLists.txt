@@ -21,6 +21,13 @@ rsyncjob.cpp
 ../settings/dynamicexclusions.cpp
 )
 
+set_source_files_properties(org.kde.kupdaemon.KupDaemon.xml PROPERTIES
+    CLASSNAME KupDaemonAdaptor
+    NO_NAMESPACE TRUE
+)
+
+qt_add_dbus_adaptor(kupdaemon_SRCS org.kde.kupdaemon.KupDaemon.xml kupdaemon.h KupDaemon)
+
 ecm_qt_declare_logging_category(kupdaemon_SRCS
     HEADER kupdaemon_debug.h
     IDENTIFIER KUPDAEMON

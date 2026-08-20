@@ -60,11 +60,7 @@ void FileDigger::updateVersionModel(const QModelIndex &pCurrent, const QModelInd
 void FileDigger::open(const QModelIndex &pIndex)
 {
     auto *job = new KIO::OpenUrlJob(pIndex.data(VersionBupUrlRole).toUrl(), pIndex.data(VersionMimeTypeRole).toString());
-#if KIO_VERSION > QT_VERSION_CHECK(5, 98, 0)
     auto *delegate = KIO::createDefaultJobUiDelegate(KIO::JobUiDelegate::AutoHandlingEnabled, this);
-#else
-    auto *delegate = new KIO::JobUiDelegate(KIO::JobUiDelegate::AutoHandlingEnabled, this);
-#endif
     job->setUiDelegate(delegate);
     job->start();
 }
@@ -191,11 +187,7 @@ void FileDigger::createSelectionView()
     lPlaces->setModel(new KFilePlacesModel);
 
     mDirOperator = new KDirOperator();
-#if KIO_VERSION < QT_VERSION_CHECK(5, 100, 0)
-    mDirOperator->setView(KFile::Tree);
-#else
     mDirOperator->setViewMode(KFile::Tree);
-#endif
     mDirOperator->setMode(KFile::Directory);
     mDirOperator->setEnableDirHighlighting(true);
     mDirOperator->setShowHiddenFiles(true);

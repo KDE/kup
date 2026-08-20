@@ -416,11 +416,7 @@ void RestoreDialog::createNewFolder()
 void RestoreDialog::openDestinationFolder()
 {
     auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(mSourceInfo.mIsDirectory ? mFolderToCreate.absoluteFilePath() : mDestination.absolutePath()));
-#if KIO_VERSION > QT_VERSION_CHECK(5, 98, 0)
     auto *delegate = KIO::createDefaultJobUiDelegate(KIO::JobUiDelegate::AutoHandlingEnabled, this);
-#else
-    auto *delegate = new KIO::JobUiDelegate(KIO::JobUiDelegate::AutoHandlingEnabled, this);
-#endif
     job->setUiDelegate(delegate);
     job->start();
 }

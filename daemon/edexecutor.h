@@ -23,8 +23,8 @@ public:
 
 public slots:
     void checkStatus() override;
-    void showBackupFiles() override;
-    void showBackupPurger() override;
+    void showBackupFiles(const QString &pXdgActivationToken) override;
+    void showBackupPurger(const QString &pXdgActivationToken) override;
 
 protected slots:
     void deviceAdded(const QString &pUdi);

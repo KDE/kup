@@ -38,12 +38,16 @@ public slots:
     void reloadConfig();
     void runIntegrityCheck(const QString &pPath);
     void saveNewBackup(int pPlanNumber);
+    void purgeBackups(int pPlanNumber, const QString &pXdgActivationToken);
+    void browseBackup(int pPlanNumber, const QString &pXdgActivationToken) const;
+    QList<QVariantMap> getPlans() const;
     QString getRepositoryPath(const QString &pPath) const;
+
+Q_SIGNALS:
+    void plansChanged(QList<QVariantMap> plans);
 
 private:
     void setupExecutors();
-    void handleRequests(QLocalSocket *pSocket);
-    void sendStatus(QLocalSocket *pSocket);
 
     KSharedConfigPtr mConfig;
     KupSettings *mSettings;
@@ -51,9 +55,7 @@ private:
     QTimer *mUsageAccTimer;
     QTimer *mStatusUpdateTimer;
     bool mWaitingToReloadConfig;
-    KUiServerV2JobTracker * const mJobTracker;
-    QLocalServer *mLocalServer;
-    QList<QLocalSocket *> mSockets;
+    KUiServerV2JobTracker *const mJobTracker;
 };
 
 #endif /*KUPDAEMON_H*/

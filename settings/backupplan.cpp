@@ -151,7 +151,7 @@ qint64 BackupPlan::scheduleIntervalInSeconds()
     }
 }
 
-BackupPlan::Status BackupPlan::backupStatus()
+Status BackupPlan::backupStatus()
 {
     if (!mLastCompleteBackup.isValid()) {
         return BAD;

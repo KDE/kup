@@ -4,6 +4,7 @@
 
 #include "kupdaemon.h"
 #include "kupdaemon_debug.h"
+#include "kupdaemonadaptor.h"
 
 #include <KAboutData>
 #include <KCrash>
@@ -18,7 +19,6 @@ int main(int argc, char *argv[])
     QApplication lApp(argc, argv);
     QApplication::setQuitOnLastWindowClosed(false);
     QApplication::setQuitLockEnabled(false);
-    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     KLocalizedString::setApplicationDomain("kup");
 
@@ -29,11 +29,7 @@ int main(int argc, char *argv[])
         qCCritical(KUPDAEMON) << xi18nc("@info:shell Error message at startup",
                                         "Kup is not enabled, enable it from the "
                                         "system settings module. You can do that by running "
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-                                        "<command>kcmshell5 kup</command>");
-#else
                                         "<command>kcmshell6 kup</command>");
-#endif
         return 0;
     }
 
@@ -59,6 +55,14 @@ int main(int argc, char *argv[])
 
     // This call will exit() if an instance is already running
     KDBusService lService(KDBusService::Unique);
+
+    qRegisterMetaType<QList<QVariantMap>>("QList<QVariantMap>");
+    qDBusRegisterMetaType<QList<QVariantMap>>();
+
+    new KupDaemonAdaptor(lDaemon);
+    QDBusConnection lDBus = QDBusConnection::sessionBus();
+    lDBus.registerObject(KUP_DBUS_OBJECT_PATH, lDaemon);
+    lDBus.registerService(KUP_DBUS_SERVICE_NAME);
 
     lDaemon->setupGuiStuff();
     KupDaemon::connect(&lApp, &QApplication::commitDataRequest, lDaemon, [lDaemon](QSessionManager &pManager) {
