@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-11 02:20+0000\n"
+"POT-Creation-Date: 2026-08-21 02:09+0000\n"
 "PO-Revision-Date: 2026-04-26 22:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -95,7 +95,7 @@ msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
 msgstr "파일을 분석할 수 없습니다. 자세한 정보는 로그 파일을 참조하십시오."
 
-#: daemon/bupjob.cpp:198 daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
+#: daemon/bupjob.cpp:198 daemon/bupjob.cpp:317 daemon/rsyncjob.cpp:181
 #, kde-format
 msgid "Saving backup"
 msgstr "백업 저장 중"
@@ -121,7 +121,7 @@ msgstr ""
 "백업의 복구 정보를 생성할 수 없습니다. 자세한 정보는 로그 파일을 참조하십시"
 "오."
 
-#: daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
+#: daemon/bupjob.cpp:317 daemon/rsyncjob.cpp:181
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -189,84 +189,53 @@ msgstr ""
 "백업 무결성 검사에 실패했습니다. 백업이 손상되었습니다! 자세한 정보는 로그 파"
 "일을 참조하십시오. 백업 파일 복구를 시도하시겠습니까?"
 
-#: daemon/kupdaemon.cpp:199
+#: daemon/kupdaemon.cpp:204
 #, kde-format
 msgid "Continue"
 msgstr "계속"
 
-#: daemon/kupdaemon.cpp:200
+#: daemon/kupdaemon.cpp:205
 #, kde-format
 msgid "Stop"
 msgstr "정지"
 
-#: daemon/kupdaemon.cpp:201
+#: daemon/kupdaemon.cpp:206
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "현재 작업 중: %1"
 
-#: daemon/kupdaemon.cpp:202
+#: daemon/kupdaemon.cpp:207
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "정지하시겠습니까?"
 
-#: daemon/kupdaemon.cpp:205
+#: daemon/kupdaemon.cpp:210
 #, kde-format
 msgid "User Backups"
 msgstr "사용자 백업"
 
-#: daemon/kupdaemon.cpp:287
-#, kde-format
-msgctxt "status in tooltip"
-msgid "Backup destination not available"
-msgstr "백업 대상을 사용할 수 없음"
-
-#: daemon/kupdaemon.cpp:291 daemon/kupdaemon.cpp:347
-#, kde-format
-msgid "No backup plans configured"
-msgstr "백업 계획을 설정하지 않았음"
-
-#: daemon/kupdaemon.cpp:297
-#, kde-format
-msgctxt "status in tooltip"
-msgid "Backup destination available"
-msgstr "백업 대상을 사용할 수 있음"
-
-#: daemon/kupdaemon.cpp:307 daemon/planexecutor.cpp:79
-#, kde-format
-msgctxt "status in tooltip"
-msgid "Backup status OK"
-msgstr "백업 상태 정상"
-
-#: daemon/kupdaemon.cpp:314 daemon/planexecutor.cpp:81
-#, kde-format
-msgctxt "status in tooltip"
-msgid "New backup suggested"
-msgstr "새 백업 제안됨"
-
-#: daemon/kupdaemon.cpp:321 daemon/planexecutor.cpp:83
-#, kde-format
-msgctxt "status in tooltip"
-msgid "New backup needed"
-msgstr "새 백업 필요함"
-
 #: daemon/main.cpp:30
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:shell Error message at startup"
+#| msgid ""
+#| "Kup is not enabled, enable it from the system settings module. You can do "
+#| "that by running <command>kcmshell5 kup</command>"
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
-"that by running <command>kcmshell5 kup</command>"
+"that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "Kup이 활성화되어 있지 않습니다. 시스템 설정 모듈에서 활성화하십시오. "
 "<command>kcmshell5 kup</command> 명령을 사용할 수 있습니다."
 
-#: daemon/main.cpp:41
+#: daemon/main.cpp:37
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Kup 데몬"
 
-#: daemon/main.cpp:43
+#: daemon/main.cpp:39
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -276,50 +245,68 @@ msgstr ""
 "Kup은 'bup' 백업 저장소 시스템을 사용하는 유연한 백업 솔루션입니다. 마지막으"
 "로 백업한 이후 변경된 파일만 백업하는 증분 백업을 빠르게 수행할 수 있습니다."
 
-#: daemon/main.cpp:47
+#: daemon/main.cpp:43
 #, kde-format
 msgid "© 2011–2020 Simon Persson"
 msgstr "© 2011–2020 Simon Persson"
 
-#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
+#: daemon/main.cpp:44 filedigger/main.cpp:32 purger/main.cpp:28
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
+#: daemon/main.cpp:44 filedigger/main.cpp:32 purger/main.cpp:28
 #, kde-format
 msgid "Maintainer"
 msgstr "관리자"
 
-#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
+#: daemon/main.cpp:45 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "박신조"
 
-#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
+#: daemon/main.cpp:45 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: daemon/planexecutor.cpp:69
+#: daemon/planexecutor.cpp:69 plasmoid/qml/main.qml:33
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Saving backup"
 msgstr "백업 저장 중"
 
-#: daemon/planexecutor.cpp:71
+#: daemon/planexecutor.cpp:71 plasmoid/qml/main.qml:34
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Checking backup integrity"
 msgstr "백업 무결성 검사 중"
 
-#: daemon/planexecutor.cpp:73
+#: daemon/planexecutor.cpp:73 plasmoid/qml/main.qml:35
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Repairing backups"
 msgstr "백업 복구 중"
+
+#: daemon/planexecutor.cpp:79 plasmoid/qml/main.qml:41
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup status OK"
+msgstr "백업 상태 정상"
+
+#: daemon/planexecutor.cpp:81 plasmoid/qml/main.qml:42
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup suggested"
+msgstr "새 백업 제안됨"
+
+#: daemon/planexecutor.cpp:83 plasmoid/qml/main.qml:43
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup needed"
+msgstr "새 백업 필요함"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
 #, kde-kuit-format
@@ -347,91 +334,88 @@ msgstr ""
 "마지막으로 백업한 후 %1 동안 계속 컴퓨터를 사용했습니다.\n"
 "새 백업을 저장하시겠습니까?"
 
-#: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
+#: daemon/planexecutor.cpp:160
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
 msgstr "백업 저장"
 
-#: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
-#: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
-#: daemon/planexecutor.cpp:369 daemon/planexecutor.cpp:383
+#: daemon/planexecutor.cpp:163 daemon/planexecutor.cpp:198
+#: daemon/planexecutor.cpp:348
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "취소"
 
-#: daemon/planexecutor.cpp:193
+#: daemon/planexecutor.cpp:186
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
 msgstr "백업 저장 실패"
 
-#: daemon/planexecutor.cpp:199 daemon/planexecutor.cpp:217
-#: daemon/planexecutor.cpp:365 daemon/planexecutor.cpp:377
-#: daemon/planexecutor.cpp:415 daemon/planexecutor.cpp:419
+#: daemon/planexecutor.cpp:190 daemon/planexecutor.cpp:340
+#: daemon/planexecutor.cpp:378
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "로그 파일 표시"
 
-#: daemon/planexecutor.cpp:202 daemon/planexecutor.cpp:220
-#: daemon/planexecutor.cpp:368 daemon/planexecutor.cpp:380
+#: daemon/planexecutor.cpp:195 daemon/planexecutor.cpp:345
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
 msgstr "복구"
 
-#: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
+#: daemon/planexecutor.cpp:201
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
 msgstr "설정 열기"
 
-#: daemon/planexecutor.cpp:249
+#: daemon/planexecutor.cpp:224
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Backup Saved"
 msgstr "백업 저장됨"
 
-#: daemon/planexecutor.cpp:250
+#: daemon/planexecutor.cpp:225
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
 msgstr "백업 저장에 성공했습니다."
 
-#: daemon/planexecutor.cpp:305 daemon/planexecutor.cpp:312
-#: daemon/planexecutor.cpp:345
+#: daemon/planexecutor.cpp:281 daemon/planexecutor.cpp:288
+#: daemon/planexecutor.cpp:321
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Problem"
 msgstr "문제점"
 
-#: daemon/planexecutor.cpp:306
+#: daemon/planexecutor.cpp:282
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
 msgstr "백업 대상에 쓸 수 있는 권한이 없습니다."
 
-#: daemon/planexecutor.cpp:312
+#: daemon/planexecutor.cpp:288
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
 msgstr "백업 설정의 형식이 잘못되었습니다."
 
-#: daemon/planexecutor.cpp:360
+#: daemon/planexecutor.cpp:336
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Integrity Check Completed"
 msgstr "무결성 검사 완료됨"
 
-#: daemon/planexecutor.cpp:411
+#: daemon/planexecutor.cpp:375
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Repair Completed"
 msgstr "복구 완료됨"
 
-#: daemon/planexecutor.cpp:446
+#: daemon/planexecutor.cpp:407
 #, kde-format
 msgid "Kup Backup System"
 msgstr "Kup 백업 시스템"
@@ -446,7 +430,7 @@ msgstr ""
 "<application>rsync</application> 프로그램이 필요하지만 찾을 수 없습니다. 설"
 "치 상태를 확인하십시오."
 
-#: filedigger/filedigger.cpp:116
+#: filedigger/filedigger.cpp:112
 #, kde-kuit-format
 msgctxt "@info messagebox, %1 is a folder path"
 msgid ""
@@ -456,49 +440,49 @@ msgstr ""
 "백업 압축 파일 <filename>%1</filename>을(를) 열 수 없습니다. 백업이 실제 해"
 "당 위치에 있는지 확인하십시오."
 
-#: filedigger/filedigger.cpp:123
+#: filedigger/filedigger.cpp:119
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid "You do not have permission needed to read this backup archive."
 msgstr "이 백업 압축 파일을 읽을 수 있는 권한이 없습니다."
 
-#: filedigger/filedigger.cpp:188
+#: filedigger/filedigger.cpp:184
 #, kde-format
 msgid "Select location of backup archive to open."
 msgstr "열 백업 압축 파일의 위치를 선택하십시오."
 
-#: filedigger/main.cpp:28
+#: filedigger/main.cpp:27
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
 msgstr "파일 탐색기"
 
-#: filedigger/main.cpp:30
+#: filedigger/main.cpp:29
 #, kde-format
 msgid "Browser for bup archives."
 msgstr "bup 압축 파일 탐색기입니다."
 
-#: filedigger/main.cpp:32
+#: filedigger/main.cpp:31
 #, kde-format
 msgid "© 2013–2020 Simon Persson"
 msgstr "© 2013–2020 Simon Persson"
 
-#: filedigger/main.cpp:40 purger/main.cpp:37
+#: filedigger/main.cpp:39 purger/main.cpp:36
 #, kde-format
 msgid "Name of the branch to be opened."
 msgstr "열 브랜치 이름입니다."
 
-#: filedigger/main.cpp:41
+#: filedigger/main.cpp:40
 #, kde-format
 msgid "File or folder path to be focused."
 msgstr "포커스를 부여할 파일이나 폴더 경로입니다."
 
-#: filedigger/main.cpp:42 purger/main.cpp:40
+#: filedigger/main.cpp:41 purger/main.cpp:39
 #, kde-format
 msgid "Path to the bup repository to be opened."
 msgstr "열 bup 저장소 경로입니다."
 
-#: filedigger/mergedvfs.cpp:102 filedigger/mergedvfs.cpp:113
+#: filedigger/mergedvfs.cpp:101
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid ""
@@ -508,19 +492,19 @@ msgstr ""
 "백업 압축 파일을 읽을 수 없습니다. 일부 파일이 손상되었을 수도 있습니다. 무결"
 "성 검사를 하시겠습니까?"
 
-#: filedigger/mergedvfs.cpp:162
+#: filedigger/mergedvfs.cpp:152
 #, kde-kuit-format
 msgctxt "added after folder name in some cases"
 msgid " (folder)"
 msgstr "(폴더)"
 
-#: filedigger/mergedvfs.cpp:164
+#: filedigger/mergedvfs.cpp:154
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (symlink)"
 msgstr "(심볼릭 링크)"
 
-#: filedigger/mergedvfs.cpp:166
+#: filedigger/mergedvfs.cpp:156
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (file)"
@@ -1440,7 +1424,7 @@ msgstr ""
 "<filename>%1</filename><nl/>폴더는 이 백업에 포함되지 <emphasis>않습니다</"
 "emphasis>"
 
-#: kcm/kupkcm.cpp:71
+#: kcm/kupkcm.cpp:62
 #, kde-format
 msgid ""
 "<h2>Backup programs are missing</h2><p>Before you can activate any backup "
@@ -1450,7 +1434,7 @@ msgstr ""
 "<h2>백업 프로그램 없음</h2><p>백업 계획을 활성화하려면 다음 프로그램을 설치해"
 "야 합니다</p><ul><li>bup: 버전된 백업</li><li>rsync: 동기화된 백업</li></ul>"
 
-#: kcm/kupkcm.cpp:201
+#: kcm/kupkcm.cpp:169
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1458,31 +1442,31 @@ msgid ""
 msgstr ""
 "%1의 대상을 설정하지 않았습니다!<nl/> 이 백업 계획은 실행되지 않습니다."
 
-#: kcm/kupkcm.cpp:204 kcm/kupkcm.cpp:215
+#: kcm/kupkcm.cpp:172 kcm/kupkcm.cpp:183
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "경고"
 
-#: kcm/kupkcm.cpp:212
+#: kcm/kupkcm.cpp:180
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid "%1 does not include any files!<nl/>This plan will not be activated."
 msgstr "%1에 파일이 포함되어 있지 않습니다!<nl/>이 계획은 활성화되지 않습니다."
 
-#: kcm/kupkcm.cpp:264
+#: kcm/kupkcm.cpp:232
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
 msgstr "새 계획 추가…"
 
-#: kcm/kupkcm.cpp:277
+#: kcm/kupkcm.cpp:245
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "백업 활성화됨"
 
-#: kcm/kupkcm.cpp:288
+#: kcm/kupkcm.cpp:256
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
@@ -1517,89 +1501,96 @@ msgstr ""
 "bup 저장소를 찾을 수 없습니다.\n"
 "%1"
 
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:109
-#, kde-format
-msgid "Save new backup"
-msgstr "새 백업 저장"
-
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:115
-#, kde-format
-msgid "Prune old backups"
-msgstr "오래된 백업 정리"
-
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
-#, kde-format
-msgid "Show files"
-msgstr "파일 표시"
-
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:125
-#, kde-format
-msgid "Show log file"
-msgstr "로그 파일 표시"
-
-#: plasmoid-qt5/contents/ui/main.qml:69
-#, kde-format
-msgid "&Configure Kup…"
-msgstr "Kup 설정(&C)…"
-
-#: plasmoid-qt5/contents/ui/main.qml:71
-#, kde-format
-msgid "&Reload backup plans"
-msgstr "백업 계획 새로 고침(&R)"
-
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:34
-#: plasmoid-qt6/contents/ui/main.qml:77
+#: plasmoid/qml/FullRepresentation.qml:34 plasmoid/qml/main.qml:95
 #, kde-format
 msgid "Reload Backup Plans"
 msgstr "백업 계획 새로 고침"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:43
+#: plasmoid/qml/FullRepresentation.qml:43
 #, kde-format
 msgid "Configure Backup Plans"
 msgstr "백업 계획 설정"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:91
-#: plasmoid-qt6/contents/ui/main.qml:83
+#: plasmoid/qml/FullRepresentation.qml:80
+#, kde-format
+msgid "No backup plans configured"
+msgstr "백업 계획을 설정하지 않았음"
+
+#: plasmoid/qml/FullRepresentation.qml:83 plasmoid/qml/main.qml:101
 #, kde-format
 msgid "Configure Backup Plans…"
 msgstr "백업 계획 설정…"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:33
+#: plasmoid/qml/main.qml:61
+#, fuzzy, kde-format
+#| msgid "No backup plans configured"
+msgctxt "status in tooltip"
+msgid "No plans configured"
+msgstr "백업 계획을 설정하지 않았음"
+
+#: plasmoid/qml/main.qml:66
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination available"
+msgstr "백업 대상을 사용할 수 있음"
+
+#: plasmoid/qml/main.qml:67
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination not available"
+msgstr "백업 대상을 사용할 수 없음"
+
+#: plasmoid/qml/main.qml:74
+#, fuzzy, kde-format
+#| msgid "&Reload backup plans"
+msgctxt "status in tooltip"
+msgid "Open to set up backup plans"
+msgstr "백업 계획 새로 고침(&R)"
+
+#: plasmoid/qml/PlanItem.qml:38
+#, fuzzy, kde-format
+#| msgctxt "%1 is fancy formatted date"
+#| msgid "Last saved: %1"
+msgctxt "%1 is formatted relative date"
+msgid "Last saved: %1"
+msgstr "마지막 저장: %1"
+
+#: plasmoid/qml/PlanItem.qml:49
 #, fuzzy, kde-format
 #| msgid "Show files"
 msgid "Show Files"
 msgstr "파일 표시"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:41
+#: plasmoid/qml/PlanItem.qml:57
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Save Backup"
 msgid "Save Backup"
 msgstr "백업 저장"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:49
+#: plasmoid/qml/PlanItem.qml:65
 #, fuzzy, kde-format
 #| msgid "Prune old backups"
 msgid "Prune Old Backups"
 msgstr "오래된 백업 정리"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:57
+#: plasmoid/qml/PlanItem.qml:73
 #, kde-format
 msgid "View Log"
 msgstr ""
 
-#: purger/main.cpp:24
+#: purger/main.cpp:23
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
 msgstr "정리 도구"
 
-#: purger/main.cpp:26
+#: purger/main.cpp:25
 #, kde-format
 msgid "Purger for bup archives."
 msgstr "bup 저장소 정리 도구입니다."
 
-#: purger/main.cpp:28
+#: purger/main.cpp:27
 #, kde-format
 msgid "© 2013–2021 Simon Persson"
 msgstr "© 2013–2021 Simon Persson"
@@ -1646,6 +1637,21 @@ msgstr "사용 가능한 공간: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "이 백업 계획은 실행되지 않았습니다."
+
+#~ msgid "Save new backup"
+#~ msgstr "새 백업 저장"
+
+#~ msgid "Prune old backups"
+#~ msgstr "오래된 백업 정리"
+
+#~ msgid "Show files"
+#~ msgstr "파일 표시"
+
+#~ msgid "Show log file"
+#~ msgstr "로그 파일 표시"
+
+#~ msgid "&Configure Kup…"
+#~ msgstr "Kup 설정(&C)…"
 
 #~ msgctxt "@action:button"
 #~ msgid "New Folder..."

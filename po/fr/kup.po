@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-11 02:20+0000\n"
+"POT-Creation-Date: 2026-08-21 02:09+0000\n"
 "PO-Revision-Date: 2026-08-10 08:54+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -109,7 +109,7 @@ msgstr ""
 "L'indexation du système de fichiers a échoué. Voyez le fichier de journal "
 "pour plus de détails."
 
-#: daemon/bupjob.cpp:198 daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
+#: daemon/bupjob.cpp:198 daemon/bupjob.cpp:317 daemon/rsyncjob.cpp:181
 #, kde-format
 msgid "Saving backup"
 msgstr "Sauvegarde en cours"
@@ -137,7 +137,7 @@ msgstr ""
 "Informations sur la sauvegarde non enregistrées. Voyez le fichier de log "
 "pour plus de détails."
 
-#: daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
+#: daemon/bupjob.cpp:317 daemon/rsyncjob.cpp:181
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -210,85 +210,54 @@ msgstr ""
 "corrompue ! Voyez le fichier de log pour plus de détails. Voulez-vous "
 "essayer de réparer le fichier de sauvegarde ?"
 
-#: daemon/kupdaemon.cpp:199
+#: daemon/kupdaemon.cpp:204
 #, kde-format
 msgid "Continue"
 msgstr "Continuer"
 
-#: daemon/kupdaemon.cpp:200
+#: daemon/kupdaemon.cpp:205
 #, kde-format
 msgid "Stop"
 msgstr "Arrêter"
 
-#: daemon/kupdaemon.cpp:201
+#: daemon/kupdaemon.cpp:206
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "Occupé : %1"
 
-#: daemon/kupdaemon.cpp:202
+#: daemon/kupdaemon.cpp:207
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "Voulez-vous vraiment arrêter ?"
 
-#: daemon/kupdaemon.cpp:205
+#: daemon/kupdaemon.cpp:210
 #, kde-format
 msgid "User Backups"
 msgstr "Sauvegardes"
 
-#: daemon/kupdaemon.cpp:287
-#, kde-format
-msgctxt "status in tooltip"
-msgid "Backup destination not available"
-msgstr "Destination de sauvegarde indisponible"
-
-#: daemon/kupdaemon.cpp:291 daemon/kupdaemon.cpp:347
-#, kde-format
-msgid "No backup plans configured"
-msgstr "Aucun plan de sauvegarde configuré"
-
-#: daemon/kupdaemon.cpp:297
-#, kde-format
-msgctxt "status in tooltip"
-msgid "Backup destination available"
-msgstr "Destination de sauvegarde disponible"
-
-#: daemon/kupdaemon.cpp:307 daemon/planexecutor.cpp:79
-#, kde-format
-msgctxt "status in tooltip"
-msgid "Backup status OK"
-msgstr "Succès de la sauvegarde"
-
-#: daemon/kupdaemon.cpp:314 daemon/planexecutor.cpp:81
-#, kde-format
-msgctxt "status in tooltip"
-msgid "New backup suggested"
-msgstr "Nouvelle sauvegarde recommandée"
-
-#: daemon/kupdaemon.cpp:321 daemon/planexecutor.cpp:83
-#, kde-format
-msgctxt "status in tooltip"
-msgid "New backup needed"
-msgstr "Nouvelle sauvegarde requise"
-
 #: daemon/main.cpp:30
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:shell Error message at startup"
+#| msgid ""
+#| "Kup is not enabled, enable it from the system settings module. You can do "
+#| "that by running <command>kcmshell5 kup</command>"
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
-"that by running <command>kcmshell5 kup</command>"
+"that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "Kup n'est pas activé. Veuillez l'activer depuis le module de configuration "
 "du système. Vous pouvez également l'activer en lançant <command>kcmshell5 "
 "kup</command>"
 
-#: daemon/main.cpp:41
+#: daemon/main.cpp:37
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Démon Kup"
 
-#: daemon/main.cpp:43
+#: daemon/main.cpp:39
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -300,50 +269,68 @@ msgstr ""
 "ne sauvegardant que les parties des fichiers qui ont changées depuis la "
 "dernière sauvegarde."
 
-#: daemon/main.cpp:47
+#: daemon/main.cpp:43
 #, kde-format
 msgid "© 2011–2020 Simon Persson"
 msgstr "2011 - 2020 Simon Persson"
 
-#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
+#: daemon/main.cpp:44 filedigger/main.cpp:32 purger/main.cpp:28
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
+#: daemon/main.cpp:44 filedigger/main.cpp:32 purger/main.cpp:28
 #, kde-format
 msgid "Maintainer"
 msgstr "Mainteneur"
 
-#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
+#: daemon/main.cpp:45 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Benoit Schwinden, Patrick Rouleau"
 
-#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
+#: daemon/main.cpp:45 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "benoit.schwinden@free.fr, pfrouleau@gmail.com"
 
-#: daemon/planexecutor.cpp:69
+#: daemon/planexecutor.cpp:69 plasmoid/qml/main.qml:33
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Saving backup"
 msgstr "Sauvegarde en cours"
 
-#: daemon/planexecutor.cpp:71
+#: daemon/planexecutor.cpp:71 plasmoid/qml/main.qml:34
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Checking backup integrity"
 msgstr "Vérification de l'intégrité de la sauvegarde"
 
-#: daemon/planexecutor.cpp:73
+#: daemon/planexecutor.cpp:73 plasmoid/qml/main.qml:35
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Repairing backups"
 msgstr "Réparation des sauvegardes"
+
+#: daemon/planexecutor.cpp:79 plasmoid/qml/main.qml:41
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup status OK"
+msgstr "Succès de la sauvegarde"
+
+#: daemon/planexecutor.cpp:81 plasmoid/qml/main.qml:42
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup suggested"
+msgstr "Nouvelle sauvegarde recommandée"
+
+#: daemon/planexecutor.cpp:83 plasmoid/qml/main.qml:43
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup needed"
+msgstr "Nouvelle sauvegarde requise"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
 #, kde-kuit-format
@@ -371,91 +358,88 @@ msgstr ""
 "Vous avez utilisé cet ordinateur depuis %1 depuis la dernière sauvegarde.\n"
 "Voulez-vous sauvegarder maintenant ?"
 
-#: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
+#: daemon/planexecutor.cpp:160
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
 msgstr "Enregistrer une sauvegarde"
 
-#: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
-#: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
-#: daemon/planexecutor.cpp:369 daemon/planexecutor.cpp:383
+#: daemon/planexecutor.cpp:163 daemon/planexecutor.cpp:198
+#: daemon/planexecutor.cpp:348
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Annuler"
 
-#: daemon/planexecutor.cpp:193
+#: daemon/planexecutor.cpp:186
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
 msgstr "L'enregistrement de la sauvegarde a échoué"
 
-#: daemon/planexecutor.cpp:199 daemon/planexecutor.cpp:217
-#: daemon/planexecutor.cpp:365 daemon/planexecutor.cpp:377
-#: daemon/planexecutor.cpp:415 daemon/planexecutor.cpp:419
+#: daemon/planexecutor.cpp:190 daemon/planexecutor.cpp:340
+#: daemon/planexecutor.cpp:378
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "Voir le journal"
 
-#: daemon/planexecutor.cpp:202 daemon/planexecutor.cpp:220
-#: daemon/planexecutor.cpp:368 daemon/planexecutor.cpp:380
+#: daemon/planexecutor.cpp:195 daemon/planexecutor.cpp:345
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
 msgstr "Réparer"
 
-#: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
+#: daemon/planexecutor.cpp:201
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
 msgstr "Ouvrir les paramètres"
 
-#: daemon/planexecutor.cpp:249
+#: daemon/planexecutor.cpp:224
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Backup Saved"
 msgstr "Sauvegarde réussie"
 
-#: daemon/planexecutor.cpp:250
+#: daemon/planexecutor.cpp:225
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
 msgstr "La sauvegarde a réussi ! "
 
-#: daemon/planexecutor.cpp:305 daemon/planexecutor.cpp:312
-#: daemon/planexecutor.cpp:345
+#: daemon/planexecutor.cpp:281 daemon/planexecutor.cpp:288
+#: daemon/planexecutor.cpp:321
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Problem"
 msgstr "Problème"
 
-#: daemon/planexecutor.cpp:306
+#: daemon/planexecutor.cpp:282
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
 msgstr "Vous n'avez pas la permission d'écrire dans le dossier de destination."
 
-#: daemon/planexecutor.cpp:312
+#: daemon/planexecutor.cpp:288
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
 msgstr "Type de sauvegarde non valable dans la configuration."
 
-#: daemon/planexecutor.cpp:360
+#: daemon/planexecutor.cpp:336
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Integrity Check Completed"
 msgstr "Contrôle d'intégrité effectué"
 
-#: daemon/planexecutor.cpp:411
+#: daemon/planexecutor.cpp:375
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Repair Completed"
 msgstr "Réparation effectuée"
 
-#: daemon/planexecutor.cpp:446
+#: daemon/planexecutor.cpp:407
 #, kde-format
 msgid "Kup Backup System"
 msgstr "Système de Sauvegarde Kup"
@@ -470,7 +454,7 @@ msgstr ""
 "Le programme <application>rsync</application> est requis, mais n'a pu être "
 "trouvé. Est-il installé ?"
 
-#: filedigger/filedigger.cpp:116
+#: filedigger/filedigger.cpp:112
 #, kde-kuit-format
 msgctxt "@info messagebox, %1 is a folder path"
 msgid ""
@@ -480,49 +464,49 @@ msgstr ""
 "L'archive de sauvegarde <filename>%1</filename> n'a pu être ouverte. "
 "Veuillez vérifier que les sauvegardes sont bien présentes à cet emplacement. "
 
-#: filedigger/filedigger.cpp:123
+#: filedigger/filedigger.cpp:119
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid "You do not have permission needed to read this backup archive."
 msgstr "Vous n'avez pas les permissions nécessaires pour lire cette archive."
 
-#: filedigger/filedigger.cpp:188
+#: filedigger/filedigger.cpp:184
 #, kde-format
 msgid "Select location of backup archive to open."
 msgstr "Sélectionnez l'emplacement de l'archive de sauvegarde à ouvrir."
 
-#: filedigger/main.cpp:28
+#: filedigger/main.cpp:27
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
 msgstr "Explorateur de fichiers"
 
-#: filedigger/main.cpp:30
+#: filedigger/main.cpp:29
 #, kde-format
 msgid "Browser for bup archives."
 msgstr "Explorateur pour les archives bup"
 
-#: filedigger/main.cpp:32
+#: filedigger/main.cpp:31
 #, kde-format
 msgid "© 2013–2020 Simon Persson"
 msgstr "2013 - 2020 Simon Persson"
 
-#: filedigger/main.cpp:40 purger/main.cpp:37
+#: filedigger/main.cpp:39 purger/main.cpp:36
 #, kde-format
 msgid "Name of the branch to be opened."
 msgstr "Nom de la branche à ouvrir."
 
-#: filedigger/main.cpp:41
+#: filedigger/main.cpp:40
 #, kde-format
 msgid "File or folder path to be focused."
 msgstr "Emplacement du fichier ou du fichier à viser."
 
-#: filedigger/main.cpp:42 purger/main.cpp:40
+#: filedigger/main.cpp:41 purger/main.cpp:39
 #, kde-format
 msgid "Path to the bup repository to be opened."
 msgstr "Emplacement du dépôt « bup » à ouvrir."
 
-#: filedigger/mergedvfs.cpp:102 filedigger/mergedvfs.cpp:113
+#: filedigger/mergedvfs.cpp:101
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid ""
@@ -533,19 +517,19 @@ msgstr ""
 "corrompus. Voulez-vous lancer un test d'intégrité pour vérifier cette "
 "hypothèse ?"
 
-#: filedigger/mergedvfs.cpp:162
+#: filedigger/mergedvfs.cpp:152
 #, kde-kuit-format
 msgctxt "added after folder name in some cases"
 msgid " (folder)"
 msgstr "(dossier)"
 
-#: filedigger/mergedvfs.cpp:164
+#: filedigger/mergedvfs.cpp:154
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (symlink)"
 msgstr "(lien symbolique)"
 
-#: filedigger/mergedvfs.cpp:166
+#: filedigger/mergedvfs.cpp:156
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (file)"
@@ -1499,7 +1483,7 @@ msgstr ""
 "<filename>%1</filename><nl/>ne sera <emphasis>pas</emphasis> inclus dans la "
 "sauvegarde"
 
-#: kcm/kupkcm.cpp:71
+#: kcm/kupkcm.cpp:62
 #, kde-format
 msgid ""
 "<h2>Backup programs are missing</h2><p>Before you can activate any backup "
@@ -1511,7 +1495,7 @@ msgstr ""
 "sauvegardes versionnées</li><li>rsync, pour les sauvegardes synchronisées</"
 "li></ul>"
 
-#: kcm/kupkcm.cpp:201
+#: kcm/kupkcm.cpp:169
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1520,31 +1504,31 @@ msgstr ""
 "%1 ne comporte aucune destination ! <nl/>Aucune sauvegarde ne sera exécutée "
 "par ce plan."
 
-#: kcm/kupkcm.cpp:204 kcm/kupkcm.cpp:215
+#: kcm/kupkcm.cpp:172 kcm/kupkcm.cpp:183
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Avertissement"
 
-#: kcm/kupkcm.cpp:212
+#: kcm/kupkcm.cpp:180
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid "%1 does not include any files!<nl/>This plan will not be activated."
 msgstr "%1 ne contient aucun fichier !<nl/>Ce plan ne sera pas activé."
 
-#: kcm/kupkcm.cpp:264
+#: kcm/kupkcm.cpp:232
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
 msgstr "Ajouter un nouveau plan..."
 
-#: kcm/kupkcm.cpp:277
+#: kcm/kupkcm.cpp:245
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "Sauvegardes activées"
 
-#: kcm/kupkcm.cpp:288
+#: kcm/kupkcm.cpp:256
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
@@ -1579,85 +1563,91 @@ msgstr ""
 "Aucun dépôt bup trouvé.\n"
 "%1"
 
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:109
-#, kde-format
-msgid "Save new backup"
-msgstr "Créer une nouvelle sauvegarde"
-
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:115
-#, kde-format
-msgid "Prune old backups"
-msgstr "Réduire les anciennes sauvegardes"
-
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
-#, kde-format
-msgid "Show files"
-msgstr "Voir les fichiers"
-
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:125
-#, kde-format
-msgid "Show log file"
-msgstr "Voir le journal"
-
-#: plasmoid-qt5/contents/ui/main.qml:69
-#, kde-format
-msgid "&Configure Kup…"
-msgstr "&Configurer Kup…"
-
-#: plasmoid-qt5/contents/ui/main.qml:71
-#, kde-format
-msgid "&Reload backup plans"
-msgstr "&Recharger les plans de sauvegarde"
-
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:34
-#: plasmoid-qt6/contents/ui/main.qml:77
+#: plasmoid/qml/FullRepresentation.qml:34 plasmoid/qml/main.qml:95
 #, kde-format
 msgid "Reload Backup Plans"
 msgstr "Recharger les plans de sauvegarde"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:43
+#: plasmoid/qml/FullRepresentation.qml:43
 #, kde-format
 msgid "Configure Backup Plans"
 msgstr "Configurer les plans de sauvegarde"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:91
-#: plasmoid-qt6/contents/ui/main.qml:83
+#: plasmoid/qml/FullRepresentation.qml:80
+#, kde-format
+msgid "No backup plans configured"
+msgstr "Aucun plan de sauvegarde configuré"
+
+#: plasmoid/qml/FullRepresentation.qml:83 plasmoid/qml/main.qml:101
 #, kde-format
 msgid "Configure Backup Plans…"
 msgstr "Configurer les plans d'archivage..."
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:33
+#: plasmoid/qml/main.qml:61
+#, fuzzy, kde-format
+#| msgid "No backup plans configured"
+msgctxt "status in tooltip"
+msgid "No plans configured"
+msgstr "Aucun plan de sauvegarde configuré"
+
+#: plasmoid/qml/main.qml:66
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination available"
+msgstr "Destination de sauvegarde disponible"
+
+#: plasmoid/qml/main.qml:67
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination not available"
+msgstr "Destination de sauvegarde indisponible"
+
+#: plasmoid/qml/main.qml:74
+#, fuzzy, kde-format
+msgctxt "status in tooltip"
+msgid "Open to set up backup plans"
+msgstr "État des plans de sauvegarde"
+
+#: plasmoid/qml/PlanItem.qml:38
+#, fuzzy, kde-format
+#| msgctxt "%1 is fancy formatted date"
+#| msgid "Last saved: %1"
+msgctxt "%1 is formatted relative date"
+msgid "Last saved: %1"
+msgstr "Dernier enregistrement : %1"
+
+#: plasmoid/qml/PlanItem.qml:49
 #, kde-format
 msgid "Show Files"
 msgstr "Afficher les fichiers"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:41
+#: plasmoid/qml/PlanItem.qml:57
 #, kde-format
 msgid "Save Backup"
 msgstr "Enregistrer une sauvegarde"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:49
+#: plasmoid/qml/PlanItem.qml:65
 #, kde-format
 msgid "Prune Old Backups"
 msgstr "Réduire les anciennes sauvegardes"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:57
+#: plasmoid/qml/PlanItem.qml:73
 #, kde-format
 msgid "View Log"
 msgstr "Afficher le journal"
 
-#: purger/main.cpp:24
+#: purger/main.cpp:23
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
 msgstr "Nettoyeur"
 
-#: purger/main.cpp:26
+#: purger/main.cpp:25
 #, kde-format
 msgid "Purger for bup archives."
 msgstr "Nettoyeur pour les archives « bup »"
 
-#: purger/main.cpp:28
+#: purger/main.cpp:27
 #, kde-format
 msgid "© 2013–2021 Simon Persson"
 msgstr "2013 - 2021 Simon Persson"
@@ -1704,6 +1694,24 @@ msgstr "Espace libre : %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Ce plan de sauvegarde n'a jamais été exécuté."
+
+#~ msgid "Save new backup"
+#~ msgstr "Créer une nouvelle sauvegarde"
+
+#~ msgid "Prune old backups"
+#~ msgstr "Réduire les anciennes sauvegardes"
+
+#~ msgid "Show files"
+#~ msgstr "Voir les fichiers"
+
+#~ msgid "Show log file"
+#~ msgstr "Voir le journal"
+
+#~ msgid "&Configure Kup…"
+#~ msgstr "&Configurer Kup…"
+
+#~ msgid "&Reload backup plans"
+#~ msgstr "&Recharger les plans de sauvegarde"
 
 #~ msgctxt "@action:button"
 #~ msgid "New Folder..."
@@ -1813,10 +1821,6 @@ msgstr "Ce plan de sauvegarde n'a jamais été exécuté."
 #, fuzzy
 #~ msgid "Finished repairing backup archive"
 #~ msgstr "Réparation de l'archive effectuée"
-
-#, fuzzy
-#~ msgid "Status of backup plans"
-#~ msgstr "État des plans de sauvegarde"
 
 #, fuzzy
 #~ msgid "Backup Status"

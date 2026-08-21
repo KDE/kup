@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-11 02:20+0000\n"
+"POT-Creation-Date: 2026-08-21 02:09+0000\n"
 "PO-Revision-Date: 2021-09-22 09:14+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -104,7 +104,7 @@ msgctxt "@info notification"
 msgid "Failed to analyze files. See log file for more details."
 msgstr "A fájlok elemzése sikertelen. További részletekért lásd a naplófájlt."
 
-#: daemon/bupjob.cpp:198 daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
+#: daemon/bupjob.cpp:198 daemon/bupjob.cpp:317 daemon/rsyncjob.cpp:181
 #, kde-format
 msgid "Saving backup"
 msgstr "Biztonsági másolat mentése"
@@ -132,7 +132,7 @@ msgstr ""
 "A biztonsági másolat helyreállítási információinak létrehozása meghiúsult. "
 "További részletekért lásd a naplófájlt."
 
-#: daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
+#: daemon/bupjob.cpp:317 daemon/rsyncjob.cpp:181
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -205,84 +205,53 @@ msgstr ""
 "másolatai sérültek. További részletekért lásd a naplófájlt. Szeretné "
 "megkísérelni a biztonsági-másolat fájlok javítását?"
 
-#: daemon/kupdaemon.cpp:199
+#: daemon/kupdaemon.cpp:204
 #, kde-format
 msgid "Continue"
 msgstr "Folytatás"
 
-#: daemon/kupdaemon.cpp:200
+#: daemon/kupdaemon.cpp:205
 #, kde-format
 msgid "Stop"
 msgstr "Leállítás"
 
-#: daemon/kupdaemon.cpp:201
+#: daemon/kupdaemon.cpp:206
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "Jelenleg foglalt: %1"
 
-#: daemon/kupdaemon.cpp:202
+#: daemon/kupdaemon.cpp:207
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "Biztosan le szeretné állítani?"
 
-#: daemon/kupdaemon.cpp:205
+#: daemon/kupdaemon.cpp:210
 #, kde-format
 msgid "User Backups"
 msgstr "Felhasználói biztonsági másolatok"
 
-#: daemon/kupdaemon.cpp:287
-#, kde-format
-msgctxt "status in tooltip"
-msgid "Backup destination not available"
-msgstr "A biztonsági másolat célhelye nem érhető el"
-
-#: daemon/kupdaemon.cpp:291 daemon/kupdaemon.cpp:347
-#, kde-format
-msgid "No backup plans configured"
-msgstr "Nincs beállítva mentési terv"
-
-#: daemon/kupdaemon.cpp:297
-#, kde-format
-msgctxt "status in tooltip"
-msgid "Backup destination available"
-msgstr "A biztonsági másolat célhelye elérhető"
-
-#: daemon/kupdaemon.cpp:307 daemon/planexecutor.cpp:79
-#, kde-format
-msgctxt "status in tooltip"
-msgid "Backup status OK"
-msgstr "Biztonsági másolat állapota OK"
-
-#: daemon/kupdaemon.cpp:314 daemon/planexecutor.cpp:81
-#, kde-format
-msgctxt "status in tooltip"
-msgid "New backup suggested"
-msgstr "Új biztonsági másolat javasolt"
-
-#: daemon/kupdaemon.cpp:321 daemon/planexecutor.cpp:83
-#, kde-format
-msgctxt "status in tooltip"
-msgid "New backup needed"
-msgstr "Új biztonsági másolat szükséges"
-
 #: daemon/main.cpp:30
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:shell Error message at startup"
+#| msgid ""
+#| "Kup is not enabled, enable it from the system settings module. You can do "
+#| "that by running <command>kcmshell5 kup</command>"
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
-"that by running <command>kcmshell5 kup</command>"
+"that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "A Kup nincs bekapcsolva, a Rendszerbeállítások moduljában engedélyezheti. "
 "Ezt a <command>kcmshell5 kup</command> parancs futtatásával teheti meg."
 
-#: daemon/main.cpp:41
+#: daemon/main.cpp:37
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Kup démon"
 
-#: daemon/main.cpp:43
+#: daemon/main.cpp:39
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -294,51 +263,69 @@ msgstr ""
 "inkrementális biztonsági másolatok gyors készítését, csakis a fájloknak a "
 "legutóbbi biztonsági másolat létrehozása óta módosult részeinek mentésével."
 
-#: daemon/main.cpp:47
+#: daemon/main.cpp:43
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2011-2020 Simon Persson"
 msgid "© 2011–2020 Simon Persson"
 msgstr "Copyright (C) Simon Persson, 2011-2020."
 
-#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
+#: daemon/main.cpp:44 filedigger/main.cpp:32 purger/main.cpp:28
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
+#: daemon/main.cpp:44 filedigger/main.cpp:32 purger/main.cpp:28
 #, kde-format
 msgid "Maintainer"
 msgstr "Karbantartó"
 
-#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
+#: daemon/main.cpp:45 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Kiszel Kristóf,Barcza Károly"
 
-#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
+#: daemon/main.cpp:45 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kiszel.kristof@gmail.com,kbarcza@blackpanther.hu"
 
-#: daemon/planexecutor.cpp:69
+#: daemon/planexecutor.cpp:69 plasmoid/qml/main.qml:33
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Saving backup"
 msgstr "Biztonsági másolat mentése"
 
-#: daemon/planexecutor.cpp:71
+#: daemon/planexecutor.cpp:71 plasmoid/qml/main.qml:34
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Checking backup integrity"
 msgstr "Biztonsági másolat integritásának ellenőrzése"
 
-#: daemon/planexecutor.cpp:73
+#: daemon/planexecutor.cpp:73 plasmoid/qml/main.qml:35
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Repairing backups"
 msgstr "Biztonsági másolatok javítása"
+
+#: daemon/planexecutor.cpp:79 plasmoid/qml/main.qml:41
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup status OK"
+msgstr "Biztonsági másolat állapota OK"
+
+#: daemon/planexecutor.cpp:81 plasmoid/qml/main.qml:42
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup suggested"
+msgstr "Új biztonsági másolat javasolt"
+
+#: daemon/planexecutor.cpp:83 plasmoid/qml/main.qml:43
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup needed"
+msgstr "Új biztonsági másolat szükséges"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
 #, fuzzy, kde-kuit-format
@@ -368,92 +355,89 @@ msgstr ""
 "Az utolsó biztonsági másolat mentése óta %1 volt az aktivitása.\n"
 "Készít egy új biztonsági másolatot most?"
 
-#: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
+#: daemon/planexecutor.cpp:160
 #, fuzzy, kde-kuit-format
 #| msgid "Save new backup"
 msgctxt "@action:button"
 msgid "Save Backup"
 msgstr "Új biztonsági másolat mentése"
 
-#: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
-#: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
-#: daemon/planexecutor.cpp:369 daemon/planexecutor.cpp:383
+#: daemon/planexecutor.cpp:163 daemon/planexecutor.cpp:198
+#: daemon/planexecutor.cpp:348
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
-#: daemon/planexecutor.cpp:193
+#: daemon/planexecutor.cpp:186
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
 msgstr "A biztonsági másolat mentése sikertelen"
 
-#: daemon/planexecutor.cpp:199 daemon/planexecutor.cpp:217
-#: daemon/planexecutor.cpp:365 daemon/planexecutor.cpp:377
-#: daemon/planexecutor.cpp:415 daemon/planexecutor.cpp:419
+#: daemon/planexecutor.cpp:190 daemon/planexecutor.cpp:340
+#: daemon/planexecutor.cpp:378
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "Naplófájl"
 
-#: daemon/planexecutor.cpp:202 daemon/planexecutor.cpp:220
-#: daemon/planexecutor.cpp:368 daemon/planexecutor.cpp:380
+#: daemon/planexecutor.cpp:195 daemon/planexecutor.cpp:345
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
 msgstr ""
 
-#: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
+#: daemon/planexecutor.cpp:201
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
 msgstr "Beállítások megnyitása"
 
-#: daemon/planexecutor.cpp:249
+#: daemon/planexecutor.cpp:224
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Backup Saved"
 msgstr "Biztonsági másolat mentve"
 
-#: daemon/planexecutor.cpp:250
+#: daemon/planexecutor.cpp:225
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
 msgstr "A biztonsági másolat mentése sikeresen befejeződött."
 
-#: daemon/planexecutor.cpp:305 daemon/planexecutor.cpp:312
-#: daemon/planexecutor.cpp:345
+#: daemon/planexecutor.cpp:281 daemon/planexecutor.cpp:288
+#: daemon/planexecutor.cpp:321
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Problem"
 msgstr "Probléma"
 
-#: daemon/planexecutor.cpp:306
+#: daemon/planexecutor.cpp:282
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
 msgstr "Nincs írási jogosultsága a biztonsági másolat célhelyéhez."
 
-#: daemon/planexecutor.cpp:312
+#: daemon/planexecutor.cpp:288
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
 msgstr "Érvénytelen biztonságimásolat-típus a beállításokban."
 
-#: daemon/planexecutor.cpp:360
+#: daemon/planexecutor.cpp:336
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Integrity Check Completed"
 msgstr "Integritás-ellenőrzés befejezve"
 
-#: daemon/planexecutor.cpp:411
+#: daemon/planexecutor.cpp:375
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Repair Completed"
 msgstr "Javítás befejezve"
 
-#: daemon/planexecutor.cpp:446
+#: daemon/planexecutor.cpp:407
 #, kde-format
 msgid "Kup Backup System"
 msgstr "Kup biztonságimásolat-rendszer"
@@ -468,7 +452,7 @@ msgstr ""
 "Az <application>rsync</application> program szükséges, de nem található, "
 "talán nincs telepítve?"
 
-#: filedigger/filedigger.cpp:116
+#: filedigger/filedigger.cpp:112
 #, kde-kuit-format
 msgctxt "@info messagebox, %1 is a folder path"
 msgid ""
@@ -478,51 +462,51 @@ msgstr ""
 "A(z) <filename>%1</filename> biztonságimásolat-archívum nem nyitható meg. "
 "Ellenőrizze, hogy a biztonsági másolatok tényleg ott találhatók-e."
 
-#: filedigger/filedigger.cpp:123
+#: filedigger/filedigger.cpp:119
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid "You do not have permission needed to read this backup archive."
 msgstr ""
 "Nincs jogosultsága ennek a biztonságimásolat-archívumnak az olvasásához."
 
-#: filedigger/filedigger.cpp:188
+#: filedigger/filedigger.cpp:184
 #, kde-format
 msgid "Select location of backup archive to open."
 msgstr "Válassza ki a megnyitandó biztonságimásolat-archívum helyét."
 
-#: filedigger/main.cpp:28
+#: filedigger/main.cpp:27
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
 msgstr "Archívumböngésző"
 
-#: filedigger/main.cpp:30
+#: filedigger/main.cpp:29
 #, kde-format
 msgid "Browser for bup archives."
 msgstr "Fájlböngésző bup archívumokhoz."
 
-#: filedigger/main.cpp:32
+#: filedigger/main.cpp:31
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2013-2020 Simon Persson"
 msgid "© 2013–2020 Simon Persson"
 msgstr "Copyright (C) Simon Persson, 2013-2020."
 
-#: filedigger/main.cpp:40 purger/main.cpp:37
+#: filedigger/main.cpp:39 purger/main.cpp:36
 #, kde-format
 msgid "Name of the branch to be opened."
 msgstr "A megnyitandó ág (branch) neve."
 
-#: filedigger/main.cpp:41
+#: filedigger/main.cpp:40
 #, kde-format
 msgid "File or folder path to be focused."
 msgstr ""
 
-#: filedigger/main.cpp:42 purger/main.cpp:40
+#: filedigger/main.cpp:41 purger/main.cpp:39
 #, kde-format
 msgid "Path to the bup repository to be opened."
 msgstr "A megnyitandó bup tároló elérési útja."
 
-#: filedigger/mergedvfs.cpp:102 filedigger/mergedvfs.cpp:113
+#: filedigger/mergedvfs.cpp:101
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid ""
@@ -532,19 +516,19 @@ msgstr ""
 "Nem sikerült olvasni a biztonságimásolat-archívumot, néhány fájl talán "
 "megsérült. Szeretne futtatni egy integritás-ellenőrzést?"
 
-#: filedigger/mergedvfs.cpp:162
+#: filedigger/mergedvfs.cpp:152
 #, kde-kuit-format
 msgctxt "added after folder name in some cases"
 msgid " (folder)"
 msgstr " (mappa)"
 
-#: filedigger/mergedvfs.cpp:164
+#: filedigger/mergedvfs.cpp:154
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (symlink)"
 msgstr " (szimbolikus link)"
 
-#: filedigger/mergedvfs.cpp:166
+#: filedigger/mergedvfs.cpp:156
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (file)"
@@ -1503,7 +1487,7 @@ msgstr ""
 "A(z) <filename>%1</filename><nl/> <emphasis>nem</emphasis> lesz része a "
 "biztonsági másolatnak"
 
-#: kcm/kupkcm.cpp:71
+#: kcm/kupkcm.cpp:62
 #, kde-format
 msgid ""
 "<h2>Backup programs are missing</h2><p>Before you can activate any backup "
@@ -1515,7 +1499,7 @@ msgstr ""
 "p><ul><li>bup, verziószámozott biztonsági másolatokhoz</li><li>rsync, "
 "szinkronizált biztonsági másolatokhoz</li></ul>"
 
-#: kcm/kupkcm.cpp:201
+#: kcm/kupkcm.cpp:169
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1524,19 +1508,19 @@ msgstr ""
 "A(z) %1 tervnek nincs célhelye.<nl/>Nem készülnek biztonsági másolatok ezzel "
 "a tervvel."
 
-#: kcm/kupkcm.cpp:204 kcm/kupkcm.cpp:215
+#: kcm/kupkcm.cpp:172 kcm/kupkcm.cpp:183
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Figyelmeztetés"
 
-#: kcm/kupkcm.cpp:212
+#: kcm/kupkcm.cpp:180
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid "%1 does not include any files!<nl/>This plan will not be activated."
 msgstr ""
 
-#: kcm/kupkcm.cpp:264
+#: kcm/kupkcm.cpp:232
 #, fuzzy, kde-kuit-format
 #| msgctxt "@action:button"
 #| msgid "Add New Plan"
@@ -1544,7 +1528,7 @@ msgctxt "@action:button"
 msgid "Add New Plan…"
 msgstr "Új terv hozzáadása"
 
-#: kcm/kupkcm.cpp:277
+#: kcm/kupkcm.cpp:245
 #, fuzzy, kde-kuit-format
 #| msgctxt "@option:check"
 #| msgid "Backups Enabled"
@@ -1552,7 +1536,7 @@ msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "Biztonsági másolatok bekapcsolva"
 
-#: kcm/kupkcm.cpp:288
+#: kcm/kupkcm.cpp:256
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
@@ -1587,92 +1571,98 @@ msgstr ""
 "Nem található bup tároló.\n"
 "%1"
 
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:109
-#, kde-format
-msgid "Save new backup"
-msgstr "Új biztonsági másolat mentése"
-
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:115
-#, kde-format
-msgid "Prune old backups"
-msgstr "Régi biztonsági másolatok törlése"
-
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
-#, kde-format
-msgid "Show files"
-msgstr "Fájlok megjelenítése"
-
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:125
-#, kde-format
-msgid "Show log file"
-msgstr "Napló megjelenítése"
-
-#: plasmoid-qt5/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "&Configure Kup..."
-msgid "&Configure Kup…"
-msgstr "A Kup &beállítása…"
-
-#: plasmoid-qt5/contents/ui/main.qml:71
-#, kde-format
-msgid "&Reload backup plans"
-msgstr "Mentési tervek új&ratöltése"
-
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:34
-#: plasmoid-qt6/contents/ui/main.qml:77
+#: plasmoid/qml/FullRepresentation.qml:34 plasmoid/qml/main.qml:95
 #, fuzzy, kde-format
 #| msgid "&Reload backup plans"
 msgid "Reload Backup Plans"
 msgstr "Mentési tervek új&ratöltése"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:43
+#: plasmoid/qml/FullRepresentation.qml:43
 #, fuzzy, kde-format
 #| msgid "&Configure Kup..."
 msgid "Configure Backup Plans"
 msgstr "A Kup &beállítása…"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:91
-#: plasmoid-qt6/contents/ui/main.qml:83
+#: plasmoid/qml/FullRepresentation.qml:80
+#, kde-format
+msgid "No backup plans configured"
+msgstr "Nincs beállítva mentési terv"
+
+#: plasmoid/qml/FullRepresentation.qml:83 plasmoid/qml/main.qml:101
 #, fuzzy, kde-format
 #| msgid "&Configure Kup..."
 msgid "Configure Backup Plans…"
 msgstr "A Kup &beállítása…"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:33
+#: plasmoid/qml/main.qml:61
+#, fuzzy, kde-format
+#| msgid "No backup plans configured"
+msgctxt "status in tooltip"
+msgid "No plans configured"
+msgstr "Nincs beállítva mentési terv"
+
+#: plasmoid/qml/main.qml:66
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination available"
+msgstr "A biztonsági másolat célhelye elérhető"
+
+#: plasmoid/qml/main.qml:67
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination not available"
+msgstr "A biztonsági másolat célhelye nem érhető el"
+
+#: plasmoid/qml/main.qml:74
+#, fuzzy, kde-format
+#| msgid "Status of backup plans"
+msgctxt "status in tooltip"
+msgid "Open to set up backup plans"
+msgstr "Mentési tervek állapota"
+
+#: plasmoid/qml/PlanItem.qml:38
+#, fuzzy, kde-format
+#| msgctxt "%1 is fancy formatted date"
+#| msgid "Last saved: %1"
+msgctxt "%1 is formatted relative date"
+msgid "Last saved: %1"
+msgstr "Utolsó mentés: %1"
+
+#: plasmoid/qml/PlanItem.qml:49
 #, fuzzy, kde-format
 #| msgid "Show files"
 msgid "Show Files"
 msgstr "Fájlok megjelenítése"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:41
+#: plasmoid/qml/PlanItem.qml:57
 #, fuzzy, kde-format
 #| msgid "Save new backup"
 msgid "Save Backup"
 msgstr "Új biztonsági másolat mentése"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:49
+#: plasmoid/qml/PlanItem.qml:65
 #, fuzzy, kde-format
 #| msgid "Prune old backups"
 msgid "Prune Old Backups"
 msgstr "Régi biztonsági másolatok törlése"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:57
+#: plasmoid/qml/PlanItem.qml:73
 #, kde-format
 msgid "View Log"
 msgstr ""
 
-#: purger/main.cpp:24
+#: purger/main.cpp:23
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
 msgstr "Törlő"
 
-#: purger/main.cpp:26
+#: purger/main.cpp:25
 #, kde-format
 msgid "Purger for bup archives."
 msgstr "Végleges törlő bup archívumokhoz."
 
-#: purger/main.cpp:28
+#: purger/main.cpp:27
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2013-2021 Simon Persson"
 msgid "© 2013–2021 Simon Persson"
@@ -1720,6 +1710,26 @@ msgstr "Szabad terület: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Ez a biztonságimásolat-terv még soha nem futott."
+
+#~ msgid "Save new backup"
+#~ msgstr "Új biztonsági másolat mentése"
+
+#~ msgid "Prune old backups"
+#~ msgstr "Régi biztonsági másolatok törlése"
+
+#~ msgid "Show files"
+#~ msgstr "Fájlok megjelenítése"
+
+#~ msgid "Show log file"
+#~ msgstr "Napló megjelenítése"
+
+#, fuzzy
+#~| msgid "&Configure Kup..."
+#~ msgid "&Configure Kup…"
+#~ msgstr "A Kup &beállítása…"
+
+#~ msgid "&Reload backup plans"
+#~ msgstr "Mentési tervek új&ratöltése"
 
 #~ msgctxt "@action:button"
 #~ msgid "New Folder..."
@@ -1824,9 +1834,6 @@ msgstr "Ez a biztonságimásolat-terv még soha nem futott."
 
 #~ msgid "backup,recovery,safety"
 #~ msgstr "mentés, visszaállítás, biztonság"
-
-#~ msgid "Status of backup plans"
-#~ msgstr "Mentési tervek állapota"
 
 #~ msgid "Backup Status"
 #~ msgstr "Biztonsági mentés állapota"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-11 02:20+0000\n"
+"POT-Creation-Date: 2026-08-21 02:09+0000\n"
 "PO-Revision-Date: 2026-08-09 09:26+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -107,7 +107,7 @@ msgstr ""
 "Ha fallat durant l'anàlisi dels fitxers. Per a més detalls, vegeu el fitxer "
 "de registre."
 
-#: daemon/bupjob.cpp:198 daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
+#: daemon/bupjob.cpp:198 daemon/bupjob.cpp:317 daemon/rsyncjob.cpp:181
 #, kde-format
 msgid "Saving backup"
 msgstr "S'està guardant la còpia de seguretat"
@@ -135,7 +135,7 @@ msgstr ""
 "Ha fallat mentre es generava la informació de recuperació per a la còpia de "
 "seguretat. Per a més detalls, vegeu el fitxer de registre."
 
-#: daemon/bupjob.cpp:321 daemon/rsyncjob.cpp:181
+#: daemon/bupjob.cpp:317 daemon/rsyncjob.cpp:181
 #, kde-format
 msgctxt "Label for file currently being copied"
 msgid "File"
@@ -211,84 +211,53 @@ msgstr ""
 "vostres còpies de seguretat estan malmeses! Per a més detalls, vegeu el "
 "fitxer de registre. Voleu intentar reparar els fitxers de còpia de seguretat?"
 
-#: daemon/kupdaemon.cpp:199
+#: daemon/kupdaemon.cpp:204
 #, kde-format
 msgid "Continue"
 msgstr "Continua"
 
-#: daemon/kupdaemon.cpp:200
+#: daemon/kupdaemon.cpp:205
 #, kde-format
 msgid "Stop"
 msgstr "Para"
 
-#: daemon/kupdaemon.cpp:201
+#: daemon/kupdaemon.cpp:206
 #, kde-format
 msgctxt "%1 is a text explaining the current activity"
 msgid "Currently busy: %1"
 msgstr "Actualment ocupat: %1"
 
-#: daemon/kupdaemon.cpp:202
+#: daemon/kupdaemon.cpp:207
 #, kde-format
 msgid "Do you really want to stop?"
 msgstr "De veres voleu parar?"
 
-#: daemon/kupdaemon.cpp:205
+#: daemon/kupdaemon.cpp:210
 #, kde-format
 msgid "User Backups"
 msgstr "Còpies de seguretat de l'usuari"
 
-#: daemon/kupdaemon.cpp:287
-#, kde-format
-msgctxt "status in tooltip"
-msgid "Backup destination not available"
-msgstr "La destinació de la còpia de seguretat no està disponible"
-
-#: daemon/kupdaemon.cpp:291 daemon/kupdaemon.cpp:347
-#, kde-format
-msgid "No backup plans configured"
-msgstr "No s'ha configurat cap pla de còpia de seguretat"
-
-#: daemon/kupdaemon.cpp:297
-#, kde-format
-msgctxt "status in tooltip"
-msgid "Backup destination available"
-msgstr "Hi ha disponible una destinació de còpia de seguretat"
-
-#: daemon/kupdaemon.cpp:307 daemon/planexecutor.cpp:79
-#, kde-format
-msgctxt "status in tooltip"
-msgid "Backup status OK"
-msgstr "Estat correcte de la còpia de seguretat"
-
-#: daemon/kupdaemon.cpp:314 daemon/planexecutor.cpp:81
-#, kde-format
-msgctxt "status in tooltip"
-msgid "New backup suggested"
-msgstr "S'ha suggerit una còpia de seguretat nova"
-
-#: daemon/kupdaemon.cpp:321 daemon/planexecutor.cpp:83
-#, kde-format
-msgctxt "status in tooltip"
-msgid "New backup needed"
-msgstr "Cal fer una còpia de seguretat nova"
-
 #: daemon/main.cpp:30
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:shell Error message at startup"
+#| msgid ""
+#| "Kup is not enabled, enable it from the system settings module. You can do "
+#| "that by running <command>kcmshell5 kup</command>"
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
-"that by running <command>kcmshell5 kup</command>"
+"that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "Kup no està habilitat, habiliteu-lo des del mòdul de Configuració del "
 "sistema. Podreu fer-ho executant <command>kcmshell5 kup</command>"
 
-#: daemon/main.cpp:41
+#: daemon/main.cpp:37
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Kup Daemon"
 msgstr "Dimoni de Kup"
 
-#: daemon/main.cpp:43
+#: daemon/main.cpp:39
 #, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
@@ -300,50 +269,68 @@ msgstr ""
 "còpies de seguretat incrementals, guardant només les parts dels fitxers que "
 "realment han canviat des que es va guardar l'última còpia de seguretat."
 
-#: daemon/main.cpp:47
+#: daemon/main.cpp:43
 #, kde-format
 msgid "© 2011–2020 Simon Persson"
 msgstr "© 2011–2020 Simon Persson"
 
-#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
+#: daemon/main.cpp:44 filedigger/main.cpp:32 purger/main.cpp:28
 #, kde-format
 msgid "Simon Persson"
 msgstr "Simon Persson"
 
-#: daemon/main.cpp:48 filedigger/main.cpp:33 purger/main.cpp:29
+#: daemon/main.cpp:44 filedigger/main.cpp:32 purger/main.cpp:28
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantenidor"
 
-#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
+#: daemon/main.cpp:45 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Antoni Bella"
 
-#: daemon/main.cpp:49 filedigger/main.cpp:34 purger/main.cpp:30
+#: daemon/main.cpp:45 filedigger/main.cpp:33 purger/main.cpp:29
 #, kde-format, kde-kuit-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "antonibella5@yahoo.com"
 
-#: daemon/planexecutor.cpp:69
+#: daemon/planexecutor.cpp:69 plasmoid/qml/main.qml:33
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Saving backup"
 msgstr "S'està guardant la còpia de seguretat"
 
-#: daemon/planexecutor.cpp:71
+#: daemon/planexecutor.cpp:71 plasmoid/qml/main.qml:34
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Checking backup integrity"
 msgstr "S'està comprovant la integritat de la còpia de seguretat"
 
-#: daemon/planexecutor.cpp:73
+#: daemon/planexecutor.cpp:73 plasmoid/qml/main.qml:35
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Repairing backups"
 msgstr "S'estan reparant les còpies de seguretat"
+
+#: daemon/planexecutor.cpp:79 plasmoid/qml/main.qml:41
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup status OK"
+msgstr "Estat correcte de la còpia de seguretat"
+
+#: daemon/planexecutor.cpp:81 plasmoid/qml/main.qml:42
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup suggested"
+msgstr "S'ha suggerit una còpia de seguretat nova"
+
+#: daemon/planexecutor.cpp:83 plasmoid/qml/main.qml:43
+#, kde-format
+msgctxt "status in tooltip"
+msgid "New backup needed"
+msgstr "Cal fer una còpia de seguretat nova"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
 #, kde-kuit-format
@@ -372,91 +359,88 @@ msgstr ""
 "seguretat.\n"
 "Voleu guardar una nova còpia de seguretat ara?"
 
-#: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:167
+#: daemon/planexecutor.cpp:160
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
 msgstr "Guarda una còpia de seguretat"
 
-#: daemon/planexecutor.cpp:162 daemon/planexecutor.cpp:170
-#: daemon/planexecutor.cpp:203 daemon/planexecutor.cpp:223
-#: daemon/planexecutor.cpp:369 daemon/planexecutor.cpp:383
+#: daemon/planexecutor.cpp:163 daemon/planexecutor.cpp:198
+#: daemon/planexecutor.cpp:348
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: daemon/planexecutor.cpp:193
+#: daemon/planexecutor.cpp:186
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Saving of Backup Failed"
 msgstr "Ha fallat mentre es guardava la còpia de seguretat"
 
-#: daemon/planexecutor.cpp:199 daemon/planexecutor.cpp:217
-#: daemon/planexecutor.cpp:365 daemon/planexecutor.cpp:377
-#: daemon/planexecutor.cpp:415 daemon/planexecutor.cpp:419
+#: daemon/planexecutor.cpp:190 daemon/planexecutor.cpp:340
+#: daemon/planexecutor.cpp:378
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Show log file"
 msgstr "Mostra el fitxer de registre"
 
-#: daemon/planexecutor.cpp:202 daemon/planexecutor.cpp:220
-#: daemon/planexecutor.cpp:368 daemon/planexecutor.cpp:380
+#: daemon/planexecutor.cpp:195 daemon/planexecutor.cpp:345
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
 msgstr "Repara"
 
-#: daemon/planexecutor.cpp:206 daemon/planexecutor.cpp:226
+#: daemon/planexecutor.cpp:201
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
 msgstr "Obri la configuració"
 
-#: daemon/planexecutor.cpp:249
+#: daemon/planexecutor.cpp:224
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Backup Saved"
 msgstr "S'ha guardat la còpia de seguretat"
 
-#: daemon/planexecutor.cpp:250
+#: daemon/planexecutor.cpp:225
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid "Saving backup completed successfully."
 msgstr "La guardada de la còpia de seguretat s'ha finalitzat amb èxit."
 
-#: daemon/planexecutor.cpp:305 daemon/planexecutor.cpp:312
-#: daemon/planexecutor.cpp:345
+#: daemon/planexecutor.cpp:281 daemon/planexecutor.cpp:288
+#: daemon/planexecutor.cpp:321
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Problem"
 msgstr "Problema"
 
-#: daemon/planexecutor.cpp:306
+#: daemon/planexecutor.cpp:282
 #, kde-kuit-format
 msgctxt "notification"
 msgid "You don't have write permission to backup destination."
 msgstr "No teniu permís d'escriptura a la destinació de la còpia de seguretat."
 
-#: daemon/planexecutor.cpp:312
+#: daemon/planexecutor.cpp:288
 #, kde-kuit-format
 msgctxt "notification"
 msgid "Invalid type of backup in configuration."
 msgstr "Tipus no vàlid de còpia de seguretat en la configuració."
 
-#: daemon/planexecutor.cpp:360
+#: daemon/planexecutor.cpp:336
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Integrity Check Completed"
 msgstr "S'ha completat el control de la integritat"
 
-#: daemon/planexecutor.cpp:411
+#: daemon/planexecutor.cpp:375
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Repair Completed"
 msgstr "Reparació finalitzada"
 
-#: daemon/planexecutor.cpp:446
+#: daemon/planexecutor.cpp:407
 #, kde-format
 msgid "Kup Backup System"
 msgstr "Sistema de còpia de seguretat Kup"
@@ -471,7 +455,7 @@ msgstr ""
 "El programa «<application>rsync</application>» és necessari, però no s'ha "
 "trobat. Potser no està instal·lat?"
 
-#: filedigger/filedigger.cpp:116
+#: filedigger/filedigger.cpp:112
 #, kde-kuit-format
 msgctxt "@info messagebox, %1 is a folder path"
 msgid ""
@@ -481,49 +465,49 @@ msgstr ""
 "No s'ha pogut obrir l'arxiu de còpia de seguretat <filename>%1</filename>. "
 "Comproveu si les còpies de seguretat realment es troben allà."
 
-#: filedigger/filedigger.cpp:123
+#: filedigger/filedigger.cpp:119
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid "You do not have permission needed to read this backup archive."
 msgstr "No teniu permís per a llegir este arxiu de còpia de seguretat."
 
-#: filedigger/filedigger.cpp:188
+#: filedigger/filedigger.cpp:184
 #, kde-format
 msgid "Select location of backup archive to open."
 msgstr "Trieu la ubicació de l'arxiu de còpia de seguretat que s'obrirà."
 
-#: filedigger/main.cpp:28
+#: filedigger/main.cpp:27
 #, kde-kuit-format
 msgctxt "@title"
 msgid "File Digger"
 msgstr "Excavador de fitxers"
 
-#: filedigger/main.cpp:30
+#: filedigger/main.cpp:29
 #, kde-format
 msgid "Browser for bup archives."
 msgstr "Explorador per a arxius «bup»."
 
-#: filedigger/main.cpp:32
+#: filedigger/main.cpp:31
 #, kde-format
 msgid "© 2013–2020 Simon Persson"
 msgstr "© 2013–2020 Simon Persson"
 
-#: filedigger/main.cpp:40 purger/main.cpp:37
+#: filedigger/main.cpp:39 purger/main.cpp:36
 #, kde-format
 msgid "Name of the branch to be opened."
 msgstr "Nom de la branca que s'obrirà."
 
-#: filedigger/main.cpp:41
+#: filedigger/main.cpp:40
 #, kde-format
 msgid "File or folder path to be focused."
 msgstr "Camí de fitxer o carpeta que se centrarà."
 
-#: filedigger/main.cpp:42 purger/main.cpp:40
+#: filedigger/main.cpp:41 purger/main.cpp:39
 #, kde-format
 msgid "Path to the bup repository to be opened."
 msgstr "Camí fins al repositori «bup» que s'obrirà."
 
-#: filedigger/mergedvfs.cpp:102 filedigger/mergedvfs.cpp:113
+#: filedigger/mergedvfs.cpp:101
 #, kde-kuit-format
 msgctxt "@info messagebox"
 msgid ""
@@ -534,19 +518,19 @@ msgstr ""
 "alguns fitxers. Voleu executar una comprovació de la integritat per a provar-"
 "ho?"
 
-#: filedigger/mergedvfs.cpp:162
+#: filedigger/mergedvfs.cpp:152
 #, kde-kuit-format
 msgctxt "added after folder name in some cases"
 msgid " (folder)"
 msgstr " (carpeta)"
 
-#: filedigger/mergedvfs.cpp:164
+#: filedigger/mergedvfs.cpp:154
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (symlink)"
 msgstr " (enllaç simbòlic)"
 
-#: filedigger/mergedvfs.cpp:166
+#: filedigger/mergedvfs.cpp:156
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (file)"
@@ -1499,7 +1483,7 @@ msgstr ""
 "<filename>%1</filename><nl/> <emphasis>no</emphasis> serà inclosa en la "
 "còpia de seguretat"
 
-#: kcm/kupkcm.cpp:71
+#: kcm/kupkcm.cpp:62
 #, kde-format
 msgid ""
 "<h2>Backup programs are missing</h2><p>Before you can activate any backup "
@@ -1511,7 +1495,7 @@ msgstr ""
 "per a les còpies de seguretat amb versions i «rsync»</li><li>per a les "
 "còpies de seguretat sincronitzades.</li></ul>"
 
-#: kcm/kupkcm.cpp:201
+#: kcm/kupkcm.cpp:169
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid ""
@@ -1519,31 +1503,31 @@ msgid ""
 msgstr ""
 "%1 no té una destinació!<nl/>Este pla no guardarà cap còpia de seguretat."
 
-#: kcm/kupkcm.cpp:204 kcm/kupkcm.cpp:215
+#: kcm/kupkcm.cpp:172 kcm/kupkcm.cpp:183
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Warning"
 msgstr "Avís"
 
-#: kcm/kupkcm.cpp:212
+#: kcm/kupkcm.cpp:180
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid "%1 does not include any files!<nl/>This plan will not be activated."
 msgstr "%1 no inclou cap fitxer!<nl/>Este pla no s'activarà."
 
-#: kcm/kupkcm.cpp:264
+#: kcm/kupkcm.cpp:232
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
 msgstr "Afig un pla nou…"
 
-#: kcm/kupkcm.cpp:277
+#: kcm/kupkcm.cpp:245
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "Còpies de seguretat activades"
 
-#: kcm/kupkcm.cpp:288
+#: kcm/kupkcm.cpp:256
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open and restore from existing backups"
@@ -1578,85 +1562,92 @@ msgstr ""
 "No s'ha trobat el repositori «bup».\n"
 "%1"
 
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:109
-#, kde-format
-msgid "Save new backup"
-msgstr "Guarda una còpia de seguretat nova"
-
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:115
-#, kde-format
-msgid "Prune old backups"
-msgstr "Elimina les còpies de seguretat antigues"
-
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:120
-#, kde-format
-msgid "Show files"
-msgstr "Mostra els fitxers"
-
-#: plasmoid-qt5/contents/ui/FullRepresentation.qml:125
-#, kde-format
-msgid "Show log file"
-msgstr "Mostra el fitxer de registre"
-
-#: plasmoid-qt5/contents/ui/main.qml:69
-#, kde-format
-msgid "&Configure Kup…"
-msgstr "&Configura Kup…"
-
-#: plasmoid-qt5/contents/ui/main.qml:71
-#, kde-format
-msgid "&Reload backup plans"
-msgstr "Torna a ca&rregar els plans de còpia de seguretat"
-
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:34
-#: plasmoid-qt6/contents/ui/main.qml:77
+#: plasmoid/qml/FullRepresentation.qml:34 plasmoid/qml/main.qml:95
 #, kde-format
 msgid "Reload Backup Plans"
 msgstr "Torna a carregar els plans de còpia de seguretat"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:43
+#: plasmoid/qml/FullRepresentation.qml:43
 #, kde-format
 msgid "Configure Backup Plans"
 msgstr "Configura els plans de còpia de seguretat"
 
-#: plasmoid-qt6/contents/ui/FullRepresentation.qml:91
-#: plasmoid-qt6/contents/ui/main.qml:83
+#: plasmoid/qml/FullRepresentation.qml:80
+#, kde-format
+msgid "No backup plans configured"
+msgstr "No s'ha configurat cap pla de còpia de seguretat"
+
+#: plasmoid/qml/FullRepresentation.qml:83 plasmoid/qml/main.qml:101
 #, kde-format
 msgid "Configure Backup Plans…"
 msgstr "Configura els plans de còpia de seguretat…"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:33
+#: plasmoid/qml/main.qml:61
+#, fuzzy, kde-format
+#| msgid "No backup plans configured"
+msgctxt "status in tooltip"
+msgid "No plans configured"
+msgstr "No s'ha configurat cap pla de còpia de seguretat"
+
+#: plasmoid/qml/main.qml:66
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination available"
+msgstr "Hi ha disponible una destinació de còpia de seguretat"
+
+#: plasmoid/qml/main.qml:67
+#, kde-format
+msgctxt "status in tooltip"
+msgid "Backup destination not available"
+msgstr "La destinació de la còpia de seguretat no està disponible"
+
+#: plasmoid/qml/main.qml:74
+#, fuzzy, kde-format
+#| msgid "&Reload backup plans"
+msgctxt "status in tooltip"
+msgid "Open to set up backup plans"
+msgstr "Torna a ca&rregar els plans de còpia de seguretat"
+
+#: plasmoid/qml/PlanItem.qml:38
+#, fuzzy, kde-format
+#| msgctxt "%1 is fancy formatted date"
+#| msgid "Last saved: %1"
+msgctxt "%1 is formatted relative date"
+msgid "Last saved: %1"
+msgstr "Guardada per última vegada: %1"
+
+#: plasmoid/qml/PlanItem.qml:49
 #, kde-format
 msgid "Show Files"
 msgstr "Mostra els fitxers"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:41
+#: plasmoid/qml/PlanItem.qml:57
 #, kde-format
 msgid "Save Backup"
 msgstr "Guarda la còpia de seguretat"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:49
+#: plasmoid/qml/PlanItem.qml:65
 #, kde-format
 msgid "Prune Old Backups"
 msgstr "Elimina les còpies de seguretat antigues"
 
-#: plasmoid-qt6/contents/ui/PlanItem.qml:57
+#: plasmoid/qml/PlanItem.qml:73
 #, kde-format
 msgid "View Log"
 msgstr "Mostra el registre"
 
-#: purger/main.cpp:24
+#: purger/main.cpp:23
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
 msgstr "Purgador"
 
-#: purger/main.cpp:26
+#: purger/main.cpp:25
 #, kde-format
 msgid "Purger for bup archives."
 msgstr "Purga els arxius «bup»."
 
-#: purger/main.cpp:28
+#: purger/main.cpp:27
 #, kde-format
 msgid "© 2013–2021 Simon Persson"
 msgstr "© 2013–2021 Simon Persson"
@@ -1703,3 +1694,18 @@ msgstr "Espai lliure: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Este pla de còpia de seguretat no s'ha executat mai."
+
+#~ msgid "Save new backup"
+#~ msgstr "Guarda una còpia de seguretat nova"
+
+#~ msgid "Prune old backups"
+#~ msgstr "Elimina les còpies de seguretat antigues"
+
+#~ msgid "Show files"
+#~ msgstr "Mostra els fitxers"
+
+#~ msgid "Show log file"
+#~ msgstr "Mostra el fitxer de registre"
+
+#~ msgid "&Configure Kup…"
+#~ msgstr "&Configura Kup…"
