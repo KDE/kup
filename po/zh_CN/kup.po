@@ -199,18 +199,12 @@ msgid "User Backups"
 msgstr "用户备份"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
-"K 备份未启用，请从系统设置模块中启用。可以运行<command>kcmshell5 kup</"
-"command>以进行此操作。"
 
 #: daemon/main.cpp:37
 #, kde-kuit-format
@@ -1477,11 +1471,10 @@ msgid "Configure Backup Plans…"
 msgstr "配置备份计划…"
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr "未配置备份计划"
+msgstr ""
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1496,19 +1489,16 @@ msgid "Backup destination not available"
 msgstr "备份目标不可用"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "重新加载备份计划(&R)"
+msgstr ""
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
-msgstr "最后储存：%1"
+msgstr ""
 
 #: plasmoid/qml/PlanItem.qml:49
 #, kde-format
@@ -1588,18 +1578,3 @@ msgstr "剩余空间：%1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "这个备份计划从未运行过。"
-
-#~ msgid "Save new backup"
-#~ msgstr "保存新备份"
-
-#~ msgid "Prune old backups"
-#~ msgstr "删除旧备份"
-
-#~ msgid "Show files"
-#~ msgstr "显示文件"
-
-#~ msgid "Show log file"
-#~ msgstr "显示日志文件"
-
-#~ msgid "&Configure Kup…"
-#~ msgstr "配置 Kup(&C)…"

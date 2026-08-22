@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 02:09+0000\n"
-"PO-Revision-Date: 2026-08-09 09:26+0200\n"
+"PO-Revision-Date: 2026-08-21 08:58+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: daemon/backupjob.cpp:48
 #, kde-kuit-format
@@ -238,18 +238,14 @@ msgid "User Backups"
 msgstr "Còpies de seguretat de l'usuari"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "Kup no està habilitat, habiliteu-lo des del mòdul de Configuració del "
-"sistema. Podreu fer-ho executant <command>kcmshell5 kup</command>"
+"sistema. Podreu fer-ho executant <command>kcmshell6 kup</command>"
 
 #: daemon/main.cpp:37
 #, kde-kuit-format
@@ -1583,11 +1579,10 @@ msgid "Configure Backup Plans…"
 msgstr "Configura els plans de còpia de seguretat…"
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr "No s'ha configurat cap pla de còpia de seguretat"
+msgstr "No s'ha configurat cap pla"
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1602,19 +1597,16 @@ msgid "Backup destination not available"
 msgstr "La destinació de la còpia de seguretat no està disponible"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "Torna a ca&rregar els plans de còpia de seguretat"
+msgstr "Obriu per a configurar plans de còpia de seguretat"
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
-msgstr "Guardada per última vegada: %1"
+msgstr "Última guardada: %1"
 
 #: plasmoid/qml/PlanItem.qml:49
 #, kde-format
@@ -1694,18 +1686,3 @@ msgstr "Espai lliure: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Este pla de còpia de seguretat no s'ha executat mai."
-
-#~ msgid "Save new backup"
-#~ msgstr "Guarda una còpia de seguretat nova"
-
-#~ msgid "Prune old backups"
-#~ msgstr "Elimina les còpies de seguretat antigues"
-
-#~ msgid "Show files"
-#~ msgstr "Mostra els fitxers"
-
-#~ msgid "Show log file"
-#~ msgstr "Mostra el fitxer de registre"
-
-#~ msgid "&Configure Kup…"
-#~ msgstr "&Configura Kup…"

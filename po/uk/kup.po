@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 02:09+0000\n"
-"PO-Revision-Date: 2026-08-09 15:17+0300\n"
+"PO-Revision-Date: 2026-08-21 08:13+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -242,18 +242,14 @@ msgid "User Backups"
 msgstr "Резервні копії, створені користувачем"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "Kup не увімкнено. Увімкніть програму за допомогою модуля «Системних "
-"параметрів». Запустити модуль можна за допомогою команди <command>kcmshell5 "
+"параметрів». Запустити модуль можна за допомогою команди <command>kcmshell6 "
 "kup</command>."
 
 #: daemon/main.cpp:37
@@ -1593,11 +1589,10 @@ msgid "Configure Backup Plans…"
 msgstr "Налаштувати плани резервного копіювання…"
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr "Не налаштовано жодного плану резервного копіювання"
+msgstr "Не налаштовано жодного плану"
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1612,16 +1607,13 @@ msgid "Backup destination not available"
 msgstr "Немає доступу до теки призначення резервних копій"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "П&ерезавантажити плани резервного копіювання"
+msgstr "Відкрити для налаштовування планів резервного копіювання"
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
 msgstr "Востаннє збережено: %1"

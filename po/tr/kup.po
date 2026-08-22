@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 02:09+0000\n"
-"PO-Revision-Date: 2026-08-10 19:24+0300\n"
+"PO-Revision-Date: 2026-08-21 20:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -224,18 +224,14 @@ msgid "User Backups"
 msgstr "Kullanıcı Yedekleri"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "Kup etkin değil, onu sistem ayarları modülünden etkinleştirin. Bunu "
-"<command>kcmshell5 kup</command> komutunu çalıştırarak yapabilirsiniz"
+"<command>kcmshell6 kup</command> komutunu çalıştırarak yapabilirsiniz"
 
 #: daemon/main.cpp:37
 #, kde-kuit-format
@@ -1549,11 +1545,10 @@ msgid "Configure Backup Plans…"
 msgstr "Yedek Planlarını Yapılandır…"
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr "Yapılandırılmış yedek planı yok"
+msgstr "Yapılandırılmış plan yok"
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1568,16 +1563,13 @@ msgid "Backup destination not available"
 msgstr "Yedek hedef konumu kullanılamıyor"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "Yedek planlarını ge&ri yükle"
+msgstr "Yedek planları ayarlamak için açın"
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
 msgstr "Son kaydetme: %1"
