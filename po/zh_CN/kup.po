@@ -205,6 +205,8 @@ msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
+"Kup 未被启用，请在系统设置模块中启用它。您也可以运行 <command>kcmshell6 kup</"
+"command> 以进行此操作。"
 
 #: daemon/main.cpp:37
 #, kde-kuit-format
@@ -1474,7 +1476,7 @@ msgstr "配置备份计划…"
 #, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr ""
+msgstr "没有配置计划"
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1492,13 +1494,13 @@ msgstr "备份目标不可用"
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr ""
+msgstr "打开以设置备份计划"
 
 #: plasmoid/qml/PlanItem.qml:38
 #, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
-msgstr ""
+msgstr "上次保存：%1"
 
 #: plasmoid/qml/PlanItem.qml:49
 #, kde-format

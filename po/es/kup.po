@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 02:09+0000\n"
-"PO-Revision-Date: 2026-08-16 00:32+0100\n"
+"PO-Revision-Date: 2026-08-22 20:38+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -243,18 +243,14 @@ msgid "User Backups"
 msgstr "Copias de seguridad del usuario"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "Kup no está habilitado, habilítelo desde el módulo de Preferencias del "
-"Sistema:<command>kcmshell5 kup</command>"
+"Sistema:<command>kcmshell6 kup</command>"
 
 #: daemon/main.cpp:37
 #, kde-kuit-format
@@ -1581,11 +1577,10 @@ msgid "Configure Backup Plans…"
 msgstr "Configurar planes de copia de seguridad…"
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr "No se han configurado planes de copias de seguridad"
+msgstr "No se ha configurado ningún plan"
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1600,16 +1595,13 @@ msgid "Backup destination not available"
 msgstr "Destino de la copia de seguridad no disponible"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "&Recargar planes de copia de seguridad"
+msgstr "Abrir para crear planes de copia de respaldo"
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
 msgstr "Último guardado: %1"
@@ -1692,18 +1684,3 @@ msgstr "Espacio libre: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Este plan de copias de seguridad nunca ha sido usado."
-
-#~ msgid "Save new backup"
-#~ msgstr "Guardar nueva copia"
-
-#~ msgid "Prune old backups"
-#~ msgstr "Eliminar copias de seguridad"
-
-#~ msgid "Show files"
-#~ msgstr "Mostrar archivos"
-
-#~ msgid "Show log file"
-#~ msgstr "Mostrar el archivo de registro"
-
-#~ msgid "&Configure Kup…"
-#~ msgstr "&Configurar Kup…"
