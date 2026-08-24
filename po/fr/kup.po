@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 02:09+0000\n"
-"PO-Revision-Date: 2026-08-10 08:54+0200\n"
+"PO-Revision-Date: 2026-08-22 10:10+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: daemon/backupjob.cpp:48
 #, kde-kuit-format
@@ -237,18 +237,14 @@ msgid "User Backups"
 msgstr "Sauvegardes"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "Kup n'est pas activé. Veuillez l'activer depuis le module de configuration "
-"du système. Vous pouvez également l'activer en lançant <command>kcmshell5 "
+"du système. Vous pouvez également l'activer en lançant <command>kcmshell6 "
 "kup</command>"
 
 #: daemon/main.cpp:37
@@ -1584,11 +1580,10 @@ msgid "Configure Backup Plans…"
 msgstr "Configurer les plans d'archivage..."
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr "Aucun plan de sauvegarde configuré"
+msgstr "Aucun plan n'est pas configuré."
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1603,15 +1598,13 @@ msgid "Backup destination not available"
 msgstr "Destination de sauvegarde indisponible"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "État des plans de sauvegarde"
+msgstr "Ouvrir pour définir des plans de sauvegarde"
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
 msgstr "Dernier enregistrement : %1"

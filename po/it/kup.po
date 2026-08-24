@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 02:09+0000\n"
-"PO-Revision-Date: 2026-08-09 17:26+0200\n"
+"PO-Revision-Date: 2026-08-21 12:43+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: daemon/backupjob.cpp:48
 #, kde-kuit-format
@@ -244,18 +244,14 @@ msgid "User Backups"
 msgstr "Copia di sicurezza dell'utente"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
-"Kup non è abilitato, puoi abilitarlo dal modulo nelle impostazioni di "
-"sistema. È possibile farlo eseguendo <command>kcmshell5 kup</command>"
+"Kup non è abilitato, abilitalo dal modulo delle impostazioni di sistema. "
+"Puoi farlo eseguendo il comando <command>kcmshell6 kup</command>"
 
 #: daemon/main.cpp:37
 #, kde-kuit-format
@@ -1594,11 +1590,10 @@ msgid "Configure Backup Plans…"
 msgstr "Configura i piani delle copie di sicurezza…"
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr "Non sono stati configurati piani di creazione di copie di sicurezza"
+msgstr "Nessun piano configurato"
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1613,16 +1608,13 @@ msgid "Backup destination not available"
 msgstr "Destinazione per la copia di sicurezza non disponibile"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Status of backup plans"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "Stato dei piani di backup"
+msgstr "Apri per configurare i piani di backup"
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
 msgstr "Ultimo salvataggio: %1"
