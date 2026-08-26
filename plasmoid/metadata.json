@@ -69,7 +69,6 @@
         "Description[zh_CN]": "显示备份计划的状态",
         "EnabledByDefault": true,
         "Icon": "kup",
-        "Id": "org.kde.kupapplet",
         "License": "GPL",
         "Name": "Backup Status",
         "Name[ar]": "حالة النسخ الاحتياطي",
