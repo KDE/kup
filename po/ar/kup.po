@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 02:09+0000\n"
-"PO-Revision-Date: 2026-08-10 16:51+0400\n"
+"PO-Revision-Date: 2026-08-29 12:10+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -231,18 +231,14 @@ msgid "User Backups"
 msgstr "النسخ الاحتياطية للمستخدم"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "كيوب غير ممكن، مكنه عن طريق وحدة إعدادات النظام. يمكنك فعل ذلك بواسطة تشغيل "
-"<command>kcmshell5 kup</command>"
+"<command>kcmshell6 kup</command>"
 
 #: daemon/main.cpp:37
 #, kde-kuit-format
@@ -1539,11 +1535,10 @@ msgid "Configure Backup Plans…"
 msgstr "اضبط خطط النسخ الاحتياطية…"
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr "لم تضبط أي خطة للنسخ الاحتياطي"
+msgstr "لم تضبط أي خطة"
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1558,16 +1553,13 @@ msgid "Backup destination not available"
 msgstr "وجهة النسخة الاحتياطية غير موجودة"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "أعد ت&حميل خطط النسخ الاحتياطية"
+msgstr "افتح لتعد خطط النسخ الاحتياطي"
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
 msgstr "آخر حفظ: %1"
