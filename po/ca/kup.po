@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 02:09+0000\n"
-"PO-Revision-Date: 2026-08-21 08:58+0200\n"
+"PO-Revision-Date: 2026-09-01 19:23+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: daemon/backupjob.cpp:48
 #, kde-kuit-format
@@ -1329,9 +1329,9 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
-"Aplicacions i mòduls en temps d'execució Flatpak que es poden tornar a "
-"descarregar (no evitarà fer còpies de seguretat de la configuració i les "
-"dades d'aquestes aplicacions)"
+"Aplicacions i entorns d'execució Flatpak que es poden tornar a descarregar "
+"(no evitarà fer còpies de seguretat de la configuració i les dades "
+"d'aquestes aplicacions)"
 
 #: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format
