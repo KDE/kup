@@ -863,8 +863,8 @@ msgid ""
 msgstr ""
 "Sauvegardez plusieurs versions au fil du temps des fichiers dans les "
 "dossiers sources. Cela permet de retrouver d'anciennes versions de fichiers "
-"ou des fichiers supprimés. <nl/><nl/>La taille de l’archive de sauvegarde "
-"augmentera au fil du temps. L'accès à la sauvegarde ne pourra se faire qu’en "
+"ou des fichiers supprimés. <nl/><nl/>La taille de l'archive de sauvegarde "
+"augmentera au fil du temps. L'accès à la sauvegarde ne pourra se faire qu'en "
 "utilisant les outils de récupération fournis par ce programme."
 
 #: kcm/backupplanwidget.cpp:536
