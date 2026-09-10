@@ -4,16 +4,19 @@
 
 cmake_minimum_required(VERSION 3.16)
 
+project(kup)
+set(PROJECT_VERSION "6.7.80")
+
 set(QT_MIN_VERSION "6.4.0")
-set(KF_MIN_VERSION "6.23.0")
+set(KF6_MIN_VERSION "6.23.0")
+
 set(KDE_COMPILERSETTINGS_LEVEL "5.84.0")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
-project(kup)
 
 find_package(LibGit2 REQUIRED)
 
@@ -32,21 +35,21 @@ include(ECMQtDeclareLoggingCategory)
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets)
-find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
-Solid
-KIO
-IdleTime
-I18n
-Notifications
-CoreAddons
-DBusAddons
-Config
-JobWidgets
-WidgetsAddons
-XmlGui
-KCMUtils
-Crash
-WindowSystem
+find_package(KF${QT_MAJOR_VERSION} ${KF6_MIN_VERSION} REQUIRED COMPONENTS
+  Solid
+  KIO
+  IdleTime
+  I18n
+  Notifications
+  CoreAddons
+  DBusAddons
+  Config
+  JobWidgets
+  WidgetsAddons
+  XmlGui
+  KCMUtils
+  Crash
+  WindowSystem
 )
 find_package(Plasma REQUIRED)
 
