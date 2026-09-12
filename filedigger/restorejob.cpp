@@ -35,6 +35,7 @@ RestoreJob::RestoreJob(QString pRepositoryPath,
 
 void RestoreJob::start()
 {
+    startElapsedTimer();
     setTotalAmount(Bytes, mTotalFileSize);
     setProcessedAmount(Bytes, 0);
     setTotalAmount(Files, static_cast<quint64>(mFileSizes.count()));

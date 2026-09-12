@@ -35,6 +35,7 @@ BackupJob::BackupJob(BackupPlan &pBackupPlan, QString pDestinationPath, QString 
 
 void BackupJob::start()
 {
+    startElapsedTimer();
     mKupDaemon->registerJob(this);
     QStringList lRemovedPaths;
     for (const QString &lPath : std::as_const(mBackupPlan.mPathsIncluded)) {
