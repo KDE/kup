@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kup package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 02:09+0000\n"
-"PO-Revision-Date: 2025-09-14 14:28+0200\n"
+"PO-Revision-Date: 2026-09-13 18:22+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: daemon/backupjob.cpp:48
 #, kde-kuit-format
@@ -229,18 +229,14 @@ msgid "User Backups"
 msgstr "Резервни копия на потребителя"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "Kup не е активиран, разрешете го от модула за системни настройки. Можете да "
-"направите това, като изпълните <command>kcmshell5 kup</command>"
+"направите това, като изпълните <command>kcmshell6 kup</command>"
 
 #: daemon/main.cpp:37
 #, kde-kuit-format
@@ -631,12 +627,10 @@ msgstr "Възстановяване в първоначалното место�
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Choose where to restore"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose where to restore…"
-msgstr "Изберете къде да възстановите"
+msgstr "Избиране на място за възстановяване…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
 #: filedigger/restoredialog.ui:132
@@ -751,12 +745,10 @@ msgid "Open"
 msgstr "Отваряне"
 
 #: filedigger/versionlistdelegate.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Restore"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Restore…"
-msgstr "Възстановяване"
+msgstr "Възстановяване…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
@@ -852,13 +844,7 @@ msgid "Back to overview"
 msgstr "Обратно към описанието"
 
 #: kcm/backupplanwidget.cpp:524
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Back up multiple versions over time of the files in the source folders. "
-#| "This allows older versions of files or deleted files to be recovered.<nl/"
-#| "></nl/>The backup archive will grow in size over time, and can only be "
-#| "accessed using the recovery tools provided by this program."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Back up multiple versions over time of the files in the source folders. This "
@@ -866,9 +852,9 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
-"Архивирайте множество версии във времето на файловете в изходните папки. "
+"Архивиране на множество версии във времето на файловете в изходните папки. "
 "Това позволява да бъдат възстановени по-стари версии на файлове или изтрити "
-"файлове.<nl/></nl/>Архивът с резервно копие ще нараства с течение на времето "
+"файлове.<nl/><nl/>Архивът с резервно копие ще нараства с течение на времето "
 "и може да бъде достъпен само с помощта на инструментите за възстановяване, "
 "предоставени от тази програма."
 
@@ -938,6 +924,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Някои файлове и папки (като кешове или криптирани папки) се изключват "
+"автоматично. Това може да се конфигурира в настройките "
+"<interface><link>Разширени</link></interface>."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1234,26 +1223,22 @@ msgid "Select pattern file"
 msgstr "Избиране на шаблонен файл"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Изключване на папка"
+msgstr "Изключване на кеша"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Временни данни, които могат да бъдат възстановени"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Изключване на папка"
+msgstr "Изключване на криптирани папки"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1262,26 +1247,25 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"Съдържание на отключени криптирани папки, като тези, създадени с Plasma Vault"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Изключване на папка"
+msgstr "Изключване на кошчето"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "Файлове в кошчето, които не са изтрити окончателно"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Изключване на състояния на приложенията"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1289,12 +1273,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Специфични данни за състоянието на приложението, като позиция на прозореца, "
+"история и отворени файлове"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Изключване на контейнери и образи на виртуални машини"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1303,24 +1289,26 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Контейнери или образи на виртуални машини, като тези, създадени от GNOME "
+"Boxes, Docker, Podman и Incus"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Изключване на snapshots"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Снапшоти на Btrfs файлова система"
 
 #: kcm/backupplanwidget.cpp:1042
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "Изключване на Flatpak пакети на ниво потребител"
 
 #: kcm/backupplanwidget.cpp:1043
 #, kde-kuit-format
@@ -1329,6 +1317,9 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"Flatpak приложения и среди за изпълнение, които могат да бъдат изтеглени "
+"отново (няма да попречи на архивирането на настройките и данните за тези "
+"приложения)"
 
 #: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format
@@ -1451,6 +1442,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>е <emphasis>автоматично изключен</emphasis> от "
+"архивирането.<nl/>Това може да се контролира в настройките "
+"<interface>Разширени</interface>."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
@@ -1501,7 +1495,7 @@ msgstr "Предупреждение"
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid "%1 does not include any files!<nl/>This plan will not be activated."
-msgstr ""
+msgstr "%1 не включва никакви файлове!<nl/>Този план няма да бъде активиран."
 
 #: kcm/kupkcm.cpp:232
 #, kde-kuit-format
@@ -1571,11 +1565,10 @@ msgid "Configure Backup Plans…"
 msgstr "Настройване на плановете за архивиране…"
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr "Няма конфигурирани планове за архивиране"
+msgstr "Няма конфигурирани планове"
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1590,43 +1583,36 @@ msgid "Backup destination not available"
 msgstr "Дестинацията на резервното копие не е налична"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "&Презареждане на план за архивиране"
+msgstr "Отворете за настройка на планове за архивиране"
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
 msgstr "Последно запазен: %1"
 
 #: plasmoid/qml/PlanItem.qml:49
-#, fuzzy, kde-format
-#| msgid "Show files"
+#, kde-format
 msgid "Show Files"
 msgstr "Показване на файловете"
 
 #: plasmoid/qml/PlanItem.qml:57
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Backup"
+#, kde-format
 msgid "Save Backup"
 msgstr "Запазване на резервно копие"
 
 #: plasmoid/qml/PlanItem.qml:65
-#, fuzzy, kde-format
-#| msgid "Prune old backups"
+#, kde-format
 msgid "Prune Old Backups"
-msgstr "Подрязване на старите резервни копия"
+msgstr "Премахване на стари архиви"
 
 #: plasmoid/qml/PlanItem.qml:73
 #, kde-format
 msgid "View Log"
-msgstr ""
+msgstr "Преглед на дневника"
 
 #: purger/main.cpp:23
 #, kde-kuit-format
