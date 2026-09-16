@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-21 02:09+0000\n"
+"POT-Creation-Date: 2026-09-16 02:45+0000\n"
 "PO-Revision-Date: 2024-04-22 16:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/kup/kup.pot\n"
 "X-Crowdin-File-ID: 11712\n"
 
-#: daemon/backupjob.cpp:48
+#: daemon/backupjob.cpp:49
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -683,13 +683,13 @@ msgctxt "Title above progress bar"
 msgid "Checking file sizes"
 msgstr "正在检查文件大小"
 
-#: filedigger/restorejob.cpp:94
+#: filedigger/restorejob.cpp:95
 #, kde-kuit-format
 msgctxt "progress report, current operation"
 msgid "Restoring"
 msgstr "正在还原"
 
-#: filedigger/restorejob.cpp:94
+#: filedigger/restorejob.cpp:95
 #, kde-kuit-format
 msgctxt "progress report, label"
 msgid "File"

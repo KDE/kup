@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-21 02:09+0000\n"
+"POT-Creation-Date: 2026-09-16 02:45+0000\n"
 "PO-Revision-Date: 2024-11-16 12:59+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: daemon/backupjob.cpp:48
+#: daemon/backupjob.cpp:49
 #, kde-kuit-format
 msgctxt "@info notification"
 msgid ""
@@ -721,13 +721,13 @@ msgctxt "Title above progress bar"
 msgid "Checking file sizes"
 msgstr "Checking file sizes"
 
-#: filedigger/restorejob.cpp:94
+#: filedigger/restorejob.cpp:95
 #, kde-kuit-format
 msgctxt "progress report, current operation"
 msgid "Restoring"
 msgstr "Restoring"
 
-#: filedigger/restorejob.cpp:94
+#: filedigger/restorejob.cpp:95
 #, kde-kuit-format
 msgctxt "progress report, label"
 msgid "File"
