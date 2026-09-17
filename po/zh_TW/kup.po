@@ -5,20 +5,21 @@
 # Jeff Huang <s8321414@gmail.com>, 2014-2018.
 # Simon Persson <simon.persson@mykolab.com>, 2014-2015,2018.
 # pan93412 <pan93412@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-16 02:45+0000\n"
-"PO-Revision-Date: 2019-11-22 01:49+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2026-09-17 02:52+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.11.80\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #: daemon/backupjob.cpp:49
 #, kde-kuit-format
@@ -30,6 +31,8 @@ msgid_plural ""
 "%1 source folders no longer exist. Please open settings and confirm what to "
 "include in backup.<nl/><filename>%2</filename>"
 msgstr[0] ""
+"%1 個來源檔案不復存在。請開啟設定來確定備份裡要包含什麼資料。<nl/><filename>"
+"%2</filename>"
 
 #: daemon/bupjob.cpp:49 daemon/buprepairjob.cpp:26
 #: daemon/bupverificationjob.cpp:25
@@ -205,17 +208,13 @@ msgid "User Backups"
 msgstr "使用者備份"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
-"Kup 未啟用，在系統設定模組中啟用它。您也可以利用執行「kcmshell5 kup」來做到這"
+"Kup 未啟用，在系統設定模組中啟用它。您也可以利用執行「kcmshell6 kup」來做到這"
 "件事。"
 
 #: daemon/main.cpp:37
@@ -225,11 +224,7 @@ msgid "Kup Daemon"
 msgstr "Kup 守護進程"
 
 #: daemon/main.cpp:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Kup is a flexible backup solution using the backup storage system 'bup'. "
-#| "This allows it to quickly perform incremental backups, only saving the "
-#| "parts of files that has actually changed since last backup was taken."
+#, kde-format
 msgid ""
 "Kup is a flexible backup solution using the backup storage system 'bup'. "
 "This allows it to quickly perform incremental backups, only saving the parts "
@@ -239,10 +234,9 @@ msgstr ""
 "備份，只儲存在您最後一次備份之後所變更的檔案部份。"
 
 #: daemon/main.cpp:43
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2011-2015 Simon Persson"
+#, kde-format
 msgid "© 2011–2020 Simon Persson"
-msgstr "Copyright (C) 2011-2015 Simon Persson"
+msgstr "© 2011–2020 Simon Persson"
 
 #: daemon/main.cpp:44 filedigger/main.cpp:32 purger/main.cpp:28
 #, kde-format
@@ -303,12 +297,10 @@ msgid "New backup needed"
 msgstr "需要新的備份"
 
 #: daemon/planexecutor.cpp:104 daemon/planexecutor.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Do you want to save a first backup now?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Save the first backup now?"
-msgstr "您想要現在儲存第一個備份嗎？"
+msgstr "要現在儲存第一個備份嗎？"
 
 #: daemon/planexecutor.cpp:108
 #, kde-kuit-format
@@ -331,18 +323,17 @@ msgstr ""
 "是否儲存新備份？"
 
 #: daemon/planexecutor.cpp:160
-#, fuzzy, kde-kuit-format
-#| msgid "Save new backup"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Save Backup"
-msgstr "儲存新備份"
+msgstr "儲存備份"
 
 #: daemon/planexecutor.cpp:163 daemon/planexecutor.cpp:198
 #: daemon/planexecutor.cpp:348
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: daemon/planexecutor.cpp:186
 #, kde-kuit-format
@@ -361,14 +352,13 @@ msgstr "顯示記錄檔"
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Repair"
-msgstr ""
+msgstr "修復"
 
 #: daemon/planexecutor.cpp:201
-#, fuzzy, kde-kuit-format
-#| msgid "Open Destination"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Open settings"
-msgstr "開啟目的地"
+msgstr "開啟設定"
 
 #: daemon/planexecutor.cpp:224
 #, kde-kuit-format
@@ -460,10 +450,9 @@ msgid "Browser for bup archives."
 msgstr "bup 檔案的瀏覽程式。"
 
 #: filedigger/main.cpp:31
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2015 Simon Persson"
+#, kde-format
 msgid "© 2013–2020 Simon Persson"
-msgstr "Copyright (C) 2013-2015 Simon Persson"
+msgstr "© 2013–2020 Simon Persson"
 
 #: filedigger/main.cpp:39 purger/main.cpp:36
 #, kde-format
@@ -473,7 +462,7 @@ msgstr "所要開啟分支的名稱。"
 #: filedigger/main.cpp:40
 #, kde-format
 msgid "File or folder path to be focused."
-msgstr ""
+msgstr "要聚焦的檔案或資料夾路徑。"
 
 #: filedigger/main.cpp:41 purger/main.cpp:39
 #, kde-format
@@ -509,12 +498,10 @@ msgid " (file)"
 msgstr "(檔案)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder…"
-msgstr "新資料夾"
+msgstr "新資料夾…"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -537,16 +524,12 @@ msgid ""
 msgstr "目的地沒有足夠的可用空間。請選擇其他目的地或是釋放一些空間。"
 
 #: filedigger/restoredialog.cpp:286
-#, fuzzy, kde-kuit-format
-#| msgctxt ""
-#| "added to the suggested filename when restoring, %1 is the time when "
-#| "backup was taken"
-#| msgid " - saved at %1"
+#, kde-kuit-format
 msgctxt ""
 "added to the suggested filename when restoring, %1 is the time when backup "
 "was saved"
 msgid " - saved at %1"
-msgstr " - 儲存在 %1"
+msgstr " - 儲存於 %1"
 
 #: filedigger/restoredialog.cpp:287
 #, kde-kuit-format
@@ -614,12 +597,10 @@ msgstr "還原到原始位置"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Choose where to restore"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose where to restore…"
-msgstr "選擇您要還原的地方"
+msgstr "選擇您要還原到哪裡…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
 #: filedigger/restoredialog.ui:132
@@ -674,12 +655,10 @@ msgstr "確認"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: filedigger/restoredialog.ui:320
-#, fuzzy, kde-format
-#| msgctxt "progress report, current operation"
-#| msgid "Restoring"
+#, kde-format
 msgctxt "Title above progress bar"
 msgid "Restoring files"
-msgstr "正在還原"
+msgstr "正在還原檔案"
 
 #. i18n: ectx: property (text), widget (QLabel, mErrorLabel)
 #: filedigger/restoredialog.ui:347
@@ -713,7 +692,7 @@ msgstr "關閉"
 #, kde-format
 msgctxt "Title above progress bar"
 msgid "Checking file sizes"
-msgstr ""
+msgstr "正在檢查檔案大小"
 
 #: filedigger/restorejob.cpp:95
 #, kde-kuit-format
@@ -734,24 +713,20 @@ msgid "Open"
 msgstr "開啟"
 
 #: filedigger/versionlistdelegate.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Restore"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Restore…"
-msgstr "還原"
+msgstr "還原…"
 
 #: fileitemaction/fileitemaction.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "progress report, current operation"
-#| msgid "Restoring"
+#, kde-format
 msgid "Restore Missing Files…"
-msgstr "正在還原"
+msgstr "還原缺乏的檔案…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
 msgid "Restore Previous Version…"
-msgstr ""
+msgstr "還原先前的版本…"
 
 #: kcm/backupplanwidget.cpp:281
 #, kde-kuit-format
@@ -792,31 +767,19 @@ msgstr ""
 "除在備份計畫外。"
 
 #: kcm/backupplanwidget.cpp:412
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a folder which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the target "
-#| "folder in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a folder which is not "
 "included: <filename>%2</filename>.<nl/>That is probably not what you want. "
 "One solution is to simply include the target folder in the backup plan."
 msgstr ""
-"符號連結 <filename>%1</filename> 目前被包含在內，但是其指向的資料夾並不包含："
-"<filename>%2</filename>。<nl/>這可能不是您想要的。其中一個解法是將目標資料夾"
-"包含在備份計畫內。"
+"符號連結 <filename>%1</filename> 指向了未被包含的資料夾：<filename>%2</"
+"filename>。<nl/>這應該不是您想要的。其中一個解決方法是將目標資料夾包含在備份"
+"計畫內。"
 
 #: kcm/backupplanwidget.cpp:421
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info message bar appearing on top"
-#| msgid ""
-#| "The symbolic link <filename>%1</filename> is currently included but it "
-#| "points to a file which is not: <filename>%2</filename>.<nl/>That is "
-#| "probably not what you want. One solution is to simply include the folder "
-#| "where the file is stored in the backup plan."
+#, kde-kuit-format
 msgctxt "@info message bar appearing on top"
 msgid ""
 "The symbolic link <filename>%1</filename> points to a file which is not "
@@ -824,9 +787,9 @@ msgid ""
 "One solution is to simply include the folder where the file is stored in the "
 "backup plan."
 msgstr ""
-"符號連結 <filename>%1</filename> 目前被包含在內，但是其指向的檔案並不包含："
-"<filename>%2</filename>。<nl/>這可能不是您想要的。其中一個解法是將包含目標檔"
-"案的資料夾包含在備份計畫內。"
+"符號連結 <filename>%1</filename> 指向了未被包含的檔案：<filename>%2</"
+"filename>。<nl/>這應該不是您想要的。其中一個解決方法是將包含目標檔案的資料夾"
+"包含在備份計畫內。"
 
 #: kcm/backupplanwidget.cpp:447
 #, kde-kuit-format
@@ -962,16 +925,13 @@ msgstr "備份的目的地："
 #, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Only local filesystem paths will work!"
-msgstr ""
+msgstr "只支援本地檔案系統的路徑！"
 
 #: kcm/backupplanwidget.cpp:667
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info %1 is the name of the backup plan"
-#| msgid ""
-#| "%1 does not have a destination!<nl/>No backups will be saved by this plan."
+#, kde-kuit-format
 msgctxt "@info message bar near text edit"
 msgid "Folder does not exist! No backups will be saved until you create it."
-msgstr "%1 沒有目的地！<nl/>這個計畫中將不會有備份被儲存。"
+msgstr "資料夾不存在！在您建立它之前不會進行任何備份。"
 
 #: kcm/backupplanwidget.cpp:686
 #, kde-kuit-format
@@ -1032,24 +992,17 @@ msgid "Active Usage Time"
 msgstr "活躍使用時間"
 
 #: kcm/backupplanwidget.cpp:758
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Backups are only taken when manually requested. This can be done by using "
-#| "the popup menu from the backup system tray icon."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Backups are only saved when manually requested. This can be done by using "
 "the Backup Status plasma widget."
-msgstr "備份將只會在您手動要求時進行。這可以使用備份系統匣圖示的彈出選單完成。"
+msgstr ""
+"備份將只會在您手動要求時儲存。要手動要求備份可以透過 Plasma 的備份狀態元件來"
+"觸發。"
 
 #: kcm/backupplanwidget.cpp:773
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "New backup will be triggered when backup destination becomes available "
-#| "and more than the configured interval has passed since the last backup "
-#| "was taken."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "New backup will be triggered when backup destination becomes available and "
@@ -1082,12 +1035,7 @@ msgid "Weeks"
 msgstr "星期"
 
 #: kcm/backupplanwidget.cpp:803
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "New backup will be triggered when backup destination becomes available "
-#| "and you have been using your computer actively for more than the "
-#| "configured time limit since the last backup was taken."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "New backup will be triggered when backup destination becomes available and "
@@ -1098,9 +1046,7 @@ msgstr ""
 "地可用時自動啟動。"
 
 #: kcm/backupplanwidget.cpp:823
-#, fuzzy, kde-kuit-format
-#| msgctxt "@option:check"
-#| msgid "Ask for confirmation before taking backup"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Ask for confirmation before saving backup"
 msgstr "在進行備份前再一次確認"
@@ -1184,7 +1130,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
-msgstr ""
+msgstr "依樣式排除檔案與資料夾"
 
 #: kcm/backupplanwidget.cpp:944
 #, kde-kuit-format
@@ -1197,39 +1143,33 @@ msgid ""
 msgstr ""
 
 #: kcm/backupplanwidget.cpp:963
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open dialog to select a folder"
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
-msgstr "開啟對話框以選擇資料夾"
+msgstr "開啟對話框以選擇檔案"
 
 #: kcm/backupplanwidget.cpp:965
 #, kde-format
 msgid "Select pattern file"
-msgstr ""
+msgstr "選取樣式檔"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "排除資料夾"
+msgstr "排除快取資料"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "可以重新建立的暫存資料"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "排除資料夾"
+msgstr "排除加密資料夾"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1237,40 +1177,38 @@ msgctxt "@info"
 msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
-msgstr ""
+msgstr "已解鎖的加密資料夾，像是 Plasma 儲存庫所建立的資料夾"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "排除資料夾"
+msgstr "排除垃圾桶"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "尚未被永久刪除的垃圾桶檔案"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "排除應用程式狀態資料"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
-msgstr ""
+msgstr "應用程式特定的狀態資料，像是視窗位置、歷史、已開啟的檔案等等"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "排除容器與虛擬機映像檔"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1279,24 +1217,26 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"容器或是虛擬機映像檔，像是 GNOME 機櫃、Docker、Podman、Incus 等等所建立的映像"
+"檔"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "排除快照"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Btrfs 檔案系統快照"
 
 #: kcm/backupplanwidget.cpp:1042
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "排除使用者 Flatpak"
 
 #: kcm/backupplanwidget.cpp:1043
 #, kde-kuit-format
@@ -1305,6 +1245,8 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"可以重新下載的 Flatpak 應用程式與執行環境（這不會影響這些應用程式的設定與資料"
+"的備份）"
 
 #: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format
@@ -1319,12 +1261,10 @@ msgid "Extra options for advanced users"
 msgstr "進階使用者的額外選項"
 
 #: kcm/backupplanwidget.cpp:1096
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
-msgstr "新資料夾"
+msgstr "建立資料夾"
 
 #: kcm/driveselection.cpp:267
 #, kde-kuit-format
@@ -1420,6 +1360,8 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>已從備份中<emphasis>自動排除</emphasis>。<nl/>您"
+"可以在<interface>進階</interface>設定裡調整此行為。"
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
@@ -1467,20 +1409,16 @@ msgstr "警告"
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid "%1 does not include any files!<nl/>This plan will not be activated."
-msgstr ""
+msgstr "%1 不包含任何檔案！<nl/>這個備份計畫不會被啟用。"
 
 #: kcm/kupkcm.cpp:232
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Add New Plan"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Add New Plan…"
-msgstr "加入新的計畫"
+msgstr "新增計畫…"
 
 #: kcm/kupkcm.cpp:245
-#, fuzzy, kde-kuit-format
-#| msgctxt "@option:check"
-#| msgid "Backups Enabled"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Backups enabled"
 msgstr "備份已啟用"
@@ -1521,17 +1459,14 @@ msgstr ""
 "%1"
 
 #: plasmoid/qml/FullRepresentation.qml:34 plasmoid/qml/main.qml:95
-#, fuzzy, kde-format
-#| msgid "Configure backup plans"
+#, kde-format
 msgid "Reload Backup Plans"
-msgstr "設定備份計畫"
+msgstr "重新載入備份計畫"
 
 #: plasmoid/qml/FullRepresentation.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure"
+#, kde-format
 msgid "Configure Backup Plans"
-msgstr "設定"
+msgstr "設定備份計畫"
 
 #: plasmoid/qml/FullRepresentation.qml:80
 #, kde-format
@@ -1539,15 +1474,12 @@ msgid "No backup plans configured"
 msgstr "未設定備份計畫"
 
 #: plasmoid/qml/FullRepresentation.qml:83 plasmoid/qml/main.qml:101
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure"
+#, kde-format
 msgid "Configure Backup Plans…"
-msgstr "設定"
+msgstr "設定備份計畫…"
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
 msgstr "未設定備份計畫"
@@ -1565,60 +1497,52 @@ msgid "Backup destination not available"
 msgstr "備份目的地不可用"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Status of backup plans"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "備份計畫的狀態"
+msgstr "開啟來設定備份計畫"
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
-msgstr "最後儲存：%1"
+msgstr "上次儲存：%1"
 
 #: plasmoid/qml/PlanItem.qml:49
-#, fuzzy, kde-format
-#| msgid "Show files"
+#, kde-format
 msgid "Show Files"
 msgstr "顯示檔案"
 
 #: plasmoid/qml/PlanItem.qml:57
-#, fuzzy, kde-format
-#| msgid "Save new backup"
+#, kde-format
 msgid "Save Backup"
-msgstr "儲存新備份"
+msgstr "儲存備份"
 
 #: plasmoid/qml/PlanItem.qml:65
-#, fuzzy, kde-format
-#| msgid "User Backups"
+#, kde-format
 msgid "Prune Old Backups"
-msgstr "使用者備份"
+msgstr "清理舊備份"
 
 #: plasmoid/qml/PlanItem.qml:73
 #, kde-format
 msgid "View Log"
-msgstr ""
+msgstr "檢視紀錄"
 
 #: purger/main.cpp:23
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Purger"
-msgstr ""
+msgstr "清理器"
 
 #: purger/main.cpp:25
-#, fuzzy, kde-format
-#| msgid "Browser for bup archives."
+#, kde-format
 msgid "Purger for bup archives."
-msgstr "bup 檔案的瀏覽程式。"
+msgstr "bup 封存的清理程式。"
 
 #: purger/main.cpp:27
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2015 Simon Persson"
+#, kde-format
 msgid "© 2013–2021 Simon Persson"
-msgstr "Copyright (C) 2013-2015 Simon Persson"
+msgstr "© 2013–2021 Simon Persson"
 
 #: settings/backupplan.cpp:27
 #, kde-kuit-format
