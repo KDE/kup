@@ -32,6 +32,7 @@
         "Description[tr]": "Yedekleme tasarılarını yapılandır",
         "Description[uk]": "Налаштовування планів резервного копіювання",
         "Description[zh_CN]": "配置备份计划",
+        "Description[zh_TW]": "設定備份計畫",
         "Icon": "kup",
         "Name": "Backups",
         "Name[ar]": "النسخ الاحتياطية",

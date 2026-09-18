@@ -31,6 +31,7 @@
         "Name[tr]": "Önceki Sürümü Geri Yükle…",
         "Name[uk]": "Відновити попередню версію…",
         "Name[zh_CN]": "还原上一个版本…",
+        "Name[zh_TW]": "還原先前的版本…",
         "ServiceTypes": [
             "KFileItemAction/Plugin"
         ]
