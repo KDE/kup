@@ -34,7 +34,8 @@
                 "Name[sv]": "Simon Persson",
                 "Name[tr]": "Simon Persson",
                 "Name[uk]": "Simon Persson",
-                "Name[zh_CN]": "Simon Persson"
+                "Name[zh_CN]": "Simon Persson",
+                "Name[zh_TW]": "Simon Persson"
             }
         ],
         "Category": "System Information",
@@ -69,6 +70,7 @@
         "Description[tr]": "Yedekleme tasarılarının durumunu görüntüler",
         "Description[uk]": "Показує стан планів резервного копіювання",
         "Description[zh_CN]": "显示备份计划的状态",
+        "Description[zh_TW]": "顯示備份計畫狀態",
         "EnabledByDefault": true,
         "Icon": "kup",
         "License": "GPL",

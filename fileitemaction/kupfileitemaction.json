@@ -17,6 +17,7 @@
         "Name[fr]": "Restaurer la version précédente...",
         "Name[he]": "שחזור גרסה קודמת…",
         "Name[it]": "Ripristina versione precedente...",
+        "Name[ka]": "წინა ვერსიის აღდგენა…",
         "Name[ko]": "이전 버전 복원…",
         "Name[lt]": "Atkurti ankstesnę versiją…",
         "Name[nl]": "Herstel vorige versie…",
@@ -30,6 +31,7 @@
         "Name[tr]": "Önceki Sürümü Geri Yükle…",
         "Name[uk]": "Відновити попередню версію…",
         "Name[zh_CN]": "还原上一个版本…",
+        "Name[zh_TW]": "還原先前的版本…",
         "ServiceTypes": [
             "KFileItemAction/Plugin"
         ]
