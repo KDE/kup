@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-16 02:45+0000\n"
-"PO-Revision-Date: 2025-04-26 10:31+0200\n"
+"PO-Revision-Date: 2026-09-17 05:05+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.9\n"
 
 #: daemon/backupjob.cpp:49
 #, kde-kuit-format
@@ -225,18 +225,14 @@ msgid "User Backups"
 msgstr "მომხმარებლის მარქაფები"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "Kup ჩართული არაა. მისი ჩართვა სისტემური პარამეტრების მოდულიდან შეგიძლიათ. ეს "
-"ბრძანებით <command>kcmshell5 kup</command> ხდება"
+"ბრძანებით <command>kcmshell6 kup</command> ხდება"
 
 #: daemon/main.cpp:37
 #, kde-kuit-format
@@ -256,10 +252,9 @@ msgstr ""
 "რაც მხოლოდ ბოლო მარქაფის შემდეგ მომხდარი ცვლილებების მარქაფს გულისხმობს."
 
 #: daemon/main.cpp:43
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2011-2020 Simon Persson"
+#, kde-format
 msgid "© 2011–2020 Simon Persson"
-msgstr "Copyright (C) 2011-2020 Simon Persson"
+msgstr "© 2011–2020 საიმონ პერსონი"
 
 #: daemon/main.cpp:44 filedigger/main.cpp:32 purger/main.cpp:28
 #, kde-format
@@ -474,10 +469,9 @@ msgid "Browser for bup archives."
 msgstr "Bup არქივების მოძებნა."
 
 #: filedigger/main.cpp:31
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2020 Simon Persson"
+#, kde-format
 msgid "© 2013–2020 Simon Persson"
-msgstr "Copyright (C) 2013-2020 Simon Persson"
+msgstr "© 2013–2020 საიმონ პერსონი"
 
 #: filedigger/main.cpp:39 purger/main.cpp:36
 #, kde-format
@@ -487,7 +481,7 @@ msgstr "გასახსნელი ბრენჩის სახელი.
 #: filedigger/main.cpp:40
 #, kde-format
 msgid "File or folder path to be focused."
-msgstr ""
+msgstr "ფაილის, ან საქაღალდის ბილიკი ფოკუსირებისთვის."
 
 #: filedigger/main.cpp:41 purger/main.cpp:39
 #, kde-format
@@ -523,12 +517,10 @@ msgid " (file)"
 msgstr " (ფაილი)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
-#, fuzzy, kde-kuit-format
-#| msgctxt "default folder name when creating a new folder"
-#| msgid "New Folder"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "New Folder…"
-msgstr "ახალი საქაღალდე"
+msgstr "ახალი საქაღალდე…"
 
 #: filedigger/restoredialog.cpp:138 filedigger/restoredialog.cpp:157
 #, kde-kuit-format
@@ -624,12 +616,10 @@ msgstr "საწყისი მდებარეობაზე აღდგ�
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Choose where to restore"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose where to restore…"
-msgstr "აირჩიეთ, სად აღვადგინო"
+msgstr "აირჩიეთ, სად მოხდეს აღდგენა…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
 #: filedigger/restoredialog.ui:132
@@ -742,24 +732,20 @@ msgid "Open"
 msgstr "გახსნა"
 
 #: filedigger/versionlistdelegate.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Restore"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Restore…"
-msgstr "აღდგენა"
+msgstr "აღდგენა…"
 
 #: fileitemaction/fileitemaction.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "Title above progress bar"
-#| msgid "Restoring files"
+#, kde-format
 msgid "Restore Missing Files…"
-msgstr "ფაილების აღდგენა"
+msgstr "ნაკლული ფაილების აღდგენა…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
 msgid "Restore Previous Version…"
-msgstr ""
+msgstr "წინა ვერსიის აღდგენა…"
 
 #: kcm/backupplanwidget.cpp:281
 #, kde-kuit-format
@@ -853,6 +839,10 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"დაამარქაფეთ ფაილების ერთზე მეტი ვერსია წყარო საქაღალდეებში. ეს წაშლილი "
+"ფაილების ძველი ვერსიების აღდგენის საშუალებას გაძლევთ.<nl/><nl/>მარქაფის "
+"არქივი დროთა განმავლობაში დროში გაიზრდება და მასთა წვდომა, მხოლოდ, ამ "
+"პროგრამის მიერ მოწოდებული აღდგენის ხელსაწყოებით გექნებათ."
 
 #: kcm/backupplanwidget.cpp:536
 #, kde-kuit-format
@@ -879,6 +869,10 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"გახადეთ სამიზნე საქაღალდე წყარო საქაღალდის იდენტური. წყარო საქაღალდეში "
+"წაშლილი ფაილები მარქაფის საქაღალდეშიც წაიშლება.<nl/><nl/>ამას შეუძლია "
+"მონაცემების კარგვის თავიდან აცილება დისკის ფიზიკური დაზიანებისას, მაგრამ არა "
+"ფაილების შემთხვევითი წაშლისას, ან ცვლილებისას."
 
 #: kcm/backupplanwidget.cpp:558
 #, kde-kuit-format
@@ -916,6 +910,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"ზოგიერთი ფაილები და საქაღალდეები (მაგ: კეშის, ან დაშიფრული საქაღალდეები) "
+"ავტომატურადაა ამოღებული. ამის მორგება <interface><link>დამატებითი</link></"
+"interface> პარამეტრებიდან შეგიძლიათ."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1207,26 +1204,22 @@ msgid "Select pattern file"
 msgstr "აირჩიეთ შაბლონის ფაილი"
 
 #: kcm/backupplanwidget.cpp:983
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "საქაღალდის ამოღება"
+msgstr "კეშების ამოღება"
 
 #: kcm/backupplanwidget.cpp:984
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "დროებითი მონაცემები, რომლების თავიდან შექმნაც შესაძლებელია"
 
 #: kcm/backupplanwidget.cpp:993
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "საქაღალდის ამოღება"
+msgstr "დაშიფრული საქაღალდეების ამოღება"
 
 #: kcm/backupplanwidget.cpp:994
 #, kde-kuit-format
@@ -1235,26 +1228,25 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"განბლოკილი დაშიფრული (მაგ: Plasma Vault-ში შექმნილი) საქაღალდეების შემცველობა"
 
 #: kcm/backupplanwidget.cpp:1002
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "საქაღალდის ამოღება"
+msgstr "ნაგვის ყუთის ამოღება"
 
 #: kcm/backupplanwidget.cpp:1003
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "ფაილები ნაგვის ყუთში, რომლებიც სამუდამოდ არ წაშლილა"
 
 #: kcm/backupplanwidget.cpp:1012
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "პროგრამის მდგომარეობების ამოღება"
 
 #: kcm/backupplanwidget.cpp:1013
 #, kde-kuit-format
@@ -1262,12 +1254,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"აპლიკაციის მდგომარეობის ფაილები, როგორიცაა ფანჯრის მდებარეობა, ისტორია და "
+"ღია ფაილები"
 
 #: kcm/backupplanwidget.cpp:1022
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "კონტეინერებისა და ვირტუალური მანქანის დისკის ასლის ფაილების ამოღება"
 
 #: kcm/backupplanwidget.cpp:1023
 #, kde-kuit-format
@@ -1276,24 +1270,26 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"კონტეინერები, ან ვირტუალური მანქანის დისკის ასლის ფაილები, შექმნილი ისეთ "
+"პროგრამებში, როგორიცაა GNOME Boxes, Docker, Podman, ან Incus"
 
 #: kcm/backupplanwidget.cpp:1031
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "სწრაფი ასლების ამოღება"
 
 #: kcm/backupplanwidget.cpp:1032
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Btrfs-ის ფაილური სისტემის სწრაფი ასლები"
 
 #: kcm/backupplanwidget.cpp:1042
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "მომხმარებლის დონის flatpak-ების ამოღება"
 
 #: kcm/backupplanwidget.cpp:1043
 #, kde-kuit-format
@@ -1302,6 +1298,9 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"Flatpak-ის აპები და გაშვების გარემოები, რომლების თავიდან გადმოწერაც "
+"შესაძლებელია ეს არ შეგიშლით ხელს, ამ აპლიკაციების პარამეტრებისა და "
+"მონაცემების დამარქაფებაში)"
 
 #: kcm/backupplanwidget.cpp:1065
 #, kde-kuit-format
@@ -1423,6 +1422,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/><emphasis>ავტომატურადაა ამოღებული</emphasis> "
+"მარქაფიდან.<nl/>ამის მართვა <interface>დამატებითი</interface> პარამეტრებიდან "
+"შეგიძლიათ."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
@@ -1473,7 +1475,7 @@ msgstr "გაფრთხილება"
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid "%1 does not include any files!<nl/>This plan will not be activated."
-msgstr ""
+msgstr "%1 ფაილებს არ შეიცავს!<nl/> ეს გეგმა არ გააქტიურდება."
 
 #: kcm/kupkcm.cpp:232
 #, kde-kuit-format
@@ -1538,17 +1540,15 @@ msgid "No backup plans configured"
 msgstr "მარქაფის გეგმები მორგებული არაა"
 
 #: plasmoid/qml/FullRepresentation.qml:83 plasmoid/qml/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Configure Backup Plans"
+#, kde-format
 msgid "Configure Backup Plans…"
-msgstr "მარქაფის გეგმების მორგება"
+msgstr "მარქაფის გეგმების მორგება…"
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr "მარქაფის გეგმები მორგებული არაა"
+msgstr "გეგმები მორგებული არაა"
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1563,43 +1563,36 @@ msgid "Backup destination not available"
 msgstr "მარქაფის სამიზნე მიუწვდომელია"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "&მარქაფის გეგმების გადატვირთვა"
+msgstr "გახსენით მარქაფის გეგმების მოსარგებად"
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
 msgstr "ბოლოს შენახვა: %1"
 
 #: plasmoid/qml/PlanItem.qml:49
-#, fuzzy, kde-format
-#| msgid "Show files"
+#, kde-format
 msgid "Show Files"
 msgstr "ფაილების ჩვენება"
 
 #: plasmoid/qml/PlanItem.qml:57
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Backup"
+#, kde-format
 msgid "Save Backup"
 msgstr "მარქაფის შენახვა"
 
 #: plasmoid/qml/PlanItem.qml:65
-#, fuzzy, kde-format
-#| msgid "Prune old backups"
+#, kde-format
 msgid "Prune Old Backups"
 msgstr "ძველი მარქაფების შეკვეცა"
 
 #: plasmoid/qml/PlanItem.qml:73
 #, kde-format
 msgid "View Log"
-msgstr ""
+msgstr "ჟურნალის ნახვა"
 
 #: purger/main.cpp:23
 #, kde-kuit-format
@@ -1613,10 +1606,9 @@ msgid "Purger for bup archives."
 msgstr "Bup-ის არქივებმკვეცი."
 
 #: purger/main.cpp:27
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2013-2021 Simon Persson"
+#, kde-format
 msgid "© 2013–2021 Simon Persson"
-msgstr "(C) 2013-2021 საიმონ პერსონი, ყველა უფლება დაცულია"
+msgstr "© 2013-2021 საიმონ პერსონი"
 
 #: settings/backupplan.cpp:27
 #, kde-kuit-format
