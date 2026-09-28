@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-28 00:47+0000\n"
 "PO-Revision-Date: 2026-09-16 21:35+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -1212,14 +1212,29 @@ msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "Dateien und Ordner anhand von Mustern ausschließen"
 
-#: kcm/backupplanwidget.cpp:944
-#, kde-kuit-format
+#: kcm/backupplanwidget.cpp:943
+#, kde-format
+msgid "bup-index manual"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:943
+#, kde-format
+msgid "rsync manual"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:945
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Patterns need to be listed in a text file with one pattern per line. "
+#| "Files and folders with names that match any of the patterns will be "
+#| "excluded from the backup. The pattern format is documented in the <link "
+#| "url='%1'>bup-index manual page</link>."
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
 "and folders with names that match any of the patterns will be excluded from "
-"the backup. The pattern format is documented in the <link url='%1'>bup-index "
-"manual page</link>."
+"the backup. The pattern format is documented in the <link url='%1'>%2</link>."
 msgstr ""
 "Die Muster müssen in einer Textdatei mit einem Muster pro Zeile aufgelistet "
 "werden. Dateien und Ordner mit Namen, die mit einem der Muster "
@@ -1227,36 +1242,36 @@ msgstr ""
 "Musterformat ist <link url='%1'>in der Handbuchseite von bup-index</link> "
 "dokumentiert."
 
-#: kcm/backupplanwidget.cpp:963
+#: kcm/backupplanwidget.cpp:965
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "Dateiauswahl-Dialog öffnen"
 
-#: kcm/backupplanwidget.cpp:965
+#: kcm/backupplanwidget.cpp:967
 #, kde-format
 msgid "Select pattern file"
 msgstr "Musterdatei auswählen"
 
-#: kcm/backupplanwidget.cpp:983
+#: kcm/backupplanwidget.cpp:985
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
 msgstr "Zwischenspeicher ausschließen"
 
-#: kcm/backupplanwidget.cpp:984
+#: kcm/backupplanwidget.cpp:986
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
 msgstr "Temporäre Daten, die neu erstellt werden können"
 
-#: kcm/backupplanwidget.cpp:993
+#: kcm/backupplanwidget.cpp:995
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
 msgstr "Verschlüsselte Ordner ausschließen"
 
-#: kcm/backupplanwidget.cpp:994
+#: kcm/backupplanwidget.cpp:996
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1266,25 +1281,25 @@ msgstr ""
 "Inhalte von entsperrten verschlüsselten Ordnern, wie z. B. solche, die mit "
 "Plasma Vault erstellt wurden"
 
-#: kcm/backupplanwidget.cpp:1002
+#: kcm/backupplanwidget.cpp:1004
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
 msgstr "Papierkorb ausschließen"
 
-#: kcm/backupplanwidget.cpp:1003
+#: kcm/backupplanwidget.cpp:1005
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
 msgstr "Dateien im Papierkorb, die nicht endgültig gelöscht wurden"
 
-#: kcm/backupplanwidget.cpp:1012
+#: kcm/backupplanwidget.cpp:1014
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
 msgstr "Anwendungszustände ausschließen"
 
-#: kcm/backupplanwidget.cpp:1013
+#: kcm/backupplanwidget.cpp:1015
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1293,13 +1308,13 @@ msgstr ""
 "Anwendungsspezifische Zustandsdaten, wie z. B. Fensterposition, Verlauf und "
 "geöffnete Dateien"
 
-#: kcm/backupplanwidget.cpp:1022
+#: kcm/backupplanwidget.cpp:1024
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
 msgstr "Container und Systemabbilder virtueller Maschinen ausschließen"
 
-#: kcm/backupplanwidget.cpp:1023
+#: kcm/backupplanwidget.cpp:1025
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1309,25 +1324,25 @@ msgstr ""
 "Container oder Systemabbilder virtueller Maschinen, wie z. B. solche, die "
 "mit GNOME Boxes, Docker, Podman und Incus erstellt wurden"
 
-#: kcm/backupplanwidget.cpp:1031
+#: kcm/backupplanwidget.cpp:1033
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
 msgstr "Schnappschüsse ausschließen"
 
-#: kcm/backupplanwidget.cpp:1032
+#: kcm/backupplanwidget.cpp:1034
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
 msgstr "Btrfs-Dateisystem-Schnappschüsse"
 
-#: kcm/backupplanwidget.cpp:1042
+#: kcm/backupplanwidget.cpp:1044
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
 msgstr "Flatpaks auf Benutzerebene ausschließen"
 
-#: kcm/backupplanwidget.cpp:1043
+#: kcm/backupplanwidget.cpp:1045
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1338,19 +1353,19 @@ msgstr ""
 "werden können (die Sicherung von Einstellungen und Daten für diese "
 "Anwendungen wird dadurch nicht verhindert)"
 
-#: kcm/backupplanwidget.cpp:1065
+#: kcm/backupplanwidget.cpp:1067
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Erweitert"
 
-#: kcm/backupplanwidget.cpp:1066
+#: kcm/backupplanwidget.cpp:1068
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Erweiterte Einstellungen für erfahrene Benutzer"
 
-#: kcm/backupplanwidget.cpp:1096
+#: kcm/backupplanwidget.cpp:1098
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"

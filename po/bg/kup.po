@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-28 00:47+0000\n"
 "PO-Revision-Date: 2026-09-13 18:22+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -1197,50 +1197,65 @@ msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "Изключване на файлове и папки въз основа на шаблони"
 
-#: kcm/backupplanwidget.cpp:944
-#, kde-kuit-format
+#: kcm/backupplanwidget.cpp:943
+#, kde-format
+msgid "bup-index manual"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:943
+#, kde-format
+msgid "rsync manual"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:945
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Patterns need to be listed in a text file with one pattern per line. "
+#| "Files and folders with names that match any of the patterns will be "
+#| "excluded from the backup. The pattern format is documented in the <link "
+#| "url='%1'>bup-index manual page</link>."
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
 "and folders with names that match any of the patterns will be excluded from "
-"the backup. The pattern format is documented in the <link url='%1'>bup-index "
-"manual page</link>."
+"the backup. The pattern format is documented in the <link url='%1'>%2</link>."
 msgstr ""
 "Шаблоните трябва да бъдат изброени в текстов файл с по един шаблон на ред. "
 "Файловете и папки с имена, които съвпадат с някой от шаблоните, ще бъдат "
 "изключени от от резервното копие. Форматът на шаблона е документиран на "
 "<link url='%1'>bup-index manual page</link>."
 
-#: kcm/backupplanwidget.cpp:963
+#: kcm/backupplanwidget.cpp:965
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "Отваряне на диалогов прозорец за избор на файл"
 
-#: kcm/backupplanwidget.cpp:965
+#: kcm/backupplanwidget.cpp:967
 #, kde-format
 msgid "Select pattern file"
 msgstr "Избиране на шаблонен файл"
 
-#: kcm/backupplanwidget.cpp:983
+#: kcm/backupplanwidget.cpp:985
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
 msgstr "Изключване на кеша"
 
-#: kcm/backupplanwidget.cpp:984
+#: kcm/backupplanwidget.cpp:986
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
 msgstr "Временни данни, които могат да бъдат възстановени"
 
-#: kcm/backupplanwidget.cpp:993
+#: kcm/backupplanwidget.cpp:995
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
 msgstr "Изключване на криптирани папки"
 
-#: kcm/backupplanwidget.cpp:994
+#: kcm/backupplanwidget.cpp:996
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1249,25 +1264,25 @@ msgid ""
 msgstr ""
 "Съдържание на отключени криптирани папки, като тези, създадени с Plasma Vault"
 
-#: kcm/backupplanwidget.cpp:1002
+#: kcm/backupplanwidget.cpp:1004
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
 msgstr "Изключване на кошчето"
 
-#: kcm/backupplanwidget.cpp:1003
+#: kcm/backupplanwidget.cpp:1005
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
 msgstr "Файлове в кошчето, които не са изтрити окончателно"
 
-#: kcm/backupplanwidget.cpp:1012
+#: kcm/backupplanwidget.cpp:1014
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
 msgstr "Изключване на състояния на приложенията"
 
-#: kcm/backupplanwidget.cpp:1013
+#: kcm/backupplanwidget.cpp:1015
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1276,13 +1291,13 @@ msgstr ""
 "Специфични данни за състоянието на приложението, като позиция на прозореца, "
 "история и отворени файлове"
 
-#: kcm/backupplanwidget.cpp:1022
+#: kcm/backupplanwidget.cpp:1024
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
 msgstr "Изключване на контейнери и образи на виртуални машини"
 
-#: kcm/backupplanwidget.cpp:1023
+#: kcm/backupplanwidget.cpp:1025
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1292,25 +1307,25 @@ msgstr ""
 "Контейнери или образи на виртуални машини, като тези, създадени от GNOME "
 "Boxes, Docker, Podman и Incus"
 
-#: kcm/backupplanwidget.cpp:1031
+#: kcm/backupplanwidget.cpp:1033
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
 msgstr "Изключване на snapshots"
 
-#: kcm/backupplanwidget.cpp:1032
+#: kcm/backupplanwidget.cpp:1034
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
 msgstr "Снапшоти на Btrfs файлова система"
 
-#: kcm/backupplanwidget.cpp:1042
+#: kcm/backupplanwidget.cpp:1044
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
 msgstr "Изключване на Flatpak пакети на ниво потребител"
 
-#: kcm/backupplanwidget.cpp:1043
+#: kcm/backupplanwidget.cpp:1045
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1321,19 +1336,19 @@ msgstr ""
 "отново (няма да попречи на архивирането на настройките и данните за тези "
 "приложения)"
 
-#: kcm/backupplanwidget.cpp:1065
+#: kcm/backupplanwidget.cpp:1067
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Допълнителни"
 
-#: kcm/backupplanwidget.cpp:1066
+#: kcm/backupplanwidget.cpp:1068
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Допълнителни опции за напреднали потребители"
 
-#: kcm/backupplanwidget.cpp:1096
+#: kcm/backupplanwidget.cpp:1098
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-28 00:47+0000\n"
 "PO-Revision-Date: 2026-09-14 14:21+0300\n"
 "Last-Translator: Simon Persson <simon.persson@mykolab.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/kup/kup/"
@@ -1210,50 +1210,65 @@ msgctxt "@option:check"
 msgid "Exclude files and folders based on patterns"
 msgstr "Išbraukti failus ir aplankus remiantis šablonais"
 
-#: kcm/backupplanwidget.cpp:944
-#, kde-kuit-format
+#: kcm/backupplanwidget.cpp:943
+#, kde-format
+msgid "bup-index manual"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:943
+#, kde-format
+msgid "rsync manual"
+msgstr ""
+
+#: kcm/backupplanwidget.cpp:945
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Patterns need to be listed in a text file with one pattern per line. "
+#| "Files and folders with names that match any of the patterns will be "
+#| "excluded from the backup. The pattern format is documented in the <link "
+#| "url='%1'>bup-index manual page</link>."
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
 "and folders with names that match any of the patterns will be excluded from "
-"the backup. The pattern format is documented in the <link url='%1'>bup-index "
-"manual page</link>."
+"the backup. The pattern format is documented in the <link url='%1'>%2</link>."
 msgstr ""
 "Šablonai turi būti išvardyti tekstiniame faile, po vieną šabloną kiekvienoje "
 "eilutėje. Failai ir aplankai, kurių pavadinimai atitinka bet kurį iš "
 "šablonų, bus išbraukti iš atsarginės kopijos. Šablono formatas yra "
 "dokumentuotas <link url='%1'>bup-index žinyno puslapyje</link>."
 
-#: kcm/backupplanwidget.cpp:963
+#: kcm/backupplanwidget.cpp:965
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Open dialog to select a file"
 msgstr "Atverti dialogą ir pasirinkti failą"
 
-#: kcm/backupplanwidget.cpp:965
+#: kcm/backupplanwidget.cpp:967
 #, kde-format
 msgid "Select pattern file"
 msgstr "Pasirinkite šablono failą"
 
-#: kcm/backupplanwidget.cpp:983
+#: kcm/backupplanwidget.cpp:985
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
 msgstr "Išbraukti podėlius"
 
-#: kcm/backupplanwidget.cpp:984
+#: kcm/backupplanwidget.cpp:986
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
 msgstr "Laikini duomenys, kurie gali būti sukurti iš naujo"
 
-#: kcm/backupplanwidget.cpp:993
+#: kcm/backupplanwidget.cpp:995
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
 msgstr "Išbraukti šifruotus aplankus"
 
-#: kcm/backupplanwidget.cpp:994
+#: kcm/backupplanwidget.cpp:996
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1263,25 +1278,25 @@ msgstr ""
 "Atrakintų šifruotų aplankų, pavyzdžiui, tokių, kurie kuriami naudojant "
 "Plasma slėptuvę, turinys"
 
-#: kcm/backupplanwidget.cpp:1002
+#: kcm/backupplanwidget.cpp:1004
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
 msgstr "Išbraukti šiukšlinę"
 
-#: kcm/backupplanwidget.cpp:1003
+#: kcm/backupplanwidget.cpp:1005
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
 msgstr "Šiukšlinėje esantys failai, kurie nebuvo ištrinti visam laikui"
 
-#: kcm/backupplanwidget.cpp:1012
+#: kcm/backupplanwidget.cpp:1014
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
 msgstr "Išbraukti programų būsenas"
 
-#: kcm/backupplanwidget.cpp:1013
+#: kcm/backupplanwidget.cpp:1015
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1290,13 +1305,13 @@ msgstr ""
 "Su programomis susiję būsenos duomenys, pavyzdžiui, lango pozicija, istorija "
 "ir atverti failai"
 
-#: kcm/backupplanwidget.cpp:1022
+#: kcm/backupplanwidget.cpp:1024
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
 msgstr "Išbraukti konteinerius ir virtualių mašinų atvaizdžius"
 
-#: kcm/backupplanwidget.cpp:1023
+#: kcm/backupplanwidget.cpp:1025
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1306,25 +1321,25 @@ msgstr ""
 "Konteineriai ar virtualių mašinų atvaizdžiai, pavyzdžiui, tokie, kuriuos "
 "sukuria GNOME Dėžės, Docker, Podman ir Incus"
 
-#: kcm/backupplanwidget.cpp:1031
+#: kcm/backupplanwidget.cpp:1033
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
 msgstr "Išbraukti momentines kopijas"
 
-#: kcm/backupplanwidget.cpp:1032
+#: kcm/backupplanwidget.cpp:1034
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
 msgstr "Btrfs failų sistemos momentinės kopijos"
 
-#: kcm/backupplanwidget.cpp:1042
+#: kcm/backupplanwidget.cpp:1044
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
 msgstr "Išbraukti naudotojo lygmens Flatpak paketus"
 
-#: kcm/backupplanwidget.cpp:1043
+#: kcm/backupplanwidget.cpp:1045
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1335,19 +1350,19 @@ msgstr ""
 "naujo (tai ir toliau leis daryti tų programų nuostatų ir duomenų atsarginę "
 "kopiją)"
 
-#: kcm/backupplanwidget.cpp:1065
+#: kcm/backupplanwidget.cpp:1067
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Advanced"
 msgstr "Išplėstiniai"
 
-#: kcm/backupplanwidget.cpp:1066
+#: kcm/backupplanwidget.cpp:1068
 #, kde-kuit-format
 msgctxt "@label"
 msgid "Extra options for advanced users"
 msgstr "Išplėstinės parinktys pažengusiems naudotojams"
 
-#: kcm/backupplanwidget.cpp:1096
+#: kcm/backupplanwidget.cpp:1098
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Create Folder"
