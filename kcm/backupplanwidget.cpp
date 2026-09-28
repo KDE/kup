@@ -940,8 +940,8 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available)
     });
     auto lLabelUpdater = [lExcludesLabel](bool pVersioned) {
         QString lHelpUrl = pVersioned ? QStringLiteral("man:///bup-index") : QStringLiteral("man:///rsync");
-        QString lHelpLinkText = pVersioned ? i18n("bup-index manual") : i18n("rsync manual");
-        lExcludesLabel->setText(xi18nc("@info",
+        QString lHelpLinkText = pVersioned ? i18nc("manual as in 'documentation'", "bup-index manual") : i18nc("manual as in 'documentation'", "rsync manual");
+        lExcludesLabel->setText(xi18nc("@info %2 is either 'bup-index manual' or 'rsync manual'",
                                        "Patterns need to be listed in a text file with one pattern per line. "
                                        "Files and folders with names that match any of the patterns will be "
                                        "excluded from the backup. The pattern format is documented in the "
