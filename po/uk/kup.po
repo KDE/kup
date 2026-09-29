@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-28 00:47+0000\n"
-"PO-Revision-Date: 2026-08-21 08:13+0300\n"
+"PO-Revision-Date: 2026-09-28 09:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -1223,21 +1223,15 @@ msgstr "Виключити файли і теки на основі взірці
 #: kcm/backupplanwidget.cpp:943
 #, kde-format
 msgid "bup-index manual"
-msgstr ""
+msgstr "сторінці підручника bup-index"
 
 #: kcm/backupplanwidget.cpp:943
 #, kde-format
 msgid "rsync manual"
-msgstr ""
+msgstr "сторінці підручника rsync"
 
 #: kcm/backupplanwidget.cpp:945
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented in the <link "
-#| "url='%1'>bup-index manual page</link>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1247,7 +1241,7 @@ msgstr ""
 "Взірці слід зберігати у форматі списку у текстовому файлі, по одному взірцю "
 "на рядок. Файли і теки, чиї назви, збігатимуться з будь-яким із взірців, "
 "буде виключено із резервного копіювання. Формат взірців документовано на "
-"<link url='%1'>сторінці підручника з bup-index</link>."
+"<link url='%1'>%2</link>."
 
 #: kcm/backupplanwidget.cpp:965
 #, kde-kuit-format

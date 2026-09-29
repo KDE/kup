@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-28 00:47+0000\n"
-"PO-Revision-Date: 2026-08-21 12:41+0200\n"
+"PO-Revision-Date: 2026-09-28 11:21+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: daemon/backupjob.cpp:49
 #, kde-kuit-format
@@ -1195,21 +1195,15 @@ msgstr "Bestanden en mappen uitsluiten gebaseerd op patronen"
 #: kcm/backupplanwidget.cpp:943
 #, kde-format
 msgid "bup-index manual"
-msgstr ""
+msgstr "handleiding van bup-index"
 
 #: kcm/backupplanwidget.cpp:943
 #, kde-format
 msgid "rsync manual"
-msgstr ""
+msgstr "rsync-handleiding"
 
 #: kcm/backupplanwidget.cpp:945
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented in the <link "
-#| "url='%1'>bup-index manual page</link>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1219,7 +1213,7 @@ msgstr ""
 "Patronen moeten in een lijst staat in een tekstbestand met één patroon per "
 "regel. Bestanden en mappen met namen overeenkomend met een van de patronen "
 "zullen uitgesloten worden van de back-up. Het patroonformaat is in de <link "
-"url=\"%1\">handleidingpagina bup-index</link> gedocumenteerd."
+"url='%1'>%2</link> gedocumenteerd."
 
 #: kcm/backupplanwidget.cpp:965
 #, kde-kuit-format
