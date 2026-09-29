@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2025 Volker Krause <vkrause@kde.org>
+# SPDX-FileCopyrightText: 2026 Bharadwaj Raju <bharadwaj.raju@machinesoul.in>
+# SPDX-License-Identifier: CC0-1.0
+
+[Unit]
+Description=Backup Scheduler
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+ExecStart=@KDE_INSTALL_FULL_BINDIR@/kup-daemon
+Type=exec
+BusName=org.kde.kupdaemon
+TimeoutStopSec=5sec
+Slice=background.slice
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

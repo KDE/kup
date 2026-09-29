@@ -60,3 +60,9 @@ install(FILES kup-daemon.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 install(FILES kup-daemon.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES kupdaemon.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
 
+configure_file(kup-daemon.service.in ${CMAKE_CURRENT_BINARY_DIR}/kup-daemon.service)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kup-daemon.service DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
+install(CODE "
+    include(${CMAKE_SOURCE_DIR}/cmake/SystemctlEnable.cmake)
+    systemctl_enable(kup-daemon.service graphical-session.target ${KDE_INSTALL_FULL_SYSTEMDUSERUNITDIR})
+")
