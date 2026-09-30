@@ -38,6 +38,12 @@ protected:
     QFile mLogFile;
     QTextStream mLogStream;
     KupDaemon *mKupDaemon;
+#ifdef HAVE_LIBBTRFSUTIL
+    QMap<QString, QString> mSourceSnapshots;
+
+private:
+    void cleanSourceSnapshots();
+#endif
 };
 
 #endif // BACKUPJOB_H

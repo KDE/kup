@@ -50,6 +50,25 @@ void RsyncJob::performJob()
 
     emit description(this, i18n("Checking what to copy"));
 
+#ifdef HAVE_LIBBTRFSUTIL
+    if (mBackupPlan.mBackupFromSnapshot && !mSourceSnapshots.isEmpty()) {
+        mRsyncProcess << QStringLiteral("bwrap");
+        mRsyncProcess << QStringLiteral("--bind");
+        mRsyncProcess << QStringLiteral("/");
+        mRsyncProcess << QStringLiteral("/");
+        mRsyncProcess << QStringLiteral("--dev-bind");
+        mRsyncProcess << QStringLiteral("/dev");
+        mRsyncProcess << QStringLiteral("/dev");
+        for (const auto &[lSubvolume, lSnapshotDest] : mSourceSnapshots.asKeyValueRange()) {
+            mRsyncProcess << QStringLiteral("--bind");
+            mRsyncProcess << lSnapshotDest;
+            mRsyncProcess << lSubvolume;
+        }
+        mRsyncProcess << QStringLiteral("--");
+    }
+    mRsyncProcess.setUnixProcessParameters(QProcess::UnixProcessFlag::CreateNewSession);
+#endif
+
     mRsyncProcess << QStringLiteral("rsync");
 
     if (onlySaveFileContents()) {
@@ -187,6 +206,13 @@ void RsyncJob::slotReadRsyncOutput()
 bool RsyncJob::doKill()
 {
     setError(KilledJobError);
+#ifdef HAVE_LIBBTRFSUTIL
+    if (mBackupPlan.mBackupFromSnapshot && !mSourceSnapshots.isEmpty()) {
+        if (0 == ::killpg(getpgid(mRsyncProcess.processId()), SIGINT)) {
+            return mRsyncProcess.waitForFinished();
+        }
+    }
+#endif
     if (0 == ::kill(mRsyncProcess.processId(), SIGINT)) {
         return mRsyncProcess.waitForFinished();
     }
@@ -195,11 +221,21 @@ bool RsyncJob::doKill()
 
 bool RsyncJob::doSuspend()
 {
+#ifdef HAVE_LIBBTRFSUTIL
+    if (mBackupPlan.mBackupFromSnapshot && !mSourceSnapshots.isEmpty()) {
+        return 0 == ::killpg(getpgid(mRsyncProcess.processId()), SIGSTOP);
+    }
+#endif
     return 0 == ::kill(mRsyncProcess.processId(), SIGSTOP);
 }
 
 bool RsyncJob::doResume()
 {
+#ifdef HAVE_LIBBTRFSUTIL
+    if (mBackupPlan.mBackupFromSnapshot && !mSourceSnapshots.isEmpty()) {
+        return 0 == ::killpg(getpgid(mRsyncProcess.processId()), SIGCONT);
+    }
+#endif
     return 0 == ::kill(mRsyncProcess.processId(), SIGCONT);
 }
 

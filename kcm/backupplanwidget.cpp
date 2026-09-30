@@ -922,6 +922,14 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available)
 
     connect(mVersionedRadio, SIGNAL(toggled(bool)), lVerificationWidget, SLOT(setVisible(bool)));
 
+    auto [lFromSnapshotWidget, lFromSnapshotCheckBox] =
+        createCheckBoxWithDescription(lAdvancedWidget,
+                                      xi18nc("@option:check", "Backup from snapshots where possible"),
+                                      xi18nc("@info",
+                                             "On Btrfs systems, takes a temporary snapshot prior to backing up, "
+                                             "which can be useful for saving atomically if you have large, "
+                                             "frequently-changing files such as databases in your backup."),
+                                      QStringLiteral("kcfg_Backup from snapshots where possible"));
     auto lExcludesWidget = new QWidget;
     auto lExcludesCheckBox = new QCheckBox(xi18nc("@option:check", "Exclude files and folders based on patterns"));
     lExcludesCheckBox->setObjectName(QStringLiteral("kcfg_Exclude patterns"));
@@ -1051,6 +1059,7 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available)
 
     lAdvancedLayout->addWidget(lShowHiddenWidget);
     lAdvancedLayout->addWidget(lVerificationWidget);
+    lAdvancedLayout->addWidget(lFromSnapshotWidget);
     lAdvancedLayout->addWidget(lRecoveryWidget);
     lAdvancedLayout->addWidget(lExcludesWidget);
     lAdvancedLayout->addWidget(lExcludeCachesWidget);

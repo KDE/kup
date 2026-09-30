@@ -56,6 +56,7 @@ BackupPlan::BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pPare
     addItemInt(QStringLiteral("Schedule interval unit"), mScheduleIntervalUnit, 3);
     addItemInt(QStringLiteral("Usage limit"), mUsageLimit, 25);
     addItemBool(QStringLiteral("Ask first"), mAskBeforeTakingBackup, true);
+    addItemBool(QStringLiteral("Backup from snapshots where possible"), mBackupFromSnapshot, false);
 
     addItemInt(QStringLiteral("Destination type"), mDestinationType, 1);
     addItem(new KCoreConfigSkeleton::ItemUrl(currentGroup(),

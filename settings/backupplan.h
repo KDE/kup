@@ -45,6 +45,7 @@ public:
     qint32 mScheduleIntervalUnit{};
     qint32 mUsageLimit{}; // in hours
     bool mAskBeforeTakingBackup{};
+    bool mBackupFromSnapshot{};
 
     qint32 mDestinationType{};
     QUrl mFilesystemDestinationPath;

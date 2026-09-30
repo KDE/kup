@@ -54,6 +54,11 @@ KF${QT_MAJOR_VERSION}::DBusAddons
 KF${QT_MAJOR_VERSION}::Crash
 )
 
+if(libbtrfsutil_FOUND)
+    target_compile_definitions(kup-daemon PRIVATE HAVE_LIBBTRFSUTIL=1)
+    target_link_libraries(kup-daemon PkgConfig::libbtrfsutil)
+endif()
+
 ########### install files ###############
 install(TARGETS kup-daemon ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES kup-daemon.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})

@@ -20,6 +20,9 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 find_package(LibGit2 REQUIRED)
 
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(libbtrfsutil IMPORTED_TARGET libbtrfsutil)
+
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 include(KDEInstallDirs)

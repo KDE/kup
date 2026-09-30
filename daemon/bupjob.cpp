@@ -8,6 +8,7 @@
 
 #include <KLocalizedString>
 
+#include <QDir>
 #include <QFileInfo>
 #include <QThread>
 
@@ -132,6 +133,25 @@ void BupJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus)
 
 void BupJob::startIndexing()
 {
+#ifdef HAVE_LIBBTRFSUTIL
+    if (mBackupPlan.mBackupFromSnapshot && !mSourceSnapshots.isEmpty()) {
+        mIndexProcess << QStringLiteral("bwrap");
+        mIndexProcess << QStringLiteral("--bind");
+        mIndexProcess << QStringLiteral("/");
+        mIndexProcess << QStringLiteral("/");
+        mIndexProcess << QStringLiteral("--dev-bind");
+        mIndexProcess << QStringLiteral("/dev");
+        mIndexProcess << QStringLiteral("/dev");
+        for (const auto &[lSubvolume, lSnapshotDest] : mSourceSnapshots.asKeyValueRange()) {
+            mIndexProcess << QStringLiteral("--bind");
+            mIndexProcess << lSnapshotDest;
+            mIndexProcess << lSubvolume;
+        }
+        mIndexProcess << QStringLiteral("--");
+        mIndexProcess.setUnixProcessParameters(QProcess::UnixProcessFlag::CreateNewSession);
+    }
+#endif
+
     mIndexProcess << QStringLiteral("bup");
     mIndexProcess << QStringLiteral("-d") << mDestinationPath;
     mIndexProcess << QStringLiteral("index") << QStringLiteral("-u");
@@ -177,6 +197,26 @@ void BupJob::slotIndexingDone(int pExitCode, QProcess::ExitStatus pExitStatus)
                                 "See log file for more details."));
         return;
     }
+
+#ifdef HAVE_LIBBTRFSUTIL
+    if (mBackupPlan.mBackupFromSnapshot && !mSourceSnapshots.isEmpty()) {
+        mSaveProcess << QStringLiteral("bwrap");
+        mSaveProcess << QStringLiteral("--bind");
+        mSaveProcess << QStringLiteral("/");
+        mSaveProcess << QStringLiteral("/");
+        mSaveProcess << QStringLiteral("--dev-bind");
+        mSaveProcess << QStringLiteral("/dev");
+        mSaveProcess << QStringLiteral("/dev");
+        for (const auto &[lSubvolume, lSnapshotDest] : mSourceSnapshots.asKeyValueRange()) {
+            mSaveProcess << QStringLiteral("--bind");
+            mSaveProcess << lSnapshotDest;
+            mSaveProcess << lSubvolume;
+        }
+        mSaveProcess << QStringLiteral("--");
+        mIndexProcess.setUnixProcessParameters(QProcess::UnixProcessFlag::CreateNewSession);
+    }
+#endif
+
     mSaveProcess << QStringLiteral("bup");
     mSaveProcess << QStringLiteral("-d") << mDestinationPath;
     mSaveProcess << QStringLiteral("save");
@@ -326,9 +366,19 @@ bool BupJob::doSuspend()
         return 0 == ::kill(mFsckProcess.processId(), SIGSTOP);
     }
     if (mIndexProcess.state() == KProcess::Running) {
+#ifdef HAVE_LIBBTRFSUTIL
+        if (mBackupPlan.mBackupFromSnapshot && !mSourceSnapshots.isEmpty()) {
+            return 0 == ::killpg(getpgid(mIndexProcess.processId()), SIGSTOP);
+        }
+#endif
         return 0 == ::kill(mIndexProcess.processId(), SIGSTOP);
     }
     if (mSaveProcess.state() == KProcess::Running) {
+#ifdef HAVE_LIBBTRFSUTIL
+        if (mBackupPlan.mBackupFromSnapshot && !mSourceSnapshots.isEmpty()) {
+            return 0 == ::killpg(getpgid(mSaveProcess.processId()), SIGSTOP);
+        }
+#endif
         return 0 == ::kill(mSaveProcess.processId(), SIGSTOP);
     }
     if (mPar2Process.state() == KProcess::Running) {
@@ -343,9 +393,19 @@ bool BupJob::doResume()
         return 0 == ::kill(mFsckProcess.processId(), SIGCONT);
     }
     if (mIndexProcess.state() == KProcess::Running) {
+#ifdef HAVE_LIBBTRFSUTIL
+        if (mBackupPlan.mBackupFromSnapshot && !mSourceSnapshots.isEmpty()) {
+            return 0 == ::killpg(getpgid(mIndexProcess.processId()), SIGCONT);
+        }
+#endif
         return 0 == ::kill(mIndexProcess.processId(), SIGCONT);
     }
     if (mSaveProcess.state() == KProcess::Running) {
+#ifdef HAVE_LIBBTRFSUTIL
+        if (mBackupPlan.mBackupFromSnapshot && !mSourceSnapshots.isEmpty()) {
+            return 0 == ::killpg(getpgid(mSaveProcess.processId()), SIGCONT);
+        }
+#endif
         return 0 == ::kill(mSaveProcess.processId(), SIGCONT);
     }
     if (mPar2Process.state() == KProcess::Running) {
