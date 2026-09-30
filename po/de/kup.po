@@ -9,14 +9,15 @@
 # SPDX-FileCopyrightText: 2025-2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 # SPDX-FileCopyrightText: 2026 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 # SPDX-FileCopyrightText: 2026 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2026 Frank Steinmetzger <dev-kde@felsenfleischer.de>
 # SPDX-FileCopyrightText: 2016 jrabe
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-28 00:47+0000\n"
-"PO-Revision-Date: 2026-09-16 21:35+0200\n"
-"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
+"POT-Creation-Date: 2026-09-30 00:47+0000\n"
+"PO-Revision-Date: 2026-09-23 19:19+0200\n"
+"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -938,7 +939,7 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
-"Einige Dateien und Ordner (z. B. Zwischenspeicher  oder verschlüsselte "
+"Einige Dateien und Ordner (z. B. Zwischenspeicher oder verschlüsselte "
 "Ordner) werden automatisch ausgeschlossen. Sie können dies in den "
 "Einstellungen unter <interface><link>Erweitert</link></interface> einrichten."
 
@@ -1214,11 +1215,13 @@ msgstr "Dateien und Ordner anhand von Mustern ausschließen"
 
 #: kcm/backupplanwidget.cpp:943
 #, kde-format
+msgctxt "manual as in 'documentation'"
 msgid "bup-index manual"
 msgstr ""
 
 #: kcm/backupplanwidget.cpp:943
 #, kde-format
+msgctxt "manual as in 'documentation'"
 msgid "rsync manual"
 msgstr ""
 
@@ -1230,7 +1233,7 @@ msgstr ""
 #| "Files and folders with names that match any of the patterns will be "
 #| "excluded from the backup. The pattern format is documented in the <link "
 #| "url='%1'>bup-index manual page</link>."
-msgctxt "@info"
+msgctxt "@info %2 is either 'bup-index manual' or 'rsync manual'"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
 "and folders with names that match any of the patterns will be excluded from "

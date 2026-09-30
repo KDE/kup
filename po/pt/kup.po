@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-30 00:47+0000\n"
 "PO-Revision-Date: 2023-03-06 16:36+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -1229,11 +1229,13 @@ msgstr "Excluir os ficheiros e pastas com base em padrões"
 
 #: kcm/backupplanwidget.cpp:943
 #, kde-format
+msgctxt "manual as in 'documentation'"
 msgid "bup-index manual"
 msgstr ""
 
 #: kcm/backupplanwidget.cpp:943
 #, kde-format
+msgctxt "manual as in 'documentation'"
 msgid "rsync manual"
 msgstr ""
 
@@ -1245,7 +1247,7 @@ msgstr ""
 #| "Files and folders with names that match any of the patterns will be "
 #| "excluded from the backup. The pattern format is documented <link "
 #| "url='%1'>here</link>."
-msgctxt "@info"
+msgctxt "@info %2 is either 'bup-index manual' or 'rsync manual'"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
 "and folders with names that match any of the patterns will be excluded from "

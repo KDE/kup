@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-28 00:47+0000\n"
-"PO-Revision-Date: 2026-09-14 14:21+0300\n"
+"POT-Creation-Date: 2026-09-30 00:47+0000\n"
+"PO-Revision-Date: 2026-09-30 01:32+0300\n"
 "Last-Translator: Simon Persson <simon.persson@mykolab.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/kup/kup/"
 "language/lt_LT/)\n"
@@ -1211,14 +1211,18 @@ msgid "Exclude files and folders based on patterns"
 msgstr "Išbraukti failus ir aplankus remiantis šablonais"
 
 #: kcm/backupplanwidget.cpp:943
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "bup-index manual"
+msgctxt "manual as in 'documentation'"
 msgid "bup-index manual"
-msgstr ""
+msgstr "bup-index žinynas"
 
 #: kcm/backupplanwidget.cpp:943
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "rsync manual"
+msgctxt "manual as in 'documentation'"
 msgid "rsync manual"
-msgstr ""
+msgstr "rsync žinynas"
 
 #: kcm/backupplanwidget.cpp:945
 #, fuzzy, kde-kuit-format
@@ -1227,8 +1231,8 @@ msgstr ""
 #| "Patterns need to be listed in a text file with one pattern per line. "
 #| "Files and folders with names that match any of the patterns will be "
 #| "excluded from the backup. The pattern format is documented in the <link "
-#| "url='%1'>bup-index manual page</link>."
-msgctxt "@info"
+#| "url='%1'>%2</link>."
+msgctxt "@info %2 is either 'bup-index manual' or 'rsync manual'"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
 "and folders with names that match any of the patterns will be excluded from "
@@ -1237,7 +1241,7 @@ msgstr ""
 "Šablonai turi būti išvardyti tekstiniame faile, po vieną šabloną kiekvienoje "
 "eilutėje. Failai ir aplankai, kurių pavadinimai atitinka bet kurį iš "
 "šablonų, bus išbraukti iš atsarginės kopijos. Šablono formatas yra "
-"dokumentuotas <link url='%1'>bup-index žinyno puslapyje</link>."
+"dokumentuotas <link url='%1'>%2</link>."
 
 #: kcm/backupplanwidget.cpp:965
 #, kde-kuit-format

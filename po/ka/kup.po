@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-30 00:47+0000\n"
 "PO-Revision-Date: 2026-09-28 05:11+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -1179,18 +1179,28 @@ msgstr ""
 "შაბლონებზე დაფუძნებული სახელების მქონე ფაილებისა და საქაღალდეების გამორიცხვა"
 
 #: kcm/backupplanwidget.cpp:943
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "bup-index manual"
+msgctxt "manual as in 'documentation'"
 msgid "bup-index manual"
 msgstr "bup-index ხელით"
 
 #: kcm/backupplanwidget.cpp:943
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "rsync manual"
+msgctxt "manual as in 'documentation'"
 msgid "rsync manual"
 msgstr "rsync ხელით"
 
 #: kcm/backupplanwidget.cpp:945
-#, kde-kuit-format
-msgctxt "@info"
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Patterns need to be listed in a text file with one pattern per line. "
+#| "Files and folders with names that match any of the patterns will be "
+#| "excluded from the backup. The pattern format is documented in the <link "
+#| "url='%1'>%2</link>."
+msgctxt "@info %2 is either 'bup-index manual' or 'rsync manual'"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
 "and folders with names that match any of the patterns will be excluded from "
