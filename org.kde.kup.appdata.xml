@@ -113,6 +113,7 @@
     <p xml:lang="tr">Kup, kişisel dosyalarınızın güncel yedeklerini tutmanıza yardımcı olur. Sunduğu özellikler:</p>
     <p xml:lang="uk">Kup може допомогти вам у підтриманні актуальності резервних копій ваших особистих файлів. Програма має такі можливості:</p>
     <p xml:lang="zh-CN">K 备份可以提醒您及时备份个人数据。它提供了：</p>
+    <p xml:lang="zh-TW">Kup 能幫助您記住維持個人檔案的最新備份。它提供：</p>
     <ul>
       <li>Incremental backup archive with the use of "bup".</li>
       <li xml:lang="ar">أرشيف احتياطي تزايدي باستخدام "bup".</li>
@@ -221,6 +222,7 @@
       <li xml:lang="tr">Yerel dosya sistemi veya dış USB depolama desteği</li>
       <li xml:lang="uk">Підтримка локальних файлових систем та зовнішніх сховищ даних USB.</li>
       <li xml:lang="zh-CN">支持本地文件系统或外部 USB 存储。</li>
+      <li xml:lang="zh-TW">支援本地檔案系統或外部 USB 儲存媒體。</li>
       <li>Monitor availability of backup destinations, like for example a mounted network storage.</li>
       <li xml:lang="ar">يراقب مدى توفر وجهات النسخ الاحتياطي، على سبيل المثال، التخزين الشبكي في حالة ضمه.</li>
       <li xml:lang="bg">Следене за наличността на дестинациите за архивиране, като например монтирано мрежово хранилище.</li>
@@ -256,6 +258,7 @@
       <li xml:lang="tr">Yedek konumlarının uygunluğunu izleme; örneğin takılı bir ağ depolama aygıtı gibi</li>
       <li xml:lang="uk">Спостереження за доступністю місць зберігання резервних копій, зокрема змонтованих сховищ даних у локальній мережі.</li>
       <li xml:lang="zh-CN">监控备份目标可用性，比如挂载的网络存储。</li>
+      <li xml:lang="zh-TW">檢查備份目的地是否可用，像是已掛載的網路儲存空間。</li>
       <li>Integration into KDE's Plasma desktop.</li>
       <li xml:lang="ar">يتكامل مع سطح مكتب بلازما من كِيدِي</li>
       <li xml:lang="bg">Интеграция в работна среда Plasma на KDE.</li>
