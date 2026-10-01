@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:47+0000\n"
-"PO-Revision-Date: 2026-08-29 12:10+0400\n"
+"PO-Revision-Date: 2026-09-30 19:09+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -1181,22 +1181,16 @@ msgstr "استبعد ملفات ومجلدات بالاعتماد على أنم�
 #, kde-format
 msgctxt "manual as in 'documentation'"
 msgid "bup-index manual"
-msgstr ""
+msgstr "دليل bup-index"
 
 #: kcm/backupplanwidget.cpp:943
 #, kde-format
 msgctxt "manual as in 'documentation'"
 msgid "rsync manual"
-msgstr ""
+msgstr "دليل rsync"
 
 #: kcm/backupplanwidget.cpp:945
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented in the <link "
-#| "url='%1'>bup-index manual page</link>."
+#, kde-kuit-format
 msgctxt "@info %2 is either 'bup-index manual' or 'rsync manual'"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1205,7 +1199,7 @@ msgid ""
 msgstr ""
 "يجب إدراج الأنماط في ملف نصي بنمط واحد في كل سطر. الملفات والمجلدات التي "
 "تتطابق مع أي من الأنماط ستُستبعد من النسخة الاحتياطية. توثيق تنسيق الأنماط "
-"تجده <link url='%1'>صفحة توثيق bup-index</link>."
+"تجده في <link url='%1'>%2</link>."
 
 #: kcm/backupplanwidget.cpp:965
 #, kde-kuit-format

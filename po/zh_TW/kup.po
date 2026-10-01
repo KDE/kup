@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:47+0000\n"
-"PO-Revision-Date: 2026-09-17 02:52+0900\n"
+"PO-Revision-Date: 2026-10-01 01:39+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -31,8 +31,8 @@ msgid_plural ""
 "%1 source folders no longer exist. Please open settings and confirm what to "
 "include in backup.<nl/><filename>%2</filename>"
 msgstr[0] ""
-"%1 個來源檔案不復存在。請開啟設定來確定備份裡要包含什麼資料。<nl/><filename>"
-"%2</filename>"
+"%1 個來源資料夾不復存在。請開啟設定來確定備份裡要包含什麼資料。<nl/"
+"><filename>%2</filename>"
 
 #: daemon/bupjob.cpp:49 daemon/buprepairjob.cpp:26
 #: daemon/bupverificationjob.cpp:25
@@ -425,7 +425,7 @@ msgid ""
 "The backup archive <filename>%1</filename> could not be opened. Check if the "
 "backups really are located there."
 msgstr ""
-"備份壓縮檔 <filename>%1</filename> 無法開啟。請檢查備份是否真的位於那裡。"
+"備份封存檔 <filename>%1</filename> 無法開啟。請檢查備份是否真的位於那裡。"
 
 #: filedigger/filedigger.cpp:119
 #, kde-kuit-format
@@ -436,7 +436,7 @@ msgstr "您沒有讀取這個備份封存檔的必須權限。"
 #: filedigger/filedigger.cpp:184
 #, kde-format
 msgid "Select location of backup archive to open."
-msgstr "選取要開啟的備份歸檔位置。"
+msgstr "選取要開啟的備份封存檔位置。"
 
 #: filedigger/main.cpp:27
 #, kde-kuit-format
@@ -447,7 +447,7 @@ msgstr "檔案挖掘者"
 #: filedigger/main.cpp:29
 #, kde-format
 msgid "Browser for bup archives."
-msgstr "bup 檔案的瀏覽程式。"
+msgstr "bup 封存檔的瀏覽程式。"
 
 #: filedigger/main.cpp:31
 #, kde-format
@@ -489,13 +489,13 @@ msgstr " (資料夾)"
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (symlink)"
-msgstr "(符號連結)"
+msgstr " (符號連結)"
 
 #: filedigger/mergedvfs.cpp:156
 #, kde-kuit-format
 msgctxt "added after file name in some cases"
 msgid " (file)"
-msgstr "(檔案)"
+msgstr " (檔案)"
 
 #: filedigger/restoredialog.cpp:112 kcm/backupplanwidget.cpp:457
 #, kde-kuit-format
@@ -818,6 +818,9 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
+"為來源資料夾中的檔案隨時間備份多個版本。這會讓您可以復原檔案的舊版本或是被刪"
+"除的檔案。<nl/><nl/>備份封存檔會隨時間變得越來越大，且只能用此程式所提供的復"
+"原工具來存取。"
 
 #: kcm/backupplanwidget.cpp:536
 #, kde-kuit-format
@@ -831,7 +834,7 @@ msgstr "版本備份（因為 <application>bup</application>未安裝，故不�
 #, kde-kuit-format
 msgctxt "@option:radio"
 msgid "Versioned Backup (recommended)"
-msgstr "版本控制備份(建議)"
+msgstr "版本控制備份（建議）"
 
 #: kcm/backupplanwidget.cpp:546
 #, kde-kuit-format
@@ -842,6 +845,9 @@ msgid ""
 ">This can prevent data loss due to a broken disk, but not due to files being "
 "accidentally deleted or changed."
 msgstr ""
+"讓目的地資料夾與來源資料夾完全相符。從來源資料夾刪除的檔案也會在備份目的地資"
+"料夾裡被刪除。<nl/><nl/>這能夠防止因為磁碟毀損造成的資料喪失，但無法防止檔案"
+"意外刪除或變更所造成的資料喪失。"
 
 #: kcm/backupplanwidget.cpp:558
 #, kde-kuit-format
@@ -877,6 +883,8 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"某些檔案與資料夾（像是快取或已加密的資料夾）會自動排除。要調整此設定請見"
+"<interface><link>進階</link></interface>設定。"
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1067,7 +1075,7 @@ msgstr "指定備份排程"
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Show hidden folders in source selection"
-msgstr "在選擇的來源中顯示隱藏的資料夾"
+msgstr "進行來源選擇時顯示隱藏資料夾"
 
 #: kcm/backupplanwidget.cpp:883
 #, kde-kuit-format
@@ -1078,7 +1086,7 @@ msgid ""
 "dot. They are typically located in your home folder and are used to store "
 "settings and temporary files for your applications."
 msgstr ""
-"這樣就可以明確的包含或排除在選擇的備份來源中的隱藏資料夾。隱藏資料夾的名稱會"
+"這讓備份來源選取時可以明確選擇要包含還是排除各個隱藏資料夾。隱藏資料夾的名稱"
 "以一個點作為開頭。它們通常位於您的家目錄，且通常用於儲存您應用程式的設定及暫"
 "存檔案。"
 
@@ -1090,8 +1098,8 @@ msgid ""
 "backups will take slightly longer time. In return it will be possible to "
 "recover from a partially corrupted backup."
 msgstr ""
-"這會讓您的備份使用大約10%的額外儲存空間，且儲存備份的時候會需要稍微長一點的時"
-"間。作為回報，這樣將有可能可以從部份損毀的備份中恢復。"
+"這會讓您的備份使用大約 10% 的額外儲存空間，且儲存備份的時候會需要稍微長一點的"
+"時間，以換來在備份發生部分毀損的情況時仍可回復的可能性。"
 
 #: kcm/backupplanwidget.cpp:903
 #, kde-kuit-format
@@ -1122,7 +1130,7 @@ msgid ""
 "corruption problems sooner than at the time you need to use a backup, at "
 "that time it could be too late."
 msgstr ""
-"在您每次儲存新的資料時校驗整個備份壓縮檔是否損毀。儲存備份將會稍微花長一點的"
+"在您每次儲存新的資料時校驗整個備份封存檔是否損毀。儲存備份將會稍微花長一點的"
 "時間，但可以讓您很快找到損毀的問題，總比在您需要使用備份時，才發現一切都太遲"
 "了來的好。"
 
@@ -1136,13 +1144,13 @@ msgstr "依樣式排除檔案與資料夾"
 #, kde-format
 msgctxt "manual as in 'documentation'"
 msgid "bup-index manual"
-msgstr ""
+msgstr "bup-index 手冊"
 
 #: kcm/backupplanwidget.cpp:943
 #, kde-format
 msgctxt "manual as in 'documentation'"
 msgid "rsync manual"
-msgstr ""
+msgstr "rsync 手冊"
 
 #: kcm/backupplanwidget.cpp:945
 #, kde-kuit-format
@@ -1152,6 +1160,8 @@ msgid ""
 "and folders with names that match any of the patterns will be excluded from "
 "the backup. The pattern format is documented in the <link url='%1'>%2</link>."
 msgstr ""
+"樣式必須列在一個文字檔案裡，一行一個樣式。名稱符合任何樣式的檔案與資料夾會從"
+"備份中排除。樣式格式說明文件請見 <link url='%1'>%2</link>。"
 
 #: kcm/backupplanwidget.cpp:965
 #, kde-kuit-format
@@ -1548,7 +1558,7 @@ msgstr "清理器"
 #: purger/main.cpp:25
 #, kde-format
 msgid "Purger for bup archives."
-msgstr "bup 封存的清理程式。"
+msgstr "bup 封存檔的清理程式。"
 
 #: purger/main.cpp:27
 #, kde-format
