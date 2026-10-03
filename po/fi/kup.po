@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kup package.
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:47+0000\n"
-"PO-Revision-Date: 2025-09-12 16:41+0300\n"
+"PO-Revision-Date: 2026-08-25 15:24+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -219,18 +219,14 @@ msgid "User Backups"
 msgstr "Käyttäjän varmuuskopiot"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "Kup ei ole käytössä: ota se käyttöön järjestelmäasetuksista. Tämän voi tehdä "
-"komennolla <command>kcmshell5 kup</command>"
+"komennolla <command>kcmshell6 kup</command>"
 
 #: daemon/main.cpp:37
 #, kde-kuit-format
@@ -618,12 +614,10 @@ msgstr "Palauta alkuperäiseen sijaintiin"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRestoreCustomButton)
 #: filedigger/restoredialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Choose where to restore"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose where to restore…"
-msgstr "Valitse minne palautetaan"
+msgstr "Valitse minne palautetaan…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDestBackButton)
 #: filedigger/restoredialog.ui:132
@@ -736,12 +730,10 @@ msgid "Open"
 msgstr "Avaa"
 
 #: filedigger/versionlistdelegate.cpp:122
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Restore"
+#, kde-kuit-format
 msgctxt "@action:button"
 msgid "Restore…"
-msgstr "Palauta"
+msgstr "Palauta…"
 
 #: fileitemaction/fileitemaction.cpp:63
 #, kde-format
@@ -837,13 +829,7 @@ msgid "Back to overview"
 msgstr "Takaisin yleiskuvaan"
 
 #: kcm/backupplanwidget.cpp:524
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Back up multiple versions over time of the files in the source folders. "
-#| "This allows older versions of files or deleted files to be recovered.<nl/"
-#| "></nl/>The backup archive will grow in size over time, and can only be "
-#| "accessed using the recovery tools provided by this program."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Back up multiple versions over time of the files in the source folders. This "
@@ -851,7 +837,7 @@ msgid ""
 ">The backup archive will grow in size over time, and can only be accessed "
 "using the recovery tools provided by this program."
 msgstr ""
-"Varmista lähdekansioiden tiedostoista ajan myötä useita versioita. Tämä "
+"Varmuuskopioi lähdekansioiden tiedostoista ajan myötä useita versioita. Tämä "
 "mahdollistaa tiedostojen aikaisemmat versiot tai poistettujen tiedostojen "
 "palauttamisen.<nl/><nl/>Varmuuskopioarkiston koko kasvaa ajan myötä, ja sitä "
 "voi käsitellä vain tämän ohjelman tarjoamilla palautustyökaluilla."
@@ -922,6 +908,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Jotkin tiedostot ja kansiot (kuten välimuistit tai salatut kansiot) "
+"suljetaan pois automaattisesti. Tätä voi hallita "
+"<interface><link>Lisäasetuksista</link></interface>."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1227,26 +1216,22 @@ msgid "Select pattern file"
 msgstr "Valitse kuviotiedosto"
 
 #: kcm/backupplanwidget.cpp:985
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Sulje kansio pois"
+msgstr "Sulje pois välimuistit"
 
 #: kcm/backupplanwidget.cpp:986
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Uudelleenluotavissa oleva väliaikaistieto"
 
 #: kcm/backupplanwidget.cpp:995
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Sulje kansio pois"
+msgstr "Sulje pois salatut kansiot"
 
 #: kcm/backupplanwidget.cpp:996
 #, kde-kuit-format
@@ -1254,27 +1239,25 @@ msgctxt "@info"
 msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
-msgstr ""
+msgstr "Lukitsemattomien salattujen kansioiden (esim. Plasma-holvien) sisältö"
 
 #: kcm/backupplanwidget.cpp:1004
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Sulje kansio pois"
+msgstr "Sulje pois roskakori"
 
 #: kcm/backupplanwidget.cpp:1005
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "Roskakorissa olevat tiedostot, joita ei ole poistettu pysyvästi"
 
 #: kcm/backupplanwidget.cpp:1014
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Sulje pois sovellusten tilatieto"
 
 #: kcm/backupplanwidget.cpp:1015
 #, kde-kuit-format
@@ -1282,12 +1265,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Sovelluskohtainen tilatieto esim. ikkunoiden sijainnista, historiasta tai "
+"avoimista tiedostoista"
 
 #: kcm/backupplanwidget.cpp:1024
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Sulje pois säilöt ja virtuaalikonekuvat"
 
 #: kcm/backupplanwidget.cpp:1025
 #, kde-kuit-format
@@ -1296,24 +1281,26 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Säilöt tai virtuaalikonekuvat, esim. GNOME Boxesin, Dockerin, Podmanin tai "
+"Incusin luomat"
 
 #: kcm/backupplanwidget.cpp:1033
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Sulje pois tilannevedokset"
 
 #: kcm/backupplanwidget.cpp:1034
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Btrfs-tiedostojärjestelmän tilannevedokset"
 
 #: kcm/backupplanwidget.cpp:1044
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "Sulje pois käyttäjätason Flatpakit"
 
 #: kcm/backupplanwidget.cpp:1045
 #, kde-kuit-format
@@ -1322,6 +1309,8 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"Flatpak-sovellukset ja ajonaikaistiedostot voi ladata uudelleen (ei estä "
+"varmuuskopioimista näiden sovellusten asetuksia ja tietoja)"
 
 #: kcm/backupplanwidget.cpp:1067
 #, kde-kuit-format
@@ -1440,6 +1429,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>on <emphasis>automaattisesti suljettu pois</"
+"emphasis> varmuuskopiosta.<nl/>Tätä voi hallita <interface>Lisäasetuksista</"
+"interface>."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
@@ -1491,7 +1483,7 @@ msgstr "Varoitus"
 #, kde-kuit-format
 msgctxt "@info %1 is the name of the backup plan"
 msgid "%1 does not include any files!<nl/>This plan will not be activated."
-msgstr ""
+msgstr "%1 ei sisällä tiedostoja!<nl/>Suunnitelmaa ei aktivoida."
 
 #: kcm/kupkcm.cpp:232
 #, kde-kuit-format
@@ -1561,11 +1553,10 @@ msgid "Configure Backup Plans…"
 msgstr "Varmuuskopiosuunnitelmien asetukset…"
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr "Varmuuskopiosuunnitelmaa ei ole asetettu"
+msgstr "Ei asetettuja suunnitelmia"
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1580,43 +1571,36 @@ msgid "Backup destination not available"
 msgstr "Varmuuskopion kohde ei ole käytettävissä"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "&Lataa varmuuskopiosuunnitelmat uudelleen"
+msgstr "Avaa varmuuskopiosuunnitelmien asettamiseksi"
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
 msgstr "Viimeksi tallennettu: %1"
 
 #: plasmoid/qml/PlanItem.qml:49
-#, fuzzy, kde-format
-#| msgid "Show files"
+#, kde-format
 msgid "Show Files"
 msgstr "Näytä tiedostot"
 
 #: plasmoid/qml/PlanItem.qml:57
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Backup"
+#, kde-format
 msgid "Save Backup"
 msgstr "Tallenna varmuuskopio"
 
 #: plasmoid/qml/PlanItem.qml:65
-#, fuzzy, kde-format
-#| msgid "Prune old backups"
+#, kde-format
 msgid "Prune Old Backups"
 msgstr "Hylkää vanhat varmuuskopiot"
 
 #: plasmoid/qml/PlanItem.qml:73
 #, kde-format
 msgid "View Log"
-msgstr ""
+msgstr "Näytä loki"
 
 #: purger/main.cpp:23
 #, kde-kuit-format

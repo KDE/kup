@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:47+0000\n"
-"PO-Revision-Date: 2026-08-22 10:10+0200\n"
+"PO-Revision-Date: 2026-10-01 13:28+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: daemon/backupjob.cpp:49
 #, kde-kuit-format
@@ -1214,22 +1214,16 @@ msgstr "Exclure les fichiers et les dossiers satisfaisants les motifs suivants"
 #, kde-format
 msgctxt "manual as in 'documentation'"
 msgid "bup-index manual"
-msgstr ""
+msgstr "manuel de bup-index"
 
 #: kcm/backupplanwidget.cpp:943
 #, kde-format
 msgctxt "manual as in 'documentation'"
 msgid "rsync manual"
-msgstr ""
+msgstr "Manuel de rsync"
 
 #: kcm/backupplanwidget.cpp:945
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented in the <link "
-#| "url='%1'>bup-index manual page</link>."
+#, kde-kuit-format
 msgctxt "@info %2 is either 'bup-index manual' or 'rsync manual'"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1239,7 +1233,7 @@ msgstr ""
 "Les motifs doivent être listés dans un fichier de type texte, avec un motif "
 "par ligne. Les fichiers et les dossiers dont les noms correspondent aux "
 "motifs, seront exclus de la sauvegarde. Le format de motif est documenté "
-"dans la <link url='%1'>page de manuel de bup-index</link>."
+"dans <link url='%1'>%2</link>."
 
 #: kcm/backupplanwidget.cpp:965
 #, kde-kuit-format
