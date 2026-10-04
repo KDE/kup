@@ -1,7 +1,7 @@
 # Translation of kup.po to Euskara/Basque (eu).
 # Copyright (C) 2020-2026 This file is copyright:
 # This file is distributed under the same license as the kup package.
-# SPDX-FileCopyrightText: 2025-2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2025-2026 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2025, 2026.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:47+0000\n"
-"PO-Revision-Date: 2026-05-17 17:46+0200\n"
+"PO-Revision-Date: 2026-10-04 00:42+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: daemon/backupjob.cpp:49
 #, kde-kuit-format
@@ -231,18 +231,14 @@ msgid "User Backups"
 msgstr "Erabiltzailearen babeskopiak"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
-"Kup ez dago gaituta, gaitu ezazu sistema-ezarpenak modulutik. "
-"<command>kcmshell5 kup</command> exekutatuz egin dezakezu"
+"Kup ez dago gaituta, sistema-ezarpenak modulutik gaitu ezazu. "
+"<command>kcmshell6 kup</command> exekutatuz egin dezakezu"
 
 #: daemon/main.cpp:37
 #, kde-kuit-format
@@ -850,13 +846,7 @@ msgid "Back to overview"
 msgstr "Atzera ikuspegi orokorrera"
 
 #: kcm/backupplanwidget.cpp:524
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Back up multiple versions over time of the files in the source folders. "
-#| "This allows older versions of files or deleted files to be recovered.<nl/"
-#| "></nl/>The backup archive will grow in size over time, and can only be "
-#| "accessed using the recovery tools provided by this program."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Back up multiple versions over time of the files in the source folders. This "
@@ -866,7 +856,7 @@ msgid ""
 msgstr ""
 "Denboran zehar sorburu-karpetako fitxategien babeskopia bertsio anizkoitzak "
 "egin. Horrek fitxategien bertsio zaharragoak edo ezabatutako fitxategiak "
-"berreskuratzeko aukera ematen du.<nl/></nl/>Denborarekin Babeskopia-artxiboa "
+"berreskuratzeko aukera ematen du.<nl/><nl/>Denborarekin Babeskopia-artxiboa "
 "handitu egingo da, eta programa honek eskaintzen dituen tresnak erabiliz "
 "bakarrik atzitu ahal izango da."
 
@@ -936,6 +926,9 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"Fitxategi eta karpeta batzuk (cacheak edo zifratutako karpetak esaterako) "
+"automatikoki baztertzen dira. Hau <interface><link>Aurreratua</link></"
+"interface> ezarpenetan konfiguratu dezakezu."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1207,22 +1200,16 @@ msgstr "Baztertu fitxategiak eta karpetak ereduetan oinarrituta"
 #, kde-format
 msgctxt "manual as in 'documentation'"
 msgid "bup-index manual"
-msgstr ""
+msgstr "bup-index eskuliburua"
 
 #: kcm/backupplanwidget.cpp:943
 #, kde-format
 msgctxt "manual as in 'documentation'"
 msgid "rsync manual"
-msgstr ""
+msgstr "rsync eskuliburua"
 
 #: kcm/backupplanwidget.cpp:945
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented in the <link "
-#| "url='%1'>bup-index manual page</link>."
+#, kde-kuit-format
 msgctxt "@info %2 is either 'bup-index manual' or 'rsync manual'"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1231,8 +1218,8 @@ msgid ""
 msgstr ""
 "Ereduak testu-fitxategi batean zerrendatu behar dira, eredu bat lerroko. "
 "Ereduetako edozeinekin bat datozen izenak dituzten fitxategiak eta karpetak "
-"babeskopiatik kanpo utziko dira. Ereduen formatu <link url='%1'>eskuliburuko "
-"bup-index orrialdean</link> dokumentatuta dago."
+"babeskopiatik kanpo utziko dira. Ereduen formatua <link url='%1'>%2</link>n "
+"dokumentatuta dago."
 
 #: kcm/backupplanwidget.cpp:965
 #, kde-kuit-format
@@ -1246,26 +1233,22 @@ msgid "Select pattern file"
 msgstr "Aukeratu eredu-fitxategia"
 
 #: kcm/backupplanwidget.cpp:985
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Baztertu karpeta"
+msgstr "Cacheak baztertu"
 
 #: kcm/backupplanwidget.cpp:986
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "Berriz sor daitekeen aldi baterako datuak"
 
 #: kcm/backupplanwidget.cpp:995
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "Baztertu karpeta"
+msgstr "Zifratutako karpetak baztertu"
 
 #: kcm/backupplanwidget.cpp:996
 #, kde-kuit-format
@@ -1274,26 +1257,26 @@ msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
 msgstr ""
+"Giltzapetik askatutako karpeta zifratuen edukia, Plasma Vault-ekin "
+"sortutakoena, esaterako"
 
 #: kcm/backupplanwidget.cpp:1004
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "Baztertu karpeta"
+msgstr "Zakarrontzia baztertu"
 
 #: kcm/backupplanwidget.cpp:1005
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "Betiko ezabatu ez diren zakarrontziko fitxategiak"
 
 #: kcm/backupplanwidget.cpp:1014
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "Aplikazioen egoerak baztertu"
 
 #: kcm/backupplanwidget.cpp:1015
 #, kde-kuit-format
@@ -1301,12 +1284,14 @@ msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
 msgstr ""
+"Aplikazio bakoitzaren egoera-datuak, hala nola leihoaren kokapena, historia "
+"eta irekitako fitxategiak"
 
 #: kcm/backupplanwidget.cpp:1024
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "Edukiontziak eta alegiazko makinen irudiak baztertu"
 
 #: kcm/backupplanwidget.cpp:1025
 #, kde-kuit-format
@@ -1315,24 +1300,26 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"Edukiontziak edo alegiazko makinen irudiak, GNOME Boxes, Docker, Podman eta "
+"Incus bidez sortutakoak, esaterako"
 
 #: kcm/backupplanwidget.cpp:1033
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "Bat-bateko kopiak baztertu"
 
 #: kcm/backupplanwidget.cpp:1034
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Btrfs fitxategi-sistemaren bat-bateko kopiak"
 
 #: kcm/backupplanwidget.cpp:1044
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "Erabiltzaile-mailako Flatpakak baztertu"
 
 #: kcm/backupplanwidget.cpp:1045
 #, kde-kuit-format
@@ -1341,6 +1328,8 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"Berriro zama-jaitsi daitezkeen Flatpak aplikazioak eta exekuzio-inguruneak "
+"(ez du eragotziko aplikazio horien ezarpenen eta datuen babeskopia egitea)"
 
 #: kcm/backupplanwidget.cpp:1067
 #, kde-kuit-format
@@ -1462,6 +1451,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename><nl/>babeskopiatik <emphasis>automatikoki baztertzen "
+"da</emphasis>.<nl/>Hori <interface>Aurreratua</interface> ezarpenetan "
+"kontrola dezakezu."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
@@ -1581,11 +1573,10 @@ msgid "Configure Backup Plans…"
 msgstr "Konfiguratu babeskopia egitasmoak…"
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr "Ez da babeskopia egitasmorik konfiguratu"
+msgstr "Ez da egitasmorik konfiguratu"
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1600,43 +1591,36 @@ msgid "Backup destination not available"
 msgstr "Babeskopia helburua ez dago erabilgarri"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "Bi&rzamatu babeskopia egitasmoak"
+msgstr "Ireki babeskopia egitasmoak ezartzeko"
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
 msgstr "Azkenekoz gordeta: %1"
 
 #: plasmoid/qml/PlanItem.qml:49
-#, fuzzy, kde-format
-#| msgid "Show files"
+#, kde-format
 msgid "Show Files"
-msgstr "Erakutsi fitxategiak"
+msgstr "Fitxategiak erakutsi"
 
 #: plasmoid/qml/PlanItem.qml:57
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Backup"
+#, kde-format
 msgid "Save Backup"
-msgstr "Gorde babeskopia"
+msgstr "Babeskopia gorde"
 
 #: plasmoid/qml/PlanItem.qml:65
-#, fuzzy, kde-format
-#| msgid "Prune old backups"
+#, kde-format
 msgid "Prune Old Backups"
-msgstr "Kimatu babeskopia zaharrak"
+msgstr "Babeskopia zaharrak kimatu"
 
 #: plasmoid/qml/PlanItem.qml:73
 #, kde-format
 msgid "View Log"
-msgstr ""
+msgstr "Egunkaria ikusi"
 
 #: purger/main.cpp:23
 #, kde-kuit-format

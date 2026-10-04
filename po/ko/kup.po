@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:47+0000\n"
-"PO-Revision-Date: 2026-04-26 22:43+0200\n"
+"PO-Revision-Date: 2026-10-03 22:57+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: daemon/backupjob.cpp:49
 #, kde-kuit-format
@@ -216,18 +216,14 @@ msgid "User Backups"
 msgstr "사용자 백업"
 
 #: daemon/main.cpp:30
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:shell Error message at startup"
-#| msgid ""
-#| "Kup is not enabled, enable it from the system settings module. You can do "
-#| "that by running <command>kcmshell5 kup</command>"
+#, kde-kuit-format
 msgctxt "@info:shell Error message at startup"
 msgid ""
 "Kup is not enabled, enable it from the system settings module. You can do "
 "that by running <command>kcmshell6 kup</command>"
 msgstr ""
 "Kup이 활성화되어 있지 않습니다. 시스템 설정 모듈에서 활성화하십시오. "
-"<command>kcmshell5 kup</command> 명령을 사용할 수 있습니다."
+"<command>kcmshell6 kup</command> 명령을 사용할 수 있습니다."
 
 #: daemon/main.cpp:37
 #, kde-kuit-format
@@ -825,13 +821,7 @@ msgid "Back to overview"
 msgstr "개요로 돌아가기"
 
 #: kcm/backupplanwidget.cpp:524
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Back up multiple versions over time of the files in the source folders. "
-#| "This allows older versions of files or deleted files to be recovered.<nl/"
-#| "></nl/>The backup archive will grow in size over time, and can only be "
-#| "accessed using the recovery tools provided by this program."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Back up multiple versions over time of the files in the source folders. This "
@@ -840,7 +830,7 @@ msgid ""
 "using the recovery tools provided by this program."
 msgstr ""
 "원본 폴더에 있는 파일의 시간별 여러 버전을 백업합니다. 파일의 과거 버전이나 "
-"삭제된 파일을 복구할 수 있습니다.<nl/></nl/>백업 보관 파일의 크기는 시간이 지"
+"삭제된 파일을 복구할 수 있습니다.<nl/><nl/>백업 보관 파일의 크기는 시간이 지"
 "날수록 증가하며, 이 프로그램에서 제공한 복구 도구로만 접근할 수 있습니다."
 
 #: kcm/backupplanwidget.cpp:536
@@ -908,6 +898,8 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
+"일부 파일이나 폴더(캐시나 암호화된 폴더 등)가 자동적으로 제외되었습니다. "
+"<interface><link>고급</link></interface> 설정에서 변경할 수 있습니다."
 
 #: kcm/backupplanwidget.cpp:619
 #, kde-kuit-format
@@ -1171,22 +1163,16 @@ msgstr "패턴과 일치하는 파일이나 폴더 제외"
 #, kde-format
 msgctxt "manual as in 'documentation'"
 msgid "bup-index manual"
-msgstr ""
+msgstr "bup-index 설명서"
 
 #: kcm/backupplanwidget.cpp:943
 #, kde-format
 msgctxt "manual as in 'documentation'"
 msgid "rsync manual"
-msgstr ""
+msgstr "rsync 설명서"
 
 #: kcm/backupplanwidget.cpp:945
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Patterns need to be listed in a text file with one pattern per line. "
-#| "Files and folders with names that match any of the patterns will be "
-#| "excluded from the backup. The pattern format is documented in the <link "
-#| "url='%1'>bup-index manual page</link>."
+#, kde-kuit-format
 msgctxt "@info %2 is either 'bup-index manual' or 'rsync manual'"
 msgid ""
 "Patterns need to be listed in a text file with one pattern per line. Files "
@@ -1195,7 +1181,7 @@ msgid ""
 msgstr ""
 "패턴 파일은 한 줄에 하나씩 패턴을 입력한 일반 텍스트 파일이어야 합니다. 패턴"
 "과 이름이 일치하는 파일이나 폴더는 백업에서 제외됩니다. 패턴 형식은 <link "
-"url='%1'>bup-index 매뉴얼 페이지</link>를 참조하십시오."
+"url='%1'>%2</link>를 참조하십시오."
 
 #: kcm/backupplanwidget.cpp:965
 #, kde-kuit-format
@@ -1209,26 +1195,22 @@ msgid "Select pattern file"
 msgstr "패턴 파일 선택"
 
 #: kcm/backupplanwidget.cpp:985
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "폴더 제외"
+msgstr "캐시 제외"
 
 #: kcm/backupplanwidget.cpp:986
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Temporary data that can be recreated"
-msgstr ""
+msgstr "다시 생성할 수 있는 임시 데이터"
 
 #: kcm/backupplanwidget.cpp:995
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude encrypted folders"
-msgstr "폴더 제외"
+msgstr "암호화된 폴더 제외"
 
 #: kcm/backupplanwidget.cpp:996
 #, kde-kuit-format
@@ -1236,40 +1218,38 @@ msgctxt "@info"
 msgid ""
 "Contents of unlocked encrypted folders, such as those created with Plasma "
 "Vault"
-msgstr ""
+msgstr "Plasma 비밀 공간 등으로 생성한 암호화된 폴더의 잠금 해제된 내용"
 
 #: kcm/backupplanwidget.cpp:1004
-#, fuzzy, kde-kuit-format
-#| msgctxt "@action:button"
-#| msgid "Exclude Folder"
+#, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude trash"
-msgstr "폴더 제외"
+msgstr "휴지통 제외"
 
 #: kcm/backupplanwidget.cpp:1005
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Files in trash that have not been permanently deleted"
-msgstr ""
+msgstr "완전히 삭제되지 않고 휴지통에 남아 있는 파일"
 
 #: kcm/backupplanwidget.cpp:1014
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude app states"
-msgstr ""
+msgstr "앱 상태 제외"
 
 #: kcm/backupplanwidget.cpp:1015
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "App-specific state data, such as window position, history, and open files"
-msgstr ""
+msgstr "창 위치, 과거 기록, 열린 파일과 같은 앱별 상태 데이터"
 
 #: kcm/backupplanwidget.cpp:1024
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude containers and virtual machine images"
-msgstr ""
+msgstr "컨테이너와 가상 머신 이미지 제외"
 
 #: kcm/backupplanwidget.cpp:1025
 #, kde-kuit-format
@@ -1278,24 +1258,25 @@ msgid ""
 "Containers or virtual machine images, such as those created by GNOME Boxes, "
 "Docker, Podman, and Incus"
 msgstr ""
+"그놈 박스, Docker, Podman, Incus 등에서 사용하는 컨테이너나 가상 머신 이미지"
 
 #: kcm/backupplanwidget.cpp:1033
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude snapshots"
-msgstr ""
+msgstr "스냅샷 제외"
 
 #: kcm/backupplanwidget.cpp:1034
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Btrfs filesystem snapshots"
-msgstr ""
+msgstr "Btrfs 파일 시스템 스냅샷"
 
 #: kcm/backupplanwidget.cpp:1044
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr ""
+msgstr "사용자 수준 Flatpak 제외"
 
 #: kcm/backupplanwidget.cpp:1045
 #, kde-kuit-format
@@ -1304,6 +1285,8 @@ msgid ""
 "Flatpak apps and runtimes that can be re-downloaded (will not prevent "
 "backing up settings and data for these apps)"
 msgstr ""
+"다시 다운로드할 수 있는 Flatpak 앱과 런타임(해당 앱의 설정과 데이터 백업에는 "
+"영향을 주지 않음)"
 
 #: kcm/backupplanwidget.cpp:1067
 #, kde-kuit-format
@@ -1420,6 +1403,9 @@ msgid ""
 "from the backup.<nl/>You can control this in the <interface>Advanced</"
 "interface> settings."
 msgstr ""
+"<filename>%1</filename>이(가)<nl/>백업 계획에서 <emphasis>자동으로 제외</"
+"emphasis>되었습니다.<nl/><interface>고급</interface> 설정에서 변경할 수 있습"
+"니다."
 
 #: kcm/folderselectionmodel.cpp:109
 #, kde-kuit-format
@@ -1539,11 +1525,10 @@ msgid "Configure Backup Plans…"
 msgstr "백업 계획 설정…"
 
 #: plasmoid/qml/main.qml:61
-#, fuzzy, kde-format
-#| msgid "No backup plans configured"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "No plans configured"
-msgstr "백업 계획을 설정하지 않았음"
+msgstr "설정한 계획 없음"
 
 #: plasmoid/qml/main.qml:66
 #, kde-format
@@ -1558,43 +1543,36 @@ msgid "Backup destination not available"
 msgstr "백업 대상을 사용할 수 없음"
 
 #: plasmoid/qml/main.qml:74
-#, fuzzy, kde-format
-#| msgid "&Reload backup plans"
+#, kde-format
 msgctxt "status in tooltip"
 msgid "Open to set up backup plans"
-msgstr "백업 계획 새로 고침(&R)"
+msgstr "백업 계획을 설정하려면 열기"
 
 #: plasmoid/qml/PlanItem.qml:38
-#, fuzzy, kde-format
-#| msgctxt "%1 is fancy formatted date"
-#| msgid "Last saved: %1"
+#, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
 msgstr "마지막 저장: %1"
 
 #: plasmoid/qml/PlanItem.qml:49
-#, fuzzy, kde-format
-#| msgid "Show files"
+#, kde-format
 msgid "Show Files"
 msgstr "파일 표시"
 
 #: plasmoid/qml/PlanItem.qml:57
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Backup"
+#, kde-format
 msgid "Save Backup"
 msgstr "백업 저장"
 
 #: plasmoid/qml/PlanItem.qml:65
-#, fuzzy, kde-format
-#| msgid "Prune old backups"
+#, kde-format
 msgid "Prune Old Backups"
 msgstr "오래된 백업 정리"
 
 #: plasmoid/qml/PlanItem.qml:73
 #, kde-format
 msgid "View Log"
-msgstr ""
+msgstr "기록 보기"
 
 #: purger/main.cpp:23
 #, kde-kuit-format
