@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-16 02:45+0000\n"
-"PO-Revision-Date: 2026-09-27 16:45+0200\n"
+"PO-Revision-Date: 2026-10-12 23:02+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -69,7 +69,7 @@ msgstr ""
 #: daemon/bupjob.cpp:101
 #, kde-format
 msgid "Checking backup integrity"
-msgstr "Kontrollerer integriteteten til reservekopiane"
+msgstr "Kontrollerer integriteten til reservekopiane"
 
 #: daemon/bupjob.cpp:120 daemon/bupverificationjob.cpp:63
 #, kde-kuit-format
@@ -287,7 +287,7 @@ msgstr "Tek reservekopi"
 #, kde-format
 msgctxt "status in tooltip"
 msgid "Checking backup integrity"
-msgstr "Kontrollerer integriteteten til reservekopiane"
+msgstr "Kontrollerer integriteten til reservekopiane"
 
 #: daemon/planexecutor.cpp:73 plasmoid/qml/main.qml:35
 #, kde-format
@@ -1576,7 +1576,7 @@ msgstr "Opna for å setja opp tidsplanar"
 #, kde-format
 msgctxt "%1 is formatted relative date"
 msgid "Last saved: %1"
-msgstr "Sist teken: %1"
+msgstr "Sist lagra: %1"
 
 #: plasmoid/qml/PlanItem.qml:49
 #, kde-format
@@ -1637,7 +1637,7 @@ msgstr "%1 (kopi)"
 #, kde-format
 msgctxt "%1 is fancy formatted date"
 msgid "Last saved: %1"
-msgstr "Sist teken: %1"
+msgstr "Sist lagra: %1"
 
 #: settings/backupplan.cpp:233
 #, kde-format
