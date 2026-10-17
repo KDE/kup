@@ -9,6 +9,7 @@ After=graphical-session.target
 
 [Service]
 ExecStart=@KDE_INSTALL_FULL_BINDIR@/kup-daemon
+ExecCondition=@KDE_INSTALL_FULL_BINDIR@/kde-systemd-start-condition --condition "kuprc:Kup settings:Backups enabled:false"
 Type=exec
 BusName=org.kde.kupdaemon
 TimeoutStopSec=5sec
