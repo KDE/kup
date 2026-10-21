@@ -1,0 +1,33 @@
+// -*- mode: javascript -*-
+
+// SPDX-FileCopyrightText: 2025 Kristen McWilliam <kristen@kde.org>
+// SPDX-FileCopyrightText: 2026 Bharadwaj Raju <bharadwaj.raju@machinesoul.in>
+//
+// SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
+// Polkit rule allowing Plasma Setup to restore backup without requiring interactive authentication.
+//
+// /etc/polkit-1/rules.d/plasma-setup.rules
+
+polkit.addRule(function (action, subject) {
+    // Only allow actions for the "plasma-setup" user.
+    if (subject.user !== "plasma-setup") {
+        return;
+    }
+
+    // Uncomment the following log action for debugging purposes
+    // polkit.log("plasma-setup: action: " + action + ", subject: " + subject);
+
+    // Actions that are allowed without authentication for the "plasma-setup" user.
+    var allowedActions = [
+        "org.kde.plasmasetup.restorebackup.restorebackup",
+        "org.freedesktop.udisks2.filesystem-mount", // Mount external drives
+        "org.freedesktop.udisks2.filesystem-mount-other-seat", // Mount external drives
+    ];
+
+    // Check if the current action is in our allowed list.
+    if (allowedActions.indexOf(action.id) >= 0) {
+        polkit.log("plasma-setup: allowing action " + action.id);
+        return polkit.Result.YES;
+    }
+});
