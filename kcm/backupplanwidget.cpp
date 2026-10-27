@@ -1042,7 +1042,7 @@ KPageWidgetItem *BackupPlanWidget::createAdvancedPage(bool pPar2Available)
         xi18nc("@option:check", "Exclude user-level Flatpaks"),
         xi18nc("@info", "Flatpak apps and runtimes that can be re-downloaded (will not prevent backing up settings and data for these apps)"),
         QStringLiteral("kcfg_Exclude user flatpaks"));
-    connect(lExcludeSnapshotsCheckbox, &QCheckBox::toggled, mSourceSelectionWidget, [this](bool state) {
+    connect(lExcludeUserFlatpaksCheckbox, &QCheckBox::toggled, mSourceSelectionWidget, [this](bool state) {
         mSourceSelectionWidget->mModel->dynamicExclusions.mExcludeUserFlatpaks = state;
         mSourceSelectionWidget->mModel->recalculateDynamicExclusions();
     });
