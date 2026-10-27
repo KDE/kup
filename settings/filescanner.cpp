@@ -114,7 +114,7 @@ void FileScanner::scanFolder(const QString &pPath)
 
 void FileScanner::checkPathForProblems(const QFileInfo &pFileInfo)
 {
-    if (pFileInfo.isSymLink()) {
+    if (isPathIncluded(pFileInfo.absoluteFilePath()) && pFileInfo.isSymLink()) {
         if (isSymlinkProblematic(pFileInfo.symLinkTarget())) {
             mSymlinksNotOk.insert(pFileInfo.absoluteFilePath(), pFileInfo.symLinkTarget());
             mSymlinkTimer->start();
@@ -125,7 +125,7 @@ void FileScanner::checkPathForProblems(const QFileInfo &pFileInfo)
     } else if (pFileInfo.isDir()) {
         QCoreApplication::postEvent(this, new ScanFolderEvent(pFileInfo.absoluteFilePath()), Qt::LowEventPriority);
     } else {
-        if (!pFileInfo.isReadable() && isPathIncluded(pFileInfo.absoluteFilePath())) {
+        if (isPathIncluded(pFileInfo.absoluteFilePath()) && !pFileInfo.isReadable() && isPathIncluded(pFileInfo.absoluteFilePath())) {
             mUnreadableFiles += pFileInfo.absoluteFilePath();
             mUnreadablesTimer->start();
         }
