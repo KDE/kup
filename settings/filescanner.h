@@ -25,6 +25,8 @@ public:
 public slots:
     void includePath(const QString &pPath);
     void excludePath(const QString &pPath);
+    void excludeFolder(const QString &pPath);
+    void excludeFile(const QString &pPath);
     void setExclusionRegExps(const QSet<QString> &pExclusionRegExps);
 
 signals:
@@ -44,7 +46,8 @@ protected:
     void scanFolder(const QString &pPath);
 
     QSet<QString> mIncludedPaths;
-    QSet<QString> mExcludedPaths;
+    QSet<QString> mExcludedFolders;
+    QSet<QString> mExcludedFiles;
 
     QSet<QString> mUnreadableFolders;
     QSet<QString> mUnreadableFiles;

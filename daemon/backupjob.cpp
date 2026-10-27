@@ -112,9 +112,12 @@ void BackupJob::start()
         QTimer::singleShot(0, this, &BackupJob::performJob);
     });
 
-    const QStringList lAllExclusions = mBackupPlan.mPathsExcluded + lDynExclusions.pathsExcluded(mBackupPlan.mPathsIncluded);
-    for (const QString &lExclude : lAllExclusions) {
-        lFileScanner->excludePath(lExclude);
+    const QStringList lAllFolderExclusions = mBackupPlan.mPathsExcluded + lDynExclusions.pathsExcluded(mBackupPlan.mPathsIncluded);
+    for (const QString &lExclude : lAllFolderExclusions) {
+        lFileScanner->excludeFolder(lExclude);
+    }
+    for (const QString &lExcludeFile : std::as_const(mBackupPlan.mFilesExcluded)) {
+        lFileScanner->excludeFile(lExcludeFile);
     }
 
     for (const QString &lPath : std::as_const(mBackupPlan.mPathsIncluded)) {

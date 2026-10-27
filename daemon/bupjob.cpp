@@ -139,7 +139,8 @@ void BupJob::startIndexing()
     DynamicExclusions lDynExclusions;
     lDynExclusions.setFromPlan(mBackupPlan);
 
-    foreach (const QString &lExclude, mBackupPlan.mPathsExcluded + lDynExclusions.pathsExcluded(mBackupPlan.mPathsIncluded)) {
+    const QStringList lAllExclusions = mBackupPlan.mPathsExcluded + mBackupPlan.mFilesExcluded + lDynExclusions.pathsExcluded(mBackupPlan.mPathsIncluded);
+    foreach (const QString &lExclude, lAllExclusions) {
         mIndexProcess << QStringLiteral("--exclude");
         mIndexProcess << lExclude;
     }

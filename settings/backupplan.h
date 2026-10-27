@@ -29,6 +29,7 @@ public:
     QString mDescription;
     QStringList mPathsIncluded;
     QStringList mPathsExcluded;
+    QStringList mFilesExcluded;
     bool mExcludeTrash{};
     bool mExcludeAppStates{};
     bool mExcludeCaches{};

@@ -31,7 +31,9 @@ public:
         StateExcludedAutomatic
     };
 
-    enum CustomRoles { IncludeStateRole = 7777 };
+    enum CustomRoles {
+        IncludeStateRole = 7777
+    };
 
     Qt::ItemFlags flags(const QModelIndex &pIndex) const override;
     QVariant data(const QModelIndex &pIndex, int pRole = Qt::DisplayRole) const override;
@@ -39,8 +41,12 @@ public:
 
     void setIncludedPaths(const QSet<QString> &pIncludedPaths);
     void setExcludedPaths(const QSet<QString> &pExcludedPaths);
+    void setExcludedFolders(const QSet<QString> &pExcludedFolders);
+    void setExcludedFiles(const QSet<QString> &pExcludedFiles);
     QSet<QString> includedPaths() const;
     QSet<QString> excludedPaths() const;
+    QSet<QString> excludedFolders() const;
+    QSet<QString> excludedFiles() const;
     QSet<QString> dynamicallyExcludedPaths() const;
 
     /**
@@ -52,6 +58,8 @@ public:
      * Exclude the specified path. All subdirs will be reset.
      */
     void excludePath(const QString &pPath);
+    void excludeFolder(const QString &pPath);
+    void excludeFile(const QString &pPath);
 
     int columnCount(const QModelIndex &) const override
     {
@@ -71,16 +79,19 @@ public slots:
 
 signals:
     void includedPathAdded(const QString &pPath);
-    void excludedPathAdded(const QString &pPath);
     void includedPathRemoved(const QString &pPath);
-    void excludedPathRemoved(const QString &pPath);
+    void excludedFolderAdded(const QString &pPath);
+    void excludedFolderRemoved(const QString &pPath);
+    void excludedFileAdded(const QString &pPath);
+    void excludedFileRemoved(const QString &pPath);
 
 private:
     QModelIndex findLastLeaf(const QModelIndex &index);
     void removeSubDirs(const QString &path);
 
     QSet<QString> mIncludedPaths;
-    QSet<QString> mExcludedPaths;
+    QSet<QString> mExcludedFolders;
+    QSet<QString> mExcludedFiles;
     QSet<QString> mDynamicallyExcludedPaths;
 };
 

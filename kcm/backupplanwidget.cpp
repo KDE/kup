@@ -69,8 +69,8 @@ ConfigExcludeDummy::ConfigExcludeDummy(FolderSelectionModel *pModel, FolderSelec
     , mModel(pModel)
     , mTreeView(pParent)
 {
-    connect(mModel, &FolderSelectionModel::excludedPathAdded, this, &ConfigExcludeDummy::excludeListChanged);
-    connect(mModel, &FolderSelectionModel::excludedPathRemoved, this, &ConfigExcludeDummy::excludeListChanged);
+    connect(mModel, &FolderSelectionModel::excludedFolderAdded, this, &ConfigExcludeDummy::excludeListChanged);
+    connect(mModel, &FolderSelectionModel::excludedFolderRemoved, this, &ConfigExcludeDummy::excludeListChanged);
 }
 
 QStringList ConfigExcludeDummy::excludeList()
@@ -89,6 +89,31 @@ void ConfigExcludeDummy::setExcludeList(QStringList pExcludeList)
     }
     mModel->setExcludedPaths(QSet<QString>(pExcludeList.begin(), pExcludeList.end()));
     mTreeView->expandToShowSelections();
+}
+
+ConfigFileExcludeDummy::ConfigFileExcludeDummy(FolderSelectionModel *pModel, FolderSelectionWidget *pParent)
+    : QWidget(pParent)
+    , mModel(pModel)
+{
+    connect(mModel, &FolderSelectionModel::excludedFileAdded, this, &ConfigFileExcludeDummy::fileExcludeListChanged);
+    connect(mModel, &FolderSelectionModel::excludedFileRemoved, this, &ConfigFileExcludeDummy::fileExcludeListChanged);
+}
+
+QStringList ConfigFileExcludeDummy::fileExcludeList()
+{
+    QStringList lList = mModel->excludedFiles().values();
+    lList.sort();
+    return lList;
+}
+
+void ConfigFileExcludeDummy::setFileExcludeList(QStringList pFileExcludeList)
+{
+    for (int i = 0; i < pFileExcludeList.count(); ++i) {
+        if (!QFile::exists(pFileExcludeList.at(i))) {
+            pFileExcludeList.removeAt(i--);
+        }
+    }
+    mModel->setExcludedFiles(QSet<QString>(pFileExcludeList.begin(), pFileExcludeList.end()));
 }
 
 FolderSelectionWidget::FolderSelectionWidget(FolderSelectionModel *pModel, BackupPlan *pBackupPlan, QWidget *pParent)
@@ -130,6 +155,8 @@ FolderSelectionWidget::FolderSelectionWidget(FolderSelectionModel *pModel, Backu
     lIncludeDummy->setObjectName(QStringLiteral("kcfg_Paths included"));
     auto lExcludeDummy = new ConfigExcludeDummy(mModel, this);
     lExcludeDummy->setObjectName(QStringLiteral("kcfg_Paths excluded"));
+    auto lFileExcludeDummy = new ConfigFileExcludeDummy(mModel, this);
+    lFileExcludeDummy->setObjectName(QStringLiteral("kcfg_Files excluded"));
 
     qRegisterMetaType<QPair<QSet<QString>, QSet<QString>>>("QPair<QSet<QString>,QSet<QString>>");
     qRegisterMetaType<QHash<QString, QString>>("QHash<QString,QString>");
@@ -148,12 +175,17 @@ FolderSelectionWidget::FolderSelectionWidget(FolderSelectionModel *pModel, Backu
     connect(mWorkerThread, &QThread::finished, lFileScanner, &QObject::deleteLater);
 
     connect(mModel, &FolderSelectionModel::includedPathAdded, lFileScanner, &FileScanner::includePath);
-    connect(mModel, &FolderSelectionModel::excludedPathRemoved, lFileScanner, &FileScanner::includePath);
-    connect(mModel, &FolderSelectionModel::excludedPathAdded, lFileScanner, &FileScanner::excludePath);
-    connect(mModel, &FolderSelectionModel::includedPathRemoved, lFileScanner, &FileScanner::excludePath);
+    connect(mModel, &FolderSelectionModel::excludedFolderRemoved, lFileScanner, &FileScanner::includePath);
+    connect(mModel, &FolderSelectionModel::excludedFolderAdded, lFileScanner, &FileScanner::excludeFolder);
+    connect(mModel, &FolderSelectionModel::includedPathRemoved, lFileScanner, &FileScanner::excludeFolder);
+    connect(mModel, &FolderSelectionModel::excludedFileAdded, lFileScanner, &FileScanner::excludeFile);
+    connect(mModel, &FolderSelectionModel::excludedFileRemoved, lFileScanner, &FileScanner::includePath);
     connect(lFileScanner, &FileScanner::unreadablesChanged, this, &FolderSelectionWidget::setUnreadables);
     connect(lFileScanner, &FileScanner::symlinkProblemsChanged, this, &FolderSelectionWidget::setSymlinks);
     mWorkerThread->start();
+
+    mModel->dynamicExclusions.setFromPlan(*mBackupPlan);
+    mModel->recalculateDynamicExclusions();
 }
 
 FolderSelectionWidget::~FolderSelectionWidget()
@@ -226,6 +258,7 @@ void FolderSelectionWidget::updateMessage()
                                        "solution is to exclude the folder from the backup plan.",
                                        mUnreadableFolders.first()));
         mExcludeActionPath = mUnreadableFolders.first();
+        mExcludeActionIsFile = false;
         mExcludeAction->setText(i18nc("@action:button", "Exclude Folder"));
         mMessageWidget->addAction(mExcludeAction);
         mMessageWidget->animatedShow();
@@ -238,6 +271,7 @@ void FolderSelectionWidget::updateMessage()
                                        "to exclude this file from the backup plan.",
                                        mUnreadableFiles.first()));
         mExcludeActionPath = mUnreadableFiles.first();
+        mExcludeActionIsFile = true;
         mExcludeAction->setText(i18nc("@action:button", "Exclude File"));
         mMessageWidget->addAction(mExcludeAction);
         mMessageWidget->animatedShow();
@@ -272,7 +306,11 @@ void FolderSelectionWidget::updateMessage()
 
 void FolderSelectionWidget::executeExcludeAction()
 {
-    mModel->excludePath(mExcludeActionPath);
+    if (mExcludeActionIsFile) {
+        mModel->excludeFile(mExcludeActionPath);
+    } else {
+        mModel->excludeFolder(mExcludeActionPath);
+    }
 }
 
 void FolderSelectionWidget::executeIncludeAction()

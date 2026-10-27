@@ -64,6 +64,8 @@ void RsyncJob::performJob()
     DynamicExclusions lDynExclusions;
     lDynExclusions.setFromPlan(mBackupPlan);
 
+    const QStringList lAllExclusions = mBackupPlan.mPathsExcluded + mBackupPlan.mFilesExcluded + lDynExclusions.pathsExcluded(mBackupPlan.mPathsIncluded);
+
     QStringList lIncludeNames;
     foreach (const QString &lInclude, mBackupPlan.mPathsIncluded) {
         lIncludeNames << lastPartOfPath(lInclude);
@@ -71,13 +73,13 @@ void RsyncJob::performJob()
     if (lIncludeNames.removeDuplicates() > 0) {
         // There would be a naming conflict in the destination folder, instead use full paths.
         mRsyncProcess << QStringLiteral("-R");
-        foreach (const QString &lExclude, mBackupPlan.mPathsExcluded + lDynExclusions.pathsExcluded(mBackupPlan.mPathsIncluded)) {
+        foreach (const QString &lExclude, lAllExclusions) {
             mRsyncProcess << QStringLiteral("--exclude") << lExclude;
         }
     } else {
         // when NOT using -R, need to then strip parent paths from excludes, everything above the
         // include. Leave the leading slash!
-        foreach (QString lExclude, mBackupPlan.mPathsExcluded + lDynExclusions.pathsExcluded(mBackupPlan.mPathsIncluded)) {
+        foreach (QString lExclude, lAllExclusions) {
             for (int i = 0; i < mBackupPlan.mPathsIncluded.length(); ++i) {
                 const QString &lInclude = mBackupPlan.mPathsIncluded.at(i);
                 QString lIncludeWithSlash = lInclude;

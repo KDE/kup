@@ -164,10 +164,13 @@ QString KupDaemon::getRepositoryPath(const QString &pPath) const
         auto lPlan = lExecutor->mPlan;
 
         bool lIsIncluded = std::any_of(lPlan->mPathsIncluded.cbegin(), lPlan->mPathsIncluded.cend(), [&](const QString &lIncludedPath) {
+            if (lPlan->mFilesExcluded.contains(pPath)) {
+                return false;
+            }
             bool lIsExcluded = std::any_of(lPlan->mPathsExcluded.cbegin(), lPlan->mPathsExcluded.cend(), [&](const QString &lExcludedPath) {
-                return pPath.startsWith(lExcludedPath) && lExcludedPath.length() > lIncludedPath.length();
+                return (pPath == lExcludedPath || pPath.startsWith(lExcludedPath + QLatin1Char('/'))) && lExcludedPath.length() > lIncludedPath.length();
             });
-            return pPath.startsWith(lIncludedPath) && !lIsExcluded;
+            return (pPath == lIncludedPath || pPath.startsWith(lIncludedPath + QLatin1Char('/'))) && !lIsExcluded;
         });
 
         if (lExecutor->destinationAvailable() && lPlan->mBackupType == BackupType::BupType && lIsIncluded) {

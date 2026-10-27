@@ -145,7 +145,7 @@ const QSet<QString> &FileScanner::unreadableFolders()
 
 void FileScanner::includePath(const QString &pPath)
 {
-    if (!mExcludedPaths.remove(pPath)) {
+    if (!mExcludedFolders.remove(pPath) && !mExcludedFiles.remove(pPath)) {
         mIncludedPaths += pPath;
     }
     mIncludedPathsRemaining[pPath] = true;
@@ -164,40 +164,74 @@ void FileScanner::includePath(const QString &pPath)
 
 void FileScanner::excludePath(const QString &pPath)
 {
+    QFileInfo lInfo(pPath);
+    if (lInfo.isFile()) {
+        excludeFile(pPath);
+    } else {
+        excludeFolder(pPath);
+    }
+}
+
+void FileScanner::excludeFolder(const QString &pPath)
+{
     if (!mIncludedPaths.remove(pPath)) {
-        mExcludedPaths += pPath;
+        mExcludedFolders += pPath;
     }
 
-    QFileInfo lInfo(pPath);
-    if (lInfo.isDir()) {
-        QString lPath = pPath + QStringLiteral("/");
-        QSet<QString>::iterator it = mUnreadableFiles.begin();
-        while (it != mUnreadableFiles.end()) {
-            if (it->startsWith(lPath)) {
-                mUnreadablesTimer->start();
-                it = mUnreadableFiles.erase(it);
-            } else {
-                ++it;
-            }
+    QString lPath = pPath + QStringLiteral("/");
+    QSet<QString>::iterator it = mUnreadableFiles.begin();
+    while (it != mUnreadableFiles.end()) {
+        if (it->startsWith(lPath)) {
+            mUnreadablesTimer->start();
+            it = mUnreadableFiles.erase(it);
+        } else {
+            ++it;
         }
-        it = mUnreadableFolders.begin();
-        while (it != mUnreadableFolders.end()) {
-            if (it->startsWith(lPath) || *it == pPath) {
-                mUnreadablesTimer->start();
-                it = mUnreadableFolders.erase(it);
-            } else {
-                ++it;
-            }
+    }
+    it = mUnreadableFolders.begin();
+    while (it != mUnreadableFolders.end()) {
+        if (it->startsWith(lPath) || *it == pPath) {
+            mUnreadablesTimer->start();
+            it = mUnreadableFolders.erase(it);
+        } else {
+            ++it;
         }
-    } else if (lInfo.isFile()) {
-        QSet<QString>::iterator it = mUnreadableFiles.begin();
-        while (it != mUnreadableFiles.end()) {
-            if (*it == pPath) {
-                mUnreadablesTimer->start();
-                it = mUnreadableFiles.erase(it);
-            } else {
-                ++it;
-            }
+    }
+
+    QMutableHashIterator<QString, QString> i(mSymlinksNotOk);
+    while (i.hasNext()) {
+        if (!isPathIncluded(i.next().key())) {
+            i.remove();
+            mSymlinkTimer->start();
+        }
+    }
+
+    i = mSymlinksOk;
+    while (i.hasNext()) {
+        i.next();
+        if (!isPathIncluded(i.key())) {
+            i.remove();
+        } else if (isSymlinkProblematic(i.value())) {
+            mSymlinksNotOk.insert(i.key(), i.value());
+            mSymlinkTimer->start();
+            i.remove();
+        }
+    }
+}
+
+void FileScanner::excludeFile(const QString &pPath)
+{
+    if (!mIncludedPaths.remove(pPath)) {
+        mExcludedFiles += pPath;
+    }
+
+    QSet<QString>::iterator it = mUnreadableFiles.begin();
+    while (it != mUnreadableFiles.end()) {
+        if (*it == pPath) {
+            mUnreadablesTimer->start();
+            it = mUnreadableFiles.erase(it);
+        } else {
+            ++it;
         }
     }
 
@@ -240,8 +274,7 @@ bool FileScanner::isPathIncluded(const QString &pPath)
         }
     }
 
-    QFileInfo lInfo(pPath);
-    if (lInfo.isFile() && mExcludedPaths.contains(pPath)) {
+    if (mExcludedFiles.contains(pPath)) {
         return false;
     }
 
@@ -253,7 +286,7 @@ bool FileScanner::isPathIncluded(const QString &pPath)
         }
     }
     int lLongestExclude = 0;
-    foreach (const QString &lPath, mExcludedPaths) {
+    foreach (const QString &lPath, mExcludedFolders) {
         bool lMatches = pPath == lPath || pPath.startsWith(lPath + QStringLiteral("/"));
         if (lMatches && lPath.length() > lLongestExclude) {
             lLongestExclude = lPath.length();

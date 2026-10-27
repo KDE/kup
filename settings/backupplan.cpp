@@ -48,6 +48,7 @@ BackupPlan::BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pPare
     addItemBool(QStringLiteral("Exclude user flatpaks"), mExcludeUserFlatpaks, true);
 
     addItemStringList(QStringLiteral("Paths excluded"), mPathsExcluded, lDefaultExcludeList);
+    addItemStringList(QStringLiteral("Files excluded"), mFilesExcluded);
     addItemInt(QStringLiteral("Backup type"), mBackupType);
     addItemInt(QStringLiteral("Backup version"), mBackupVersion);
 
@@ -97,6 +98,7 @@ void BackupPlan::copyFrom(const BackupPlan &pPlan)
     mDescription = i18nc("default description of newly duplicated backup plan", "%1 (copy)", pPlan.mDescription);
     mPathsIncluded = pPlan.mPathsIncluded;
     mPathsExcluded = pPlan.mPathsExcluded;
+    mFilesExcluded = pPlan.mFilesExcluded;
     mBackupType = pPlan.mBackupType;
     mScheduleType = pPlan.mScheduleType;
     mScheduleInterval = pPlan.mScheduleInterval;
@@ -233,6 +235,10 @@ void BackupPlan::usrRead()
     QMutableStringListIterator lExcludes(mPathsExcluded);
     while (lExcludes.hasNext()) {
         ensureNoTrailingSlash(lExcludes.next());
+    }
+    QMutableStringListIterator lFileExcludes(mFilesExcluded);
+    while (lFileExcludes.hasNext()) {
+        ensureNoTrailingSlash(lFileExcludes.next());
     }
     QMutableStringListIterator lIncludes(mPathsIncluded);
     while (lIncludes.hasNext()) {

@@ -50,6 +50,7 @@ protected:
     QStringList mUnreadableFolders;
     QStringList mUnreadableFiles;
     QString mExcludeActionPath;
+    bool mExcludeActionIsFile{false};
     QAction *mExcludeAction;
     QHash<QString, QString> mSymlinkProblems;
     QString mIncludeActionPath;
@@ -85,6 +86,20 @@ public:
     void setExcludeList(QStringList pExcludeList);
     FolderSelectionModel *mModel;
     FolderSelectionWidget *mTreeView;
+};
+
+class ConfigFileExcludeDummy : public QWidget
+{
+    Q_OBJECT
+signals:
+    void fileExcludeListChanged();
+
+public:
+    Q_PROPERTY(QStringList fileExcludeList READ fileExcludeList WRITE setFileExcludeList NOTIFY fileExcludeListChanged USER true)
+    ConfigFileExcludeDummy(FolderSelectionModel *pModel, FolderSelectionWidget *pParent);
+    QStringList fileExcludeList();
+    void setFileExcludeList(QStringList pFileExcludeList);
+    FolderSelectionModel *mModel;
 };
 
 class DirDialog : public QDialog
