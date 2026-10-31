@@ -1684,33 +1684,3 @@ msgstr "Espai lliure: %1"
 msgctxt "@label"
 msgid "This backup plan has never been run."
 msgstr "Aquest pla de còpia de seguretat no s'ha executat mai."
-
-#~ msgid "Save new backup"
-#~ msgstr "Desa una còpia de seguretat nova"
-
-#~ msgid "Prune old backups"
-#~ msgstr "Elimina les còpies de seguretat antigues"
-
-#~ msgid "Show files"
-#~ msgstr "Mostra els fitxers"
-
-#~ msgid "Show log file"
-#~ msgstr "Mostra el fitxer de registre"
-
-#~ msgid "&Configure Kup…"
-#~ msgstr "&Configura el Kup…"
-
-#~ msgctxt "@action:button"
-#~ msgid "New Folder..."
-#~ msgstr "Carpeta nova..."
-
-#~ msgid "Configure Backup Plans..."
-#~ msgstr "Configura els plans de còpia de seguretat..."
-
-#~ msgid "Kup Configuration Module"
-#~ msgstr "Mòdul de configuració del Kup"
-
-#~ msgid "Configuration of backup plans for the Kup backup system"
-#~ msgstr ""
-#~ "Configuració dels plans de còpia de seguretat per al sistema de còpies de "
-#~ "seguretat Kup"
