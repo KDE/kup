@@ -33,7 +33,7 @@ BupJob::BupJob(BackupPlan &pBackupPlan, const QString &pDestinationPath, const Q
     mProgressRegExp.optimize();
     mErrorCountRegExp = QRegularExpression(QStringLiteral("^WARNING: (\\d+) errors encountered while saving."));
     mErrorCountRegExp.optimize();
-    mFileInfoRegExp = QRegularExpression(QStringLiteral("^(?: |A|M) \\/"));
+    mFileInfoRegExp = QRegularExpression(QStringLiteral("^(?: |A|M) '?\\/"));
     mFileInfoRegExp.optimize();
 }
 
@@ -270,7 +270,9 @@ void BupJob::slotReadBupErrors()
     auto lLines = lInput.split(mLineBreaksRegExp, Qt::SkipEmptyParts);
     for (QString &lLine : lLines) {
         lLine.remove(QStringLiteral("\x1b[0K"));
-
+        if (lLine.trimmed().isEmpty()) {
+            continue;
+        }
         qCDebug(KUPDAEMON) << lLine;
         if (mNonsenseRegExp.match(lLine).hasMatch()) {
             continue;
@@ -302,7 +304,7 @@ void BupJob::slotReadBupErrors()
             lFileName = lLine.mid(2);
             continue;
         }
-        if (!lLine.startsWith(QStringLiteral("D /"))) {
+        if (!lLine.startsWith(QStringLiteral("D '/")) && !lLine.startsWith(QStringLiteral("D /"))) {
             mLogStream << lLine << Qt::endl;
         }
     }
