@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:47+0000\n"
-"PO-Revision-Date: 2026-11-18 18:56+0300\n"
+"PO-Revision-Date: 2026-11-19 19:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -914,7 +914,7 @@ msgid ""
 "automatically excluded. You can configure this in the "
 "<interface><link>Advanced</link></interface> settings."
 msgstr ""
-"Kimi dosyalar ve klasörler (önbellekler veya şifreli klasörler gibi), "
+"Kimi dosyalar ve klasörler (ön bellekler veya şifreli klasörler gibi), "
 "kendiliğinden dışlanırlar. Bunu, <interface><link>Gelişmiş</link></"
 "interface> ayarlardan yapılandırabilirsiniz."
 
@@ -1222,7 +1222,7 @@ msgstr "Dizgi dosyası seç"
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude caches"
-msgstr "Önbellekleri dışla"
+msgstr "Ön bellekleri dışla"
 
 #: kcm/backupplanwidget.cpp:986
 #, kde-kuit-format
