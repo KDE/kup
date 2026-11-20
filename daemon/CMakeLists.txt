@@ -16,7 +16,6 @@ bupverificationjob.cpp
 buprepairjob.cpp
 rsyncjob.cpp
 ../settings/backupplan.cpp
-../settings/kupsettings.cpp
 ../settings/kuputils.cpp
 ../settings/dynamicexclusions.cpp
 )
@@ -37,11 +36,31 @@ ecm_qt_declare_logging_category(kupdaemon_SRCS
 )
 
 add_executable(kup-daemon ${kupdaemon_SRCS})
+kconfig_target_kcfg_file(kup-daemon
+    FILE ${CMAKE_CURRENT_SOURCE_DIR}/../settings/kupsettings.kcfg
+    CLASS_NAME KupSettings
+    MUTATORS
+    DEFAULT_VALUE_GETTERS
+    GENERATE_PROPERTIES
+    PARENT_IN_CONSTRUCTOR
+    GENERATE_MOC
+)
+
+kconfig_target_kcfg_file(kup-daemon
+    FILE ${CMAKE_CURRENT_SOURCE_DIR}/../settings/backupplansettings.kcfg
+    CLASS_NAME BackupPlanSettings
+    MUTATORS
+    GENERATE_PROPERTIES
+    PARENT_IN_CONSTRUCTOR
+    GENERATE_MOC
+)
+
 target_link_libraries(kup-daemon
 Qt::Core
 Qt::DBus
 Qt::Gui
 KF${QT_MAJOR_VERSION}::ConfigCore
+KF${QT_MAJOR_VERSION}::ConfigGui
 KF${QT_MAJOR_VERSION}::KIOCore
 KF${QT_MAJOR_VERSION}::KIOFileWidgets
 KF${QT_MAJOR_VERSION}::IdleTime

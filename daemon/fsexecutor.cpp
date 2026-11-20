@@ -31,7 +31,7 @@ bool checkDirExists(const QDir &dir)
 FSExecutor::FSExecutor(BackupPlan *pPlan, KupDaemon *pKupDaemon)
     : PlanExecutor(pPlan, pKupDaemon)
 {
-    mDestinationPath = QDir::cleanPath(mPlan->mFilesystemDestinationPath.toLocalFile());
+    mDestinationPath = QDir::cleanPath(mPlan->filesystemDestinationPath().toLocalFile());
     mDirWatch = new KDirWatch(this);
     connect(mDirWatch, SIGNAL(deleted(QString)), SLOT(checkStatus()));
     mMountWatcher.start();

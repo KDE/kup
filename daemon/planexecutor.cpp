@@ -94,16 +94,16 @@ void PlanExecutor::enterAvailableState()
         emit stateChanged();
     }
     QDateTime lNow = QDateTime::currentDateTimeUtc();
-    switch (mPlan->mScheduleType) {
+    switch (mPlan->scheduleType()) {
     case ScheduleType::MANUAL:
         break;
     case ScheduleType::INTERVAL: {
         QDateTime lNextTime = mPlan->nextScheduledTime();
         if (!lNextTime.isValid() || lNextTime < lNow) {
-            if (!mPlan->mLastCompleteBackup.isValid())
+            if (!mPlan->lastCompleteBackup().isValid())
                 askUserOrStart(xi18nc("@info", "Save the first backup now?"));
             else {
-                QString t = KFormat().formatSpelloutDuration(static_cast<quint64>(mPlan->mLastCompleteBackup.secsTo(lNow)) * 1000);
+                QString t = KFormat().formatSpelloutDuration(static_cast<quint64>(mPlan->lastCompleteBackup().secsTo(lNow)) * 1000);
                 askUserOrStart(xi18nc("@info",
                                       "It has been %1 since last backup was saved.\n"
                                       "Save a new backup now?",
@@ -118,10 +118,10 @@ void PlanExecutor::enterAvailableState()
         break;
     }
     case ScheduleType::USAGE:
-        if (!mPlan->mLastCompleteBackup.isValid()) {
+        if (!mPlan->lastCompleteBackup().isValid()) {
             askUserOrStart(xi18nc("@info", "Save the first backup now?"));
-        } else if (mPlan->mAccumulatedUsageTime > static_cast<quint32>(mPlan->mUsageLimit) * 3600) {
-            QString t = KFormat().formatSpelloutDuration(mPlan->mAccumulatedUsageTime * 1000);
+        } else if (mPlan->accumulatedUsageTime() > static_cast<quint32>(mPlan->usageLimit()) * 3600) {
+            QString t = KFormat().formatSpelloutDuration(mPlan->accumulatedUsageTime() * 1000);
             askUserOrStart(xi18nc("@info",
                                   "You have been active for %1 since last backup was saved.\n"
                                   "Save a new backup now?",
@@ -135,7 +135,7 @@ void PlanExecutor::askUserOrStart(const QString &pUserQuestion)
 {
     // Only ask the first time after destination has become available.
     // Always ask if power saving is active.
-    if ((mPlan->mAskBeforeTakingBackup && mState == ExecutorState::WAITING_FOR_FIRST_BACKUP) || powerSaveActive()) {
+    if ((mPlan->askBeforeTakingBackup() && mState == ExecutorState::WAITING_FOR_FIRST_BACKUP) || powerSaveActive()) {
         askUser(pUserQuestion);
     } else {
         startBackupSaveJob();
@@ -154,7 +154,7 @@ void PlanExecutor::askUser(const QString &pQuestion)
 {
     discardUserQuestion();
     mQuestion = new KNotification(QStringLiteral("StartBackup"), KNotification::Persistent);
-    mQuestion->setTitle(mPlan->mDescription);
+    mQuestion->setTitle(mPlan->description());
     mQuestion->setText(pQuestion);
 
     KNotificationAction *yes = mQuestion->addAction(xi18nc("@action:button", "Save Backup"));
@@ -235,7 +235,7 @@ void PlanExecutor::showLog(const QString &pXdgActivationToken)
 
 void PlanExecutor::startIntegrityCheck()
 {
-    if (mPlan->mBackupType != BackupType::BupType || busy() || !destinationAvailable()) {
+    if (mPlan->backupType() != BackupType::BupType || busy() || !destinationAvailable()) {
         return;
     }
     KJob *lJob = new BupVerificationJob(*mPlan, mDestinationPath, mLogFilePath, mKupDaemon);
@@ -249,7 +249,7 @@ void PlanExecutor::startIntegrityCheck()
 
 void PlanExecutor::startRepairJob()
 {
-    if (mPlan->mBackupType != BackupType::BupType || busy() || !destinationAvailable()) {
+    if (mPlan->backupType() != BackupType::BupType || busy() || !destinationAvailable()) {
         return;
     }
     KJob *lJob = new BupRepairJob(*mPlan, mDestinationPath, mLogFilePath, mKupDaemon);
@@ -302,12 +302,12 @@ void PlanExecutor::finishBackup(KJob *pJob)
         exitBackupRunningState(false);
     } else {
         notifyBackupSucceeded();
-        mPlan->mLastCompleteBackup = QDateTime::currentDateTimeUtc();
+        mPlan->setLastCompleteBackup(QDateTime::currentDateTimeUtc());
         QStorageInfo storageInfo(mDestinationPath);
         if (storageInfo.isValid())
-            mPlan->mLastAvailableSpace = static_cast<double>(storageInfo.bytesAvailable());
+            mPlan->setLastAvailableSpace(static_cast<double>(storageInfo.bytesAvailable()));
         else
-            mPlan->mLastAvailableSpace = -1.0; // unknown size
+            mPlan->setLastAvailableSpace(-1.0); // unknown size
 
         auto lSizeJob = KIO::directorySize(QUrl::fromLocalFile(mDestinationPath));
         connect(lSizeJob, &KJob::result, this, &PlanExecutor::finishSizeCheck);
@@ -319,10 +319,10 @@ void PlanExecutor::finishSizeCheck(KJob *pJob)
 {
     if (pJob->error()) {
         KNotification::event(KNotification::Error, xi18nc("@title:window", "Problem"), pJob->errorText());
-        mPlan->mLastBackupSize = -1.0; // unknown size
+        mPlan->setLastBackupSize(-1.0); // unknown size
     } else {
         auto lSizeJob = qobject_cast<KIO::DirectorySizeJob *>(pJob);
-        mPlan->mLastBackupSize = static_cast<double>(lSizeJob->totalSize());
+        mPlan->setLastBackupSize(static_cast<double>(lSizeJob->totalSize()));
     }
     mPlan->save();
     exitBackupRunningState(pJob->error() == 0);
@@ -425,9 +425,9 @@ void PlanExecutor::exitBackupRunningState(bool pWasSuccessful)
 {
     endSleepInhibit();
     if (pWasSuccessful) {
-        if (mPlan->mScheduleType == ScheduleType::USAGE) {
+        if (mPlan->scheduleType() == ScheduleType::USAGE) {
             // reset usage time after successful backup
-            mPlan->mAccumulatedUsageTime = 0;
+            mPlan->setAccumulatedUsageTime(0);
             mPlan->save();
         }
         mState = ExecutorState::WAITING_FOR_BACKUP_AGAIN;
@@ -450,8 +450,8 @@ void PlanExecutor::updateAccumulatedUsageTime()
         return;
     }
 
-    if (mPlan->mScheduleType == ScheduleType::USAGE) {
-        mPlan->mAccumulatedUsageTime += KUP_USAGE_MONITOR_INTERVAL_S;
+    if (mPlan->scheduleType() == ScheduleType::USAGE) {
+        mPlan->setAccumulatedUsageTime(mPlan->accumulatedUsageTime() + KUP_USAGE_MONITOR_INTERVAL_S);
         mPlan->save();
     }
 
@@ -461,7 +461,7 @@ void PlanExecutor::updateAccumulatedUsageTime()
     emit backupStatusChanged();
 
     // if we're waiting to run backup again, check if it is time now.
-    if (mPlan->mScheduleType == ScheduleType::USAGE
+    if (mPlan->scheduleType() == ScheduleType::USAGE
         && (mState == ExecutorState::WAITING_FOR_FIRST_BACKUP || mState == ExecutorState::WAITING_FOR_BACKUP_AGAIN)) {
         enterAvailableState();
     }
@@ -471,12 +471,12 @@ void PlanExecutor::showBackupFiles(const QString &pXdgActivationToken)
 {
     if (mState == ExecutorState::NOT_AVAILABLE)
         return;
-    if (mPlan->mBackupType == BackupType::BupType) {
+    if (mPlan->backupType() == BackupType::BupType) {
         KProcess lFileDiggerProcess;
         lFileDiggerProcess.setEnv(QStringLiteral("XDG_ACTIVATION_TOKEN"), pXdgActivationToken);
         lFileDiggerProcess.setProgram(QStringLiteral("kup-filedigger"), {mDestinationPath});
         lFileDiggerProcess.startDetached();
-    } else if (mPlan->mBackupType == BackupType::RsyncType) {
+    } else if (mPlan->backupType() == BackupType::RsyncType) {
         auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(mDestinationPath));
         job->start();
     }
@@ -484,7 +484,7 @@ void PlanExecutor::showBackupFiles(const QString &pXdgActivationToken)
 
 void PlanExecutor::showBackupPurger(const QString &pXdgActivationToken)
 {
-    if (mPlan->mBackupType != BackupType::BupType || busy() || !destinationAvailable()) {
+    if (mPlan->backupType() != BackupType::BupType || busy() || !destinationAvailable()) {
         return;
     }
     KProcess lPurgerProcess;
@@ -495,10 +495,10 @@ void PlanExecutor::showBackupPurger(const QString &pXdgActivationToken)
 
 BackupJob *PlanExecutor::createBackupJob()
 {
-    if (mPlan->mBackupType == BackupType::BupType) {
+    if (mPlan->backupType() == BackupType::BupType) {
         return new BupJob(*mPlan, mDestinationPath, mLogFilePath, mKupDaemon);
     }
-    if (mPlan->mBackupType == BackupType::RsyncType) {
+    if (mPlan->backupType() == BackupType::RsyncType) {
         return new RsyncJob(*mPlan, mDestinationPath, mLogFilePath, mKupDaemon);
     }
     qCWarning(KUPDAEMON) << "Invalid backup type in configuration!";

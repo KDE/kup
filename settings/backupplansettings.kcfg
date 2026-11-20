@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-FileCopyrightText: 2020 Simon Persson <simon.persson@mykolab.com>
+
+SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+-->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <include>QDir</include>
+  <include>QStandardPaths</include>
+  <include>KLocalizedString</include>
+  <kcfgfile arg="true">
+    <parameter name="PlanNumber" type="Int"/>
+  </kcfgfile>
+  <group name="Plan/$(PlanNumber)">
+    <entry name="Description" type="String">
+      <label>Name of the backup plan</label>
+      <default code="true">xi18nc("@label Default name for a new backup plan, %1 is the number of the plan in order", "Backup plan %1", PlanNumber)</default>
+    </entry>
+    <entry name="PathsIncluded" key="Paths included" type="StringList">
+      <default code="true">QStringList{QDir::homePath()}</default>
+    </entry>
+    <entry name="PathsExcluded" key="Paths excluded" type="StringList">
+      <default code="true">QStringList{QDir::homePath() + QStringLiteral("/.bup"), QStandardPaths::writableLocation(QStandardPaths::GenericStateLocation)}</default>
+    </entry>
+    <entry name="ExcludeTrash" key="Exclude trash" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="ExcludeAppStates" key="Exclude app states" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="ExcludeCaches" key="Exclude caches" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="ExcludeEncryptedMounts" key="Exclude encrypted folders" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="ExcludeSnapshots" key="Exclude snapshots" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="ExcludeContainers" key="Exclude containers" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="ExcludeUserFlatpaks" key="Exclude user flatpaks" type="Bool">
+      <default>true</default>
+    </entry>
+
+    <entry name="BackupType" key="Backup type" type="Int">
+      <default>0</default>
+    </entry>
+    <entry name="BackupVersion" key="Backup version" type="Int">
+      <default>0</default>
+    </entry>
+
+    <entry name="ScheduleType" key="Schedule type" type="Int">
+      <default>2</default>
+    </entry>
+    <entry name="ScheduleInterval" key="Schedule interval" type="Int">
+      <default>1</default>
+    </entry>
+    <entry name="ScheduleIntervalUnit" key="Schedule interval unit" type="Int">
+      <default>3</default>
+    </entry>
+    <entry name="UsageLimit" key="Usage limit" type="Int">
+      <label>In hours</label>
+      <default>25</default>
+    </entry>
+    <entry name="AskBeforeTakingBackup" key="Ask first" type="Bool">
+      <default>true</default>
+    </entry>
+
+    <entry name="DestinationType" key="Destination type" type="Int">
+      <default>1</default>
+    </entry>
+    <entry name="FilesystemDestinationPath" key="Filesystem destination path" type="Url">
+      <default code="true">QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/.bup"))</default>
+    </entry>
+    <entry name="ExternalUUID" key="External drive UUID" type="String">
+      <default></default>
+    </entry>
+    <entry name="ExternalDestinationPath" key="External drive destination path" type="Path">
+      <default code="true">i18n("Backups")</default>
+    </entry>
+    <entry name="ExternalVolumeLabel" key="External volume label" type="String">
+      <default></default>
+    </entry>
+    <entry name="ExternalVolumeCapacity" key="External volume capacity" type="ULongLong">
+      <default>0</default>
+    </entry>
+    <entry name="ExternalDeviceDescription" key="External device description" type="String">
+      <default></default>
+    </entry>
+    <entry name="ExternalPartitionNumber" key="External partition number" type="Int">
+      <default>0</default>
+    </entry>
+    <entry name="ExternalPartitionsOnDrive" key="External partitions count" type="Int">
+      <default>0</default>
+    </entry>
+
+    <entry name="ShowHiddenFolders" key="Show hidden folders" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="GenerateRecoveryInfo" key="Generate recovery info" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="CheckBackups" key="Check backups" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="ExcludePatterns" key="Exclude patterns" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="ExcludePatternsPath" key="Exclude patterns file path" type="String">
+      <default></default>
+    </entry>
+
+    <entry name="LastCompleteBackup" key="Last complete backup" type="DateTime">
+    </entry>
+    <entry name="LastBackupSize" key="Last backup size" type="Double">
+      <label>Size of the last backup in bytes</label>
+      <default>0</default>
+    </entry>
+    <entry name="LastAvailableSpace" key="Last available space" type="Double">
+      <label>Last known available space on destination</label>
+      <default>0</default>
+    </entry>
+    <entry name="AccumulatedUsageTime" key="Accumulated usage time" type="UInt">
+      <label>How long has Kup been running since last backup, in seconds</label>
+      <default>0</default>
+    </entry>
+  </group>
+</kcfg>

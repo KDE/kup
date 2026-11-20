@@ -34,7 +34,7 @@ include(ECMQtDeclareLoggingCategory)
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets)
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets Qml)
 find_package(KF${QT_MAJOR_VERSION} ${KF6_MIN_VERSION} REQUIRED COMPONENTS
   Solid
   KIO

@@ -57,7 +57,7 @@ void BupVerificationJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pE
             "Integrity check failed (the process crashed). Your backups could be "
             "corrupted! See above for details.")
                    << Qt::endl;
-        if (mBackupPlan.mGenerateRecoveryInfo) {
+        if (mBackupPlan.generateRecoveryInfo()) {
             jobFinishedError(ErrorSuggestRepair,
                              xi18nc("@info notification",
                                     "Failed backup integrity check. Your backups could be corrupted! "
@@ -82,7 +82,7 @@ void BupVerificationJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pE
             "Integrity check failed. Your backups are "
             "corrupted! See above for details.")
                    << Qt::endl;
-        if (mBackupPlan.mGenerateRecoveryInfo) {
+        if (mBackupPlan.generateRecoveryInfo()) {
             jobFinishedError(ErrorSuggestRepair,
                              xi18nc("@info notification",
                                     "Failed backup integrity check. Your backups are corrupted! "

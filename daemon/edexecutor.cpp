@@ -54,7 +54,7 @@ void EDExecutor::deviceAdded(const QString &pUdi)
         lUUID += QStringLiteral("|");
         lUUID += lVolume->label();
     }
-    if (mPlan->mExternalUUID == lUUID) {
+    if (mPlan->externalUUID() == lUUID) {
         mCurrentUdi = pUdi;
         mStorageAccess = lDevice.as<Solid::StorageAccess>();
         enterAvailableState();
@@ -117,7 +117,7 @@ bool EDExecutor::ensureAccessible(bool &pReturnLater)
         if (!mStorageAccess->filePath().isEmpty()) {
             mDestinationPath = mStorageAccess->filePath();
             mDestinationPath += QStringLiteral("/");
-            mDestinationPath += mPlan->mExternalDestinationPath;
+            mDestinationPath += mPlan->externalDestinationPath();
             QDir lDir(mDestinationPath);
             if (!lDir.exists()) {
                 lDir.mkpath(mDestinationPath);

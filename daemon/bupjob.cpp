@@ -50,7 +50,7 @@ void BupJob::performJob()
                                 "needed but could not be found, maybe it is not installed?"));
         return;
     }
-    if (mBackupPlan.mGenerateRecoveryInfo && lExitCode != 0) {
+    if (mBackupPlan.generateRecoveryInfo() && lExitCode != 0) {
         jobFinishedError(ErrorWithoutLog,
                          xi18nc("@info notification",
                                 "The <application>par2</application> program is "
@@ -79,7 +79,7 @@ void BupJob::performJob()
         return;
     }
 
-    if (mBackupPlan.mCheckBackups) {
+    if (mBackupPlan.checkBackups()) {
         mFsckProcess << QStringLiteral("bup");
         mFsckProcess << QStringLiteral("-d") << mDestinationPath;
         mFsckProcess << QStringLiteral("fsck") << QStringLiteral("--quick");
@@ -114,7 +114,7 @@ void BupJob::slotCheckingDone(int pExitCode, QProcess::ExitStatus pExitStatus)
             "failed integrity check. Your backups could be "
             "corrupted! See above for details.")
                    << Qt::endl;
-        if (mBackupPlan.mGenerateRecoveryInfo) {
+        if (mBackupPlan.generateRecoveryInfo()) {
             jobFinishedError(ErrorSuggestRepair,
                              xi18nc("@info notification",
                                     "Failed backup integrity check. Your backups could be corrupted! "
@@ -139,16 +139,16 @@ void BupJob::startIndexing()
     DynamicExclusions lDynExclusions;
     lDynExclusions.setFromPlan(mBackupPlan);
 
-    foreach (const QString &lExclude, mBackupPlan.mPathsExcluded + lDynExclusions.pathsExcluded(mBackupPlan.mPathsIncluded)) {
+    foreach (const QString &lExclude, mBackupPlan.pathsExcluded() + lDynExclusions.pathsExcluded(mBackupPlan.pathsIncluded())) {
         mIndexProcess << QStringLiteral("--exclude");
         mIndexProcess << lExclude;
     }
 
     QString lExcludesPath = mBackupPlan.absoluteExcludesFilePath();
-    if (mBackupPlan.mExcludePatterns && QFileInfo::exists(lExcludesPath)) {
+    if (mBackupPlan.excludePatterns() && QFileInfo::exists(lExcludesPath)) {
         mIndexProcess << QStringLiteral("--exclude-rx-from") << lExcludesPath;
     }
-    mIndexProcess << mBackupPlan.mPathsIncluded;
+    mIndexProcess << mBackupPlan.pathsIncluded();
 
     connect(&mIndexProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, &BupJob::slotIndexingDone);
     connect(&mIndexProcess, &KProcess::started, this, &BupJob::slotIndexingStarted);
@@ -181,7 +181,7 @@ void BupJob::slotIndexingDone(int pExitCode, QProcess::ExitStatus pExitStatus)
     mSaveProcess << QStringLiteral("-d") << mDestinationPath;
     mSaveProcess << QStringLiteral("save");
     mSaveProcess << QStringLiteral("-n") << QStringLiteral("kup") << QStringLiteral("-vv");
-    mSaveProcess << mBackupPlan.mPathsIncluded;
+    mSaveProcess << mBackupPlan.pathsIncluded();
     mLogStream << quoteArgs(mSaveProcess.program()) << Qt::endl;
 
     connect(&mSaveProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, &BupJob::slotSavingDone);
@@ -217,7 +217,7 @@ void BupJob::slotSavingDone(int pExitCode, QProcess::ExitStatus pExitStatus)
             return;
         }
     }
-    if (mBackupPlan.mGenerateRecoveryInfo) {
+    if (mBackupPlan.generateRecoveryInfo()) {
         mPar2Process << QStringLiteral("bup");
         mPar2Process << QStringLiteral("-d") << mDestinationPath;
         mPar2Process << QStringLiteral("fsck") << QStringLiteral("-g");

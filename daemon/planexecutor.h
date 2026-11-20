@@ -34,7 +34,7 @@ public:
 
     ScheduleType scheduleType()
     {
-        return static_cast<ScheduleType>(mPlan->mScheduleType);
+        return static_cast<ScheduleType>(mPlan->scheduleType());
     }
 
     bool busy()

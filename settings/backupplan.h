@@ -7,15 +7,19 @@
 
 #include "../kupenums.h"
 
-#include <KCoreConfigSkeleton>
+#include "backupplansettings.h"
 
 using namespace Kup;
 
 class Schedule;
 
-class BackupPlan : public KCoreConfigSkeleton
+class BackupPlan : public BackupPlanSettings
 {
     Q_OBJECT
+    Q_PROPERTY(QString statusText READ statusText NOTIFY statusChanged)
+    // TODO: emit statuChanged
+    Q_PROPERTY(QString statusIconName READ statusIconName NOTIFY statusChanged)
+
 public:
     BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pParent = nullptr);
     int planNumber() const
@@ -23,59 +27,19 @@ public:
         return mPlanNumber;
     }
     virtual void setPlanNumber(int pPlanNumber);
-    QString statusText();
+    QString statusText() const;
+    QString statusIconName() const;
     void copyFrom(const BackupPlan &pPlan);
 
-    QString mDescription;
-    QStringList mPathsIncluded;
-    QStringList mPathsExcluded;
-    bool mExcludeTrash{};
-    bool mExcludeAppStates{};
-    bool mExcludeCaches{};
-    bool mExcludeEncryptedMounts{};
-    bool mExcludeSnapshots{};
-    bool mExcludeContainers{};
-    bool mExcludeUserFlatpaks{};
-
-    qint32 mBackupType{};
-    qint32 mBackupVersion{};
-
-    qint32 mScheduleType{};
-    qint32 mScheduleInterval{};
-    qint32 mScheduleIntervalUnit{};
-    qint32 mUsageLimit{}; // in hours
-    bool mAskBeforeTakingBackup{};
-
-    qint32 mDestinationType{};
-    QUrl mFilesystemDestinationPath;
-    QString mExternalUUID;
-    QString mExternalDestinationPath;
-    QString mExternalVolumeLabel;
-    QString mExternalDeviceDescription;
-    int mExternalPartitionNumber{};
-    int mExternalPartitionsOnDrive{};
-    qulonglong mExternalVolumeCapacity{};
-
-    bool mShowHiddenFolders{};
-    bool mGenerateRecoveryInfo{};
-    bool mCheckBackups{};
-    bool mExcludePatterns{};
-    QString mExcludePatternsPath;
-
-    QDateTime mLastCompleteBackup;
-    // Size of the last backup in bytes.
-    double mLastBackupSize{};
-    // Last known available space on destination
-    double mLastAvailableSpace{};
-    // How long has Kup been running since last backup (s)
-    quint32 mAccumulatedUsageTime{};
-
     virtual QDateTime nextScheduledTime();
-    virtual qint64 scheduleIntervalInSeconds();
+    virtual qint64 scheduleIntervalInSeconds() const;
 
-    Status backupStatus();
+    Status backupStatus() const;
     static QString iconName(Status pStatus);
     QString absoluteExcludesFilePath();
+
+Q_SIGNALS:
+    void statusChanged();
 
 protected:
     void usrRead() override;

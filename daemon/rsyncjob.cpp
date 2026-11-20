@@ -37,13 +37,13 @@ void RsyncJob::performJob()
     }
 
     // Remove this and the performMigration method when it is likely that all users of pre 0.8 kup have now started using post 0.8.
-    if (mBackupPlan.mBackupVersion < 1 && mBackupPlan.mLastCompleteBackup.isValid() && mBackupPlan.mPathsIncluded.length() == 1) {
+    if (mBackupPlan.backupVersion() < 1 && mBackupPlan.lastCompleteBackup().isValid() && mBackupPlan.pathsIncluded().length() == 1) {
         mLogStream << QStringLiteral("Migrating saved files to new location, after update to version 0.8 of Kup.") << Qt::endl;
         if (!performMigration()) {
             mLogStream << QStringLiteral("Migration failed. Continuing backup save regardless, may result in files stored twice.") << Qt::endl;
         }
     }
-    mBackupPlan.mBackupVersion = 1;
+    mBackupPlan.setBackupVersion(1);
     mBackupPlan.save();
 
     mLogStream << QStringLiteral("Kup is starting rsync backup job at ") << QLocale().toString(QDateTime::currentDateTime()) << Qt::endl;
@@ -65,21 +65,21 @@ void RsyncJob::performJob()
     lDynExclusions.setFromPlan(mBackupPlan);
 
     QStringList lIncludeNames;
-    foreach (const QString &lInclude, mBackupPlan.mPathsIncluded) {
+    foreach (const QString &lInclude, mBackupPlan.pathsIncluded()) {
         lIncludeNames << lastPartOfPath(lInclude);
     }
     if (lIncludeNames.removeDuplicates() > 0) {
         // There would be a naming conflict in the destination folder, instead use full paths.
         mRsyncProcess << QStringLiteral("-R");
-        foreach (const QString &lExclude, mBackupPlan.mPathsExcluded + lDynExclusions.pathsExcluded(mBackupPlan.mPathsIncluded)) {
+        foreach (const QString &lExclude, mBackupPlan.pathsExcluded() + lDynExclusions.pathsExcluded(mBackupPlan.pathsIncluded())) {
             mRsyncProcess << QStringLiteral("--exclude") << lExclude;
         }
     } else {
         // when NOT using -R, need to then strip parent paths from excludes, everything above the
         // include. Leave the leading slash!
-        foreach (QString lExclude, mBackupPlan.mPathsExcluded + lDynExclusions.pathsExcluded(mBackupPlan.mPathsIncluded)) {
-            for (int i = 0; i < mBackupPlan.mPathsIncluded.length(); ++i) {
-                const QString &lInclude = mBackupPlan.mPathsIncluded.at(i);
+        foreach (QString lExclude, mBackupPlan.pathsExcluded() + lDynExclusions.pathsExcluded(mBackupPlan.pathsIncluded())) {
+            for (int i = 0; i < mBackupPlan.pathsIncluded().length(); ++i) {
+                const QString lInclude = mBackupPlan.pathsIncluded().at(i);
                 QString lIncludeWithSlash = lInclude;
                 ensureTrailingSlash(lIncludeWithSlash);
                 if (lExclude.startsWith(lIncludeWithSlash)) {
@@ -91,10 +91,10 @@ void RsyncJob::performJob()
         }
     }
     QString lExcludesPath = mBackupPlan.absoluteExcludesFilePath();
-    if (mBackupPlan.mExcludePatterns && QFileInfo::exists(lExcludesPath)) {
+    if (mBackupPlan.excludePatterns() && QFileInfo::exists(lExcludesPath)) {
         mRsyncProcess << QStringLiteral("--exclude-from") << lExcludesPath;
     }
-    mRsyncProcess << mBackupPlan.mPathsIncluded;
+    mRsyncProcess << mBackupPlan.pathsIncluded();
     mRsyncProcess << mDestinationPath;
 
     connect(&mRsyncProcess, &KProcess::started, this, &RsyncJob::slotRsyncStarted);
@@ -208,7 +208,7 @@ bool RsyncJob::doResume()
 // source folder. This migration will only be done if there is exactly one source folder.
 bool RsyncJob::performMigration()
 {
-    QString lSourceDirName = lastPartOfPath(mBackupPlan.mPathsIncluded.first()); // only one included
+    QString lSourceDirName = lastPartOfPath(mBackupPlan.pathsIncluded().first()); // only one included
     QDir lDestDir = QDir(mDestinationPath);
     mLogStream << QStringLiteral("Creating directory named ") << lSourceDirName << " inside of " << mDestinationPath << Qt::endl;
     if (!lDestDir.mkdir(lSourceDirName)) {

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-FileCopyrightText: 2026 Tobias Fella <tobias.fella@kde.org>
+
+SPDX-License-Identifier: GPL-2.0-or-later
+-->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile arg="true"/>
+  <group name="Kup settings">
+    <entry name="BackupsEnabled" key="Backups enabled" type="Bool">
+      <label>Enable backups</label>
+      <default>false</default>
+    </entry>
+    <entry name="NumberOfPlans" key="Number of backups" type="Int">
+      <label>Number of backup plans configured</label>
+      <default>0</default>
+    </entry>
+  </group>
+</kcfg>

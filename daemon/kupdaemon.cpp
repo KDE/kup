@@ -44,7 +44,7 @@ KupDaemon::~KupDaemon()
 
 bool KupDaemon::shouldStart()
 {
-    return mSettings->mBackupsEnabled;
+    return mSettings->backupsEnabled();
 }
 
 void KupDaemon::setupGuiStuff()
@@ -92,7 +92,7 @@ void KupDaemon::reloadConfig()
     while (!mExecutors.isEmpty()) {
         delete mExecutors.takeFirst();
     }
-    if (!mSettings->mBackupsEnabled)
+    if (!mSettings->backupsEnabled())
         qApp->quit();
 
     setupExecutors();
@@ -141,18 +141,18 @@ QList<QVariantMap> KupDaemon::getPlans() const
     for (const auto lPlanExec : std::as_const(mExecutors)) {
         const auto lPlan = lPlanExec->mPlan;
         QVariantMap lPlanInfo;
-        lPlanInfo["Description"] = lPlan->mDescription;
+        lPlanInfo["Description"] = lPlan->description();
         lPlanInfo["Status"] = lPlan->backupStatus();
         lPlanInfo["Busy"] = lPlanExec->busy();
         lPlanInfo["ActivityState"] = static_cast<qint32>(lPlanExec->mState);
         lPlanInfo["LogFile"] = lPlanExec->mLogFilePath;
         lPlanInfo["LogFileExists"] = QFileInfo::exists(lPlanExec->mLogFilePath);
-        lPlanInfo["Type"] = lPlan->mBackupType;
-        lPlanInfo["ScheduleType"] = lPlan->mScheduleType;
+        lPlanInfo["Type"] = lPlan->backupType();
+        lPlanInfo["ScheduleType"] = lPlan->scheduleType();
         lPlanInfo["DestAvailable"] = lPlanExec->destinationAvailable();
-        lPlanInfo["LastCompleteBackup"] = lPlan->mLastCompleteBackup.toUTC();
-        lPlanInfo["LastBackupSize"] = lPlan->mLastBackupSize;
-        lPlanInfo["LastFreeSpace"] = lPlan->mLastAvailableSpace;
+        lPlanInfo["LastCompleteBackup"] = lPlan->lastCompleteBackup().toUTC();
+        lPlanInfo["LastBackupSize"] = lPlan->lastBackupSize();
+        lPlanInfo["LastFreeSpace"] = lPlan->lastAvailableSpace();
         lPlans << lPlanInfo;
     }
     return lPlans;
@@ -163,14 +163,14 @@ QString KupDaemon::getRepositoryPath(const QString &pPath) const
     for (const auto lExecutor : std::as_const(mExecutors)) {
         auto lPlan = lExecutor->mPlan;
 
-        bool lIsIncluded = std::any_of(lPlan->mPathsIncluded.cbegin(), lPlan->mPathsIncluded.cend(), [&](const QString &lIncludedPath) {
-            bool lIsExcluded = std::any_of(lPlan->mPathsExcluded.cbegin(), lPlan->mPathsExcluded.cend(), [&](const QString &lExcludedPath) {
+        bool lIsIncluded = std::any_of(lPlan->pathsIncluded().cbegin(), lPlan->pathsIncluded().cend(), [&](const QString &lIncludedPath) {
+            bool lIsExcluded = std::any_of(lPlan->pathsExcluded().cbegin(), lPlan->pathsExcluded().cend(), [&](const QString &lExcludedPath) {
                 return pPath.startsWith(lExcludedPath) && lExcludedPath.length() > lIncludedPath.length();
             });
             return pPath.startsWith(lIncludedPath) && !lIsExcluded;
         });
 
-        if (lExecutor->destinationAvailable() && lPlan->mBackupType == BackupType::BupType && lIsIncluded) {
+        if (lExecutor->destinationAvailable() && lPlan->backupType() == BackupType::BupType && lIsIncluded) {
             return lExecutor->mDestinationPath;
         }
     }
@@ -218,16 +218,16 @@ void KupDaemon::slotShutdownRequest(QSessionManager &pManager)
 
 void KupDaemon::setupExecutors()
 {
-    for (int i = 0; i < mSettings->mNumberOfPlans; ++i) {
+    for (int i = 0; i < mSettings->numberOfPlans(); ++i) {
         PlanExecutor *lExecutor;
         auto *lPlan = new BackupPlan(i + 1, mConfig, this);
-        if (lPlan->mPathsIncluded.isEmpty()) {
+        if (lPlan->pathsIncluded().isEmpty()) {
             delete lPlan;
             continue;
         }
-        if (lPlan->mDestinationType == 0) {
+        if (lPlan->destinationType() == 0) {
             lExecutor = new FSExecutor(lPlan, this);
-        } else if (lPlan->mDestinationType == 1) {
+        } else if (lPlan->destinationType() == 1) {
             lExecutor = new EDExecutor(lPlan, this);
         } else {
             delete lPlan;

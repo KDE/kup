@@ -27,7 +27,7 @@ void BupRepairJob::performJob()
                                 "maybe it is not installed?"));
         return;
     }
-    if (mBackupPlan.mGenerateRecoveryInfo && lExitCode != 0) {
+    if (mBackupPlan.generateRecoveryInfo() && lExitCode != 0) {
         jobFinishedError(ErrorWithoutLog,
                          xi18nc("@info notification",
                                 "The <application>par2</application> program is needed but could not be found, "

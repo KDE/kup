@@ -17,69 +17,9 @@
 #include <utility>
 
 BackupPlan::BackupPlan(int pPlanNumber, KSharedConfigPtr pConfig, QObject *pParent)
-    : KCoreConfigSkeleton(std::move(pConfig), pParent)
+    : BackupPlanSettings(std::move(pConfig), pPlanNumber, pParent)
     , mPlanNumber(pPlanNumber)
 {
-    setCurrentGroup(QString(QStringLiteral("Plan/%1")).arg(mPlanNumber));
-
-    addItemString(QStringLiteral("Description"),
-                  mDescription,
-                  xi18nc("@label Default name for a new backup plan, %1 is the number of the plan in order", "Backup plan %1", pPlanNumber));
-    QStringList lDefaultIncludeList;
-    lDefaultIncludeList << QDir::homePath();
-    addItemStringList(QStringLiteral("Paths included"), mPathsIncluded, lDefaultIncludeList);
-    QStringList lDefaultExcludeList;
-    lDefaultExcludeList << QDir::homePath() + QStringLiteral("/.bup");
-
-#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    lDefaultExcludeList << QStandardPaths::writableLocation(QStandardPaths::GenericStateLocation);
-#endif
-    QMutableStringListIterator i(lDefaultExcludeList);
-    while (i.hasNext()) {
-        ensureNoTrailingSlash(i.next());
-    }
-
-    addItemBool(QStringLiteral("Exclude trash"), mExcludeTrash, true);
-    addItemBool(QStringLiteral("Exclude app states"), mExcludeAppStates, true);
-    addItemBool(QStringLiteral("Exclude caches"), mExcludeCaches, true);
-    addItemBool(QStringLiteral("Exclude encrypted folders"), mExcludeEncryptedMounts, true);
-    addItemBool(QStringLiteral("Exclude snapshots"), mExcludeSnapshots, true);
-    addItemBool(QStringLiteral("Exclude containers"), mExcludeContainers, true);
-    addItemBool(QStringLiteral("Exclude user flatpaks"), mExcludeUserFlatpaks, true);
-
-    addItemStringList(QStringLiteral("Paths excluded"), mPathsExcluded, lDefaultExcludeList);
-    addItemInt(QStringLiteral("Backup type"), mBackupType);
-    addItemInt(QStringLiteral("Backup version"), mBackupVersion);
-
-    addItemInt(QStringLiteral("Schedule type"), mScheduleType, 2);
-    addItemInt(QStringLiteral("Schedule interval"), mScheduleInterval, 1);
-    addItemInt(QStringLiteral("Schedule interval unit"), mScheduleIntervalUnit, 3);
-    addItemInt(QStringLiteral("Usage limit"), mUsageLimit, 25);
-    addItemBool(QStringLiteral("Ask first"), mAskBeforeTakingBackup, true);
-
-    addItemInt(QStringLiteral("Destination type"), mDestinationType, 1);
-    addItem(new KCoreConfigSkeleton::ItemUrl(currentGroup(),
-                                             QStringLiteral("Filesystem destination path"),
-                                             mFilesystemDestinationPath,
-                                             QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/.bup"))));
-    addItemString(QStringLiteral("External drive UUID"), mExternalUUID);
-    addItemPath(QStringLiteral("External drive destination path"), mExternalDestinationPath, i18n("Backups"));
-    addItemString(QStringLiteral("External volume label"), mExternalVolumeLabel);
-    addItemULongLong(QStringLiteral("External volume capacity"), mExternalVolumeCapacity);
-    addItemString(QStringLiteral("External device description"), mExternalDeviceDescription);
-    addItemInt(QStringLiteral("External partition number"), mExternalPartitionNumber);
-    addItemInt(QStringLiteral("External partitions count"), mExternalPartitionsOnDrive);
-
-    addItemBool(QStringLiteral("Show hidden folders"), mShowHiddenFolders);
-    addItemBool(QStringLiteral("Generate recovery info"), mGenerateRecoveryInfo);
-    addItemBool(QStringLiteral("Check backups"), mCheckBackups);
-    addItemBool(QStringLiteral("Exclude patterns"), mExcludePatterns);
-    addItemString(QStringLiteral("Exclude patterns file path"), mExcludePatternsPath);
-
-    addItemDateTime(QStringLiteral("Last complete backup"), mLastCompleteBackup);
-    addItemDouble(QStringLiteral("Last backup size"), mLastBackupSize);
-    addItemDouble(QStringLiteral("Last available space"), mLastAvailableSpace);
-    addItemUInt(QStringLiteral("Accumulated usage time"), mAccumulatedUsageTime);
     load();
 }
 
@@ -94,83 +34,83 @@ void BackupPlan::setPlanNumber(int pPlanNumber)
 
 void BackupPlan::copyFrom(const BackupPlan &pPlan)
 {
-    mDescription = i18nc("default description of newly duplicated backup plan", "%1 (copy)", pPlan.mDescription);
-    mPathsIncluded = pPlan.mPathsIncluded;
-    mPathsExcluded = pPlan.mPathsExcluded;
-    mBackupType = pPlan.mBackupType;
-    mScheduleType = pPlan.mScheduleType;
-    mScheduleInterval = pPlan.mScheduleInterval;
-    mScheduleIntervalUnit = pPlan.mScheduleIntervalUnit;
-    mUsageLimit = pPlan.mUsageLimit;
-    mAskBeforeTakingBackup = pPlan.mAskBeforeTakingBackup;
-    mDestinationType = pPlan.mDestinationType;
-    mFilesystemDestinationPath = pPlan.mFilesystemDestinationPath;
-    mExternalUUID = pPlan.mExternalUUID;
-    mExternalDestinationPath = pPlan.mExternalDestinationPath;
-    mExternalVolumeLabel = pPlan.mExternalVolumeLabel;
-    mExternalDeviceDescription = pPlan.mExternalDeviceDescription;
-    mExternalPartitionNumber = pPlan.mExternalPartitionNumber;
-    mExternalPartitionsOnDrive = pPlan.mExternalPartitionsOnDrive;
-    mExternalVolumeCapacity = pPlan.mExternalVolumeCapacity;
-    mShowHiddenFolders = pPlan.mShowHiddenFolders;
-    mGenerateRecoveryInfo = pPlan.mGenerateRecoveryInfo;
-    mCheckBackups = pPlan.mCheckBackups;
-    mExcludeTrash = pPlan.mExcludeTrash;
-    mExcludeAppStates = pPlan.mExcludeAppStates;
-    mExcludeCaches = pPlan.mExcludeCaches;
-    mExcludeEncryptedMounts = pPlan.mExcludeEncryptedMounts;
-    mExcludeSnapshots = pPlan.mExcludeSnapshots;
-    mExcludeContainers = pPlan.mExcludeContainers;
-    mExcludeUserFlatpaks = pPlan.mExcludeUserFlatpaks;
+    setDescription(i18nc("default description of newly duplicated backup plan", "%1 (copy)", pPlan.description()));
+    setPathsIncluded(pPlan.pathsIncluded());
+    setPathsExcluded(pPlan.pathsExcluded());
+    setBackupType(pPlan.backupType());
+    setScheduleType(pPlan.scheduleType());
+    setScheduleInterval(pPlan.scheduleInterval());
+    setScheduleIntervalUnit(pPlan.scheduleIntervalUnit());
+    setUsageLimit(pPlan.usageLimit());
+    setAskBeforeTakingBackup(pPlan.askBeforeTakingBackup());
+    setDestinationType(pPlan.destinationType());
+    setFilesystemDestinationPath(pPlan.filesystemDestinationPath());
+    setExternalUUID(pPlan.externalUUID());
+    setExternalDestinationPath(pPlan.externalDestinationPath());
+    setExternalVolumeLabel(pPlan.externalVolumeLabel());
+    setExternalDeviceDescription(pPlan.externalDeviceDescription());
+    setExternalPartitionNumber(pPlan.externalPartitionNumber());
+    setExternalPartitionsOnDrive(pPlan.externalPartitionsOnDrive());
+    setExternalVolumeCapacity(pPlan.externalVolumeCapacity());
+    setShowHiddenFolders(pPlan.showHiddenFolders());
+    setGenerateRecoveryInfo(pPlan.generateRecoveryInfo());
+    setCheckBackups(pPlan.checkBackups());
+    setExcludeTrash(pPlan.excludeTrash());
+    setExcludeAppStates(pPlan.excludeAppStates());
+    setExcludeCaches(pPlan.excludeCaches());
+    setExcludeEncryptedMounts(pPlan.excludeEncryptedMounts());
+    setExcludeSnapshots(pPlan.excludeSnapshots());
+    setExcludeContainers(pPlan.excludeContainers());
+    setExcludeUserFlatpaks(pPlan.excludeUserFlatpaks());
 }
 
 QDateTime BackupPlan::nextScheduledTime()
 {
-    Q_ASSERT(mScheduleType == 1);
-    if (!mLastCompleteBackup.isValid())
+    Q_ASSERT(scheduleType() == 1);
+    if (!lastCompleteBackup().isValid())
         return QDateTime(); // plan has never been run
 
-    return mLastCompleteBackup.addSecs(scheduleIntervalInSeconds());
+    return lastCompleteBackup().addSecs(scheduleIntervalInSeconds());
 }
 
-qint64 BackupPlan::scheduleIntervalInSeconds()
+qint64 BackupPlan::scheduleIntervalInSeconds() const
 {
-    Q_ASSERT(mScheduleType == 1);
+    Q_ASSERT(scheduleType() == 1);
 
-    switch (mScheduleIntervalUnit) {
+    switch (scheduleIntervalUnit()) {
     case 0:
-        return mScheduleInterval * 60;
+        return scheduleInterval() * 60;
     case 1:
-        return mScheduleInterval * 60 * 60;
+        return scheduleInterval() * 60 * 60;
     case 2:
-        return mScheduleInterval * 60 * 60 * 24;
+        return scheduleInterval() * 60 * 60 * 24;
     case 3:
-        return mScheduleInterval * 60 * 60 * 24 * 7;
+        return scheduleInterval() * 60 * 60 * 24 * 7;
     default:
         return 0;
     }
 }
 
-Status BackupPlan::backupStatus()
+Status BackupPlan::backupStatus() const
 {
-    if (!mLastCompleteBackup.isValid()) {
+    if (!lastCompleteBackup().isValid()) {
         return BAD;
     }
-    if (mScheduleType == MANUAL) {
+    if (scheduleType() == MANUAL) {
         return NO_STATUS;
     }
 
     qint64 lStatus = 5; // trigger BAD status if schedule type is something strange
     qint64 lInterval = 1;
 
-    switch (mScheduleType) {
+    switch (scheduleType()) {
     case INTERVAL:
-        lStatus = mLastCompleteBackup.secsTo(QDateTime::currentDateTimeUtc());
+        lStatus = lastCompleteBackup().secsTo(QDateTime::currentDateTimeUtc());
         lInterval = scheduleIntervalInSeconds();
         break;
     case USAGE:
-        lStatus = mAccumulatedUsageTime;
-        lInterval = static_cast<qint64>(mUsageLimit) * 3600;
+        lStatus = accumulatedUsageTime();
+        lInterval = static_cast<qint64>(usageLimit()) * 3600;
         break;
     }
 
@@ -196,45 +136,56 @@ QString BackupPlan::iconName(Status pStatus)
     return QString();
 }
 
+QString BackupPlan::statusIconName() const
+{
+    return iconName(backupStatus());
+}
+
 QString BackupPlan::absoluteExcludesFilePath()
 {
-    if (QDir::isRelativePath(mExcludePatternsPath)) {
-        return QDir::homePath() + QDir::separator() + mExcludePatternsPath;
+    if (QDir::isRelativePath(excludePatternsPath())) {
+        return QDir::homePath() + QDir::separator() + excludePatternsPath();
     }
-    return mExcludePatternsPath;
+    return excludePatternsPath();
 }
 
 void BackupPlan::usrRead()
 {
     // correct the time spec after default read routines.
-    mLastCompleteBackup.setTimeZone(QTimeZone::utc());
-    QMutableStringListIterator lExcludes(mPathsExcluded);
-    while (lExcludes.hasNext()) {
-        ensureNoTrailingSlash(lExcludes.next());
+    QDateTime lLastBackup = lastCompleteBackup();
+    lLastBackup.setTimeZone(QTimeZone::utc());
+    setLastCompleteBackup(lLastBackup);
+
+    QStringList lExcludes = pathsExcluded();
+    for (QString &lPath : lExcludes) {
+        ensureNoTrailingSlash(lPath);
     }
-    QMutableStringListIterator lIncludes(mPathsIncluded);
-    while (lIncludes.hasNext()) {
-        ensureNoTrailingSlash(lIncludes.next());
+    setPathsExcluded(lExcludes);
+
+    QStringList lIncludes = pathsIncluded();
+    for (QString &lPath : lIncludes) {
+        ensureNoTrailingSlash(lPath);
     }
+    setPathsIncluded(lIncludes);
 }
 
-QString BackupPlan::statusText()
+QString BackupPlan::statusText() const
 {
     QLocale lLocale;
     KFormat lFormat(lLocale);
     QString lStatus;
-    if (mLastCompleteBackup.isValid()) {
-        QDateTime lLocalTime = mLastCompleteBackup.toLocalTime();
+    if (lastCompleteBackup().isValid()) {
+        QDateTime lLocalTime = lastCompleteBackup().toLocalTime();
 
         lStatus += i18nc("%1 is fancy formatted date", "Last saved: %1", lFormat.formatRelativeDate(lLocalTime.date(), QLocale::LongFormat));
 
-        if (mLastBackupSize > 0.0) {
+        if (lastBackupSize() > 0.0) {
             lStatus += '\n';
-            lStatus += i18nc("%1 is storage size of archive", "Size: %1", lFormat.formatByteSize(mLastBackupSize));
+            lStatus += i18nc("%1 is storage size of archive", "Size: %1", lFormat.formatByteSize(lastBackupSize()));
         }
-        if (mLastAvailableSpace > 0.0) {
+        if (lastAvailableSpace() > 0.0) {
             lStatus += '\n';
-            lStatus += i18nc("%1 is free storage space", "Free space: %1", lFormat.formatByteSize(mLastAvailableSpace));
+            lStatus += i18nc("%1 is free storage space", "Free space: %1", lFormat.formatByteSize(lastAvailableSpace()));
         }
     } else {
         lStatus = xi18nc("@label", "This backup plan has never been run.");

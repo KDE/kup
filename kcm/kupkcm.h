@@ -5,56 +5,50 @@
 #ifndef KUPKCM_H
 #define KUPKCM_H
 
-#include <KCModule>
+#include <KQuickManagedConfigModule>
 #include <KSharedConfig>
 
-class BackupPlan;
-class BackupPlanWidget;
-class KupSettings;
-class KupSettingsWidget;
-class PlanStatusWidget;
+#include "backupplan.h"
+#include "kupsettings.h"
 
-class KAssistantDialog;
-class KPageWidgetItem;
-class QPushButton;
-
-class QCheckBox;
-class QStackedLayout;
-class QVBoxLayout;
-
-class KupKcm : public KCModule
+class KupKcm : public KQuickManagedConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(KupSettings *settings READ settings CONSTANT)
+    Q_PROPERTY(QList<BackupPlan *> plans READ plans NOTIFY plansChanged)
 public:
     KupKcm(QObject *parent, const KPluginMetaData &md, const QVariantList &pArgs);
 
-public slots:
+    // void updateChangedStatus();
+    // void showFrontPage();
+
+    KupSettings *settings() const;
+    QList<BackupPlan *> plans() const;
+
+    Q_INVOKABLE void duplicate(int row);
+    Q_INVOKABLE void remove(int row);
+
     void load() override;
     void save() override;
+    bool isSaveNeeded() const override;
 
-    void updateChangedStatus();
-    void showFrontPage();
+Q_SIGNALS:
+    void plansChanged();
 
 private:
-    void createSettingsFrontPage();
-    void createPlanWidgets(int pIndex);
+    void createPlans();
+    // void createSettingsFrontPage();
+    // void createPlanWidgets(int pIndex);
     void completelyRemovePlan(int pIndex);
     void partiallyRemovePlan(int pIndex);
 
     KSharedConfigPtr mConfig;
-    KupSettings *mSettings;
-    QWidget *mFrontPage{};
+    KupSettings *mSettings = nullptr;
     QList<BackupPlan *> mPlans;
-    QList<BackupPlanWidget *> mPlanWidgets;
-    QList<PlanStatusWidget *> mStatusWidgets;
-    QList<KConfigDialogManager *> mConfigManagers;
-    QStackedLayout *mStackedLayout;
-    QVBoxLayout *mVerticalLayout{};
-    QCheckBox *mEnableCheckBox{};
+    QList<int> mRemovedPlanNumbers;
     QString mBupVersion;
     QString mRsyncVersion;
     bool mPar2Available;
-    int mSourcePageToShow;
 };
 
 #endif // KUPKCM_H

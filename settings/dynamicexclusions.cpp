@@ -15,13 +15,13 @@
 
 void DynamicExclusions::setFromPlan(const BackupPlan &pPlan)
 {
-    mExcludeTrash = pPlan.mExcludeTrash;
-    mExcludeAppStates = pPlan.mExcludeAppStates;
-    mExcludeCaches = pPlan.mExcludeCaches;
-    mExcludeEncryptedMounts = pPlan.mExcludeEncryptedMounts;
-    mExcludeSnapshots = pPlan.mExcludeSnapshots;
-    mExcludeContainers = pPlan.mExcludeContainers;
-    mExcludeUserFlatpaks = pPlan.mExcludeUserFlatpaks;
+    mExcludeTrash = pPlan.excludeTrash();
+    mExcludeAppStates = pPlan.excludeAppStates();
+    mExcludeCaches = pPlan.excludeCaches();
+    mExcludeEncryptedMounts = pPlan.excludeEncryptedMounts();
+    mExcludeSnapshots = pPlan.excludeSnapshots();
+    mExcludeContainers = pPlan.excludeContainers();
+    mExcludeUserFlatpaks = pPlan.excludeUserFlatpaks();
 }
 
 QStringList DynamicExclusions::pathsExcluded(const QStringList &pPathsIncluded)
