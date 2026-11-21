@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kup\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:47+0000\n"
-"PO-Revision-Date: 2026-09-30 08:54+0200\n"
+"PO-Revision-Date: 2026-11-20 20:30+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -1331,7 +1331,7 @@ msgstr "Instantànies del sistema de fitxers Btrfs"
 #, kde-kuit-format
 msgctxt "@option:check"
 msgid "Exclude user-level Flatpaks"
-msgstr "Exclou els Flatpaks a nivell d'usuari"
+msgstr "Exclou els Flatpaks en l'àmbit d'usuari"
 
 #: kcm/backupplanwidget.cpp:1045
 #, kde-kuit-format
